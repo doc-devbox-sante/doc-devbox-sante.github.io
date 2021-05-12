@@ -1,0 +1,28 @@
+@startuml
+title Architecture INSi-API en mode REST
+skinparam componentStyle uml2
+
+
+node "Poste Client (Windows/Mac/Linux)" {
+    [FrontEnd intégrateur] as frontend #cyan
+
+    package "DevBox-Santé" #Orange  {
+        [interface INSI-API] as insFacade #Orange
+    }
+    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS #pink
+    [APILectureVitale (SesamVitale)] as apiLectureVitale #pink
+}
+
+[Téléservice INSi (SesamVitale)] as insi #pink
+
+[BackEnd intégrateur] as backend #cyan
+
+
+
+frontend -down-> insFacade : HTTP GET /insi/rechercheAvecVitale
+insFacade <-down-> cryptolibCPS : appel natif
+insFacade <-down-> apiLectureVitale : appel natif
+insFacade <-right-> insi : SOAP
+frontend -right-> backend : REST
+
+@enduml

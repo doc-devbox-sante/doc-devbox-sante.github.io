@@ -1,0 +1,41 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – Articles</title>
+    <link>/blog/articles/</link>
+    <description>Recent content in Articles on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/blog/articles/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Blog: Génération de la documentation de la DevBox-Santé</title>
+      <link>/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Ça y est nous avons pris le temps de regrouper la documentation disponible de la DevBox-Santé en un seul endroit.
+Cela donne ce site de documentation, qui pourra s&amp;rsquo;étoffer également d&amp;rsquo;articles parlant de sujet d&amp;rsquo;intégration de la DevBox-Santé d&amp;rsquo;une part,
+et d&amp;rsquo;intéropérabilité dans la santé d&amp;rsquo;autre part.&lt;/p&gt;
+&lt;p&gt;Les quelques sujets du moment (liste non exhaustive) :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Les Modèles d&amp;rsquo;Objets de Santé : &lt;a href=&#34;https://esante.gouv.fr/interoperabilite/mos-nos&#34;&gt;https://esante.gouv.fr/interoperabilite/mos-nos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Les priorités du Ségur : &lt;a href=&#34;https://solidarites-sante.gouv.fr/systeme-de-sante-et-medico-social/segur-de-la-sante-les-conclusions/&#34;&gt;https://solidarites-sante.gouv.fr/systeme-de-sante-et-medico-social/segur-de-la-sante-les-conclusions/&lt;/a&gt;
+et comment les outils de la DevBox-Santé peuvent fournir des briques essentielles.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si vous souhaitez générer un site de documentation similaire au notre, je ne peux que vous conseiller d&amp;rsquo;utiliser un &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;thème Hugo&lt;/a&gt;.
+Le thème qui m&amp;rsquo;a paru le plus convaincant lors de la génération de ce site documentaire est &lt;a href=&#34;https://themes.gohugo.io/docsy/&#34;&gt;Docsy&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,13 @@
+@startuml
+node "Systeme Information Hospitalier / Logiciel de Gestion de Cabinet" {
+    component "LogicielIntegrateur (PHP/autre langage)" as LogicielIntegrateur
+    component "JVM SpringBoot" {
+        component "DMPC-PROXY" as DMPC_Proxy #orange{
+            component "DevBox-Santé DMP" as DMPC_API #orange
+        }
+    }
+}
+LogicielIntegrateur  -r-> DMPC_Proxy : WS simplifie
+PersonnelSante -down-> LogicielIntegrateur
+DMPC_API -r-> DMP : WS securise conforme aux transactions du guide d'integration.
+@enduml

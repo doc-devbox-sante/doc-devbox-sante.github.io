@@ -1,0 +1,242 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – Howtos</title>
+    <link>/docs/dmp/howtos/</link>
+    <description>Recent content in Howtos on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/dmp/howtos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Gestion des certificats</title>
+      <link>/docs/dmp/howtos/gestioncertificat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/dmp/howtos/gestioncertificat/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Une nouvelle IGC Santé a été mise en place courant 2016 : &lt;a href=&#34;http://integrateurs-cps.asipsante.fr/IGC-Sante&#34;&gt;http://integrateurs-cps.asipsante.fr/IGC-Sante&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Afin d&amp;rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité. 
+Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande à partir d&amp;rsquo;un téléservice dont la procédure est décrite ici.&lt;/p&gt;
+&lt;h2 id=&#34;procédure-administrative&#34;&gt;Procédure Administrative&lt;/h2&gt;
+&lt;h3 id=&#34;règle-générale&#34;&gt;Règle générale&lt;/h3&gt;
+&lt;p&gt;Pour obtenir, les certificats et clés nécessaires pour la connexion au DMP en authentification indirecte, il faut que votre établissement soit enregistré au FINESS (Fichier National des Établissements Sanitaires es Sociaux) : &lt;a href=&#34;http://finess.sante.gouv.fr/fininter/jsp/index.jsp&#34;&gt;http://finess.sante.gouv.fr/fininter/jsp/index.jsp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Les personnes pouvant remplir les conditions d&amp;rsquo;obtentions des certificats sont décrites dans le document de l&amp;rsquo;ANS : &lt;a href=&#34;https://esante.gouv.fr/media/3827&#34;&gt;Procédure DMP - Structures salariées&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Les principes généraux sont les suivants :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lors du raccordement au DMP, chaque site géographique d’un établissement de santé s’authentifie et s’identifie via son numéro de FINESS géographique.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ainsi, chaque site doit générer des certificats d’organisation sur son numéro de FINESS géographique.&lt;/li&gt;
+&lt;li&gt;L’administrateur technique est une personne de confiance à qui le représentant légal de l’établissement délègue le droit de gérer le cycle de vie des certificats logiciels commandés.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Il est également possible pour le représentant légal d’une structure de désigner un ou plusieurs mandataires pour sa structure.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;quels-certificats-&#34;&gt;Quels certificats ?&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Pour accéder au DMP en authentification indirecte (création/gestion administrative et alimentation), vous avez besoin de déployer les certificats suivants :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;un certificat client de type ORG AUTH_CLI pour s’authentifier au DMP ;&lt;/li&gt;
+&lt;li&gt;un certificat client de type ORG SIGN pour signer les lots de documents soumis au DMP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;L&amp;rsquo;dministrateur technique doit commander les certificats via le formulaire n°413 et le retourner à &lt;a href=&#34;mailto:monserviceclient.certificats@asipsante.fr&#34;&gt;monserviceclient.certificats@asipsante.fr&lt;/a&gt; 
+Le formulaire peut être télécharger depuis le site : &lt;a href=&#34;https://esante.gouv.fr/securite/cartes-et-certificats/commandes&#34;&gt;https://esante.gouv.fr/securite/cartes-et-certificats/commandes&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;procédure-technique&#34;&gt;Procédure Technique&lt;/h2&gt;
+&lt;p&gt;Il est possible de commander ces certificats sur le site web mis à disposition par l&amp;rsquo;ANS. Il s&amp;rsquo;agit d&amp;rsquo;un service permettant la commande de certificats et cartes :&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pfc.eservices.esante.gouv.fr&#34;&gt;https://pfc.eservices.esante.gouv.fr&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pour pouvoir y accéder il faut se connecter avec un lecteur de cartes CPS configuré et une carte CPA autorisée au préalable :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pfcngAccueil.png&#34; alt=&#34;pfcngAccueil.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;certificats-et-clés-dauthentification&#34;&gt;Certificats et clés d&amp;rsquo;authentification&lt;/h3&gt;
+&lt;h4 id=&#34;demander&#34;&gt;Demander&lt;/h4&gt;
+&lt;h5 id=&#34;étape-1&#34;&gt;Étape 1:&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;pfcngDemandeStep1.png&#34; alt=&#34;pfcng&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;étape-2&#34;&gt;Étape 2:&lt;/h5&gt;
+&lt;p&gt;RAS, il s&amp;rsquo;agit d&amp;rsquo;un écran de recherche pour les demandes antérieures. Cliquer sur &amp;ldquo;Demander un nouveau produit&amp;rdquo;&lt;/p&gt;
+&lt;h5 id=&#34;étape-3&#34;&gt;Étape 3:&lt;/h5&gt;
+&lt;p&gt;Il faut renseigner :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;l&amp;rsquo;usage : AUTH_CLI&lt;/li&gt;
+&lt;li&gt;le nom du service (nom du logiciel) qui va accéder au DMP,&lt;/li&gt;
+&lt;li&gt;son adresse email (utiliser plus tard pour envoyer une confirmation)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;pfcngDemandeStep3Auth.png&#34; alt=&#34;pfcng&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;étape-4-&#34;&gt;Étape 4 :&lt;/h5&gt;
+&lt;p&gt;Pour cette étape le plus simple est de générer la CSR sur le site, mais pas obligatoire.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Saisir un mot de passe assez fort pour convenir au service, et sauvegarder le car il sera demandé lors de la récupération du certificats P12, ainsi que pour configurer la DevBox-Santé DMP.&lt;/li&gt;
+&lt;li&gt;Cliquer sur &amp;ldquo;Générer la CSR&amp;rdquo;, puis &amp;ldquo;Finaliser&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;pfcngDemandeStep4GenerateCSR.png&#34; alt=&#34;pfcng&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;étape-5-&#34;&gt;Étape 5 :&lt;/h5&gt;
+&lt;p&gt;Vous recevez un email de confirmation de la demande à l&amp;rsquo;email saisie à l&amp;rsquo;étape 3 :&lt;/p&gt;
+&lt;h4 id=&#34;retirer&#34;&gt;Retirer&lt;/h4&gt;
+&lt;p&gt;Depuis l&amp;rsquo;étape 5 de la demande vous pouvez accéder au retrait du certificat commandé. Sinon vous pouvez y accéder par le menu Retirer&lt;/p&gt;
+&lt;h5 id=&#34;étape-1-1&#34;&gt;Étape 1:&lt;/h5&gt;
+&lt;p&gt;Cette étape consiste à choisir le produit à retirer&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pfcngRetirerStep1.png&#34; alt=&#34;pfcng&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;étape-2-1&#34;&gt;Étape 2:&lt;/h5&gt;
+&lt;p&gt;Dans cette étape, il faut saisir un nouveau mot de passe pour les révocations (identique ou pas de celui de la CSR). Il n&amp;rsquo;est pas utilisé dans l&amp;rsquo;API mais peut servir à l&amp;rsquo;administrateur technique.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pfcngRetirerStep2.png&#34; alt=&#34;pfcng&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;étape-3-finalisation&#34;&gt;Étape 3: Finalisation&lt;/h4&gt;
+&lt;p&gt;Dans cette étape, il faut saisir le mot de passe de réconciliation celui qui a permis de générer la CSR.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pfcngRetirerStep3.png&#34; alt=&#34;pfcng&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Le certificat/clé (p12) a un nom qui doit ressembler à asip-p12-EL-TEST-ORG-AUTH_CLI-20170603-173116.p12&lt;/p&gt;
+&lt;h3 id=&#34;certificats-et-clés-de-signature&#34;&gt;Certificats et clés de signature&lt;/h3&gt;
+&lt;p&gt;Pour la signature, il faut faire une autre demande avec le même process, à l&amp;rsquo;exception de l&amp;rsquo;étape 3 ou il faudra demander un certificat de signature : Usage SIGN&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pfcngDemandeStep3Sign.png&#34; alt=&#34;pfcng&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;configuration-de-la-devbox-santé-dmp&#34;&gt;Configuration de la DevBox-Santé DMP&lt;/h2&gt;
+&lt;p&gt;Le paramètrage de ces certificats pour la DevBox-Santé DMP se trouve dans le &lt;code&gt;application.yml&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dmpc.url.prefix&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmpc.smime.p12.path&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmpc.smime.p12.password&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmpc.ssl.p12.path&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmpc.ssl.p12.password&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmpc.ssl.trust.path&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Exemple de configuration à fournir :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;dmpc&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;   &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# informations relatives au certificat smime&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;smime&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;p12&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; 
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#./smime.p12&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                &lt;/span&gt;A_renseigner&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; 
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                &lt;/span&gt;A_renseigner&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# informations relatives au certificat ssl&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ssl&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;p12&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#ssl.p12&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                &lt;/span&gt;A_renseigner&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                &lt;/span&gt;A_renseigner&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Contient les certificats serveurs autorisés pour authentification mutuelle         &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;trust&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                &lt;/span&gt;truststoreIgcSante-EL-ORG.jks&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Schematron</title>
+      <link>/docs/dmp/howtos/schematron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/dmp/howtos/schematron/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit sur le site esante.gouv.fr : 
+&lt;a href=&#34;https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda&#34;&gt;https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;La version lors de la rédaction : https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip&lt;/p&gt;
+&lt;p&gt;Une fois téléchargé, il faut sur un poste windows :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;décompresser l&amp;rsquo;archive.&lt;/li&gt;
+&lt;li&gt;naviguer jusqu&amp;rsquo;à &lt;code&gt;testContenuCDA_20200609_V2.25\schematrons\moteur\gui&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;lancer l&amp;rsquo;exécution de &lt;code&gt;TCC-GUI.exe&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;copier le fichier cda à valider à la racine du &lt;code&gt;testContenuCDA_20200609_V2.25&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;cliquer sur générer le rapport :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;schematronRapport.png&#34; alt=&#34;Rapport Schematron CDA&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Integrateurs checklist</title>
+      <link>/docs/dmp/howtos/integrateurchecklist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/dmp/howtos/integrateurchecklist/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;pre&gt;&lt;code&gt;Page en cours de construction
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;administratif&#34;&gt;Administratif&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Obtenir un NIE auprès du CNDA&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Signer un protocole avec le CNDA&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Obtenir les cartes vitales de test DMP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Obtenir des cartes CPS de test (médecin, CPE, autre) auprès de l&amp;rsquo;ANS&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Choisir un mode d&amp;rsquo;intégration/ authentification&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;les moyens d&amp;rsquo;authentification de l&amp;rsquo;utilisateur doivent permettre l&amp;rsquo;identification unique de l&amp;rsquo;utilissateur&lt;/li&gt;
+&lt;li&gt;le PS a-t-il accès à sa carte CPS ?&lt;/li&gt;
+&lt;li&gt;Se rappeler que l&amp;rsquo;éditeur agit pour le compte d&amp;rsquo;un établissement de santé (RPPS)&lt;/li&gt;
+&lt;li&gt;Un certificat serveur est lié au FINESS géographique de l&amp;rsquo;établissement de santé.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Choisir les profils d&amp;rsquo;intégration&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;création / administration de DMP&lt;/li&gt;
+&lt;li&gt;alimentation&lt;/li&gt;
+&lt;li&gt;consultation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Choix de la transaction d&amp;rsquo;itentification : TD0.0 ou téléservice INSi.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;développement--intégration&#34;&gt;Développement / Intégration&lt;/h2&gt;
+&lt;p&gt;Pour cela  :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../embedded&#34;&gt;mode API java&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../rest&#34;&gt;mode REST&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;validation&#34;&gt;Validation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Répondre aux exigences du PDV filtré par DevBox-santé&lt;/p&gt;
+&lt;p&gt;le dernier pdv disponible : &lt;a href=&#34;https://docs.google.com/spreadsheets/d/1cMSql9SCJQP-NAH0ToeSXWNBAXi16Ty_/edit?usp=drive_web&amp;amp;ouid=106855870534714244391&amp;amp;rtpof=true&#34;&gt;https://docs.google.com/spreadsheets/d/1cMSql9SCJQP-NAH0ToeSXWNBAXi16Ty_/edit?usp=drive_web&amp;amp;ouid=106855870534714244391&amp;amp;rtpof=true&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dérouler le plan de test prehomologation filtrés pour validation DEVCOOP
+==&amp;gt; Génération rapport du respect des exigences par DEVCOOP&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;s&amp;rsquo;assurer de la génération de PDF/A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;déploiement&#34;&gt;Déploiement&lt;/h2&gt;
+&lt;h3 id=&#34;gestion-des-certificats&#34;&gt;Gestion des certificats&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/dmp/howtos/gestioncertificat/&#34;&gt;Dans le cas d&amp;rsquo;une authentification indirecte pour les établissements&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

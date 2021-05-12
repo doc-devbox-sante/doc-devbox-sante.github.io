@@ -1,0 +1,9 @@
+@startuml
+node "Systeme Information Hospitalier / Logiciel de Gestion de Cabinet" {
+    component "LogicielIntegrateur (JVM SpringBoot)" as LogicielSante  {
+        component "DevBox-Santé DMP" as DMPC_API #orange
+    }
+ } 
+PersonnelSante -r-> LogicielSante
+DMPC_API -r-> DMP : WS securise conforme aux transactions du guide d'integration.
+@enduml

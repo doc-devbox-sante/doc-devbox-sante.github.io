@@ -29,11 +29,20 @@
 installé qu&amp;rsquo;une seule fois sur le poste et est très sensible aux différents ports physiques choisis pour connecter vos lecteurs.&lt;/li&gt;
 &lt;li&gt;La deuxième est que certains composants sont installés dans des versions anciennes.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;utiliser-un-lecteur-homologué-dans-sa-bonne-version&#34;&gt;Utiliser un lecteur homologué dans sa bonne version&lt;/h2&gt;
+&lt;p&gt;Le GIE Sesam-Vitale tient une liste à jour des lecteurs homologués et dans quelle version applicative. Il vous faut repérer le lecteur et son application.
+Pour vous aider, &lt;a href=&#34;https://industriels.sesam-vitale.fr/documents/10192/3574897/Liste+des+derni%C3%A8res+versions+d%27applications+de+lecteurs+homologu%C3%A9s+SESAM-Vitale&#34;&gt;voici le lien vers la liste des lecteurs en date de février 2021&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sesam-Vitale met également à disposition des documents permettant d&amp;rsquo;obtenir les informations de version des lecteurs :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;Proc%C3%A9dures_manuelles_KAPELSE.pdf&#34;&gt;Kapelse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Proc%C3%A9dures_manuelles_OLAQIN.pdf&#34;&gt;Olaqin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;proscrire-le-galss&#34;&gt;Proscrire le GALSS&lt;/h2&gt;
-&lt;p&gt;Les vieux lecteurs PSS utilisant le Galss sont dépréciés et devront ne plus être installé. Alors, préférez dans la mesure du possible
-des lecteurs configurés en PC/SC.&lt;/p&gt;
-&lt;h2 id=&#34;utilisation-de-loutil-de-diagnostique-diagam&#34;&gt;Utilisation de l&amp;rsquo;outil de diagnostique DiagAM&lt;/h2&gt;
-&lt;p&gt;Pour aider au diagnostique du problème, Sesam-Vitale met à disposition un outil de diagnostique diagAM.&lt;/p&gt;
+&lt;p&gt;Les vieux lecteurs PSS utilisant le GALS sont dépréciés et devront ne plus être installés à la fin de l&amp;rsquo;année 2021. Alors, 
+préférez dans la mesure du possible des lecteurs configurés en PC/SC.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;AbandonGalss_communication_sesam_vitale_pcsc.png&#34; alt=&#34;20210514_diagnostiquer_problèmes_lecteurs\AbandonGalss_communication_sesam_vitale_pcsc.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;utilisation-de-loutil-de-diagnostic-diagam&#34;&gt;Utilisation de l&amp;rsquo;outil de diagnostic DiagAM&lt;/h2&gt;
+&lt;p&gt;Pour aider au diagnostic du problème, Sesam-Vitale met à disposition un outil de diagnostic diagAM.&lt;/p&gt;
 &lt;p&gt;Pour l&amp;rsquo;utiliser, il faut suivre la procédure suivante :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Télécharger le programme d&amp;rsquo;installation du  composant ATSAM : https://www.dmp.fr/ps/composants-poste-etape-deux&lt;/li&gt;
@@ -56,7 +65,7 @@ mode PSS :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;DiagAM_galss_problem.png&#34; alt=&#34;DiagAM_galss_problem.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Un clic sur la clé à molette du galss, permettra de réinitialiser un galss :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;DiagAM_galss_lecteur_trouve.png&#34; alt=&#34;DiagAM_galss_lecteur_trouve.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Pour plus d&amp;rsquo;information sur l&amp;rsquo;outil de diagnostique, l&amp;rsquo;aide en ligne est disponible ici : https://www.sesam-vitale.fr/o/porte-document-web/atsam/ael/DiagAM2.html&lt;/p&gt;
+&lt;p&gt;Pour plus d&amp;rsquo;information sur l&amp;rsquo;outil de diagnostic, l&amp;rsquo;aide en ligne est disponible ici : &lt;a href=&#34;&#34;&gt;https://www.sesam-vitale.fr/o/porte-document-web/atsam/ael/DiagAM2.html&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>

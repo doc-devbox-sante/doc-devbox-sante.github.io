@@ -19,24 +19,24 @@
 
 <title>Diagnostiquer des problèmes d&#39;accès aux lecteurs | DevBox-Santé</title>
 <meta name="description" content="La Documentation"><meta property="og:title" content="Diagnostiquer des problèmes d&#39;accès aux lecteurs" />
-<meta property="og:description" content="Comment diagnosticr vos problèmes de lecteur
+<meta property="og:description" content="Comment diagnostiquer vos problèmes de lecteur
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/" />
 <meta property="article:published_time" content="2021-05-14T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-05-14T00:00:00+00:00" /><meta property="og:site_name" content="DevBox-Santé" />
 <meta itemprop="name" content="Diagnostiquer des problèmes d&#39;accès aux lecteurs">
-<meta itemprop="description" content="Comment diagnosticr vos problèmes de lecteur
+<meta itemprop="description" content="Comment diagnostiquer vos problèmes de lecteur
 ">
 <meta itemprop="datePublished" content="2021-05-14T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-05-14T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="342">
+<meta itemprop="wordCount" content="343">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Diagnostiquer des problèmes d&#39;accès aux lecteurs"/>
-<meta name="twitter:description" content="Comment diagnosticr vos problèmes de lecteur
+<meta name="twitter:description" content="Comment diagnostiquer vos problèmes de lecteur
 "/>
 
 
@@ -395,7 +395,7 @@
             
 <div class="td-content">
 	<h1>Diagnostiquer des problèmes d&#39;accès aux lecteurs</h1>
-	<div class="lead">Comment diagnosticr vos problèmes de lecteur</div>
+	<div class="lead">Comment diagnostiquer vos problèmes de lecteur</div>
 	<div class="td-byline mb-4">
 		Par <b>Laurent Forêt</b> |
 		<time datetime="2021-05-14" class="text-muted">Friday, May 14, 2021</time>
@@ -417,14 +417,14 @@ Pour vous aider, <a href="https://industriels.sesam-vitale.fr/documents/10192/35
 <li><a href="Proc%C3%A9dures_manuelles_OLAQIN.pdf">Olaqin</a></li>
 </ul>
 <h2 id="proscrire-le-galss">Proscrire le GALSS</h2>
-<p>Les vieux lecteurs PSS utilisant le GALS sont dépréciés et devront ne plus être installés à la fin de l&rsquo;année 2021. Alors, 
+<p>Les vieux lecteurs PSS utilisant le GALSS sont dépréciés et devront ne plus être installés à la fin de l&rsquo;année 2021. Alors, 
 préférez dans la mesure du possible des lecteurs configurés en PC/SC.</p>
 <p><img src="AbandonGalss_communication_sesam_vitale_pcsc.png" alt="20210514_diagnostiquer_problèmes_lecteurs\AbandonGalss_communication_sesam_vitale_pcsc.png"></p>
 <h2 id="utilisation-de-loutil-de-diagnostic-diagam">Utilisation de l&rsquo;outil de diagnostic DiagAM</h2>
 <p>Pour aider au diagnostic du problème, Sesam-Vitale met à disposition un outil de diagnostic diagAM.</p>
 <p>Pour l&rsquo;utiliser, il faut suivre la procédure suivante :</p>
 <ul>
-<li>Télécharger le programme d&rsquo;installation du  composant ATSAM : https://www.dmp.fr/ps/composants-poste-etape-deux</li>
+<li>Télécharger le programme d&rsquo;installation du  composant ATSAM : <a href="">https://www.dmp.fr/ps/composants-poste-etape-deux</a></li>
 <li>Lancer l&rsquo;installation et sélectionner dans un premier temps que l&rsquo;outil de diagnostic :</li>
 </ul>
 <p><img src="DiagAM_install_1.png" alt="DiagAM_install_1.png"></p>
@@ -440,7 +440,7 @@ préférez dans la mesure du possible des lecteurs configurés en PC/SC.</p>
 Néanmoins, ce n&rsquo;est pas un soucis car nos installers embarquent la cryptolib nécessaire.</p>
 <p>Par contre les informations concernant l&rsquo;installation du GALSS nous est nécessaire en cas d&rsquo;utilisation d&rsquo;un lecteur en 
 mode PSS :</p>
-<p>Exemple, dans ce cas le galss.ini n&rsquo;existe pas dans le répertoire %WINDIR% et aucun lecteur n&rsquo;est trouvé:</p>
+<p>Exemple, dans le cas suivant le galss.ini n&rsquo;existe pas dans le répertoire <code>%WINDIR%</code> et aucun lecteur n&rsquo;est trouvé:</p>
 <p><img src="DiagAM_galss_problem.png" alt="DiagAM_galss_problem.png"></p>
 <p>Un clic sur la clé à molette du galss, permettra de réinitialiser un galss :</p>
 <p><img src="DiagAM_galss_lecteur_trouve.png" alt="DiagAM_galss_lecteur_trouve.png"></p>

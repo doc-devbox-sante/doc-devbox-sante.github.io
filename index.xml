@@ -13,6 +13,54 @@
     
     
     <item>
+      <title>Blog: Diagnostiquer des problèmes d&#39;accès aux lecteurs</title>
+      <link>/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/</link>
+      <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Lors de l&amp;rsquo;utilisation de composants de lecteur CPS et de Carte Vitale de la DevBox-Santé, vous pouvez rencontrer des problèmes d&amp;rsquo;accés aux lecteurs.&lt;/p&gt;
+&lt;p&gt;Ces problèmes sont dues principalement à deux sources de problème.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;La première, l&amp;rsquo;utilisation du galss qui nécessite d&amp;rsquo;être 
+installé qu&amp;rsquo;une seule fois sur le poste et est très sensible aux différents ports physiques choisis pour connecter vos lecteurs.&lt;/li&gt;
+&lt;li&gt;La deuxième est que certains composants sont installés dans des versions anciennes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;proscrire-le-galss&#34;&gt;Proscrire le GALSS&lt;/h2&gt;
+&lt;p&gt;Les vieux lecteurs PSS utilisant le Galss sont dépréciés et devront ne plus être installé. Alors, préférez dans la mesure du possible
+des lecteurs configurés en PC/SC.&lt;/p&gt;
+&lt;h2 id=&#34;utilisation-de-loutil-de-diagnostique-diagam&#34;&gt;Utilisation de l&amp;rsquo;outil de diagnostique DiagAM&lt;/h2&gt;
+&lt;p&gt;Pour aider au diagnostique du problème, Sesam-Vitale met à disposition un outil de diagnostique diagAM.&lt;/p&gt;
+&lt;p&gt;Pour l&amp;rsquo;utiliser, il faut suivre la procédure suivante :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Télécharger le programme d&amp;rsquo;installation du  composant ATSAM : https://www.dmp.fr/ps/composants-poste-etape-deux&lt;/li&gt;
+&lt;li&gt;Lancer l&amp;rsquo;installation et sélectionner dans un premier temps que l&amp;rsquo;outil de diagnostic :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;DiagAM_install_1.png&#34; alt=&#34;DiagAM_install_1.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lancer l&amp;rsquo;outil DiagAM à la fin de l&amp;rsquo;installation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;DiagAM_install_2.png&#34; alt=&#34;DiagAM_install_2.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sauvegarder le rapport pour analyse&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;DiagAM_running.png&#34; alt=&#34;DiagAM_running.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ici on voit que la cryptolib nécessite une réinstallation. Ce qui est rendu possible en appuyant sur la clé a molette. 
+Néanmoins, ce n&amp;rsquo;est pas un soucis car nos installers embarquent la cryptolib nécessaire.&lt;/p&gt;
+&lt;p&gt;Par contre les informations concernant l&amp;rsquo;installation du GALSS nous est nécessaire en cas d&amp;rsquo;utilisation d&amp;rsquo;un lecteur en 
+mode PSS :&lt;/p&gt;
+&lt;p&gt;Exemple, dans ce cas le galss.ini n&amp;rsquo;existe pas dans le répertoire %WINDIR% et aucun lecteur n&amp;rsquo;est trouvé:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;DiagAM_galss_problem.png&#34; alt=&#34;DiagAM_galss_problem.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Un clic sur la clé à molette du galss, permettra de réinitialiser un galss :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;DiagAM_galss_lecteur_trouve.png&#34; alt=&#34;DiagAM_galss_lecteur_trouve.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pour plus d&amp;rsquo;information sur l&amp;rsquo;outil de diagnostique, l&amp;rsquo;aide en ligne est disponible ici : https://www.sesam-vitale.fr/o/porte-document-web/atsam/ael/DiagAM2.html&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Les versions en cours</title>
       <link>/blog/2021/05/12/les-versions-en-cours/</link>
       <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>

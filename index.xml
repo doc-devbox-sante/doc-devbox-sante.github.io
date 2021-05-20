@@ -13,6 +13,66 @@
     
     
     <item>
+      <title>Blog: DMP &gt; matrice habilitation</title>
+      <link>/blog/2021/05/20/dmp-matrice-habilitation/</link>
+      <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2021/05/20/dmp-matrice-habilitation/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Les documents dans le DMP contient un certains nombres de métadata comme : &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;classCode&lt;/li&gt;
+&lt;li&gt;confidentialityCode&lt;/li&gt;
+&lt;li&gt;typeCode&lt;/li&gt;
+&lt;li&gt;formatCode&lt;/li&gt;
+&lt;li&gt;practiceSettingCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La visibilité d&amp;rsquo;un document pour un acteur de santé dépend du typeCode, le typeCode est une spécialisation du classCode&lt;/p&gt;
+&lt;p&gt;Pour connaître les types de documents qui peuvent être accédés par un professionnel de santé, il faut suivre la matrice&lt;br&gt;
+des habilitations : &lt;a href=&#34;https://www.dmp.fr/matrice-habilitation&#34;&gt;https://www.dmp.fr/matrice-habilitation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;matrice_habilitation_extrait.png&#34; alt=&#34;matrice_habilitation_extrait.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;dans-le-guide-dintégration&#34;&gt;Dans le guide d&amp;rsquo;intégration&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Les conditions d’accès en lecture aux documents contenus dans le DMP d’un patient (sur lequel ils ont l’autorisation d’accès) dépendent des professions et spécialités des PS recueillies à partir de la carte CPS du PS. Ces règles sont définies dans la matrice d’habilitation [DMP-MHAB].&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;dans-la-devboxsanté-dmp&#34;&gt;Dans la DevBoxSanté-DMP&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Connaître la liste des typeCode :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;API Java :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Autowired&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DMPCClient&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;...&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// Récupération des différents classCode
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getCodesFor&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;DMPCCode&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;ASIPJeuxValeurs&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;CLASS_CODE&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// Récupération des différents typeCode
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getCodesFor&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;DMPCCode&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;ASIPJeuxValeurs&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;TYPE_CODE&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;API REST&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl --location --request GET &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;https://dmpc-api-rest-3-1.herokuapp.com/proxy/nomenclatures/?jeuxValeurs=TYPE_CODE&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;--header &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Content-Type: application/json&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;lors-de-lhomologation&#34;&gt;Lors de l&amp;rsquo;homologation&lt;/h3&gt;
+&lt;p&gt;Exemple de test à valider lors de l&amp;rsquo;homologation :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;L&amp;rsquo;utilisateur s&amp;rsquo;authentifie avec une carte CPS autorisée à accéder au DMP du patient. 
+Un document invisible  (confidentialityCode  « INVISIBLE_PATIENT») est déjà présent sur le DMP. 
+Le PS est habilité à accéder à ce type de document (cf. matrice d&amp;rsquo;habilitations). 
+Le PS demande à mettre à jour le document afin de le rendre visible du patient (confidentialityCode  : vide).
+En retour le SI DMP confirme la mise à jour du document.&lt;br&gt;
+=&amp;gt; Mode opératoire :   Rendre visible le document 70 (typeCode 11502-2 (CR d&amp;rsquo;examens biologiques))&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Diagnostiquer des problèmes d&#39;accès aux lecteurs</title>
       <link>/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/</link>
       <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>

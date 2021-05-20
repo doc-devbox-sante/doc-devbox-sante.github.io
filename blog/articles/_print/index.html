@@ -195,6 +195,16 @@ This the multi-page printable view of this section.
     
 	
 
+    <li><a href="#pg-87ab15ff12fb2fae33bbe79303f82722">DMP &gt; matrice habilitation</a></li>
+
+
+
+    
+  
+    
+    
+	
+
     <li><a href="#pg-c20c69a2aad7fcab8fb238d2bf53a8f0">Diagnostiquer des problèmes d&#39;accès aux lecteurs</a></li>
 
 
@@ -239,6 +249,80 @@ This the multi-page printable view of this section.
   
 
 <div class="td-content" style="">
+    <h1 id="pg-87ab15ff12fb2fae33bbe79303f82722">DMP &gt; matrice habilitation</h1>
+	<div class="lead">Quels sont les documents accessibles pour un acteur de santé</div>
+	<div class="td-byline mb-4">
+		Par <b>Laurent Forêt</b> |
+        
+		<time datetime="2021-05-20" class="text-muted">Thursday, May 20, 2021</time>
+        
+	</div>
+	<p>Les documents dans le DMP contient un certains nombres de métadata comme : </p>
+<ul>
+<li>classCode</li>
+<li>confidentialityCode</li>
+<li>typeCode</li>
+<li>formatCode</li>
+<li>practiceSettingCode</li>
+</ul>
+<p>La visibilité d&rsquo;un document pour un acteur de santé dépend du typeCode, le typeCode est une spécialisation du classCode</p>
+<p>Pour connaître les types de documents qui peuvent être accédés par un professionnel de santé, il faut suivre la matrice<br>
+des habilitations : <a href="https://www.dmp.fr/matrice-habilitation">https://www.dmp.fr/matrice-habilitation</a></p>
+<p><img src="matrice_habilitation_extrait.png" alt="matrice_habilitation_extrait.png"></p>
+<h3 id="dans-le-guide-dintégration">Dans le guide d&rsquo;intégration</h3>
+<blockquote>
+<p>Les conditions d’accès en lecture aux documents contenus dans le DMP d’un patient (sur lequel ils ont l’autorisation d’accès) dépendent des professions et spécialités des PS recueillies à partir de la carte CPS du PS. Ces règles sont définies dans la matrice d’habilitation [DMP-MHAB].</p>
+</blockquote>
+<h3 id="dans-la-devboxsanté-dmp">Dans la DevBoxSanté-DMP</h3>
+<ul>
+<li>
+<p>Connaître la liste des typeCode :</p>
+<ul>
+<li>API Java :</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#5c35cc;font-weight:bold">@Autowired</span>
+<span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">DMPCClient</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<span style="color:#ce5c00;font-weight:bold">...</span>
+<span style="color:#8f5902;font-style:italic">// Récupération des différents classCode
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">CLASS_CODE</span><span style="color:#ce5c00;font-weight:bold">)</span>
+<span style="color:#8f5902;font-style:italic">// Récupération des différents typeCode
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">TYPE_CODE</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</code></pre></div><ul>
+<li>API REST</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request GET <span style="color:#4e9a06">&#39;https://dmpc-api-rest-3-1.herokuapp.com/proxy/nomenclatures/?jeuxValeurs=TYPE_CODE&#39;</span> <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;Content-Type: application/json&#39;</span> <span style="color:#4e9a06">\
+</span></code></pre></div><h3 id="lors-de-lhomologation">Lors de l&rsquo;homologation</h3>
+<p>Exemple de test à valider lors de l&rsquo;homologation :</p>
+<blockquote>
+<p>L&rsquo;utilisateur s&rsquo;authentifie avec une carte CPS autorisée à accéder au DMP du patient. 
+Un document invisible  (confidentialityCode  « INVISIBLE_PATIENT») est déjà présent sur le DMP. 
+Le PS est habilité à accéder à ce type de document (cf. matrice d&rsquo;habilitations). 
+Le PS demande à mettre à jour le document afin de le rendre visible du patient (confidentialityCode  : vide).
+En retour le SI DMP confirme la mise à jour du document.<br>
+=&gt; Mode opératoire :   Rendre visible le document 70 (typeCode 11502-2 (CR d&rsquo;examens biologiques))</p>
+</blockquote>
+
+</div>
+
+
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+
+  
+
+<div class="td-content" style="page-break-before: always">
     <h1 id="pg-c20c69a2aad7fcab8fb238d2bf53a8f0">Diagnostiquer des problèmes d&#39;accès aux lecteurs</h1>
 	<div class="lead">Comment diagnostiquer vos problèmes de lecteur</div>
 	<div class="td-byline mb-4">

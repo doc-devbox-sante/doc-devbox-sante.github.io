@@ -547,10 +547,19 @@ CpsAgentClient &amp;lt;-&amp;gt; cpsAgent
 dmpFacade -down-&amp;gt; DMP : SOAP
 cps -down-&amp;gt; cryptolibCPS : appel natif
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;diagramme-de-séquences&#34;&gt;Diagramme de séquences&lt;/h4&gt;
-&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;
+&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;box &amp;quot;Post Client&amp;quot;
+participant frontend
+participant cpsAgent
+end box 
+
+box &amp;quot;Environnement intégrateur&amp;quot; #white
+participant &amp;quot;DevBox-Santé DMP&amp;quot; as dbxdmp 
+participant backend
+end box
+
 frontend -&amp;gt; backend : storeDocumentPatient
-backend -&amp;gt; &amp;quot;DevBox-Santé DMP&amp;quot; as dbxdmp : /dmp/td21SubmitDocuments
-== non connecté au DMP : initialisation d&#39;une connexion SSL en authentification mutuelle avec le DMP ==
+backend -&amp;gt; dbxdmp : /dmp/td21SubmitDocuments
+==  initialisation d&#39;une connexion SSL en authentification mutuelle avec le DMP ==
 dbxdmp -&amp;gt; &amp;quot;DMP&amp;quot; as dmp : [SSL] 1. Client Hello
 dmp -&amp;gt; dbxdmp : [SSL] 2. Server Hello (certificat du DMP server inclus)
 dmp -&amp;gt; dbxdmp : [SSL] 3. Client certificate request

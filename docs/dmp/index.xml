@@ -287,7 +287,7 @@ cps &amp;lt;-up-&amp;gt; cryptolibCPS : appel natif
 dmpFacade -down-&amp;gt; DMP : SOAP
 frontend  -down-&amp;gt; backend
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;authentification-directe-avec-cpsagent&#34;&gt;Authentification Directe avec CPS Agent&lt;/h3&gt;
-&lt;p&gt;#### Diagramme de composants&lt;/p&gt;
+&lt;h4 id=&#34;diagramme-de-composants-2&#34;&gt;Diagramme de composants&lt;/h4&gt;
 &lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;
 node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
     [FrontEnd intégrateur] as frontend 
@@ -335,8 +335,8 @@ dbxdmp -&amp;gt; cpsAgent : HTTP GET /cps/authenticationCertificate
 cpsAgent -&amp;gt; dbxdmp : {certificate authentification}
 dbxdmp -&amp;gt; dmp : [SSL] 4. Client certificate
 dbxdmp -&amp;gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public&#39;s key)
-dbxdmp -&amp;gt; cpsAgent : HTTP POST /cps/sign/for/authentication/SHA256WithRSA body : {dmp data}
-cpsAgent -&amp;gt; dbxdmp : {signed dmp data}
+dbxdmp -&amp;gt; cpsAgent : HTTP POST /cps/sign/for/authentication/SHA256WithRSA body : {handshake data}
+cpsAgent -&amp;gt; dbxdmp : {signed handshake data}
 dbxdmp -&amp;gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
 dbxdmp -&amp;gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
 dmp -&amp;gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)

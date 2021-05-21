@@ -1459,7 +1459,7 @@ cps &lt;-up-&gt; cryptolibCPS : appel natif
 dmpFacade -down-&gt; DMP : SOAP
 frontend  -down-&gt; backend
 </code></pre><h3 id="authentification-directe-avec-cpsagent">Authentification Directe avec CPS Agent</h3>
-<p>#### Diagramme de composants</p>
+<h4 id="diagramme-de-composants-2">Diagramme de composants</h4>
 <pre><code class="language-plantuml" data-lang="plantuml">
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend 
@@ -1507,8 +1507,8 @@ dbxdmp -&gt; cpsAgent : HTTP GET /cps/authenticationCertificate
 cpsAgent -&gt; dbxdmp : {certificate authentification}
 dbxdmp -&gt; dmp : [SSL] 4. Client certificate
 dbxdmp -&gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public's key)
-dbxdmp -&gt; cpsAgent : HTTP POST /cps/sign/for/authentication/SHA256WithRSA body : {dmp data}
-cpsAgent -&gt; dbxdmp : {signed dmp data}
+dbxdmp -&gt; cpsAgent : HTTP POST /cps/sign/for/authentication/SHA256WithRSA body : {handshake data}
+cpsAgent -&gt; dbxdmp : {signed handshake data}
 dbxdmp -&gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
 dbxdmp -&gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
 dmp -&gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)
@@ -2213,99 +2213,99 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">logging.level</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">fr.devboxsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>info<span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">fr.devcoop</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>warn<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span>org.springframework<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>error<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">org.springframework</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>error<span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><h3 id="spécifique-au-dmp">Spécifique au DMP</h3>
-<pre><code>dmpc:
-    nomenclature:
-        #Url des jeux de valeurs utilisés pour le DMP
-        resourceName: JDV DMP_API_V2_XML.zip
-        #Encodage de caractère utilisé dans ces jeux de valeurs.
-        charset: UTF-8
-        
-    parameters:
-        # Url du document xml contenant le paramétrage du DMP [FI-URL]
-        url: https://www.dmp.fr/web/dmp/documents/param-lps
-        delayBetweenSyncInHours: 24
-        document:
-            checkHash: true
-        
-    # path vers les resources de validation CDA. 
-    # la resource peut être récupéré directement depuis le site de esante.gouv.fr ou depuis les resources fournies
-    cda.validator:
-#        resourceName: https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip
-        resourceName: testContenuCDA_20190903_V2.14.zip
-        charset: ISO-8859-1
-        
-    #serveur de temps
-    time.ntpServer: fr.pool.ntp.org
-    patient.autorite:
-        # INS NIR test : 1.2.250.1.213.1.4.10
-        # INS NIR démo: 1.2.250.1.213.1.4.11
-        # INS NIR réel: 1.2.250.1.213.1.4.8
-        nir: 1.2.250.1.213.1.4.10
-</code></pre><p>Dont Les urls du DMP </p>
-<pre><code>dmpc:
-    url.prefix:
-        # environnement production
-            https://lps-igc-sante.dmp.gouv.fr/
-            
-    url.web.prefix:
-        # environnement production
-        https://ledmp.dmp.gouv.fr
-        
-</code></pre><h3 id="les-informations-du-lps-homologuée">Les informations du LPS homologuée</h3>
-<pre><code>    lpsInfo:
-        homologationId: XXX-xxxxxx-xxx
-        version: x.0
-        nom: VOTRE_LOGICIEL
-        #Numéro de série ou identifiant de l'installation du logiciel 
-        id: 1.2.250.1.287.1.
-    source:
-            # 1.2.250.1.287 est l'OID de Devcoop
-            # 1.2.250.1.287.1 est l'OID correspondant à la DMPC pour Devcoop
-        idRoot: 1.2.250.1.287.1
-        idExtension: 1234567
-</code></pre><h2 id="différents-modes-dauthentification">Différents modes d&rsquo;authentification</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">nomenclature</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic">#Url des jeux de valeurs utilisés pour le DMP</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">resourceName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>JDV<span style="color:#f8f8f8;text-decoration:underline"> </span>DMP_API_V2_XML.zip<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic">#Encodage de caractère utilisé dans ces jeux de valeurs.</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">charset</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>UTF<span style="color:#0000cf;font-weight:bold">-8</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">parameters</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># Url du document xml contenant le paramétrage du DMP [FI-URL]</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">url</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>https<span style="color:#000;font-weight:bold">:</span>//www.dmp.fr/web/dmp/documents/param-lps<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">delayBetweenSyncInHours</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">24</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">document</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">checkHash</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># path vers les resources de validation CDA. </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># la resource peut être récupéré directement depuis le site de esante.gouv.fr ou depuis les resources fournies</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">cda.validator</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">#        resourceName: https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">resourceName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>testContenuCDA_20190903_V2<span style="color:#0000cf;font-weight:bold">.14</span>.zip<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">charset</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>ISO<span style="color:#0000cf;font-weight:bold">-8859-1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic">#serveur de temps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">time.ntpServer</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>fr.pool.ntp.org<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">patient.autorite</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># INS NIR test : 1.2.250.1.213.1.4.10</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># INS NIR démo: 1.2.250.1.213.1.4.11</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># INS NIR réel: 1.2.250.1.213.1.4.8</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">nir</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.213.1.4.10</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><p>Dont Les urls du DMP </p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">url.prefix</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># environnement production</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>https<span style="color:#000;font-weight:bold">:</span>//lps-igc-sante.dmp.gouv.fr/<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">url.web.prefix</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># environnement production</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span>https<span style="color:#000;font-weight:bold">:</span>//ledmp.dmp.gouv.fr<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        
+</span></code></pre></div><h3 id="les-informations-du-lps-homologuée">Les informations du LPS homologuée</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">lpsInfo</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">homologationId</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>XXX-xxxxxx-xxx<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">version</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>x<span style="color:#0000cf;font-weight:bold">.0</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">nom</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>VOTRE_LOGICIEL<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic">#Numéro de série ou identifiant de l&#39;installation du logiciel </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">id</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.287.1</span>.<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">source</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#8f5902;font-style:italic"># 1.2.250.1.287 est l&#39;OID de Devcoop</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#8f5902;font-style:italic"># 1.2.250.1.287.1 est l&#39;OID correspondant à la DMPC pour Devcoop</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idRoot</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.287.1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idExtension</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1234567</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><h2 id="différents-modes-dauthentification">Différents modes d&rsquo;authentification</h2>
 <p>Les modes d&rsquo;authentification supportés par la DevBox-Santé DMP sont les deux demandés dans le guide d&rsquo;intégration du DMP.
 Il s&rsquo;agit du mode d&rsquo;authentification directe (avec l&rsquo;usage de la carte CPS) et indirecte (avec l&rsquo;usage des certificats serveurs)</p>
 <h3 id="authentification-directe">Authentification directe</h3>
-<pre><code>dmpc:
-    # authentification directe utilisant les certificats de la carte CPS
-    security.mode: cps
-     
-    ssl:
-        trust:
-            path:
-                truststoreIgcSante-EL-ORG.jks
-</code></pre><h3 id="authentification-indirecte">Authentification indirecte</h3>
-<pre><code>
-dmpc: 
-    # authentification indirecte utilisant les certificats p12 serveurs
-    security.mode: p12
-
-    # informations relatives au certificat smime
-    smime:
-        p12:
-            path:
-                asip-p12-EL-TEST-ORG-SIGN-xxxx.p12
-            password:
-                password
-    # informations relatives au certificat ssl
-    ssl:
-        p12:
-            path:
-                asip-p12-EL-TEST-ORG-AUTH_CLI-xxxx.p12
-            password:
-                password
-        trust:
-            path:
-                truststoreIgcSante-EL-ORG.jks
-</code></pre><h3 id="authentification-directe--cpsagent">Authentification directe : CPS Agent</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification directe utilisant les certificats de la carte CPS</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>cps<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">     
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ssl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">trust</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                </span>truststoreIgcSante-EL-ORG.jks<span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><h3 id="authentification-indirecte">Authentification indirecte</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span>dmpc<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification indirecte utilisant les certificats p12 serveurs</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>p12<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># informations relatives au certificat smime</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">smime</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                </span>asip-p12-EL-TEST-ORG-SIGN-xxxx.p12<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                </span>password<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># informations relatives au certificat ssl</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ssl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                </span>asip-p12-EL-TEST-ORG-AUTH_CLI-xxxx.p12<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                </span>password<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">trust</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                </span>truststoreIgcSante-EL-ORG.jks<span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><h3 id="authentification-directe--cpsagent">Authentification directe : CPS Agent</h3>
 <p>Un mode d&rsquo;authentification intégrant le module CPS agent est possible de la manière suivante :</p>
-<pre><code>dmpc: 
-    # authentification indirecte utilisant les certificats p12 serveurs
-    security.mode: withCpsAgent
-</code></pre>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">dmpc<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification indirecte utilisant les certificats p12 serveurs</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>withCpsAgent<span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div>
 </div>
 
 

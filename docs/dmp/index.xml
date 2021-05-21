@@ -346,9 +346,6 @@ dmp -&amp;gt; dbxdmp : SOAP response OK
 dbxdmp -&amp;gt; backend : HTTP 200 Ok
 backend -&amp;gt; frontend : ok 
 
-
- 
-
 &lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>

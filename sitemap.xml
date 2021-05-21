@@ -83,6 +83,11 @@
   </url>
   
   <url>
+    <loc>/docs/dmp/authentifications/</loc>
+    <lastmod>2021-05-21T08:44:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/articles/</loc>
     <lastmod>2021-05-12T18:55:36+02:00</lastmod>
   </url>
@@ -134,7 +139,7 @@
   
   <url>
     <loc>/blog/2021/05/20/dmp-matrice-habilitation/</loc>
-    <lastmod>2021-05-20T12:10:26+02:00</lastmod>
+    <lastmod>2021-05-20T12:34:32+02:00</lastmod>
   </url>
   
   <url>
@@ -160,6 +165,11 @@
   <url>
     <loc>/</loc>
     <lastmod>2021-05-12T18:55:36+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/dmp/howtos/parametrage/</loc>
+    <lastmod>2021-05-21T08:44:00+02:00</lastmod>
   </url>
   
 </urlset>

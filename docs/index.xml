@@ -463,6 +463,120 @@ public static class Default implements UniqueIdGenerator {
     </item>
     
     <item>
+      <title>Docs: Authentifications</title>
+      <link>/docs/dmp/authentifications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/dmp/authentifications/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;pre&gt;&lt;code&gt;Page en cours de construction
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;authentification-indirecte-certificat&#34;&gt;Authentification Indirecte (Certificat)&lt;/h2&gt;
+&lt;h4 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;
+[FrontEnd intégrateur] as frontend 
+
+node &amp;quot;Environnement intégrateur&amp;quot; {
+   [BackEnd intégrateur] as backend #cyan
+    package &amp;quot;DevBox-Santé Proxy REST&amp;quot;   {
+        package &amp;quot;DevBox-sante DMP&amp;quot; as dmpFacade #35D9C0 {
+            [P12Manager] #35D9C0
+        }
+    }
+}
+cloud &amp;quot;DMP&amp;quot; as DMP 
+
+frontend -down-&amp;gt; backend : HTTP POST /dmp/td21SubmitDocuments
+backend -right-&amp;gt; dmpFacade: REST
+dmpFacade -down-&amp;gt; DMP : SOAP
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;authentification-directe-cps&#34;&gt;Authentification directe CPS&lt;/h2&gt;
+&lt;h4 id=&#34;diagramme-de-composants-1&#34;&gt;Diagramme de composants&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
+    [FrontEnd intégrateur] as frontend 
+
+    component &amp;quot;DevBox-Santé Proxy REST&amp;quot;   {
+        component &amp;quot;DevBox-sante DMP&amp;quot; as dmpFacade #35D9C0 {
+            [DevBox-sante CPS] as cps #D34A3C 
+            
+        } 
+    }
+    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+}
+[BackEnd intégrateur] as backend 
+cloud &amp;quot;DMP&amp;quot; as DMP 
+
+frontend -right-&amp;gt; dmpFacade : HTTP POST /dmp/td21SubmitDocuments
+cps &amp;lt;-up-&amp;gt; cryptolibCPS : appel natif
+dmpFacade -down-&amp;gt; DMP : SOAP
+frontend  -down-&amp;gt; backend
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;authentification-directe-avec-cpsagent&#34;&gt;Authentification Directe avec CPS Agent&lt;/h3&gt;
+&lt;p&gt;#### Diagramme de composants&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;
+node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
+    [FrontEnd intégrateur] as frontend 
+
+    component &amp;quot;DevBox-Santé Proxy REST&amp;quot; as cpsAgent  {
+            [DevBox-sante CPS] as cps #D34A3C 
+        
+    }
+    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+}
+
+node &amp;quot;Environnement intégrateur&amp;quot; {
+   [BackEnd intégrateur] as backend 
+    package &amp;quot;DevBox-Santé Proxy REST&amp;quot;   {
+        package &amp;quot;DevBox-sante DMP&amp;quot; as dmpFacade #35D9C0 {
+            [CpsAgentClient] #35D9C0
+        }
+    }
+}
+cloud &amp;quot;DMP&amp;quot; as DMP 
+
+frontend -d-&amp;gt; backend
+backend -d-&amp;gt; dmpFacade  
+CpsAgentClient &amp;lt;-&amp;gt; cpsAgent
+dmpFacade -down-&amp;gt; DMP : SOAP
+cps -down-&amp;gt; cryptolibCPS : appel natif
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;diagramme-de-séquences&#34;&gt;Diagramme de séquences&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;
+frontend -&amp;gt; backend : storeDocumentPatient
+backend -&amp;gt; &amp;quot;DevBox-Santé DMP&amp;quot; as dbxdmp : /dmp/td21SubmitDocuments
+== non connecté au DMP : initialisation d&#39;une connexion SSL en authentification mutuelle avec le DMP ==
+dbxdmp -&amp;gt; &amp;quot;DMP&amp;quot; as dmp : [SSL] 1. Client Hello
+dmp -&amp;gt; dbxdmp : [SSL] 2. Server Hello (certificat du DMP server inclus)
+dmp -&amp;gt; dbxdmp : [SSL] 3. Client certificate request
+dbxdmp -&amp;gt; cpsAgent : HTTP GET /cps/authenticationCertificate
+cpsAgent -&amp;gt; dbxdmp : {certificate authentification}
+dbxdmp -&amp;gt; dmp : [SSL] 4. Client certificate
+dbxdmp -&amp;gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public&#39;s key)
+dbxdmp -&amp;gt; cpsAgent : HTTP POST /cps/sign/for/authentication/SHA256WithRSA body : {dmp data}
+cpsAgent -&amp;gt; dbxdmp : {signed dmp data}
+dbxdmp -&amp;gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
+dbxdmp -&amp;gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
+dmp -&amp;gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)
+== fin de l&#39;initialisation de la connexion ssl avec le DMP ==
+dbxdmp -&amp;gt; dmp : POST SOAP message de soumission (XDS/CDA)
+dmp -&amp;gt; dbxdmp : SOAP response OK
+dbxdmp -&amp;gt; backend : HTTP 200 Ok
+backend -&amp;gt; frontend : ok 
+
+
+ 
+
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: CDA structuration minimale</title>
       <link>/docs/dmp/cda/structurationminimale/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -885,6 +999,117 @@ base permettant la création d&amp;rsquo;un DMPCDocument ainsi que son contenu b
 &lt;li&gt;&lt;a href=&#34;/docs/dmp/howtos/gestioncertificat/&#34;&gt;Dans le cas d&amp;rsquo;une authentification indirecte pour les établissements&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Paramètrage de la DevBox-santé DMP</title>
+      <link>/docs/dmp/howtos/parametrage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/dmp/howtos/parametrage/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Comme toute application spring-boot la DevBox-Santé DMP se configure au travers du fichier &lt;code&gt;application.yml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Nous pouvons donc configurer l&amp;rsquo;application spring boot.&lt;/p&gt;
+&lt;h3 id=&#34;logging&#34;&gt;Logging&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;logging.level&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;fr.devboxsante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;info&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;fr.devcoop&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;warn&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;org.springframework&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;error&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;spécifique-au-dmp&#34;&gt;Spécifique au DMP&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;dmpc:
+    nomenclature:
+        #Url des jeux de valeurs utilisés pour le DMP
+        resourceName: JDV DMP_API_V2_XML.zip
+        #Encodage de caractère utilisé dans ces jeux de valeurs.
+        charset: UTF-8
+        
+    parameters:
+        # Url du document xml contenant le paramétrage du DMP [FI-URL]
+        url: https://www.dmp.fr/web/dmp/documents/param-lps
+        delayBetweenSyncInHours: 24
+        document:
+            checkHash: true
+        
+    # path vers les resources de validation CDA. 
+    # la resource peut être récupéré directement depuis le site de esante.gouv.fr ou depuis les resources fournies
+    cda.validator:
+#        resourceName: https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip
+        resourceName: testContenuCDA_20190903_V2.14.zip
+        charset: ISO-8859-1
+        
+    #serveur de temps
+    time.ntpServer: fr.pool.ntp.org
+    patient.autorite:
+        # INS NIR test : 1.2.250.1.213.1.4.10
+        # INS NIR démo: 1.2.250.1.213.1.4.11
+        # INS NIR réel: 1.2.250.1.213.1.4.8
+        nir: 1.2.250.1.213.1.4.10
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Dont Les urls du DMP &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dmpc:
+    url.prefix:
+        # environnement production
+            https://lps-igc-sante.dmp.gouv.fr/
+            
+    url.web.prefix:
+        # environnement production
+        https://ledmp.dmp.gouv.fr
+        
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;les-informations-du-lps-homologuée&#34;&gt;Les informations du LPS homologuée&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;    lpsInfo:
+        homologationId: XXX-xxxxxx-xxx
+        version: x.0
+        nom: VOTRE_LOGICIEL
+        #Numéro de série ou identifiant de l&#39;installation du logiciel 
+        id: 1.2.250.1.287.1.
+    source:
+            # 1.2.250.1.287 est l&#39;OID de Devcoop
+            # 1.2.250.1.287.1 est l&#39;OID correspondant à la DMPC pour Devcoop
+        idRoot: 1.2.250.1.287.1
+        idExtension: 1234567
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;différents-modes-dauthentification&#34;&gt;Différents modes d&amp;rsquo;authentification&lt;/h2&gt;
+&lt;p&gt;Les modes d&amp;rsquo;authentification supportés par la DevBox-Santé DMP sont les deux demandés dans le guide d&amp;rsquo;intégration du DMP.
+Il s&amp;rsquo;agit du mode d&amp;rsquo;authentification directe (avec l&amp;rsquo;usage de la carte CPS) et indirecte (avec l&amp;rsquo;usage des certificats serveurs)&lt;/p&gt;
+&lt;h3 id=&#34;authentification-directe&#34;&gt;Authentification directe&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;dmpc:
+    # authentification directe utilisant les certificats de la carte CPS
+    security.mode: cps
+     
+    ssl:
+        trust:
+            path:
+                truststoreIgcSante-EL-ORG.jks
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;authentification-indirecte&#34;&gt;Authentification indirecte&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;
+dmpc: 
+    # authentification indirecte utilisant les certificats p12 serveurs
+    security.mode: p12
+
+    # informations relatives au certificat smime
+    smime:
+        p12:
+            path:
+                asip-p12-EL-TEST-ORG-SIGN-xxxx.p12
+            password:
+                password
+    # informations relatives au certificat ssl
+    ssl:
+        p12:
+            path:
+                asip-p12-EL-TEST-ORG-AUTH_CLI-xxxx.p12
+            password:
+                password
+        trust:
+            path:
+                truststoreIgcSante-EL-ORG.jks
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;authentification-directe--cpsagent&#34;&gt;Authentification directe : CPS Agent&lt;/h3&gt;
+&lt;p&gt;Un mode d&amp;rsquo;authentification intégrant le module CPS agent est possible de la manière suivante :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dmpc: 
+    # authentification indirecte utilisant les certificats p12 serveurs
+    security.mode: withCpsAgent
+&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     

@@ -17,24 +17,24 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Integrateurs checklist | DevBox-Santé</title>
-<meta name="description" content="La Documentation"><meta property="og:title" content="Integrateurs checklist" />
-<meta property="og:description" content="Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.
+<title>Paramètrage de la DevBox-santé DMP | DevBox-Santé</title>
+<meta name="description" content="La Documentation"><meta property="og:title" content="Paramètrage de la DevBox-santé DMP" />
+<meta property="og:description" content="Comment paramètrer le DMP
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/docs/dmp/howtos/integrateurchecklist/" />
-<meta property="article:modified_time" content="2021-05-12T18:55:36+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
-<meta itemprop="name" content="Integrateurs checklist">
-<meta itemprop="description" content="Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.
+<meta property="og:url" content="/docs/dmp/howtos/parametrage/" />
+<meta property="article:modified_time" content="2021-05-21T08:44:00+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta itemprop="name" content="Paramètrage de la DevBox-santé DMP">
+<meta itemprop="description" content="Comment paramètrer le DMP
 ">
-<meta itemprop="dateModified" content="2021-05-12T18:55:36&#43;02:00" />
-<meta itemprop="wordCount" content="173">
+<meta itemprop="dateModified" content="2021-05-21T08:44:00&#43;02:00" />
+<meta itemprop="wordCount" content="316">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Integrateurs checklist"/>
-<meta name="twitter:description" content="Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.
+<meta name="twitter:title" content="Paramètrage de la DevBox-santé DMP"/>
+<meta name="twitter:description" content="Comment paramètrer le DMP
 "/>
 
 
@@ -592,7 +592,7 @@
   
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdmphowtosintegrateurchecklist-li">
-    <a href="/docs/dmp/howtos/integrateurchecklist/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__page" id="m-docsdmphowtosintegrateurchecklist"><span class="td-sidebar-nav-active-item">Integrateurs checklist</span></a>
+    <a href="/docs/dmp/howtos/integrateurchecklist/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsdmphowtosintegrateurchecklist"><span class="">Integrateurs checklist</span></a>
     
   </li>
 
@@ -617,7 +617,7 @@
   
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdmphowtosparametrage-li">
-    <a href="/docs/dmp/howtos/parametrage/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsdmphowtosparametrage"><span class="">Paramètrage de la DevBox-santé DMP</span></a>
+    <a href="/docs/dmp/howtos/parametrage/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__page" id="m-docsdmphowtosparametrage"><span class="td-sidebar-nav-active-item">Paramètrage de la DevBox-santé DMP</span></a>
     
   </li>
 
@@ -902,13 +902,18 @@
 
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#administratif">Administratif</a></li>
-    <li><a href="#architecture">Architecture</a></li>
-    <li><a href="#développement--intégration">Développement / Intégration</a></li>
-    <li><a href="#validation">Validation</a></li>
-    <li><a href="#déploiement">Déploiement</a>
+    <li>
       <ul>
-        <li><a href="#gestion-des-certificats">Gestion des certificats</a></li>
+        <li><a href="#logging">Logging</a></li>
+        <li><a href="#spécifique-au-dmp">Spécifique au DMP</a></li>
+        <li><a href="#les-informations-du-lps-homologuée">Les informations du LPS homologuée</a></li>
+      </ul>
+    </li>
+    <li><a href="#différents-modes-dauthentification">Différents modes d&rsquo;authentification</a>
+      <ul>
+        <li><a href="#authentification-directe">Authentification directe</a></li>
+        <li><a href="#authentification-indirecte">Authentification indirecte</a></li>
+        <li><a href="#authentification-directe--cpsagent">Authentification directe : CPS Agent</a></li>
       </ul>
     </li>
   </ul>
@@ -959,7 +964,7 @@
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/dmp/howtos/integrateurchecklist/">Integrateurs checklist</a>
+	<a href="/docs/dmp/howtos/parametrage/">Paramètrage de la DevBox-santé DMP</a>
 </li>
 
 	</ol>
@@ -967,84 +972,111 @@
 
             
 <div class="td-content">
-	<h1>Integrateurs checklist</h1>
-    <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.</div>
+	<h1>Paramètrage de la DevBox-santé DMP</h1>
+    <div class="lead">Comment paramètrer le DMP</div>
 	       
-	
+	<p>Comme toute application spring-boot la DevBox-Santé DMP se configure au travers du fichier <code>application.yml</code></p>
+<p>Nous pouvons donc configurer l&rsquo;application spring boot.</p>
+<h3 id="logging">Logging</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">logging.level</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">fr.devboxsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>info<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">fr.devcoop</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>warn<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span>org.springframework<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>error<span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><h3 id="spécifique-au-dmp">Spécifique au DMP</h3>
+<pre><code>dmpc:
+    nomenclature:
+        #Url des jeux de valeurs utilisés pour le DMP
+        resourceName: JDV DMP_API_V2_XML.zip
+        #Encodage de caractère utilisé dans ces jeux de valeurs.
+        charset: UTF-8
+        
+    parameters:
+        # Url du document xml contenant le paramétrage du DMP [FI-URL]
+        url: https://www.dmp.fr/web/dmp/documents/param-lps
+        delayBetweenSyncInHours: 24
+        document:
+            checkHash: true
+        
+    # path vers les resources de validation CDA. 
+    # la resource peut être récupéré directement depuis le site de esante.gouv.fr ou depuis les resources fournies
+    cda.validator:
+#        resourceName: https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip
+        resourceName: testContenuCDA_20190903_V2.14.zip
+        charset: ISO-8859-1
+        
+    #serveur de temps
+    time.ntpServer: fr.pool.ntp.org
+    patient.autorite:
+        # INS NIR test : 1.2.250.1.213.1.4.10
+        # INS NIR démo: 1.2.250.1.213.1.4.11
+        # INS NIR réel: 1.2.250.1.213.1.4.8
+        nir: 1.2.250.1.213.1.4.10
+</code></pre><p>Dont Les urls du DMP </p>
+<pre><code>dmpc:
+    url.prefix:
+        # environnement production
+            https://lps-igc-sante.dmp.gouv.fr/
+            
+    url.web.prefix:
+        # environnement production
+        https://ledmp.dmp.gouv.fr
+        
+</code></pre><h3 id="les-informations-du-lps-homologuée">Les informations du LPS homologuée</h3>
+<pre><code>    lpsInfo:
+        homologationId: XXX-xxxxxx-xxx
+        version: x.0
+        nom: VOTRE_LOGICIEL
+        #Numéro de série ou identifiant de l'installation du logiciel 
+        id: 1.2.250.1.287.1.
+    source:
+            # 1.2.250.1.287 est l'OID de Devcoop
+            # 1.2.250.1.287.1 est l'OID correspondant à la DMPC pour Devcoop
+        idRoot: 1.2.250.1.287.1
+        idExtension: 1234567
+</code></pre><h2 id="différents-modes-dauthentification">Différents modes d&rsquo;authentification</h2>
+<p>Les modes d&rsquo;authentification supportés par la DevBox-Santé DMP sont les deux demandés dans le guide d&rsquo;intégration du DMP.
+Il s&rsquo;agit du mode d&rsquo;authentification directe (avec l&rsquo;usage de la carte CPS) et indirecte (avec l&rsquo;usage des certificats serveurs)</p>
+<h3 id="authentification-directe">Authentification directe</h3>
+<pre><code>dmpc:
+    # authentification directe utilisant les certificats de la carte CPS
+    security.mode: cps
+     
+    ssl:
+        trust:
+            path:
+                truststoreIgcSante-EL-ORG.jks
+</code></pre><h3 id="authentification-indirecte">Authentification indirecte</h3>
+<pre><code>
+dmpc: 
+    # authentification indirecte utilisant les certificats p12 serveurs
+    security.mode: p12
 
-<div class="pageinfo pageinfo-primary">
-<pre><code>Page en cours de construction
+    # informations relatives au certificat smime
+    smime:
+        p12:
+            path:
+                asip-p12-EL-TEST-ORG-SIGN-xxxx.p12
+            password:
+                password
+    # informations relatives au certificat ssl
+    ssl:
+        p12:
+            path:
+                asip-p12-EL-TEST-ORG-AUTH_CLI-xxxx.p12
+            password:
+                password
+        trust:
+            path:
+                truststoreIgcSante-EL-ORG.jks
+</code></pre><h3 id="authentification-directe--cpsagent">Authentification directe : CPS Agent</h3>
+<p>Un mode d&rsquo;authentification intégrant le module CPS agent est possible de la manière suivante :</p>
+<pre><code>dmpc: 
+    # authentification indirecte utilisant les certificats p12 serveurs
+    security.mode: withCpsAgent
 </code></pre>
-
-</div>
-
-<h2 id="administratif">Administratif</h2>
-<ul>
-<li>
-<p>Obtenir un NIE auprès du CNDA</p>
-</li>
-<li>
-<p>Signer un protocole avec le CNDA</p>
-<ul>
-<li>Obtenir les cartes vitales de test DMP</li>
-</ul>
-</li>
-<li>
-<p>Obtenir des cartes CPS de test (médecin, CPE, autre) auprès de l&rsquo;ANS</p>
-</li>
-</ul>
-<h2 id="architecture">Architecture</h2>
-<ul>
-<li>
-<p>Choisir un mode d&rsquo;intégration/ authentification</p>
-<ul>
-<li>les moyens d&rsquo;authentification de l&rsquo;utilisateur doivent permettre l&rsquo;identification unique de l&rsquo;utilissateur</li>
-<li>le PS a-t-il accès à sa carte CPS ?</li>
-<li>Se rappeler que l&rsquo;éditeur agit pour le compte d&rsquo;un établissement de santé (RPPS)</li>
-<li>Un certificat serveur est lié au FINESS géographique de l&rsquo;établissement de santé.</li>
-</ul>
-</li>
-<li>
-<p>Choisir les profils d&rsquo;intégration</p>
-<ul>
-<li>création / administration de DMP</li>
-<li>alimentation</li>
-<li>consultation</li>
-</ul>
-</li>
-<li>
-<p>Choix de la transaction d&rsquo;itentification : TD0.0 ou téléservice INSi.</p>
-</li>
-</ul>
-<h2 id="développement--intégration">Développement / Intégration</h2>
-<p>Pour cela  :</p>
-<ul>
-<li><a href="../embedded">mode API java</a></li>
-<li><a href="../rest">mode REST</a></li>
-</ul>
-<h2 id="validation">Validation</h2>
-<ul>
-<li>
-<p>Répondre aux exigences du PDV filtré par DevBox-santé</p>
-<p>le dernier pdv disponible : <a href="https://docs.google.com/spreadsheets/d/1cMSql9SCJQP-NAH0ToeSXWNBAXi16Ty_/edit?usp=drive_web&amp;ouid=106855870534714244391&amp;rtpof=true">https://docs.google.com/spreadsheets/d/1cMSql9SCJQP-NAH0ToeSXWNBAXi16Ty_/edit?usp=drive_web&amp;ouid=106855870534714244391&amp;rtpof=true</a></p>
-</li>
-<li>
-<p>Dérouler le plan de test prehomologation filtrés pour validation DEVCOOP
-==&gt; Génération rapport du respect des exigences par DEVCOOP</p>
-<ul>
-<li>s&rsquo;assurer de la génération de PDF/A</li>
-</ul>
-</li>
-</ul>
-<h2 id="déploiement">Déploiement</h2>
-<h3 id="gestion-des-certificats">Gestion des certificats</h3>
-<ul>
-<li><a href="/docs/dmp/howtos/gestioncertificat/">Dans le cas d&rsquo;une authentification indirecte pour les établissements</a></li>
-</ul>
-
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 12, 2021: <a  href="/commit/9df2dc50a7e8a0f25028598aeeddd1e3ea10a7bd">Première version (9df2dc5)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 21, 2021: <a  href="/commit/23659d45baf9e08f7bab1b1981cec1ed48956c8a">Ajout documentation sur le paramètrage et la gestion de l&#39;authentification (23659d4)</a>
 </div>
 </div>
 

@@ -21,14 +21,17 @@
 
 <title>SOAP Proxy | DevBox-Santé</title>
 <meta name="description" content="La Documentation"><meta property="og:title" content="SOAP Proxy" />
-<meta property="og:description" content="La Documentation" />
+<meta property="og:description" content="Les transactionts du DMP en mode SOAP simplifié
+" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/dmp/soap/" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="SOAP Proxy">
-<meta itemprop="description" content="La Documentation"><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Les transactionts du DMP en mode SOAP simplifié
+"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="SOAP Proxy"/>
-<meta name="twitter:description" content="La Documentation"/>
+<meta name="twitter:description" content="Les transactionts du DMP en mode SOAP simplifié
+"/>
 
 
 <script type="application/javascript">
@@ -191,7 +194,7 @@ This the multi-page printable view of this section.
 
 
 <h1 class="title">SOAP Proxy</h1>
-
+<div class="lead">Les transactionts du DMP en mode SOAP simplifié</div>
 
 
 
@@ -210,14 +213,18 @@ This the multi-page printable view of this section.
 
 <div class="content">
       <p>L&rsquo;architecture du proxy WS peut être représentée par ce schéma :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">node &quot;Systeme Information Hospitalier / Logiciel de Gestion de Cabinet&quot; {
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+node &quot;Systeme Information Hospitalier / Logiciel de Gestion de Cabinet&quot; {
     component &quot;LogicielIntegrateur&quot; as LogicielIntegrateur
     component &quot;JVM SpringBoot&quot; {
-        component &quot;DMPC-PROXY&quot; as DMPC_Proxy #orange{
-            component &quot;DevBox-Santé DMP&quot; as DMPC_API #orange
+        component &quot;DevBox-santé&quot; as DMPC_Proxy DEVBOX_COLOR {
+            component &quot;DevBox-Santé DMP&quot; as DMPC_API DMP_COLOR
         }
     }
 }
+Actor PersonnelSante
+Cloud &quot;**DMP**&quot; as DMP
 LogicielIntegrateur  -r-&gt; DMPC_Proxy : WS simplifie
 PersonnelSante -down-&gt; LogicielIntegrateur
 DMPC_API -r-&gt; DMP : WS securise conforme aux transactions du guide d'integration.

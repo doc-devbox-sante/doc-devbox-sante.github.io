@@ -262,7 +262,7 @@ if (!doNotTrack) {
   
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdmpembedded-li">
-    <a href="/docs/dmp/embedded/" title="Java API Embedded" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsdmpembedded"><span class="">Java API</span></a>
+    <a href="/docs/dmp/embedded/" title="Embedded : Premier Pas" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsdmpembedded"><span class="">Java API</span></a>
     
       
       <ul class="pr-md-3 ul-3">
@@ -286,7 +286,7 @@ if (!doNotTrack) {
   
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdmpembeddedtransactions-li">
-    <a href="/docs/dmp/embedded/transactions/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsdmpembeddedtransactions"><span class="">Transactions supportées</span></a>
+    <a href="/docs/dmp/embedded/transactions/" title="Transactions supportées" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsdmpembeddedtransactions"><span class="">Toutes les transactions</span></a>
     
   </li>
 
@@ -909,16 +909,6 @@ if (!doNotTrack) {
 
 
 
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#connecteur-ou-api-embarquée">Connecteur ou API embarquée</a>
-      <ul>
-        <li><a href="#embedded">Embedded</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
 
 
           </div>
@@ -962,52 +952,6 @@ Elle suit le guide d&rsquo;intégration définit par le GIE SESAM-Vitale : <a hr
 <li>La DMPC-API proposé est un projet github public : <a href="https://bitbucket.com/devbox-sante/dmpc-api">https://bitbucket.com/devbox-sante/dmpc-api</a></li>
 </ul>
 <h2 id="connecteur-ou-api-embarquée">Connecteur ou API embarquée</h2>
-<h3 id="embedded">Embedded</h3>
-<p>Cette api peut être utilisée directement depuis une application java. Il suffit
-d&rsquo;inclure les dépendances Maven adequats.</p>
-<p>Exemple de code :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// Initialisation du point d&#39;entrée exécutant l&#39;ensemble des transactions vers le DMP
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCClient</span> <span style="color:#000">client</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCClient</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000">springContext</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getBean</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;dmpcClient&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span> 
-
-<span style="color:#8f5902;font-style:italic">// Initialisation d&#39;un PS auteur des différentes transactions
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCAuthor</span> <span style="color:#000">ps1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCAuthor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1234&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Dupont&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Pierre&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-<span style="color:#000">ps1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setRole</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Médecin&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>    
-<span style="color:#000">ps1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setStructureNom</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Clinique du beau Soleil&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-
-<span style="color:#8f5902;font-style:italic">// Test d&#39;existence (recherche) d&#39;un patient
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCPatient</span> <span style="color:#000">patient</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;0404312364978044945679&#34;</span><span style="color:#ce5c00;font-weight:bold">)).</span><span style="color:#c4a000">getPatient</span><span style="color:#ce5c00;font-weight:bold">();</span>
-
-<span style="color:#8f5902;font-style:italic">// Initialisation d&#39;un document à soumettre au DMP
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span>  <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
-<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setTitle</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Titre du document concernant l&#39;hépatite virale&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setContent</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Contenu textuel&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addEvent</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;B18&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Hépatite virale chronique&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
-<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setFormat</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">FORMAT_CODE</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">get</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">1</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">getCode</span><span style="color:#ce5c00;font-weight:bold">());</span>
-<span style="color:#8f5902;font-style:italic">// …
-</span><span style="color:#8f5902;font-style:italic"></span>
-<span style="color:#8f5902;font-style:italic">// Création de l&#39;enveloppe de soumission 
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCSubmission</span> <span style="color:#000">submission</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCSubmission</span><span style="color:#ce5c00;font-weight:bold">();</span>
-<span style="color:#000">submission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addDocument</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">);</span>
-<span style="color:#000">submission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPatient</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">);</span>
-<span style="color:#8f5902;font-style:italic">// Envoi vers le DMP de la soumission.
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">TD21Response</span> <span style="color:#000">td21Response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td21SubmitDocuments</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD21Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">submission</span><span style="color:#ce5c00;font-weight:bold">));</span>
-<span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Soumission enregistré avec l&#39;uuid :&#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">td21Response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getSubmission</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">getUuid</span><span style="color:#ce5c00;font-weight:bold">());</span>	
-</code></pre></div><p>Diagrammme de séquence correspondant</p>
-<pre><code class="language-plantuml" data-lang="plantuml">== Initialisation ==
-DMPCClient -&gt; DMPCClient : readCertificates
-DMPCClient -&gt; DMPCClient : generate VIHF
-DMPCClient -&gt; DMP: init TLS connexion(securise)
-
-== Aquisition de l'identité patient ==
-DMPCClient -&gt; DMP : td00Idontity(&quot;279035121518989&quot;)
-DMP --&gt; DMPCClient : retourne INS (NIR) patient
-== Test d'existence ==
-DMPCClient -&gt; DMP : td02Exist(&quot;279035121518989&quot;)
-DMP --&gt; DMPCClient : retourne un patient
-== Soumission ==
-DMPCClient -&gt; DMP : td21SubmitDocuments(new Document(&quot;hepatite virale&quot;)
-DMP --&gt; DMPCClient : acknowledge
-</code></pre><p>Un projet de démonstration d&rsquo;utilisation de la DevBox-santé DMP en mode embedded se trouve : <a href="https://bitbucket.org/devbox-sante/dmpc-demo">https://bitbucket.org/devbox-sante/dmpc-demo</a></p>
 
         <div class="section-index">
     
@@ -1025,9 +969,9 @@ DMP --&gt; DMPCClient : acknowledge
                 
                 <div class="entry">
                     <h5>
-                        <a href="/docs/dmp/embedded/">Java API Embedded</a>
+                        <a href="/docs/dmp/embedded/">Embedded : Premier Pas</a>
                     </h5>
-                    <p></p>
+                    <p>Intégrer directement dans votre application spring-boot</p>
                 </div>
             
         
@@ -1061,7 +1005,7 @@ DMP --&gt; DMPCClient : acknowledge
                     <h5>
                         <a href="/docs/dmp/soap/">SOAP Proxy</a>
                     </h5>
-                    <p></p>
+                    <p>Les transactionts du DMP en mode SOAP simplifié</p>
                 </div>
             
         
@@ -1079,7 +1023,7 @@ DMP --&gt; DMPCClient : acknowledge
                     <h5>
                         <a href="/docs/dmp/authentifications/">Authentifications</a>
                     </h5>
-                    <p></p>
+                    <p>Les différentes mécanismes d&rsquo;authentifications et architectures possibles</p>
                 </div>
             
         
@@ -1089,7 +1033,7 @@ DMP --&gt; DMPCClient : acknowledge
                     <h5>
                         <a href="/docs/dmp/cda/">Structuration des documents</a>
                     </h5>
-                    <p></p>
+                    <p>Les différents formats CDA supportés</p>
                 </div>
             
         

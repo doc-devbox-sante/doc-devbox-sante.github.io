@@ -225,7 +225,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1.1: <a href="#pg-a6eaee58dc466dd07be2ce8db90785c4">Java API Embedded</a></li>
+<li>1.1: <a href="#pg-a6eaee58dc466dd07be2ce8db90785c4">Embedded : Premier Pas</a></li>
 
 
     
@@ -629,52 +629,6 @@ Elle suit le guide d&rsquo;intégration définit par le GIE SESAM-Vitale : <a hr
 <li>La DMPC-API proposé est un projet github public : <a href="https://bitbucket.com/devbox-sante/dmpc-api">https://bitbucket.com/devbox-sante/dmpc-api</a></li>
 </ul>
 <h2 id="connecteur-ou-api-embarquée">Connecteur ou API embarquée</h2>
-<h3 id="embedded">Embedded</h3>
-<p>Cette api peut être utilisée directement depuis une application java. Il suffit
-d&rsquo;inclure les dépendances Maven adequats.</p>
-<p>Exemple de code :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// Initialisation du point d&#39;entrée exécutant l&#39;ensemble des transactions vers le DMP
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCClient</span> <span style="color:#000">client</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCClient</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000">springContext</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getBean</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;dmpcClient&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span> 
-
-<span style="color:#8f5902;font-style:italic">// Initialisation d&#39;un PS auteur des différentes transactions
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCAuthor</span> <span style="color:#000">ps1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCAuthor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1234&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Dupont&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Pierre&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-<span style="color:#000">ps1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setRole</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Médecin&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>    
-<span style="color:#000">ps1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setStructureNom</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Clinique du beau Soleil&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-
-<span style="color:#8f5902;font-style:italic">// Test d&#39;existence (recherche) d&#39;un patient
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCPatient</span> <span style="color:#000">patient</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;0404312364978044945679&#34;</span><span style="color:#ce5c00;font-weight:bold">)).</span><span style="color:#c4a000">getPatient</span><span style="color:#ce5c00;font-weight:bold">();</span>
-
-<span style="color:#8f5902;font-style:italic">// Initialisation d&#39;un document à soumettre au DMP
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span>  <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
-<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setTitle</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Titre du document concernant l&#39;hépatite virale&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setContent</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Contenu textuel&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addEvent</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;B18&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Hépatite virale chronique&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
-<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setFormat</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">FORMAT_CODE</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">get</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">1</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">getCode</span><span style="color:#ce5c00;font-weight:bold">());</span>
-<span style="color:#8f5902;font-style:italic">// …
-</span><span style="color:#8f5902;font-style:italic"></span>
-<span style="color:#8f5902;font-style:italic">// Création de l&#39;enveloppe de soumission 
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCSubmission</span> <span style="color:#000">submission</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCSubmission</span><span style="color:#ce5c00;font-weight:bold">();</span>
-<span style="color:#000">submission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addDocument</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">);</span>
-<span style="color:#000">submission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPatient</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">);</span>
-<span style="color:#8f5902;font-style:italic">// Envoi vers le DMP de la soumission.
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">TD21Response</span> <span style="color:#000">td21Response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td21SubmitDocuments</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD21Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">submission</span><span style="color:#ce5c00;font-weight:bold">));</span>
-<span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Soumission enregistré avec l&#39;uuid :&#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">td21Response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getSubmission</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">getUuid</span><span style="color:#ce5c00;font-weight:bold">());</span>	
-</code></pre></div><p>Diagrammme de séquence correspondant</p>
-<pre><code class="language-plantuml" data-lang="plantuml">== Initialisation ==
-DMPCClient -&gt; DMPCClient : readCertificates
-DMPCClient -&gt; DMPCClient : generate VIHF
-DMPCClient -&gt; DMP: init TLS connexion(securise)
-
-== Aquisition de l'identité patient ==
-DMPCClient -&gt; DMP : td00Idontity(&quot;279035121518989&quot;)
-DMP --&gt; DMPCClient : retourne INS (NIR) patient
-== Test d'existence ==
-DMPCClient -&gt; DMP : td02Exist(&quot;279035121518989&quot;)
-DMP --&gt; DMPCClient : retourne un patient
-== Soumission ==
-DMPCClient -&gt; DMP : td21SubmitDocuments(new Document(&quot;hepatite virale&quot;)
-DMP --&gt; DMPCClient : acknowledge
-</code></pre><p>Un projet de démonstration d&rsquo;utilisation de la DevBox-santé DMP en mode embedded se trouve : <a href="https://bitbucket.org/devbox-sante/dmpc-demo">https://bitbucket.org/devbox-sante/dmpc-demo</a></p>
 
 </div>
 
@@ -698,40 +652,89 @@ DMP --&gt; DMPCClient : acknowledge
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-a6eaee58dc466dd07be2ce8db90785c4">1.1 - Java API Embedded</h1>
-    
-	<h2 id="architecture">Architecture</h2>
-<p>L&rsquo;architecture du mode embedded peut être représentée par ce schéma :</p>
-<p><img src="embeddedArchi.png" alt="Architecture embedded"></p>
-<h2 id="installation">Installation</h2>
-<p>l&rsquo;utilisation de cette API ne nécessite pas d&rsquo;installation. Il suffit d&rsquo;ajouter les dépendances adequates dans votre projet Maven.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#204a87;font-weight:bold">&lt;dependency&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;groupId&gt;</span>fr.devboxsante.dmp<span style="color:#204a87;font-weight:bold">&lt;/groupId&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;artifactId&gt;</span>dmpc-api<span style="color:#204a87;font-weight:bold">&lt;/artifactId&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;version&gt;</span>4.0<span style="color:#204a87;font-weight:bold">&lt;/version&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;scope&gt;</span>compile<span style="color:#204a87;font-weight:bold">&lt;/scope&gt;</span>   
-<span style="color:#204a87;font-weight:bold">&lt;/dependency&gt;</span>
+	<h1 id="pg-a6eaee58dc466dd07be2ce8db90785c4">1.1 - Embedded : Premier Pas</h1>
+    <div class="lead">Intégrer directement dans votre application spring-boot</div>
+	<h2 id="installer">Installer</h2>
+<p>l&rsquo;utilisation de cette API ne nécessite pas d&rsquo;installation. Il suffit d&rsquo;ajouter les dépendances adequates dans votre projet Maven et définir le repository.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#204a87;font-weight:bold">&lt;dependencies&gt;</span>
+  <span style="color:#204a87;font-weight:bold">&lt;dependency&gt;</span>
+      <span style="color:#204a87;font-weight:bold">&lt;groupId&gt;</span>fr.devboxsante.dmp<span style="color:#204a87;font-weight:bold">&lt;/groupId&gt;</span>
+      <span style="color:#204a87;font-weight:bold">&lt;artifactId&gt;</span>dmp-api<span style="color:#204a87;font-weight:bold">&lt;/artifactId&gt;</span>
+      <span style="color:#204a87;font-weight:bold">&lt;version&gt;</span>4.0<span style="color:#204a87;font-weight:bold">&lt;/version&gt;</span>
+      <span style="color:#204a87;font-weight:bold">&lt;scope&gt;</span>compile<span style="color:#204a87;font-weight:bold">&lt;/scope&gt;</span>   
+  <span style="color:#204a87;font-weight:bold">&lt;/dependency&gt;</span>
 
-<span style="color:#204a87;font-weight:bold">&lt;dependency&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;groupId&gt;</span>fr.devboxsante.dmp<span style="color:#204a87;font-weight:bold">&lt;/groupId&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;artifactId&gt;</span>dmp-client-impl<span style="color:#204a87;font-weight:bold">&lt;/artifactId&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;version&gt;</span>4.0<span style="color:#204a87;font-weight:bold">&lt;/version&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;scope&gt;</span>runtime<span style="color:#204a87;font-weight:bold">&lt;/scope&gt;</span>   
-<span style="color:#204a87;font-weight:bold">&lt;/dependency&gt;</span>
-</code></pre></div><h2 id="écrire-un-code-dexemple">Écrire un code d&rsquo;exemple</h2>
-<p>Un projet de démonstration <a href="https://bitbucket.org/devcoop/dmpc-demo">https://bitbucket.org/devcoop/dmpc-demo</a> donne des éléments d&rsquo;intégration du code</p>
-<h3 id="initialisation-dun-dmpcclient">Initialisation d&rsquo;un DMPCClient</h3>
+  <span style="color:#204a87;font-weight:bold">&lt;dependency&gt;</span>
+      <span style="color:#204a87;font-weight:bold">&lt;groupId&gt;</span>fr.devboxsante.dmp<span style="color:#204a87;font-weight:bold">&lt;/groupId&gt;</span>
+      <span style="color:#204a87;font-weight:bold">&lt;artifactId&gt;</span>dmp-spring-boot-starter<span style="color:#204a87;font-weight:bold">&lt;/artifactId&gt;</span>
+      <span style="color:#204a87;font-weight:bold">&lt;version&gt;</span>4.0<span style="color:#204a87;font-weight:bold">&lt;/version&gt;</span>
+      <span style="color:#204a87;font-weight:bold">&lt;scope&gt;</span>runtime<span style="color:#204a87;font-weight:bold">&lt;/scope&gt;</span>   
+  <span style="color:#204a87;font-weight:bold">&lt;/dependency&gt;</span>
+<span style="color:#204a87;font-weight:bold">&lt;/dependencies&gt;</span>
+
+<span style="color:#204a87;font-weight:bold">&lt;repositories&gt;</span>
+  <span style="color:#204a87;font-weight:bold">&lt;repository&gt;</span>
+      <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>devcoop-thirdparty<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
+      <span style="color:#204a87;font-weight:bold">&lt;url&gt;</span>http://repo.dev.coop/nexus/content/repositories/thirdparty/<span style="color:#204a87;font-weight:bold">&lt;/url&gt;</span>
+  <span style="color:#204a87;font-weight:bold">&lt;/repository&gt;</span>
+  <span style="color:#204a87;font-weight:bold">&lt;repository&gt;</span>
+      <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>devcoop-releases<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
+      <span style="color:#204a87;font-weight:bold">&lt;url&gt;</span>http://repo.dev.coop/nexus/content/repositories/releases<span style="color:#204a87;font-weight:bold">&lt;/url&gt;</span>
+  <span style="color:#204a87;font-weight:bold">&lt;/repository&gt;</span>
+<span style="color:#204a87;font-weight:bold">&lt;/repositories&gt;</span>
+</code></pre></div><h2 id="écrire-votre-première-intégration">Écrire votre première intégration</h2>
+<h3 id="initialisation-du-client">Initialisation du client</h3>
 <p>La DevBox-Santé DMP est une application spring, pour obtenir un client DMP, il faut 
 injecter dans l&rsquo;application la classe implémentant l&rsquo;interface <code>DMPCClient</code> 
 par les mécanismes CDI de spring.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#5c35cc;font-weight:bold">@Component</span>
 <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonComposantDMP</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
- <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
-    <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">DMPCClient</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">;</span>
+  <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
+  <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">DMPCClient</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">;</span>
    
 <span style="color:#ce5c00;font-weight:bold">}</span>
-</code></pre></div><h3 id="création-des-objets-métiers">Création des objets métiers</h3>
+</code></pre></div><h3 id="une-méthode-dans-le-composant">Une méthode dans le composant</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#8f5902;font-style:italic">// Initialisation d&#39;un PS auteur des différentes transactions
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCAuthor</span> <span style="color:#000">ps1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCAuthor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1234&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Dupont&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Pierre&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+<span style="color:#000">ps1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setRole</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Médecin&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>    
+<span style="color:#000">ps1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setStructureNom</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Clinique du beau Soleil&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+
+<span style="color:#8f5902;font-style:italic">// Test d&#39;existence (recherche) d&#39;un patient
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCPatient</span> <span style="color:#000">patient</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;0404312364978044945679&#34;</span><span style="color:#ce5c00;font-weight:bold">)).</span><span style="color:#c4a000">getPatient</span><span style="color:#ce5c00;font-weight:bold">();</span>
+
+<span style="color:#8f5902;font-style:italic">// Initialisation d&#39;un document à soumettre au DMP
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span>  <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setTitle</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Titre du document concernant l&#39;hépatite virale&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setContent</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Contenu textuel&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addEvent</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;B18&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Hépatite virale chronique&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setFormat</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">FORMAT_CODE</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">get</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">1</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">getCode</span><span style="color:#ce5c00;font-weight:bold">());</span>
+<span style="color:#8f5902;font-style:italic">// …
+</span><span style="color:#8f5902;font-style:italic"></span>
+<span style="color:#8f5902;font-style:italic">// Création de l&#39;enveloppe de soumission 
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCSubmission</span> <span style="color:#000">submission</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCSubmission</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<span style="color:#000">submission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addDocument</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">);</span>
+<span style="color:#000">submission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPatient</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">);</span>
+<span style="color:#8f5902;font-style:italic">// Envoi vers le DMP de la soumission.
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">TD21Response</span> <span style="color:#000">td21Response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td21SubmitDocuments</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD21Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">submission</span><span style="color:#ce5c00;font-weight:bold">));</span>
+<span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Soumission enregistré avec l&#39;uuid :&#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">td21Response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getSubmission</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">getUuid</span><span style="color:#ce5c00;font-weight:bold">());</span>	
+</code></pre></div><p>Diagrammme de séquences correspondant</p>
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+== Initialisation ==
+DMPCClient -&gt; DMPCClient : readCertificates
+DMPCClient -&gt; DMPCClient : generate VIHF
+DMPCClient -&gt; DMP: init TLS connexion(securise)
+
+== Test d'existence ==
+DMPCClient -&gt; DMP : td02Exist(&quot;279035121518989&quot;)
+DMP --&gt; DMPCClient : retourne un patient
+== Soumission ==
+DMPCClient -&gt; DMP : td21SubmitDocuments(new Document(&quot;hepatite virale&quot;)
+DMP --&gt; DMPCClient : acknowledge
+</code></pre><p>Un projet de démonstration d&rsquo;utilisation de la DevBox-santé DMP en mode embedded se trouve : <a href="https://bitbucket.org/devbox-sante/dmpc-demo">https://bitbucket.org/devbox-sante/dmpc-demo</a></p>
+<h3 id="les-différents-objets-du-modèle">Les différents objets du modèle</h3>
 <p>Afin de transmettre les métadonnées nécessaires aux DMP pendant les différentes 
 transactions, la DevBox-Santé DMP contient un modèle métier dont les classes principales suivantes :</p>
 <ul>
@@ -1185,7 +1188,7 @@ La cinématique générale est la suivante :</p>
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-4423c3215e74e0e25f5fff050e59e190">1.1.2 - Howtos</h1>
-    
+    <div class="lead">Contient les tutoriels utiles à la bonne intégration de la DevBox-Santé DMP</div>
 	
 </div>
 
@@ -1352,16 +1355,20 @@ Il est initialisé par défaut sur un environnement de test.</p>
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-16f164740bcf3b4b7dd9b403e13c7878">1.3 - SOAP Proxy</h1>
-    
+    <div class="lead">Les transactionts du DMP en mode SOAP simplifié</div>
 	<p>L&rsquo;architecture du proxy WS peut être représentée par ce schéma :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">node &quot;Systeme Information Hospitalier / Logiciel de Gestion de Cabinet&quot; {
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+node &quot;Systeme Information Hospitalier / Logiciel de Gestion de Cabinet&quot; {
     component &quot;LogicielIntegrateur&quot; as LogicielIntegrateur
     component &quot;JVM SpringBoot&quot; {
-        component &quot;DMPC-PROXY&quot; as DMPC_Proxy #orange{
-            component &quot;DevBox-Santé DMP&quot; as DMPC_API #orange
+        component &quot;DevBox-santé&quot; as DMPC_Proxy DEVBOX_COLOR {
+            component &quot;DevBox-Santé DMP&quot; as DMPC_API DMP_COLOR
         }
     }
 }
+Actor PersonnelSante
+Cloud &quot;**DMP**&quot; as DMP
 LogicielIntegrateur  -r-&gt; DMPC_Proxy : WS simplifie
 PersonnelSante -down-&gt; LogicielIntegrateur
 DMPC_API -r-&gt; DMP : WS securise conforme aux transactions du guide d'integration.
@@ -1424,7 +1431,7 @@ il montre  l&rsquo;usage possible des différents web services fournis.</p>
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-a394ac5998ae60cedaeea2d0a722f4ad">1.4 - Authentifications</h1>
-    
+    <div class="lead">Les différentes mécanismes d&rsquo;authentifications et architectures possibles</div>
 	<p>Les différents modes d&rsquo;authentification sont définis dans le guide d&rsquo;intégration comme étant :</p>
 <ul>
 <li>authentification indirecte par l&rsquo;usage d&rsquo;un certificat</li>
@@ -1433,92 +1440,114 @@ il montre  l&rsquo;usage possible des différents web services fournis.</p>
 <p><img src="../SEL-MP-037+DMPi_2.04_acteurs_et_objectifs.png" alt="SEL-MP-037+DMPi_2.04_acteurs_et_objectifs"></p>
 <p>Ces deux modes d&rsquo;authentification, peuvent se dériver en différentes architectures en fonction du contexte de l&rsquo;intégrateur.</p>
 <h2 id="authentification-indirecte-certificat">Authentification Indirecte (Certificat)</h2>
-<p><strong>Scénario possible</strong> : L&rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&rsquo;intégre comme une passerelle vers le DMP.
-Ce scénario est possible en authentification indirecte</p>
-<h4 id="diagramme-de-composants">Diagramme de composants</h4>
+<h3 id="scenario--alimentation-de-documents">Scenario : Alimentation de documents</h3>
+<p><strong>Description scénario</strong> : L&rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&rsquo;intégre comme une passerelle vers le DMP.</p>
+<h4 id="version-rest">Version REST</h4>
+<h5 id="diagramme-de-composants">Diagramme de composants</h5>
 <pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
-[FrontEnd intégrateur] as frontend 
+[FrontEnd intégrateur] as frontend
 
 node &quot;Environnement intégrateur&quot; {
-   [BackEnd intégrateur] as backend 
+   [BackEnd intégrateur] as backend
     package &quot;DevBox-Santé Proxy REST&quot;  DEVBOX_COLOR {
-        package &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {
-            [P12Manager] as P12Manager 
+        package &quot;DevBox-sante DMP&quot; as dmpFacade DMP_COLOR {
+            [P12Manager] as P12Manager DMP_COLOR
         }
     }
 }
-cloud &quot;**DMP**&quot; as DMP 
+cloud &quot;**DMP**&quot; as DMP
 
-frontend -down-&gt; backend : HTTP POST /dmp/td21SubmitDocuments
+frontend -down-&gt; backend
 backend -right-&gt; dmpFacade: REST
 dmpFacade -down-&gt; DMP : SOAP
 
+</code></pre><h4 id="version-embedded">Version Embedded</h4>
+<h5 id="diagramme-de-composants-1">Diagramme de composants</h5>
+<p>L&rsquo;architecture du mode embedded peut être représentée par ce schéma :</p>
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+[FrontEnd intégrateur] as frontend
+
+node &quot;Environnement intégrateur&quot; {
+   component &quot;BackEnd intégrateur&quot; as backend {
+        component &quot;DevBox-Santé DMP&quot; as DMPC_API  DMP_COLOR {
+            [P12Manager] as P12Manager DMP_COLOR
+        }
+    }
+}
+cloud &quot;**DMP**&quot; as DMP
+
+frontend -down-&gt; backend
+DMPC_API -d-&gt; DMP : SOAP XDS / CDA
 </code></pre><h2 id="authentification-directe-cps">Authentification directe CPS</h2>
-<h4 id="diagramme-de-composants-1">Diagramme de composants</h4>
-<p><strong>Scénario possible</strong> : le frontend/client lourd s&rsquo;exécutant sur le poste client de l&rsquo;utilisateur accède au DMP grâce à la DevBox-Santé DMP installé sur le poste client.</p>
+<h4 id="version-rest-1">Version REST</h4>
+<h5 id="diagramme-de-composants-2">Diagramme de composants</h5>
+<p><strong>Scénario possible</strong> : Le frontend/client lourd s&rsquo;exécutant sur le poste client de l&rsquo;utilisateur accède au DMP grâce à la DevBox-Santé DMP installé sur le poste client.</p>
 <pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
-    [FrontEnd intégrateur] as frontend 
+    [FrontEnd intégrateur] as frontend
 
     package &quot;DevBox-Santé Proxy REST&quot;  DEVBOX_COLOR {
         component &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {
-            [DevBox-sante CPS] as cps #D34A3C 
-            
-        } 
-    }
-    [Cryptolib CPS (ANS)] as cryptolibCPS 
-}
-[BackEnd intégrateur] as backend 
-cloud &quot;**DMP**&quot; as DMP 
+            [DevBox-sante CPS] as cps #D34A3C
 
-frontend -right-&gt; dmpFacade : HTTP POST /dmp/td21SubmitDocuments
+        }
+    }
+    [Cryptolib CPS (ANS)] as cryptolibCPS
+}
+[BackEnd intégrateur] as backend
+cloud &quot;**DMP**&quot; as DMP
+
+frontend -right-&gt; dmpFacade : REST
 cps &lt;-up-&gt; cryptolibCPS : appel natif
 dmpFacade -down-&gt; DMP : SOAP
 frontend  -down-&gt; backend
-</code></pre><h3 id="authentification-directe-avec-cpsagent">Authentification Directe avec CPS Agent</h3>
-<p><strong>Scenario possible</strong> :</p>
-<h4 id="diagramme-de-composants-2">Diagramme de composants</h4>
+</code></pre><h2 id="authentification-directe-avec-cpsagent">Authentification Directe avec CPS Agent</h2>
+<p><strong>Scenario possible</strong> : Le frontend de l&rsquo;intégrateur, passe le contexte d&rsquo;authentification de la DevBox-Santé CPS agent se trouvant sur le poste client au backend. Le backend initie une session TLS/SSL avec le serveur DMP grâce au CpsAgentClient.</p>
+<h4 id="diagramme-de-composants-3">Diagramme de composants</h4>
 <pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
-    [FrontEnd intégrateur] as frontend 
+    [FrontEnd intégrateur] as frontend
 
     package &quot;DevBox-Santé Proxy REST&quot; as cpsAgent DEVBOX_COLOR {
-            [DevBox-sante CPS] as cps CPS_COLOR 
-        
+            [DevBox-sante CPS] as cps CPS_COLOR
+
     }
-    [Cryptolib CPS (ANS)] as cryptolibCPS 
+    [Cryptolib CPS (ANS)] as cryptolibCPS
 }
 
 node &quot;Environnement intégrateur&quot; {
-   [BackEnd intégrateur] as backend 
+   [BackEnd intégrateur] as backend
     package &quot;DevBox-Santé Proxy REST&quot; DEVBOX_COLOR {
         component &quot;DevBox-sante DMP&quot; as dmpFacade DMP_COLOR {
             [CpsAgentClient] CPS_COLOR
         }
     }
 }
-cloud &quot;**DMP**&quot; as DMP 
+cloud &quot;**DMP**&quot; as DMP
 
 frontend -d-&gt; backend : 1
 backend -d-&gt; dmpFacade  : 2
-CpsAgentClient -&gt; cpsAgent : 3  
-cps -down-&gt; cryptolibCPS : 4 
+CpsAgentClient -&gt; cpsAgent : 3
+cps -down-&gt; cryptolibCPS : 4
 dmpFacade -down-&gt; DMP : 5
 </code></pre><h4 id="diagramme-de-séquences">Diagramme de séquences</h4>
 <pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 box &quot;Post Client&quot;
 participant frontend
-participant cpsAgent
-end box 
+participant cpsAgent CPS_COLOR
+end box
 
 box &quot;Environnement intégrateur&quot; #white
-participant &quot;DevBox-Santé DMP&quot; as dbxdmp 
+participant &quot;DevBox-Santé DMP&quot; as dbxdmp DMP_COLOR
 participant backend
 end box
+
+participant &quot;**DMP**&quot; as dmp
 
 frontend -&gt; backend : storeDocumentPatient
 backend -&gt; dbxdmp : /dmp/td21SubmitDocuments
@@ -1539,7 +1568,7 @@ dmp -&gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)
 dbxdmp -&gt; dmp : POST SOAP message de soumission (XDS/CDA)
 dmp -&gt; dbxdmp : SOAP response OK
 dbxdmp -&gt; backend : HTTP 200 Ok
-backend -&gt; frontend : ok 
+backend -&gt; frontend : ok
 
 </code></pre>
 </div>
@@ -1557,7 +1586,7 @@ backend -&gt; frontend : ok
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-3cdfc9b194da698c476bf8ecc81edcb0">1.5 - Structuration des documents</h1>
-    
+    <div class="lead">Les différents formats CDA supportés</div>
 	<h2 id="glossaire">Glossaire</h2>
 <ul>
 <li><strong>CDA</strong> : Clinical Document Architecture</li>

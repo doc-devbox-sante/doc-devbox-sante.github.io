@@ -21,14 +21,17 @@
 
 <title>SOAP Proxy | DevBox-Santé</title>
 <meta name="description" content="La Documentation"><meta property="og:title" content="SOAP Proxy" />
-<meta property="og:description" content="La Documentation" />
+<meta property="og:description" content="Les transactionts du DMP en mode SOAP simplifié
+" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/dmp/soap/" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="SOAP Proxy">
-<meta itemprop="description" content="La Documentation"><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Les transactionts du DMP en mode SOAP simplifié
+"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="SOAP Proxy"/>
-<meta name="twitter:description" content="La Documentation"/>
+<meta name="twitter:description" content="Les transactionts du DMP en mode SOAP simplifié
+"/>
 
 
 <script type="application/javascript">
@@ -259,7 +262,7 @@ if (!doNotTrack) {
   
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdmpembedded-li">
-    <a href="/docs/dmp/embedded/" title="Java API Embedded" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsdmpembedded"><span class="">Java API</span></a>
+    <a href="/docs/dmp/embedded/" title="Embedded : Premier Pas" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsdmpembedded"><span class="">Java API</span></a>
     
       
       <ul class="pr-md-3 ul-3">
@@ -283,7 +286,7 @@ if (!doNotTrack) {
   
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdmpembeddedtransactions-li">
-    <a href="/docs/dmp/embedded/transactions/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsdmpembeddedtransactions"><span class="">Transactions supportées</span></a>
+    <a href="/docs/dmp/embedded/transactions/" title="Transactions supportées" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsdmpembeddedtransactions"><span class="">Toutes les transactions</span></a>
     
   </li>
 
@@ -950,17 +953,21 @@ if (!doNotTrack) {
             
 <div class="td-content">
 	<h1>SOAP Proxy</h1>
-        
+        <div class="lead">Les transactionts du DMP en mode SOAP simplifié</div>
 	
 	<p>L&rsquo;architecture du proxy WS peut être représentée par ce schéma :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">node &quot;Systeme Information Hospitalier / Logiciel de Gestion de Cabinet&quot; {
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+node &quot;Systeme Information Hospitalier / Logiciel de Gestion de Cabinet&quot; {
     component &quot;LogicielIntegrateur&quot; as LogicielIntegrateur
     component &quot;JVM SpringBoot&quot; {
-        component &quot;DMPC-PROXY&quot; as DMPC_Proxy #orange{
-            component &quot;DevBox-Santé DMP&quot; as DMPC_API #orange
+        component &quot;DevBox-santé&quot; as DMPC_Proxy DEVBOX_COLOR {
+            component &quot;DevBox-Santé DMP&quot; as DMPC_API DMP_COLOR
         }
     }
 }
+Actor PersonnelSante
+Cloud &quot;**DMP**&quot; as DMP
 LogicielIntegrateur  -r-&gt; DMPC_Proxy : WS simplifie
 PersonnelSante -down-&gt; LogicielIntegrateur
 DMPC_API -r-&gt; DMP : WS securise conforme aux transactions du guide d'integration.

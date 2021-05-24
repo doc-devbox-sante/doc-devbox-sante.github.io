@@ -969,8 +969,34 @@ if (!doNotTrack) {
 	<p>Le module insi-proxy, permet de fournit une facade REST à la facade <code>INSiClient</code> java.
 Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.</p>
 <p>L&rsquo;accès a l&rsquo;insi-proxy est donc indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
-<p><img src="insi-rest-architecture.png" alt="insi-proxy architecture rest"></p>
-<h3 id="exécution-du-proxy">Exécution du Proxy</h3>
+<pre><code class="language-plantuml" data-lang="plantuml">title Architecture INSi-API en mode REST
+skinparam componentStyle uml2
+
+
+node &quot;Poste Client (Windows/Mac/Linux)&quot; {
+    [FrontEnd intégrateur] as frontend #cyan
+
+    package &quot;DevBox-Santé&quot; #Orange  {
+        [interface INSI-API] as insFacade #Orange
+    }
+    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS #pink
+    [APILectureVitale (SesamVitale)] as apiLectureVitale #pink
+}
+
+[Téléservice INSi (SesamVitale)] as insi #pink
+
+[BackEnd intégrateur] as backend #cyan
+
+
+
+frontend -down-&gt; insFacade : HTTP GET /insi/rechercheAvecVitale
+insFacade &lt;-down-&gt; cryptolibCPS : appel natif
+insFacade &lt;-down-&gt; apiLectureVitale : appel natif
+insFacade &lt;-right-&gt; insi : SOAP
+frontend -right-&gt; backend : REST
+
+
+</code></pre><h3 id="exécution-du-proxy">Exécution du Proxy</h3>
 <h4 id="prérequis">Prérequis</h4>
 <p>Doit être installé</p>
 <ul>
@@ -1053,7 +1079,7 @@ Afin de valider le fonctionnement, ouvrir un navigateur à l&rsquo;adresse suiva
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 12, 2021: <a  href="/commit/9df2dc50a7e8a0f25028598aeeddd1e3ea10a7bd">Première version (9df2dc5)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 24, 2021: <a  href="/commit/a2553d15457b720cab2522ed756f74f0894a2e29">All plantuml in markdown files (a2553d1)</a>
 </div>
 </div>
 

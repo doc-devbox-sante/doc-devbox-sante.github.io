@@ -471,28 +471,30 @@ public static class Default implements UniqueIdGenerator {
       <description>
         
         
-        
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;pre&gt;&lt;code&gt;Page en cours de construction
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
+        &lt;p&gt;Les différents modes d&amp;rsquo;authentification sont définis dans le guide d&amp;rsquo;intégration comme étant :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;authentification indirecte par l&amp;rsquo;usage d&amp;rsquo;un certificat&lt;/li&gt;
+&lt;li&gt;authentification directe par l&amp;rsquo;usage d&amp;rsquo;une carte CPS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../SEL-MP-037+DMPi_2.04_acteurs_et_objectifs.png&#34; alt=&#34;SEL-MP-037+DMPi_2.04_acteurs_et_objectifs&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ces deux modes d&amp;rsquo;authentification, peuvent se dériver en différentes architectures en fonction du contexte de l&amp;rsquo;intégrateur.&lt;/p&gt;
 &lt;h2 id=&#34;authentification-indirecte-certificat&#34;&gt;Authentification Indirecte (Certificat)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Scénario possible&lt;/strong&gt; : L&amp;rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&amp;rsquo;intégre comme une passerelle vers le DMP.
+Ce scénario est possible en authentification indirecte&lt;/p&gt;
 &lt;h4 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h4&gt;
-&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;
+&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
 [FrontEnd intégrateur] as frontend 
 
 node &amp;quot;Environnement intégrateur&amp;quot; {
-   [BackEnd intégrateur] as backend #cyan
-    package &amp;quot;DevBox-Santé Proxy REST&amp;quot;   {
+   [BackEnd intégrateur] as backend 
+    package &amp;quot;DevBox-Santé Proxy REST&amp;quot;  DEVBOX_COLOR {
         package &amp;quot;DevBox-sante DMP&amp;quot; as dmpFacade #35D9C0 {
-            [P12Manager] #35D9C0
+            [P12Manager] as P12Manager 
         }
     }
 }
-cloud &amp;quot;DMP&amp;quot; as DMP 
+cloud &amp;quot;**DMP**&amp;quot; as DMP 
 
 frontend -down-&amp;gt; backend : HTTP POST /dmp/td21SubmitDocuments
 backend -right-&amp;gt; dmpFacade: REST
@@ -500,54 +502,61 @@ dmpFacade -down-&amp;gt; DMP : SOAP
 
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;authentification-directe-cps&#34;&gt;Authentification directe CPS&lt;/h2&gt;
 &lt;h4 id=&#34;diagramme-de-composants-1&#34;&gt;Diagramme de composants&lt;/h4&gt;
-&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
+&lt;p&gt;&lt;strong&gt;Scénario possible&lt;/strong&gt; : le frontend/client lourd s&amp;rsquo;exécutant sur le poste client de l&amp;rsquo;utilisateur accède au DMP grâce à la DevBox-Santé DMP installé sur le poste client.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
     [FrontEnd intégrateur] as frontend 
 
-    component &amp;quot;DevBox-Santé Proxy REST&amp;quot;   {
+    package &amp;quot;DevBox-Santé Proxy REST&amp;quot;  DEVBOX_COLOR {
         component &amp;quot;DevBox-sante DMP&amp;quot; as dmpFacade #35D9C0 {
             [DevBox-sante CPS] as cps #D34A3C 
             
         } 
     }
-    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+    [Cryptolib CPS (ANS)] as cryptolibCPS 
 }
 [BackEnd intégrateur] as backend 
-cloud &amp;quot;DMP&amp;quot; as DMP 
+cloud &amp;quot;**DMP**&amp;quot; as DMP 
 
 frontend -right-&amp;gt; dmpFacade : HTTP POST /dmp/td21SubmitDocuments
 cps &amp;lt;-up-&amp;gt; cryptolibCPS : appel natif
 dmpFacade -down-&amp;gt; DMP : SOAP
 frontend  -down-&amp;gt; backend
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;authentification-directe-avec-cpsagent&#34;&gt;Authentification Directe avec CPS Agent&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Scenario possible&lt;/strong&gt; :&lt;/p&gt;
 &lt;h4 id=&#34;diagramme-de-composants-2&#34;&gt;Diagramme de composants&lt;/h4&gt;
-&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;
+&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
 node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
     [FrontEnd intégrateur] as frontend 
 
-    component &amp;quot;DevBox-Santé Proxy REST&amp;quot; as cpsAgent  {
-            [DevBox-sante CPS] as cps #D34A3C 
+    package &amp;quot;DevBox-Santé Proxy REST&amp;quot; as cpsAgent DEVBOX_COLOR {
+            [DevBox-sante CPS] as cps CPS_COLOR 
         
     }
-    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+    [Cryptolib CPS (ANS)] as cryptolibCPS 
 }
 
 node &amp;quot;Environnement intégrateur&amp;quot; {
    [BackEnd intégrateur] as backend 
-    package &amp;quot;DevBox-Santé Proxy REST&amp;quot;   {
-        package &amp;quot;DevBox-sante DMP&amp;quot; as dmpFacade #35D9C0 {
-            [CpsAgentClient] #35D9C0
+    package &amp;quot;DevBox-Santé Proxy REST&amp;quot; DEVBOX_COLOR {
+        component &amp;quot;DevBox-sante DMP&amp;quot; as dmpFacade DMP_COLOR {
+            [CpsAgentClient] CPS_COLOR
         }
     }
 }
-cloud &amp;quot;DMP&amp;quot; as DMP 
+cloud &amp;quot;**DMP**&amp;quot; as DMP 
 
-frontend -d-&amp;gt; backend
-backend -d-&amp;gt; dmpFacade  
-CpsAgentClient &amp;lt;-&amp;gt; cpsAgent
-dmpFacade -down-&amp;gt; DMP : SOAP
-cps -down-&amp;gt; cryptolibCPS : appel natif
+frontend -d-&amp;gt; backend : 1
+backend -d-&amp;gt; dmpFacade  : 2
+CpsAgentClient -&amp;gt; cpsAgent : 3  
+cps -down-&amp;gt; cryptolibCPS : 4 
+dmpFacade -down-&amp;gt; DMP : 5
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;diagramme-de-séquences&#34;&gt;Diagramme de séquences&lt;/h4&gt;
-&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;box &amp;quot;Post Client&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+box &amp;quot;Post Client&amp;quot;
 participant frontend
 participant cpsAgent
 end box 
@@ -1113,7 +1122,7 @@ Il s&amp;rsquo;agit du mode d&amp;rsquo;authentification directe (avec l&amp;rsq
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;authentification-directe--cpsagent&#34;&gt;Authentification directe : CPS Agent&lt;/h3&gt;
 &lt;p&gt;Un mode d&amp;rsquo;authentification intégrant le module CPS agent est possible de la manière suivante :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;dmpc: &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# authentification indirecte utilisant les certificats p12 serveurs&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# authentification directe depuis le backend par l&amp;#39;intermédiaire d&amp;#39;un agent CPS sur le poste du client&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;security.mode&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;withCpsAgent&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>

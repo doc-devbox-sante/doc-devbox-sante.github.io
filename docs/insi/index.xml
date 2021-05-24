@@ -74,8 +74,34 @@
         &lt;p&gt;Le module insi-proxy, permet de fournit une facade REST à la facade &lt;code&gt;INSiClient&lt;/code&gt; java.
 Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.&lt;/p&gt;
 &lt;p&gt;L&amp;rsquo;accès a l&amp;rsquo;insi-proxy est donc indépendant de la technologie utilisée par l&amp;rsquo;intégrateur. Exemple d&amp;rsquo;intégration possible :&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;insi-rest-architecture.png&#34; alt=&#34;insi-proxy architecture rest&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;exécution-du-proxy&#34;&gt;Exécution du Proxy&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;title Architecture INSi-API en mode REST
+skinparam componentStyle uml2
+
+
+node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
+    [FrontEnd intégrateur] as frontend #cyan
+
+    package &amp;quot;DevBox-Santé&amp;quot; #Orange  {
+        [interface INSI-API] as insFacade #Orange
+    }
+    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS #pink
+    [APILectureVitale (SesamVitale)] as apiLectureVitale #pink
+}
+
+[Téléservice INSi (SesamVitale)] as insi #pink
+
+[BackEnd intégrateur] as backend #cyan
+
+
+
+frontend -down-&amp;gt; insFacade : HTTP GET /insi/rechercheAvecVitale
+insFacade &amp;lt;-down-&amp;gt; cryptolibCPS : appel natif
+insFacade &amp;lt;-down-&amp;gt; apiLectureVitale : appel natif
+insFacade &amp;lt;-right-&amp;gt; insi : SOAP
+frontend -right-&amp;gt; backend : REST
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exécution-du-proxy&#34;&gt;Exécution du Proxy&lt;/h3&gt;
 &lt;h4 id=&#34;prérequis&#34;&gt;Prérequis&lt;/h4&gt;
 &lt;p&gt;Doit être installé&lt;/p&gt;
 &lt;ul&gt;

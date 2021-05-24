@@ -19,19 +19,25 @@
 
 <title>Authentifications | DevBox-Santé</title>
 <meta name="description" content="La Documentation"><meta property="og:title" content="Authentifications" />
-<meta property="og:description" content="Page en cours de construction Authentification Indirecte (Certificat) Diagramme de composants [FrontEnd intégrateur] as frontend node &quot;Environnement intégrateur&quot; {[BackEnd intégrateur] as backend #cyanpackage &quot;DevBox-Santé Proxy REST&quot; {package &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {[P12Manager] #35D9C0}}}cloud &quot;DMP&quot; as DMP frontend -down-&gt; backend : HTTP POST /dmp/td21SubmitDocumentsbackend -right-&gt; dmpFacade: RESTdmpFacade -down-&gt; DMP : SOAPAuthentification directe CPS Diagramme de composants node &quot;Poste Client (Windows/Mac/Linux)&quot; {[FrontEnd intégrateur] as frontend component &quot;DevBox-Santé Proxy REST&quot; {component &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {[DevBox-sante CPS] as cps #D34A3C } }[Cryptolib CPS (ANS / ASIP)] as cryptolibCPS }[BackEnd intégrateur] as backend cloud &quot;DMP&quot; as DMP frontend -right-&gt; dmpFacade : HTTP POST /dmp/td21SubmitDocumentscps &lt;-up-&gt; cryptolibCPS : appel natifdmpFacade -down-&gt; DMP : SOAPfrontend -down-&gt; backendAuthentification Directe avec CPS Agent Diagramme de composants node &quot;Poste Client (Windows/Mac/Linux)&quot; {[FrontEnd intégrateur] as frontend component &quot;DevBox-Santé Proxy REST&quot; as cpsAgent {[DevBox-sante CPS] as cps #D34A3C }[Cryptolib CPS (ANS / ASIP)] as cryptolibCPS }node &quot;Environnement intégrateur&quot; {[BackEnd intégrateur] as backend package &quot;DevBox-Santé Proxy REST&quot; {package &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {[CpsAgentClient] #35D9C0}}}cloud &quot;DMP&quot; as DMP frontend -d-&gt; backendbackend -d-&gt; dmpFacade CpsAgentClient &lt;-&gt; cpsAgentdmpFacade -down-&gt; DMP : SOAPcps -down-&gt; cryptolibCPS : appel natifDiagramme de séquences box &quot;Post Client&quot;participant frontendparticipant cpsAgentend box box &quot;Environnement intégrateur&quot; #whiteparticipant &quot;DevBox-Santé DMP&quot; as dbxdmp participant backendend boxfrontend -&gt; backend : storeDocumentPatientbackend -&gt; dbxdmp : /dmp/td21SubmitDocuments== initialisation d&#39;une connexion SSL en authentification mutuelle avec le DMP ==dbxdmp -&gt; &quot;DMP&quot; as dmp : [SSL] 1." />
+<meta property="og:description" content="Les différents modes d&rsquo;authentification sont définis dans le guide d&rsquo;intégration comme étant :
+ authentification indirecte par l&rsquo;usage d&rsquo;un certificat authentification directe par l&rsquo;usage d&rsquo;une carte CPS  Ces deux modes d&rsquo;authentification, peuvent se dériver en différentes architectures en fonction du contexte de l&rsquo;intégrateur.
+Authentification Indirecte (Certificat) Scénario possible : L&rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&rsquo;intégre comme une passerelle vers le DMP. Ce scénario est possible en authentification indirecte" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/dmp/authentifications/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-05-21T09:21:52&#43;02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2021-05-24T15:52:02&#43;02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Authentifications">
-<meta itemprop="description" content="Page en cours de construction Authentification Indirecte (Certificat) Diagramme de composants [FrontEnd intégrateur] as frontend node &quot;Environnement intégrateur&quot; {[BackEnd intégrateur] as backend #cyanpackage &quot;DevBox-Santé Proxy REST&quot; {package &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {[P12Manager] #35D9C0}}}cloud &quot;DMP&quot; as DMP frontend -down-&gt; backend : HTTP POST /dmp/td21SubmitDocumentsbackend -right-&gt; dmpFacade: RESTdmpFacade -down-&gt; DMP : SOAPAuthentification directe CPS Diagramme de composants node &quot;Poste Client (Windows/Mac/Linux)&quot; {[FrontEnd intégrateur] as frontend component &quot;DevBox-Santé Proxy REST&quot; {component &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {[DevBox-sante CPS] as cps #D34A3C } }[Cryptolib CPS (ANS / ASIP)] as cryptolibCPS }[BackEnd intégrateur] as backend cloud &quot;DMP&quot; as DMP frontend -right-&gt; dmpFacade : HTTP POST /dmp/td21SubmitDocumentscps &lt;-up-&gt; cryptolibCPS : appel natifdmpFacade -down-&gt; DMP : SOAPfrontend -down-&gt; backendAuthentification Directe avec CPS Agent Diagramme de composants node &quot;Poste Client (Windows/Mac/Linux)&quot; {[FrontEnd intégrateur] as frontend component &quot;DevBox-Santé Proxy REST&quot; as cpsAgent {[DevBox-sante CPS] as cps #D34A3C }[Cryptolib CPS (ANS / ASIP)] as cryptolibCPS }node &quot;Environnement intégrateur&quot; {[BackEnd intégrateur] as backend package &quot;DevBox-Santé Proxy REST&quot; {package &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {[CpsAgentClient] #35D9C0}}}cloud &quot;DMP&quot; as DMP frontend -d-&gt; backendbackend -d-&gt; dmpFacade CpsAgentClient &lt;-&gt; cpsAgentdmpFacade -down-&gt; DMP : SOAPcps -down-&gt; cryptolibCPS : appel natifDiagramme de séquences box &quot;Post Client&quot;participant frontendparticipant cpsAgentend box box &quot;Environnement intégrateur&quot; #whiteparticipant &quot;DevBox-Santé DMP&quot; as dbxdmp participant backendend boxfrontend -&gt; backend : storeDocumentPatientbackend -&gt; dbxdmp : /dmp/td21SubmitDocuments== initialisation d&#39;une connexion SSL en authentification mutuelle avec le DMP ==dbxdmp -&gt; &quot;DMP&quot; as dmp : [SSL] 1.">
-<meta itemprop="dateModified" content="2021-05-21T09:21:52&#43;02:00" />
-<meta itemprop="wordCount" content="432">
+<meta itemprop="description" content="Les différents modes d&rsquo;authentification sont définis dans le guide d&rsquo;intégration comme étant :
+ authentification indirecte par l&rsquo;usage d&rsquo;un certificat authentification directe par l&rsquo;usage d&rsquo;une carte CPS  Ces deux modes d&rsquo;authentification, peuvent se dériver en différentes architectures en fonction du contexte de l&rsquo;intégrateur.
+Authentification Indirecte (Certificat) Scénario possible : L&rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&rsquo;intégre comme une passerelle vers le DMP. Ce scénario est possible en authentification indirecte">
+<meta itemprop="dateModified" content="2021-05-24T15:52:02&#43;02:00" />
+<meta itemprop="wordCount" content="537">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Authentifications"/>
-<meta name="twitter:description" content="Page en cours de construction Authentification Indirecte (Certificat) Diagramme de composants [FrontEnd intégrateur] as frontend node &quot;Environnement intégrateur&quot; {[BackEnd intégrateur] as backend #cyanpackage &quot;DevBox-Santé Proxy REST&quot; {package &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {[P12Manager] #35D9C0}}}cloud &quot;DMP&quot; as DMP frontend -down-&gt; backend : HTTP POST /dmp/td21SubmitDocumentsbackend -right-&gt; dmpFacade: RESTdmpFacade -down-&gt; DMP : SOAPAuthentification directe CPS Diagramme de composants node &quot;Poste Client (Windows/Mac/Linux)&quot; {[FrontEnd intégrateur] as frontend component &quot;DevBox-Santé Proxy REST&quot; {component &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {[DevBox-sante CPS] as cps #D34A3C } }[Cryptolib CPS (ANS / ASIP)] as cryptolibCPS }[BackEnd intégrateur] as backend cloud &quot;DMP&quot; as DMP frontend -right-&gt; dmpFacade : HTTP POST /dmp/td21SubmitDocumentscps &lt;-up-&gt; cryptolibCPS : appel natifdmpFacade -down-&gt; DMP : SOAPfrontend -down-&gt; backendAuthentification Directe avec CPS Agent Diagramme de composants node &quot;Poste Client (Windows/Mac/Linux)&quot; {[FrontEnd intégrateur] as frontend component &quot;DevBox-Santé Proxy REST&quot; as cpsAgent {[DevBox-sante CPS] as cps #D34A3C }[Cryptolib CPS (ANS / ASIP)] as cryptolibCPS }node &quot;Environnement intégrateur&quot; {[BackEnd intégrateur] as backend package &quot;DevBox-Santé Proxy REST&quot; {package &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {[CpsAgentClient] #35D9C0}}}cloud &quot;DMP&quot; as DMP frontend -d-&gt; backendbackend -d-&gt; dmpFacade CpsAgentClient &lt;-&gt; cpsAgentdmpFacade -down-&gt; DMP : SOAPcps -down-&gt; cryptolibCPS : appel natifDiagramme de séquences box &quot;Post Client&quot;participant frontendparticipant cpsAgentend box box &quot;Environnement intégrateur&quot; #whiteparticipant &quot;DevBox-Santé DMP&quot; as dbxdmp participant backendend boxfrontend -&gt; backend : storeDocumentPatientbackend -&gt; dbxdmp : /dmp/td21SubmitDocuments== initialisation d&#39;une connexion SSL en authentification mutuelle avec le DMP ==dbxdmp -&gt; &quot;DMP&quot; as dmp : [SSL] 1."/>
+<meta name="twitter:description" content="Les différents modes d&rsquo;authentification sont définis dans le guide d&rsquo;intégration comme étant :
+ authentification indirecte par l&rsquo;usage d&rsquo;un certificat authentification directe par l&rsquo;usage d&rsquo;une carte CPS  Ces deux modes d&rsquo;authentification, peuvent se dériver en différentes architectures en fonction du contexte de l&rsquo;intégrateur.
+Authentification Indirecte (Certificat) Scénario possible : L&rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&rsquo;intégre comme une passerelle vers le DMP. Ce scénario est possible en authentification indirecte"/>
 
 
 <script type="application/javascript">
@@ -971,28 +977,30 @@ if (!doNotTrack) {
 	<h1>Authentifications</h1>
     
 	       
-	
-
-<div class="pageinfo pageinfo-primary">
-<pre><code>Page en cours de construction
-</code></pre>
-
-</div>
-
+	<p>Les différents modes d&rsquo;authentification sont définis dans le guide d&rsquo;intégration comme étant :</p>
+<ul>
+<li>authentification indirecte par l&rsquo;usage d&rsquo;un certificat</li>
+<li>authentification directe par l&rsquo;usage d&rsquo;une carte CPS</li>
+</ul>
+<p><img src="../SEL-MP-037+DMPi_2.04_acteurs_et_objectifs.png" alt="SEL-MP-037+DMPi_2.04_acteurs_et_objectifs"></p>
+<p>Ces deux modes d&rsquo;authentification, peuvent se dériver en différentes architectures en fonction du contexte de l&rsquo;intégrateur.</p>
 <h2 id="authentification-indirecte-certificat">Authentification Indirecte (Certificat)</h2>
+<p><strong>Scénario possible</strong> : L&rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&rsquo;intégre comme une passerelle vers le DMP.
+Ce scénario est possible en authentification indirecte</p>
 <h4 id="diagramme-de-composants">Diagramme de composants</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
 [FrontEnd intégrateur] as frontend 
 
 node &quot;Environnement intégrateur&quot; {
-   [BackEnd intégrateur] as backend #cyan
-    package &quot;DevBox-Santé Proxy REST&quot;   {
+   [BackEnd intégrateur] as backend 
+    package &quot;DevBox-Santé Proxy REST&quot;  DEVBOX_COLOR {
         package &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {
-            [P12Manager] #35D9C0
+            [P12Manager] as P12Manager 
         }
     }
 }
-cloud &quot;DMP&quot; as DMP 
+cloud &quot;**DMP**&quot; as DMP 
 
 frontend -down-&gt; backend : HTTP POST /dmp/td21SubmitDocuments
 backend -right-&gt; dmpFacade: REST
@@ -1000,54 +1008,61 @@ dmpFacade -down-&gt; DMP : SOAP
 
 </code></pre><h2 id="authentification-directe-cps">Authentification directe CPS</h2>
 <h4 id="diagramme-de-composants-1">Diagramme de composants</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">node &quot;Poste Client (Windows/Mac/Linux)&quot; {
+<p><strong>Scénario possible</strong> : le frontend/client lourd s&rsquo;exécutant sur le poste client de l&rsquo;utilisateur accède au DMP grâce à la DevBox-Santé DMP installé sur le poste client.</p>
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend 
 
-    component &quot;DevBox-Santé Proxy REST&quot;   {
+    package &quot;DevBox-Santé Proxy REST&quot;  DEVBOX_COLOR {
         component &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {
             [DevBox-sante CPS] as cps #D34A3C 
             
         } 
     }
-    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+    [Cryptolib CPS (ANS)] as cryptolibCPS 
 }
 [BackEnd intégrateur] as backend 
-cloud &quot;DMP&quot; as DMP 
+cloud &quot;**DMP**&quot; as DMP 
 
 frontend -right-&gt; dmpFacade : HTTP POST /dmp/td21SubmitDocuments
 cps &lt;-up-&gt; cryptolibCPS : appel natif
 dmpFacade -down-&gt; DMP : SOAP
 frontend  -down-&gt; backend
 </code></pre><h3 id="authentification-directe-avec-cpsagent">Authentification Directe avec CPS Agent</h3>
+<p><strong>Scenario possible</strong> :</p>
 <h4 id="diagramme-de-composants-2">Diagramme de composants</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend 
 
-    component &quot;DevBox-Santé Proxy REST&quot; as cpsAgent  {
-            [DevBox-sante CPS] as cps #D34A3C 
+    package &quot;DevBox-Santé Proxy REST&quot; as cpsAgent DEVBOX_COLOR {
+            [DevBox-sante CPS] as cps CPS_COLOR 
         
     }
-    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+    [Cryptolib CPS (ANS)] as cryptolibCPS 
 }
 
 node &quot;Environnement intégrateur&quot; {
    [BackEnd intégrateur] as backend 
-    package &quot;DevBox-Santé Proxy REST&quot;   {
-        package &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {
-            [CpsAgentClient] #35D9C0
+    package &quot;DevBox-Santé Proxy REST&quot; DEVBOX_COLOR {
+        component &quot;DevBox-sante DMP&quot; as dmpFacade DMP_COLOR {
+            [CpsAgentClient] CPS_COLOR
         }
     }
 }
-cloud &quot;DMP&quot; as DMP 
+cloud &quot;**DMP**&quot; as DMP 
 
-frontend -d-&gt; backend
-backend -d-&gt; dmpFacade  
-CpsAgentClient &lt;-&gt; cpsAgent
-dmpFacade -down-&gt; DMP : SOAP
-cps -down-&gt; cryptolibCPS : appel natif
+frontend -d-&gt; backend : 1
+backend -d-&gt; dmpFacade  : 2
+CpsAgentClient -&gt; cpsAgent : 3  
+cps -down-&gt; cryptolibCPS : 4 
+dmpFacade -down-&gt; DMP : 5
 </code></pre><h4 id="diagramme-de-séquences">Diagramme de séquences</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">box &quot;Post Client&quot;
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+box &quot;Post Client&quot;
 participant frontend
 participant cpsAgent
 end box 
@@ -1081,7 +1096,7 @@ backend -&gt; frontend : ok
 </code></pre>
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 21, 2021: <a  href="/commit/138c18a8aea001f949ddc4ef80cfe624865a18e4">Amélioration affichage des diagrammes et des fichiers yaml (138c18a)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 24, 2021: <a  href="/commit/00fc05e2cb0793779b2dba6c03eac37aae4afebc">Travail sur le style des fichiers plantumls (00fc05e)</a>
 </div>
 </div>
 

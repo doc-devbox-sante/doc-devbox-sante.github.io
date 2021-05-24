@@ -623,7 +623,8 @@ This the multi-page printable view of this section.
 	<h1 id="pg-5283da1fd88eac832246065dbc0d7f33">1 - DMP</h1>
     <div class="lead">Le DMP intégré aux LPS</div>
 	<p>La DevBox-santé DMP est une api Java dont tous les composants sont injectables dans un environnement SpringFramework. 
-Ces composants sont tous basés sur des librairies de l&rsquo;opensource comme Joda-time, Log4j, Apache Santuario, Apache CXF… .</p>
+Elle suit le guide d&rsquo;intégration définit par le GIE SESAM-Vitale : <a href="">https://www.sesam-vitale.fr/documents/20182/54758/SEL-MP-037+DMPi.pdf</a></p>
+<p>Ces composants sont tous basés sur des librairies de l&rsquo;opensource comme Joda-time, Log4j, Apache Santuario, Apache CXF… .</p>
 <ul>
 <li>La DMPC-API proposé est un projet github public : <a href="https://bitbucket.com/devbox-sante/dmpc-api">https://bitbucket.com/devbox-sante/dmpc-api</a></li>
 </ul>
@@ -1354,7 +1355,7 @@ Il est initialisé par défaut sur un environnement de test.</p>
     
 	<p>L&rsquo;architecture du proxy WS peut être représentée par ce schéma :</p>
 <pre><code class="language-plantuml" data-lang="plantuml">node &quot;Systeme Information Hospitalier / Logiciel de Gestion de Cabinet&quot; {
-    component &quot;LogicielIntegrateur (PHP/autre langage)&quot; as LogicielIntegrateur
+    component &quot;LogicielIntegrateur&quot; as LogicielIntegrateur
     component &quot;JVM SpringBoot&quot; {
         component &quot;DMPC-PROXY&quot; as DMPC_Proxy #orange{
             component &quot;DevBox-Santé DMP&quot; as DMPC_API #orange
@@ -1424,28 +1425,30 @@ il montre  l&rsquo;usage possible des différents web services fournis.</p>
     
 	<h1 id="pg-a394ac5998ae60cedaeea2d0a722f4ad">1.4 - Authentifications</h1>
     
-	
-
-<div class="pageinfo pageinfo-primary">
-<pre><code>Page en cours de construction
-</code></pre>
-
-</div>
-
+	<p>Les différents modes d&rsquo;authentification sont définis dans le guide d&rsquo;intégration comme étant :</p>
+<ul>
+<li>authentification indirecte par l&rsquo;usage d&rsquo;un certificat</li>
+<li>authentification directe par l&rsquo;usage d&rsquo;une carte CPS</li>
+</ul>
+<p><img src="../SEL-MP-037+DMPi_2.04_acteurs_et_objectifs.png" alt="SEL-MP-037+DMPi_2.04_acteurs_et_objectifs"></p>
+<p>Ces deux modes d&rsquo;authentification, peuvent se dériver en différentes architectures en fonction du contexte de l&rsquo;intégrateur.</p>
 <h2 id="authentification-indirecte-certificat">Authentification Indirecte (Certificat)</h2>
+<p><strong>Scénario possible</strong> : L&rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&rsquo;intégre comme une passerelle vers le DMP.
+Ce scénario est possible en authentification indirecte</p>
 <h4 id="diagramme-de-composants">Diagramme de composants</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
 [FrontEnd intégrateur] as frontend 
 
 node &quot;Environnement intégrateur&quot; {
-   [BackEnd intégrateur] as backend #cyan
-    package &quot;DevBox-Santé Proxy REST&quot;   {
+   [BackEnd intégrateur] as backend 
+    package &quot;DevBox-Santé Proxy REST&quot;  DEVBOX_COLOR {
         package &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {
-            [P12Manager] #35D9C0
+            [P12Manager] as P12Manager 
         }
     }
 }
-cloud &quot;DMP&quot; as DMP 
+cloud &quot;**DMP**&quot; as DMP 
 
 frontend -down-&gt; backend : HTTP POST /dmp/td21SubmitDocuments
 backend -right-&gt; dmpFacade: REST
@@ -1453,54 +1456,61 @@ dmpFacade -down-&gt; DMP : SOAP
 
 </code></pre><h2 id="authentification-directe-cps">Authentification directe CPS</h2>
 <h4 id="diagramme-de-composants-1">Diagramme de composants</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">node &quot;Poste Client (Windows/Mac/Linux)&quot; {
+<p><strong>Scénario possible</strong> : le frontend/client lourd s&rsquo;exécutant sur le poste client de l&rsquo;utilisateur accède au DMP grâce à la DevBox-Santé DMP installé sur le poste client.</p>
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend 
 
-    component &quot;DevBox-Santé Proxy REST&quot;   {
+    package &quot;DevBox-Santé Proxy REST&quot;  DEVBOX_COLOR {
         component &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {
             [DevBox-sante CPS] as cps #D34A3C 
             
         } 
     }
-    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+    [Cryptolib CPS (ANS)] as cryptolibCPS 
 }
 [BackEnd intégrateur] as backend 
-cloud &quot;DMP&quot; as DMP 
+cloud &quot;**DMP**&quot; as DMP 
 
 frontend -right-&gt; dmpFacade : HTTP POST /dmp/td21SubmitDocuments
 cps &lt;-up-&gt; cryptolibCPS : appel natif
 dmpFacade -down-&gt; DMP : SOAP
 frontend  -down-&gt; backend
 </code></pre><h3 id="authentification-directe-avec-cpsagent">Authentification Directe avec CPS Agent</h3>
+<p><strong>Scenario possible</strong> :</p>
 <h4 id="diagramme-de-composants-2">Diagramme de composants</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend 
 
-    component &quot;DevBox-Santé Proxy REST&quot; as cpsAgent  {
-            [DevBox-sante CPS] as cps #D34A3C 
+    package &quot;DevBox-Santé Proxy REST&quot; as cpsAgent DEVBOX_COLOR {
+            [DevBox-sante CPS] as cps CPS_COLOR 
         
     }
-    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+    [Cryptolib CPS (ANS)] as cryptolibCPS 
 }
 
 node &quot;Environnement intégrateur&quot; {
    [BackEnd intégrateur] as backend 
-    package &quot;DevBox-Santé Proxy REST&quot;   {
-        package &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {
-            [CpsAgentClient] #35D9C0
+    package &quot;DevBox-Santé Proxy REST&quot; DEVBOX_COLOR {
+        component &quot;DevBox-sante DMP&quot; as dmpFacade DMP_COLOR {
+            [CpsAgentClient] CPS_COLOR
         }
     }
 }
-cloud &quot;DMP&quot; as DMP 
+cloud &quot;**DMP**&quot; as DMP 
 
-frontend -d-&gt; backend
-backend -d-&gt; dmpFacade  
-CpsAgentClient &lt;-&gt; cpsAgent
-dmpFacade -down-&gt; DMP : SOAP
-cps -down-&gt; cryptolibCPS : appel natif
+frontend -d-&gt; backend : 1
+backend -d-&gt; dmpFacade  : 2
+CpsAgentClient -&gt; cpsAgent : 3  
+cps -down-&gt; cryptolibCPS : 4 
+dmpFacade -down-&gt; DMP : 5
 </code></pre><h4 id="diagramme-de-séquences">Diagramme de séquences</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">box &quot;Post Client&quot;
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+box &quot;Post Client&quot;
 participant frontend
 participant cpsAgent
 end box 
@@ -2313,7 +2323,7 @@ Il s&rsquo;agit du mode d&rsquo;authentification directe (avec l&rsquo;usage de 
 </span></code></pre></div><h3 id="authentification-directe--cpsagent">Authentification directe : CPS Agent</h3>
 <p>Un mode d&rsquo;authentification intégrant le module CPS agent est possible de la manière suivante :</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000">dmpc: </span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification indirecte utilisant les certificats p12 serveurs</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification directe depuis le backend par l&#39;intermédiaire d&#39;un agent CPS sur le poste du client</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">withCpsAgent</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div>
 </div>
@@ -2493,8 +2503,34 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
 	<p>Le module insi-proxy, permet de fournit une facade REST à la facade <code>INSiClient</code> java.
 Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.</p>
 <p>L&rsquo;accès a l&rsquo;insi-proxy est donc indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
-<p><img src="insi-rest-architecture.png" alt="insi-proxy architecture rest"></p>
-<h3 id="exécution-du-proxy">Exécution du Proxy</h3>
+<pre><code class="language-plantuml" data-lang="plantuml">title Architecture INSi-API en mode REST
+skinparam componentStyle uml2
+
+
+node &quot;Poste Client (Windows/Mac/Linux)&quot; {
+    [FrontEnd intégrateur] as frontend #cyan
+
+    package &quot;DevBox-Santé&quot; #Orange  {
+        [interface INSI-API] as insFacade #Orange
+    }
+    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS #pink
+    [APILectureVitale (SesamVitale)] as apiLectureVitale #pink
+}
+
+[Téléservice INSi (SesamVitale)] as insi #pink
+
+[BackEnd intégrateur] as backend #cyan
+
+
+
+frontend -down-&gt; insFacade : HTTP GET /insi/rechercheAvecVitale
+insFacade &lt;-down-&gt; cryptolibCPS : appel natif
+insFacade &lt;-down-&gt; apiLectureVitale : appel natif
+insFacade &lt;-right-&gt; insi : SOAP
+frontend -right-&gt; backend : REST
+
+
+</code></pre><h3 id="exécution-du-proxy">Exécution du Proxy</h3>
 <h4 id="prérequis">Prérequis</h4>
 <p>Doit être installé</p>
 <ul>

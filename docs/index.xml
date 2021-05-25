@@ -471,15 +471,24 @@ public static class Default implements UniqueIdGenerator {
       <description>
         
         
-        &lt;p&gt;Les différents modes d&amp;rsquo;authentification sont définis dans le guide d&amp;rsquo;intégration comme étant :&lt;/p&gt;
+        &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Une des difficultés d&amp;rsquo;intégration avec le DMP consiste à établir une connexion SSL (TLS) en authentification &lt;strong&gt;mutuelle&lt;/strong&gt; avec le DMP.
+Contrairement aux connexions SSL classiques que nous pouvons avoir avec n&amp;rsquo;importe quel site, non seulement le DMP doit prouver son identité mais aussi le client qui s&amp;rsquo;y connecte.&lt;/p&gt;
+&lt;p&gt;Cela signifie que l&amp;rsquo;opération Certificate Verify dans le schéma doit être réalisé :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;SSL_authentification_mutuelle.png&#34; alt=&#34;SSL_authentification_mutuelle&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Cette étape consiste à ce que le client signe un handshake provenant du serveur avec une clé privé provenant d&amp;rsquo;une IGC (Infrastructure de Gestion de Clés) reconnue par le DMP : l&amp;rsquo;IGC Santé.&lt;/p&gt;
+&lt;p&gt;Celà permet de définir de modes d&amp;rsquo;authentification dans le DMP :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;authentification indirecte par l&amp;rsquo;usage d&amp;rsquo;un certificat&lt;/li&gt;
-&lt;li&gt;authentification directe par l&amp;rsquo;usage d&amp;rsquo;une carte CPS&lt;/li&gt;
+&lt;li&gt;l&amp;rsquo;authentification indirecte par l&amp;rsquo;usage d&amp;rsquo;un fichier p12 certificat serveur provenant de l&amp;rsquo;IGC santé&lt;/li&gt;
+&lt;li&gt;l&amp;rsquo;authentification directe par l&amp;rsquo;usage d&amp;rsquo;une carte CPS&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;../SEL-MP-037+DMPi_2.04_acteurs_et_objectifs.png&#34; alt=&#34;SEL-MP-037+DMPi_2.04_acteurs_et_objectifs&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Ces deux modes d&amp;rsquo;authentification, peuvent se dériver en différentes architectures en fonction du contexte de l&amp;rsquo;intégrateur.&lt;/p&gt;
 &lt;h2 id=&#34;authentification-indirecte-certificat&#34;&gt;Authentification Indirecte (Certificat)&lt;/h2&gt;
-&lt;h3 id=&#34;scenario--alimentation-de-documents&#34;&gt;Scenario : Alimentation de documents&lt;/h3&gt;
+&lt;p&gt;Il s&amp;rsquo;agit de l&amp;rsquo;authentification par certificat serveur.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Une documentation pour obtenir des certificats serveurs se trouve &lt;a href=&#34;/docs/dmp/howtos/gestioncertificat/&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Description scénario&lt;/strong&gt; : L&amp;rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&amp;rsquo;intégre comme une passerelle vers le DMP.&lt;/p&gt;
 &lt;h4 id=&#34;version-rest&#34;&gt;Version REST&lt;/h4&gt;
 &lt;h5 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h5&gt;
@@ -521,8 +530,8 @@ frontend -down-&amp;gt; backend
 DMPC_API -d-&amp;gt; DMP : SOAP XDS / CDA
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;authentification-directe-cps&#34;&gt;Authentification directe CPS&lt;/h2&gt;
 &lt;h4 id=&#34;version-rest-1&#34;&gt;Version REST&lt;/h4&gt;
-&lt;h5 id=&#34;diagramme-de-composants-2&#34;&gt;Diagramme de composants&lt;/h5&gt;
 &lt;p&gt;&lt;strong&gt;Scénario possible&lt;/strong&gt; : Le frontend/client lourd s&amp;rsquo;exécutant sur le poste client de l&amp;rsquo;utilisateur accède au DMP grâce à la DevBox-Santé DMP installé sur le poste client.&lt;/p&gt;
+&lt;h5 id=&#34;diagramme-de-composants-2&#34;&gt;Diagramme de composants&lt;/h5&gt;
 &lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {

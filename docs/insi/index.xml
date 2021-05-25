@@ -74,31 +74,34 @@
         &lt;p&gt;Le module insi-proxy, permet de fournit une facade REST à la facade &lt;code&gt;INSiClient&lt;/code&gt; java.
 Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.&lt;/p&gt;
 &lt;p&gt;L&amp;rsquo;accès a l&amp;rsquo;insi-proxy est donc indépendant de la technologie utilisée par l&amp;rsquo;intégrateur. Exemple d&amp;rsquo;intégration possible :&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;title Architecture INSi-API en mode REST
-skinparam componentStyle uml2
+&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 
 node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
-    [FrontEnd intégrateur] as frontend #cyan
+    [FrontEnd intégrateur] as frontend 
 
-    package &amp;quot;DevBox-Santé&amp;quot; #Orange  {
-        [interface INSI-API] as insFacade #Orange
+    package &amp;quot;DevBox-Santé&amp;quot; DEVBOX_COLOR  {
+        component &amp;quot;DevBoxSanté INSi&amp;quot; as insFacade INS_COLOR {
+            [DevBoxSanté CPS] as cps CPS_COLOR
+            [DevBoxSanté Vitale] as vitale VITALE_COLOR
+        }
+
     }
-    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS #pink
-    [APILectureVitale (SesamVitale)] as apiLectureVitale #pink
+    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+    [APILectureVitale (SesamVitale)] as apiLectureVitale 
 }
 
-[Téléservice INSi (SesamVitale)] as insi #pink
+cloud &amp;quot;Téléservice **INSi** (SesamVitale)&amp;quot; as insi
 
-[BackEnd intégrateur] as backend #cyan
+[BackEnd intégrateur] as backend 
 
 
 
+frontend -u-&amp;gt; backend : REST
 frontend -down-&amp;gt; insFacade : HTTP GET /insi/rechercheAvecVitale
-insFacade &amp;lt;-down-&amp;gt; cryptolibCPS : appel natif
-insFacade &amp;lt;-down-&amp;gt; apiLectureVitale : appel natif
-insFacade &amp;lt;-right-&amp;gt; insi : SOAP
-frontend -right-&amp;gt; backend : REST
+cps &amp;lt;-down-&amp;gt; cryptolibCPS : appel natif
+vitale &amp;lt;-down-&amp;gt; apiLectureVitale : appel natif
+insFacade &amp;lt;-d-&amp;gt; insi : SOAP
 
 
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exécution-du-proxy&#34;&gt;Exécution du Proxy&lt;/h3&gt;

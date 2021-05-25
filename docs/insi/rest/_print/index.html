@@ -50,8 +50,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.d22051aee96007f67fc0e97cfaaa9aa383ed759b792c1e8ca6d0bcca43fe075d.css" as="style">
-<link href="/scss/main.min.d22051aee96007f67fc0e97cfaaa9aa383ed759b792c1e8ca6d0bcca43fe075d.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
+<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -144,7 +144,7 @@ if (!doNotTrack) {
 				
 				
 				
-				<a class="nav-link" href="/docs/carte-vitale/" ><i class='icon iconNav icon-sesam-puce'></i><span>Vitale</span></a>
+				<a class="nav-link" href="/docs/vitale/" ><i class='icon iconNav icon-sesam-puce'></i><span>Vitale</span></a>
 			</li>
 			
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
@@ -215,31 +215,34 @@ This the multi-page printable view of this section.
       <p>Le module insi-proxy, permet de fournit une facade REST à la facade <code>INSiClient</code> java.
 Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.</p>
 <p>L&rsquo;accès a l&rsquo;insi-proxy est donc indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">title Architecture INSi-API en mode REST
-skinparam componentStyle uml2
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
-    [FrontEnd intégrateur] as frontend #cyan
+    [FrontEnd intégrateur] as frontend 
 
-    package &quot;DevBox-Santé&quot; #Orange  {
-        [interface INSI-API] as insFacade #Orange
+    package &quot;DevBox-Santé&quot; DEVBOX_COLOR  {
+        component &quot;DevBoxSanté INSi&quot; as insFacade INS_COLOR {
+            [DevBoxSanté CPS] as cps CPS_COLOR
+            [DevBoxSanté Vitale] as vitale VITALE_COLOR
+        }
+
     }
-    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS #pink
-    [APILectureVitale (SesamVitale)] as apiLectureVitale #pink
+    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+    [APILectureVitale (SesamVitale)] as apiLectureVitale 
 }
 
-[Téléservice INSi (SesamVitale)] as insi #pink
+cloud &quot;Téléservice **INSi** (SesamVitale)&quot; as insi
 
-[BackEnd intégrateur] as backend #cyan
+[BackEnd intégrateur] as backend 
 
 
 
+frontend -u-&gt; backend : REST
 frontend -down-&gt; insFacade : HTTP GET /insi/rechercheAvecVitale
-insFacade &lt;-down-&gt; cryptolibCPS : appel natif
-insFacade &lt;-down-&gt; apiLectureVitale : appel natif
-insFacade &lt;-right-&gt; insi : SOAP
-frontend -right-&gt; backend : REST
+cps &lt;-down-&gt; cryptolibCPS : appel natif
+vitale &lt;-down-&gt; apiLectureVitale : appel natif
+insFacade &lt;-d-&gt; insi : SOAP
 
 
 </code></pre><h3 id="exécution-du-proxy">Exécution du Proxy</h3>

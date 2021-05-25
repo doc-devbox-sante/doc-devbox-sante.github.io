@@ -50,8 +50,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.d22051aee96007f67fc0e97cfaaa9aa383ed759b792c1e8ca6d0bcca43fe075d.css" as="style">
-<link href="/scss/main.min.d22051aee96007f67fc0e97cfaaa9aa383ed759b792c1e8ca6d0bcca43fe075d.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
+<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -144,7 +144,7 @@ if (!doNotTrack) {
 				
 				
 				
-				<a class="nav-link" href="/docs/carte-vitale/" ><i class='icon iconNav icon-sesam-puce'></i><span>Vitale</span></a>
+				<a class="nav-link" href="/docs/vitale/" ><i class='icon iconNav icon-sesam-puce'></i><span>Vitale</span></a>
 			</li>
 			
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
@@ -792,8 +792,8 @@ if (!doNotTrack) {
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docscarte-vitale-li">
-    <a href="/docs/carte-vitale/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docscarte-vitale"><span class="">Vitale</span></a>
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsvitale-li">
+    <a href="/docs/vitale/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsvitale"><span class="">Vitale</span></a>
     
       
       <ul class="pr-md-3 ul-2">
@@ -816,8 +816,8 @@ if (!doNotTrack) {
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscarte-vitaleissues-li">
-    <a href="/docs/carte-vitale/issues/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docscarte-vitaleissues"><span class="">Problèmes connus</span></a>
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsvitaleissues-li">
+    <a href="/docs/vitale/issues/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsvitaleissues"><span class="">Problèmes connus</span></a>
     
   </li>
 
@@ -984,7 +984,7 @@ java d&rsquo;accéder à la carte CPS3.</p>
 <span style="color:#ce5c00;font-weight:bold">}</span>
 </code></pre></div><h3 id="personnalisation-du-pinprovider">Personnalisation du PinProvider</h3>
 <p>La saisie du code Pin est possible à partir du <code>PinProviderFrame</code> développé en Swing.</p>
-<p><img src="/src/main/site/images/cps-saisie-code-pin.png" alt="cps-proxy saisie du code pin"></p>
+<p><img src="cps-saisie-code-pin.png" alt="cps-proxy saisie du code pin"></p>
 <p>Mais, il est tout à fait possible de fournir son propre provider ou encore utiliser le NoPinProvider, et appelé explicitement la méthode <code>setPin()</code>.</p>
 <h2 id="signature-pdf">Signature PDF</h2>
 <p>Le module cps-pdf, contient le code permettant de générer des signatures PDF  <a href="https://helpx.adobe.com/fr/acrobat/using/signing-pdfs.html">https://helpx.adobe.com/fr/acrobat/using/signing-pdfs.html</a>.</p>
@@ -998,8 +998,23 @@ java d&rsquo;accéder à la carte CPS3.</p>
 </code></pre></div><h2 id="proxy-rest">Proxy REST</h2>
 <p>Le module cps-proxy, permet de fournit une facade REST à la <code>CPSFacade</code> java.</p>
 <p>L&rsquo;accès au CPS-proxy est indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
-<p><img src="cps-rest-architecture.png" alt="cps-proxy architecture rest"></p>
-<h3 id="exécution">Exécution</h3>
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+node &quot;Poste Client (Windows/Mac/Linux)&quot; {
+    [FrontEnd intégrateur] as frontend 
+
+    package &quot;DevBox-Santé&quot; DEVBOX_COLOR  {
+        [interface CPS-API] as cpsFacade CPS_COLOR
+    }
+    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+}
+
+[BackEnd intégrateur] as backend
+
+frontend -down-&gt; cpsFacade : REST &quot;GET &quot;/cps/cardInfo&quot;&quot;
+cpsFacade &lt;-down-&gt; cryptolibCPS : appel natif
+frontend -right-&gt; backend : REST
+</code></pre><h3 id="exécution">Exécution</h3>
 <p>Exemple Swagger :</p>
 <p><img src="cps-proxy-swagger-saisie-code-pin.png" alt="cps-proxy swagger"></p>
 <p>Exemple CURL :</p>

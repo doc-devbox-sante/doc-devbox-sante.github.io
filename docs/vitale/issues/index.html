@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="alternate" type="text/html" href="/docs/dmp/howtos/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="/docs/dmp/howtos/index.xml">
-<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.83.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -19,16 +17,24 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Howtos | DevBox-Santé</title>
-<meta name="description" content="La Documentation"><meta property="og:title" content="Howtos" />
-<meta property="og:description" content="La Documentation" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/dmp/howtos/" /><meta property="og:site_name" content="DevBox-Santé" />
+<title>Problèmes connus | DevBox-Santé</title>
+<meta name="description" content="La Documentation"><meta property="og:title" content="Problèmes connus" />
+<meta property="og:description" content="PC/SC ou galss ? Le galss n&rsquo;est officiellement plus supporté au 31 décembre 2021, donc il faut configurer les lecteurs en PC/SC
+Changement de lecteur PC/SC -&gt; Galss Le lecteur carte vitale, enregistre dans le fchier %Program_FILES%/DevBoxSante-%client%/santesocial/api_lec/api_lec.ini les lecteurs PC/SC utilisés, une fois enregistré si l&rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté car les api sesam vitale ne recherche les lecteurs galss que si il n&rsquo;y a pas de lecteurs PS/SC d&rsquo;enregistrés." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/vitale/issues/" /><meta property="article:section" content="docs" />
 
-<meta itemprop="name" content="Howtos">
-<meta itemprop="description" content="La Documentation"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Howtos"/>
-<meta name="twitter:description" content="La Documentation"/>
+<meta property="og:site_name" content="DevBox-Santé" />
+
+<meta itemprop="name" content="Problèmes connus">
+<meta itemprop="description" content="PC/SC ou galss ? Le galss n&rsquo;est officiellement plus supporté au 31 décembre 2021, donc il faut configurer les lecteurs en PC/SC
+Changement de lecteur PC/SC -&gt; Galss Le lecteur carte vitale, enregistre dans le fchier %Program_FILES%/DevBoxSante-%client%/santesocial/api_lec/api_lec.ini les lecteurs PC/SC utilisés, une fois enregistré si l&rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté car les api sesam vitale ne recherche les lecteurs galss que si il n&rsquo;y a pas de lecteurs PS/SC d&rsquo;enregistrés.">
+
+<meta itemprop="wordCount" content="111">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Problèmes connus"/>
+<meta name="twitter:description" content="PC/SC ou galss ? Le galss n&rsquo;est officiellement plus supporté au 31 décembre 2021, donc il faut configurer les lecteurs en PC/SC
+Changement de lecteur PC/SC -&gt; Galss Le lecteur carte vitale, enregistre dans le fchier %Program_FILES%/DevBoxSante-%client%/santesocial/api_lec/api_lec.ini les lecteurs PC/SC utilisés, une fois enregistré si l&rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté car les api sesam vitale ne recherche les lecteurs galss que si il n&rsquo;y a pas de lecteurs PS/SC d&rsquo;enregistrés."/>
 
 
 <script type="application/javascript">
@@ -61,7 +67,7 @@ if (!doNotTrack) {
 
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -93,7 +99,7 @@ if (!doNotTrack) {
 				
 				
 				
-				<a class="nav-link active" href="/docs/dmp/" ><i class='icon iconNav icon-dmp'></i><span class="active">DMP</span></a>
+				<a class="nav-link" href="/docs/dmp/" ><i class='icon iconNav icon-dmp'></i><span>DMP</span></a>
 			</li>
 			
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
@@ -141,7 +147,7 @@ if (!doNotTrack) {
 				
 				
 				
-				<a class="nav-link" href="/docs/vitale/" ><i class='icon iconNav icon-sesam-puce'></i><span>Vitale</span></a>
+				<a class="nav-link active" href="/docs/vitale/" ><i class='icon iconNav icon-sesam-puce'></i><span class="active">Vitale</span></a>
 			</li>
 			
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
@@ -234,7 +240,7 @@ if (!doNotTrack) {
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsdmp-li">
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdmp-li">
     <a href="/docs/dmp/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsdmp"><span class="">DMP</span></a>
     
       
@@ -523,8 +529,8 @@ if (!doNotTrack) {
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsdmphowtos-li">
-    <a href="/docs/dmp/howtos/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section" id="m-docsdmphowtos"><span class="td-sidebar-nav-active-item">Howtos</span></a>
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdmphowtos-li">
+    <a href="/docs/dmp/howtos/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsdmphowtos"><span class="">Howtos</span></a>
     
       
       <ul class="pr-md-3 ul-3">
@@ -789,7 +795,7 @@ if (!doNotTrack) {
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsvitale-li">
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsvitale-li">
     <a href="/docs/vitale/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsvitale"><span class="">Vitale</span></a>
     
       
@@ -813,8 +819,8 @@ if (!doNotTrack) {
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsvitaleissues-li">
-    <a href="/docs/vitale/issues/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsvitaleissues"><span class="">Problèmes connus</span></a>
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsvitaleissues-li">
+    <a href="/docs/vitale/issues/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__page" id="m-docsvitaleissues"><span class="td-sidebar-nav-active-item">Problèmes connus</span></a>
     
   </li>
 
@@ -898,13 +904,24 @@ if (!doNotTrack) {
   <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
   
   
-    <a id="print" href="/docs/dmp/howtos/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
+    <a id="print" href="/docs/vitale/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
   
   </div>
 
 
 
 
+
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pcsc-ou-galss-">PC/SC ou galss ?</a></li>
+        <li><a href="#changement-de-lecteur-pcsc---galss">Changement de lecteur PC/SC -&gt; Galss</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -934,14 +951,14 @@ if (!doNotTrack) {
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/dmp/">DMP</a>
+	<a href="/docs/vitale/">Vitale</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/dmp/howtos/">Howtos</a>
+	<a href="/docs/vitale/issues/">Problèmes connus</a>
 </li>
 
 	</ol>
@@ -949,110 +966,29 @@ if (!doNotTrack) {
 
             
 <div class="td-content">
-	<h1>Howtos</h1>
-        
-	
-	
-        <div class="section-index">
+	<h1>Problèmes connus</h1>
     
-    
-    
-    
-    
-    <hr class="panel-line">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/dmp/howtos/gestioncertificat/">Gestion des certificats</a>
-                    </h5>
-                    <p>Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification indirecte</p>
-                </div>
-            
-        
-            
-                
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/dmp/howtos/schematron/">Schematron</a>
-                    </h5>
-                    <p>Validation manuelle des CDA générés par la DevBox-Santé DMP lors de l&rsquo;homologation</p>
-                </div>
-            
-        
-            
-                
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/dmp/howtos/integrateurchecklist/">Integrateurs checklist</a>
-                    </h5>
-                    <p>Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.</p>
-                </div>
-            
-        
-            
-        
-            
-                
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/dmp/howtos/parametrage/">Paramètrage de la DevBox-santé DMP</a>
-                    </h5>
-                    <p>Comment paramètrer le DMP</p>
-                </div>
-            
-        
-    
-</div>
+	       
+	<h3 id="pcsc-ou-galss-">PC/SC ou galss ?</h3>
+<p>Le galss n&rsquo;est officiellement plus supporté au 31 décembre 2021, donc il faut configurer les lecteurs en PC/SC</p>
+<h3 id="changement-de-lecteur-pcsc---galss">Changement de lecteur PC/SC -&gt; Galss</h3>
+<p>Le lecteur carte vitale, enregistre dans le fchier %Program_FILES%/DevBoxSante-%client%/santesocial/api_lec/api_lec.ini les lecteurs PC/SC utilisés, 
+une fois enregistré si l&rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté 
+car les api sesam vitale ne recherche les lecteurs galss que si il n&rsquo;y a pas de lecteurs PS/SC d&rsquo;enregistrés.</p>
+<p>Solution: supprimer dans le fichier api_lec.ini les lecteurs enregistrés.</p>
+<pre><code>[Lecteur]
+Ressource_Vitale=
+Ressource_CPS=
+</code></pre><blockquote>
+<p>PS: Le changement de lecteur PS/SC pour un autre PS/SC ne pose aucun soucis</p>
+</blockquote>
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 12, 2021: <a  href="/commit/9df2dc50a7e8a0f25028598aeeddd1e3ea10a7bd">Première version (9df2dc5)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Dernière modification January 1, 0001
 </div>
 </div>
+
 
           </main>
         </div>

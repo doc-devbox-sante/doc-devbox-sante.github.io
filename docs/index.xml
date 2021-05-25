@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Problèmes connus</title>
-      <link>/docs/carte-vitale/issues/</link>
+      <link>/docs/vitale/issues/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/carte-vitale/issues/</guid>
+      <guid>/docs/vitale/issues/</guid>
       <description>
         
         
@@ -477,7 +477,7 @@ Contrairement aux connexions SSL classiques que nous pouvons avoir avec n&amp;r
 &lt;p&gt;Cela signifie que l&amp;rsquo;opération Certificate Verify dans le schéma doit être réalisé :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;SSL_authentification_mutuelle.png&#34; alt=&#34;SSL_authentification_mutuelle&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Cette étape consiste à ce que le client signe un handshake provenant du serveur avec une clé privé provenant d&amp;rsquo;une IGC (Infrastructure de Gestion de Clés) reconnue par le DMP : l&amp;rsquo;IGC Santé.&lt;/p&gt;
-&lt;p&gt;Celà permet de définir de modes d&amp;rsquo;authentification dans le DMP :&lt;/p&gt;
+&lt;p&gt;Celà permet de définir deux modes d&amp;rsquo;authentification dans le DMP :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;l&amp;rsquo;authentification indirecte par l&amp;rsquo;usage d&amp;rsquo;un fichier p12 certificat serveur provenant de l&amp;rsquo;IGC santé&lt;/li&gt;
 &lt;li&gt;l&amp;rsquo;authentification directe par l&amp;rsquo;usage d&amp;rsquo;une carte CPS&lt;/li&gt;

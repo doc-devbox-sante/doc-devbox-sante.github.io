@@ -24,12 +24,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/dmp/embedded/howtos/uniqueidgenerator/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-05-12T18:55:36&#43;02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2021-05-26T10:41:23&#43;02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="UniqueIdGenerator">
 <meta itemprop="description" content="[Alimentation] Génération des UniqueId
 ">
-<meta itemprop="dateModified" content="2021-05-12T18:55:36&#43;02:00" />
+<meta itemprop="dateModified" content="2021-05-26T10:41:23&#43;02:00" />
 <meta itemprop="wordCount" content="385">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="UniqueIdGenerator"/>
@@ -721,6 +721,31 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinsiconfiguration-li">
+    <a href="/docs/insi/configuration/" title="Configuration DevBox-santé INSi" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsinsiconfiguration"><span class="">Configuration</span></a>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -1009,48 +1034,48 @@ if (!doNotTrack) {
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idRoot</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.287.1</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idExtension</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1234567</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>L&rsquo;implémentation ressemble à cela :</p>
-<pre><code>/**
-* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
-*  * un compteur
-*  * et le temps en ms
-*/
-public static class Default implements UniqueIdGenerator {
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">/**
+</span><span style="color:#8f5902;font-style:italic">* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
+</span><span style="color:#8f5902;font-style:italic">*  * un compteur
+</span><span style="color:#8f5902;font-style:italic">*  * et le temps en ms
+</span><span style="color:#8f5902;font-style:italic">*/</span>
+<span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">Default</span> <span style="color:#204a87;font-weight:bold">implements</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
-        ...
-        @Override
-        public Id generate() {
-            return new IdBuilder().setRoot(source.ToOID()).setExtension(System.currentTimeMillis() + &quot;.&quot; + (cpt++)).toId();
-        }
-}
-</code></pre><h2 id="basée-sur-luuid">Basée sur l&rsquo;UUID</h2>
+        <span style="color:#ce5c00;font-weight:bold">...</span>
+        <span style="color:#5c35cc;font-weight:bold">@Override</span>
+        <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">Id</span> <span style="color:#000">generate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">IdBuilder</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">setRoot</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">source</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ToOID</span><span style="color:#ce5c00;font-weight:bold">()).</span><span style="color:#c4a000">setExtension</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">currentTimeMillis</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#4e9a06">&#34;.&#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">cpt</span><span style="color:#ce5c00;font-weight:bold">++)).</span><span style="color:#c4a000">toId</span><span style="color:#ce5c00;font-weight:bold">();</span>
+        <span style="color:#ce5c00;font-weight:bold">}</span>
+<span style="color:#ce5c00;font-weight:bold">}</span>
+</code></pre></div><h2 id="basée-sur-luuid">Basée sur l&rsquo;UUID</h2>
 <p>Il est possible d’utiliser une autre implémentation proposée par la DMPC-API pour utiliser l’OID UUID : &ldquo;2.25&rdquo; . Cette implémentation est conforme à la première méthode de l&rsquo;exigence.</p>
 <p>Il suffit de configurer un bean implémentant <code>UniqueIdGenerator</code>, de la manière suivante:</p>
-<pre><code> @Configuration
- public class MyOwnDmpcApiConfiguration {
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#5c35cc;font-weight:bold">@Configuration</span>
+ <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
-    @Bean
-    public UniqueIdGenerator idGenerate() {
-        return new UniqueIdGenerator.WithUuid();
-    }
-}
-</code></pre><h2 id="implémentée-par-lintégrateur">Implémentée par l&rsquo;intégrateur</h2>
+    <span style="color:#5c35cc;font-weight:bold">@Bean</span>
+    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#000">idGenerate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">UniqueIdGenerator</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">WithUuid</span><span style="color:#ce5c00;font-weight:bold">();</span>
+    <span style="color:#ce5c00;font-weight:bold">}</span>
+<span style="color:#ce5c00;font-weight:bold">}</span>
+</code></pre></div><h2 id="implémentée-par-lintégrateur">Implémentée par l&rsquo;intégrateur</h2>
 <p>Il est néanmoins possible de générer ses UniqueId, l&rsquo;intégrateur devra donc proposer sa propre implémentation du <code>UniqueIdGenerator</code> et de l&rsquo;ajouter à sa configuration spring .</p>
 <p>Attention : Elle devra être conforme à l&rsquo;une des deux exigences mentionnées ci-dessus.</p>
 <p>Exemple :</p>
-<pre><code>@Configuration
- public class MyOwnDmpcApiConfiguration {
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#5c35cc;font-weight:bold">@Configuration</span>
+ <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
-    @Bean
-    public UniqueIdGenerator idGenerate() {
-        return new MyOwnImplementationOfUniqueIdGenerator();
-    }
-}
-</code></pre><p>‌</p>
+    <span style="color:#5c35cc;font-weight:bold">@Bean</span>
+    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#000">idGenerate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">MyOwnImplementationOfUniqueIdGenerator</span><span style="color:#ce5c00;font-weight:bold">();</span>
+    <span style="color:#ce5c00;font-weight:bold">}</span>
+<span style="color:#ce5c00;font-weight:bold">}</span>
+</code></pre></div><p>‌</p>
 <p>‌</p>
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 12, 2021: <a  href="/commit/9df2dc50a7e8a0f25028598aeeddd1e3ea10a7bd">Première version (9df2dc5)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 26, 2021: <a  href="/commit/4f5a6555fc89613070cb32418f3a1a04eacc6489">Relecture partie DMP, INSi et MSS (4f5a655)</a>
 </div>
 </div>
 

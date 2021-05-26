@@ -420,43 +420,43 @@ La cinématique générale est la suivante :&lt;/p&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;idRoot&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1.2.250.1.287.1&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;idExtension&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1234567&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;L&amp;rsquo;implémentation ressemble à cela :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/**
-* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
-*  * un compteur
-*  * et le temps en ms
-*/
-public static class Default implements UniqueIdGenerator {
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;*  * un compteur
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;*  * et le temps en ms
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;*/&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Default&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;implements&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UniqueIdGenerator&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
 
-        ...
-        @Override
-        public Id generate() {
-            return new IdBuilder().setRoot(source.ToOID()).setExtension(System.currentTimeMillis() + &amp;quot;.&amp;quot; + (cpt++)).toId();
-        }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;basée-sur-luuid&#34;&gt;Basée sur l&amp;rsquo;UUID&lt;/h2&gt;
+        &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;...&lt;/span&gt;
+        &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Override&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;generate&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;IdBuilder&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setRoot&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;source&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;ToOID&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()).&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setExtension&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;System&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;currentTimeMillis&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;cpt&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;++)).&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;toId&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+        &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;basée-sur-luuid&#34;&gt;Basée sur l&amp;rsquo;UUID&lt;/h2&gt;
 &lt;p&gt;Il est possible d’utiliser une autre implémentation proposée par la DMPC-API pour utiliser l’OID UUID : &amp;ldquo;2.25&amp;rdquo; . Cette implémentation est conforme à la première méthode de l&amp;rsquo;exigence.&lt;/p&gt;
 &lt;p&gt;Il suffit de configurer un bean implémentant &lt;code&gt;UniqueIdGenerator&lt;/code&gt;, de la manière suivante:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; @Configuration
- public class MyOwnDmpcApiConfiguration {
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt; &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Configuration&lt;/span&gt;
+ &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MyOwnDmpcApiConfiguration&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
 
-    @Bean
-    public UniqueIdGenerator idGenerate() {
-        return new UniqueIdGenerator.WithUuid();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;implémentée-par-lintégrateur&#34;&gt;Implémentée par l&amp;rsquo;intégrateur&lt;/h2&gt;
+    &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Bean&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UniqueIdGenerator&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;idGenerate&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UniqueIdGenerator&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;WithUuid&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;implémentée-par-lintégrateur&#34;&gt;Implémentée par l&amp;rsquo;intégrateur&lt;/h2&gt;
 &lt;p&gt;Il est néanmoins possible de générer ses UniqueId, l&amp;rsquo;intégrateur devra donc proposer sa propre implémentation du &lt;code&gt;UniqueIdGenerator&lt;/code&gt; et de l&amp;rsquo;ajouter à sa configuration spring .&lt;/p&gt;
 &lt;p&gt;Attention : Elle devra être conforme à l&amp;rsquo;une des deux exigences mentionnées ci-dessus.&lt;/p&gt;
 &lt;p&gt;Exemple :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;@Configuration
- public class MyOwnDmpcApiConfiguration {
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Configuration&lt;/span&gt;
+ &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MyOwnDmpcApiConfiguration&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
 
-    @Bean
-    public UniqueIdGenerator idGenerate() {
-        return new MyOwnImplementationOfUniqueIdGenerator();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;‌&lt;/p&gt;
+    &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Bean&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UniqueIdGenerator&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;idGenerate&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MyOwnImplementationOfUniqueIdGenerator&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;‌&lt;/p&gt;
 &lt;p&gt;‌&lt;/p&gt;
 
       </description>
@@ -680,7 +680,7 @@ base permettant la création d&amp;rsquo;un DMPCDocument ainsi que son contenu b
         
         
         &lt;p&gt;La DevBox-Santé DMP prend également en charge la soumission de document structure comme le CR d&amp;rsquo;examens biologie.&lt;/p&gt;
-&lt;p&gt;Ce format de document est spécifié par l&amp;rsquo;ANS : https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale&lt;/p&gt;
+&lt;p&gt;Ce format de document est spécifié par l&amp;rsquo;ANS : &lt;a href=&#34;https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale&#34;&gt;https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Un exemple de création de document conforme à la spécification est :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;createCRBiologie&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;DMPCStructureSante&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;structureSante&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;creationTime&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;20111020194600&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;;&lt;/span&gt;

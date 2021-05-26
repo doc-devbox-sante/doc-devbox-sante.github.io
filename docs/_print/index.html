@@ -487,6 +487,25 @@ This the multi-page printable view of this section.
     </ul>
     
   
+    
+    
+	
+<li>2.3: <a href="#pg-d881fa6114d4529ec23c4e26008a07bf">Configuration DevBox-santé INSi</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
 
     </ul>
     
@@ -1237,43 +1256,43 @@ La cinématique générale est la suivante :</p>
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idRoot</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.287.1</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idExtension</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1234567</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>L&rsquo;implémentation ressemble à cela :</p>
-<pre><code>/**
-* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
-*  * un compteur
-*  * et le temps en ms
-*/
-public static class Default implements UniqueIdGenerator {
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">/**
+</span><span style="color:#8f5902;font-style:italic">* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
+</span><span style="color:#8f5902;font-style:italic">*  * un compteur
+</span><span style="color:#8f5902;font-style:italic">*  * et le temps en ms
+</span><span style="color:#8f5902;font-style:italic">*/</span>
+<span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">Default</span> <span style="color:#204a87;font-weight:bold">implements</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
-        ...
-        @Override
-        public Id generate() {
-            return new IdBuilder().setRoot(source.ToOID()).setExtension(System.currentTimeMillis() + &quot;.&quot; + (cpt++)).toId();
-        }
-}
-</code></pre><h2 id="basée-sur-luuid">Basée sur l&rsquo;UUID</h2>
+        <span style="color:#ce5c00;font-weight:bold">...</span>
+        <span style="color:#5c35cc;font-weight:bold">@Override</span>
+        <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">Id</span> <span style="color:#000">generate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">IdBuilder</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">setRoot</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">source</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ToOID</span><span style="color:#ce5c00;font-weight:bold">()).</span><span style="color:#c4a000">setExtension</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">currentTimeMillis</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#4e9a06">&#34;.&#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">cpt</span><span style="color:#ce5c00;font-weight:bold">++)).</span><span style="color:#c4a000">toId</span><span style="color:#ce5c00;font-weight:bold">();</span>
+        <span style="color:#ce5c00;font-weight:bold">}</span>
+<span style="color:#ce5c00;font-weight:bold">}</span>
+</code></pre></div><h2 id="basée-sur-luuid">Basée sur l&rsquo;UUID</h2>
 <p>Il est possible d’utiliser une autre implémentation proposée par la DMPC-API pour utiliser l’OID UUID : &ldquo;2.25&rdquo; . Cette implémentation est conforme à la première méthode de l&rsquo;exigence.</p>
 <p>Il suffit de configurer un bean implémentant <code>UniqueIdGenerator</code>, de la manière suivante:</p>
-<pre><code> @Configuration
- public class MyOwnDmpcApiConfiguration {
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#5c35cc;font-weight:bold">@Configuration</span>
+ <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
-    @Bean
-    public UniqueIdGenerator idGenerate() {
-        return new UniqueIdGenerator.WithUuid();
-    }
-}
-</code></pre><h2 id="implémentée-par-lintégrateur">Implémentée par l&rsquo;intégrateur</h2>
+    <span style="color:#5c35cc;font-weight:bold">@Bean</span>
+    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#000">idGenerate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">UniqueIdGenerator</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">WithUuid</span><span style="color:#ce5c00;font-weight:bold">();</span>
+    <span style="color:#ce5c00;font-weight:bold">}</span>
+<span style="color:#ce5c00;font-weight:bold">}</span>
+</code></pre></div><h2 id="implémentée-par-lintégrateur">Implémentée par l&rsquo;intégrateur</h2>
 <p>Il est néanmoins possible de générer ses UniqueId, l&rsquo;intégrateur devra donc proposer sa propre implémentation du <code>UniqueIdGenerator</code> et de l&rsquo;ajouter à sa configuration spring .</p>
 <p>Attention : Elle devra être conforme à l&rsquo;une des deux exigences mentionnées ci-dessus.</p>
 <p>Exemple :</p>
-<pre><code>@Configuration
- public class MyOwnDmpcApiConfiguration {
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#5c35cc;font-weight:bold">@Configuration</span>
+ <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
-    @Bean
-    public UniqueIdGenerator idGenerate() {
-        return new MyOwnImplementationOfUniqueIdGenerator();
-    }
-}
-</code></pre><p>‌</p>
+    <span style="color:#5c35cc;font-weight:bold">@Bean</span>
+    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#000">idGenerate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">MyOwnImplementationOfUniqueIdGenerator</span><span style="color:#ce5c00;font-weight:bold">();</span>
+    <span style="color:#ce5c00;font-weight:bold">}</span>
+<span style="color:#ce5c00;font-weight:bold">}</span>
+</code></pre></div><p>‌</p>
 <p>‌</p>
 
 </div>
@@ -1300,9 +1319,8 @@ public static class Default implements UniqueIdGenerator {
     
 	<h1 id="pg-c239923082dc512921f012c4f292b15d">1.2 - REST Proxy</h1>
     <div class="lead">Les transactions du DMP en mode REST</div>
-	<p>Le proxy REST est un programme java qui reçoit les requetes simples et les retransmet 
-au DMP dans le bon formalisme et dans le respect des différentes transactions, 
-il interprète les réponses du serveur DMP et les retourne au client initial dans
+	<p>Le proxy REST embarque l&rsquo;API java dans une application REST spring-boot, elle accepte des requetes simples JSON et les retransmet 
+au DMP dans le bon formalisme et dans le respect des différentes transactions,  il interprète les réponses du serveur DMP et les retourne au client initial dans
 un formalisme simplifié.</p>
 <h3 id="intégration-sur-un-environnement-de-démonstration">Intégration sur un environnement de démonstration</h3>
 <p>Vous pouvez commencer à intégrer la DevBox-Santé DMP depuis l&rsquo;environnement de démonstration.</p>
@@ -1321,8 +1339,8 @@ un formalisme simplifié.</p>
 </code></pre></div><p>Au lancement du serveur est chargé un fichier de configuration <code>application.yml</code> permettant de 
 charger différents KeyStore les informations concernant le LPS et le serveur DMP.
 Il est initialisé par défaut sur un environnement de test.</p>
-<p>Une fois démarré, le serveur est accessible à l&rsquo;url suivante : http://127.0.0.1:8080/proxy</p>
-<p>Pour obtenir, le schéma Swagger : http://127.0.0.1:8080/swagger-ui.html</p>
+<p>Une fois démarré, le serveur est accessible à l&rsquo;url suivante : <a href="http://127.0.0.1:8080/proxy">http://127.0.0.1:8080/proxy</a></p>
+<p>Pour obtenir, le schéma Swagger : <a href="http://127.0.0.1:8080/swagger-ui.html">http://127.0.0.1:8080/swagger-ui.html</a></p>
 <p><img src="./dmpcProxyRest-SwaggerUI.png" alt="Exemple schéma Swagger pour la DevBox-Santé DMP en mode REST"></p>
 <h3 id="utilisation-de-linstaller-devbox-santé">Utilisation de l&rsquo;installer DevBox-Santé</h3>
 <p>La DevBox Santé propose des solutions de &ldquo;packaging&rdquo; des différents modules, pour Windows, MacOS et Linux.</p>
@@ -1382,8 +1400,8 @@ un formalisme simplifié.</p>
 </code></pre></div><p>Au lancement du serveur est chargé un fichier de configuration <code>application.yml</code> permettant de 
 charger différents KeyStore les informations concernant le LPS et le serveur DMP.
 Il est initialisé par défaut sur un environnement de test.</p>
-<p>Une fois démarré, le serveur est accessible à l&rsquo;url suivante : http://127.0.0.1:9999/dmpcProxy</p>
-<p>Pour obtenir, le schéma wsdl, il suffit de suffixer l&rsquo;url par &ldquo;?wsdl&rdquo; : http://127.0.0.1:9999/dmpcProxy?wsdl</p>
+<p>Une fois démarré, le serveur est accessible à l&rsquo;url suivante : <a href="http://127.0.0.1:9999/dmpcProxy">http://127.0.0.1:9999/dmpcProxy</a></p>
+<p>Pour obtenir, le schéma wsdl, il suffit de suffixer l&rsquo;url par &ldquo;?wsdl&rdquo; : <a href="http://127.0.0.1:9999/dmpcProxy?wsdl">http://127.0.0.1:9999/dmpcProxy?wsdl</a></p>
 <h2 id="le-client">Le Client</h2>
 <p>Le code ci dessous est donnée à titre d&rsquo;exemple de client en Java utilisant CXF, 
 il montre  l&rsquo;usage possible des différents web services fournis.</p>
@@ -1678,7 +1696,7 @@ base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binai
 	<h1 id="pg-57bd2090107e3a53752be3a64f6dbda5">1.5.2 - Compte rendu d&#39;examens de biologie</h1>
     
 	<p>La DevBox-Santé DMP prend également en charge la soumission de document structure comme le CR d&rsquo;examens biologie.</p>
-<p>Ce format de document est spécifié par l&rsquo;ANS : https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale</p>
+<p>Ce format de document est spécifié par l&rsquo;ANS : <a href="https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale">https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale</a></p>
 <p>Un exemple de création de document conforme à la spécification est :</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">createCRBiologie</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCStructureSante</span> <span style="color:#000">structureSante</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">String</span> <span style="color:#000">creationTime</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;20111020194600&#34;</span><span style="color:#ce5c00;font-weight:bold">;</span>
@@ -2030,7 +2048,7 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 <li>un certificat client de type ORG SIGN pour signer les lots de documents soumis au DMP</li>
 </ul>
 </blockquote>
-<p>L&rsquo;dministrateur technique doit commander les certificats via le formulaire n°413 et le retourner à <a href="mailto:monserviceclient.certificats@asipsante.fr">monserviceclient.certificats@asipsante.fr</a> 
+<p>L&rsquo;dministrateur technique doit commander les certificats via le formulaire n°413 et le retourner à <a href="mailto:monserviceclient.certificats@asipsante.fr">monserviceclient.certificats@asipsante.fr</a>
 Le formulaire peut être télécharger depuis le site : <a href="https://esante.gouv.fr/securite/cartes-et-certificats/commandes">https://esante.gouv.fr/securite/cartes-et-certificats/commandes</a></p>
 <h2 id="procédure-technique">Procédure Technique</h2>
 <p>Il est possible de commander ces certificats sur le site web mis à disposition par l&rsquo;ANS. Il s&rsquo;agit d&rsquo;un service permettant la commande de certificats et cartes :</p>
@@ -2138,7 +2156,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
     <div class="lead">Validation manuelle des CDA générés par la DevBox-Santé DMP lors de l&rsquo;homologation</div>
 	<p>Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit sur le site esante.gouv.fr : 
 <a href="https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda">https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda</a></p>
-<p>La version lors de la rédaction : https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip</p>
+<p>La version lors de la rédaction : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip">https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip</a></p>
 <p>Une fois téléchargé, il faut sur un poste windows :</p>
 <ul>
 <li>décompresser l&rsquo;archive.</li>
@@ -2389,7 +2407,7 @@ Il s&rsquo;agit du mode d&rsquo;authentification directe (avec l&rsquo;usage de 
 	<h1 id="pg-de2277b97361850960224a7d2972cc24">2 - INSi</h1>
     <div class="lead">Téléservice Identifiant National de Santé (INS) intégré aux LPS</div>
 	<p>Ce projet contient l&rsquo;API java proposé par la DevBox-santé pour l&rsquo;intégration du téléservice.
-Elle est basée sur le Guide d&rsquo;intégration du GIE SESAM-Vitale SEL-MP-043 : https://www.sesam-vitale.fr/documents/20182/75606/SEL-MP-043_01-00_INSi+sans+MR/92d6e408-012d-4dc5-9fd1-d3bdda78735a</p>
+Elle est basée sur le Guide d&rsquo;intégration du GIE SESAM-Vitale SEL-MP-043 : <a href="https://www.sesam-vitale.fr/documents/20182/75606/SEL-MP-043_01-00_INSi+sans+MR/92d6e408-012d-4dc5-9fd1-d3bdda78735a">https://www.sesam-vitale.fr/documents/20182/75606/SEL-MP-043_01-00_INSi+sans+MR/92d6e408-012d-4dc5-9fd1-d3bdda78735a</a></p>
 <p>Cette API respecte quand c&rsquo;est possible le <a href="https://esante.gouv.fr/interoperabilite/mos-nos">Modèle d&rsquo;Objet de Santé proposé par l&rsquo;ANS</a></p>
 <h3 id="version-du-guide-dintégration-supportée">Version du guide d&rsquo;intégration supportée</h3>
 <p>La version supportée par cette API est la version 02.00 en date du 2 juillet 2020 (SEL-MP-043_02-00_INSi).</p>
@@ -2401,53 +2419,6 @@ Elle est basée sur le Guide d&rsquo;intégration du GIE SESAM-Vitale SEL-MP-043
 <li><strong>INSi</strong> : Identifiant National de Santé integré</li>
 <li><strong>MOS</strong> : Modèle d&rsquo;Objets de Santé</li>
 </ul>
-<h2 id="insi-proxy">INSi Proxy</h2>
-<p>Le module insi-proxy, permet de fournit une facade REST à la facade <code>INSiClient</code> java.
-Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.</p>
-<p>L&rsquo;accès a l&rsquo;insi-proxy est donc indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
-<p><img src="REST/insi-rest-architecture.png" alt="insi-proxy architecture rest"></p>
-<h3 id="configuration">Configuration</h3>
-<h4 id="applicationyml">Application.yml</h4>
-<p>Pour configurer le proxy jar, il suffit de modifier les paramètres du fichier <code>application.yml</code> :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">cps</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">module.path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">C:\Windows\System32\cps3_pkcs11_w64.dll</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">insi</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">url</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://qualiflps.services-ps.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">lpsInfo</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">nom</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">numeroAutorisation</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">version</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#8f5902;font-style:italic">#Cet élément XML contient l’identifiant d’installation du logiciel. Cet identifiant est généré lors de l’installation du SI-PS. Cet identifiant prend la forme d’un UUID sous sa forme canonique. Il doit être pérenne pour une installation d’un logiciel. Ce numéro est une aide au support, car il permet de regrouper les requêtes d’un même logiciel. Il permet également de compter le nombre de logiciels distincts accédant au TLSi.</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">instance</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER (UUID)</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#8f5902;font-style:italic"># Pour les établissements, numéro FINESS géographique. Pour les autres, identifiant AM de facturation. C&#39;est le numéro par défaut qui peut être surchargé dans chaque requête.</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">identifiantFacturation</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ci-tls-amo</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">ssl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">truststore.path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">truststoreIgcSante-EL-ORG.jks</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">truststore.password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">changeit</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></code></pre></div><p>Pour charger le fichier de configuration :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>./application.yml -jar insi-proxy.jar
-</code></pre></div><h4 id="jeu-de-test-cnda">Jeu de test CNDA</h4>
-<p>Afin de pouvoir exécuter les tests d&rsquo;injection demandées par le CNDA, il faut lancer le proxy avec le profil CNDA activé.</p>
-<p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.profiles.active<span style="color:#ce5c00;font-weight:bold">=</span>CNDA -jar insi-proxy.jar
-</code></pre></div><h3 id="packaging-et-déploiement">Packaging et Déploiement</h3>
-<p>La DevBox Santé propose des solutions de &ldquo;packaging&rdquo; des différents modules, pour Windows, MacOS et Linux.</p>
-<p><img src="devbox-sante-installation.png" alt="devbox-sante-installation"></p>
-<h4 id="configuration-de-la-sécurité">Configuration de la sécurité</h4>
-<p>Le cps-proxy est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.</p>
-<p>Exemple de configuration par défaut empêchant toutes les IPs externes :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">cps</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">authorizedIpAddress</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></code></pre></div><h4 id="surcharge-les-lpsinfo-dans-le-proxy">Surcharge les LpsInfo dans le proxy</h4>
-<p>La configuration du proxy contient les informations par défaut de configuration du LPS (Logiciel de Professionnel de Santé) cf. paragraphe précédent.
-Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation qui peut être confidentiel) en les passant dans les header HTTP des requêtes.</p>
-<p>Par exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8484/insi/rechercheAvecVitale?identifiantFacturation=12345&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;lpsInfo.numeroAutorisation: ÀPréciser&#34;</span>
-</code></pre></div><p>Ainsi le client peut dynamiquement passer les informations du LPS.</p>
 
 </div>
 
@@ -2472,7 +2443,7 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-00b4e8e7e9c9fde6d61dbb9403a604c9">2.1 - Java API</h1>
-    
+    <div class="lead">Intégrer directement dans votre application spring-boot</div>
 	<h2 id="insi-client">INSi Client</h2>
 <p>Le module insi-impl, fournit l&rsquo;implémentation de la facade <code>INSiClient</code> qui intègre les composant devboxsante-cps-api et devboxsante-vitale-api et accède au téléservice INSi géré par SesamVitale.</p>
 <p>Exemple de code dans une application Spring Boot :</p>
@@ -2588,6 +2559,76 @@ Afin de valider le fonctionnement, ouvrir un navigateur à l&rsquo;adresse suiva
 <h3 id="intégration">Intégration</h3>
 <p>L&rsquo;ensemble des requêtes sont documentées via l&rsquo;interface swagger et sont accessibles sur l&rsquo;url suivante : http://127.0.0.1:8585/swagger-ui.png</p>
 <p><img src="insi-swagger.png" alt="insi-proxy swagger"></p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d881fa6114d4529ec23c4e26008a07bf">2.3 - Configuration DevBox-santé INSi</h1>
+    <div class="lead">Configuration de la DevBox-santé INSi</div>
+	<h4 id="applicationyml">Application.yml</h4>
+<p>Pour configurer la DevBox-Santé INSi, il suffit de modifier les paramètres du fichier <code>application.yml</code> :</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">cps</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">module.path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">C:\Windows\System32\cps3_pkcs11_w64.dll</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">insi</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">url</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://qualiflps.services-ps.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">lpsInfo</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">nom</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">numeroAutorisation</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">version</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#8f5902;font-style:italic">#Cet élément XML contient l’identifiant d’installation du logiciel. Cet identifiant est généré lors de l’installation du SI-PS. Cet identifiant prend la forme d’un UUID sous sa forme canonique. Il doit être pérenne pour une installation d’un logiciel. Ce numéro est une aide au support, car il permet de regrouper les requêtes d’un même logiciel. Il permet également de compter le nombre de logiciels distincts accédant au TLSi.</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">instance</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER (UUID)</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#8f5902;font-style:italic"># Pour les établissements, numéro FINESS géographique. Pour les autres, identifiant AM de facturation. C&#39;est le numéro par défaut qui peut être surchargé dans chaque requête.</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">identifiantFacturation</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ci-tls-amo</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">ssl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">truststore.path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">truststoreIgcSante-EL-ORG.jks</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">truststore.password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">changeit</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><p>Pour charger le fichier de configuration :</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>./application.yml -jar insi-proxy.jar
+</code></pre></div><h4 id="jeu-de-test-cnda">Jeu de test CNDA</h4>
+<p>Afin de pouvoir exécuter les tests d&rsquo;injection demandées par le CNDA, il faut lancer le proxy avec le profil CNDA activé.</p>
+<p>Exemple :</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.profiles.active<span style="color:#ce5c00;font-weight:bold">=</span>CNDA -jar insi-proxy.jar
+</code></pre></div><h4 id="configuration-de-la-sécurité">Configuration de la sécurité</h4>
+<p>Le cps-proxy est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.</p>
+<p>Exemple de configuration par défaut empêchant toutes les IPs externes :</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">cps</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">authorizedIpAddress</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><h4 id="surcharge-les-lpsinfo-dans-le-proxy">Surcharge les LpsInfo dans le proxy</h4>
+<p>La configuration du proxy contient les informations par défaut de configuration du LPS (Logiciel de Professionnel de Santé) cf. paragraphe précédent.
+Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation qui peut être confidentiel) en les passant dans les header HTTP des requêtes.</p>
+<p>Par exemple :</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8484/insi/rechercheAvecVitale?identifiantFacturation=12345&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;lpsInfo.numeroAutorisation: ÀPréciser&#34;</span>
+</code></pre></div><p>Ainsi le client peut dynamiquement passer les informations du LPS.</p>
+<h3 id="packaging-et-déploiement">Packaging et Déploiement</h3>
+<p>La DevBox Santé propose des solutions de &ldquo;packaging&rdquo; des différents modules, pour Windows, MacOS et Linux.</p>
+<p><img src="devbox-sante-installation.png" alt="devbox-sante-installation"></p>
 
 </div>
 
@@ -2738,12 +2779,9 @@ ils ont tous leur équivalent en REST avec l&rsquo;email passé en paramètre.</
 <h3 id="tests">Tests</h3>
 <p>une environnement de démo est disponible pour les tests. Sur cet environnement, seul l&rsquo;authentification otp fonctionne.</p>
 <p>Au préalable il faut se crééer un compte sur mailiz formation : <a href="https://mailiz.formation.mssante.fr/">https://mailiz.formation.mssante.fr/</a></p>
-<pre><code>
-https://mss-demo.devbox-sante.fr
+<p>Puis accéder à l&rsquo;environnement de démonstration :  <a href="https://mss-demo.devbox-sante.fr">https://mss-demo.devbox-sante.fr</a></p>
+<p>Dont la documentation est accessible : <a href="https://mss-demo.devbox-sante.fr/swagger-ui.html">https://mss-demo.devbox-sante.fr/swagger-ui.html</a></p>
 
-Swagger : https://mss-demo.devbox-sante.fr/swagger-ui.html
-
-</code></pre>
 </div>
 
 

@@ -192,9 +192,8 @@ Un contexte peut être définit de la manière suivante :&lt;/p&gt;
       <description>
         
         
-        &lt;p&gt;Le proxy REST est un programme java qui reçoit les requetes simples et les retransmet 
-au DMP dans le bon formalisme et dans le respect des différentes transactions, 
-il interprète les réponses du serveur DMP et les retourne au client initial dans
+        &lt;p&gt;Le proxy REST embarque l&amp;rsquo;API java dans une application REST spring-boot, elle accepte des requetes simples JSON et les retransmet 
+au DMP dans le bon formalisme et dans le respect des différentes transactions,  il interprète les réponses du serveur DMP et les retourne au client initial dans
 un formalisme simplifié.&lt;/p&gt;
 &lt;h3 id=&#34;intégration-sur-un-environnement-de-démonstration&#34;&gt;Intégration sur un environnement de démonstration&lt;/h3&gt;
 &lt;p&gt;Vous pouvez commencer à intégrer la DevBox-Santé DMP depuis l&amp;rsquo;environnement de démonstration.&lt;/p&gt;
@@ -213,8 +212,8 @@ un formalisme simplifié.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Au lancement du serveur est chargé un fichier de configuration &lt;code&gt;application.yml&lt;/code&gt; permettant de 
 charger différents KeyStore les informations concernant le LPS et le serveur DMP.
 Il est initialisé par défaut sur un environnement de test.&lt;/p&gt;
-&lt;p&gt;Une fois démarré, le serveur est accessible à l&amp;rsquo;url suivante : http://127.0.0.1:8080/proxy&lt;/p&gt;
-&lt;p&gt;Pour obtenir, le schéma Swagger : http://127.0.0.1:8080/swagger-ui.html&lt;/p&gt;
+&lt;p&gt;Une fois démarré, le serveur est accessible à l&amp;rsquo;url suivante : &lt;a href=&#34;http://127.0.0.1:8080/proxy&#34;&gt;http://127.0.0.1:8080/proxy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pour obtenir, le schéma Swagger : &lt;a href=&#34;http://127.0.0.1:8080/swagger-ui.html&#34;&gt;http://127.0.0.1:8080/swagger-ui.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./dmpcProxyRest-SwaggerUI.png&#34; alt=&#34;Exemple schéma Swagger pour la DevBox-Santé DMP en mode REST&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;utilisation-de-linstaller-devbox-santé&#34;&gt;Utilisation de l&amp;rsquo;installer DevBox-Santé&lt;/h3&gt;
 &lt;p&gt;La DevBox Santé propose des solutions de &amp;ldquo;packaging&amp;rdquo; des différents modules, pour Windows, MacOS et Linux.&lt;/p&gt;
@@ -258,8 +257,8 @@ un formalisme simplifié.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Au lancement du serveur est chargé un fichier de configuration &lt;code&gt;application.yml&lt;/code&gt; permettant de 
 charger différents KeyStore les informations concernant le LPS et le serveur DMP.
 Il est initialisé par défaut sur un environnement de test.&lt;/p&gt;
-&lt;p&gt;Une fois démarré, le serveur est accessible à l&amp;rsquo;url suivante : http://127.0.0.1:9999/dmpcProxy&lt;/p&gt;
-&lt;p&gt;Pour obtenir, le schéma wsdl, il suffit de suffixer l&amp;rsquo;url par &amp;ldquo;?wsdl&amp;rdquo; : http://127.0.0.1:9999/dmpcProxy?wsdl&lt;/p&gt;
+&lt;p&gt;Une fois démarré, le serveur est accessible à l&amp;rsquo;url suivante : &lt;a href=&#34;http://127.0.0.1:9999/dmpcProxy&#34;&gt;http://127.0.0.1:9999/dmpcProxy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pour obtenir, le schéma wsdl, il suffit de suffixer l&amp;rsquo;url par &amp;ldquo;?wsdl&amp;rdquo; : &lt;a href=&#34;http://127.0.0.1:9999/dmpcProxy?wsdl&#34;&gt;http://127.0.0.1:9999/dmpcProxy?wsdl&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;le-client&#34;&gt;Le Client&lt;/h2&gt;
 &lt;p&gt;Le code ci dessous est donnée à titre d&amp;rsquo;exemple de client en Java utilisant CXF, 
 il montre  l&amp;rsquo;usage possible des différents web services fournis.&lt;/p&gt;

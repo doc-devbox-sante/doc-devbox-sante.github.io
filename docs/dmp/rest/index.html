@@ -718,6 +718,31 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinsiconfiguration-li">
+    <a href="/docs/insi/configuration/" title="Configuration DevBox-santé INSi" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsinsiconfiguration"><span class="">Configuration</span></a>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -967,9 +992,8 @@ if (!doNotTrack) {
 	<h1>REST Proxy</h1>
         <div class="lead">Les transactions du DMP en mode REST</div>
 	
-	<p>Le proxy REST est un programme java qui reçoit les requetes simples et les retransmet 
-au DMP dans le bon formalisme et dans le respect des différentes transactions, 
-il interprète les réponses du serveur DMP et les retourne au client initial dans
+	<p>Le proxy REST embarque l&rsquo;API java dans une application REST spring-boot, elle accepte des requetes simples JSON et les retransmet 
+au DMP dans le bon formalisme et dans le respect des différentes transactions,  il interprète les réponses du serveur DMP et les retourne au client initial dans
 un formalisme simplifié.</p>
 <h3 id="intégration-sur-un-environnement-de-démonstration">Intégration sur un environnement de démonstration</h3>
 <p>Vous pouvez commencer à intégrer la DevBox-Santé DMP depuis l&rsquo;environnement de démonstration.</p>
@@ -988,8 +1012,8 @@ un formalisme simplifié.</p>
 </code></pre></div><p>Au lancement du serveur est chargé un fichier de configuration <code>application.yml</code> permettant de 
 charger différents KeyStore les informations concernant le LPS et le serveur DMP.
 Il est initialisé par défaut sur un environnement de test.</p>
-<p>Une fois démarré, le serveur est accessible à l&rsquo;url suivante : http://127.0.0.1:8080/proxy</p>
-<p>Pour obtenir, le schéma Swagger : http://127.0.0.1:8080/swagger-ui.html</p>
+<p>Une fois démarré, le serveur est accessible à l&rsquo;url suivante : <a href="http://127.0.0.1:8080/proxy">http://127.0.0.1:8080/proxy</a></p>
+<p>Pour obtenir, le schéma Swagger : <a href="http://127.0.0.1:8080/swagger-ui.html">http://127.0.0.1:8080/swagger-ui.html</a></p>
 <p><img src="./dmpcProxyRest-SwaggerUI.png" alt="Exemple schéma Swagger pour la DevBox-Santé DMP en mode REST"></p>
 <h3 id="utilisation-de-linstaller-devbox-santé">Utilisation de l&rsquo;installer DevBox-Santé</h3>
 <p>La DevBox Santé propose des solutions de &ldquo;packaging&rdquo; des différents modules, pour Windows, MacOS et Linux.</p>
@@ -1055,12 +1079,14 @@ Il est initialisé par défaut sur un environnement de test.</p>
         
             
         
+            
+        
     
 </div>
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 12, 2021: <a  href="/commit/9df2dc50a7e8a0f25028598aeeddd1e3ea10a7bd">Première version (9df2dc5)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 26, 2021: <a  href="/commit/4f5a6555fc89613070cb32418f3a1a04eacc6489">Relecture partie DMP, INSi et MSS (4f5a655)</a>
 </div>
 </div>
 

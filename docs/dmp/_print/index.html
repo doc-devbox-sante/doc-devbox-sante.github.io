@@ -1033,43 +1033,43 @@ La cinématique générale est la suivante :</p>
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idRoot</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.287.1</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idExtension</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1234567</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>L&rsquo;implémentation ressemble à cela :</p>
-<pre><code>/**
-* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
-*  * un compteur
-*  * et le temps en ms
-*/
-public static class Default implements UniqueIdGenerator {
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">/**
+</span><span style="color:#8f5902;font-style:italic">* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
+</span><span style="color:#8f5902;font-style:italic">*  * un compteur
+</span><span style="color:#8f5902;font-style:italic">*  * et le temps en ms
+</span><span style="color:#8f5902;font-style:italic">*/</span>
+<span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">Default</span> <span style="color:#204a87;font-weight:bold">implements</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
-        ...
-        @Override
-        public Id generate() {
-            return new IdBuilder().setRoot(source.ToOID()).setExtension(System.currentTimeMillis() + &quot;.&quot; + (cpt++)).toId();
-        }
-}
-</code></pre><h2 id="basée-sur-luuid">Basée sur l&rsquo;UUID</h2>
+        <span style="color:#ce5c00;font-weight:bold">...</span>
+        <span style="color:#5c35cc;font-weight:bold">@Override</span>
+        <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">Id</span> <span style="color:#000">generate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">IdBuilder</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">setRoot</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">source</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ToOID</span><span style="color:#ce5c00;font-weight:bold">()).</span><span style="color:#c4a000">setExtension</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">currentTimeMillis</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#4e9a06">&#34;.&#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">cpt</span><span style="color:#ce5c00;font-weight:bold">++)).</span><span style="color:#c4a000">toId</span><span style="color:#ce5c00;font-weight:bold">();</span>
+        <span style="color:#ce5c00;font-weight:bold">}</span>
+<span style="color:#ce5c00;font-weight:bold">}</span>
+</code></pre></div><h2 id="basée-sur-luuid">Basée sur l&rsquo;UUID</h2>
 <p>Il est possible d’utiliser une autre implémentation proposée par la DMPC-API pour utiliser l’OID UUID : &ldquo;2.25&rdquo; . Cette implémentation est conforme à la première méthode de l&rsquo;exigence.</p>
 <p>Il suffit de configurer un bean implémentant <code>UniqueIdGenerator</code>, de la manière suivante:</p>
-<pre><code> @Configuration
- public class MyOwnDmpcApiConfiguration {
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#5c35cc;font-weight:bold">@Configuration</span>
+ <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
-    @Bean
-    public UniqueIdGenerator idGenerate() {
-        return new UniqueIdGenerator.WithUuid();
-    }
-}
-</code></pre><h2 id="implémentée-par-lintégrateur">Implémentée par l&rsquo;intégrateur</h2>
+    <span style="color:#5c35cc;font-weight:bold">@Bean</span>
+    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#000">idGenerate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">UniqueIdGenerator</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">WithUuid</span><span style="color:#ce5c00;font-weight:bold">();</span>
+    <span style="color:#ce5c00;font-weight:bold">}</span>
+<span style="color:#ce5c00;font-weight:bold">}</span>
+</code></pre></div><h2 id="implémentée-par-lintégrateur">Implémentée par l&rsquo;intégrateur</h2>
 <p>Il est néanmoins possible de générer ses UniqueId, l&rsquo;intégrateur devra donc proposer sa propre implémentation du <code>UniqueIdGenerator</code> et de l&rsquo;ajouter à sa configuration spring .</p>
 <p>Attention : Elle devra être conforme à l&rsquo;une des deux exigences mentionnées ci-dessus.</p>
 <p>Exemple :</p>
-<pre><code>@Configuration
- public class MyOwnDmpcApiConfiguration {
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#5c35cc;font-weight:bold">@Configuration</span>
+ <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
-    @Bean
-    public UniqueIdGenerator idGenerate() {
-        return new MyOwnImplementationOfUniqueIdGenerator();
-    }
-}
-</code></pre><p>‌</p>
+    <span style="color:#5c35cc;font-weight:bold">@Bean</span>
+    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#000">idGenerate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">MyOwnImplementationOfUniqueIdGenerator</span><span style="color:#ce5c00;font-weight:bold">();</span>
+    <span style="color:#ce5c00;font-weight:bold">}</span>
+<span style="color:#ce5c00;font-weight:bold">}</span>
+</code></pre></div><p>‌</p>
 <p>‌</p>
 
 </div>
@@ -1096,9 +1096,8 @@ public static class Default implements UniqueIdGenerator {
     
 	<h1 id="pg-c239923082dc512921f012c4f292b15d">2 - REST Proxy</h1>
     <div class="lead">Les transactions du DMP en mode REST</div>
-	<p>Le proxy REST est un programme java qui reçoit les requetes simples et les retransmet 
-au DMP dans le bon formalisme et dans le respect des différentes transactions, 
-il interprète les réponses du serveur DMP et les retourne au client initial dans
+	<p>Le proxy REST embarque l&rsquo;API java dans une application REST spring-boot, elle accepte des requetes simples JSON et les retransmet 
+au DMP dans le bon formalisme et dans le respect des différentes transactions,  il interprète les réponses du serveur DMP et les retourne au client initial dans
 un formalisme simplifié.</p>
 <h3 id="intégration-sur-un-environnement-de-démonstration">Intégration sur un environnement de démonstration</h3>
 <p>Vous pouvez commencer à intégrer la DevBox-Santé DMP depuis l&rsquo;environnement de démonstration.</p>
@@ -1117,8 +1116,8 @@ un formalisme simplifié.</p>
 </code></pre></div><p>Au lancement du serveur est chargé un fichier de configuration <code>application.yml</code> permettant de 
 charger différents KeyStore les informations concernant le LPS et le serveur DMP.
 Il est initialisé par défaut sur un environnement de test.</p>
-<p>Une fois démarré, le serveur est accessible à l&rsquo;url suivante : http://127.0.0.1:8080/proxy</p>
-<p>Pour obtenir, le schéma Swagger : http://127.0.0.1:8080/swagger-ui.html</p>
+<p>Une fois démarré, le serveur est accessible à l&rsquo;url suivante : <a href="http://127.0.0.1:8080/proxy">http://127.0.0.1:8080/proxy</a></p>
+<p>Pour obtenir, le schéma Swagger : <a href="http://127.0.0.1:8080/swagger-ui.html">http://127.0.0.1:8080/swagger-ui.html</a></p>
 <p><img src="./dmpcProxyRest-SwaggerUI.png" alt="Exemple schéma Swagger pour la DevBox-Santé DMP en mode REST"></p>
 <h3 id="utilisation-de-linstaller-devbox-santé">Utilisation de l&rsquo;installer DevBox-Santé</h3>
 <p>La DevBox Santé propose des solutions de &ldquo;packaging&rdquo; des différents modules, pour Windows, MacOS et Linux.</p>
@@ -1178,8 +1177,8 @@ un formalisme simplifié.</p>
 </code></pre></div><p>Au lancement du serveur est chargé un fichier de configuration <code>application.yml</code> permettant de 
 charger différents KeyStore les informations concernant le LPS et le serveur DMP.
 Il est initialisé par défaut sur un environnement de test.</p>
-<p>Une fois démarré, le serveur est accessible à l&rsquo;url suivante : http://127.0.0.1:9999/dmpcProxy</p>
-<p>Pour obtenir, le schéma wsdl, il suffit de suffixer l&rsquo;url par &ldquo;?wsdl&rdquo; : http://127.0.0.1:9999/dmpcProxy?wsdl</p>
+<p>Une fois démarré, le serveur est accessible à l&rsquo;url suivante : <a href="http://127.0.0.1:9999/dmpcProxy">http://127.0.0.1:9999/dmpcProxy</a></p>
+<p>Pour obtenir, le schéma wsdl, il suffit de suffixer l&rsquo;url par &ldquo;?wsdl&rdquo; : <a href="http://127.0.0.1:9999/dmpcProxy?wsdl">http://127.0.0.1:9999/dmpcProxy?wsdl</a></p>
 <h2 id="le-client">Le Client</h2>
 <p>Le code ci dessous est donnée à titre d&rsquo;exemple de client en Java utilisant CXF, 
 il montre  l&rsquo;usage possible des différents web services fournis.</p>
@@ -1474,7 +1473,7 @@ base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binai
 	<h1 id="pg-57bd2090107e3a53752be3a64f6dbda5">5.2 - Compte rendu d&#39;examens de biologie</h1>
     
 	<p>La DevBox-Santé DMP prend également en charge la soumission de document structure comme le CR d&rsquo;examens biologie.</p>
-<p>Ce format de document est spécifié par l&rsquo;ANS : https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale</p>
+<p>Ce format de document est spécifié par l&rsquo;ANS : <a href="https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale">https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale</a></p>
 <p>Un exemple de création de document conforme à la spécification est :</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">createCRBiologie</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCStructureSante</span> <span style="color:#000">structureSante</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">String</span> <span style="color:#000">creationTime</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;20111020194600&#34;</span><span style="color:#ce5c00;font-weight:bold">;</span>
@@ -1826,7 +1825,7 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 <li>un certificat client de type ORG SIGN pour signer les lots de documents soumis au DMP</li>
 </ul>
 </blockquote>
-<p>L&rsquo;dministrateur technique doit commander les certificats via le formulaire n°413 et le retourner à <a href="mailto:monserviceclient.certificats@asipsante.fr">monserviceclient.certificats@asipsante.fr</a> 
+<p>L&rsquo;dministrateur technique doit commander les certificats via le formulaire n°413 et le retourner à <a href="mailto:monserviceclient.certificats@asipsante.fr">monserviceclient.certificats@asipsante.fr</a>
 Le formulaire peut être télécharger depuis le site : <a href="https://esante.gouv.fr/securite/cartes-et-certificats/commandes">https://esante.gouv.fr/securite/cartes-et-certificats/commandes</a></p>
 <h2 id="procédure-technique">Procédure Technique</h2>
 <p>Il est possible de commander ces certificats sur le site web mis à disposition par l&rsquo;ANS. Il s&rsquo;agit d&rsquo;un service permettant la commande de certificats et cartes :</p>
@@ -1934,7 +1933,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
     <div class="lead">Validation manuelle des CDA générés par la DevBox-Santé DMP lors de l&rsquo;homologation</div>
 	<p>Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit sur le site esante.gouv.fr : 
 <a href="https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda">https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda</a></p>
-<p>La version lors de la rédaction : https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip</p>
+<p>La version lors de la rédaction : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip">https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip</a></p>
 <p>Une fois téléchargé, il faut sur un poste windows :</p>
 <ul>
 <li>décompresser l&rsquo;archive.</li>

@@ -26,14 +26,14 @@ private void createCRBiologie(DMPCStructureSante structureSante) { final String 
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/dmp/cda/crbiologie/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-05-12T18:55:36&#43;02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2021-05-26T10:41:23&#43;02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Compte rendu d&#39;examens de biologie">
 <meta itemprop="description" content="La DevBox-Santé DMP prend également en charge la soumission de document structure comme le CR d&rsquo;examens biologie.
 Ce format de document est spécifié par l&rsquo;ANS : https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale
 Un exemple de création de document conforme à la spécification est :
 private void createCRBiologie(DMPCStructureSante structureSante) { final String creationTime = &#34;20111020194600&#34;; final String startTime = &#34;20140520174600&#34;; final String stopTime = &#34;20140520184600&#34;; DMPCDocumentCRBiologie template = new DMPCDocumentCRBiologie(); template.setClassCode(&#34;10&#34;); template.addConfidentiality(&#34;N&#34;); template.setComments(&#34;Commentaire du document&#34;); template.setFormat(&#34;urn:ihe:lab:xd-lab:2008&#34;); // format obligatoire  template.">
-<meta itemprop="dateModified" content="2021-05-12T18:55:36&#43;02:00" />
+<meta itemprop="dateModified" content="2021-05-26T10:41:23&#43;02:00" />
 <meta itemprop="wordCount" content="606">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Compte rendu d&#39;examens de biologie"/>
@@ -727,6 +727,31 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinsiconfiguration-li">
+    <a href="/docs/insi/configuration/" title="Configuration DevBox-santé INSi" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsinsiconfiguration"><span class="">Configuration</span></a>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -975,7 +1000,7 @@ if (!doNotTrack) {
     
 	       
 	<p>La DevBox-Santé DMP prend également en charge la soumission de document structure comme le CR d&rsquo;examens biologie.</p>
-<p>Ce format de document est spécifié par l&rsquo;ANS : https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale</p>
+<p>Ce format de document est spécifié par l&rsquo;ANS : <a href="https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale">https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale</a></p>
 <p>Un exemple de création de document conforme à la spécification est :</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">createCRBiologie</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCStructureSante</span> <span style="color:#000">structureSante</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">String</span> <span style="color:#000">creationTime</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;20111020194600&#34;</span><span style="color:#ce5c00;font-weight:bold">;</span>
@@ -1258,7 +1283,7 @@ if (!doNotTrack) {
 </code></pre></div>
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 12, 2021: <a  href="/commit/9df2dc50a7e8a0f25028598aeeddd1e3ea10a7bd">Première version (9df2dc5)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 26, 2021: <a  href="/commit/4f5a6555fc89613070cb32418f3a1a04eacc6489">Relecture partie DMP, INSi et MSS (4f5a655)</a>
 </div>
 </div>
 

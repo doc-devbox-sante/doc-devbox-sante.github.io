@@ -48,7 +48,7 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 &lt;li&gt;un certificat client de type ORG SIGN pour signer les lots de documents soumis au DMP&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;L&amp;rsquo;dministrateur technique doit commander les certificats via le formulaire n°413 et le retourner à &lt;a href=&#34;mailto:monserviceclient.certificats@asipsante.fr&#34;&gt;monserviceclient.certificats@asipsante.fr&lt;/a&gt; 
+&lt;p&gt;L&amp;rsquo;dministrateur technique doit commander les certificats via le formulaire n°413 et le retourner à &lt;a href=&#34;mailto:monserviceclient.certificats@asipsante.fr&#34;&gt;monserviceclient.certificats@asipsante.fr&lt;/a&gt;
 Le formulaire peut être télécharger depuis le site : &lt;a href=&#34;https://esante.gouv.fr/securite/cartes-et-certificats/commandes&#34;&gt;https://esante.gouv.fr/securite/cartes-et-certificats/commandes&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;procédure-technique&#34;&gt;Procédure Technique&lt;/h2&gt;
 &lt;p&gt;Il est possible de commander ces certificats sur le site web mis à disposition par l&amp;rsquo;ANS. Il s&amp;rsquo;agit d&amp;rsquo;un service permettant la commande de certificats et cartes :&lt;/p&gt;
@@ -140,7 +140,7 @@ Le formulaire peut être télécharger depuis le site : &lt;a href=&#34;https://
         
         &lt;p&gt;Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit sur le site esante.gouv.fr : 
 &lt;a href=&#34;https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda&#34;&gt;https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;La version lors de la rédaction : https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip&lt;/p&gt;
+&lt;p&gt;La version lors de la rédaction : &lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Une fois téléchargé, il faut sur un poste windows :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;décompresser l&amp;rsquo;archive.&lt;/li&gt;

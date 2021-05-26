@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="canonical" type="text/html" href="/docs/insi/">
-<link rel="alternate" type="application/rss&#43;xml" href="/docs/insi/index.xml">
+<meta name="generator" content="Hugo 0.83.1" /><link rel="canonical" type="text/html" href="/docs/insi/configuration/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/insi/configuration/index.xml">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -19,18 +19,18 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>INSi | DevBox-Santé</title>
-<meta name="description" content="La Documentation"><meta property="og:title" content="INSi" />
-<meta property="og:description" content="Téléservice Identifiant National de Santé (INS) intégré aux LPS 
+<title>Configuration DevBox-santé INSi | DevBox-Santé</title>
+<meta name="description" content="La Documentation"><meta property="og:title" content="Configuration DevBox-santé INSi" />
+<meta property="og:description" content="Configuration de la DevBox-santé INSi
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/insi/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="/docs/insi/configuration/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="INSi">
-<meta itemprop="description" content="Téléservice Identifiant National de Santé (INS) intégré aux LPS 
+<meta itemprop="name" content="Configuration DevBox-santé INSi">
+<meta itemprop="description" content="Configuration de la DevBox-santé INSi
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="INSi"/>
-<meta name="twitter:description" content="Téléservice Identifiant National de Santé (INS) intégré aux LPS 
+<meta name="twitter:title" content="Configuration DevBox-santé INSi"/>
+<meta name="twitter:description" content="Configuration de la DevBox-santé INSi
 "/>
 
 
@@ -187,14 +187,14 @@ if (!doNotTrack) {
 This the multi-page printable view of this section.
 <a href="#" onclick="print();return false;">Click here to print</a>.
 </p><p>
-<a href="/docs/insi/">Return to the regular view of this page</a>.
+<a href="/docs/insi/configuration/">Return to the regular view of this page</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">INSi</h1>
-<div class="lead">Téléservice Identifiant National de Santé (INS) intégré aux LPS</div>
+<h1 class="title">Configuration DevBox-santé INSi</h1>
+<div class="lead">Configuration de la DevBox-santé INSi</div>
 
 
 
@@ -206,250 +206,13 @@ This the multi-page printable view of this section.
   
   
 
-  
-    
-    
-	
-<li>1: <a href="#pg-00b4e8e7e9c9fde6d61dbb9403a604c9">Java API</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
-  
-    
-    
-	
-<li>2: <a href="#pg-4840a95263433cd2eecdfa84790ab794">REST Proxy</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
-  
-    
-    
-	
-<li>3: <a href="#pg-d881fa6114d4529ec23c4e26008a07bf">Configuration DevBox-santé INSi</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
   
 
     </ul>
 
 
 <div class="content">
-      <p>Ce projet contient l&rsquo;API java proposé par la DevBox-santé pour l&rsquo;intégration du téléservice.
-Elle est basée sur le Guide d&rsquo;intégration du GIE SESAM-Vitale SEL-MP-043 : <a href="https://www.sesam-vitale.fr/documents/20182/75606/SEL-MP-043_01-00_INSi+sans+MR/92d6e408-012d-4dc5-9fd1-d3bdda78735a">https://www.sesam-vitale.fr/documents/20182/75606/SEL-MP-043_01-00_INSi+sans+MR/92d6e408-012d-4dc5-9fd1-d3bdda78735a</a></p>
-<p>Cette API respecte quand c&rsquo;est possible le <a href="https://esante.gouv.fr/interoperabilite/mos-nos">Modèle d&rsquo;Objet de Santé proposé par l&rsquo;ANS</a></p>
-<h3 id="version-du-guide-dintégration-supportée">Version du guide d&rsquo;intégration supportée</h3>
-<p>La version supportée par cette API est la version 02.00 en date du 2 juillet 2020 (SEL-MP-043_02-00_INSi).</p>
-<h3 id="glossaire">Glossaire</h3>
-<ul>
-<li><strong>ANS</strong> : Agence du Numérique en Santé</li>
-<li><strong>CPS / CPx</strong> : Carte de Professionnel de Santé</li>
-<li><strong>INS</strong> : Identifiant National de Santé</li>
-<li><strong>INSi</strong> : Identifiant National de Santé integré</li>
-<li><strong>MOS</strong> : Modèle d&rsquo;Objets de Santé</li>
-</ul>
-
-</div>
-</div>
-
-
-  
-  
-  
-  
-
-  
-  
-
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-00b4e8e7e9c9fde6d61dbb9403a604c9">1 - Java API</h1>
-    <div class="lead">Intégrer directement dans votre application spring-boot</div>
-	<h2 id="insi-client">INSi Client</h2>
-<p>Le module insi-impl, fournit l&rsquo;implémentation de la facade <code>INSiClient</code> qui intègre les composant devboxsante-cps-api et devboxsante-vitale-api et accède au téléservice INSi géré par SesamVitale.</p>
-<p>Exemple de code dans une application Spring Boot :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonIntegrationINSi</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-
-    <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
-    <span style="color:#000">INSiClient</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">;</span>
-
-    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">maMethode</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-        <span style="color:#8f5902;font-style:italic">// ma recherche avec carte vitale
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">INSiContext</span> <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">INSiContext</span><span style="color:#ce5c00;font-weight:bold">();</span>
-        <span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setIdentifiantFacturation</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;3333333&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ins1RechercheAvecVitale</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">);</span>
-
-        <span style="color:#8f5902;font-style:italic">// ma recherche sans carte vitale
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">INS2Requete</span> <span style="color:#000">requete</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">INS2Requete</span><span style="color:#ce5c00;font-weight:bold">();</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setDateNaissance</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;01011981&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setIdentifiantFacturation</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;3333333&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setNomNaissance</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;ADRDEUX&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setSexe</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Sexe</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">M</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPrenoms</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Collections</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">singletonList</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;LAURENT&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
-        <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ins2RechercheAvecTraitIdentite</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">);</span>
-
-        <span style="color:#8f5902;font-style:italic">// ma vérification 
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">INS3Requete</span> <span style="color:#000">requete</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">INS3Requete</span><span style="color:#ce5c00;font-weight:bold">();</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setIns</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">INSWithCle</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">newInstance</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1810163220751&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;40&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">INSAutorite</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">INS_NIR</span><span style="color:#ce5c00;font-weight:bold">));</span>
-        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">TraitsIdentiteINS</span> <span style="color:#000">traits</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TraitsIdentiteINS</span><span style="color:#ce5c00;font-weight:bold">();</span>
-        <span style="color:#000">traits</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setNomFamille</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;ADRDEUX&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">traits</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPrenom</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;LAURENT&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">traits</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setListePrenoms</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;LAURENT&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">traits</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setSexeAdministratif</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Sexe</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">M</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">traits</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setDateNaissance</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1981-01-01&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setTraitsIdentite</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">traits</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ins3Verification</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">);</span>
-   <span style="color:#ce5c00;font-weight:bold">}</span>
-<span style="color:#ce5c00;font-weight:bold">}</span>
-</code></pre></div>
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-4840a95263433cd2eecdfa84790ab794">2 - REST Proxy</h1>
-    <div class="lead">Une interface REST pour le Téléservice INSi</div>
-	<p>Le module insi-proxy, permet de fournit une facade REST à la facade <code>INSiClient</code> java.
-Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.</p>
-<p>L&rsquo;accès a l&rsquo;insi-proxy est donc indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
-
-
-node &quot;Poste Client (Windows/Mac/Linux)&quot; {
-    [FrontEnd intégrateur] as frontend 
-
-    package &quot;DevBox-Santé&quot; DEVBOX_COLOR  {
-        component &quot;DevBoxSanté INSi&quot; as insFacade INS_COLOR {
-            [DevBoxSanté CPS] as cps CPS_COLOR
-            [DevBoxSanté Vitale] as vitale VITALE_COLOR
-        }
-
-    }
-    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
-    [APILectureVitale (SesamVitale)] as apiLectureVitale 
-}
-
-cloud &quot;Téléservice **INSi** (SesamVitale)&quot; as insi
-
-[BackEnd intégrateur] as backend 
-
-
-
-frontend -u-&gt; backend : REST
-frontend -down-&gt; insFacade : HTTP GET /insi/rechercheAvecVitale
-cps &lt;-down-&gt; cryptolibCPS : appel natif
-vitale &lt;-down-&gt; apiLectureVitale : appel natif
-insFacade &lt;-d-&gt; insi : SOAP
-
-
-</code></pre><h3 id="exécution-du-proxy">Exécution du Proxy</h3>
-<h4 id="prérequis">Prérequis</h4>
-<p>Doit être installé</p>
-<ul>
-<li>Environnement java 11 ou supérieur</li>
-<li>Cryptolib CPS version 5 ou supérieur</li>
-<li>API Lecteur vitale v31 ou supérieur</li>
-</ul>
-<h4 id="lancement">Lancement</h4>
-<p>Le livrable s&rsquo;agit d&rsquo;un jar exécutable, qui se lance de la manière suivante</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar insi-proxy.jar
-</code></pre></div><p>Le composant est accessible depuis le poste local en HTTP sur l&rsquo;adresse ip 127.0.0.1.
-Afin de valider le fonctionnement, ouvrir un navigateur à l&rsquo;adresse suivante : http://127.0.0.1:8585</p>
-<p><img src="insi-browser.png" alt="insi-proxy browser"></p>
-<h3 id="intégration">Intégration</h3>
-<p>L&rsquo;ensemble des requêtes sont documentées via l&rsquo;interface swagger et sont accessibles sur l&rsquo;url suivante : http://127.0.0.1:8585/swagger-ui.png</p>
-<p><img src="insi-swagger.png" alt="insi-proxy swagger"></p>
-
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-d881fa6114d4529ec23c4e26008a07bf">3 - Configuration DevBox-santé INSi</h1>
-    <div class="lead">Configuration de la DevBox-santé INSi</div>
-	<h4 id="applicationyml">Application.yml</h4>
+      <h4 id="applicationyml">Application.yml</h4>
 <p>Pour configurer la DevBox-Santé INSi, il suffit de modifier les paramètres du fichier <code>application.yml</code> :</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">cps</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -492,11 +255,9 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
 <p><img src="devbox-sante-installation.png" alt="devbox-sante-installation"></p>
 
 </div>
+</div>
 
 
-
-    
-      
   
   
   
@@ -505,10 +266,6 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
   
   
 
-  
-
-    
-	
   
 
 

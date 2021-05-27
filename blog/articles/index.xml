@@ -24,7 +24,7 @@
         
         &lt;p&gt;Certains contextes nécessitent de lancer la DevBox-santé depuis le context client. Pour le faire nous nous servons des URI Scheme et de la possibilité d&amp;rsquo;enregistrer une application sur ce scheme.
 Exemple, dans Windows : &lt;a href=&#34;https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914(v=vs.85)?redirectedfrom=MSDN&#34;&gt;https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914(v=vs.85)?redirectedfrom=MSDN&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Notre installer permet d&amp;rsquo;enregistrer un URI scheme à la DevBox-Santé, ainsi lorsque nous voulons lancer :&lt;/p&gt;
+&lt;p&gt;Notre installer permet d&amp;rsquo;enregistrer un URI scheme à la DevBox-Santé, ainsi lorsque nous saisissons &lt;code&gt;devboxsante://&lt;/code&gt; dans notre navigateur :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;2021-05-27_saisie_url_scheme.png&#34; alt=&#34;DevBox-sante URL Scheme&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Le navigateur nous propose de lancer l&amp;rsquo;exécutable sur le poste de l&amp;rsquo;utilisateur :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;2021-05-27_lancement_depuis_navigateur.png&#34; alt=&#34;DevBox-sante lancer depuis le navigateur&#34;&gt;&lt;/p&gt;

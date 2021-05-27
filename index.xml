@@ -13,6 +13,31 @@
     
     
     <item>
+      <title>Blog: Installer &gt; lancer la DevBox-Santé depuis un navigateur</title>
+      <link>/blog/2021/05/27/installer-lancer-la-devbox-sant%C3%A9-depuis-un-navigateur/</link>
+      <pubDate>Thu, 27 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2021/05/27/installer-lancer-la-devbox-sant%C3%A9-depuis-un-navigateur/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Certains contextes nécessitent de lancer la DevBox-santé depuis le context client. Pour le faire nous nous servons des URI Scheme et de la possibilité d&amp;rsquo;enregistrer une application sur ce scheme.
+Exemple, dans Windows : &lt;a href=&#34;https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914(v=vs.85)?redirectedfrom=MSDN&#34;&gt;https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914(v=vs.85)?redirectedfrom=MSDN&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Notre installer permet d&amp;rsquo;enregistrer un URI scheme à la DevBox-Santé, ainsi lorsque nous voulons lancer :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;2021-05-27_saisie_url_scheme.png&#34; alt=&#34;DevBox-sante URL Scheme&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Le navigateur nous propose de lancer l&amp;rsquo;exécutable sur le poste de l&amp;rsquo;utilisateur :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;2021-05-27_lancement_depuis_navigateur.png&#34; alt=&#34;DevBox-sante lancer depuis le navigateur&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Il est possible de le faire simplement en javascript depuis une page html de votre client :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;html&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;body&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;window&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;open&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;devboxsante://&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;body&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;html&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Comme si ça ne suffisait pas, il est également possible de passer dans l&amp;rsquo;url un ensemble d&amp;rsquo;arguments configurables par ce mécanisme. 
+Par exemple, le numéro de port :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;devboxsante://config?server.port&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10000&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Par ce type de mécanisme, il est possible de lancer la devbox-sante avec un contexte qui est le votre et moyennant un callback vers vos serveurs lié la DevBox-Santé avec une session utilisateur.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: DMP &gt; matrice habilitation</title>
       <link>/blog/2021/05/20/dmp-matrice-habilitation/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>

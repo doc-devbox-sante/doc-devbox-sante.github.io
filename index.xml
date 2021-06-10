@@ -13,11 +13,82 @@
     
     
     <item>
-      <title>Blog: Intégration de ProSantéConnect</title>
-      <link>/blog/2021/06/01/int%C3%A9gration-de-prosant%C3%A9connect/</link>
+      <title>Blog: Les métadonnées des documents du DMP</title>
+      <link>/blog/1/01/01/les-m%C3%A9tadonn%C3%A9es-des-documents-du-dmp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/1/01/01/les-m%C3%A9tadonn%C3%A9es-des-documents-du-dmp/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Pour comprendre comment les métadonnées des documents du DMP doivent être gérés, trois documents du Cadre d&amp;rsquo;intéropérabilité des Systèmes d&amp;rsquo;Information de Santé sont à étudier.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;le [CI_PARTAGE] dont la version courante est &lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.6.pdf&#34;&gt;1.6&lt;/a&gt; : décrit la manière d&amp;rsquo;intégrer le stantard &lt;a href=&#34;https://www.ihe.net/resources/technical_frameworks/#IT&#34;&gt;XDS et XDM&lt;/a&gt; de l&amp;rsquo;IHE pour les données de santé en France&lt;/li&gt;
+&lt;li&gt;le [CI_STRU_ENTETE] dont la version courante est la &lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.6.pdf&#34;&gt;1.6&lt;/a&gt; : décrit la manière d&amp;rsquo;intégrer le standard &lt;a href=&#34;https://www.hl7.org/implement/standards/product_brief.cfm?product_id=7&#34;&gt;CDAr2&lt;/a&gt; de HL7 international&lt;/li&gt;
+&lt;li&gt;le [CI_ANX_CDA] dont la version courante est la &lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/CI-SIS_ANX_LIENS-CDA-METADONNEES-XDS_V1.4.pdf&#34;&gt;1.4&lt;/a&gt; : décrit les liens entre les métadonnées des deux standards.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;etude-de-cas&#34;&gt;Etude de cas&lt;/h2&gt;
+&lt;h3 id=&#34;event--lacte-médical-à-lorigine-de-la-soumission-dun-document&#34;&gt;Event : l&amp;rsquo;acte médical à l&amp;rsquo;origine de la soumission d&amp;rsquo;un document&lt;/h3&gt;
+&lt;p&gt;Les documents dans la DevBox-santé DMP sont représentés par un objet &lt;code&gt;DMPCDocument&lt;/code&gt;. Dans ce DMPCDocument, nous allons nous intéresser à la propriété correspondant à l&amp;rsquo;acte médical à l&amp;rsquo;origine de la soumission dans le DMP : &lt;strong&gt;&lt;code&gt;events&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;La propriété &lt;strong&gt;&lt;code&gt;events&lt;/code&gt;&lt;/strong&gt; est un &lt;code&gt;DMPCCode&lt;/code&gt; dont la nomenclature n&amp;rsquo;est pas fourni par les jeux de valeurs du DMP. Mais, en lisant le [CI_ANX_CDA], on apprend que les nomenclatures autorisées pour cette métadonnée sont :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;La CCAM pour les actes médicaux ou médico-techniques&lt;/li&gt;
+&lt;li&gt;La CIM10 pour les diagnostiques&lt;/li&gt;
+&lt;li&gt;La LOINC pour la biologie&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note : la CCAM et la CIM10 (et bientôt la LOINC) sont des nomenclatures également indéxées dans notre offre &lt;a href=&#34;https://annuaire-demo.devbox-sante.fr/nomenclature&#34;&gt;DevBox-santé annuaire&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;20210610_rechercheCIM10.png&#34; alt=&#34;20210610_rechercheCIM10.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Dans ce même document [CI_ANX_CDA], on peut lire également et surtout qu&amp;rsquo;il y a une correspondance entre le &lt;strong&gt;&lt;code&gt;ClinicalDocument/documentationOf/serviceEvent/code&lt;/code&gt;&lt;/strong&gt; et le &lt;strong&gt;&lt;code&gt;XDSDocumentEntry.eventCodes&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Donc si nous codons avec l&amp;rsquo;API Java les lignes suivantes :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;DMPCDocument&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;document&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DMPCDocument&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;document&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;addEvent&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DMPCCode&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;H33&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2.16.840.1.113883.6.3&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Décollement et déchirement de la rétine&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ou encore si nous avons dans notre requete REST &lt;code&gt;/td21SubmitDocuments&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;submission&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;documents&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+               &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;events&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+                     &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+                           &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;H33&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+                           &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;codingScheme&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2.16.840.1.113883.6.3&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+                           &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;displayName&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Décollement et déchirement de la rétine&amp;#34;&lt;/span&gt;
+                     &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+                  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+      &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
+&lt;span style=&#34;color:#a40000&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La DevBox-Santé DMP, va générer la transaction XDS contenu dans la requête SOAP à destination du DMP. Cette dernière contiendra : &lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;ExtrinsicObject&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;urn:uuid:8aaa0dc6-9d9e-43d0-88d1-a58833cd6b7d&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;mimeType=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;text/xml&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;objectType=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;Classification&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;classificationScheme=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;urn:uuid:2c6b8cb7-8b2a-4051-b291-b1ae6a575ef4&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;classifiedObject=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;urn:uuid:8aaa0dc6-9d9e-43d0-88d1-a58833cd6b7d&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;nodeRepresentation=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;H33&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;Slot&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;codingScheme&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;ValueList&amp;gt;&lt;/span&gt;
+               &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;Value&amp;gt;&lt;/span&gt;2.16.840.1.113883.6.3&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/Value&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/ValueList&amp;gt;&lt;/span&gt;
+         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/Slot&amp;gt;&lt;/span&gt;
+         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;Name&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;LocalizedString&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;charset=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;UTF-8&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;Décollement&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;et&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;déchirement&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;de&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;la&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;rétine&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;xml:lang=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;FR&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/Name&amp;gt;&lt;/span&gt;
+   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/Classification&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Le document CDA généré contiendra :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; standalone=&amp;#34;yes&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;ClinicalDocument&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;xmlns=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;urn:hl7-org:v3&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;xmlns:xsi=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;xsi:schemaLocation=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    ...
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;documentationOf&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;serviceEvent&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;code&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;code=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;H33&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;codeSystem=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2.16.840.1.113883.6.3&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;displayName=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Décollement et déchirement de la rétine&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;La DevBox-santé DMP en plus de gérer les différents standards techniques (SOAP, MTOM, SAML, PKCS11, PKCS12, TLS &amp;hellip;) et fonctionnels (CPx, CI-SIS, IHE, CDA) elle prend soin d&amp;rsquo;assurer la cohérance entre les données renseignées.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: eCPS &gt; Intégration de ProSantéConnect</title>
+      <link>/blog/2021/06/01/ecps-int%C3%A9gration-de-prosant%C3%A9connect/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2021/06/01/int%C3%A9gration-de-prosant%C3%A9connect/</guid>
+      <guid>/blog/2021/06/01/ecps-int%C3%A9gration-de-prosant%C3%A9connect/</guid>
       <description>
         
         

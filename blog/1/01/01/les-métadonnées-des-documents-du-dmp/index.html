@@ -17,23 +17,23 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Installer &gt; lancer la DevBox-Santé depuis un navigateur | DevBox-Santé</title>
-<meta name="description" content="La Documentation"><meta property="og:title" content="Installer &gt; lancer la DevBox-Santé depuis un navigateur" />
-<meta property="og:description" content="Lancer une DevBox-santé depuis le navigateur
+<title>Les métadonnées des documents du DMP | DevBox-Santé</title>
+<meta name="description" content="La Documentation"><meta property="og:title" content="Les métadonnées des documents du DMP" />
+<meta property="og:description" content="La gestion des différentes métadonnées dans la DevBoxSanté DMP.
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/2021/05/27/installer-lancer-la-devbox-sant%C3%A9-depuis-un-navigateur/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-05-27T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-05-27T19:01:59&#43;02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="/blog/1/01/01/les-m%C3%A9tadonn%C3%A9es-des-documents-du-dmp/" /><meta property="article:section" content="blog" />
 
-<meta itemprop="name" content="Installer &gt; lancer la DevBox-Santé depuis un navigateur">
-<meta itemprop="description" content="Lancer une DevBox-santé depuis le navigateur
-"><meta itemprop="datePublished" content="2021-05-27T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-05-27T19:01:59&#43;02:00" />
-<meta itemprop="wordCount" content="147">
+<meta property="og:site_name" content="DevBox-Santé" />
+
+<meta itemprop="name" content="Les métadonnées des documents du DMP">
+<meta itemprop="description" content="La gestion des différentes métadonnées dans la DevBoxSanté DMP.
+">
+
+<meta itemprop="wordCount" content="405">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Installer &gt; lancer la DevBox-Santé depuis un navigateur"/>
-<meta name="twitter:description" content="Lancer une DevBox-santé depuis le navigateur
+<meta name="twitter:title" content="Les métadonnées des documents du DMP"/>
+<meta name="twitter:description" content="La gestion des différentes métadonnées dans la DevBoxSanté DMP.
 "/>
 
 
@@ -264,8 +264,8 @@ if (!doNotTrack) {
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog10101les-mc3a9tadonnc3a9es-des-documents-du-dmp-li">
-    <a href="/blog/1/01/01/les-m%C3%A9tadonn%C3%A9es-des-documents-du-dmp/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-blog10101les-mc3a9tadonnc3a9es-des-documents-du-dmp"><span class="">Les métadonnées des documents du DMP</span></a>
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-blog10101les-mc3a9tadonnc3a9es-des-documents-du-dmp-li">
+    <a href="/blog/1/01/01/les-m%C3%A9tadonn%C3%A9es-des-documents-du-dmp/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__page" id="m-blog10101les-mc3a9tadonnc3a9es-des-documents-du-dmp"><span class="td-sidebar-nav-active-item">Les métadonnées des documents du DMP</span></a>
     
   </li>
 
@@ -314,8 +314,8 @@ if (!doNotTrack) {
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-blog20210527installer-lancer-la-devbox-santc3a9-depuis-un-navigateur-li">
-    <a href="/blog/2021/05/27/installer-lancer-la-devbox-sant%C3%A9-depuis-un-navigateur/" title="Installer &gt; lancer la DevBox-Santé depuis un navigateur" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__page" id="m-blog20210527installer-lancer-la-devbox-santc3a9-depuis-un-navigateur"><span class="td-sidebar-nav-active-item">Installer &gt; lancer la DevBox-santé</span></a>
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20210527installer-lancer-la-devbox-santc3a9-depuis-un-navigateur-li">
+    <a href="/blog/2021/05/27/installer-lancer-la-devbox-sant%C3%A9-depuis-un-navigateur/" title="Installer &gt; lancer la DevBox-Santé depuis un navigateur" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-blog20210527installer-lancer-la-devbox-santc3a9-depuis-un-navigateur"><span class="">Installer &gt; lancer la DevBox-santé</span></a>
     
   </li>
 
@@ -487,6 +487,17 @@ if (!doNotTrack) {
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#etude-de-cas">Etude de cas</a>
+      <ul>
+        <li><a href="#event--lacte-médical-à-lorigine-de-la-soumission-dun-document">Event : l&rsquo;acte médical à l&rsquo;origine de la soumission d&rsquo;un document</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
 
 
           </div>
@@ -496,33 +507,79 @@ if (!doNotTrack) {
             </a>
             
 <div class="td-content">
-	<h1>Installer &gt; lancer la DevBox-Santé depuis un navigateur</h1>
-	<div class="lead">Lancer une DevBox-santé depuis le navigateur</div>
+	<h1>Les métadonnées des documents du DMP</h1>
+	<div class="lead">La gestion des différentes métadonnées dans la DevBoxSanté DMP.</div>
 	<div class="td-byline mb-4">
-		Par <b>Laurent Forêt</b> |
-		<time datetime="2021-05-27" class="text-muted">Thursday, May 27, 2021</time>
+		
+		<time datetime="0001-01-01" class="text-muted">Monday, January 01, 0001</time>
 	</div>
 	
-	<p>Certains contextes nécessitent de lancer la DevBox-santé depuis le context client. Pour le faire nous nous servons des URI Scheme et de la possibilité d&rsquo;enregistrer une application sur ce scheme.
-Exemple, dans Windows : <a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914(v=vs.85)?redirectedfrom=MSDN">https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914(v=vs.85)?redirectedfrom=MSDN</a></p>
-<p>Notre installer permet d&rsquo;enregistrer un URI scheme à la DevBox-Santé, ainsi lorsque nous saisissons <code>devboxsante://</code> dans notre navigateur :</p>
-<p><img src="2021-05-27_saisie_url_scheme.png" alt="DevBox-sante URL Scheme"></p>
-<p>Le navigateur nous propose de lancer l&rsquo;exécutable sur le poste de l&rsquo;utilisateur :</p>
-<p><img src="2021-05-27_lancement_depuis_navigateur.png" alt="DevBox-sante lancer depuis le navigateur"></p>
-<p>Il est possible de le faire simplement en javascript depuis une page html de votre client :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">html</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">body</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">open</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;devboxsante://&#34;</span><span style="color:#000;font-weight:bold">);&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">body</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">html</span><span style="color:#000;font-weight:bold">&gt;</span>
-</code></pre></div><p>Comme si ça ne suffisait pas, il est également possible de passer dans l&rsquo;url un ensemble d&rsquo;arguments configurables par ce mécanisme. 
-Par exemple, le numéro de port :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">devboxsante://config?server.port<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">10000</span>
-</code></pre></div><p>Par ce type de mécanisme, il est possible de lancer la devbox-sante avec un contexte qui est le votre et moyennant un callback vers vos serveurs lier la DevBox-Santé avec une session utilisateur.</p>
+	<p>Pour comprendre comment les métadonnées des documents du DMP doivent être gérés, trois documents du Cadre d&rsquo;intéropérabilité des Systèmes d&rsquo;Information de Santé sont à étudier.</p>
+<ul>
+<li>le [CI_PARTAGE] dont la version courante est <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.6.pdf">1.6</a> : décrit la manière d&rsquo;intégrer le stantard <a href="https://www.ihe.net/resources/technical_frameworks/#IT">XDS et XDM</a> de l&rsquo;IHE pour les données de santé en France</li>
+<li>le [CI_STRU_ENTETE] dont la version courante est la <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.6.pdf">1.6</a> : décrit la manière d&rsquo;intégrer le standard <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=7">CDAr2</a> de HL7 international</li>
+<li>le [CI_ANX_CDA] dont la version courante est la <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CI-SIS_ANX_LIENS-CDA-METADONNEES-XDS_V1.4.pdf">1.4</a> : décrit les liens entre les métadonnées des deux standards.</li>
+</ul>
+<h2 id="etude-de-cas">Etude de cas</h2>
+<h3 id="event--lacte-médical-à-lorigine-de-la-soumission-dun-document">Event : l&rsquo;acte médical à l&rsquo;origine de la soumission d&rsquo;un document</h3>
+<p>Les documents dans la DevBox-santé DMP sont représentés par un objet <code>DMPCDocument</code>. Dans ce DMPCDocument, nous allons nous intéresser à la propriété correspondant à l&rsquo;acte médical à l&rsquo;origine de la soumission dans le DMP : <strong><code>events</code></strong>.</p>
+<p>La propriété <strong><code>events</code></strong> est un <code>DMPCCode</code> dont la nomenclature n&rsquo;est pas fourni par les jeux de valeurs du DMP. Mais, en lisant le [CI_ANX_CDA], on apprend que les nomenclatures autorisées pour cette métadonnée sont :</p>
+<ul>
+<li>La CCAM pour les actes médicaux ou médico-techniques</li>
+<li>La CIM10 pour les diagnostiques</li>
+<li>La LOINC pour la biologie</li>
+</ul>
+<blockquote>
+<p>Note : la CCAM et la CIM10 (et bientôt la LOINC) sont des nomenclatures également indéxées dans notre offre <a href="https://annuaire-demo.devbox-sante.fr/nomenclature">DevBox-santé annuaire</a></p>
+</blockquote>
+<p><img src="20210610_rechercheCIM10.png" alt="20210610_rechercheCIM10.png"></p>
+<p>Dans ce même document [CI_ANX_CDA], on peut lire également et surtout qu&rsquo;il y a une correspondance entre le <strong><code>ClinicalDocument/documentationOf/serviceEvent/code</code></strong> et le <strong><code>XDSDocumentEntry.eventCodes</code></strong>.</p>
+<p>Donc si nous codons avec l&rsquo;API Java les lignes suivantes :</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addEvent</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;H33&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Décollement et déchirement de la rétine&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</code></pre></div><p>ou encore si nous avons dans notre requete REST <code>/td21SubmitDocuments</code>:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">&#34;submission&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">&#34;documents&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+               <span style="color:#4e9a06">&#34;events&#34;</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">[</span>
+                     <span style="color:#000;font-weight:bold">{</span>
+                           <span style="color:#204a87;font-weight:bold">&#34;code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;H33&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                           <span style="color:#204a87;font-weight:bold">&#34;codingScheme&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                           <span style="color:#204a87;font-weight:bold">&#34;displayName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Décollement et déchirement de la rétine&#34;</span>
+                     <span style="color:#000;font-weight:bold">}</span>
+                  <span style="color:#000;font-weight:bold">],</span>
+      <span style="color:#a40000">...</span>
+<span style="color:#a40000">}</span>
+</code></pre></div><p>La DevBox-Santé DMP, va générer la transaction XDS contenu dans la requête SOAP à destination du DMP. Cette dernière contiendra : </p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#204a87;font-weight:bold">&lt;ExtrinsicObject</span> <span style="color:#c4a000">id=</span><span style="color:#4e9a06">&#34;urn:uuid:8aaa0dc6-9d9e-43d0-88d1-a58833cd6b7d&#34;</span> <span style="color:#c4a000">mimeType=</span><span style="color:#4e9a06">&#34;text/xml&#34;</span> <span style="color:#c4a000">objectType=</span><span style="color:#4e9a06">&#34;urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+   <span style="color:#204a87;font-weight:bold">&lt;Classification</span> <span style="color:#c4a000">classificationScheme=</span><span style="color:#4e9a06">&#34;urn:uuid:2c6b8cb7-8b2a-4051-b291-b1ae6a575ef4&#34;</span> <span style="color:#c4a000">classifiedObject=</span><span style="color:#4e9a06">&#34;urn:uuid:8aaa0dc6-9d9e-43d0-88d1-a58833cd6b7d&#34;</span> <span style="color:#c4a000">nodeRepresentation=</span><span style="color:#4e9a06">&#34;H33&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+         <span style="color:#204a87;font-weight:bold">&lt;Slot</span> <span style="color:#c4a000">name=</span><span style="color:#4e9a06">&#34;codingScheme&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+            <span style="color:#204a87;font-weight:bold">&lt;ValueList&gt;</span>
+               <span style="color:#204a87;font-weight:bold">&lt;Value&gt;</span>2.16.840.1.113883.6.3<span style="color:#204a87;font-weight:bold">&lt;/Value&gt;</span>
+            <span style="color:#204a87;font-weight:bold">&lt;/ValueList&gt;</span>
+         <span style="color:#204a87;font-weight:bold">&lt;/Slot&gt;</span>
+         <span style="color:#204a87;font-weight:bold">&lt;Name&gt;</span>
+            <span style="color:#204a87;font-weight:bold">&lt;LocalizedString</span> <span style="color:#c4a000">charset=</span><span style="color:#4e9a06">&#34;UTF-8&#34;</span> <span style="color:#c4a000">value=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">Décollement</span> <span style="color:#a40000">et</span> <span style="color:#a40000">déchirement</span> <span style="color:#a40000">de</span> <span style="color:#a40000">la</span> <span style="color:#a40000">rétine&#34;</span> <span style="color:#c4a000">xml:lang=</span><span style="color:#4e9a06">&#34;FR&#34;</span><span style="color:#204a87;font-weight:bold">/&gt;</span>
+         <span style="color:#204a87;font-weight:bold">&lt;/Name&gt;</span>
+   <span style="color:#204a87;font-weight:bold">&lt;/Classification&gt;</span>
+</code></pre></div><p>Le document CDA généré contiendra :</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#8f5902;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;</span>
+<span style="color:#204a87;font-weight:bold">&lt;ClinicalDocument</span> <span style="color:#c4a000">xmlns=</span><span style="color:#4e9a06">&#34;urn:hl7-org:v3&#34;</span> <span style="color:#c4a000">xmlns:xsi=</span><span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span> <span style="color:#c4a000">xsi:schemaLocation=</span><span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+    ...
+    <span style="color:#204a87;font-weight:bold">&lt;documentationOf&gt;</span>
+        <span style="color:#204a87;font-weight:bold">&lt;serviceEvent&gt;</span>
+            <span style="color:#204a87;font-weight:bold">&lt;code</span> <span style="color:#c4a000">code=</span><span style="color:#4e9a06">&#34;H33&#34;</span> <span style="color:#c4a000">codeSystem=</span><span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span> <span style="color:#c4a000">displayName=</span><span style="color:#4e9a06">&#34;Décollement et déchirement de la rétine&#34;</span><span style="color:#204a87;font-weight:bold">/&gt;</span>
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>La DevBox-santé DMP en plus de gérer les différents standards techniques (SOAP, MTOM, SAML, PKCS11, PKCS12, TLS &hellip;) et fonctionnels (CPx, CI-SIS, IHE, CDA) elle prend soin d&rsquo;assurer la cohérance entre les données renseignées.</p>
 
 	
 
 	<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
   <li>
-    <a href="/blog/2021/05/20/dmp-matrice-habilitation/"aria-label="Précédent - DMP &gt; matrice habilitation" class="btn btn-primary "><span class="mr-1">←</span> Précédent</a>
+    <a href="/blog/2021/06/01/ecps-int%C3%A9gration-de-prosant%C3%A9connect/"aria-label="Précédent - eCPS &gt; Intégration de ProSantéConnect" class="btn btn-primary "><span class="mr-1">←</span> Précédent</a>
   </li>
-    <a href="/blog/2021/06/01/ecps-int%C3%A9gration-de-prosant%C3%A9connect/"aria-label="Suivant - eCPS &gt; Intégration de ProSantéConnect" class="btn btn-primary ">Suivant <span class="ml-1">→</span></a>
+    <a  class="btn btn-primary  disabled">Suivant <span class="ml-1">→</span></a>
   </li>
 </ul>
 

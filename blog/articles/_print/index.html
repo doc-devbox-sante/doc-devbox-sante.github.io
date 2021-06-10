@@ -31,6 +31,19 @@
 <meta name="twitter:description" content="La Documentation"/>
 
 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-39129192-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
 
 
 
@@ -195,7 +208,17 @@ This the multi-page printable view of this section.
     
 	
 
-    <li><a href="#pg-51b3c2e7bd59e073db68d278349697be">Intégration de ProSantéConnect</a></li>
+    <li><a href="#pg-cdba9978ed60e0bc94b888ba96d55b0a">Les métadonnées des documents du DMP</a></li>
+
+
+
+    
+  
+    
+    
+	
+
+    <li><a href="#pg-51b3c2e7bd59e073db68d278349697be">eCPS &gt; Intégration de ProSantéConnect</a></li>
 
 
 
@@ -269,7 +292,90 @@ This the multi-page printable view of this section.
   
 
 <div class="td-content" style="">
-    <h1 id="pg-51b3c2e7bd59e073db68d278349697be">Intégration de ProSantéConnect</h1>
+    <h1 id="pg-cdba9978ed60e0bc94b888ba96d55b0a">Les métadonnées des documents du DMP</h1>
+	<div class="lead">La gestion des différentes métadonnées dans la DevBoxSanté DMP.</div>
+	<div class="td-byline mb-4">
+		
+        
+	</div>
+	<p>Pour comprendre comment les métadonnées des documents du DMP doivent être gérés, trois documents du Cadre d&rsquo;intéropérabilité des Systèmes d&rsquo;Information de Santé sont à étudier.</p>
+<ul>
+<li>le [CI_PARTAGE] dont la version courante est <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.6.pdf">1.6</a> : décrit la manière d&rsquo;intégrer le stantard <a href="https://www.ihe.net/resources/technical_frameworks/#IT">XDS et XDM</a> de l&rsquo;IHE pour les données de santé en France</li>
+<li>le [CI_STRU_ENTETE] dont la version courante est la <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.6.pdf">1.6</a> : décrit la manière d&rsquo;intégrer le standard <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=7">CDAr2</a> de HL7 international</li>
+<li>le [CI_ANX_CDA] dont la version courante est la <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CI-SIS_ANX_LIENS-CDA-METADONNEES-XDS_V1.4.pdf">1.4</a> : décrit les liens entre les métadonnées des deux standards.</li>
+</ul>
+<h2 id="etude-de-cas">Etude de cas</h2>
+<h3 id="event--lacte-médical-à-lorigine-de-la-soumission-dun-document">Event : l&rsquo;acte médical à l&rsquo;origine de la soumission d&rsquo;un document</h3>
+<p>Les documents dans la DevBox-santé DMP sont représentés par un objet <code>DMPCDocument</code>. Dans ce DMPCDocument, nous allons nous intéresser à la propriété correspondant à l&rsquo;acte médical à l&rsquo;origine de la soumission dans le DMP : <strong><code>events</code></strong>.</p>
+<p>La propriété <strong><code>events</code></strong> est un <code>DMPCCode</code> dont la nomenclature n&rsquo;est pas fourni par les jeux de valeurs du DMP. Mais, en lisant le [CI_ANX_CDA], on apprend que les nomenclatures autorisées pour cette métadonnée sont :</p>
+<ul>
+<li>La CCAM pour les actes médicaux ou médico-techniques</li>
+<li>La CIM10 pour les diagnostiques</li>
+<li>La LOINC pour la biologie</li>
+</ul>
+<blockquote>
+<p>Note : la CCAM et la CIM10 (et bientôt la LOINC) sont des nomenclatures également indéxées dans notre offre <a href="https://annuaire-demo.devbox-sante.fr/nomenclature">DevBox-santé annuaire</a></p>
+</blockquote>
+<p><img src="20210610_rechercheCIM10.png" alt="20210610_rechercheCIM10.png"></p>
+<p>Dans ce même document [CI_ANX_CDA], on peut lire également et surtout qu&rsquo;il y a une correspondance entre le <strong><code>ClinicalDocument/documentationOf/serviceEvent/code</code></strong> et le <strong><code>XDSDocumentEntry.eventCodes</code></strong>.</p>
+<p>Donc si nous codons avec l&rsquo;API Java les lignes suivantes :</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addEvent</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;H33&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Décollement et déchirement de la rétine&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</code></pre></div><p>ou encore si nous avons dans notre requete REST <code>/td21SubmitDocuments</code>:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">&#34;submission&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">&#34;documents&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+               <span style="color:#4e9a06">&#34;events&#34;</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">[</span>
+                     <span style="color:#000;font-weight:bold">{</span>
+                           <span style="color:#204a87;font-weight:bold">&#34;code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;H33&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                           <span style="color:#204a87;font-weight:bold">&#34;codingScheme&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                           <span style="color:#204a87;font-weight:bold">&#34;displayName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Décollement et déchirement de la rétine&#34;</span>
+                     <span style="color:#000;font-weight:bold">}</span>
+                  <span style="color:#000;font-weight:bold">],</span>
+      <span style="color:#a40000">...</span>
+<span style="color:#a40000">}</span>
+</code></pre></div><p>La DevBox-Santé DMP, va générer la transaction XDS contenu dans la requête SOAP à destination du DMP. Cette dernière contiendra : </p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#204a87;font-weight:bold">&lt;ExtrinsicObject</span> <span style="color:#c4a000">id=</span><span style="color:#4e9a06">&#34;urn:uuid:8aaa0dc6-9d9e-43d0-88d1-a58833cd6b7d&#34;</span> <span style="color:#c4a000">mimeType=</span><span style="color:#4e9a06">&#34;text/xml&#34;</span> <span style="color:#c4a000">objectType=</span><span style="color:#4e9a06">&#34;urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+   <span style="color:#204a87;font-weight:bold">&lt;Classification</span> <span style="color:#c4a000">classificationScheme=</span><span style="color:#4e9a06">&#34;urn:uuid:2c6b8cb7-8b2a-4051-b291-b1ae6a575ef4&#34;</span> <span style="color:#c4a000">classifiedObject=</span><span style="color:#4e9a06">&#34;urn:uuid:8aaa0dc6-9d9e-43d0-88d1-a58833cd6b7d&#34;</span> <span style="color:#c4a000">nodeRepresentation=</span><span style="color:#4e9a06">&#34;H33&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+         <span style="color:#204a87;font-weight:bold">&lt;Slot</span> <span style="color:#c4a000">name=</span><span style="color:#4e9a06">&#34;codingScheme&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+            <span style="color:#204a87;font-weight:bold">&lt;ValueList&gt;</span>
+               <span style="color:#204a87;font-weight:bold">&lt;Value&gt;</span>2.16.840.1.113883.6.3<span style="color:#204a87;font-weight:bold">&lt;/Value&gt;</span>
+            <span style="color:#204a87;font-weight:bold">&lt;/ValueList&gt;</span>
+         <span style="color:#204a87;font-weight:bold">&lt;/Slot&gt;</span>
+         <span style="color:#204a87;font-weight:bold">&lt;Name&gt;</span>
+            <span style="color:#204a87;font-weight:bold">&lt;LocalizedString</span> <span style="color:#c4a000">charset=</span><span style="color:#4e9a06">&#34;UTF-8&#34;</span> <span style="color:#c4a000">value=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">Décollement</span> <span style="color:#a40000">et</span> <span style="color:#a40000">déchirement</span> <span style="color:#a40000">de</span> <span style="color:#a40000">la</span> <span style="color:#a40000">rétine&#34;</span> <span style="color:#c4a000">xml:lang=</span><span style="color:#4e9a06">&#34;FR&#34;</span><span style="color:#204a87;font-weight:bold">/&gt;</span>
+         <span style="color:#204a87;font-weight:bold">&lt;/Name&gt;</span>
+   <span style="color:#204a87;font-weight:bold">&lt;/Classification&gt;</span>
+</code></pre></div><p>Le document CDA généré contiendra :</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#8f5902;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;</span>
+<span style="color:#204a87;font-weight:bold">&lt;ClinicalDocument</span> <span style="color:#c4a000">xmlns=</span><span style="color:#4e9a06">&#34;urn:hl7-org:v3&#34;</span> <span style="color:#c4a000">xmlns:xsi=</span><span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span> <span style="color:#c4a000">xsi:schemaLocation=</span><span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+    ...
+    <span style="color:#204a87;font-weight:bold">&lt;documentationOf&gt;</span>
+        <span style="color:#204a87;font-weight:bold">&lt;serviceEvent&gt;</span>
+            <span style="color:#204a87;font-weight:bold">&lt;code</span> <span style="color:#c4a000">code=</span><span style="color:#4e9a06">&#34;H33&#34;</span> <span style="color:#c4a000">codeSystem=</span><span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span> <span style="color:#c4a000">displayName=</span><span style="color:#4e9a06">&#34;Décollement et déchirement de la rétine&#34;</span><span style="color:#204a87;font-weight:bold">/&gt;</span>
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>La DevBox-santé DMP en plus de gérer les différents standards techniques (SOAP, MTOM, SAML, PKCS11, PKCS12, TLS &hellip;) et fonctionnels (CPx, CI-SIS, IHE, CDA) elle prend soin d&rsquo;assurer la cohérance entre les données renseignées.</p>
+
+</div>
+
+
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+
+  
+
+<div class="td-content" style="page-break-before: always">
+    <h1 id="pg-51b3c2e7bd59e073db68d278349697be">eCPS &gt; Intégration de ProSantéConnect</h1>
 	<div class="lead">Comment intégrer une application spring-boot à <a href="https://integrateurs-cps.asipsante.fr/pages/prosanteconnect/presentation-generale">ProSantéConnect</a></div>
 	<div class="td-byline mb-4">
 		Par <b>Laurent Forêt</b> |

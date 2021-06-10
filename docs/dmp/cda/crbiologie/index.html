@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.83.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -41,6 +41,19 @@ private void createCRBiologie(DMPCStructureSante structureSante) { final String 
 Ce format de document est spécifié par l&rsquo;ANS : https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale
 Un exemple de création de document conforme à la spécification est :
 private void createCRBiologie(DMPCStructureSante structureSante) { final String creationTime = &#34;20111020194600&#34;; final String startTime = &#34;20140520174600&#34;; final String stopTime = &#34;20140520184600&#34;; DMPCDocumentCRBiologie template = new DMPCDocumentCRBiologie(); template.setClassCode(&#34;10&#34;); template.addConfidentiality(&#34;N&#34;); template.setComments(&#34;Commentaire du document&#34;); template.setFormat(&#34;urn:ihe:lab:xd-lab:2008&#34;); // format obligatoire  template."/>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-39129192-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 
 
 

@@ -51,7 +51,9 @@
         
         &lt;p&gt;Les versions actuelles de nos composants sont :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt; : &lt;strong&gt;4.0.2&lt;/strong&gt; et &lt;strong&gt;3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt; : &lt;strong&gt;4.0.2&lt;/strong&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/DMP-146&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;DMP-146&lt;/a&gt; [TD31Find] erreur lors d&#39;un retour vide :  [XDSStoredQueryMissingParam] parameterName=$uuid&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt; : &lt;strong&gt;1.3.1&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt; : &lt;strong&gt;1.0&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt; : &lt;strong&gt;2.5&lt;/strong&gt;&lt;/li&gt;

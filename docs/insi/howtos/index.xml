@@ -1,0 +1,59 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – Howtos</title>
+    <link>/docs/insi/howtos/</link>
+    <description>Recent content in Howtos on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/insi/howtos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Integrateurs checklist</title>
+      <link>/docs/insi/howtos/integrateurchecklist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/insi/howtos/integrateurchecklist/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;pre&gt;&lt;code&gt;Page en cours de construction
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;h1 id=&#34;documentation-à-prendre-en-compte&#34;&gt;Documentation à prendre en compte&lt;/h1&gt;
+&lt;h2 id=&#34;insi-version-0400&#34;&gt;INSi version 04.00&lt;/h2&gt;
+&lt;p&gt;Dans le &lt;strong&gt;Package INSi 04.00.00&lt;/strong&gt; :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fiche d&amp;rsquo;information du contenu du package : &lt;code&gt;PDT-INF-736_Package INSi 04.00.00.pdf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Guide d&amp;rsquo;intégration de SesamVitale &lt;code&gt;SEL-MP-043_04-00-00_INSi sans MR.pdf&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Documentation de l&amp;rsquo;ANS :&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;ANS fournit un référentiel à tenir compte également dans vos lectures d&amp;rsquo;intégration car elle définit un certain nombre d&amp;rsquo;exigences à respecter&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Référentiel INS : &lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_referentiel_identifiant_national_de_sante_v2.0.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_referentiel_identifiant_national_de_sante_v2.0.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Guide d&amp;rsquo;implémentation : &lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/INS_Guide%20implementation_V2_0.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/INS_Guide%20implementation_V2_0.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;RNIV : &lt;a href=&#34;https://esante.gouv.fr/securite/identite-nationale-de-sante&#34;&gt;https://esante.gouv.fr/securite/identite-nationale-de-sante&lt;/a&gt; (ensemble des liens de la page)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;commande-des-cartes-et-certificats-de-test&#34;&gt;Commande des Cartes et Certificats de Test&lt;/h1&gt;
+&lt;p&gt;Un document de l&amp;rsquo;ANS donne toutes les indications suffisantes pour commander cartes et certificats nécessaires pour les développements :&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;intégration-de-la-devbox-santé-insi&#34;&gt;Intégration de la DevBox-Santé INSi&lt;/h1&gt;
+&lt;p&gt;Lire les autres pages de ce site concernant l&amp;rsquo;intégration INSi&lt;/p&gt;
+&lt;h1 id=&#34;passage-de-lhomologation&#34;&gt;Passage de l&amp;rsquo;homologation&lt;/h1&gt;
+&lt;p&gt;TODO&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

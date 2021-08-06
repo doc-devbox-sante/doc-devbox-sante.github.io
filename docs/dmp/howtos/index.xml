@@ -163,15 +163,7 @@ Le formulaire peut être télécharger depuis le site : &lt;a href=&#34;https://
       <description>
         
         
-        
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;pre&gt;&lt;code&gt;Page en cours de construction
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;h2 id=&#34;administratif&#34;&gt;Administratif&lt;/h2&gt;
+        &lt;h2 id=&#34;administratif&#34;&gt;Administratif&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Obtenir un NIE auprès du CNDA&lt;/p&gt;
@@ -204,9 +196,6 @@ Le formulaire peut être télécharger depuis le site : &lt;a href=&#34;https://
 &lt;li&gt;alimentation&lt;/li&gt;
 &lt;li&gt;consultation&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Choix de la transaction d&amp;rsquo;itentification : TD0.0 ou téléservice INSi.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;développement--intégration&#34;&gt;Développement / Intégration&lt;/h2&gt;

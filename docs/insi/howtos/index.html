@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="alternate" type="text/html" href="/docs/insi/embedded/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="/docs/insi/embedded/index.xml">
+<meta name="generator" content="Hugo 0.83.1" /><link rel="alternate" type="text/html" href="/docs/insi/howtos/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/insi/howtos/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
@@ -19,19 +19,16 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Java API | DevBox-Santé</title>
-<meta name="description" content="La Documentation"><meta property="og:title" content="Java API" />
-<meta property="og:description" content="Intégrer directement dans votre application spring-boot
-" />
+<title>Howtos | DevBox-Santé</title>
+<meta name="description" content="La Documentation"><meta property="og:title" content="Howtos" />
+<meta property="og:description" content="La Documentation" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/insi/embedded/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="/docs/insi/howtos/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Java API">
-<meta itemprop="description" content="Intégrer directement dans votre application spring-boot
-"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Java API"/>
-<meta name="twitter:description" content="Intégrer directement dans votre application spring-boot
-"/>
+<meta itemprop="name" content="Howtos">
+<meta itemprop="description" content="La Documentation"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Howtos"/>
+<meta name="twitter:description" content="La Documentation"/>
 
 
 <script type="application/javascript">
@@ -711,8 +708,8 @@ if (!doNotTrack) {
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsinsiembedded-li">
-    <a href="/docs/insi/embedded/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section" id="m-docsinsiembedded"><span class="td-sidebar-nav-active-item">Java API</span></a>
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinsiembedded-li">
+    <a href="/docs/insi/embedded/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsinsiembedded"><span class="">Java API</span></a>
     
   </li>
 
@@ -786,8 +783,8 @@ if (!doNotTrack) {
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsinsihowtos-li">
-    <a href="/docs/insi/howtos/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsinsihowtos"><span class="">Howtos</span></a>
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsinsihowtos-li">
+    <a href="/docs/insi/howtos/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section" id="m-docsinsihowtos"><span class="td-sidebar-nav-active-item">Howtos</span></a>
     
       
       <ul class="pr-md-3 ul-3">
@@ -1031,7 +1028,7 @@ if (!doNotTrack) {
   <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
   
   
-    <a id="print" href="/docs/insi/embedded/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
+    <a id="print" href="/docs/insi/howtos/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
   
   </div>
 
@@ -1074,7 +1071,7 @@ if (!doNotTrack) {
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/insi/embedded/">Java API</a>
+	<a href="/docs/insi/howtos/">Howtos</a>
 </li>
 
 	</ol>
@@ -1082,46 +1079,10 @@ if (!doNotTrack) {
 
             
 <div class="td-content">
-	<h1>Java API</h1>
-        <div class="lead">Intégrer directement dans votre application spring-boot</div>
+	<h1>Howtos</h1>
+        
 	
-	<h2 id="insi-client">INSi Client</h2>
-<p>Le module insi-impl, fournit l&rsquo;implémentation de la facade <code>INSiClient</code> qui intègre les composant devboxsante-cps-api et devboxsante-vitale-api et accède au téléservice INSi géré par SesamVitale.</p>
-<p>Exemple de code dans une application Spring Boot :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonIntegrationINSi</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-
-    <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
-    <span style="color:#000">INSiClient</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">;</span>
-
-    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">maMethode</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-        <span style="color:#8f5902;font-style:italic">// ma recherche avec carte vitale
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">INSiContext</span> <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">INSiContext</span><span style="color:#ce5c00;font-weight:bold">();</span>
-        <span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setIdentifiantFacturation</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;3333333&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ins1RechercheAvecVitale</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">);</span>
-
-        <span style="color:#8f5902;font-style:italic">// ma recherche sans carte vitale
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">INS2Requete</span> <span style="color:#000">requete</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">INS2Requete</span><span style="color:#ce5c00;font-weight:bold">();</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setDateNaissance</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;01011981&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setIdentifiantFacturation</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;3333333&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setNomNaissance</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;ADRDEUX&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setSexe</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Sexe</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">M</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPrenoms</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Collections</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">singletonList</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;LAURENT&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
-        <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ins2RechercheAvecTraitIdentite</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">);</span>
-
-        <span style="color:#8f5902;font-style:italic">// ma vérification 
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">INS3Requete</span> <span style="color:#000">requete</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">INS3Requete</span><span style="color:#ce5c00;font-weight:bold">();</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setIns</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">INSWithCle</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">newInstance</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1810163220751&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;40&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">INSAutorite</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">INS_NIR</span><span style="color:#ce5c00;font-weight:bold">));</span>
-        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">TraitsIdentiteINS</span> <span style="color:#000">traits</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TraitsIdentiteINS</span><span style="color:#ce5c00;font-weight:bold">();</span>
-        <span style="color:#000">traits</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setNomFamille</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;ADRDEUX&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">traits</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPrenom</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;LAURENT&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">traits</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setListePrenoms</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;LAURENT&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">traits</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setSexeAdministratif</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Sexe</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">M</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">traits</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setDateNaissance</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1981-01-01&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setTraitsIdentite</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">traits</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ins3Verification</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">requete</span><span style="color:#ce5c00;font-weight:bold">);</span>
-   <span style="color:#ce5c00;font-weight:bold">}</span>
-<span style="color:#ce5c00;font-weight:bold">}</span>
-</code></pre></div>
+	
         <div class="section-index">
     
     
@@ -1134,6 +1095,14 @@ if (!doNotTrack) {
         
             
         
+            
+                
+                <div class="entry">
+                    <h5>
+                        <a href="/docs/insi/howtos/integrateurchecklist/">Integrateurs checklist</a>
+                    </h5>
+                    <p>Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé INSi et faciliter son homologation.</p>
+                </div>
             
         
             
@@ -1197,7 +1166,7 @@ if (!doNotTrack) {
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 26, 2021: <a  href="/commit/4f5a6555fc89613070cb32418f3a1a04eacc6489">Relecture partie DMP, INSi et MSS (4f5a655)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Dernière modification August 6, 2021: <a  href="/commit/ca23c8b85853847d773ecd982473731fd153adc9">ajout INSi integrateur check list &#43; maj installer (ca23c8b)</a>
 </div>
 </div>
 

@@ -786,6 +786,61 @@ if (!doNotTrack) {
   
   
   
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsinsihowtos-li">
+    <a href="/docs/insi/howtos/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsinsihowtos"><span class="">Howtos</span></a>
+    
+      
+      <ul class="pr-md-3 ul-3">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinsihowtosintegrateurchecklist-li">
+    <a href="/docs/insi/howtos/integrateurchecklist/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsinsihowtosintegrateurchecklist"><span class="">Integrateurs checklist</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinsiversions-li">
     <a href="/docs/insi/versions/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsinsiversions"><span class="">Versions</span></a>
     
@@ -984,6 +1039,17 @@ if (!doNotTrack) {
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#mise-à-jour-automatique">Mise à jour automatique</a></li>
+    <li><a href="#howtos">Howtos</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
 
 
           </div>
@@ -1020,19 +1086,16 @@ if (!doNotTrack) {
 	<h1>Installer</h1>
         <div class="lead">Un programme d&rsquo;installation multi-OS</div>
 	
-	
-
-<div class="pageinfo pageinfo-primary">
-<pre><code>Page en cours de construction
-</code></pre>
-
-</div>
-
-<p>Afin de gérer l&rsquo;installation de nos composants, nous nous appuyons sur un constructeur d'<code>installer</code> : <a href="https://www.ej-technologies.com/products/install4j/overview.html">Install4j</a></p>
+	<p>Afin de gérer l&rsquo;installation de nos composants, nous nous appuyons sur un constructeur d'<code>installer</code> : <a href="https://www.ej-technologies.com/products/install4j/overview.html">Install4j</a></p>
 <p>Install4j nous permet ainsi de générer et proposer des programmes d&rsquo;installation spécifiques avec les différents modules.</p>
 <p>Une page dédiée est accessible sur le serveur de gestion de clients :</p>
 <p><img src="installers.png" alt="installers"></p>
 <p>Une fois le programme d&rsquo;installation téléchargé, il suffit de suivre le wizard d&rsquo;installation.</p>
+<h2 id="mise-à-jour-automatique">Mise à jour automatique</h2>
+<p>La DevBox-Santé une fois installé peut proposer automatiquement des mises à jour aux utilisateurs :</p>
+<p><img src="update-confirm.png" alt="update-confirme DevBox-santé"></p>
+<p>Une fois confirmé le téléchargement et la mise à jour automatique se fait :</p>
+<p><img src="upload-update.png" alt="upload-update DevBox-santé"></p>
 <h2 id="howtos">Howtos</h2>
 <h4 id="surcharge-dune-propriété-lors-du-démarrage-de-lexécutable">Surcharge d&rsquo;une propriété lors du démarrage de l&rsquo;exécutable</h4>
 <p>Il est possible de surcharger une propriété de la configuration <code>application.yml</code> lors du démarrage de la DevBox-Santé.
@@ -1105,12 +1168,16 @@ Par exemple, pour démarrer la DevBox-Santé sur le port 10002: </p>
         
             
         
+            
+        
+            
+        
     
 </div>
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Dernière modification May 21, 2021: <a  href="/commit/7bce7b6fcf70e82a20ee92e3ddf08a8af64881e1">ajout howtos pour l&#39;installer (7bce7b6)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Dernière modification August 6, 2021: <a  href="/commit/ca23c8b85853847d773ecd982473731fd153adc9">ajout INSi integrateur check list &#43; maj installer (ca23c8b)</a>
 </div>
 </div>
 

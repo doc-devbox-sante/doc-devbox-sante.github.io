@@ -121,6 +121,9 @@ Afin de valider le fonctionnement, ouvrir un navigateur à l&amp;rsquo;adresse s
 &lt;h3 id=&#34;intégration&#34;&gt;Intégration&lt;/h3&gt;
 &lt;p&gt;L&amp;rsquo;ensemble des requêtes sont documentées via l&amp;rsquo;interface swagger et sont accessibles sur l&amp;rsquo;url suivante : http://127.0.0.1:8585/swagger-ui.png&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;insi-swagger.png&#34; alt=&#34;insi-proxy swagger&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
+&lt;p&gt;Les paramètres de configuration du composant DevBox-santé INSi se réalise dans le fichier &lt;code&gt;application.yml&lt;/code&gt;.
+Outre les configurations liées à la sécurité et le port HTTP utilisé, la configuration est identique à celle du &lt;a href=&#34;../configuration&#34;&gt;mode embedded&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
@@ -134,11 +137,9 @@ Afin de valider le fonctionnement, ouvrir un navigateur à l&amp;rsquo;adresse s
       <description>
         
         
-        &lt;h4 id=&#34;applicationyml&#34;&gt;Application.yml&lt;/h4&gt;
+        &lt;h2 id=&#34;configuration--applicationyml&#34;&gt;Configuration  &lt;code&gt;application.yml&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Pour configurer la DevBox-Santé INSi, il suffit de modifier les paramètres du fichier &lt;code&gt;application.yml&lt;/code&gt; :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;cps&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;module.path&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;C:\Windows\System32\cps3_pkcs11_w64.dll&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;insi&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://qualiflps.services-ps.ameli.fr/lps&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;lpsInfo&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
@@ -152,21 +153,46 @@ Afin de valider le fonctionnement, ouvrir un navigateur à l&amp;rsquo;adresse s
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ci-tls-amo&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ssl&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;truststore.path&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;truststoreIgcSante-EL-ORG.jks&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;truststore.password&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;changeit&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pour charger le fichier de configuration :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;java -Dspring.config.location&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;./application.yml -jar insi-proxy.jar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;jeu-de-test-cnda&#34;&gt;Jeu de test CNDA&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;mode-de-sécurité&#34;&gt;Mode de sécurité&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Mode de sécurité CPS, dans le fichier de configuration &lt;code&gt;application.yml&lt;/code&gt; :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;insi&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;security.mode: CPS&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Utiliser ce mode de sécurité pour l&amp;rsquo;utilisation du composant avec l&amp;rsquo;authentification par carte CPS.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mode de sécurité P12, dans le fichier de configuration &lt;code&gt;application.yml&lt;/code&gt; :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;insi&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;security.mode&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;p12&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://qualiflps-services-ps-tlsm.ameli.fr/lps&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;tls.p12&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;À_CHANGER_NOM_FICHIER.p12&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;À_CHANGER_MOT_DE_PASSE_FICHIER.p12&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Utiliser ce mode de sécurité pour l&amp;rsquo;utilisation du composant avec l&amp;rsquo;authentification par certificat serveur.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;ATTENTION&lt;/strong&gt; : les urls des téléservices sont différents en fonction du mode d&amp;rsquo;authentification.&lt;/p&gt;
+&lt;h3 id=&#34;jeu-de-test-cnda&#34;&gt;Jeu de test CNDA&lt;/h3&gt;
 &lt;p&gt;Afin de pouvoir exécuter les tests d&amp;rsquo;injection demandées par le CNDA, il faut lancer le proxy avec le profil CNDA activé.&lt;/p&gt;
 &lt;p&gt;Exemple :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;java -Dspring.profiles.active&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;CNDA -jar insi-proxy.jar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;configuration-de-la-sécurité&#34;&gt;Configuration de la sécurité&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;configuration-de-la-sécurité&#34;&gt;Configuration de la sécurité&lt;/h3&gt;
 &lt;p&gt;Le cps-proxy est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.&lt;/p&gt;
 &lt;p&gt;Exemple de configuration par défaut empêchant toutes les IPs externes :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;cps&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;security&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;authorizedIpAddress&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;127.0.0.1&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;surcharge-les-lpsinfo-dans-le-proxy&#34;&gt;Surcharge les LpsInfo dans le proxy&lt;/h4&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;surcharge-les-lpsinfo-dans-le-proxy&#34;&gt;Surcharge les LpsInfo dans le proxy&lt;/h3&gt;
 &lt;p&gt;La configuration du proxy contient les informations par défaut de configuration du LPS (Logiciel de Professionnel de Santé) cf. paragraphe précédent.
 Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation qui peut être confidentiel) en les passant dans les header HTTP des requêtes.&lt;/p&gt;
 &lt;p&gt;Par exemple :&lt;/p&gt;

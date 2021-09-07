@@ -1021,7 +1021,7 @@ base permettant la création d&amp;rsquo;un DMPCDocument ainsi que son contenu b
 &lt;p&gt;Obtenir un NIE auprès du CNDA&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Signer un protocole avec le CNDA&lt;/p&gt;
+&lt;p&gt;Signer un protocole avec le CNDA : &lt;a href=&#34;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&#34;&gt;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Obtenir les cartes vitales de test DMP&lt;/li&gt;
 &lt;/ul&gt;
@@ -1044,7 +1044,7 @@ base permettant la création d&amp;rsquo;un DMPCDocument ainsi que son contenu b
 &lt;li&gt;
 &lt;p&gt;Choisir les profils d&amp;rsquo;intégration&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;création / administration de DMP&lt;/li&gt;
+&lt;li&gt;création / administration de DMP (DEPRECATED)&lt;/li&gt;
 &lt;li&gt;alimentation&lt;/li&gt;
 &lt;li&gt;consultation&lt;/li&gt;
 &lt;/ul&gt;
@@ -1070,6 +1070,8 @@ base permettant la création d&amp;rsquo;un DMPCDocument ainsi que son contenu b
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;processus-dhomologation&#34;&gt;Processus d&amp;rsquo;homologation&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/&#34;&gt;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;déploiement&#34;&gt;Déploiement&lt;/h2&gt;
 &lt;h3 id=&#34;gestion-des-certificats&#34;&gt;Gestion des certificats&lt;/h3&gt;
 &lt;ul&gt;

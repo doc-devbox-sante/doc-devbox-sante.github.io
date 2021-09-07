@@ -199,8 +199,7 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl -X GET &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;http://localhost:8484/insi/rechercheAvecVitale?identifiantFacturation=12345&amp;#34;&lt;/span&gt; -H &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;accept: application/json&amp;#34;&lt;/span&gt; -H &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;lpsInfo.numeroAutorisation: ÀPréciser&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ainsi le client peut dynamiquement passer les informations du LPS.&lt;/p&gt;
 &lt;h3 id=&#34;packaging-et-déploiement&#34;&gt;Packaging et Déploiement&lt;/h3&gt;
-&lt;p&gt;La DevBox Santé propose des solutions de &amp;ldquo;packaging&amp;rdquo; des différents modules, pour Windows, MacOS et Linux.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;devbox-sante-installation.png&#34; alt=&#34;devbox-sante-installation&#34;&gt;&lt;/p&gt;
+&lt;p&gt;La DevBox Santé &lt;a href=&#34;/docs/installer&#34;&gt;propose des solutions de &amp;ldquo;packaging&amp;rdquo;&lt;/a&gt; des différents modules, pour Windows, MacOS et Linux.&lt;/p&gt;
 
       </description>
     </item>

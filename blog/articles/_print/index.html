@@ -311,8 +311,8 @@ This the multi-page printable view of this section.
         
 	</div>
 	<p>Lors d&rsquo;une session RDP / Citrix, il est possible qu&rsquo;un executable installé puisse accéder aux différents ports USB d&rsquo;un poste client. Pour celà, il faut réaliser un mapping des ports USB (<a href="https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop,">https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop,</a> par exemple)</p>
-<p>La DevBox-santé lancé dans un environnement Citrix/Windows RDP est accessible sur un numéro de port TCP commun à l&rsquo;ensemble des sessions utilisateurs de ce serveur RDP.</p>
-<p>Dans un environnement Citrix/RDP Il est donc important qu&rsquo;une et une seule DevBox-santé soit lancé par poste utilisateur sur un numéro de port TCP différent, afin de faire le lien entre les lecteur branchés sur les ports USB du poste client et le port TCP utilisé.</p>
+<p>La DevBox-santé lancée dans un environnement Citrix/Windows RDP est accessible sur un numéro de port TCP commun à l&rsquo;ensemble des sessions utilisateurs de ce serveur RDP.</p>
+<p>Dans un environnement Citrix/RDP, il est donc important qu&rsquo;une et une seule DevBox-santé soit lancée par poste utilisateur sur un numéro de port TCP différent, afin de faire le lien entre les lecteur branchés sur les ports USB du poste client et le port TCP utilisé :</p>
 <pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Serveur RDP&quot; {
@@ -334,10 +334,10 @@ node &quot;Poste utilisateur 2&quot; {
 
 devbox1 -- usb1 : mapping port USB
 devbox2 -- usb2 : mapping port USB
-</code></pre><p>Dans cet exemple, nous avons deux utilisateurs sur deux postes différents. Sur chacun de ces postes est installé un lecteur de carte.</p>
+</code></pre><p>Dans cet exemple, nous avons deux utilisateurs sur deux postes différents qui ouvrent une session RDP sur un même serveur. Sur chacun de ces postes est installé un lecteur de carte.</p>
 <p>Pour garantir, que l&rsquo;utilisateur 1 puisse accéder à sa DevBox-santé, il faut réaliser un mapping entre la session de l'<strong>utilisateur 1</strong> et le numéro de port <strong>9999</strong>. Idem pour l'<strong>utilisateur 2</strong> et le numéro de port <strong>9998</strong>.</p>
 <blockquote>
-<p><strong>ATTENTION : il n&rsquo;est pas possible de lancer la DevBox-santé en tant que services sur le serveur RDP car il ne pourra pas accéder au port USB du client lors de son lancement.</strong></p>
+<p><strong>ATTENTION : il n&rsquo;est pas possible de lancer la DevBox-santé en tant que service sur le serveur RDP car il ne pourra pas accéder au port USB du client lors de son lancement.</strong></p>
 </blockquote>
 <h3 id="démarrage-à-partir-dune-url-de-la-devbox-santé">Démarrage à partir d&rsquo;une url de la DevBox-santé</h3>
 <p>Il est possible de démarrer la DevBox-santé pour un utilisateur donné via une URL :</p>

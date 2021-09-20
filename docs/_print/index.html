@@ -317,9 +317,44 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1.4: <a href="#pg-a394ac5998ae60cedaeea2d0a722f4ad">Authentifications</a></li>
+<li>1.4: <a href="#pg-f917524b2d2c07e82c769ba5201dd372">Authentifications</a></li>
 
 
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.4.1: <a href="#pg-693787acd093e3d7c4291d13a9317b45">Authentification Indirecte (via certificat serveur)</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.4.2: <a href="#pg-d5ff74ac0ae80510ab46a7b0b0e860b0">Authentification Directe (via carte CPx)</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.4.3: <a href="#pg-6e9b5f8c8bc71af95dc394511a02ae68">Authentification Directe via le CPS Agent</a></li>
+
+
+    
+  
+
+    </ul>
     
   
     
@@ -1513,7 +1548,7 @@ il montre  l&rsquo;usage possible des différents web services fournis.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-a394ac5998ae60cedaeea2d0a722f4ad">1.4 - Authentifications</h1>
+	<h1 id="pg-f917524b2d2c07e82c769ba5201dd372">1.4 - Authentifications</h1>
     <div class="lead">Les différentes mécanismes d&rsquo;authentifications et architectures possibles avec le DMP</div>
 	<h2 id="introduction">Introduction</h2>
 <p>Une des difficultés d&rsquo;intégration avec le DMP consiste à établir une connexion SSL (TLS) en authentification <strong>mutuelle</strong> avec le DMP.
@@ -1528,11 +1563,36 @@ Contrairement aux connexions SSL classiques que nous pouvons avoir avec n&rsquo
 </ul>
 <p><img src="../SEL-MP-037+DMPi_2.04_acteurs_et_objectifs.png" alt="SEL-MP-037+DMPi_2.04_acteurs_et_objectifs"></p>
 <p>Ces deux modes d&rsquo;authentification, peuvent se dériver en différentes architectures en fonction du contexte de l&rsquo;intégrateur.</p>
-<h2 id="authentification-indirecte-certificat">Authentification Indirecte (Certificat)</h2>
-<p>Il s&rsquo;agit de l&rsquo;authentification par certificat serveur.</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-693787acd093e3d7c4291d13a9317b45">1.4.1 - Authentification Indirecte (via certificat serveur)</h1>
+    <div class="lead">Accéder au DMP via un certification d&rsquo;établissement</div>
+	<p>Il s&rsquo;agit de l&rsquo;authentification par certificat serveur provenant de l&rsquo;IGC Santé (Infrastructure de gestion de clés) qui est délivré aux différents établissements de santé.</p>
 <blockquote>
 <p>Une documentation pour obtenir des certificats serveurs se trouve <a href="/docs/dmp/howtos/gestioncertificat/">ici</a>.</p>
 </blockquote>
+<p>Ce mode d&rsquo;authentification ne permet que l&rsquo;alimentation de documents dans le DMP et pas la consultation.</p>
 <p><strong>Description scénario</strong> : L&rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&rsquo;intégre comme une passerelle vers le DMP.</p>
 <h4 id="version-rest">Version REST</h4>
 <h5 id="diagramme-de-composants">Diagramme de composants</h5>
@@ -1572,10 +1632,27 @@ cloud &quot;**DMP**&quot; as DMP
 
 frontend -down-&gt; backend
 DMPC_API -d-&gt; DMP : SOAP XDS / CDA
-</code></pre><h2 id="authentification-directe-cps">Authentification directe CPS</h2>
-<h4 id="version-rest-1">Version REST</h4>
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d5ff74ac0ae80510ab46a7b0b0e860b0">1.4.2 - Authentification Directe (via carte CPx)</h1>
+    <div class="lead">Authentification directe en utilisant les cartes CPx (CPS/CPE&hellip;) et la cryptolib</div>
+	<p>Ce mode d&rsquo;authentification nécessite l&rsquo;installation sur le poste client d&rsquo;un lecteur de carte CPS ainsi que le composant DevBox-santé. Le professionnel de santé doit posséder une carte CPS.</p>
 <p><strong>Scénario possible</strong> : Le frontend/client lourd s&rsquo;exécutant sur le poste client de l&rsquo;utilisateur accède au DMP grâce à la DevBox-Santé DMP installé sur le poste client.</p>
-<h5 id="diagramme-de-composants-2">Diagramme de composants</h5>
+<h4 id="version-rest">Version REST</h4>
+<h5 id="diagramme-de-composants">Diagramme de composants</h5>
 <pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
@@ -1596,9 +1673,45 @@ frontend -right-&gt; dmpFacade : REST
 cps &lt;-up-&gt; cryptolibCPS : appel natif
 dmpFacade -down-&gt; DMP : SOAP
 frontend  -down-&gt; backend
-</code></pre><h2 id="authentification-directe-avec-cpsagent">Authentification Directe avec CPS Agent</h2>
+</code></pre><h4 id="version-embedded">Version Embedded</h4>
+<h5 id="diagramme-de-composants-1">Diagramme de composants</h5>
+<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+node &quot;Poste Client (Windows/Mac/Linux)&quot; {
+    component &quot;Client de l'intégrateur&quot; {
+        component &quot;DevBox-Santé Proxy REST&quot;  DEVBOX_COLOR {
+            component &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {
+                [DevBox-sante CPS] as cps #D34A3C
+
+            }
+        }
+    }
+    [Cryptolib CPS (ANS)] as cryptolibCPS
+}
+cloud &quot;**DMP**&quot; as DMP
+
+cps &lt;--&gt; cryptolibCPS : appel natif
+dmpFacade --&gt; DMP : SOAP
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6e9b5f8c8bc71af95dc394511a02ae68">1.4.3 - Authentification Directe via le CPS Agent</h1>
+    <div class="lead">Authentification via le CPS Agent (Démon sur le poste client minimaliste)</div>
+	<h2 id="authentification-directe-avec-cpsagent">Authentification Directe avec CPS Agent</h2>
 <p><strong>Scenario possible</strong> : Le frontend de l&rsquo;intégrateur, passe le contexte d&rsquo;authentification de la DevBox-Santé CPS agent se trouvant sur le poste client au backend. Le backend initie une session TLS/SSL avec le serveur DMP grâce au CpsAgentClient.</p>
-<h4 id="diagramme-de-composants-3">Diagramme de composants</h4>
+<h4 id="diagramme-de-composants">Diagramme de composants</h4>
 <pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
@@ -1629,7 +1742,7 @@ dmpFacade -down-&gt; DMP : 5
 </code></pre><h4 id="diagramme-de-séquences">Diagramme de séquences</h4>
 <pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
-box &quot;Post Client&quot;
+box &quot;Poste Client&quot;
 participant frontend
 participant cpsAgent CPS_COLOR
 end box
@@ -1666,6 +1779,10 @@ backend -&gt; frontend : ok
 </div>
 
 
+
+    
+	
+  
 
     
 	
@@ -2900,7 +3017,7 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
 <p>Pour pouvoir utiliser le connecteur MS-Santé, il faut au préalable créer un compte selon l&rsquo;opérateur choisi:</p>
 <ul>
 <li>mailiz:  <a href="https://mailiz.mssante.fr/">https://mailiz.mssante.fr/</a></li>
-<li>Apicrypt (en cous de développement): <a href="https://www.apicrypt.org/inscription">https://www.apicrypt.org/inscription</a></li>
+<li>Apicrypt (en cours de développement): <a href="https://www.apicrypt.org/inscription">https://www.apicrypt.org/inscription</a></li>
 </ul>
 <h3 id="authentification">Authentification</h3>
 <h4 id="mailiz">Mailiz</h4>

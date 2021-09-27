@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="canonical" type="text/html" href="/docs/vitale/">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/docs/vitale/">
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/vitale/index.xml">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
@@ -50,8 +50,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
-<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
+<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -226,7 +226,7 @@ java d&rsquo;accéder à la carte vitale.</p>
 <h2 id="implémentation">Implémentation</h2>
 <p>Le module carte-vitale-impl, fournit l&rsquo;implémentation de la <code>VitalFacade</code> qui intègre l&rsquo;API LectureVitale fournit par Sesam Vitale  : <code>PDT-INF-400-API_Lecture_Vitale_6.31.pdf</code></p>
 <p>Exemple de code dans une application Spring Boot :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonComposantVitale</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonComposantVitale</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
     <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
     <span style="color:#000">VitaleFacade</span> <span style="color:#000">vitale</span><span style="color:#ce5c00;font-weight:bold">;</span>
@@ -240,7 +240,7 @@ java d&rsquo;accéder à la carte vitale.</p>
 </code></pre></div><h2 id="proxy-rest">Proxy REST</h2>
 <p>Le module carte-vitale-proxy, permet de fournit une facade REST à la <code>VitaleFacade</code> java.</p>
 <p>L&rsquo;accès au carte-vitale-proxy est indépendant de la technologie utilisée par l&rsquo;intégrateur.</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend 
@@ -263,15 +263,15 @@ frontend -right-&gt; backend : REST
 <ul>
 <li>Récupérer l&rsquo;état des différents lecteurs de carte :</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8585/vitale/availableReaders&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8585/vitale/availableReaders&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
 </code></pre></div><ul>
 <li>Lire les données administratives de la carte vitale</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8585/vitale/readVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8585/vitale/readVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
 </code></pre></div><ul>
 <li>Signer un fichier PDF :</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/signPdf?location=Bordeaux&amp;reason=Parceque&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span> -H <span style="color:#4e9a06">&#34;Content-Type: multipart/form-data&#34;</span> -F <span style="color:#4e9a06">&#34;multipart=@fichier.pdf;type=application/pdf&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/signPdf?location=Bordeaux&amp;reason=Parceque&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span> -H <span style="color:#4e9a06">&#34;Content-Type: multipart/form-data&#34;</span> -F <span style="color:#4e9a06">&#34;multipart=@fichier.pdf;type=application/pdf&#34;</span>
 </code></pre></div><h3 id="configuration">Configuration</h3>
 <p>La carte-vitale-proxy est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.</p>
 
@@ -304,7 +304,7 @@ frontend -right-&gt; backend : REST
 une fois enregistré si l&rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté 
 car les api sesam vitale ne recherche les lecteurs galss que si il n&rsquo;y a pas de lecteurs PS/SC d&rsquo;enregistrés.</p>
 <p>Solution: supprimer dans le fichier api_lec.ini les lecteurs enregistrés.</p>
-<pre><code>[Lecteur]
+<pre tabindex="0"><code>[Lecteur]
 Ressource_Vitale=
 Ressource_CPS=
 </code></pre><blockquote>

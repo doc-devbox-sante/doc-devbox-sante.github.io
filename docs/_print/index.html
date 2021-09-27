@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="canonical" type="text/html" href="/docs/">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/docs/">
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/index.xml">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
@@ -50,8 +50,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
-<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
+<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -794,7 +794,7 @@ Elle suit le guide d&rsquo;intégration définit par le GIE SESAM-Vitale : <a hr
     <div class="lead">Intégrer directement dans votre application spring-boot</div>
 	<h2 id="installer">Installer</h2>
 <p>l&rsquo;utilisation de cette API ne nécessite pas d&rsquo;installation. Il suffit d&rsquo;ajouter les dépendances adequates dans votre projet Maven et définir le repository.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#204a87;font-weight:bold">&lt;dependencies&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#204a87;font-weight:bold">&lt;dependencies&gt;</span>
   <span style="color:#204a87;font-weight:bold">&lt;dependency&gt;</span>
       <span style="color:#204a87;font-weight:bold">&lt;groupId&gt;</span>fr.devboxsante.dmp<span style="color:#204a87;font-weight:bold">&lt;/groupId&gt;</span>
       <span style="color:#204a87;font-weight:bold">&lt;artifactId&gt;</span>dmp-api<span style="color:#204a87;font-weight:bold">&lt;/artifactId&gt;</span>
@@ -825,7 +825,7 @@ Elle suit le guide d&rsquo;intégration définit par le GIE SESAM-Vitale : <a hr
 <p>La DevBox-Santé DMP est une application spring, pour obtenir un client DMP, il faut 
 injecter dans l&rsquo;application la classe implémentant l&rsquo;interface <code>DMPCClient</code> 
 par les mécanismes CDI de spring.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#5c35cc;font-weight:bold">@Component</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#5c35cc;font-weight:bold">@Component</span>
 <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonComposantDMP</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
   <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
@@ -833,7 +833,7 @@ par les mécanismes CDI de spring.</p>
    
 <span style="color:#ce5c00;font-weight:bold">}</span>
 </code></pre></div><h3 id="une-méthode-dans-le-composant">Une méthode dans le composant</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#8f5902;font-style:italic">// Initialisation d&#39;un PS auteur des différentes transactions
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCAuthor</span> <span style="color:#000">ps1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCAuthor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1234&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Dupont&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Pierre&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">ps1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setRole</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Médecin&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>    
@@ -858,7 +858,7 @@ par les mécanismes CDI de spring.</p>
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">TD21Response</span> <span style="color:#000">td21Response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td21SubmitDocuments</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD21Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">submission</span><span style="color:#ce5c00;font-weight:bold">));</span>
 <span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Soumission enregistré avec l&#39;uuid :&#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">td21Response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getSubmission</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">getUuid</span><span style="color:#ce5c00;font-weight:bold">());</span>	
 </code></pre></div><p>Diagrammme de séquences correspondant</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 == Initialisation ==
 DMPCClient -&gt; DMPCClient : readCertificates
@@ -887,7 +887,7 @@ transactions, la DevBox-Santé DMP contient un modèle métier dont les classes 
 Une fois un <code>DMPCClient</code> initialisé, il est possible d&rsquo;obtenir toutes les 
 nomenclatures standard depuis l&rsquo;enum <code>DMPCCode.ASIPJeuxValeurs</code>.</p>
 <p>Exemple de récupération d&rsquo;un DMPCCode :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// Je m&#39;intéresse à la nomenclature SubjectRole
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// Je m&#39;intéresse à la nomenclature SubjectRole
 </span><span style="color:#8f5902;font-style:italic"></span>
 <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">roles</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">SUBJECT_ROLE</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#8f5902;font-style:italic">// liste de tous les codes SubjetRole
@@ -900,14 +900,14 @@ nomenclatures standard depuis l&rsquo;enum <code>DMPCCode.ASIPJeuxValeurs</code>
 
 </code></pre></div><h5 id="dmpcpersonnelsante">DMPCPersonnelSante</h5>
 <p>Exemple d&rsquo;initialisation d&rsquo;un Personnel de Santé</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCPersonnelSante</span> <span style="color:#000">ps1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCPersonnelSante</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">123456</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Durand</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Pierre</span><span style="color:#ce5c00;font-weight:bold">);</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCPersonnelSante</span> <span style="color:#000">ps1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCPersonnelSante</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">123456</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Durand</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Pierre</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">ps1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setRole</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Médecin&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span> 
 <span style="color:#000">ps1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setSpecialite</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;G15_10/SM30&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span> <span style="color:#8f5902;font-style:italic">// c&#39;est le 34ème code : client.getCodesFor(DMPCCode.ASIPJeuxValeurs.AUTHOR_SPECIALITY).get(33).getCode() 
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">ps1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setSecteurActivite</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Devcoop Bureau de Léognan&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span> 
 <span style="color:#000">ps1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getStructureSante</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">setNom</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;SA43&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>  <span style="color:#8f5902;font-style:italic">// Chercher dans l&#39;annuaire de l&#39;ASIP la valeur correspondant au certificat 
 </span></code></pre></div><h5 id="dmpcpatient">DMPCPatient</h5>
 <p>Exemple d&rsquo;initialisation d&rsquo;un Patient</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCPatient</span> <span style="color:#000">patient</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCPatient</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCPatient</span> <span style="color:#000">patient</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCPatient</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setInsc</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">insc</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setNom</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Lascar&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPrenom</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Germain&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
@@ -916,7 +916,7 @@ nomenclatures standard depuis l&rsquo;enum <code>DMPCCode.ASIPJeuxValeurs</code>
 <span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setDateDeNaissance</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;20131212&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 </code></pre></div><h5 id="dmpcdocument">DMPCDocument</h5>
 <p>Exemple d&rsquo;initialisation d&rsquo;un Document</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setClassCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">CLASS_CODE</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">get</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">0</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">getCode</span><span style="color:#ce5c00;font-weight:bold">());</span>
 <span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addConfidentiality</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">CONFIDENTIALITY_CODE</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">get</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">0</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">getCode</span><span style="color:#ce5c00;font-weight:bold">());</span>
 <span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setComments</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;commentDocument&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
@@ -931,7 +931,7 @@ nomenclatures standard depuis l&rsquo;enum <code>DMPCCode.ASIPJeuxValeurs</code>
 </code></pre></div><h5 id="dmpcsubmission">DMPCSubmission</h5>
 <p>Une soumission peut contenir un ou plusieurs <code>DMPCDocument</code>.</p>
 <p>Exemple d&rsquo;initialisation d&rsquo;une soumission</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCSubmission</span> <span style="color:#000">template</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCSubmission</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCSubmission</span> <span style="color:#000">template</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCSubmission</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCDocument</span> <span style="color:#000">currentDocument</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">documents</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
     <span style="color:#000">template</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addDocument</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">currentDocument</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#ce5c00;font-weight:bold">}</span>
@@ -941,11 +941,11 @@ nomenclatures standard depuis l&rsquo;enum <code>DMPCCode.ASIPJeuxValeurs</code>
 </code></pre></div><h3 id="initialisation-du-contexte">Initialisation du contexte</h3>
 <p>L&rsquo;API étant stateless un contexte doit être rappelé pour chaque transaction vers le DMP.
 Un contexte peut être définit de la manière suivante :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCContext</span> <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCContext</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCContext</span> <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCContext</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">DMPCPersonnelSante</span> <span style="color:#000">ps1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#8f5902;font-style:italic">// initialisation d&#39;un personnel de santé responsable de la transaction vers le DMP
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setAuthor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">ps1</span><span style="color:#ce5c00;font-weight:bold">);</span>
 </code></pre></div><p>Exemple d&rsquo;utilisation du contexte dans le cadre d&rsquo;un test d&rsquo;existence</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">));</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">));</span>
         
 </code></pre></div><h5 id="transactions">Transactions</h5>
 <p>L&rsquo;ensemble des transactions sont décrites dans le document <a href="./transactions.html">transactions</a></p>
@@ -991,7 +991,7 @@ Un contexte peut être définit de la manière suivante :</p>
 Le système de la structure de santé doit être en mesure d&rsquo;authentifié ses utilisateurs. Cet identifiant local au système doit être spécifié dans <code>DMPCPersonnelSante.internalId</code> même si le rpps est connu.</p>
 <p>Lors de la lecture de la Carte Vitale, l&rsquo;intégrateur doit être en mesure de définir la provenance du nir (Réel, Test, Démo) passé en paramètres des différentes requêtes en précisant la valeur <code>DMPCContext.DMPCInsNirAutorite</code>.</p>
 <p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCContext</span> <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCContext</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCContext</span> <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCContext</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">DMPCPersonnelSante</span> <span style="color:#000">ps</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCPersonnelSante</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">ps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setInternalId</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1234567890&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">ps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setNom</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Forêt&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
@@ -1006,7 +1006,7 @@ Le système de la structure de santé doit être en mesure d&rsquo;authentifié 
 <h3 id="getparametres-depuis-version-30">getParametres() (depuis version 3.0)</h3>
 <p>Afin de pouvoir récupérer le paramètrage du DMP qui permet de répondre à un certain nombre d&rsquo;exigences notamment les fonctions-gestion-mineurs (EX_GEN-1550). Il faut accéder à la méthode <code>getParametres</code></p>
 <p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#000">DMPCParametres</span> <span style="color:#000">parametres</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">dmpcClient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getParametres</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#000">DMPCParametres</span> <span style="color:#000">parametres</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">dmpcClient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getParametres</span><span style="color:#ce5c00;font-weight:bold">();</span>
 
   <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">parametres</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">isFonctionsGestionMineurs</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#000">agePatient</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span> <span style="color:#000">parametres</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getAgeMajorite</span><span style="color:#ce5c00;font-weight:bold">())</span> <span style="color:#ce5c00;font-weight:bold">{</span>
     <span style="color:#8f5902;font-style:italic">// Attention EX_GEN-1550
@@ -1021,7 +1021,7 @@ Le système de la structure de santé doit être en mesure d&rsquo;authentifié 
 </code></pre></div><h3 id="getcodesfor-depuis-version-10">getCodesFor() (depuis version 1.0)</h3>
 <p>Méthode permettant d&rsquo;accéder aux différents jeux de valeurs imposés par le Guide d&rsquo;intégration.</p>
 <p>notamment :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">enum</span> <span style="color:#000">ASIPJeuxValeurs</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">enum</span> <span style="color:#000">ASIPJeuxValeurs</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
         <span style="color:#000">QUALITE_REPRESENTANT_LEGAL</span><span style="color:#ce5c00;font-weight:bold">,</span>
         <span style="color:#000">AUTHOR_SPECIALITY</span><span style="color:#ce5c00;font-weight:bold">,</span>
@@ -1036,7 +1036,7 @@ Le système de la structure de santé doit être en mesure d&rsquo;authentifié 
         <span style="color:#000">RESTRICTION_AUDIENCE_VIHF</span>
     <span style="color:#ce5c00;font-weight:bold">}</span>
 </code></pre></div><p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">allPersonnelDeSanteSpecialities</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">AUTHOR_SPECIALITY</span><span style="color:#ce5c00;font-weight:bold">);</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">allPersonnelDeSanteSpecialities</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">AUTHOR_SPECIALITY</span><span style="color:#ce5c00;font-weight:bold">);</span>
     <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">allPossibleFormatCodesForADocument</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">FORMAT_CODE</span><span style="color:#ce5c00;font-weight:bold">);</span>
 </code></pre></div><h2 id="transactions-didentification-du-patient">Transactions d&rsquo;identification du patient</h2>
 <h3 id="td-00--acquisition-de-lidentité-du-patient-depuis-version-30">TD 0.0 : Acquisition de l&rsquo;identité du patient (depuis version 3.0)</h3>
@@ -1049,7 +1049,7 @@ Avant le premier accès au DMP d’un patient via les interfaces LPS v2 du syst�
 </ul>
 <p>Pour les accès suivants, le LPS acquiert l’INS du patient stocké en base locale.</p>
 <p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">TD00Request</span> <span style="color:#000">td00Request</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD00Request</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">TD00Request</span> <span style="color:#000">td00Request</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD00Request</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">td00Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setDateNaissance</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;2011-06-07&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">td00Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setNirOuvrantDroit</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCNir</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;211066322074514&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
 <span style="color:#000">td00Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setNirIndividu</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCNir</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;150060475546974&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
@@ -1061,7 +1061,7 @@ Avant le premier accès au DMP d’un patient via les interfaces LPS v2 du syst�
 <p>Cette transaction permet de tester l&rsquo;existence d&rsquo;un DMP et de vérifier les autorisations d&rsquo;accès ainsi que de récupérer les informations concernant la création du compte patient.</p>
 <p>De là peut en découler des actions de créations de DMP, de création de compte internet, ou bien encore de connaître la raison d&rsquo;une interdiction d&rsquo;accès</p>
 <p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">TD02Response</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;211066322074514&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">TD02Response</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;211066322074514&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
 <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getAutorisation</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">equals</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">EXPIRE</span><span style="color:#ce5c00;font-weight:bold">))</span> <span style="color:#ce5c00;font-weight:bold">{</span>
     <span style="color:#8f5902;font-style:italic">// prévoir une client.td03AddAuthorization()
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#ce5c00;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getAutorisation</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">equals</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">INTERDIT</span><span style="color:#ce5c00;font-weight:bold">))</span> <span style="color:#ce5c00;font-weight:bold">{</span>
@@ -1087,7 +1087,7 @@ Avant le premier accès au DMP d’un patient via les interfaces LPS v2 du syst�
 <li>Modifier le statut médecin traitant DMP. Cf. DMP_0.3c.</li>
 </ul>
 <p>Exemple : </p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td03AddAuthorization</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD03Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;211066322074514&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">DMPCRole</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">STANDARD</span><span style="color:#ce5c00;font-weight:bold">));</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td03AddAuthorization</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD03Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;211066322074514&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">DMPCRole</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">STANDARD</span><span style="color:#ce5c00;font-weight:bold">));</span>
 <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td03RemoveAuthorization</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD03Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getIns</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#000">DMPCRole</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">STANDARD</span><span style="color:#ce5c00;font-weight:bold">));</span>
 <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td03AddAuthorization</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD03Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getIns</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#000">DMPCRole</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">MEDECIN_TRAITANT</span><span style="color:#ce5c00;font-weight:bold">));</span>
 </code></pre></div><h3 id="td04">TD0.4</h3>
@@ -1113,7 +1113,7 @@ Le LPS :</p>
 <li>Génére un « document d’accusé de création du DMP » en l’absence d’activation du compte internet du patient (cf. RG_1130).</li>
 </ul>
 <p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// td00 requise avant création d&#39;un DMP
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// td00 requise avant création d&#39;un DMP
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">TD00Request</span> <span style="color:#000">td00Request</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD00Request</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">td00Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setDateNaissance</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;2011-06-07&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">td00Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setNirOuvrantDroit</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCNir</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;211066322074514&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
@@ -1174,7 +1174,7 @@ Le LPS :</p>
 <li>de débloquer le compte internet patient et de régénérer les paramètres de connexion du patient (DMP_1.5d).</li>
 </ul>
 <p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCPatient</span> <span style="color:#000">patient</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">createDMP</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCPatient</span> <span style="color:#000">patient</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">createDMP</span><span style="color:#ce5c00;font-weight:bold">();</span>
         
 <span style="color:#8f5902;font-style:italic">// Création de l&#39;accès internet
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">TD15aRequest</span> <span style="color:#000">aRequest</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD15aRequest</span><span style="color:#ce5c00;font-weight:bold">();</span>
@@ -1226,7 +1226,7 @@ Le LPS :</p>
 </ul>
 <p>Le LPS intégrateur de la DevBox-Santé DMP doit seulement fournir les valeurs des différentes métadonnées liées aux documents et à la soumission par l&rsquo;intermédiaire d&rsquo;un modèle simplifié :</p>
 <p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">//   création du document
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">//   création du document
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addConfidentiality</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;N&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>  <span style="color:#8f5902;font-style:italic">// dans la nomenclature DMPCCode.ASIPJeuxValeurs.CONFIDENTIALITY_CODE
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setComments</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Commentaire du Document&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
@@ -1263,7 +1263,7 @@ Le LPS :</p>
     <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">submittedDocument</span><span style="color:#ce5c00;font-weight:bold">;</span>
 <span style="color:#ce5c00;font-weight:bold">}</span>
 </code></pre></div><p>Pour une soumission de plusieurs documents, il suffit d&rsquo;ajouter les documents à la soumission :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">submission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addDocument</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">document1</span><span style="color:#ce5c00;font-weight:bold">);</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">submission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addDocument</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">document1</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">submission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addDocument</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">document2</span><span style="color:#ce5c00;font-weight:bold">);</span>
 </code></pre></div><h3 id="td31--depuis-version-32">TD3.1 : (depuis version 3.2)</h3>
 <p>Il est possible de faire des recherches de document ainsi que des recherches des documentation</p>
@@ -1271,7 +1271,7 @@ Le LPS :</p>
 <p>Cette fonctionnalité permet, aux LPS qui n’implémentent pas DMP_3.1a, de rechercher l’identifiant technique d’un document (dans le système DMP) à partir de l’identifiant local au LPS de ce document.
 Le LPS peut ensuite supprimer (DMP_3.3c), archiver (DMP_3.3d) ou remplacer un document dans le DMP du patient (DMP_2.1/2.2b).</p>
 <p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">String</span> <span style="color:#000">previousDocumentUniqueId</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">...;</span> <span style="color:#8f5902;font-style:italic">// uniqueId d&#39;un document envoyé précédemment dans le DMP 
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">String</span> <span style="color:#000">previousDocumentUniqueId</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">...;</span> <span style="color:#8f5902;font-style:italic">// uniqueId d&#39;un document envoyé précédemment dans le DMP 
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">TD31bRequest</span> <span style="color:#000">td31bRequest</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD31bRequest</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">td31bRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setDocumentUniqueId</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">previousDocumentUniqueId</span><span style="color:#ce5c00;font-weight:bold">());</span>
 <span style="color:#000">td31bRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setIns</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getIns</span><span style="color:#ce5c00;font-weight:bold">());</span>
@@ -1281,7 +1281,7 @@ Le LPS peut ensuite supprimer (DMP_3.3c), archiver (DMP_3.3d) ou remplacer un do
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">String</span> <span style="color:#000">documentCurrentUuid</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getDocumentUuid</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#8f5902;font-style:italic">// permet le remplacement de document avec une td21submit document ou encore une td33cUnpublished.
 </span></code></pre></div><p>Exemple de remplacement de document après recherche dans le DMP :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// récupération du uuid du document courant dans le DMP
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// récupération du uuid du document courant dans le DMP
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">TD31bRequest</span> <span style="color:#000">td31bRequest</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD31bRequest</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">td31bRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setDocumentUniqueId</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">uniqueIdDuDocumentAremplacer</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">td31bRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setIns</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getIns</span><span style="color:#ce5c00;font-weight:bold">());</span>
@@ -1305,7 +1305,7 @@ La cinématique générale est la suivante :</p>
 <li>Le LPS envoie une requête de mise à jour des attributs d’un document au système DMP</li>
 </ul>
 <p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">TD33CRequest</span> <span style="color:#000">td33cRequest</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD33CRequest</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">TD33CRequest</span> <span style="color:#000">td33cRequest</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD33CRequest</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">td33cRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setDocumentUuid</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">uniqueIdDuDocumentASupprimer</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">td33cRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setIns</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getIns</span><span style="color:#ce5c00;font-weight:bold">());</span> 
 <span style="color:#000">td33cRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setContentType</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">contentTypeDuDocumentASupprimer</span><span style="color:#ce5c00;font-weight:bold">);</span> <span style="color:#8f5902;font-style:italic">// le contentType est le même que pour une soumission de document.
@@ -1368,14 +1368,14 @@ La cinématique générale est la suivante :</p>
 <h2 id="basé-sur-la-source">Basé sur la Source</h2>
 <p>L&rsquo;implémentation par défaut est basée sur les paramètres de la source. Elle est conforme au deuxième point de l&rsquo;exigence :</p>
 <p>La source est définie par les deux paramètres de l'<code>application.yml</code> :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">source</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># 1.2.250.1.287 est l&#39;OID de Devcoop</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># 1.2.250.1.287.1 est l&#39;OID correspondant à la DMPC pour Devcoop</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idRoot</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.287.1</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idExtension</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1234567</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>L&rsquo;implémentation ressemble à cela :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">/**
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">/**
 </span><span style="color:#8f5902;font-style:italic">* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
 </span><span style="color:#8f5902;font-style:italic">*  * un compteur
 </span><span style="color:#8f5902;font-style:italic">*  * et le temps en ms
@@ -1391,7 +1391,7 @@ La cinématique générale est la suivante :</p>
 </code></pre></div><h2 id="basée-sur-luuid">Basée sur l&rsquo;UUID</h2>
 <p>Il est possible d’utiliser une autre implémentation proposée par la DMPC-API pour utiliser l’OID UUID : &ldquo;2.25&rdquo; . Cette implémentation est conforme à la première méthode de l&rsquo;exigence.</p>
 <p>Il suffit de configurer un bean implémentant <code>UniqueIdGenerator</code>, de la manière suivante:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#5c35cc;font-weight:bold">@Configuration</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#5c35cc;font-weight:bold">@Configuration</span>
  <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
     <span style="color:#5c35cc;font-weight:bold">@Bean</span>
@@ -1403,7 +1403,7 @@ La cinématique générale est la suivante :</p>
 <p>Il est néanmoins possible de générer ses UniqueId, l&rsquo;intégrateur devra donc proposer sa propre implémentation du <code>UniqueIdGenerator</code> et de l&rsquo;ajouter à sa configuration spring .</p>
 <p>Attention : Elle devra être conforme à l&rsquo;une des deux exigences mentionnées ci-dessus.</p>
 <p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#5c35cc;font-weight:bold">@Configuration</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#5c35cc;font-weight:bold">@Configuration</span>
  <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
     <span style="color:#5c35cc;font-weight:bold">@Bean</span>
@@ -1454,7 +1454,7 @@ un formalisme simplifié.</p>
 </blockquote>
 <h3 id="déploiement-avec-un-java-runtime-environnement">Déploiement avec un Java Runtime Environnement</h3>
 <p>Pour démarrer le serveur, depuis une ligne de commande exécuter :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>application.yml -jar dmpc-proxy-rest.jar
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>application.yml -jar dmpc-proxy-rest.jar
 </code></pre></div><p>Au lancement du serveur est chargé un fichier de configuration <code>application.yml</code> permettant de 
 charger différents KeyStore les informations concernant le LPS et le serveur DMP.
 Il est initialisé par défaut sur un environnement de test.</p>
@@ -1494,7 +1494,7 @@ Il est initialisé par défaut sur un environnement de test.</p>
 	<h1 id="pg-16f164740bcf3b4b7dd9b403e13c7878">1.3 - SOAP Proxy</h1>
     <div class="lead">Les transactionts du DMP en mode SOAP simplifié</div>
 	<p>L&rsquo;architecture du proxy WS peut être représentée par ce schéma :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Systeme Information Hospitalier / Logiciel de Gestion de Cabinet&quot; {
     component &quot;LogicielIntegrateur&quot; as LogicielIntegrateur
@@ -1515,7 +1515,7 @@ au DMP dans le bon formalisme et dans le respect des différentes transactions,
 il interprète les réponses du serveur DMP et les retourne au client initial dans
 un formalisme simplifié.</p>
 <p>Pour démarrer le serveur, depuis une ligne de commande exécuter :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>application.yml -jar dmpc-proxy-ws.jar
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>application.yml -jar dmpc-proxy-ws.jar
 </code></pre></div><p>Au lancement du serveur est chargé un fichier de configuration <code>application.yml</code> permettant de 
 charger différents KeyStore les informations concernant le LPS et le serveur DMP.
 Il est initialisé par défaut sur un environnement de test.</p>
@@ -1524,7 +1524,7 @@ Il est initialisé par défaut sur un environnement de test.</p>
 <h2 id="le-client">Le Client</h2>
 <p>Le code ci dessous est donnée à titre d&rsquo;exemple de client en Java utilisant CXF, 
 il montre  l&rsquo;usage possible des différents web services fournis.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// Création du client WS 
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// Création du client WS 
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">JaxWsProxyFactoryBean</span> <span style="color:#000">factory</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">JaxWsProxyFactoryBean</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">factory</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getInInterceptors</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">add</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">LoggingInInterceptor</span><span style="color:#ce5c00;font-weight:bold">());</span>
 <span style="color:#000">factory</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getOutInterceptors</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">add</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">LoggingOutInterceptor</span><span style="color:#ce5c00;font-weight:bold">());</span>
@@ -1615,7 +1615,7 @@ Contrairement aux connexions SSL classiques que nous pouvons avoir avec n&rsquo
 <p><strong>Description scénario</strong> : L&rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&rsquo;intégre comme une passerelle vers le DMP.</p>
 <h4 id="version-rest">Version REST</h4>
 <h5 id="diagramme-de-composants">Diagramme de composants</h5>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 [FrontEnd intégrateur] as frontend
 
@@ -1636,7 +1636,7 @@ dmpFacade -down-&gt; DMP : SOAP
 </code></pre><h4 id="version-embedded">Version Embedded</h4>
 <h5 id="diagramme-de-composants-1">Diagramme de composants</h5>
 <p>L&rsquo;architecture du mode embedded peut être représentée par ce schéma :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 [FrontEnd intégrateur] as frontend
 
@@ -1672,7 +1672,7 @@ DMPC_API -d-&gt; DMP : SOAP XDS / CDA
 <p><strong>Scénario possible</strong> : Le frontend/client lourd s&rsquo;exécutant sur le poste client de l&rsquo;utilisateur accède au DMP grâce à la DevBox-Santé DMP installé sur le poste client.</p>
 <h4 id="version-rest">Version REST</h4>
 <h5 id="diagramme-de-composants">Diagramme de composants</h5>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend
@@ -1694,7 +1694,7 @@ dmpFacade -down-&gt; DMP : SOAP
 frontend  -down-&gt; backend
 </code></pre><h4 id="version-embedded">Version Embedded</h4>
 <h5 id="diagramme-de-composants-1">Diagramme de composants</h5>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     component &quot;Client de l'intégrateur&quot; {
@@ -1731,7 +1731,7 @@ dmpFacade --&gt; DMP : SOAP
 	<h2 id="authentification-directe-avec-cpsagent">Authentification Directe avec CPS Agent</h2>
 <p><strong>Scenario possible</strong> : Le frontend de l&rsquo;intégrateur, passe le contexte d&rsquo;authentification de la DevBox-Santé CPS agent se trouvant sur le poste client au backend. Le backend initie une session TLS/SSL avec le serveur DMP grâce au CpsAgentClient.</p>
 <h4 id="diagramme-de-composants">Diagramme de composants</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend
@@ -1759,7 +1759,7 @@ CpsAgentClient -&gt; cpsAgent : 3
 cps -down-&gt; cryptolibCPS : 4
 dmpFacade -down-&gt; DMP : 5
 </code></pre><h4 id="diagramme-de-séquences">Diagramme de séquences</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 box &quot;Poste Client&quot;
 participant frontend
@@ -1850,7 +1850,7 @@ Il s&rsquo;agit du format par défaut exigé par le Guide d&rsquo;intégration ,
 base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binaire.</p>
 <p>La spécification de ce type de document est défini par l&rsquo;ANS. Pour plus de renseignements sur le Volet Structuration minimal de Documents de santé : <a href="https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante">https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante</a></p>
 <p>Un exemple de création de document à structuration minimale est:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#8f5902;font-style:italic">// ajout des métadonnées 
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setClassCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">CLASS_CODE</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">get</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">0</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">getCode</span><span style="color:#ce5c00;font-weight:bold">());</span>
@@ -1899,7 +1899,7 @@ base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binai
 	<p>La DevBox-Santé DMP prend également en charge la soumission de document structure comme le CR d&rsquo;examens biologie.</p>
 <p>Ce format de document est spécifié par l&rsquo;ANS : <a href="https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale">https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale</a></p>
 <p>Un exemple de création de document conforme à la spécification est :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">createCRBiologie</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCStructureSante</span> <span style="color:#000">structureSante</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">createCRBiologie</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCStructureSante</span> <span style="color:#000">structureSante</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">String</span> <span style="color:#000">creationTime</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;20111020194600&#34;</span><span style="color:#ce5c00;font-weight:bold">;</span>
     <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">String</span> <span style="color:#000">startTime</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;20140520174600&#34;</span><span style="color:#ce5c00;font-weight:bold">;</span>
     <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">String</span> <span style="color:#000">stopTime</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;20140520184600&#34;</span><span style="color:#ce5c00;font-weight:bold">;</span>
@@ -1968,7 +1968,7 @@ base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binai
     <span style="color:#000">section</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getObservations</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">add</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">observation</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#ce5c00;font-weight:bold">}</span>
 </code></pre></div><p>La génération un peu longue certe permet de rajouter les sections et observations nécessaires pour générer le document CDA suivant :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#8f5902;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#8f5902;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;</span>
 <span style="color:#204a87;font-weight:bold">&lt;ClinicalDocument</span> <span style="color:#c4a000">xmlns=</span><span style="color:#4e9a06">&#34;urn:hl7-org:v3&#34;</span> <span style="color:#c4a000">xmlns:xsi=</span><span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span> <span style="color:#c4a000">xsi:schemaLocation=</span><span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
     <span style="color:#204a87;font-weight:bold">&lt;realmCode</span> <span style="color:#c4a000">code=</span><span style="color:#4e9a06">&#34;FR&#34;</span><span style="color:#204a87;font-weight:bold">/&gt;</span>
     <span style="color:#204a87;font-weight:bold">&lt;typeId</span> <span style="color:#c4a000">root=</span><span style="color:#4e9a06">&#34;2.16.840.1.113883.1.3&#34;</span> <span style="color:#c4a000">extension=</span><span style="color:#4e9a06">&#34;POCD_HD000040&#34;</span><span style="color:#204a87;font-weight:bold">/&gt;</span>
@@ -2305,7 +2305,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 <li><code>dmpc.ssl.trust.path</code></li>
 </ul>
 <p>Exemple de configuration à fournir :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#8f5902;font-style:italic"># informations relatives au certificat smime</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">smime</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
@@ -2478,12 +2478,12 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 	<p>Comme toute application spring-boot la DevBox-Santé DMP se configure au travers du fichier <code>application.yml</code></p>
 <p>Nous pouvons donc configurer l&rsquo;application spring boot.</p>
 <h3 id="logging">Logging</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">logging.level</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">logging.level</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">fr.devboxsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">info</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">fr.devcoop</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">warn</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">org.springframework</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">error</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><h3 id="spécifique-au-dmp">Spécifique au DMP</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">nomenclature</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic">#Url des jeux de valeurs utilisés pour le DMP</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">resourceName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">JDV DMP_API_V2_XML.zip</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -2512,7 +2512,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># INS NIR réel: 1.2.250.1.213.1.4.8</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">nir</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.213.1.4.10</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>Dont Les urls du DMP </p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">url.prefix</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># environnement production</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000">https://lps-igc-sante.dmp.gouv.fr/</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -2522,7 +2522,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000">https://ledmp.dmp.gouv.fr</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        
 </span></code></pre></div><h3 id="les-informations-du-lps-homologuée">Les informations du LPS homologuée</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">lpsInfo</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">lpsInfo</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">homologationId</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">XXX-xxxxxx-xxx</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">version</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">x.0</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">nom</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">VOTRE_LOGICIEL</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -2537,7 +2537,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 <p>Les modes d&rsquo;authentification supportés par la DevBox-Santé DMP sont les deux demandés dans le guide d&rsquo;intégration du DMP.
 Il s&rsquo;agit du mode d&rsquo;authentification directe (avec l&rsquo;usage de la carte CPS) et indirecte (avec l&rsquo;usage des certificats serveurs)</p>
 <h3 id="authentification-directe">Authentification directe</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification directe utilisant les certificats de la carte CPS</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">cps</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">     
@@ -2546,7 +2546,7 @@ Il s&rsquo;agit du mode d&rsquo;authentification directe (avec l&rsquo;usage de 
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">truststoreIgcSante-EL-ORG.jks</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><h3 id="authentification-indirecte">Authentification indirecte</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">dmpc: </span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification indirecte utilisant les certificats p12 serveurs</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">p12</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -2570,7 +2570,7 @@ Il s&rsquo;agit du mode d&rsquo;authentification directe (avec l&rsquo;usage de 
 </span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">truststoreIgcSante-EL-ORG.jks</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><h3 id="authentification-directe--cpsagent">Authentification directe : CPS Agent</h3>
 <p>Un mode d&rsquo;authentification intégrant le module CPS agent est possible de la manière suivante :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000">dmpc: </span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000">dmpc: </span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification directe depuis le backend par l&#39;intermédiaire d&#39;un agent CPS sur le poste du client</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">withCpsAgent</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div>
@@ -2673,7 +2673,7 @@ Il s&rsquo;agit du mode d&rsquo;authentification directe (avec l&rsquo;usage de 
 	<h2 id="insi-client">INSi Client</h2>
 <p>Le module insi-impl, fournit l&rsquo;implémentation de la facade <code>INSiClient</code> qui intègre les composant devboxsante-cps-api et devboxsante-vitale-api et accède au téléservice INSi géré par SesamVitale.</p>
 <p>Exemple de code dans une application Spring Boot :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonIntegrationINSi</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonIntegrationINSi</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
     <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
     <span style="color:#000">INSiClient</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">;</span>
@@ -2738,7 +2738,7 @@ Il s&rsquo;agit du mode d&rsquo;authentification directe (avec l&rsquo;usage de 
 	<p>Le module insi-proxy, permet de fournit une facade REST à la facade <code>INSiClient</code> java.
 Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.</p>
 <p>L&rsquo;accès a l&rsquo;insi-proxy est donc indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
@@ -2778,7 +2778,7 @@ insFacade &lt;-d-&gt; insi : SOAP
 </ul>
 <h4 id="lancement">Lancement</h4>
 <p>Le livrable s&rsquo;agit d&rsquo;un jar exécutable, qui se lance de la manière suivante</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar insi-proxy.jar
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar insi-proxy.jar
 </code></pre></div><p>Le composant est accessible depuis le poste local en HTTP sur l&rsquo;adresse ip 127.0.0.1.
 Afin de valider le fonctionnement, ouvrir un navigateur à l&rsquo;adresse suivante : http://127.0.0.1:8585</p>
 <p><img src="insi-browser.png" alt="insi-proxy browser"></p>
@@ -2819,7 +2819,7 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
     <div class="lead">Configuration de la DevBox-santé INSi</div>
 	<h2 id="configuration--applicationyml">Configuration  <code>application.yml</code></h2>
 <p>Pour configurer la DevBox-Santé INSi, il suffit de modifier les paramètres du fichier <code>application.yml</code> :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">insi</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">url</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://qualiflps.services-ps.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">lpsInfo</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -2834,41 +2834,86 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">ssl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">truststore.path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">truststoreIgcSante-EL-ORG.jks</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>Pour charger le fichier de configuration :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>./application.yml -jar insi-proxy.jar
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>./application.yml -jar insi-proxy.jar
 </code></pre></div><h3 id="mode-de-sécurité">Mode de sécurité</h3>
+<p>Il existe trois modes d&rsquo;authentification pour accéder au téléservice INSi dans le composant DevBox-Santé :</p>
 <ul>
-<li>
-<p>Mode de sécurité CPS, dans le fichier de configuration <code>application.yml</code> :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<li>CPS : génération des signatures des messages SOAP en utilisant la cryptolib CPS au travers du composant DevBox-Santé CPS.</li>
+<li>P12 : initialisation des connexion TLS avec le Téléservice INSi avec un certificat d&rsquo;établissement p12</li>
+<li>P12Multiple : permet la connexion TLS avec plusieurs certificats d&rsquo;établissements p12</li>
+</ul>
+<p><strong>ATTENTION</strong> : les urls des téléservices sont différents en fonction du mode d&rsquo;authentification.</p>
+<h4 id="cps">CPS </h4>
+<ul>
+<li>Mode de sécurité <code>CPS</code>, dans le fichier de configuration <code>application.yml</code> :</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">insi</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000">security.mode: CPS</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">cps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># url: https://qualiflps.services-ps.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">url</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://lps.services-ps.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>Utiliser ce mode de sécurité pour l&rsquo;utilisation du composant avec l&rsquo;authentification par carte CPS.</p>
-</li>
-<li>
-<p>Mode de sécurité P12, dans le fichier de configuration <code>application.yml</code> :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<h4 id="p12">P12</h4>
+<p>Ce mode de sécurité <code>P12</code>, permet le chargement d&rsquo;un fichier p12 défini le fichier de configuration <code>application.yml</code> :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">insi</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">p12</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">url</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://qualiflps-services-ps-tlsm.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># url: https://qualiflps-services-ps-tlsm.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">url</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://services-ps-tlsm.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">tls.p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">À_CHANGER_NOM_FICHIER.p12</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">À_CHANGER_MOT_DE_PASSE_FICHIER.p12</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>Utiliser ce mode de sécurité pour l&rsquo;utilisation du composant avec l&rsquo;authentification par certificat serveur.</p>
-</li>
+<p><strong>Remarque</strong> : Il existe deux types de certificat les <code>INSI-AUTO</code> et les <code>INSI-MANU</code>. Il s&rsquo;agit d&rsquo;une règle de nommage défini dans les spécifications. Il est demandé par le CNDA d&rsquo;utiliser des certificats <code>INSI-MANU</code> pour tout accès au téléservice INSi par des acteurs humains, et <code>INSI-AUTO</code> pour des accès par des acteurs de traitements automatiques, types batchs.</p>
+<h4 id="p12multiple">P12 Multiple</h4>
+<p>Ce mode de sécurité <code>p12s</code> permet de gérer en une seule installation l&rsquo;ensemble des connexions des différents établissements d&rsquo;un SIH.</p>
+<p>Un <code>AmoP12Provider</code> par défaut va charger un ensemble de fichier P12 à partir de la configuration, comme par exemple :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">insi</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">p12s</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># url: https://qualiflps-services-ps-tlsm.ameli.fr/lpss</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000">url: https://services-ps-tlsm.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">tls</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">           </span><span style="color:#204a87;font-weight:bold">p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">             </span>- <span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">etablissement1-manu</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">PREMIER_CERTIFICAT_MANU.p12</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER_MOT_DE_PASSE_FICHIER</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">             </span>- <span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">etablissement2-manu</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">DEUXIEME_CERTIFICAT_MANU.p12</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER_MOT_DE_PASSE_FICHIER</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">             </span>- <span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">etablissement1-manu</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">AUTRE_CERTIFICAT_AUTO.p12</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER_MOT_DE_PASSE_FICHIER</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><p>Il est toutefois possible de définir un autre <code>AmoP12Provider</code>, il suffit de configurer un nouvau Bean Spring avec une autre implémentation. Comme par exemple, une implémentation qui va charger le certificat en base de données :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#5c35cc;font-weight:bold">@Component</span>
+ <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">FromDatabaseP12Provider</span> <span style="color:#204a87;font-weight:bold">implements</span> <span style="color:#000">AmoP12Provider</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+
+    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">AmoP12</span> <span style="color:#000">getP12</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+        <span style="color:#8f5902;font-style:italic">// chargement en base de donnée des informations du certificat ayant pour nom name.
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#ce5c00;font-weight:bold">}</span>
+ <span style="color:#ce5c00;font-weight:bold">}</span>
+</code></pre></div><p>Pour charger dynamiquement un certificat il suffit de rajouter le nom du certificat (<code>amoP12.name</code>) dans le header de la requête HTTP :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8484/insi/rechercheAvecVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;amoP12.name: ÀPréciser&#34;</span>
+</code></pre></div><h3 id="jeu-de-test-cnda">Jeu de test CNDA</h3>
+<p>Afin de pouvoir exécuter les tests d&rsquo;injection demandées par le CNDA, il faut lancer le proxy avec l&rsquo;un des profils spring activés suivant :</p>
+<ul>
+<li><code>CNDA_WEB</code> : rajoute un nouvel endpoint CNDA permettant l&rsquo;injection des fichiers de test XML du CNDA.</li>
+<li><code>CNDA</code> : rajoute un menu dans le <code>TrayIcon</code> du système d&rsquo;exploitation permettant l&rsquo;injection des fichiers de test XML du CNDA.</li>
 </ul>
-<p><strong>ATTENTION</strong> : les urls des téléservices sont différents en fonction du mode d&rsquo;authentification.</p>
-<h3 id="jeu-de-test-cnda">Jeu de test CNDA</h3>
-<p>Afin de pouvoir exécuter les tests d&rsquo;injection demandées par le CNDA, il faut lancer le proxy avec le profil CNDA activé.</p>
 <p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.profiles.active<span style="color:#ce5c00;font-weight:bold">=</span>CNDA -jar insi-proxy.jar
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.profiles.active<span style="color:#ce5c00;font-weight:bold">=</span>CNDA_WEB -jar insi-proxy.jar
 </code></pre></div><h3 id="configuration-de-la-sécurité">Configuration de la sécurité</h3>
 <p>Le cps-proxy est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.</p>
 <p>Exemple de configuration par défaut empêchant toutes les IPs externes :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">cps</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">authorizedIpAddress</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -2876,7 +2921,7 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
 <p>La configuration du proxy contient les informations par défaut de configuration du LPS (Logiciel de Professionnel de Santé) cf. paragraphe précédent.
 Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation qui peut être confidentiel) en les passant dans les header HTTP des requêtes.</p>
 <p>Par exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8484/insi/rechercheAvecVitale?identifiantFacturation=12345&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;lpsInfo.numeroAutorisation: ÀPréciser&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8484/insi/rechercheAvecVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;lpsInfo.numeroAutorisation: ÀPréciser&#34;</span>
 </code></pre></div><p>Ainsi le client peut dynamiquement passer les informations du LPS.</p>
 <h3 id="packaging-et-déploiement">Packaging et Déploiement</h3>
 <p>La DevBox Santé <a href="/docs/installer">propose des solutions de &ldquo;packaging&rdquo;</a> des différents modules, pour Windows, MacOS et Linux.</p>
@@ -3045,11 +3090,11 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
 <ul>
 <li>par carte CPS (nécéssite l&rsquo;installation du module cps de DevBox-Santé) :</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000">authentificationWithCps</span><span style="color:#000;font-weight:bold">()</span> 
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000">authentificationWithCps</span><span style="color:#000;font-weight:bold">()</span> 
 </code></pre></div><ul>
 <li>par carte OTP, cette othentification s&rsquo;effectue en 2 étapes :</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
     <span style="color:#000">otpParameters</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
         <span style="color:#000">otpCanalType</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">SMS</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#000">Mail</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#8f5902;font-style:italic">// canal pour recevoir l&#39;otp
 </span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#000">otpCanalPwd</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">password</span><span style="color:#000;font-weight:bold">,</span>
@@ -3063,12 +3108,12 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
     <span style="color:#8f5902;font-style:italic">// dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&#39;utilisateur
 </span></code></pre></div><h4 id="apicrypt">Apicrypt</h4>
 <p>un mode d&rsquo;authentification avec le compagnon :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000">authentificationWithApiCrypt</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">username</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">password</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">)</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000">authentificationWithApiCrypt</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">username</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">password</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">)</span>
 </code></pre></div><h3 id="services">Services</h3>
 <p>Les services suivants sont disponibles en mode embarqué,
 ils ont tous leur équivalent en REST avec l&rsquo;email passé en paramètre.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl  GET https://mss-demo.devbox-sante.fr/mssante/folders?email<span style="color:#ce5c00;font-weight:bold">=</span>xxxxxx@medecin.formation.mssante.fr
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#8f5902;font-style:italic">// Récupères les adresses mail du PS
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl  GET https://mss-demo.devbox-sante.fr/mssante/folders?email<span style="color:#ce5c00;font-weight:bold">=</span>xxxxxx@medecin.formation.mssante.fr
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#8f5902;font-style:italic">// Récupères les adresses mail du PS
 </span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">String</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">getEmails</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
 
     <span style="color:#8f5902;font-style:italic">// Récupération des dossiers (en cours, brouillon, ...)
@@ -3177,7 +3222,7 @@ java d&rsquo;accéder à la carte CPS3.</p>
 <h2 id="implémentation">Implémentation</h2>
 <p>Le module cps-impl, fournit l&rsquo;implémentation de la <code>CPSFacade</code> qui intègre la <a href="https://esante.gouv.fr/services/espace-cps/telechargements-libres/cryptolib-cps-windows">Cryptolib CPS</a>  de l&rsquo;ANS.</p>
 <p>Exemple de code dans une application Spring Boot :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonComposantCPS</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonComposantCPS</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
     <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
     <span style="color:#000">CPSFacade</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">;</span>
@@ -3199,7 +3244,7 @@ java d&rsquo;accéder à la carte CPS3.</p>
 <p>Le module cps-pdf, contient le code permettant de générer des signatures PDF  <a href="https://helpx.adobe.com/fr/acrobat/using/signing-pdfs.html">https://helpx.adobe.com/fr/acrobat/using/signing-pdfs.html</a>.</p>
 <p>Il s&rsquo;appuie sur la librairie apache PDF-BOX.</p>
 <p>Exemple de code :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">PdfSignatureInfo</span> <span style="color:#000">pdfSignatureInfo</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">PdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">PdfSignatureInfo</span> <span style="color:#000">pdfSignatureInfo</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">PdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">pdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setLocation</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Léognan, FRANCE&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">pdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setReason</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Parceque&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 
@@ -3207,7 +3252,7 @@ java d&rsquo;accéder à la carte CPS3.</p>
 </code></pre></div><h2 id="proxy-rest">Proxy REST</h2>
 <p>Le module cps-proxy, permet de fournit une facade REST à la <code>CPSFacade</code> java.</p>
 <p>L&rsquo;accès au CPS-proxy est indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend 
@@ -3230,19 +3275,19 @@ frontend -right-&gt; backend : REST
 <ul>
 <li>Récupérer l&rsquo;état des différents lecteurs de carte :</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/readersInfo&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/readersInfo&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
 </code></pre></div><ul>
 <li>Lire les informations de la carte</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/cardInfo&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/cardInfo&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
 </code></pre></div><ul>
 <li>Signer un fichier PDF :</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/signPdf?location=Bordeaux&amp;reason=Parceque&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span> -H <span style="color:#4e9a06">&#34;Content-Type: multipart/form-data&#34;</span> -F <span style="color:#4e9a06">&#34;multipart=@fichier.pdf;type=application/pdf&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/signPdf?location=Bordeaux&amp;reason=Parceque&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span> -H <span style="color:#4e9a06">&#34;Content-Type: multipart/form-data&#34;</span> -F <span style="color:#4e9a06">&#34;multipart=@fichier.pdf;type=application/pdf&#34;</span>
 </code></pre></div><h3 id="configuration">Configuration</h3>
 <p>Le cps-proxy est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.</p>
 <p>Exemple de configuration de base empêchant toutes les IPs externes :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">cps</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">authorizedIpAddress</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -3310,7 +3355,7 @@ java d&rsquo;accéder à la carte vitale.</p>
 <h2 id="implémentation">Implémentation</h2>
 <p>Le module carte-vitale-impl, fournit l&rsquo;implémentation de la <code>VitalFacade</code> qui intègre l&rsquo;API LectureVitale fournit par Sesam Vitale  : <code>PDT-INF-400-API_Lecture_Vitale_6.31.pdf</code></p>
 <p>Exemple de code dans une application Spring Boot :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonComposantVitale</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonComposantVitale</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
     <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
     <span style="color:#000">VitaleFacade</span> <span style="color:#000">vitale</span><span style="color:#ce5c00;font-weight:bold">;</span>
@@ -3324,7 +3369,7 @@ java d&rsquo;accéder à la carte vitale.</p>
 </code></pre></div><h2 id="proxy-rest">Proxy REST</h2>
 <p>Le module carte-vitale-proxy, permet de fournit une facade REST à la <code>VitaleFacade</code> java.</p>
 <p>L&rsquo;accès au carte-vitale-proxy est indépendant de la technologie utilisée par l&rsquo;intégrateur.</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend 
@@ -3347,15 +3392,15 @@ frontend -right-&gt; backend : REST
 <ul>
 <li>Récupérer l&rsquo;état des différents lecteurs de carte :</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8585/vitale/availableReaders&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8585/vitale/availableReaders&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
 </code></pre></div><ul>
 <li>Lire les données administratives de la carte vitale</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8585/vitale/readVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8585/vitale/readVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
 </code></pre></div><ul>
 <li>Signer un fichier PDF :</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/signPdf?location=Bordeaux&amp;reason=Parceque&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span> -H <span style="color:#4e9a06">&#34;Content-Type: multipart/form-data&#34;</span> -F <span style="color:#4e9a06">&#34;multipart=@fichier.pdf;type=application/pdf&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/signPdf?location=Bordeaux&amp;reason=Parceque&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span> -H <span style="color:#4e9a06">&#34;Content-Type: multipart/form-data&#34;</span> -F <span style="color:#4e9a06">&#34;multipart=@fichier.pdf;type=application/pdf&#34;</span>
 </code></pre></div><h3 id="configuration">Configuration</h3>
 <p>La carte-vitale-proxy est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.</p>
 
@@ -3390,7 +3435,7 @@ frontend -right-&gt; backend : REST
 une fois enregistré si l&rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté 
 car les api sesam vitale ne recherche les lecteurs galss que si il n&rsquo;y a pas de lecteurs PS/SC d&rsquo;enregistrés.</p>
 <p>Solution: supprimer dans le fichier api_lec.ini les lecteurs enregistrés.</p>
-<pre><code>[Lecteur]
+<pre tabindex="0"><code>[Lecteur]
 Ressource_Vitale=
 Ressource_CPS=
 </code></pre><blockquote>
@@ -3484,7 +3529,7 @@ Ressource_CPS=
 <h4 id="surcharge-dune-propriété-lors-du-démarrage-de-lexécutable">Surcharge d&rsquo;une propriété lors du démarrage de l&rsquo;exécutable</h4>
 <p>Il est possible de surcharger une propriété de la configuration <code>application.yml</code> lors du démarrage de la DevBox-Santé.
 Par exemple, pour démarrer la DevBox-Santé sur le port 10002: </p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#4e9a06">&#34;C:\Program Files\DevBoxSante\DevBoxSante.exe&#34;</span> --server.port<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">10002</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#4e9a06">&#34;C:\Program Files\DevBoxSante\DevBoxSante.exe&#34;</span> --server.port<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">10002</span>
 </code></pre></div>
 </div>
 

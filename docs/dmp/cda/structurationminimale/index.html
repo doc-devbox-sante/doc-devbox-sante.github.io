@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -24,12 +24,12 @@ La spécification de ce type de document est défini par l&rsquo;ANS. Pour plus 
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/dmp/cda/structurationminimale/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-05-12T18:55:36&#43;02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2021-05-12T18:55:36+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="CDA structuration minimale">
 <meta itemprop="description" content="CDA de Structuration minimale La DevBox-Santé DMP prend en charge la soumission de document à structuration minimale. Il s&rsquo;agit du format par défaut exigé par le Guide d&rsquo;intégration , il contient les métadonnées de base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binaire.
 La spécification de ce type de document est défini par l&rsquo;ANS. Pour plus de renseignements sur le Volet Structuration minimal de Documents de santé : https://esante.">
-<meta itemprop="dateModified" content="2021-05-12T18:55:36&#43;02:00" />
+<meta itemprop="dateModified" content="2021-05-12T18:55:36+02:00" />
 <meta itemprop="wordCount" content="143">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="CDA structuration minimale"/>
@@ -53,8 +53,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
-<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
+<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -1214,7 +1214,7 @@ Il s&rsquo;agit du format par défaut exigé par le Guide d&rsquo;intégration ,
 base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binaire.</p>
 <p>La spécification de ce type de document est défini par l&rsquo;ANS. Pour plus de renseignements sur le Volet Structuration minimal de Documents de santé : <a href="https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante">https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante</a></p>
 <p>Un exemple de création de document à structuration minimale est:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#8f5902;font-style:italic">// ajout des métadonnées 
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setClassCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">CLASS_CODE</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">get</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">0</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">getCode</span><span style="color:#ce5c00;font-weight:bold">());</span>

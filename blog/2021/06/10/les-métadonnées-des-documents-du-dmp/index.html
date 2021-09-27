@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -23,13 +23,13 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/2021/06/10/les-m%C3%A9tadonn%C3%A9es-des-documents-du-dmp/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-06-10T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-06-10T18:54:29&#43;02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:published_time" content="2021-06-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-06-10T18:54:29+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Les métadonnées des documents du DMP">
 <meta itemprop="description" content="La gestion des différentes métadonnées dans la DevBoxSanté DMP.
-"><meta itemprop="datePublished" content="2021-06-10T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-06-10T18:54:29&#43;02:00" />
+"><meta itemprop="datePublished" content="2021-06-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-06-10T18:54:29+02:00" />
 <meta itemprop="wordCount" content="405">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Les métadonnées des documents du DMP"/>
@@ -53,8 +53,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
-<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
+<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -685,10 +685,10 @@ if (!doNotTrack) {
 <p><img src="20210610_rechercheCIM10.png" alt="20210610_rechercheCIM10.png"></p>
 <p>Dans ce même document [CI_ANX_CDA], on peut lire également et surtout qu&rsquo;il y a une correspondance entre le <strong><code>ClinicalDocument/documentationOf/serviceEvent/code</code></strong> et le <strong><code>XDSDocumentEntry.eventCodes</code></strong>.</p>
 <p>Donc si nous codons avec l&rsquo;API Java les lignes suivantes :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addEvent</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;H33&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Décollement et déchirement de la rétine&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
 </code></pre></div><p>ou encore si nous avons dans notre requete REST <code>/td21SubmitDocuments</code>:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
         <span style="color:#204a87;font-weight:bold">&#34;submission&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
             <span style="color:#204a87;font-weight:bold">&#34;documents&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
@@ -702,7 +702,7 @@ if (!doNotTrack) {
       <span style="color:#a40000">...</span>
 <span style="color:#a40000">}</span>
 </code></pre></div><p>La DevBox-Santé DMP, va générer la transaction XDS contenu dans la requête SOAP à destination du DMP. Cette dernière contiendra : </p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#204a87;font-weight:bold">&lt;ExtrinsicObject</span> <span style="color:#c4a000">id=</span><span style="color:#4e9a06">&#34;urn:uuid:8aaa0dc6-9d9e-43d0-88d1-a58833cd6b7d&#34;</span> <span style="color:#c4a000">mimeType=</span><span style="color:#4e9a06">&#34;text/xml&#34;</span> <span style="color:#c4a000">objectType=</span><span style="color:#4e9a06">&#34;urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#204a87;font-weight:bold">&lt;ExtrinsicObject</span> <span style="color:#c4a000">id=</span><span style="color:#4e9a06">&#34;urn:uuid:8aaa0dc6-9d9e-43d0-88d1-a58833cd6b7d&#34;</span> <span style="color:#c4a000">mimeType=</span><span style="color:#4e9a06">&#34;text/xml&#34;</span> <span style="color:#c4a000">objectType=</span><span style="color:#4e9a06">&#34;urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
    <span style="color:#204a87;font-weight:bold">&lt;Classification</span> <span style="color:#c4a000">classificationScheme=</span><span style="color:#4e9a06">&#34;urn:uuid:2c6b8cb7-8b2a-4051-b291-b1ae6a575ef4&#34;</span> <span style="color:#c4a000">classifiedObject=</span><span style="color:#4e9a06">&#34;urn:uuid:8aaa0dc6-9d9e-43d0-88d1-a58833cd6b7d&#34;</span> <span style="color:#c4a000">nodeRepresentation=</span><span style="color:#4e9a06">&#34;H33&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
          <span style="color:#204a87;font-weight:bold">&lt;Slot</span> <span style="color:#c4a000">name=</span><span style="color:#4e9a06">&#34;codingScheme&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
             <span style="color:#204a87;font-weight:bold">&lt;ValueList&gt;</span>
@@ -714,7 +714,7 @@ if (!doNotTrack) {
          <span style="color:#204a87;font-weight:bold">&lt;/Name&gt;</span>
    <span style="color:#204a87;font-weight:bold">&lt;/Classification&gt;</span>
 </code></pre></div><p>Le document CDA généré contiendra :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#8f5902;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#8f5902;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;</span>
 <span style="color:#204a87;font-weight:bold">&lt;ClinicalDocument</span> <span style="color:#c4a000">xmlns=</span><span style="color:#4e9a06">&#34;urn:hl7-org:v3&#34;</span> <span style="color:#c4a000">xmlns:xsi=</span><span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span> <span style="color:#c4a000">xsi:schemaLocation=</span><span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
     ...
     <span style="color:#204a87;font-weight:bold">&lt;documentationOf&gt;</span>

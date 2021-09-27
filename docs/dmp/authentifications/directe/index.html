@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -24,12 +24,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/dmp/authentifications/directe/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-09-20T15:50:35&#43;02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2021-09-20T15:50:35+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Authentification Directe (via carte CPx)">
 <meta itemprop="description" content="Authentification directe en utilisant les cartes CPx (CPS/CPE...) et la cryptolib
 ">
-<meta itemprop="dateModified" content="2021-09-20T15:50:35&#43;02:00" />
+<meta itemprop="dateModified" content="2021-09-20T15:50:35+02:00" />
 <meta itemprop="wordCount" content="182">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Authentification Directe (via carte CPx)"/>
@@ -53,8 +53,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
-<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
+<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -1212,7 +1212,7 @@ if (!doNotTrack) {
 <p><strong>Scénario possible</strong> : Le frontend/client lourd s&rsquo;exécutant sur le poste client de l&rsquo;utilisateur accède au DMP grâce à la DevBox-Santé DMP installé sur le poste client.</p>
 <h4 id="version-rest">Version REST</h4>
 <h5 id="diagramme-de-composants">Diagramme de composants</h5>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend
@@ -1234,7 +1234,7 @@ dmpFacade -down-&gt; DMP : SOAP
 frontend  -down-&gt; backend
 </code></pre><h4 id="version-embedded">Version Embedded</h4>
 <h5 id="diagramme-de-composants-1">Diagramme de composants</h5>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     component &quot;Client de l'intégrateur&quot; {

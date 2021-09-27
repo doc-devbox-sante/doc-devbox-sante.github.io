@@ -30,7 +30,7 @@
 &lt;p&gt;&lt;strong&gt;Description scénario&lt;/strong&gt; : L&amp;rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&amp;rsquo;intégre comme une passerelle vers le DMP.&lt;/p&gt;
 &lt;h4 id=&#34;version-rest&#34;&gt;Version REST&lt;/h4&gt;
 &lt;h5 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h5&gt;
-&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 [FrontEnd intégrateur] as frontend
 
@@ -51,7 +51,7 @@ dmpFacade -down-&amp;gt; DMP : SOAP
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;version-embedded&#34;&gt;Version Embedded&lt;/h4&gt;
 &lt;h5 id=&#34;diagramme-de-composants-1&#34;&gt;Diagramme de composants&lt;/h5&gt;
 &lt;p&gt;L&amp;rsquo;architecture du mode embedded peut être représentée par ce schéma :&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 [FrontEnd intégrateur] as frontend
 
@@ -83,7 +83,7 @@ DMPC_API -d-&amp;gt; DMP : SOAP XDS / CDA
 &lt;p&gt;&lt;strong&gt;Scénario possible&lt;/strong&gt; : Le frontend/client lourd s&amp;rsquo;exécutant sur le poste client de l&amp;rsquo;utilisateur accède au DMP grâce à la DevBox-Santé DMP installé sur le poste client.&lt;/p&gt;
 &lt;h4 id=&#34;version-rest&#34;&gt;Version REST&lt;/h4&gt;
 &lt;h5 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h5&gt;
-&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
     [FrontEnd intégrateur] as frontend
@@ -105,7 +105,7 @@ dmpFacade -down-&amp;gt; DMP : SOAP
 frontend  -down-&amp;gt; backend
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;version-embedded&#34;&gt;Version Embedded&lt;/h4&gt;
 &lt;h5 id=&#34;diagramme-de-composants-1&#34;&gt;Diagramme de composants&lt;/h5&gt;
-&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
     component &amp;quot;Client de l&#39;intégrateur&amp;quot; {
@@ -138,7 +138,7 @@ dmpFacade --&amp;gt; DMP : SOAP
         &lt;h2 id=&#34;authentification-directe-avec-cpsagent&#34;&gt;Authentification Directe avec CPS Agent&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Scenario possible&lt;/strong&gt; : Le frontend de l&amp;rsquo;intégrateur, passe le contexte d&amp;rsquo;authentification de la DevBox-Santé CPS agent se trouvant sur le poste client au backend. Le backend initie une session TLS/SSL avec le serveur DMP grâce au CpsAgentClient.&lt;/p&gt;
 &lt;h4 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h4&gt;
-&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
     [FrontEnd intégrateur] as frontend
@@ -166,7 +166,7 @@ CpsAgentClient -&amp;gt; cpsAgent : 3
 cps -down-&amp;gt; cryptolibCPS : 4
 dmpFacade -down-&amp;gt; DMP : 5
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;diagramme-de-séquences&#34;&gt;Diagramme de séquences&lt;/h4&gt;
-&lt;pre&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 box &amp;quot;Poste Client&amp;quot;
 participant frontend

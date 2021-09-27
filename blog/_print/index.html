@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="canonical" type="text/html" href="/blog/">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/blog/">
 <link rel="alternate" type="application/rss&#43;xml" href="/blog/index.xml">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
@@ -47,8 +47,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
-<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
+<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -405,7 +405,7 @@ sur les différentes livraisons des composants/connecteurs de la DevBox-santé.<
 
   
 
-<div class="td-content" style="page-break-before: always">
+<div class="td-content" style="">
     <h1 id="pg-a82d6b720dfe848387a0b7aa1db8a11d">Articles</h1>
 	
 	<div class="td-byline mb-4">
@@ -450,7 +450,7 @@ sur les différentes livraisons des composants/connecteurs de la DevBox-santé.<
 	<p>Lors d&rsquo;une session RDP / Citrix, il est possible qu&rsquo;un executable installé puisse accéder aux différents ports USB d&rsquo;un poste client. Pour celà, il faut réaliser un mapping des ports USB (<a href="https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop,">https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop,</a> par exemple)</p>
 <p>La DevBox-santé lancée dans un environnement Citrix/Windows RDP est accessible sur un numéro de port TCP commun à l&rsquo;ensemble des sessions utilisateurs de ce serveur RDP.</p>
 <p>Dans un environnement Citrix/RDP, il est donc important qu&rsquo;une et une seule DevBox-santé soit lancée par poste utilisateur sur un numéro de port TCP différent, afin de faire le lien entre les lecteur branchés sur les ports USB du poste client et le port TCP utilisé :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Serveur RDP&quot; {
  package &quot;Session Utilisateur 1&quot; {
@@ -478,7 +478,7 @@ devbox2 -- usb2 : mapping port USB
 </blockquote>
 <h3 id="démarrage-à-partir-dune-url-de-la-devbox-santé">Démarrage à partir d&rsquo;une url de la DevBox-santé</h3>
 <p>Il est possible de démarrer la DevBox-santé pour un utilisateur donné via une URL :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">devboxsante://config?server.port<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">10000</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">devboxsante://config?server.port<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">10000</span>
 </code></pre></div>
 </div>
 
@@ -527,10 +527,10 @@ devbox2 -- usb2 : mapping port USB
 <p><img src="20210610_rechercheCIM10.png" alt="20210610_rechercheCIM10.png"></p>
 <p>Dans ce même document [CI_ANX_CDA], on peut lire également et surtout qu&rsquo;il y a une correspondance entre le <strong><code>ClinicalDocument/documentationOf/serviceEvent/code</code></strong> et le <strong><code>XDSDocumentEntry.eventCodes</code></strong>.</p>
 <p>Donc si nous codons avec l&rsquo;API Java les lignes suivantes :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addEvent</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;H33&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Décollement et déchirement de la rétine&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
 </code></pre></div><p>ou encore si nous avons dans notre requete REST <code>/td21SubmitDocuments</code>:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
         <span style="color:#204a87;font-weight:bold">&#34;submission&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
             <span style="color:#204a87;font-weight:bold">&#34;documents&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
@@ -544,7 +544,7 @@ devbox2 -- usb2 : mapping port USB
       <span style="color:#a40000">...</span>
 <span style="color:#a40000">}</span>
 </code></pre></div><p>La DevBox-Santé DMP, va générer la transaction XDS contenu dans la requête SOAP à destination du DMP. Cette dernière contiendra : </p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#204a87;font-weight:bold">&lt;ExtrinsicObject</span> <span style="color:#c4a000">id=</span><span style="color:#4e9a06">&#34;urn:uuid:8aaa0dc6-9d9e-43d0-88d1-a58833cd6b7d&#34;</span> <span style="color:#c4a000">mimeType=</span><span style="color:#4e9a06">&#34;text/xml&#34;</span> <span style="color:#c4a000">objectType=</span><span style="color:#4e9a06">&#34;urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#204a87;font-weight:bold">&lt;ExtrinsicObject</span> <span style="color:#c4a000">id=</span><span style="color:#4e9a06">&#34;urn:uuid:8aaa0dc6-9d9e-43d0-88d1-a58833cd6b7d&#34;</span> <span style="color:#c4a000">mimeType=</span><span style="color:#4e9a06">&#34;text/xml&#34;</span> <span style="color:#c4a000">objectType=</span><span style="color:#4e9a06">&#34;urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
    <span style="color:#204a87;font-weight:bold">&lt;Classification</span> <span style="color:#c4a000">classificationScheme=</span><span style="color:#4e9a06">&#34;urn:uuid:2c6b8cb7-8b2a-4051-b291-b1ae6a575ef4&#34;</span> <span style="color:#c4a000">classifiedObject=</span><span style="color:#4e9a06">&#34;urn:uuid:8aaa0dc6-9d9e-43d0-88d1-a58833cd6b7d&#34;</span> <span style="color:#c4a000">nodeRepresentation=</span><span style="color:#4e9a06">&#34;H33&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
          <span style="color:#204a87;font-weight:bold">&lt;Slot</span> <span style="color:#c4a000">name=</span><span style="color:#4e9a06">&#34;codingScheme&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
             <span style="color:#204a87;font-weight:bold">&lt;ValueList&gt;</span>
@@ -556,7 +556,7 @@ devbox2 -- usb2 : mapping port USB
          <span style="color:#204a87;font-weight:bold">&lt;/Name&gt;</span>
    <span style="color:#204a87;font-weight:bold">&lt;/Classification&gt;</span>
 </code></pre></div><p>Le document CDA généré contiendra :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#8f5902;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#8f5902;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;</span>
 <span style="color:#204a87;font-weight:bold">&lt;ClinicalDocument</span> <span style="color:#c4a000">xmlns=</span><span style="color:#4e9a06">&#34;urn:hl7-org:v3&#34;</span> <span style="color:#c4a000">xmlns:xsi=</span><span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span> <span style="color:#c4a000">xsi:schemaLocation=</span><span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
     ...
     <span style="color:#204a87;font-weight:bold">&lt;documentationOf&gt;</span>
@@ -628,10 +628,10 @@ Exemple, dans Windows : <a href="https://docs.microsoft.com/en-us/previous-versi
 <p>Le navigateur nous propose de lancer l&rsquo;exécutable sur le poste de l&rsquo;utilisateur :</p>
 <p><img src="2021-05-27_lancement_depuis_navigateur.png" alt="DevBox-sante lancer depuis le navigateur"></p>
 <p>Il est possible de le faire simplement en javascript depuis une page html de votre client :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">html</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">body</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">open</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;devboxsante://&#34;</span><span style="color:#000;font-weight:bold">);&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">body</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">html</span><span style="color:#000;font-weight:bold">&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">html</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">body</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">open</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;devboxsante://&#34;</span><span style="color:#000;font-weight:bold">);&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">body</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">html</span><span style="color:#000;font-weight:bold">&gt;</span>
 </code></pre></div><p>Comme si ça ne suffisait pas, il est également possible de passer dans l&rsquo;url un ensemble d&rsquo;arguments configurables par ce mécanisme. 
 Par exemple, le numéro de port :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">devboxsante://config?server.port<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">10000</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">devboxsante://config?server.port<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">10000</span>
 </code></pre></div><p>Par ce type de mécanisme, il est possible de lancer la devbox-sante avec un contexte qui est le votre et moyennant un callback vers vos serveurs lier la DevBox-Santé avec une session utilisateur.</p>
 
 </div>
@@ -685,7 +685,7 @@ des habilitations : <a href="https://www.dmp.fr/matrice-habilitation">https://ww
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#5c35cc;font-weight:bold">@Autowired</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#5c35cc;font-weight:bold">@Autowired</span>
 <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">DMPCClient</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">;</span>
 <span style="color:#ce5c00;font-weight:bold">...</span>
 <span style="color:#8f5902;font-style:italic">// Récupération des différents classCode
@@ -695,7 +695,7 @@ des habilitations : <a href="https://www.dmp.fr/matrice-habilitation">https://ww
 </code></pre></div><ul>
 <li>API REST</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request GET <span style="color:#4e9a06">&#39;https://dmpc-api-rest-3-1.herokuapp.com/proxy/nomenclatures/?jeuxValeurs=TYPE_CODE&#39;</span> <span style="color:#4e9a06">\
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request GET <span style="color:#4e9a06">&#39;https://dmpc-api-rest-3-1.herokuapp.com/proxy/nomenclatures/?jeuxValeurs=TYPE_CODE&#39;</span> <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;Content-Type: application/json&#39;</span> <span style="color:#4e9a06">\
 </span></code></pre></div><h3 id="lors-de-lhomologation">Lors de l&rsquo;homologation</h3>
 <p>Exemple de test à valider lors de l&rsquo;homologation :</p>

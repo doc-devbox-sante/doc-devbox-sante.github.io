@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="alternate" type="text/html" href="/docs/cps/_print/">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="alternate" type="text/html" href="/docs/cps/_print/">
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/cps/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -50,8 +50,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
-<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
+<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -1208,7 +1208,7 @@ java d&rsquo;accéder à la carte CPS3.</p>
 <h2 id="implémentation">Implémentation</h2>
 <p>Le module cps-impl, fournit l&rsquo;implémentation de la <code>CPSFacade</code> qui intègre la <a href="https://esante.gouv.fr/services/espace-cps/telechargements-libres/cryptolib-cps-windows">Cryptolib CPS</a>  de l&rsquo;ANS.</p>
 <p>Exemple de code dans une application Spring Boot :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonComposantCPS</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonComposantCPS</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
     <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
     <span style="color:#000">CPSFacade</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">;</span>
@@ -1230,7 +1230,7 @@ java d&rsquo;accéder à la carte CPS3.</p>
 <p>Le module cps-pdf, contient le code permettant de générer des signatures PDF  <a href="https://helpx.adobe.com/fr/acrobat/using/signing-pdfs.html">https://helpx.adobe.com/fr/acrobat/using/signing-pdfs.html</a>.</p>
 <p>Il s&rsquo;appuie sur la librairie apache PDF-BOX.</p>
 <p>Exemple de code :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">PdfSignatureInfo</span> <span style="color:#000">pdfSignatureInfo</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">PdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">PdfSignatureInfo</span> <span style="color:#000">pdfSignatureInfo</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">PdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">pdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setLocation</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Léognan, FRANCE&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">pdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setReason</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Parceque&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 
@@ -1238,7 +1238,7 @@ java d&rsquo;accéder à la carte CPS3.</p>
 </code></pre></div><h2 id="proxy-rest">Proxy REST</h2>
 <p>Le module cps-proxy, permet de fournit une facade REST à la <code>CPSFacade</code> java.</p>
 <p>L&rsquo;accès au CPS-proxy est indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend 
@@ -1261,19 +1261,19 @@ frontend -right-&gt; backend : REST
 <ul>
 <li>Récupérer l&rsquo;état des différents lecteurs de carte :</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/readersInfo&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/readersInfo&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
 </code></pre></div><ul>
 <li>Lire les informations de la carte</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/cardInfo&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/cardInfo&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
 </code></pre></div><ul>
 <li>Signer un fichier PDF :</li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/signPdf?location=Bordeaux&amp;reason=Parceque&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span> -H <span style="color:#4e9a06">&#34;Content-Type: multipart/form-data&#34;</span> -F <span style="color:#4e9a06">&#34;multipart=@fichier.pdf;type=application/pdf&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/signPdf?location=Bordeaux&amp;reason=Parceque&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span> -H <span style="color:#4e9a06">&#34;Content-Type: multipart/form-data&#34;</span> -F <span style="color:#4e9a06">&#34;multipart=@fichier.pdf;type=application/pdf&#34;</span>
 </code></pre></div><h3 id="configuration">Configuration</h3>
 <p>Le cps-proxy est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.</p>
 <p>Exemple de configuration de base empêchant toutes les IPs externes :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">cps</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">authorizedIpAddress</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">

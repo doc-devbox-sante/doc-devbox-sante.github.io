@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -23,13 +23,13 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/2021/09/20/devbox-sant%C3%A9-dans-un-environnement-rdp/citrix/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-09-20T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-09-20T16:17:33&#43;02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:published_time" content="2021-09-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-20T16:17:33+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="DevBox-santé dans un environnement RDP/Citrix">
 <meta itemprop="description" content="Démarrer la DevBox-Santé dans un environnement RDP / Citrix
-"><meta itemprop="datePublished" content="2021-09-20T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-09-20T16:17:33&#43;02:00" />
+"><meta itemprop="datePublished" content="2021-09-20T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-09-20T16:17:33+02:00" />
 <meta itemprop="wordCount" content="299">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="DevBox-santé dans un environnement RDP/Citrix"/>
@@ -53,8 +53,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
-<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
+<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -666,7 +666,7 @@ if (!doNotTrack) {
 	<p>Lors d&rsquo;une session RDP / Citrix, il est possible qu&rsquo;un executable installé puisse accéder aux différents ports USB d&rsquo;un poste client. Pour celà, il faut réaliser un mapping des ports USB (<a href="https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop,">https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop,</a> par exemple)</p>
 <p>La DevBox-santé lancée dans un environnement Citrix/Windows RDP est accessible sur un numéro de port TCP commun à l&rsquo;ensemble des sessions utilisateurs de ce serveur RDP.</p>
 <p>Dans un environnement Citrix/RDP, il est donc important qu&rsquo;une et une seule DevBox-santé soit lancée par poste utilisateur sur un numéro de port TCP différent, afin de faire le lien entre les lecteur branchés sur les ports USB du poste client et le port TCP utilisé :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Serveur RDP&quot; {
  package &quot;Session Utilisateur 1&quot; {
@@ -694,7 +694,7 @@ devbox2 -- usb2 : mapping port USB
 </blockquote>
 <h3 id="démarrage-à-partir-dune-url-de-la-devbox-santé">Démarrage à partir d&rsquo;une url de la DevBox-santé</h3>
 <p>Il est possible de démarrer la DevBox-santé pour un utilisateur donné via une URL :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">devboxsante://config?server.port<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">10000</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">devboxsante://config?server.port<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">10000</span>
 </code></pre></div>
 	
 

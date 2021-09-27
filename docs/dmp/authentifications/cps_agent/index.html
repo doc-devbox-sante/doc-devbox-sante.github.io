@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -24,12 +24,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/dmp/authentifications/cps_agent/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-09-20T15:50:35&#43;02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2021-09-20T15:50:35+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Authentification Directe via le CPS Agent">
 <meta itemprop="description" content="Authentification via le CPS Agent (Démon sur le poste client minimaliste)
 ">
-<meta itemprop="dateModified" content="2021-09-20T15:50:35&#43;02:00" />
+<meta itemprop="dateModified" content="2021-09-20T15:50:35+02:00" />
 <meta itemprop="wordCount" content="352">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Authentification Directe via le CPS Agent"/>
@@ -53,8 +53,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
-<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
+<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -1221,7 +1221,7 @@ if (!doNotTrack) {
 	<h2 id="authentification-directe-avec-cpsagent">Authentification Directe avec CPS Agent</h2>
 <p><strong>Scenario possible</strong> : Le frontend de l&rsquo;intégrateur, passe le contexte d&rsquo;authentification de la DevBox-Santé CPS agent se trouvant sur le poste client au backend. Le backend initie une session TLS/SSL avec le serveur DMP grâce au CpsAgentClient.</p>
 <h4 id="diagramme-de-composants">Diagramme de composants</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend
@@ -1249,7 +1249,7 @@ CpsAgentClient -&gt; cpsAgent : 3
 cps -down-&gt; cryptolibCPS : 4
 dmpFacade -down-&gt; DMP : 5
 </code></pre><h4 id="diagramme-de-séquences">Diagramme de séquences</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 box &quot;Poste Client&quot;
 participant frontend

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="canonical" type="text/html" href="/docs/insi/">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/docs/insi/">
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/insi/index.xml">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
@@ -50,8 +50,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
-<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
+<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -354,7 +354,7 @@ This the multi-page printable view of this section.
 	<h2 id="insi-client">INSi Client</h2>
 <p>Le module insi-impl, fournit l&rsquo;implémentation de la facade <code>INSiClient</code> qui intègre les composant devboxsante-cps-api et devboxsante-vitale-api et accède au téléservice INSi géré par SesamVitale.</p>
 <p>Exemple de code dans une application Spring Boot :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonIntegrationINSi</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonIntegrationINSi</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 
     <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
     <span style="color:#000">INSiClient</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">;</span>
@@ -419,7 +419,7 @@ This the multi-page printable view of this section.
 	<p>Le module insi-proxy, permet de fournit une facade REST à la facade <code>INSiClient</code> java.
 Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.</p>
 <p>L&rsquo;accès a l&rsquo;insi-proxy est donc indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
@@ -459,7 +459,7 @@ insFacade &lt;-d-&gt; insi : SOAP
 </ul>
 <h4 id="lancement">Lancement</h4>
 <p>Le livrable s&rsquo;agit d&rsquo;un jar exécutable, qui se lance de la manière suivante</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar insi-proxy.jar
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar insi-proxy.jar
 </code></pre></div><p>Le composant est accessible depuis le poste local en HTTP sur l&rsquo;adresse ip 127.0.0.1.
 Afin de valider le fonctionnement, ouvrir un navigateur à l&rsquo;adresse suivante : http://127.0.0.1:8585</p>
 <p><img src="insi-browser.png" alt="insi-proxy browser"></p>
@@ -500,7 +500,7 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
     <div class="lead">Configuration de la DevBox-santé INSi</div>
 	<h2 id="configuration--applicationyml">Configuration  <code>application.yml</code></h2>
 <p>Pour configurer la DevBox-Santé INSi, il suffit de modifier les paramètres du fichier <code>application.yml</code> :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">insi</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">url</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://qualiflps.services-ps.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">lpsInfo</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -515,41 +515,86 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">ssl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">truststore.path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">truststoreIgcSante-EL-ORG.jks</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>Pour charger le fichier de configuration :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>./application.yml -jar insi-proxy.jar
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>./application.yml -jar insi-proxy.jar
 </code></pre></div><h3 id="mode-de-sécurité">Mode de sécurité</h3>
+<p>Il existe trois modes d&rsquo;authentification pour accéder au téléservice INSi dans le composant DevBox-Santé :</p>
 <ul>
-<li>
-<p>Mode de sécurité CPS, dans le fichier de configuration <code>application.yml</code> :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<li>CPS : génération des signatures des messages SOAP en utilisant la cryptolib CPS au travers du composant DevBox-Santé CPS.</li>
+<li>P12 : initialisation des connexion TLS avec le Téléservice INSi avec un certificat d&rsquo;établissement p12</li>
+<li>P12Multiple : permet la connexion TLS avec plusieurs certificats d&rsquo;établissements p12</li>
+</ul>
+<p><strong>ATTENTION</strong> : les urls des téléservices sont différents en fonction du mode d&rsquo;authentification.</p>
+<h4 id="cps">CPS </h4>
+<ul>
+<li>Mode de sécurité <code>CPS</code>, dans le fichier de configuration <code>application.yml</code> :</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">insi</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000">security.mode: CPS</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">cps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># url: https://qualiflps.services-ps.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">url</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://lps.services-ps.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>Utiliser ce mode de sécurité pour l&rsquo;utilisation du composant avec l&rsquo;authentification par carte CPS.</p>
-</li>
-<li>
-<p>Mode de sécurité P12, dans le fichier de configuration <code>application.yml</code> :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<h4 id="p12">P12</h4>
+<p>Ce mode de sécurité <code>P12</code>, permet le chargement d&rsquo;un fichier p12 défini le fichier de configuration <code>application.yml</code> :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">insi</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">p12</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">url</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://qualiflps-services-ps-tlsm.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># url: https://qualiflps-services-ps-tlsm.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">url</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://services-ps-tlsm.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">tls.p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">À_CHANGER_NOM_FICHIER.p12</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">À_CHANGER_MOT_DE_PASSE_FICHIER.p12</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>Utiliser ce mode de sécurité pour l&rsquo;utilisation du composant avec l&rsquo;authentification par certificat serveur.</p>
-</li>
+<p><strong>Remarque</strong> : Il existe deux types de certificat les <code>INSI-AUTO</code> et les <code>INSI-MANU</code>. Il s&rsquo;agit d&rsquo;une règle de nommage défini dans les spécifications. Il est demandé par le CNDA d&rsquo;utiliser des certificats <code>INSI-MANU</code> pour tout accès au téléservice INSi par des acteurs humains, et <code>INSI-AUTO</code> pour des accès par des acteurs de traitements automatiques, types batchs.</p>
+<h4 id="p12multiple">P12 Multiple</h4>
+<p>Ce mode de sécurité <code>p12s</code> permet de gérer en une seule installation l&rsquo;ensemble des connexions des différents établissements d&rsquo;un SIH.</p>
+<p>Un <code>AmoP12Provider</code> par défaut va charger un ensemble de fichier P12 à partir de la configuration, comme par exemple :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">insi</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">p12s</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># url: https://qualiflps-services-ps-tlsm.ameli.fr/lpss</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000">url: https://services-ps-tlsm.ameli.fr/lps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">tls</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">           </span><span style="color:#204a87;font-weight:bold">p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">             </span>- <span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">etablissement1-manu</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">PREMIER_CERTIFICAT_MANU.p12</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER_MOT_DE_PASSE_FICHIER</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">             </span>- <span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">etablissement2-manu</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">DEUXIEME_CERTIFICAT_MANU.p12</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER_MOT_DE_PASSE_FICHIER</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">             </span>- <span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">etablissement1-manu</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">AUTRE_CERTIFICAT_AUTO.p12</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER_MOT_DE_PASSE_FICHIER</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><p>Il est toutefois possible de définir un autre <code>AmoP12Provider</code>, il suffit de configurer un nouvau Bean Spring avec une autre implémentation. Comme par exemple, une implémentation qui va charger le certificat en base de données :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#5c35cc;font-weight:bold">@Component</span>
+ <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">FromDatabaseP12Provider</span> <span style="color:#204a87;font-weight:bold">implements</span> <span style="color:#000">AmoP12Provider</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+
+    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">AmoP12</span> <span style="color:#000">getP12</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+        <span style="color:#8f5902;font-style:italic">// chargement en base de donnée des informations du certificat ayant pour nom name.
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#ce5c00;font-weight:bold">}</span>
+ <span style="color:#ce5c00;font-weight:bold">}</span>
+</code></pre></div><p>Pour charger dynamiquement un certificat il suffit de rajouter le nom du certificat (<code>amoP12.name</code>) dans le header de la requête HTTP :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8484/insi/rechercheAvecVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;amoP12.name: ÀPréciser&#34;</span>
+</code></pre></div><h3 id="jeu-de-test-cnda">Jeu de test CNDA</h3>
+<p>Afin de pouvoir exécuter les tests d&rsquo;injection demandées par le CNDA, il faut lancer le proxy avec l&rsquo;un des profils spring activés suivant :</p>
+<ul>
+<li><code>CNDA_WEB</code> : rajoute un nouvel endpoint CNDA permettant l&rsquo;injection des fichiers de test XML du CNDA.</li>
+<li><code>CNDA</code> : rajoute un menu dans le <code>TrayIcon</code> du système d&rsquo;exploitation permettant l&rsquo;injection des fichiers de test XML du CNDA.</li>
 </ul>
-<p><strong>ATTENTION</strong> : les urls des téléservices sont différents en fonction du mode d&rsquo;authentification.</p>
-<h3 id="jeu-de-test-cnda">Jeu de test CNDA</h3>
-<p>Afin de pouvoir exécuter les tests d&rsquo;injection demandées par le CNDA, il faut lancer le proxy avec le profil CNDA activé.</p>
 <p>Exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.profiles.active<span style="color:#ce5c00;font-weight:bold">=</span>CNDA -jar insi-proxy.jar
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.profiles.active<span style="color:#ce5c00;font-weight:bold">=</span>CNDA_WEB -jar insi-proxy.jar
 </code></pre></div><h3 id="configuration-de-la-sécurité">Configuration de la sécurité</h3>
 <p>Le cps-proxy est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.</p>
 <p>Exemple de configuration par défaut empêchant toutes les IPs externes :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">cps</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">authorizedIpAddress</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -557,7 +602,7 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
 <p>La configuration du proxy contient les informations par défaut de configuration du LPS (Logiciel de Professionnel de Santé) cf. paragraphe précédent.
 Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation qui peut être confidentiel) en les passant dans les header HTTP des requêtes.</p>
 <p>Par exemple :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8484/insi/rechercheAvecVitale?identifiantFacturation=12345&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;lpsInfo.numeroAutorisation: ÀPréciser&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8484/insi/rechercheAvecVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;lpsInfo.numeroAutorisation: ÀPréciser&#34;</span>
 </code></pre></div><p>Ainsi le client peut dynamiquement passer les informations du LPS.</p>
 <h3 id="packaging-et-déploiement">Packaging et Déploiement</h3>
 <p>La DevBox Santé <a href="/docs/installer">propose des solutions de &ldquo;packaging&rdquo;</a> des différents modules, pour Windows, MacOS et Linux.</p>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="canonical" type="text/html" href="/docs/dmp/cda/">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/docs/dmp/cda/">
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/dmp/cda/index.xml">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
@@ -50,8 +50,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
-<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
+<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -261,7 +261,7 @@ Il s&rsquo;agit du format par défaut exigé par le Guide d&rsquo;intégration ,
 base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binaire.</p>
 <p>La spécification de ce type de document est défini par l&rsquo;ANS. Pour plus de renseignements sur le Volet Structuration minimal de Documents de santé : <a href="https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante">https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante</a></p>
 <p>Un exemple de création de document à structuration minimale est:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#8f5902;font-style:italic">// ajout des métadonnées 
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setClassCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">CLASS_CODE</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">get</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">0</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">getCode</span><span style="color:#ce5c00;font-weight:bold">());</span>
@@ -310,7 +310,7 @@ base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binai
 	<p>La DevBox-Santé DMP prend également en charge la soumission de document structure comme le CR d&rsquo;examens biologie.</p>
 <p>Ce format de document est spécifié par l&rsquo;ANS : <a href="https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale">https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale</a></p>
 <p>Un exemple de création de document conforme à la spécification est :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">createCRBiologie</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCStructureSante</span> <span style="color:#000">structureSante</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">createCRBiologie</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCStructureSante</span> <span style="color:#000">structureSante</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">String</span> <span style="color:#000">creationTime</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;20111020194600&#34;</span><span style="color:#ce5c00;font-weight:bold">;</span>
     <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">String</span> <span style="color:#000">startTime</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;20140520174600&#34;</span><span style="color:#ce5c00;font-weight:bold">;</span>
     <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">String</span> <span style="color:#000">stopTime</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;20140520184600&#34;</span><span style="color:#ce5c00;font-weight:bold">;</span>
@@ -379,7 +379,7 @@ base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binai
     <span style="color:#000">section</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getObservations</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">add</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">observation</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#ce5c00;font-weight:bold">}</span>
 </code></pre></div><p>La génération un peu longue certe permet de rajouter les sections et observations nécessaires pour générer le document CDA suivant :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#8f5902;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#8f5902;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;</span>
 <span style="color:#204a87;font-weight:bold">&lt;ClinicalDocument</span> <span style="color:#c4a000">xmlns=</span><span style="color:#4e9a06">&#34;urn:hl7-org:v3&#34;</span> <span style="color:#c4a000">xmlns:xsi=</span><span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span> <span style="color:#c4a000">xsi:schemaLocation=</span><span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
     <span style="color:#204a87;font-weight:bold">&lt;realmCode</span> <span style="color:#c4a000">code=</span><span style="color:#4e9a06">&#34;FR&#34;</span><span style="color:#204a87;font-weight:bold">/&gt;</span>
     <span style="color:#204a87;font-weight:bold">&lt;typeId</span> <span style="color:#c4a000">root=</span><span style="color:#4e9a06">&#34;2.16.840.1.113883.1.3&#34;</span> <span style="color:#c4a000">extension=</span><span style="color:#4e9a06">&#34;POCD_HD000040&#34;</span><span style="color:#204a87;font-weight:bold">/&gt;</span>

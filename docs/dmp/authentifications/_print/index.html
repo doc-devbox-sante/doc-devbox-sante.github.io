@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="canonical" type="text/html" href="/docs/dmp/authentifications/">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/docs/dmp/authentifications/">
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/dmp/authentifications/index.xml">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
@@ -50,8 +50,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
-<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
+<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -280,7 +280,7 @@ Contrairement aux connexions SSL classiques que nous pouvons avoir avec n&rsquo
 <p><strong>Description scénario</strong> : L&rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&rsquo;intégre comme une passerelle vers le DMP.</p>
 <h4 id="version-rest">Version REST</h4>
 <h5 id="diagramme-de-composants">Diagramme de composants</h5>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 [FrontEnd intégrateur] as frontend
 
@@ -301,7 +301,7 @@ dmpFacade -down-&gt; DMP : SOAP
 </code></pre><h4 id="version-embedded">Version Embedded</h4>
 <h5 id="diagramme-de-composants-1">Diagramme de composants</h5>
 <p>L&rsquo;architecture du mode embedded peut être représentée par ce schéma :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 [FrontEnd intégrateur] as frontend
 
@@ -337,7 +337,7 @@ DMPC_API -d-&gt; DMP : SOAP XDS / CDA
 <p><strong>Scénario possible</strong> : Le frontend/client lourd s&rsquo;exécutant sur le poste client de l&rsquo;utilisateur accède au DMP grâce à la DevBox-Santé DMP installé sur le poste client.</p>
 <h4 id="version-rest">Version REST</h4>
 <h5 id="diagramme-de-composants">Diagramme de composants</h5>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend
@@ -359,7 +359,7 @@ dmpFacade -down-&gt; DMP : SOAP
 frontend  -down-&gt; backend
 </code></pre><h4 id="version-embedded">Version Embedded</h4>
 <h5 id="diagramme-de-composants-1">Diagramme de composants</h5>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     component &quot;Client de l'intégrateur&quot; {
@@ -396,7 +396,7 @@ dmpFacade --&gt; DMP : SOAP
 	<h2 id="authentification-directe-avec-cpsagent">Authentification Directe avec CPS Agent</h2>
 <p><strong>Scenario possible</strong> : Le frontend de l&rsquo;intégrateur, passe le contexte d&rsquo;authentification de la DevBox-Santé CPS agent se trouvant sur le poste client au backend. Le backend initie une session TLS/SSL avec le serveur DMP grâce au CpsAgentClient.</p>
 <h4 id="diagramme-de-composants">Diagramme de composants</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [FrontEnd intégrateur] as frontend
@@ -424,7 +424,7 @@ CpsAgentClient -&gt; cpsAgent : 3
 cps -down-&gt; cryptolibCPS : 4
 dmpFacade -down-&gt; DMP : 5
 </code></pre><h4 id="diagramme-de-séquences">Diagramme de séquences</h4>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 box &quot;Poste Client&quot;
 participant frontend

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="alternate" type="text/html" href="/docs/dmp/soap/_print/">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="alternate" type="text/html" href="/docs/dmp/soap/_print/">
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/dmp/soap/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -50,8 +50,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" as="style">
-<link href="/scss/main.min.94cd3b3a4678dd2884a3d0eeadc90d524afc825a63d2f856ef1d45486639d8c3.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
+<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -1196,7 +1196,7 @@ if (!doNotTrack) {
         <div class="lead">Les transactionts du DMP en mode SOAP simplifié</div>
 	
 	<p>L&rsquo;architecture du proxy WS peut être représentée par ce schéma :</p>
-<pre><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
 node &quot;Systeme Information Hospitalier / Logiciel de Gestion de Cabinet&quot; {
     component &quot;LogicielIntegrateur&quot; as LogicielIntegrateur
@@ -1217,7 +1217,7 @@ au DMP dans le bon formalisme et dans le respect des différentes transactions,
 il interprète les réponses du serveur DMP et les retourne au client initial dans
 un formalisme simplifié.</p>
 <p>Pour démarrer le serveur, depuis une ligne de commande exécuter :</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>application.yml -jar dmpc-proxy-ws.jar
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>application.yml -jar dmpc-proxy-ws.jar
 </code></pre></div><p>Au lancement du serveur est chargé un fichier de configuration <code>application.yml</code> permettant de 
 charger différents KeyStore les informations concernant le LPS et le serveur DMP.
 Il est initialisé par défaut sur un environnement de test.</p>
@@ -1226,7 +1226,7 @@ Il est initialisé par défaut sur un environnement de test.</p>
 <h2 id="le-client">Le Client</h2>
 <p>Le code ci dessous est donnée à titre d&rsquo;exemple de client en Java utilisant CXF, 
 il montre  l&rsquo;usage possible des différents web services fournis.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// Création du client WS 
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// Création du client WS 
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">JaxWsProxyFactoryBean</span> <span style="color:#000">factory</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">JaxWsProxyFactoryBean</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">factory</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getInInterceptors</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">add</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">LoggingInInterceptor</span><span style="color:#ce5c00;font-weight:bold">());</span>
 <span style="color:#000">factory</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getOutInterceptors</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">add</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">LoggingOutInterceptor</span><span style="color:#ce5c00;font-weight:bold">());</span>

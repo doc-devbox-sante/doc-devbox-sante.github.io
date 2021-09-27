@@ -29,7 +29,7 @@
 une fois enregistré si l&amp;rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté 
 car les api sesam vitale ne recherche les lecteurs galss que si il n&amp;rsquo;y a pas de lecteurs PS/SC d&amp;rsquo;enregistrés.&lt;/p&gt;
 &lt;p&gt;Solution: supprimer dans le fichier api_lec.ini les lecteurs enregistrés.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Lecteur]
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[Lecteur]
 Ressource_Vitale=
 Ressource_CPS=
 &lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;

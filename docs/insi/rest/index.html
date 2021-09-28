@@ -1186,6 +1186,7 @@ if (!doNotTrack) {
         <li><a href="#installation-du-proxy">Installation du Proxy</a></li>
         <li><a href="#intégration">Intégration</a></li>
         <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#utilisation-de-linstaller-devbox-santé">Utilisation de l&rsquo;installer DevBox-Santé</a></li>
       </ul>
     </li>
   </ul>
@@ -1279,15 +1280,23 @@ insFacade &lt;-d-&gt; insi : SOAP
 <h4 id="lancement">Lancement</h4>
 <p>Le livrable s&rsquo;agit d&rsquo;un jar exécutable, qui se lance de la manière suivante</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar insi-proxy-rest-*.jar
-</code></pre></div><p>Le composant est accessible depuis le poste local en HTTP sur l&rsquo;adresse ip 127.0.0.1.
-Afin de valider le fonctionnement, ouvrir un navigateur à l&rsquo;adresse suivante : http://127.0.0.1:8585</p>
+</code></pre></div><p>Le composant est accessible depuis le poste local en HTTP sur l&rsquo;adresse ip 127.0.0.1 avec un numéro de port configurer par défaut :</p>
+<ul>
+<li>mode de sécurité cps : 8484</li>
+<li>mode de sécurité p12 : 8485</li>
+<li>mode de sécurité p12s : 8486</li>
+</ul>
+<p>Afin de valider le fonctionnement, ouvrir un navigateur à l&rsquo;adresse suivante : http://127.0.0.1:PORT</p>
 <p><img src="insi-browser.png" alt="insi-proxy browser"></p>
 <h3 id="intégration">Intégration</h3>
-<p>L&rsquo;ensemble des requêtes sont documentées via l&rsquo;interface swagger et sont accessibles sur l&rsquo;url suivante : http://127.0.0.1:8585/swagger-ui.png</p>
+<p>L&rsquo;ensemble des requêtes sont documentées via l&rsquo;interface swagger et sont accessibles sur l&rsquo;url suivante : http://127.0.0.1:PORT/swagger-ui.png</p>
 <p><img src="insi-swagger.png" alt="insi-proxy swagger"></p>
 <h3 id="configuration">Configuration</h3>
 <p>Les paramètres de configuration du composant DevBox-santé INSi se réalise dans le fichier <code>application.yml</code>.
 Outre les configurations liées à la sécurité et le port HTTP utilisé, la configuration est identique à celle du <a href="../configuration">mode embedded</a>.</p>
+<h3 id="utilisation-de-linstaller-devbox-santé">Utilisation de l&rsquo;installer DevBox-Santé</h3>
+<p>La DevBox Santé propose des solutions de &ldquo;packaging&rdquo; des différents modules, pour Windows, MacOS et Linux.</p>
+<p>Pour tester ces solutions <a href="mailto:devbox-sante@devcoop.fr">Contactez-nous</a></p>
 
         <div class="section-index">
     
@@ -1382,7 +1391,7 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Dernière modification September 28, 2021: <a  href="/commit/5287970e741cefc18fac5471510470fd7d682ecf">Modification procédure d&#39;installation (5287970)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Dernière modification September 28, 2021: <a  href="/commit/e06d352fbb2ade3e672ba4e98ac81cbe53789286">ajout information installer (e06d352)</a>
 </div>
 </div>
 

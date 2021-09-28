@@ -20,7 +20,11 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>DevBox-Santé | DevBox-Santé</title>
-<meta name="description" content="La Documentation"><meta property="og:title" content="DevBox-Santé" />
+
+
+  <meta name="description" content="Documentation de tous les composants/connecteurs de la DevBox-Santé 
+">
+<meta property="og:title" content="DevBox-Santé" />
 <meta property="og:description" content="Documentation de tous les composants/connecteurs de la DevBox-Santé 
 " />
 <meta property="og:type" content="website" />
@@ -32,6 +36,24 @@
 <meta name="twitter:title" content="DevBox-Santé"/>
 <meta name="twitter:description" content="Documentation de tous les composants/connecteurs de la DevBox-Santé 
 "/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.295d7e658f561e18a4830ad7471be02701977db5d7a3e8f47b23f34696125f79.css" as="style">
+<link href="/scss/main.min.295d7e658f561e18a4830ad7471be02701977db5d7a3e8f47b23f34696125f79.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/devbox-sante.css" type="text/css">
+
+
+
 
 
 <script type="application/javascript">
@@ -46,21 +68,6 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
-
-
-
-
-<link rel="preload" href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" as="style">
-<link href="/scss/main.min.b948825acd6335f2c85ae8254f461e8e74105eca1da8bae893ec25c494503f38.css" rel="stylesheet" integrity="">
-
-
-<script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
-
-
-<link rel="stylesheet" href="/css/devbox-sante.css" type="text/css">
 
 
   </head>
@@ -184,10 +191,10 @@ if (!doNotTrack) {
 <div class="td-content">
 <div class="pageinfo pageinfo-primary d-print-none">
 <p>
-This the multi-page printable view of this section.
-<a href="#" onclick="print();return false;">Click here to print</a>.
+Version imprimable multipages.
+<a href="#" onclick="print();return false;">Cliquer ici pour imprimer</a>.
 </p><p>
-<a href="/docs/">Return to the regular view of this page</a>.
+<a href="/docs/">Retour à la version par défaut</a>.
 </p>
 </div>
 
@@ -2374,7 +2381,8 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
     
 	<h1 id="pg-53b7f8f0f608f33d1a397afec2bc84bc">1.6.2 - Schematron</h1>
     <div class="lead">Validation manuelle des CDA générés par la DevBox-Santé DMP lors de l&rsquo;homologation</div>
-	<p>Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit sur le site esante.gouv.fr : 
+	<h3 id="utilisation-des-outils-disponibles-sur-le-site-esantegouvfr">Utilisation des outils disponibles sur le site esante.gouv.fr</h3>
+<p>Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit sur le site esante.gouv.fr : 
 <a href="https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda">https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda</a></p>
 <p>La version lors de la rédaction : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip">https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip</a></p>
 <p>Une fois téléchargé, il faut sur un poste windows :</p>
@@ -2386,6 +2394,16 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 <li>cliquer sur générer le rapport :</li>
 </ul>
 <p><img src="schematronRapport.png" alt="Rapport Schematron CDA"></p>
+<h3 id="utilisation-de-lespace-de-tests-de-lans">Utilisation de l&rsquo;espace de tests de l&rsquo;ANS</h3>
+<p>Sur le site <a href="https://interop.esante.gouv.fr">interop.esante.gouv.fr</a> ou plus exactement <a href="https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;extension=ASIP">https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;extension=ASIP</a></p>
+<p>Une fois sur le site :</p>
+<ul>
+<li>Il vous faut télécharger votre fichier CDA</li>
+<li>Choisir le schematron à valider : &ldquo;Structuration minimale des documents de santé&rdquo; par exemple 
+<img src="External_Validation_Service_Front-end_1.png" alt="External Validation Service Front-end_1"></li>
+<li>Cliquer sur valider
+<img src="External_Validation_Service_Front-end_2.png" alt="External Validation Service Front-end_1"></li>
+</ul>
 
 </div>
 
@@ -2917,7 +2935,15 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
 <li>P12 : initialisation des connexion TLS avec le Téléservice INSi avec un certificat d&rsquo;établissement p12</li>
 <li>P12Multiple : permet la connexion TLS avec plusieurs certificats d&rsquo;établissements p12</li>
 </ul>
-<p><strong>ATTENTION</strong> : les urls des téléservices sont différents en fonction du mode d&rsquo;authentification.</p>
+
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Attention</h4>
+
+    les urls des téléservices sont différents en fonction du mode d&rsquo;authentification
+
+</div>
+
 <h4 id="cps">CPS </h4>
 <ul>
 <li>Mode de sécurité <code>CPS</code>, dans le fichier de configuration <code>application.yml</code> :</li>
@@ -2942,7 +2968,15 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">À_CHANGER_MOT_DE_PASSE_FICHIER.p12</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>Utiliser ce mode de sécurité pour l&rsquo;utilisation du composant avec l&rsquo;authentification par certificat serveur.</p>
-<p><strong>Remarque</strong> : Il existe deux types de certificat les <code>INSI-AUTO</code> et les <code>INSI-MANU</code>. Il s&rsquo;agit d&rsquo;une règle de nommage défini dans les spécifications. Il est demandé par le CNDA d&rsquo;utiliser des certificats <code>INSI-MANU</code> pour tout accès au téléservice INSi par des acteurs humains, et <code>INSI-AUTO</code> pour des accès par des acteurs de traitements automatiques, types batchs.</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Remarque</h4>
+
+    Il existe deux types de certificat les <code>INSI-AUTO</code> et les <code>INSI-MANU</code>. Il s&rsquo;agit d&rsquo;une règle de nommage défini dans les spécifications. Il est demandé par le CNDA d&rsquo;utiliser des certificats <code>INSI-MANU</code> pour tout accès au téléservice INSi par des acteurs humains, et <code>INSI-AUTO</code> pour des accès par des acteurs de traitements automatiques, types batchs.
+
+</div>
+
 <h4 id="p12multiple">P12 Multiple</h4>
 <p>Ce mode de sécurité <code>p12s</code> permet de gérer en une seule installation l&rsquo;ensemble des connexions des différents établissements d&rsquo;un SIH.</p>
 <p>Un <code>AmoP12Provider</code> par défaut va charger un ensemble de fichier P12 à partir de la configuration, comme par exemple :</p>
@@ -3691,10 +3725,15 @@ Par exemple, pour démarrer la DevBox-Santé sur le port 10002: </p>
 
 
 
+<script src='/js/tabpane-persist.js'></script>
+
+
+
 <script src='/js/deflate.js'></script>
 
 
  
+
 
 
 

@@ -168,7 +168,15 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
 &lt;li&gt;P12 : initialisation des connexion TLS avec le Téléservice INSi avec un certificat d&amp;rsquo;établissement p12&lt;/li&gt;
 &lt;li&gt;P12Multiple : permet la connexion TLS avec plusieurs certificats d&amp;rsquo;établissements p12&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;ATTENTION&lt;/strong&gt; : les urls des téléservices sont différents en fonction du mode d&amp;rsquo;authentification.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Attention&lt;/h4&gt;
+
+    les urls des téléservices sont différents en fonction du mode d&amp;rsquo;authentification
+
+&lt;/div&gt;
+
 &lt;h4 id=&#34;cps&#34;&gt;CPS &lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Mode de sécurité &lt;code&gt;CPS&lt;/code&gt;, dans le fichier de configuration &lt;code&gt;application.yml&lt;/code&gt; :&lt;/li&gt;
@@ -193,7 +201,15 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;À_CHANGER_MOT_DE_PASSE_FICHIER.p12&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Utiliser ce mode de sécurité pour l&amp;rsquo;utilisation du composant avec l&amp;rsquo;authentification par certificat serveur.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Remarque&lt;/strong&gt; : Il existe deux types de certificat les &lt;code&gt;INSI-AUTO&lt;/code&gt; et les &lt;code&gt;INSI-MANU&lt;/code&gt;. Il s&amp;rsquo;agit d&amp;rsquo;une règle de nommage défini dans les spécifications. Il est demandé par le CNDA d&amp;rsquo;utiliser des certificats &lt;code&gt;INSI-MANU&lt;/code&gt; pour tout accès au téléservice INSi par des acteurs humains, et &lt;code&gt;INSI-AUTO&lt;/code&gt; pour des accès par des acteurs de traitements automatiques, types batchs.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Remarque&lt;/h4&gt;
+
+    Il existe deux types de certificat les &lt;code&gt;INSI-AUTO&lt;/code&gt; et les &lt;code&gt;INSI-MANU&lt;/code&gt;. Il s&amp;rsquo;agit d&amp;rsquo;une règle de nommage défini dans les spécifications. Il est demandé par le CNDA d&amp;rsquo;utiliser des certificats &lt;code&gt;INSI-MANU&lt;/code&gt; pour tout accès au téléservice INSi par des acteurs humains, et &lt;code&gt;INSI-AUTO&lt;/code&gt; pour des accès par des acteurs de traitements automatiques, types batchs.
+
+&lt;/div&gt;
+
 &lt;h4 id=&#34;p12multiple&#34;&gt;P12 Multiple&lt;/h4&gt;
 &lt;p&gt;Ce mode de sécurité &lt;code&gt;p12s&lt;/code&gt; permet de gérer en une seule installation l&amp;rsquo;ensemble des connexions des différents établissements d&amp;rsquo;un SIH.&lt;/p&gt;
 &lt;p&gt;Un &lt;code&gt;AmoP12Provider&lt;/code&gt; par défaut va charger un ensemble de fichier P12 à partir de la configuration, comme par exemple :&lt;/p&gt;

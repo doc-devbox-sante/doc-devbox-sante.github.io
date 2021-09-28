@@ -296,7 +296,7 @@ This the multi-page printable view of this section.
 </span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#ce5c00;font-weight:bold">}</span>
  <span style="color:#ce5c00;font-weight:bold">}</span>
 </code></pre></div><p>Pour charger dynamiquement un certificat il suffit de rajouter le nom du certificat (<code>amoP12.name</code>) dans le header de la requête HTTP :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8484/insi/rechercheAvecVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;amoP12.name: ÀPréciser&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8584/insi/rechercheSansVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;amoP12.name: ÀPréciser&#34;</span>
 </code></pre></div><h3 id="jeu-de-test-cnda">Jeu de test CNDA</h3>
 <p>Afin de pouvoir exécuter les tests d&rsquo;injection demandées par le CNDA, il faut lancer le proxy avec l&rsquo;un des profils spring activés suivant :</p>
 <ul>
@@ -316,7 +316,7 @@ This the multi-page printable view of this section.
 <p>La configuration du proxy contient les informations par défaut de configuration du LPS (Logiciel de Professionnel de Santé) cf. paragraphe précédent.
 Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation qui peut être confidentiel) en les passant dans les header HTTP des requêtes.</p>
 <p>Par exemple :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8484/insi/rechercheAvecVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;lpsInfo.numeroAutorisation: ÀPréciser&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8485/insi/rechercheAvecVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;lpsInfo.numeroAutorisation: ÀPréciser&#34;</span>
 </code></pre></div><p>Ainsi le client peut dynamiquement passer les informations du LPS.</p>
 <h3 id="packaging-et-déploiement">Packaging et Déploiement</h3>
 <p>La DevBox Santé <a href="/docs/installer">propose des solutions de &ldquo;packaging&rdquo;</a> des différents modules, pour Windows, MacOS et Linux.</p>

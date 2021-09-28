@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/docs/insi/rest/">
-<link rel="alternate" type="application/rss&#43;xml" href="/docs/insi/rest/index.xml">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/docs/insi/rest/testcnda/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/insi/rest/testcnda/index.xml">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -19,18 +19,18 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>REST Proxy | DevBox-Santé</title>
-<meta name="description" content="La Documentation"><meta property="og:title" content="REST Proxy" />
-<meta property="og:description" content="Une interface REST pour le Téléservice INSi 
+<title>Jeux de test CNDA | DevBox-Santé</title>
+<meta name="description" content="La Documentation"><meta property="og:title" content="Jeux de test CNDA" />
+<meta property="og:description" content="Quelques exemples du jeu de test du CNDA 
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/insi/rest/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="/docs/insi/rest/testcnda/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="REST Proxy">
-<meta itemprop="description" content="Une interface REST pour le Téléservice INSi 
+<meta itemprop="name" content="Jeux de test CNDA">
+<meta itemprop="description" content="Quelques exemples du jeu de test du CNDA 
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="REST Proxy"/>
-<meta name="twitter:description" content="Une interface REST pour le Téléservice INSi 
+<meta name="twitter:title" content="Jeux de test CNDA"/>
+<meta name="twitter:description" content="Quelques exemples du jeu de test du CNDA 
 "/>
 
 
@@ -187,14 +187,14 @@ if (!doNotTrack) {
 This the multi-page printable view of this section.
 <a href="#" onclick="print();return false;">Click here to print</a>.
 </p><p>
-<a href="/docs/insi/rest/">Return to the regular view of this page</a>.
+<a href="/docs/insi/rest/testcnda/">Return to the regular view of this page</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">REST Proxy</h1>
-<div class="lead">Une interface REST pour le Téléservice INSi</div>
+<h1 class="title">Jeux de test CNDA</h1>
+<div class="lead">Quelques exemples du jeu de test du CNDA</div>
 
 
 
@@ -206,108 +206,13 @@ This the multi-page printable view of this section.
   
   
 
-  
-    
-    
-	
-<li>1: <a href="#pg-a254dbdfb22e46087426b0d84581233e">Jeux de test CNDA</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
   
 
     </ul>
 
 
 <div class="content">
-      <p>Le module insi-proxy, permet de fournit une facade REST à la facade <code>INSiClient</code> java.
-Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.</p>
-<p>L&rsquo;accès a l&rsquo;insi-proxy est donc indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
-
-
-node &quot;Poste Client (Windows/Mac/Linux)&quot; {
-    [FrontEnd intégrateur] as frontend 
-
-    package &quot;DevBox-Santé&quot; DEVBOX_COLOR  {
-        component &quot;DevBoxSanté INSi&quot; as insFacade INS_COLOR {
-            [DevBoxSanté CPS] as cps CPS_COLOR
-            [DevBoxSanté Vitale] as vitale VITALE_COLOR
-        }
-
-    }
-    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
-    [APILectureVitale (SesamVitale)] as apiLectureVitale 
-}
-
-cloud &quot;Téléservice **INSi** (SesamVitale)&quot; as insi
-
-[BackEnd intégrateur] as backend 
-
-
-
-frontend -u-&gt; backend : REST
-frontend -down-&gt; insFacade : HTTP GET /insi/rechercheAvecVitale
-cps &lt;-down-&gt; cryptolibCPS : appel natif
-vitale &lt;-down-&gt; apiLectureVitale : appel natif
-insFacade &lt;-d-&gt; insi : SOAP
-
-
-</code></pre><h3 id="exécution-du-proxy">Exécution du Proxy</h3>
-<h4 id="prérequis">Prérequis</h4>
-<p>Doit être installé</p>
-<ul>
-<li>Environnement java 11 ou supérieur</li>
-<li>Cryptolib CPS version 5 ou supérieur</li>
-<li>API Lecteur vitale v31 ou supérieur</li>
-</ul>
-<h4 id="lancement">Lancement</h4>
-<p>Le livrable s&rsquo;agit d&rsquo;un jar exécutable, qui se lance de la manière suivante</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar insi-proxy.jar
-</code></pre></div><p>Le composant est accessible depuis le poste local en HTTP sur l&rsquo;adresse ip 127.0.0.1.
-Afin de valider le fonctionnement, ouvrir un navigateur à l&rsquo;adresse suivante : http://127.0.0.1:8585</p>
-<p><img src="insi-browser.png" alt="insi-proxy browser"></p>
-<h3 id="intégration">Intégration</h3>
-<p>L&rsquo;ensemble des requêtes sont documentées via l&rsquo;interface swagger et sont accessibles sur l&rsquo;url suivante : http://127.0.0.1:8585/swagger-ui.png</p>
-<p><img src="insi-swagger.png" alt="insi-proxy swagger"></p>
-<h3 id="configuration">Configuration</h3>
-<p>Les paramètres de configuration du composant DevBox-santé INSi se réalise dans le fichier <code>application.yml</code>.
-Outre les configurations liées à la sécurité et le port HTTP utilisé, la configuration est identique à celle du <a href="../configuration">mode embedded</a>.</p>
-
-</div>
-</div>
-
-
-  
-  
-  
-  
-
-  
-  
-
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-a254dbdfb22e46087426b0d84581233e">1 - Jeux de test CNDA</h1>
-    <div class="lead">Quelques exemples du jeu de test du CNDA</div>
-	<p>Les tests sont décrits dans le document <code>SEL-GCONFORM_INSi_V01.06.pdf</code>. Voici quelques exemples json repris des tests :</p>
+      <p>Les tests sont décrits dans le document <code>SEL-GCONFORM_INSi_V01.06.pdf</code>. Voici quelques exemples json repris des tests :</p>
 <h2 id="ws_ins1">WS_INS1</h2>
 <ul>
 <li>Cas du POST par lecture des données vitales en amont :
@@ -332,11 +237,9 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
 </ul>
 
 </div>
+</div>
 
 
-
-    
-      
   
   
   
@@ -345,10 +248,6 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
   
   
 
-  
-
-    
-	
   
 
 

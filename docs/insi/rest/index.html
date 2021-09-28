@@ -1183,7 +1183,7 @@ if (!doNotTrack) {
   <ul>
     <li>
       <ul>
-        <li><a href="#exécution-du-proxy">Exécution du Proxy</a></li>
+        <li><a href="#installation-du-proxy">Installation du Proxy</a></li>
         <li><a href="#intégration">Intégration</a></li>
         <li><a href="#configuration">Configuration</a></li>
       </ul>
@@ -1270,17 +1270,15 @@ vitale &lt;-down-&gt; apiLectureVitale : appel natif
 insFacade &lt;-d-&gt; insi : SOAP
 
 
-</code></pre><h3 id="exécution-du-proxy">Exécution du Proxy</h3>
-<h4 id="prérequis">Prérequis</h4>
-<p>Doit être installé</p>
+</code></pre><h3 id="installation-du-proxy">Installation du Proxy</h3>
+<p>Procédure : </p>
 <ul>
-<li>Environnement java 11 ou supérieur</li>
-<li>Cryptolib CPS version 5 ou supérieur</li>
-<li>API Lecteur vitale v31 ou supérieur</li>
+<li>Doit être installé environnement Java 11 ou supérieur</li>
+<li>Télécharger le proxy-rest mis à disposition</li>
 </ul>
 <h4 id="lancement">Lancement</h4>
 <p>Le livrable s&rsquo;agit d&rsquo;un jar exécutable, qui se lance de la manière suivante</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar insi-proxy.jar
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar insi-proxy-rest-*.jar
 </code></pre></div><p>Le composant est accessible depuis le poste local en HTTP sur l&rsquo;adresse ip 127.0.0.1.
 Afin de valider le fonctionnement, ouvrir un navigateur à l&rsquo;adresse suivante : http://127.0.0.1:8585</p>
 <p><img src="insi-browser.png" alt="insi-proxy browser"></p>
@@ -1384,7 +1382,7 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Dernière modification September 7, 2021: <a  href="/commit/b461b8f77886edf2511695d805a1ea330a6345e2">ajout information configuration via certificat p12 (b461b8f)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Dernière modification September 28, 2021: <a  href="/commit/5287970e741cefc18fac5471510470fd7d682ecf">Modification procédure d&#39;installation (5287970)</a>
 </div>
 </div>
 

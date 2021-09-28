@@ -104,17 +104,15 @@ vitale &amp;lt;-down-&amp;gt; apiLectureVitale : appel natif
 insFacade &amp;lt;-d-&amp;gt; insi : SOAP
 
 
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exécution-du-proxy&#34;&gt;Exécution du Proxy&lt;/h3&gt;
-&lt;h4 id=&#34;prérequis&#34;&gt;Prérequis&lt;/h4&gt;
-&lt;p&gt;Doit être installé&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;installation-du-proxy&#34;&gt;Installation du Proxy&lt;/h3&gt;
+&lt;p&gt;Procédure : &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Environnement java 11 ou supérieur&lt;/li&gt;
-&lt;li&gt;Cryptolib CPS version 5 ou supérieur&lt;/li&gt;
-&lt;li&gt;API Lecteur vitale v31 ou supérieur&lt;/li&gt;
+&lt;li&gt;Doit être installé environnement Java 11 ou supérieur&lt;/li&gt;
+&lt;li&gt;Télécharger le proxy-rest mis à disposition&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;lancement&#34;&gt;Lancement&lt;/h4&gt;
 &lt;p&gt;Le livrable s&amp;rsquo;agit d&amp;rsquo;un jar exécutable, qui se lance de la manière suivante&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;java -jar insi-proxy.jar
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;java -jar insi-proxy-rest-*.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Le composant est accessible depuis le poste local en HTTP sur l&amp;rsquo;adresse ip 127.0.0.1.
 Afin de valider le fonctionnement, ouvrir un navigateur à l&amp;rsquo;adresse suivante : http://127.0.0.1:8585&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;insi-browser.png&#34; alt=&#34;insi-proxy browser&#34;&gt;&lt;/p&gt;

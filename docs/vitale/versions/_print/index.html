@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/docs/vitale/">
-<link rel="alternate" type="application/rss&#43;xml" href="/docs/vitale/index.xml">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/docs/vitale/versions/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/vitale/versions/index.xml">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -19,22 +19,22 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Vitale | DevBox-Santé</title>
+<title>Versions | DevBox-Santé</title>
 
 
-  <meta name="description" content="Composant d&#39;intégration de la carte vitale  
+  <meta name="description" content="Note sur les différentes versions de la DevBox-Santé Carte Vitale
 ">
-<meta property="og:title" content="Vitale" />
-<meta property="og:description" content="Composant d&#39;intégration de la carte vitale  
+<meta property="og:title" content="Versions" />
+<meta property="og:description" content="Note sur les différentes versions de la DevBox-Santé Carte Vitale
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/vitale/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="/docs/vitale/versions/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Vitale">
-<meta itemprop="description" content="Composant d&#39;intégration de la carte vitale  
+<meta itemprop="name" content="Versions">
+<meta itemprop="description" content="Note sur les différentes versions de la DevBox-Santé Carte Vitale
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Vitale"/>
-<meta name="twitter:description" content="Composant d&#39;intégration de la carte vitale  
+<meta name="twitter:title" content="Versions"/>
+<meta name="twitter:description" content="Note sur les différentes versions de la DevBox-Santé Carte Vitale
 "/>
 
 
@@ -194,14 +194,14 @@ if (!doNotTrack) {
 Version imprimable multipages.
 <a href="#" onclick="print();return false;">Cliquer ici pour imprimer</a>.
 </p><p>
-<a href="/docs/vitale/">Retour à la version par défaut</a>.
+<a href="/docs/vitale/versions/">Retour à la version par défaut</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">Vitale</h1>
-<div class="lead">Composant d&rsquo;intégration de la carte vitale</div>
+<h1 class="title">Versions</h1>
+<div class="lead">Note sur les différentes versions de la DevBox-Santé Carte Vitale</div>
 
 
 
@@ -213,94 +213,13 @@ Version imprimable multipages.
   
   
 
-  
-    
-    
-	
-<li>1: <a href="#pg-8b58a48c9632148cde85981d37d21c3a">Problèmes connus</a></li>
-
-
-    
-  
-    
-    
-	
-<li>2: <a href="#pg-867e73353cc514820775746e03c23a4a">Versions</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
   
 
     </ul>
 
 
 <div class="content">
-      <p>Ceci est l&rsquo;api carte vitale proposée par DEVCOOP afin de proposer un niveau d&rsquo;abstraction suffisant pour un programme
-java d&rsquo;accéder à la carte vitale.</p>
-<p>Les documents de référence sont <code>apilec-mp-001_lecv6.3x_V2.1.pdf</code> et <code>apilec-mf-001_lecv6.3x_V1.6.pdf</code></p>
-<h2 id="implémentation">Implémentation</h2>
-<p>Le module carte-vitale-impl, fournit l&rsquo;implémentation de la <code>VitalFacade</code> qui intègre l&rsquo;API LectureVitale fournit par Sesam Vitale  : <code>PDT-INF-400-API_Lecture_Vitale_6.31.pdf</code></p>
-<p>Exemple de code dans une application Spring Boot :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonComposantVitale</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-
-    <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
-    <span style="color:#000">VitaleFacade</span> <span style="color:#000">vitale</span><span style="color:#ce5c00;font-weight:bold">;</span>
-
-    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">maMethode</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">CardReaderInfo</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">availableReaders</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">vitale</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getAvailableReaders</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">getCardReaders</span><span style="color:#ce5c00;font-weight:bold">();</span>
-        <span style="color:#204a87;font-weight:bold">boolean</span> <span style="color:#000">selecteBeneficiaire</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#ce5c00;font-weight:bold">;</span>
-        <span style="color:#000">vitale</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">readVitale</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">selectBeneficiaire</span><span style="color:#ce5c00;font-weight:bold">);</span>
-   <span style="color:#ce5c00;font-weight:bold">}</span>
-<span style="color:#ce5c00;font-weight:bold">}</span>
-</code></pre></div><h2 id="proxy-rest">Proxy REST</h2>
-<p>Le module carte-vitale-proxy, permet de fournit une facade REST à la <code>VitaleFacade</code> java.</p>
-<p>L&rsquo;accès au carte-vitale-proxy est indépendant de la technologie utilisée par l&rsquo;intégrateur.</p>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
-
-node &quot;Poste Client (Windows/Mac/Linux)&quot; {
-    [FrontEnd intégrateur] as frontend 
-
-    package &quot;DevBox-Santé&quot; DEVBOX_COLOR  {
-        [DevBox-Santé Vitale API] as vitaleFacade VITALE_COLOR
-    }
-    [ApiVitale (SESAM-vitale)] as apiVitale 
-}
-
-[BackEnd intégrateur] as backend
-
-frontend -down-&gt; vitaleFacade : REST &quot;GET &quot;/vitale/readVitale&quot;&quot;
-vitaleFacade &lt;-down-&gt; apiVitale : appel natif
-frontend -right-&gt; backend : REST
-</code></pre><h3 id="exécution">Exécution</h3>
-<p>Exemple Swagger :</p>
-<p><img src="carte-vitale-proxy-swagger.png" alt="vitale-proxy swagger"></p>
-<p>Exemple CURL :</p>
-<ul>
-<li>Récupérer l&rsquo;état des différents lecteurs de carte :</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8585/vitale/availableReaders&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
-</code></pre></div><ul>
-<li>Lire les données administratives de la carte vitale</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8585/vitale/readVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
-</code></pre></div><ul>
-<li>Signer un fichier PDF :</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/signPdf?location=Bordeaux&amp;reason=Parceque&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span> -H <span style="color:#4e9a06">&#34;Content-Type: multipart/form-data&#34;</span> -F <span style="color:#4e9a06">&#34;multipart=@fichier.pdf;type=application/pdf&#34;</span>
-</code></pre></div><h3 id="configuration">Configuration</h3>
-<p>La carte-vitale-proxy est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.</p>
-
+      <div class="csg-wrapper" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;"><h1 class="csg-h1" style="font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;">Version 1.5</h1><h3 class="csg-h3" style="font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;">Bug</h3><p class="csg-p" style="margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;"><a href="https://devbox-sante.atlassian.net/browse/VITALE-15" class="csg-mark-link" style="border: none; background: transparent; color: #0052cc; text-decoration: none;">VITALE-15</a> [MacOS] Proxy problème d'encodage</p></div>
 </div>
 </div>
 
@@ -313,65 +232,6 @@ frontend -right-&gt; backend : REST
   
   
 
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-8b58a48c9632148cde85981d37d21c3a">1 - Problèmes connus</h1>
-    
-	<h3 id="pcsc-ou-galss-">PC/SC ou galss ?</h3>
-<p>Le galss n&rsquo;est officiellement plus supporté au 31 décembre 2021, donc il faut configurer les lecteurs en PC/SC</p>
-<h3 id="changement-de-lecteur-pcsc---galss">Changement de lecteur PC/SC -&gt; Galss</h3>
-<p>Le lecteur carte vitale, enregistre dans le fchier %Program_FILES%/DevBoxSante-%client%/santesocial/api_lec/api_lec.ini les lecteurs PC/SC utilisés, 
-une fois enregistré si l&rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté 
-car les api sesam vitale ne recherche les lecteurs galss que si il n&rsquo;y a pas de lecteurs PS/SC d&rsquo;enregistrés.</p>
-<p>Solution: supprimer dans le fichier api_lec.ini les lecteurs enregistrés.</p>
-<pre tabindex="0"><code>[Lecteur]
-Ressource_Vitale=
-Ressource_CPS=
-</code></pre><blockquote>
-<p>PS: Le changement de lecteur PS/SC pour un autre PS/SC ne pose aucun soucis</p>
-</blockquote>
-
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-867e73353cc514820775746e03c23a4a">2 - Versions</h1>
-    <div class="lead">Note sur les différentes versions de la DevBox-Santé Carte Vitale</div>
-	<div class="csg-wrapper" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;"><h1 class="csg-h1" style="font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;">Version 1.5</h1><h3 class="csg-h3" style="font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;">Bug</h3><p class="csg-p" style="margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;"><a href="https://devbox-sante.atlassian.net/browse/VITALE-15" class="csg-mark-link" style="border: none; background: transparent; color: #0052cc; text-decoration: none;">VITALE-15</a> [MacOS] Proxy problème d'encodage</p></div>
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
   
 
 

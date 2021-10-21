@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><link rel="alternate" type="text/html" href="/docs/dmp/howtos/gestioncertificat/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="/docs/dmp/howtos/gestioncertificat/index.xml">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="alternate" type="text/html" href="/docs/dmp/configuration/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/dmp/configuration/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
@@ -19,22 +19,22 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Gestion des certificats | DevBox-Santé</title>
+<title>Configuration | DevBox-Santé</title>
 
 
-  <meta name="description" content="Gestion des certificats de l&#39;IGC santé pour l&#39;authentification indirecte
+  <meta name="description" content="Comment paramètrer le DMP
 ">
-<meta property="og:title" content="Gestion des certificats" />
-<meta property="og:description" content="Gestion des certificats de l&#39;IGC santé pour l&#39;authentification indirecte
+<meta property="og:title" content="Configuration" />
+<meta property="og:description" content="Comment paramètrer le DMP
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/dmp/howtos/gestioncertificat/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="/docs/dmp/configuration/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Gestion des certificats">
-<meta itemprop="description" content="Gestion des certificats de l&#39;IGC santé pour l&#39;authentification indirecte
+<meta itemprop="name" content="Configuration">
+<meta itemprop="description" content="Comment paramètrer le DMP
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Gestion des certificats"/>
-<meta name="twitter:description" content="Gestion des certificats de l&#39;IGC santé pour l&#39;authentification indirecte
+<meta name="twitter:title" content="Configuration"/>
+<meta name="twitter:description" content="Comment paramètrer le DMP
 "/>
 
 
@@ -233,13 +233,13 @@ if (!doNotTrack) {
   <a href="/docs/dmp/cda/crbiologie/" title="Compte rendu d&#39;examens de biologie" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdmpcdacrbiologie"><span class="">CDA Biologie</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdmpconfiguration-li">
-  <a href="/docs/dmp/configuration/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdmpconfiguration"><span class="">Configuration</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsdmphowtos-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsdmpconfiguration-li">
+  <a href="/docs/dmp/configuration/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsdmpconfiguration"><span class="td-sidebar-nav-active-item">Configuration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdmphowtos-li">
   <a href="/docs/dmp/howtos/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdmphowtos"><span class="">Howtos</span></a>
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsdmphowtosgestioncertificat-li">
-  <a href="/docs/dmp/howtos/gestioncertificat/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsdmphowtosgestioncertificat"><span class="td-sidebar-nav-active-item">Gestion des certificats</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdmphowtosgestioncertificat-li">
+  <a href="/docs/dmp/howtos/gestioncertificat/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdmphowtosgestioncertificat"><span class="">Gestion des certificats</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdmphowtosschematron-li">
   <a href="/docs/dmp/howtos/schematron/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdmphowtosschematron"><span class="">Schematron</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdmphowtosintegrateurchecklist-li">
@@ -318,7 +318,7 @@ if (!doNotTrack) {
   <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
   
   
-    <a id="print" href="/docs/dmp/howtos/gestioncertificat/_print/"><i class="fa fa-print fa-fw"></i> Imprimer la section entière</a>
+    <a id="print" href="/docs/dmp/configuration/_print/"><i class="fa fa-print fa-fw"></i> Imprimer la section entière</a>
   
   </div>
 
@@ -328,19 +328,21 @@ if (!doNotTrack) {
 
 <div class="td-toc"><nav id="TableOfContents">
   <ul>
-    <li><a href="#procédure-administrative">Procédure Administrative</a>
+    <li>
       <ul>
-        <li><a href="#règle-générale">Règle générale</a></li>
-        <li><a href="#quels-certificats-">Quels certificats ?</a></li>
+        <li><a href="#logging">Logging</a></li>
+        <li><a href="#spécifique-au-dmp">Spécifique au DMP</a></li>
+        <li><a href="#les-informations-du-lps-homologuée">Les informations du LPS homologuée</a></li>
+        <li><a href="#surcharge-les-lpsinfo-dans-le-proxy">Surcharge les LpsInfo dans le proxy</a></li>
       </ul>
     </li>
-    <li><a href="#procédure-technique">Procédure Technique</a>
+    <li><a href="#différents-modes-dauthentification">Différents modes d&rsquo;authentification</a>
       <ul>
-        <li><a href="#certificats-et-clés-dauthentification">Certificats et clés d&rsquo;authentification</a></li>
-        <li><a href="#certificats-et-clés-de-signature">Certificats et clés de signature</a></li>
+        <li><a href="#authentification-directe">Authentification directe</a></li>
+        <li><a href="#authentification-indirecte">Authentification indirecte</a></li>
+        <li><a href="#authentification-directe--cpsagent">Authentification directe : CPS Agent</a></li>
       </ul>
     </li>
-    <li><a href="#configuration-de-la-devbox-santé-dmp">Configuration de la DevBox-Santé DMP</a></li>
   </ul>
 </nav></div>
 
@@ -384,9 +386,6 @@ if (!doNotTrack) {
 
 
 
-
-
-
 <li class="breadcrumb-item" >
 	<a href="/docs/">Documentation</a>
 </li>
@@ -401,15 +400,8 @@ if (!doNotTrack) {
 
 
 
-<li class="breadcrumb-item" >
-	<a href="/docs/dmp/howtos/">Howtos</a>
-</li>
-
-
-
-
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/dmp/howtos/gestioncertificat/">Gestion des certificats</a>
+	<a href="/docs/dmp/configuration/">Configuration</a>
 </li>
 
 	</ol>
@@ -417,8 +409,8 @@ if (!doNotTrack) {
 
             
 <div class="td-content">
-	<h1>Gestion des certificats</h1>
-  <div class="lead">Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification indirecte</div>
+	<h1>Configuration</h1>
+  <div class="lead">Comment paramètrer le DMP</div>
 	<header class="article-meta">
 		
 		
@@ -434,109 +426,132 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<p>Une nouvelle IGC Santé a été mise en place courant 2016 : <a href="http://integrateurs-cps.asipsante.fr/IGC-Sante">http://integrateurs-cps.asipsante.fr/IGC-Sante</a></p>
-<p>Afin d&rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité. 
-Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande à partir d&rsquo;un téléservice dont la procédure est décrite ici.</p>
-<h2 id="procédure-administrative">Procédure Administrative</h2>
-<h3 id="règle-générale">Règle générale</h3>
-<p>Pour obtenir, les certificats et clés nécessaires pour la connexion au DMP en authentification indirecte, il faut que votre établissement soit enregistré au FINESS (Fichier National des Établissements Sanitaires es Sociaux) : <a href="http://finess.sante.gouv.fr/fininter/jsp/index.jsp">http://finess.sante.gouv.fr/fininter/jsp/index.jsp</a></p>
-<p>Les personnes pouvant remplir les conditions d&rsquo;obtentions des certificats sont décrites dans le document de l&rsquo;ANS : <a href="https://esante.gouv.fr/media/3827">Procédure DMP - Structures salariées</a></p>
-<p>Les principes généraux sont les suivants :</p>
-<blockquote>
-<p>Lors du raccordement au DMP, chaque site géographique d’un établissement de santé s’authentifie et s’identifie via son numéro de FINESS géographique.</p>
-<ul>
-<li>Ainsi, chaque site doit générer des certificats d’organisation sur son numéro de FINESS géographique.</li>
-<li>L’administrateur technique est une personne de confiance à qui le représentant légal de l’établissement délègue le droit de gérer le cycle de vie des certificats logiciels commandés.</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>Il est également possible pour le représentant légal d’une structure de désigner un ou plusieurs mandataires pour sa structure.</p>
-</blockquote>
-<h3 id="quels-certificats-">Quels certificats ?</h3>
-<blockquote>
-<p>Pour accéder au DMP en authentification indirecte (création/gestion administrative et alimentation), vous avez besoin de déployer les certificats suivants :</p>
-<ul>
-<li>un certificat client de type ORG AUTH_CLI pour s’authentifier au DMP ;</li>
-<li>un certificat client de type ORG SIGN pour signer les lots de documents soumis au DMP</li>
-</ul>
-</blockquote>
-<p>L&rsquo;dministrateur technique doit commander les certificats via le formulaire n°413 et le retourner à <a href="mailto:monserviceclient.certificats@asipsante.fr">monserviceclient.certificats@asipsante.fr</a>
-Le formulaire peut être télécharger depuis le site : <a href="https://esante.gouv.fr/securite/cartes-et-certificats/commandes">https://esante.gouv.fr/securite/cartes-et-certificats/commandes</a></p>
-<h2 id="procédure-technique">Procédure Technique</h2>
-<p>Il est possible de commander ces certificats sur le site web mis à disposition par l&rsquo;ANS. Il s&rsquo;agit d&rsquo;un service permettant la commande de certificats et cartes :</p>
-<p><a href="https://pfc.eservices.esante.gouv.fr">https://pfc.eservices.esante.gouv.fr</a></p>
-<p>Pour pouvoir y accéder il faut se connecter avec un lecteur de cartes CPS configuré et une carte CPA autorisée au préalable :</p>
-<p><img src="pfcngAccueil.png" alt="pfcngAccueil.png"></p>
-<h3 id="certificats-et-clés-dauthentification">Certificats et clés d&rsquo;authentification</h3>
-<h4 id="demander">Demander</h4>
-<h5 id="étape-1">Étape 1:</h5>
-<p><img src="pfcngDemandeStep1.png" alt="pfcng"></p>
-<h5 id="étape-2">Étape 2:</h5>
-<p>RAS, il s&rsquo;agit d&rsquo;un écran de recherche pour les demandes antérieures. Cliquer sur &ldquo;Demander un nouveau produit&rdquo;</p>
-<h5 id="étape-3">Étape 3:</h5>
-<p>Il faut renseigner :</p>
-<ul>
-<li>l&rsquo;usage : AUTH_CLI</li>
-<li>le nom du service (nom du logiciel) qui va accéder au DMP,</li>
-<li>son adresse email (utiliser plus tard pour envoyer une confirmation)</li>
-</ul>
-<p><img src="pfcngDemandeStep3Auth.png" alt="pfcng"></p>
-<h5 id="étape-4-">Étape 4 :</h5>
-<p>Pour cette étape le plus simple est de générer la CSR sur le site, mais pas obligatoire.</p>
-<ul>
-<li>Saisir un mot de passe assez fort pour convenir au service, et sauvegarder le car il sera demandé lors de la récupération du certificats P12, ainsi que pour configurer la DevBox-Santé DMP.</li>
-<li>Cliquer sur &ldquo;Générer la CSR&rdquo;, puis &ldquo;Finaliser&rdquo;</li>
-</ul>
-<p><img src="pfcngDemandeStep4GenerateCSR.png" alt="pfcng"></p>
-<h5 id="étape-5-">Étape 5 :</h5>
-<p>Vous recevez un email de confirmation de la demande à l&rsquo;email saisie à l&rsquo;étape 3 :</p>
-<h4 id="retirer">Retirer</h4>
-<p>Depuis l&rsquo;étape 5 de la demande vous pouvez accéder au retrait du certificat commandé. Sinon vous pouvez y accéder par le menu Retirer</p>
-<h5 id="étape-1-1">Étape 1:</h5>
-<p>Cette étape consiste à choisir le produit à retirer</p>
-<p><img src="pfcngRetirerStep1.png" alt="pfcng"></p>
-<h5 id="étape-2-1">Étape 2:</h5>
-<p>Dans cette étape, il faut saisir un nouveau mot de passe pour les révocations (identique ou pas de celui de la CSR). Il n&rsquo;est pas utilisé dans l&rsquo;API mais peut servir à l&rsquo;administrateur technique.</p>
-<p><img src="pfcngRetirerStep2.png" alt="pfcng"></p>
-<h4 id="étape-3-finalisation">Étape 3: Finalisation</h4>
-<p>Dans cette étape, il faut saisir le mot de passe de réconciliation celui qui a permis de générer la CSR.</p>
-<p><img src="pfcngRetirerStep3.png" alt="pfcng"></p>
-<p>Le certificat/clé (p12) a un nom qui doit ressembler à asip-p12-EL-TEST-ORG-AUTH_CLI-20170603-173116.p12</p>
-<h3 id="certificats-et-clés-de-signature">Certificats et clés de signature</h3>
-<p>Pour la signature, il faut faire une autre demande avec le même process, à l&rsquo;exception de l&rsquo;étape 3 ou il faudra demander un certificat de signature : Usage SIGN</p>
-<p><img src="pfcngDemandeStep3Sign.png" alt="pfcng"></p>
-<h2 id="configuration-de-la-devbox-santé-dmp">Configuration de la DevBox-Santé DMP</h2>
-<p>Le paramètrage de ces certificats pour la DevBox-Santé DMP se trouve dans le <code>application.yml</code></p>
-<ul>
-<li><code>dmpc.url.prefix</code></li>
-<li><code>dmpc.smime.p12.path</code></li>
-<li><code>dmpc.smime.p12.password</code></li>
-<li><code>dmpc.ssl.p12.path</code></li>
-<li><code>dmpc.ssl.p12.password</code></li>
-<li><code>dmpc.ssl.trust.path</code></li>
-</ul>
-<p>Exemple de configuration à fournir :</p>
+	<p>Comme toute application spring-boot la DevBox-Santé DMP se configure au travers du fichier <code>application.yml</code></p>
+<p>Nous pouvons donc configurer l&rsquo;application spring boot.</p>
+<h3 id="logging">Logging</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">logging.level</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">fr.devboxsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">info</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">fr.devcoop</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">warn</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">org.springframework</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">error</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><h3 id="spécifique-au-dmp">Spécifique au DMP</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#8f5902;font-style:italic"># informations relatives au certificat smime</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">smime</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">nomenclature</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic">#Url des jeux de valeurs utilisés pour le DMP</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">resourceName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">JDV DMP_API_V2_XML.zip</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic">#Encodage de caractère utilisé dans ces jeux de valeurs.</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">charset</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">UTF-8</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">parameters</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># Url du document xml contenant le paramétrage du DMP [FI-URL]</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">url</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://www.dmp.fr/web/dmp/documents/param-lps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">delayBetweenSyncInHours</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">24</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">document</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">checkHash</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># path vers les resources de validation CDA. </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># la resource peut être récupéré directement depuis le site de esante.gouv.fr ou depuis les resources fournies</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">cda.validator</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">#        resourceName: https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">resourceName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">testContenuCDA_20190903_V2.14.zip</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">charset</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ISO-8859-1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic">#serveur de temps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">time.ntpServer</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">fr.pool.ntp.org</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">patient.autorite</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># INS NIR test : 1.2.250.1.213.1.4.10</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># INS NIR démo: 1.2.250.1.213.1.4.11</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># INS NIR réel: 1.2.250.1.213.1.4.8</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">nir</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.213.1.4.10</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><p>Dont Les urls du DMP </p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">url.prefix</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># environnement production</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000">https://lps-igc-sante.dmp.gouv.fr/</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">url.web.prefix</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># environnement production</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000">https://ledmp.dmp.gouv.fr</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        
+</span></code></pre></div><h3 id="les-informations-du-lps-homologuée">Les informations du LPS homologuée</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">lpsInfo</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">homologationId</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">XXX-xxxxxx-xxx</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">version</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">x.0</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">nom</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">VOTRE_LOGICIEL</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic">#Numéro de série ou identifiant de l&#39;installation du logiciel </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">id</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.287.1</span><span style="color:#000">.</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">source</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#8f5902;font-style:italic"># 1.2.250.1.287 est l&#39;OID de Devcoop</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#8f5902;font-style:italic"># 1.2.250.1.287.1 est l&#39;OID correspondant à la DMPC pour Devcoop</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idRoot</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.287.1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idExtension</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1234567</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><h3 id="surcharge-les-lpsinfo-dans-le-proxy">Surcharge les LpsInfo dans le proxy</h3>
+<p>La configuration du proxy contient les informations par défaut de configuration du LPS (Logiciel de Professionnel de Santé) cf. paragraphe précédent.
+Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation qui peut être confidentiel) en les passant dans les header HTTP des requêtes.</p>
+<p>Voici la liste des informations LPS pouvant etre surchargées :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Informations LPS</th>
+<th style="text-align:center">Clef dans le header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id de l&rsquo;homologation</td>
+<td style="text-align:center">dmp.lpsInfo.homologationId</td>
+</tr>
+<tr>
+<td style="text-align:left">nom du lps</td>
+<td style="text-align:center">dmp.lpsInfo.nom</td>
+</tr>
+<tr>
+<td style="text-align:left">version du LPS</td>
+<td style="text-align:center">dmp.lpsInfo.version</td>
+</tr>
+</tbody>
+</table>
+<p>Par exemple :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8485/insi/rechercheAvecVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;dmp.lpsInfo.homologationId: ÀPréciser&#34;</span>
+</code></pre></div><h2 id="différents-modes-dauthentification">Différents modes d&rsquo;authentification</h2>
+<p>Les modes d&rsquo;authentification supportés par la DevBox-Santé DMP sont les deux demandés dans le guide d&rsquo;intégration du DMP.
+Il s&rsquo;agit du mode d&rsquo;authentification directe (avec l&rsquo;usage de la carte CPS) et indirecte (avec l&rsquo;usage des certificats serveurs)</p>
+<h3 id="authentification-directe">Authentification directe</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification directe utilisant les certificats de la carte CPS</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">cps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">     
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ssl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">trust</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#8f5902;font-style:italic">#./smime.p12</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">A_renseigner </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">truststoreIgcSante-EL-ORG.jks</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><h3 id="authentification-indirecte">Authentification indirecte</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">dmpc: </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification indirecte utilisant les certificats p12 serveurs</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">p12</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># informations relatives au certificat smime</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">smime</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">asip-p12-EL-TEST-ORG-SIGN-xxxx.p12</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">A_renseigner</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">password</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># informations relatives au certificat ssl</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ssl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#8f5902;font-style:italic">#ssl.p12</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">A_renseigner</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">asip-p12-EL-TEST-ORG-AUTH_CLI-xxxx.p12</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">A_renseigner</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># Contient les certificats serveurs autorisés pour authentification mutuelle         </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">password</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">trust</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">truststoreIgcSante-EL-ORG.jks</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><h3 id="authentification-directe--cpsagent">Authentification directe : CPS Agent</h3>
+<p>Un mode d&rsquo;authentification intégrant le module CPS agent est possible de la manière suivante :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000">dmpc: </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification directe depuis le backend par l&#39;intermédiaire d&#39;un agent CPS sur le poste du client</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">withCpsAgent</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div>
         <div class="section-index">
     

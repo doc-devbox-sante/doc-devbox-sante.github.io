@@ -338,8 +338,31 @@ Version imprimable multipages.
 </span></code></pre></div><h3 id="surcharge-les-lpsinfo-dans-le-proxy">Surcharge les LpsInfo dans le proxy</h3>
 <p>La configuration du proxy contient les informations par défaut de configuration du LPS (Logiciel de Professionnel de Santé) cf. paragraphe précédent.
 Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation qui peut être confidentiel) en les passant dans les header HTTP des requêtes.</p>
+<p>Voici la liste des informations LPS pouvant etre surchargées :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Informations LPS</th>
+<th style="text-align:center">Clef dans le header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">numero d&rsquo;autorisation</td>
+<td style="text-align:center">insi.lpsInfo.numeroAutorisation</td>
+</tr>
+<tr>
+<td style="text-align:left">nom du lps</td>
+<td style="text-align:center">insi.lpsInfo.nom</td>
+</tr>
+<tr>
+<td style="text-align:left">version du LPS</td>
+<td style="text-align:center">insi.lpsInfo.version</td>
+</tr>
+</tbody>
+</table>
 <p>Par exemple :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8485/insi/rechercheAvecVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;lpsInfo.numeroAutorisation: ÀPréciser&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://localhost:8485/insi/rechercheAvecVitale&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;insi.lpsInfo.numeroAutorisation: ÀPréciser&#34;</span>
 </code></pre></div><p>Ainsi le client peut dynamiquement passer les informations du LPS.</p>
 <h3 id="packaging-et-déploiement">Packaging et Déploiement</h3>
 <p>La DevBox Santé <a href="/docs/installer">propose des solutions de &ldquo;packaging&rdquo;</a> des différents modules, pour Windows, MacOS et Linux.</p>

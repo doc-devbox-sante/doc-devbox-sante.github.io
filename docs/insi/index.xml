@@ -306,5 +306,18 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
       </description>
     </item>
     
+    <item>
+      <title>Docs: </title>
+      <link>/docs/insi/gestion_certificat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/insi/gestion_certificat/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
   </channel>
 </rss>

@@ -13,6 +13,46 @@
     
     
     <item>
+      <title>Blog: Les versions des Installers en cours</title>
+      <link>/blog/2021/10/21/les-versions-des-installers-en-cours/</link>
+      <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2021/10/21/les-versions-des-installers-en-cours/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Les versions actuelles de nos composants dans nos installers sont :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Installer&lt;/code&gt; : &lt;strong&gt;2.0&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt; : &lt;strong&gt;3.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt; : &lt;strong&gt;1.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt; : &lt;strong&gt;4.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt; : &lt;strong&gt;2.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt; : &lt;strong&gt;1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Installer&lt;/code&gt; : &lt;strong&gt;1.9&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt; : &lt;strong&gt;2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt; : &lt;strong&gt;1.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt; : &lt;strong&gt;4.0.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt; : &lt;strong&gt;1.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt; : &lt;strong&gt;1.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;11_0_5&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Les versions en cours</title>
       <link>/blog/2021/10/08/les-versions-en-cours/</link>
       <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
@@ -23,17 +63,21 @@
         
         &lt;p&gt;Les versions actuelles de nos composants sont :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt; : &lt;strong&gt;4.0.2&lt;/strong&gt; et &lt;strong&gt;3.2&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt; : &lt;strong&gt;1.4&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt; : &lt;strong&gt;1.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Installer&lt;/code&gt; : &lt;strong&gt;1.9&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt; : &lt;strong&gt;2.5&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt; : &lt;strong&gt;1.5&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;VITALE-15&lt;/strong&gt; [MacOS] Proxy problème d&amp;rsquo;encodage&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;installer&lt;/code&gt; : &lt;strong&gt;1.9&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;lm&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt; : &lt;strong&gt;4.0.2&lt;/strong&gt; et &lt;strong&gt;3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt; : &lt;strong&gt;1.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt; : &lt;strong&gt;1.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

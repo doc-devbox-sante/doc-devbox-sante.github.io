@@ -484,7 +484,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 <p>Obtenir des cartes CPS de test (médecin, CPE, autre) auprès de l&rsquo;ANS</p>
 </li>
 </ul>
-<h2 id="architecture">Architecture</h2>
+<h2 id="choix-architecture">Choix Architecture</h2>
 <ul>
 <li>
 <p>Choisir un mode d&rsquo;intégration/ authentification</p>
@@ -498,7 +498,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 <li>
 <p>Choisir les profils d&rsquo;intégration</p>
 <ul>
-<li>création / administration de DMP (DEPRECATED)</li>
+<li>getion administrative de DMP</li>
 <li>alimentation</li>
 <li>consultation</li>
 </ul>
@@ -510,22 +510,29 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 <li><a href="../embedded">mode API java</a></li>
 <li><a href="../rest">mode REST</a></li>
 </ul>
-<h2 id="validation">Validation</h2>
+<h2 id="enregistrement-cnda">Enregistrement CNDA </h2>
+<ul>
+<li>Conditions générales des TLSi AMO v3 (Dès le début du projet)</li>
+<li>Conditions Particulières DMP intégrateurs (Une fois l&rsquo;architecture choisie)</li>
+</ul>
+<h2 id="validation-devcoop">Validation DEVCOOP</h2>
 <ul>
 <li>
 <p>Répondre aux exigences du PDV filtré par DevBox-santé</p>
-<p>le dernier pdv disponible : <a href="https://docs.google.com/spreadsheets/d/1cMSql9SCJQP-NAH0ToeSXWNBAXi16Ty_/edit?usp=drive_web&amp;ouid=106855870534714244391&amp;rtpof=true">https://docs.google.com/spreadsheets/d/1cMSql9SCJQP-NAH0ToeSXWNBAXi16Ty_/edit?usp=drive_web&amp;ouid=106855870534714244391&amp;rtpof=true</a></p>
 </li>
 <li>
 <p>Dérouler le plan de test prehomologation filtrés pour validation DEVCOOP
-==&gt; Génération rapport du respect des exigences par DEVCOOP</p>
-<ul>
-<li>s&rsquo;assurer de la génération de PDF/A</li>
-</ul>
+==&gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP</p>
 </li>
 </ul>
-<h2 id="processus-dhomologation">Processus d&rsquo;homologation</h2>
+<h2 id="processus-dhomologation-cnda">Processus d&rsquo;homologation CNDA</h2>
 <p><a href="https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/">https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/</a></p>
+<ul>
+<li>Fournir le PDV entièrement filtré (tests/déclarations par l’EAI) et complété conjointement sur les déclarations.</li>
+<li>Obtention d&rsquo;un environnement dédié pour le passage d&rsquo;homologation et date de passage</li>
+<li>Passer les tests</li>
+<li>Déposer les résultats</li>
+</ul>
 <h2 id="déploiement">Déploiement</h2>
 <h3 id="gestion-des-certificats">Gestion des certificats</h3>
 <ul>

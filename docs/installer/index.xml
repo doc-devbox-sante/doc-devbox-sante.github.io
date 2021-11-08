@@ -99,7 +99,7 @@ group Démarrage application intégrateur (cas de l&#39;application web)
 end
 ...
 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Voici un diagramme de séquence détaillant ce qui se passe dans les coulisses de la DevBox-santé, afin de faire le lien entre Utilisateur windows, session web utilisateur et port http des DevBox-Santé :&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ces diagrammes paraissent un peu magique du point de vue de l&amp;rsquo;intégrateur, c&amp;rsquo;est pourquoi, voici un diagramme de séquence détaillant ce qui se passe dans les coulisses de la DevBox-santé, afin de faire le lien entre Utilisateur windows, session web utilisateur et port http des DevBox-Santé :&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 hide footbox
 actor Utilisateur1 

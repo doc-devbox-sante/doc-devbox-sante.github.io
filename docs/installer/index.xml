@@ -81,7 +81,7 @@ group Démarrage application intégrateur (cas du client lourd)
     AppInt1 -&amp;gt; AppInt1 : Appel système pour récupérer utilisateur windows
     AppInt1 -&amp;gt; Eureka : GET /user/Utilisateur1
     Eureka -&amp;gt; AppInt1 : {user: Utilisateur1, port: 8081}
-    AppInt1 -&amp;gt; DBX_8081 : GET localhost:8081/cps/readCpsCard...
+    AppInt1 -&amp;gt; DBX_8081 : GET localhost:8081/cps/readCps...
     deactivate AppInt1
 end 
 ...
@@ -92,14 +92,14 @@ group Démarrage application intégrateur (cas de l&#39;application web)
     Utilisateur1 -&amp;gt; WebApp1 : Accède depuis un navigateur http://superapp.integrateur 
     activate WebApp1
     note over WebApp1 : Il n&#39;est pas possible depuis un contexte web \nde récupérer le username windows
-    WebApp1 -&amp;gt; DBX_8081 : Lance une DevBox-sante par l&#39;url devbox-sante://config?sessionId:12345678
-    WebApp1 -&amp;gt; Eureka : GET /user/12345678
-    Eureka -&amp;gt; WebApp1 : {user: Utilisateur1, sessionId: 12345678, port: 8081}
-    WebApp1 -&amp;gt; DBX_8081 : GET localhost:8081/cps/readCpsCard...
+    WebApp1 -&amp;gt; DBX_8081 : Lance une DevBox-sante par l&#39;url devbox-sante://config?sessionId:12345
+    WebApp1 -&amp;gt; Eureka : GET /user/12345
+    Eureka -&amp;gt; WebApp1 : {user: Utilisateur1, sessionId: 12345, port: 8081}
+    WebApp1 -&amp;gt; DBX_8081 : GET localhost:8081/cps/readCps...
 end
 ...
 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ces diagrammes paraissent un peu magique du point de vue de l&amp;rsquo;intégrateur, c&amp;rsquo;est pourquoi, voici un diagramme de séquence détaillant ce qui se passe dans les coulisses de la DevBox-santé, afin de faire le lien entre Utilisateur windows, session web utilisateur et port http des DevBox-Santé :&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ces diagrammes paraissent un peu magiques pour l&amp;rsquo;intégrateur. C&amp;rsquo;est pourquoi, voici un diagramme de séquence détaillant ce qui se passe dans les coulisses de la DevBox-santé, afin de faire le lien entre Utilisateur windows, session web utilisateur et port http des DevBox-Santé :&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 hide footbox
 actor Utilisateur1 
@@ -111,30 +111,30 @@ box &amp;quot;Session utilisateur 1&amp;quot;
 participant SessionRDP1
 participant &amp;quot;DBX:8081&amp;quot; as DBX_8081 DEVBOX_COLOR
 participant &amp;quot;Application Intégrateur&amp;quot; as AppInt1
-participant &amp;quot;Application Web Intégrateur (front)&amp;quot; as WebApp1
+participant &amp;quot;WebApp Intégrateur\n(front)&amp;quot; as WebApp1
 participant &amp;quot;Devbox temporaire&amp;quot; as DBX_TMP DEVBOX_COLOR
 end box
 
 == Démarrage serveur RDP ==
-ServeurRDP -&amp;gt; Eureka : démarrage du service Eureka
+ServeurRDP -&amp;gt; Eureka : Démarrage service\nEureka
 ...
 == Connexion utilisateur ==
 Utilisateur1 -&amp;gt; SessionRDP1 : Se connecte
 activate SessionRDP1
 ServeurRDP &amp;lt;- SessionRDP1 : Démarre une nouvelle session
 SessionRDP1 &amp;lt;-&amp;gt; ServeurRDP : Mapping port USB
-SessionRDP1 -&amp;gt; DBX_8081 : Démarrage automatique d&#39;une instance de la DevBox-Santé (port 8081 par exemple)
+SessionRDP1 -&amp;gt; DBX_8081 : Démarrage automatique\nd&#39;une instance DevBox-Santé\n(port 8081 par exemple)
 activate DBX_8081
 DBX_8081 -&amp;gt; ServeurRDP : accés au port USB (pour lectures cartes)
 DBX_8081 -&amp;gt; Eureka : POST {user: Utilisateur1, port:8081}
 ...
 
 group Démarrage application intégrateur (cas du client lourd)
-    Utilisateur1 -&amp;gt; AppInt1: démarre l&#39;applicationIntégrateur
+    Utilisateur1 -&amp;gt; AppInt1: Démarre l&#39;applicationIntégrateur
     activate AppInt1
     AppInt1 -&amp;gt; Eureka : GET /user/Utilisateur1
     Eureka -&amp;gt; AppInt1 : {user: Utilisateur1, port: 8081}
-    AppInt1 -&amp;gt; DBX_8081 : GET localhost:8081/cps/readCpsCard...
+    AppInt1 -&amp;gt; DBX_8081 : GET localhost:8081/cps/readCps...
     deactivate AppInt1
 end 
 ...
@@ -142,15 +142,15 @@ end
 group Démarrage application intégrateur (cas de l&#39;application web)
     Utilisateur1 -&amp;gt; WebApp1 : Accède depuis un navigateur http://superapp.integrateur 
     activate WebApp1
-    WebApp1 -&amp;gt; DBX_TMP : Lance une DevBox-sante par l&#39;url devbox-sante://config?sessionId:12345678
+    WebApp1 -&amp;gt; DBX_TMP : devbox-sante://config?sessionId:12345
     activate DBX_TMP
     DBX_TMP -&amp;gt; DBX_8081 : healthcheck (is alive ?)
     DBX_8081 -&amp;gt; DBX_TMP : 200 OK
-    DBX_TMP -&amp;gt; Eureka : POST {user: Utilisateur1, sessionId : 12345678, port: 8081}
+    DBX_TMP -&amp;gt; Eureka : POST {user: Utilisateur1, sessionId : 12345, port: 8081}
     deactivate DBX_TMP
-    WebApp1 -&amp;gt; Eureka : GET /user/12345678
-    Eureka -&amp;gt; WebApp1 : {user: Utilisateur1, sessionId: 12345678, port: 8081}
-    WebApp1 -&amp;gt; DBX_8081 : GET localhost:8081/cps/readCpsCard...
+    WebApp1 -&amp;gt; Eureka : GET /user/12345
+    Eureka -&amp;gt; WebApp1 : {user: Utilisateur1, sessionId: 12345, port: 8081}
+    WebApp1 -&amp;gt; DBX_8081 : GET localhost:8081/cps/readCps...
 end
 ...
 

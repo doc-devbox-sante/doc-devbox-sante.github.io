@@ -247,7 +247,8 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;jeu-de-test-cnda&#34;&gt;Jeu de test CNDA&lt;/h3&gt;
 &lt;p&gt;Afin de pouvoir exécuter les tests d&amp;rsquo;injection demandées par le CNDA, il faut lancer le proxy avec l&amp;rsquo;un des profils spring activés suivant :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;CNDA_WEB&lt;/code&gt; : rajoute un nouvel endpoint CNDA permettant l&amp;rsquo;injection des fichiers de test XML du CNDA.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CNDA_WEB&lt;/code&gt; : rajoute un nouvel endpoint CNDA permettant l&amp;rsquo;injection des fichiers de test XML du CNDA.
+&lt;img src=&#34;CNDA_injection_swagger.png&#34; alt=&#34;CNDA_injection_swagger.png&#34;&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;CNDA&lt;/code&gt; : rajoute un menu dans le &lt;code&gt;TrayIcon&lt;/code&gt; du système d&amp;rsquo;exploitation permettant l&amp;rsquo;injection des fichiers de test XML du CNDA.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Exemple :&lt;/p&gt;
@@ -340,7 +341,7 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
       <description>
         
         
-        &lt;p&gt;TODO : reprendre procédure du DMP pour l&amp;rsquo;INSI&lt;/p&gt;
+        &lt;p&gt;TODO : rFprendre procédure du DMP pour l&amp;rsquo;INSI&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_salariees_vf.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_salariees_vf.pdf&lt;/a&gt;&lt;/p&gt;
 
       </description>

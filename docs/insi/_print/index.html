@@ -313,6 +313,14 @@ Version imprimable multipages.
 
     
   
+    
+    
+	
+<li>4.2: <a href="#pg-f9cac6f73cf1f4bdfbf1094e0ee6222e">Foire aux questions INSi</a></li>
+
+
+    
+  
 
     </ul>
     
@@ -819,6 +827,60 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
 <p>Lire les autres pages de ce site concernant l&rsquo;intégration INSi</p>
 <h1 id="passage-de-lhomologation">Passage de l&rsquo;homologation</h1>
 <p>TODO</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-f9cac6f73cf1f4bdfbf1094e0ee6222e">4.2 - Foire aux questions INSi</h1>
+    <div class="lead">Compilation des questions au sujet de l&rsquo;intégration INSi</div>
+	<h2 id="authentification-par-certificat-logiciel">Authentification par certificat logiciel</h2>
+<p>Reprises des questions réponses du webinaire <strong>&ldquo;Développer l’authentification TLS mutuelle par certificat logiciel pour INSi&rdquo; - mardi 16 novembre 2021 - 14h30</strong> :</p>
+<ul>
+<li><strong>Pourriez-vous préciser les cas d&rsquo;usage des certificats INSI-MANU et INSI-AUTO ?</strong></li>
+</ul>
+<blockquote>
+<p>Le certificat INSi-MANU permet aux personnes physiques ne disposant pas forcément de CPx nominatives et utilisant des applications de leur structure d’accéder au téléservice INS en mode manuel. Le certificat INSi-AUTO permet aux processus automatiques mis en œuvre par une structure d’accéder au téléservice INSi en mode automatique.</p>
+</blockquote>
+<ul>
+<li><strong>Dans le cadre d&rsquo;une application en mode SAAS partagée par plusieurs établissements, peut-on utiliser un même certificat en tant que logiciel ? Ou doit-on avoir un certificat pour chaque organisation ?</strong> :</li>
+</ul>
+<blockquote>
+<p>Vous devez avoir un certificat pour chaque établissement (si le FINESS géographique est différent entre les établissements).</p>
+</blockquote>
+<ul>
+<li><strong>Dans le cadre d&rsquo;un Organisme Gestionnaire, doit-on utiliser le FINESS de l&rsquo;établissement ou celui du siège ?</strong></li>
+</ul>
+<blockquote>
+<p>Pour un Organisme Gestionnaire ou toute autre structure gérant plusieurs établissements, c&rsquo;est le FINESS géographique de l&rsquo;établissement réalisant l&rsquo;appel au téléservice qui doit être véhiculé dans le flux INSi.</p>
+</blockquote>
+<ul>
+<li><strong>Peut-on télécharger le certificat P12 depuis le site du CNDA avec une carte CPx ?</strong></li>
+</ul>
+<blockquote>
+<p>Le certificat P12 est à télécharger sur le site web de l&rsquo;ANS. Vous trouverez plus d&rsquo;informations sur la procédure de commande des certificats dans la PDT-INF-736 du package V4 de INSi, disponible sur l&rsquo;Espace Industriels (rubrique Téléservice INSi).</p>
+</blockquote>
+<ul>
+<li><strong>A qui adresser les questions techniques lors de blocages dans l&rsquo;utilisation des certificats ?</strong></li>
+</ul>
+<blockquote>
+<p>Contactez directement le centre de services du GIE SESAM-Vitale (<a href="mailto:centre-deservice@sesam-vitale.fr">centre-deservice@sesam-vitale.fr</a> ou 02.43.57.42.88).</p>
+</blockquote>
+<p>_ <strong>Quelle est la procédure de délégation de commande de certificat auprès de l&rsquo;éditeur ?</strong></p>
+<blockquote>
+<p>La procédure de délégation de commande de certificat est décrite dans le document suivant : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_liberales_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_liberales_vf.pdf</a>  Etape 2</p>
+<p>Le formulaire de déclaration des administrateurs techniques autorisés à commander des certificats logiciels - F413 est disponible à cette adresse : <a href="https://esante.gouv.fr/documents/413">https://esante.gouv.fr/documents/413</a></p>
+</blockquote>
 
 </div>
 

@@ -15,26 +15,22 @@
     
     <item>
       <title>Blog: Les versions des Installers en cours</title>
-      <link>/blog/2021/11/15/les-versions-des-installers-en-cours/</link>
-      <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
+      <link>/blog/2021/12/01/les-versions-des-installers-en-cours/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2021/11/15/les-versions-des-installers-en-cours/</guid>
+      <guid>/blog/2021/12/01/les-versions-des-installers-en-cours/</guid>
       <description>
         
         
         &lt;p&gt;Les versions actuelles de nos composants dans nos installers sont :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;Installer&lt;/code&gt; : &lt;strong&gt;2.1&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Installer&lt;/code&gt; : &lt;strong&gt;2.2&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt; : &lt;strong&gt;3.1&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt; : &lt;strong&gt;1.5&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt; : &lt;strong&gt;4.6&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt; : &lt;strong&gt;2.3&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;INSI-34&lt;/strong&gt; : Fournir API Rest compatible 1.X&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt; : &lt;strong&gt;3.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt; : &lt;strong&gt;1.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt; : &lt;strong&gt;4.6.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt; : &lt;strong&gt;2.4&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt; : &lt;strong&gt;1.1&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
@@ -70,12 +66,16 @@
         &lt;p&gt;Les versions actuelles de nos composants dans nos installers sont :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;Installer&lt;/code&gt; : &lt;strong&gt;2.2&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Installer&lt;/code&gt; : &lt;strong&gt;2.1&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt; : &lt;strong&gt;3.1.1&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt; : &lt;strong&gt;1.6&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt; : &lt;strong&gt;4.6.2&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt; : &lt;strong&gt;2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt; : &lt;strong&gt;3.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt; : &lt;strong&gt;1.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt; : &lt;strong&gt;4.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt; : &lt;strong&gt;2.3&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;INSI-34&lt;/strong&gt; : Fournir API Rest compatible 1.X&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt; : &lt;strong&gt;1.1&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;

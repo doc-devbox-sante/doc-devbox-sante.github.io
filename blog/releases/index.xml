@@ -15,6 +15,35 @@
     
     <item>
       <title>Blog: Les versions des Installers en cours</title>
+      <link>/blog/2022/01/10/les-versions-des-installers-en-cours/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2022/01/10/les-versions-des-installers-en-cours/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Les versions actuelles de nos composants dans nos installers sont :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Installer&lt;/code&gt; : &lt;strong&gt;2.4&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt; : &lt;strong&gt;3.1.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt; : &lt;strong&gt;1.7.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt; : &lt;strong&gt;4.6.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt; : &lt;strong&gt;2.5.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt; : &lt;strong&gt;1.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Les versions des Installers en cours</title>
       <link>/blog/2022/01/03/les-versions-des-installers-en-cours/</link>
       <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
       

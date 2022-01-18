@@ -478,6 +478,162 @@ Il s&amp;rsquo;agit du mode d&amp;rsquo;authentification directe (avec l&amp;rsq
     </item>
     
     <item>
+      <title>Docs: Architecture interne des différents composants</title>
+      <link>/docs/dmp/architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/dmp/architecture/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;architecture-interne-des-différents-composants&#34;&gt;Architecture interne des différents composants&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+package &amp;quot;DevBox-santé DMP&amp;quot; {
+    [dmp-proxy-xxx] 
+    [dmp-cda]
+    [dmp-cda-tools]
+    [dmp-client-impl]
+    [dmp-hl7]
+    [dmp-security-xxx]
+    [dmp-ws-client]
+    [dmp-xds-client]
+}
+
+node &amp;quot;DMP&amp;quot;
+[dmp-proxy-xxx] - [dmp-client-impl] : Proxy REST/SOAP/... du client DMP
+[dmp-client-impl] - [dmp-ws-client]
+[dmp-client-impl] -d- [dmp-xds-client]
+
+[dmp-xds-client] -d- [dmp-hl7] : format HL7
+[dmp-xds-client] -d- [dmp-cda] : génération CDA
+[dmp-xds-client] -d- [dmp-cda-tools] : validation CDA
+[dmp-xds-client] - [dmp-security-xxx]
+
+[dmp-ws-client] -d- [dmp-security-xxx]
+[dmp-security-xxx] - DMP : authentification TLS
+[dmp-ws-client] - DMP : WS soap spécifique DMP
+[dmp-xds-client] - DMP : requête XDS
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;les-différents-modules-maven-&#34;&gt;Les différents modules Maven :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dmp-cda&lt;/code&gt; : sérialisation des documents dans le standard CDA-R2&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-cda-tools&lt;/code&gt; : contient le code de validation des documents à envoyer au DMP ainsi que la génération html&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-client-impl&lt;/code&gt; : implémentation du client DMPC en mode embedded&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-cnda-tools&lt;/code&gt; : permet de récupérer les fichiers de tests du CNDA&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-core&lt;/code&gt; : contient le code commun a tous les modules&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-exemples&lt;/code&gt; : contient différents exemples de déploiements du DMPC Client&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-hl7&lt;/code&gt; : implémentation standard HL7 utile pour le DMP&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-homologation&lt;/code&gt; : contient le code permettant l&amp;rsquo;homologation de l&amp;rsquo;api&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-proxy-rest&lt;/code&gt; : implémentation du proxy REST du client DMPC&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-proxy-ws&lt;/code&gt; : implémentation du proxy SOAP du client DMPC&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-schema-gen&lt;/code&gt; : contient les outils de génération de code à partir des différents schémas xsd et des wsdls de XDS et des&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-tool&lt;/code&gt; : outil commun à tous les modules.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-security-**&lt;/code&gt; : contient l&amp;rsquo;implémentation des différents modes de sécurités&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ws-client&lt;/code&gt; : contient le code des clients au webservices du DMP autre que XDS&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-xds-client&lt;/code&gt; : contient le code des clients au webservices du DMP XDS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;zoom-sur-la-sécurité&#34;&gt;Zoom sur la sécurité&lt;/h3&gt;
+&lt;p&gt;La Devbox-santé DMP permet de mettre en place des mécanismes de sécurités différents en fonction du contexte :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CPS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;P12&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CPSAgent&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La sécurité est configurée via les mécanismes d&amp;rsquo;injection de Spring.&lt;/p&gt;
+&lt;h4 id=&#34;securité-via-la-cps&#34;&gt;Securité via la CPS&lt;/h4&gt;
+&lt;h5 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+package &amp;quot;DevBox-santé DMP&amp;quot; {
+    [dmp-security-cps] 
+    [cps-facade]
+}
+
+interface &amp;quot;Cryptolib cps&amp;quot; as cryptolib
+
+[dmp-security-cps] - [cps-facade]
+[cps-facade] - cryptolib
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;diagramme-de-classes&#34;&gt;Diagramme de classes&lt;/h5&gt;
+&lt;p&gt;Les différentes classes en charge de la sécurité dans le mode CPS :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+interface CpsOperationProviderSpi
+
+CpsFacade -U-|&amp;gt; CpsOperationProviderSpi
+
+CpsConfigurationAdapter o-- CpsOperationProviderSpi
+CpsConfigurationAdapter : AuthenticationKeyManager
+CpsConfigurationAdapter : SignatureKeyManager
+CpsConfigurationAdapter : PersonnelSantePopulator
+CpsConfigurationAdapter o-- CxfEndPointFactory
+
+CxfEndPointFactory : createEndPoint(...)  // point d&#39;accès au service DMP
+CxfEndPointFactory : setVIHF(...)  // gestion du jeton SAML
+CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;La &lt;code&gt;CpsConfiguration&lt;/code&gt; permet d&amp;rsquo;initialiser deux &lt;code&gt;KeyManager&lt;/code&gt; s&amp;rsquo;appuyant sur la &lt;code&gt;CpsFacade&lt;/code&gt; pour y accèder. Ces deux &lt;code&gt;KeyManager&lt;/code&gt; permettent d&amp;rsquo;accéder aux différents certificats et d&amp;rsquo;effectuer les opérations de signature disponibles dans la carte CPS.
+La &lt;code&gt;CpsConfiguration&lt;/code&gt; permet d&amp;rsquo;initialiser la &lt;code&gt;CxfEndPointFactory&lt;/code&gt; qui a pour responsabilité la gestion des accès au services du DMP.&lt;/p&gt;
+&lt;h4 id=&#34;securité-via-les-certificats-p12&#34;&gt;Securité via les certificats P12&lt;/h4&gt;
+&lt;h5 id=&#34;diagramme-de-composants-1&#34;&gt;Diagramme de composants&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+package &amp;quot;DevBox-santé DMP&amp;quot; {
+    [dmp-core] 
+}
+
+interface fichier.p12
+[dmp-core] - fichier.p12 : load
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;diagramme-de-classes-1&#34;&gt;Diagramme de classes&lt;/h5&gt;
+&lt;p&gt;Les différentes classes en charge de la sécurité dans le mode CPS :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+
+P12Configuration - P12KeyManager : AuthenticationKeyManager
+P12Configuration - P12KeyManager : SignatureKeyManager
+P12KeyManager - P12KeyLoader
+P12Configuration o-- CxfEndPointFactory
+
+CxfEndPointFactory : createEndPoint(...)  // point d&#39;accès au service DMP
+CxfEndPointFactory : setVIHF(...)  // gestion du jeton SAML
+CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;La &lt;code&gt;P12Configuration&lt;/code&gt; permet d&amp;rsquo;initialiser deux &lt;code&gt;KeyManager&lt;/code&gt; s&amp;rsquo;appuyant sur la &lt;code&gt;P12KeyLoader&lt;/code&gt; qui charge les certificats p12 disponibles. Ces deux &lt;code&gt;KeyManager&lt;/code&gt; permettent d&amp;rsquo;accéder aux différents certificats et d&amp;rsquo;effectuer les opérations de signature.
+La &lt;code&gt;P12Configuration&lt;/code&gt; permet d&amp;rsquo;initialiser la &lt;code&gt;CxfEndPointFactory&lt;/code&gt; qui a pour responsabilité la gestion des accès au services du DMP.&lt;/p&gt;
+&lt;h4 id=&#34;securité-via-le-cpsagent&#34;&gt;Securité via le CPSAgent&lt;/h4&gt;
+&lt;h5 id=&#34;diagramme-de-composants-2&#34;&gt;Diagramme de composants&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+package &amp;quot;DevBox-santé DMP&amp;quot; {
+    [dmp-security-cps-with-agent] 
+    [cps-agent-client]
+}
+
+interface CpsProxy
+
+[dmp-security-cps-with-agent] - [cps-agent-client]
+[cps-agent-client] - CpsProxy : transaction sur internet 
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;diagramme-de-classes-2&#34;&gt;Diagramme de classes&lt;/h5&gt;
+&lt;p&gt;Les différentes classes en charge de la sécurité dans le mode CPS :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+interface CpsOperationProviderSpi
+
+CpsAgentClient -U-|&amp;gt; CpsOperationProviderSpi
+
+CpsConfigurationAdapter o-- CpsOperationProviderSpi
+CpsConfigurationAdapter : AuthenticationKeyManager
+CpsConfigurationAdapter : SignatureKeyManager
+CpsConfigurationAdapter : PersonnelSantePopulator
+CpsConfigurationAdapter o-- CxfEndPointFactory
+
+CxfEndPointFactory : createEndPoint(...)  // point d&#39;accès au service DMP
+CxfEndPointFactory : setVIHF(...)  // gestion du jeton SAML
+CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;La &lt;code&gt;CpsConfiguration&lt;/code&gt; permet d&amp;rsquo;initialiser deux &lt;code&gt;KeyManager&lt;/code&gt; s&amp;rsquo;appuyant sur la &lt;code&gt;CpsAgentClient&lt;/code&gt; pour accèder aux opérations disponibles de la carte CPS au travers le réseau. Ces deux &lt;code&gt;KeyManager&lt;/code&gt; permettent de manières transparents d&amp;rsquo;accéder aux différents certificats et d&amp;rsquo;effectuer les opérations de signature disponibles dans la carte CPS.
+La &lt;code&gt;CpsConfiguration&lt;/code&gt; permet d&amp;rsquo;initialiser la &lt;code&gt;CxfEndPointFactory&lt;/code&gt; qui a pour responsabilité la gestion des accès au services du DMP.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Versions</title>
       <link>/docs/dmp/versions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

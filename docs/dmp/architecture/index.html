@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><link rel="alternate" type="text/html" href="/docs/dmp/cda/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="/docs/dmp/cda/index.xml">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="alternate" type="text/html" href="/docs/dmp/architecture/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/dmp/architecture/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
@@ -19,22 +19,22 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Structuration des documents | DevBox-Santé</title>
+<title>Architecture interne des différents composants | DevBox-Santé</title>
 
 
-  <meta name="description" content="Les différents formats CDA supportés
+  <meta name="description" content="Pour les intéressés, l&#39;architecture interne des différents composants
 ">
-<meta property="og:title" content="Structuration des documents" />
-<meta property="og:description" content="Les différents formats CDA supportés
+<meta property="og:title" content="Architecture interne des différents composants" />
+<meta property="og:description" content="Pour les intéressés, l&#39;architecture interne des différents composants
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/dmp/cda/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="/docs/dmp/architecture/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Structuration des documents">
-<meta itemprop="description" content="Les différents formats CDA supportés
+<meta itemprop="name" content="Architecture interne des différents composants">
+<meta itemprop="description" content="Pour les intéressés, l&#39;architecture interne des différents composants
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Structuration des documents"/>
-<meta name="twitter:description" content="Les différents formats CDA supportés
+<meta name="twitter:title" content="Architecture interne des différents composants"/>
+<meta name="twitter:description" content="Pour les intéressés, l&#39;architecture interne des différents composants
 "/>
 
 
@@ -224,8 +224,8 @@ if (!doNotTrack) {
   <a href="/docs/dmp/authentifications/cps_agent/" title="Authentification Directe via le CPS Agent" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdmpauthentificationscps_agent"><span class="">Directe via CPS Agent</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsdmpcda-li">
-  <a href="/docs/dmp/cda/" title="Structuration des documents" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsdmpcda"><span class="td-sidebar-nav-active-item">CDA</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdmpcda-li">
+  <a href="/docs/dmp/cda/" title="Structuration des documents" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdmpcda"><span class="">CDA</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdmpcdastructurationminimale-li">
   <a href="/docs/dmp/cda/structurationminimale/" title="CDA structuration minimale" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdmpcdastructurationminimale"><span class="">CDA-minimal</span></a>
@@ -246,8 +246,8 @@ if (!doNotTrack) {
   <a href="/docs/dmp/howtos/integrateurchecklist/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdmphowtosintegrateurchecklist"><span class="">Integrateurs checklist</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdmparchitecture-li">
-  <a href="/docs/dmp/architecture/" title="Architecture interne des différents composants" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdmparchitecture"><span class="">Architecture interne</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsdmparchitecture-li">
+  <a href="/docs/dmp/architecture/" title="Architecture interne des différents composants" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsdmparchitecture"><span class="td-sidebar-nav-active-item">Architecture interne</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdmpversions-li">
   <a href="/docs/dmp/versions/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdmpversions"><span class="">Versions</span></a>
 </li>
@@ -334,13 +334,24 @@ if (!doNotTrack) {
   <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
   
   
-    <a id="print" href="/docs/dmp/cda/_print/"><i class="fa fa-print fa-fw"></i> Imprimer la section entière</a>
+    <a id="print" href="/docs/dmp/architecture/_print/"><i class="fa fa-print fa-fw"></i> Imprimer la section entière</a>
   
   </div>
 
 
             
 
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#architecture-interne-des-différents-composants">Architecture interne des différents composants</a>
+      <ul>
+        <li><a href="#les-différents-modules-maven-">Les différents modules Maven :</a></li>
+        <li><a href="#zoom-sur-la-sécurité">Zoom sur la sécurité</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 
 
 
@@ -397,7 +408,7 @@ if (!doNotTrack) {
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/dmp/cda/">CDA</a>
+	<a href="/docs/dmp/architecture/">Architecture interne</a>
 </li>
 
 	</ol>
@@ -405,8 +416,8 @@ if (!doNotTrack) {
 
             
 <div class="td-content">
-	<h1>Structuration des documents</h1>
-  <div class="lead">Les différents formats CDA supportés</div>
+	<h1>Architecture interne des différents composants</h1>
+  <div class="lead">Pour les intéressés, l&rsquo;architecture interne des différents composants</div>
 	<header class="article-meta">
 		
 		
@@ -422,10 +433,149 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<h2 id="glossaire">Glossaire</h2>
+	<h2 id="architecture-interne-des-différents-composants">Architecture interne des différents composants</h2>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+package &quot;DevBox-santé DMP&quot; {
+    [dmp-proxy-xxx] 
+    [dmp-cda]
+    [dmp-cda-tools]
+    [dmp-client-impl]
+    [dmp-hl7]
+    [dmp-security-xxx]
+    [dmp-ws-client]
+    [dmp-xds-client]
+}
+
+node &quot;DMP&quot;
+[dmp-proxy-xxx] - [dmp-client-impl] : Proxy REST/SOAP/... du client DMP
+[dmp-client-impl] - [dmp-ws-client]
+[dmp-client-impl] -d- [dmp-xds-client]
+
+[dmp-xds-client] -d- [dmp-hl7] : format HL7
+[dmp-xds-client] -d- [dmp-cda] : génération CDA
+[dmp-xds-client] -d- [dmp-cda-tools] : validation CDA
+[dmp-xds-client] - [dmp-security-xxx]
+
+[dmp-ws-client] -d- [dmp-security-xxx]
+[dmp-security-xxx] - DMP : authentification TLS
+[dmp-ws-client] - DMP : WS soap spécifique DMP
+[dmp-xds-client] - DMP : requête XDS
+
+</code></pre><h3 id="les-différents-modules-maven-">Les différents modules Maven :</h3>
 <ul>
-<li><strong>CDA</strong> : Clinical Document Architecture</li>
+<li><code>dmp-cda</code> : sérialisation des documents dans le standard CDA-R2</li>
+<li><code>dmp-cda-tools</code> : contient le code de validation des documents à envoyer au DMP ainsi que la génération html</li>
+<li><code>dmp-client-impl</code> : implémentation du client DMPC en mode embedded</li>
+<li><code>dmp-cnda-tools</code> : permet de récupérer les fichiers de tests du CNDA</li>
+<li><code>dmp-core</code> : contient le code commun a tous les modules</li>
+<li><code>dmp-exemples</code> : contient différents exemples de déploiements du DMPC Client</li>
+<li><code>dmp-hl7</code> : implémentation standard HL7 utile pour le DMP</li>
+<li><code>dmp-homologation</code> : contient le code permettant l&rsquo;homologation de l&rsquo;api</li>
+<li><code>dmp-proxy-rest</code> : implémentation du proxy REST du client DMPC</li>
+<li><code>dmp-proxy-ws</code> : implémentation du proxy SOAP du client DMPC</li>
+<li><code>dmp-schema-gen</code> : contient les outils de génération de code à partir des différents schémas xsd et des wsdls de XDS et des</li>
+<li><code>dmp-tool</code> : outil commun à tous les modules.</li>
+<li><code>dmp-security-**</code> : contient l&rsquo;implémentation des différents modes de sécurités</li>
+<li><code>dmp-ws-client</code> : contient le code des clients au webservices du DMP autre que XDS</li>
+<li><code>dmp-xds-client</code> : contient le code des clients au webservices du DMP XDS</li>
 </ul>
+<h3 id="zoom-sur-la-sécurité">Zoom sur la sécurité</h3>
+<p>La Devbox-santé DMP permet de mettre en place des mécanismes de sécurités différents en fonction du contexte :</p>
+<ul>
+<li><code>CPS</code></li>
+<li><code>P12</code></li>
+<li><code>CPSAgent</code></li>
+</ul>
+<p>La sécurité est configurée via les mécanismes d&rsquo;injection de Spring.</p>
+<h4 id="securité-via-la-cps">Securité via la CPS</h4>
+<h5 id="diagramme-de-composants">Diagramme de composants</h5>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+package &quot;DevBox-santé DMP&quot; {
+    [dmp-security-cps] 
+    [cps-facade]
+}
+
+interface &quot;Cryptolib cps&quot; as cryptolib
+
+[dmp-security-cps] - [cps-facade]
+[cps-facade] - cryptolib
+</code></pre><h5 id="diagramme-de-classes">Diagramme de classes</h5>
+<p>Les différentes classes en charge de la sécurité dans le mode CPS :</p>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+interface CpsOperationProviderSpi
+
+CpsFacade -U-|&gt; CpsOperationProviderSpi
+
+CpsConfigurationAdapter o-- CpsOperationProviderSpi
+CpsConfigurationAdapter : AuthenticationKeyManager
+CpsConfigurationAdapter : SignatureKeyManager
+CpsConfigurationAdapter : PersonnelSantePopulator
+CpsConfigurationAdapter o-- CxfEndPointFactory
+
+CxfEndPointFactory : createEndPoint(...)  // point d'accès au service DMP
+CxfEndPointFactory : setVIHF(...)  // gestion du jeton SAML
+CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
+
+</code></pre><p>La <code>CpsConfiguration</code> permet d&rsquo;initialiser deux <code>KeyManager</code> s&rsquo;appuyant sur la <code>CpsFacade</code> pour y accèder. Ces deux <code>KeyManager</code> permettent d&rsquo;accéder aux différents certificats et d&rsquo;effectuer les opérations de signature disponibles dans la carte CPS.
+La <code>CpsConfiguration</code> permet d&rsquo;initialiser la <code>CxfEndPointFactory</code> qui a pour responsabilité la gestion des accès au services du DMP.</p>
+<h4 id="securité-via-les-certificats-p12">Securité via les certificats P12</h4>
+<h5 id="diagramme-de-composants-1">Diagramme de composants</h5>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+package &quot;DevBox-santé DMP&quot; {
+    [dmp-core] 
+}
+
+interface fichier.p12
+[dmp-core] - fichier.p12 : load
+</code></pre><h5 id="diagramme-de-classes-1">Diagramme de classes</h5>
+<p>Les différentes classes en charge de la sécurité dans le mode CPS :</p>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+
+P12Configuration - P12KeyManager : AuthenticationKeyManager
+P12Configuration - P12KeyManager : SignatureKeyManager
+P12KeyManager - P12KeyLoader
+P12Configuration o-- CxfEndPointFactory
+
+CxfEndPointFactory : createEndPoint(...)  // point d'accès au service DMP
+CxfEndPointFactory : setVIHF(...)  // gestion du jeton SAML
+CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
+
+</code></pre><p>La <code>P12Configuration</code> permet d&rsquo;initialiser deux <code>KeyManager</code> s&rsquo;appuyant sur la <code>P12KeyLoader</code> qui charge les certificats p12 disponibles. Ces deux <code>KeyManager</code> permettent d&rsquo;accéder aux différents certificats et d&rsquo;effectuer les opérations de signature.
+La <code>P12Configuration</code> permet d&rsquo;initialiser la <code>CxfEndPointFactory</code> qui a pour responsabilité la gestion des accès au services du DMP.</p>
+<h4 id="securité-via-le-cpsagent">Securité via le CPSAgent</h4>
+<h5 id="diagramme-de-composants-2">Diagramme de composants</h5>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+package &quot;DevBox-santé DMP&quot; {
+    [dmp-security-cps-with-agent] 
+    [cps-agent-client]
+}
+
+interface CpsProxy
+
+[dmp-security-cps-with-agent] - [cps-agent-client]
+[cps-agent-client] - CpsProxy : transaction sur internet 
+</code></pre><h5 id="diagramme-de-classes-2">Diagramme de classes</h5>
+<p>Les différentes classes en charge de la sécurité dans le mode CPS :</p>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+interface CpsOperationProviderSpi
+
+CpsAgentClient -U-|&gt; CpsOperationProviderSpi
+
+CpsConfigurationAdapter o-- CpsOperationProviderSpi
+CpsConfigurationAdapter : AuthenticationKeyManager
+CpsConfigurationAdapter : SignatureKeyManager
+CpsConfigurationAdapter : PersonnelSantePopulator
+CpsConfigurationAdapter o-- CxfEndPointFactory
+
+CxfEndPointFactory : createEndPoint(...)  // point d'accès au service DMP
+CxfEndPointFactory : setVIHF(...)  // gestion du jeton SAML
+CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
+
+</code></pre><p>La <code>CpsConfiguration</code> permet d&rsquo;initialiser deux <code>KeyManager</code> s&rsquo;appuyant sur la <code>CpsAgentClient</code> pour accèder aux opérations disponibles de la carte CPS au travers le réseau. Ces deux <code>KeyManager</code> permettent de manières transparents d&rsquo;accéder aux différents certificats et d&rsquo;effectuer les opérations de signature disponibles dans la carte CPS.
+La <code>CpsConfiguration</code> permet d&rsquo;initialiser la <code>CxfEndPointFactory</code> qui a pour responsabilité la gestion des accès au services du DMP.</p>
 
         <div class="section-index">
     
@@ -436,24 +586,6 @@ if (!doNotTrack) {
     
     
     
-    <hr class="panel-line">
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/docs/dmp/cda/structurationminimale/">CDA structuration minimale</a>
-                </h5>
-                <p></p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/docs/dmp/cda/crbiologie/">Compte rendu d&#39;examens de biologie</a>
-                </h5>
-                <p></p>
-            </div>
-        
     
 </div>
 

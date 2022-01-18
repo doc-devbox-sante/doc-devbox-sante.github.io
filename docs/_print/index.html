@@ -486,7 +486,26 @@ Version imprimable multipages.
     
     
 	
-<li>1.8: <a href="#pg-78fb0c46f2d88b360cb6b80ccd009bce">Versions</a></li>
+<li>1.8: <a href="#pg-57f6ebca3d3732e131c923b217e02228">Architecture interne des différents composants</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>1.9: <a href="#pg-78fb0c46f2d88b360cb6b80ccd009bce">Versions</a></li>
 
 
     
@@ -2779,7 +2798,179 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-78fb0c46f2d88b360cb6b80ccd009bce">1.8 - Versions</h1>
+	<h1 id="pg-57f6ebca3d3732e131c923b217e02228">1.8 - Architecture interne des différents composants</h1>
+    <div class="lead">Pour les intéressés, l&rsquo;architecture interne des différents composants</div>
+	<h2 id="architecture-interne-des-différents-composants">Architecture interne des différents composants</h2>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+package &quot;DevBox-santé DMP&quot; {
+    [dmp-proxy-xxx] 
+    [dmp-cda]
+    [dmp-cda-tools]
+    [dmp-client-impl]
+    [dmp-hl7]
+    [dmp-security-xxx]
+    [dmp-ws-client]
+    [dmp-xds-client]
+}
+
+node &quot;DMP&quot;
+[dmp-proxy-xxx] - [dmp-client-impl] : Proxy REST/SOAP/... du client DMP
+[dmp-client-impl] - [dmp-ws-client]
+[dmp-client-impl] -d- [dmp-xds-client]
+
+[dmp-xds-client] -d- [dmp-hl7] : format HL7
+[dmp-xds-client] -d- [dmp-cda] : génération CDA
+[dmp-xds-client] -d- [dmp-cda-tools] : validation CDA
+[dmp-xds-client] - [dmp-security-xxx]
+
+[dmp-ws-client] -d- [dmp-security-xxx]
+[dmp-security-xxx] - DMP : authentification TLS
+[dmp-ws-client] - DMP : WS soap spécifique DMP
+[dmp-xds-client] - DMP : requête XDS
+
+</code></pre><h3 id="les-différents-modules-maven-">Les différents modules Maven :</h3>
+<ul>
+<li><code>dmp-cda</code> : sérialisation des documents dans le standard CDA-R2</li>
+<li><code>dmp-cda-tools</code> : contient le code de validation des documents à envoyer au DMP ainsi que la génération html</li>
+<li><code>dmp-client-impl</code> : implémentation du client DMPC en mode embedded</li>
+<li><code>dmp-cnda-tools</code> : permet de récupérer les fichiers de tests du CNDA</li>
+<li><code>dmp-core</code> : contient le code commun a tous les modules</li>
+<li><code>dmp-exemples</code> : contient différents exemples de déploiements du DMPC Client</li>
+<li><code>dmp-hl7</code> : implémentation standard HL7 utile pour le DMP</li>
+<li><code>dmp-homologation</code> : contient le code permettant l&rsquo;homologation de l&rsquo;api</li>
+<li><code>dmp-proxy-rest</code> : implémentation du proxy REST du client DMPC</li>
+<li><code>dmp-proxy-ws</code> : implémentation du proxy SOAP du client DMPC</li>
+<li><code>dmp-schema-gen</code> : contient les outils de génération de code à partir des différents schémas xsd et des wsdls de XDS et des</li>
+<li><code>dmp-tool</code> : outil commun à tous les modules.</li>
+<li><code>dmp-security-**</code> : contient l&rsquo;implémentation des différents modes de sécurités</li>
+<li><code>dmp-ws-client</code> : contient le code des clients au webservices du DMP autre que XDS</li>
+<li><code>dmp-xds-client</code> : contient le code des clients au webservices du DMP XDS</li>
+</ul>
+<h3 id="zoom-sur-la-sécurité">Zoom sur la sécurité</h3>
+<p>La Devbox-santé DMP permet de mettre en place des mécanismes de sécurités différents en fonction du contexte :</p>
+<ul>
+<li><code>CPS</code></li>
+<li><code>P12</code></li>
+<li><code>CPSAgent</code></li>
+</ul>
+<p>La sécurité est configurée via les mécanismes d&rsquo;injection de Spring.</p>
+<h4 id="securité-via-la-cps">Securité via la CPS</h4>
+<h5 id="diagramme-de-composants">Diagramme de composants</h5>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+package &quot;DevBox-santé DMP&quot; {
+    [dmp-security-cps] 
+    [cps-facade]
+}
+
+interface &quot;Cryptolib cps&quot; as cryptolib
+
+[dmp-security-cps] - [cps-facade]
+[cps-facade] - cryptolib
+</code></pre><h5 id="diagramme-de-classes">Diagramme de classes</h5>
+<p>Les différentes classes en charge de la sécurité dans le mode CPS :</p>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+interface CpsOperationProviderSpi
+
+CpsFacade -U-|&gt; CpsOperationProviderSpi
+
+CpsConfigurationAdapter o-- CpsOperationProviderSpi
+CpsConfigurationAdapter : AuthenticationKeyManager
+CpsConfigurationAdapter : SignatureKeyManager
+CpsConfigurationAdapter : PersonnelSantePopulator
+CpsConfigurationAdapter o-- CxfEndPointFactory
+
+CxfEndPointFactory : createEndPoint(...)  // point d'accès au service DMP
+CxfEndPointFactory : setVIHF(...)  // gestion du jeton SAML
+CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
+
+</code></pre><p>La <code>CpsConfiguration</code> permet d&rsquo;initialiser deux <code>KeyManager</code> s&rsquo;appuyant sur la <code>CpsFacade</code> pour y accèder. Ces deux <code>KeyManager</code> permettent d&rsquo;accéder aux différents certificats et d&rsquo;effectuer les opérations de signature disponibles dans la carte CPS.
+La <code>CpsConfiguration</code> permet d&rsquo;initialiser la <code>CxfEndPointFactory</code> qui a pour responsabilité la gestion des accès au services du DMP.</p>
+<h4 id="securité-via-les-certificats-p12">Securité via les certificats P12</h4>
+<h5 id="diagramme-de-composants-1">Diagramme de composants</h5>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+package &quot;DevBox-santé DMP&quot; {
+    [dmp-core] 
+}
+
+interface fichier.p12
+[dmp-core] - fichier.p12 : load
+</code></pre><h5 id="diagramme-de-classes-1">Diagramme de classes</h5>
+<p>Les différentes classes en charge de la sécurité dans le mode CPS :</p>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+
+P12Configuration - P12KeyManager : AuthenticationKeyManager
+P12Configuration - P12KeyManager : SignatureKeyManager
+P12KeyManager - P12KeyLoader
+P12Configuration o-- CxfEndPointFactory
+
+CxfEndPointFactory : createEndPoint(...)  // point d'accès au service DMP
+CxfEndPointFactory : setVIHF(...)  // gestion du jeton SAML
+CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
+
+</code></pre><p>La <code>P12Configuration</code> permet d&rsquo;initialiser deux <code>KeyManager</code> s&rsquo;appuyant sur la <code>P12KeyLoader</code> qui charge les certificats p12 disponibles. Ces deux <code>KeyManager</code> permettent d&rsquo;accéder aux différents certificats et d&rsquo;effectuer les opérations de signature.
+La <code>P12Configuration</code> permet d&rsquo;initialiser la <code>CxfEndPointFactory</code> qui a pour responsabilité la gestion des accès au services du DMP.</p>
+<h4 id="securité-via-le-cpsagent">Securité via le CPSAgent</h4>
+<h5 id="diagramme-de-composants-2">Diagramme de composants</h5>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+package &quot;DevBox-santé DMP&quot; {
+    [dmp-security-cps-with-agent] 
+    [cps-agent-client]
+}
+
+interface CpsProxy
+
+[dmp-security-cps-with-agent] - [cps-agent-client]
+[cps-agent-client] - CpsProxy : transaction sur internet 
+</code></pre><h5 id="diagramme-de-classes-2">Diagramme de classes</h5>
+<p>Les différentes classes en charge de la sécurité dans le mode CPS :</p>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+interface CpsOperationProviderSpi
+
+CpsAgentClient -U-|&gt; CpsOperationProviderSpi
+
+CpsConfigurationAdapter o-- CpsOperationProviderSpi
+CpsConfigurationAdapter : AuthenticationKeyManager
+CpsConfigurationAdapter : SignatureKeyManager
+CpsConfigurationAdapter : PersonnelSantePopulator
+CpsConfigurationAdapter o-- CxfEndPointFactory
+
+CxfEndPointFactory : createEndPoint(...)  // point d'accès au service DMP
+CxfEndPointFactory : setVIHF(...)  // gestion du jeton SAML
+CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
+
+</code></pre><p>La <code>CpsConfiguration</code> permet d&rsquo;initialiser deux <code>KeyManager</code> s&rsquo;appuyant sur la <code>CpsAgentClient</code> pour accèder aux opérations disponibles de la carte CPS au travers le réseau. Ces deux <code>KeyManager</code> permettent de manières transparents d&rsquo;accéder aux différents certificats et d&rsquo;effectuer les opérations de signature disponibles dans la carte CPS.
+La <code>CpsConfiguration</code> permet d&rsquo;initialiser la <code>CxfEndPointFactory</code> qui a pour responsabilité la gestion des accès au services du DMP.</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-78fb0c46f2d88b360cb6b80ccd009bce">1.9 - Versions</h1>
     <div class="lead">Note sur les différentes versions de la DevBox-Santé DMP</div>
 	<div class="csg-wrapper" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;"><h1 class="csg-h1" style="font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;">Version 4.6.5 (03/01/2022)</h1><h3 class="csg-h3" style="font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;">Bug</h3><p class="csg-p" style="margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;"><a href="https://devbox-sante.atlassian.net/browse/DMP-169" class="csg-mark-link" style="border: none; background: transparent; color: #0052cc; text-decoration: none;">DMP-169</a> [RetrieveContent] NPE lors d'une récupération de contenu</p><h3 class="csg-h3" style="font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;">Story</h3><p class="csg-p" style="margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;"><a href="https://devbox-sante.atlassian.net/browse/DMP-170" class="csg-mark-link" style="border: none; background: transparent; color: #0052cc; text-decoration: none;">DMP-170</a> [CDA Validation] remonter le message d'erreur du schematron</p></div>
 <div class="csg-wrapper" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;"><h1 class="csg-h1" style="font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;">Version 4.6.4 (15/12/2021)</h1><h3 class="csg-h3" style="font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;">Bug</h3><p class="csg-p" style="margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;"><a href="https://devbox-sante.atlassian.net/browse/DMP-168" class="csg-mark-link" style="border: none; background: transparent; color: #0052cc; text-decoration: none;">DMP-168</a> Incompatibilité avec INSI 2.5 pour injection CpsFacade</p></div>

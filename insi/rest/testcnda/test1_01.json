@@ -2,6 +2,9 @@
     "context": {
       "auteur": {
         "identifiantInterne": "1234"
+      },
+      "structure": {
+        "identifiantFacturation": "123456789"
       }
     },
     "dateNaissance": "14071977",

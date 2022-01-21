@@ -1,5 +1,12 @@
 {
-    "context": null,
+    "context": {
+        "auteur": {
+            "identifiantInterne": "1234"
+        },
+        "structure": {
+            "identifiantFacturation": "123456789"
+        }
+    },
     "lotIdentifiants": [
         {
             "matriculeINS": {

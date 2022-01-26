@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/dmp/howtos/">
-<link rel="alternate" type="application/rss&#43;xml" href="/dmp/howtos/index.xml">
-<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -19,20 +17,28 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Howtos | DevBox-Santé</title>
+<title>Transactions supportées | DevBox-Santé</title>
 
 
-  
-  <meta name="description" content="">
-<meta property="og:title" content="Howtos" />
-<meta property="og:description" content="La Documentation" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/dmp/howtos/" /><meta property="og:site_name" content="DevBox-Santé" />
+  <meta name="description" content="Contient un exemple d&#39;utilisation de l&#39;API java et curl des différentes transactions supportées.
+">
+<meta property="og:title" content="Transactions supportées" />
+<meta property="og:description" content="Contient un exemple d&#39;utilisation de l&#39;API java et curl des différentes transactions supportées.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/dmp/howtos/transactions/" /><meta property="article:section" content="dmp" />
 
-<meta itemprop="name" content="Howtos">
-<meta itemprop="description" content="La Documentation"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Howtos"/>
-<meta name="twitter:description" content="La Documentation"/>
+<meta property="og:site_name" content="DevBox-Santé" />
+
+<meta itemprop="name" content="Transactions supportées">
+<meta itemprop="description" content="Contient un exemple d&#39;utilisation de l&#39;API java et curl des différentes transactions supportées.
+">
+
+<meta itemprop="wordCount" content="1615">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Transactions supportées"/>
+<meta name="twitter:description" content="Contient un exemple d&#39;utilisation de l&#39;API java et curl des différentes transactions supportées.
+"/>
 
 
 
@@ -68,7 +74,7 @@ if (!doNotTrack) {
 
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -187,124 +193,217 @@ if (!doNotTrack) {
     <div class="container-fluid td-outer">
       <div class="td-main">
         <div class="row flex-xl-nowrap">
-          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
-          </div>
-          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-          </div>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-dmp-li">
+  <a href="/dmp/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-dmp"><span class="">DMP</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmpembedded-li">
+  <a href="/dmp/embedded/" title="Embedded : Premier Pas" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmpembedded"><span class="">Java API</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmpembeddedhowtos-li">
+  <a href="/dmp/embedded/howtos/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmpembeddedhowtos"><span class="">Howtos</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpembeddedhowtosuniqueidgenerator-li">
+  <a href="/dmp/embedded/howtos/uniqueidgenerator/" title="UniqueIdGenerator" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dmpembeddedhowtosuniqueidgenerator"><span class="">Génération des UniqueId</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmprest-li">
+  <a href="/dmp/rest/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmprest"><span class="">REST Proxy</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpsoap-li">
+  <a href="/dmp/soap/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmpsoap"><span class="">SOAP Proxy</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmpauthentifications-li">
+  <a href="/dmp/authentifications/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmpauthentifications"><span class="">Authentifications</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpauthentificationsindirecte-li">
+  <a href="/dmp/authentifications/indirecte/" title="Authentification Indirecte (via certificat serveur)" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dmpauthentificationsindirecte"><span class="">Indirecte</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpauthentificationsdirecte-li">
+  <a href="/dmp/authentifications/directe/" title="Authentification Directe (via carte CPx)" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dmpauthentificationsdirecte"><span class="">Directe</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpauthentificationscps_agent-li">
+  <a href="/dmp/authentifications/cps_agent/" title="Authentification Directe via le CPS Agent" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dmpauthentificationscps_agent"><span class="">Directe via CPS Agent</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmpcda-li">
+  <a href="/dmp/cda/" title="Structuration des documents" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmpcda"><span class="">CDA</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpcdastructurationminimale-li">
+  <a href="/dmp/cda/structurationminimale/" title="CDA structuration minimale" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dmpcdastructurationminimale"><span class="">CDA-minimal</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpcdacrbiologie-li">
+  <a href="/dmp/cda/crbiologie/" title="Compte rendu d&#39;examens de biologie" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dmpcdacrbiologie"><span class="">CDA Biologie</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpconfiguration-li">
+  <a href="/dmp/configuration/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmpconfiguration"><span class="">Configuration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-dmphowtos-li">
+  <a href="/dmp/howtos/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmphowtos"><span class="">Howtos</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-dmphowtostransactions-li">
+  <a href="/dmp/howtos/transactions/" title="Transactions supportées" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-dmphowtostransactions"><span class="td-sidebar-nav-active-item">Toutes les transactions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosgestioncertificat-li">
+  <a href="/dmp/howtos/gestioncertificat/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmphowtosgestioncertificat"><span class="">Gestion des certificats</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosschematron-li">
+  <a href="/dmp/howtos/schematron/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmphowtosschematron"><span class="">Schematron</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosintegrateurchecklist-li">
+  <a href="/dmp/howtos/integrateurchecklist/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dmphowtosintegrateurchecklist"><span class="">Integrateurs checklist</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmparchitecture-li">
+  <a href="/dmp/architecture/" title="Architecture interne des différents composants" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmparchitecture"><span class="">Architecture interne</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpversions-li">
+  <a href="/dmp/versions/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmpversions"><span class="">Versions</span></a>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+  
+  
+  
+  
+  
+  
+  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  
+  
+    <a id="print" href="/dmp/howtos/_print/"><i class="fa fa-print fa-fw"></i> Imprimer la section entière</a>
+  
+  </div>
+
+
             
 
 
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#mode-dauthentification">Mode d&rsquo;authentification</a>
+      <ul>
+        <li><a href="#directe-depus-version-31">Directe (depus version 3.1)</a></li>
+        <li><a href="#indirecte-depuis-version-10">Indirecte (depuis version 1.0)</a></li>
+      </ul>
+    </li>
+    <li><a href="#récupération-des-différents-paramètres-du-dmp">Récupération des différents paramètres du DMP</a>
+      <ul>
+        <li><a href="#getparametres-depuis-version-30">getParametres() (depuis version 3.0)</a></li>
+        <li><a href="#getcodesfor-depuis-version-10">getCodesFor() (depuis version 1.0)</a></li>
+        <li><a href="#gettypesindexedbyclasscode-depuis-version-45">getTypesIndexedByClassCode() (depuis version 4.5)</a></li>
+      </ul>
+    </li>
+    <li><a href="#transactions-didentification-du-patient">Transactions d&rsquo;identification du patient</a>
+      <ul>
+        <li><a href="#td02--test-dexistence-du-dmp-dun-patient-et-vérification-de-lautorisation-daccès--depuis-version-10">TD0.2 : test d’existence du DMP d’un patient et vérification de l’autorisation d’accès  (depuis version 1.0)</a></li>
+        <li><a href="#td03--modifier-lautorisation-daccès-etou-le-statut-médecin-traitant-dmp-ou-passer-en-mode-daccès--bris-de-glace--depuis-version-20">TD0.3 : modifier l’autorisation d’accès et/ou le statut médecin traitant DMP ou passer en mode d’accès « bris de glace » (depuis version 2.0)</a></li>
+        <li><a href="#td04">TD0.4</a></li>
+        <li><a href="#td05">TD0.5</a></li>
+        <li><a href="#td15--créer-ou-mettre-à-jour-le-compte-internet-du-patient-depuis-version-20">TD1.5 : créer ou mettre à jour le compte internet du patient (depuis version 2.0)</a></li>
+      </ul>
+    </li>
+    <li><a href="#alimentation">Alimentation</a>
+      <ul>
+        <li><a href="#td21--alimenter-le-dmp-dun-patient-avec-des-documents-depuis-version-10">TD2.1 : alimenter le DMP d’un patient avec des documents (depuis version 1.0)</a></li>
+        <li><a href="#td31--depuis-version-32">TD3.1 : (depuis version 3.2)</a></li>
+        <li><a href="#td31b--rechercher-lidentifiant-technique-dun-document-depuis-version-30">TD3.1b : rechercher l’identifiant technique d’un document (depuis version 3.0)</a></li>
+        <li><a href="#td33c--supprimer-un-document-depuis-version-10">TD33c : Supprimer un document (depuis version 1.0)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 
 
+
+            
+
+	
+		
+
+
+
+  
+  
+
+	
+		
+
+
+
+  
+  
+
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/dmp/">DMP</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/dmp/howtos/">Howtos</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="/dmp/howtos/transactions/">Toutes les transactions</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
 <div class="td-content">
-<div class="pageinfo pageinfo-primary d-print-none">
-<p>
-Version imprimable multipages.
-<a href="#" onclick="print();return false;">Cliquer ici pour imprimer</a>.
-</p><p>
-<a href="/dmp/howtos/">Retour à la version par défaut</a>.
-</p>
-</div>
+	<h1>Transactions supportées</h1>
+	<div class="lead">Contient un exemple d&rsquo;utilisation de l&rsquo;API java et curl des différentes transactions supportées.</div>
+	<header class="article-meta">
+		
+		
+			
+				
 
 
-
-<h1 class="title">Howtos</h1>
-
-
+			
+				
 
 
-
-    <ul>
-    
-  
-  
-  
-  
-
-  
-    
-    
-	
-<li>1: <a href="#pg-f735462b8d0ff314fe0254e1f86e8d07">Transactions supportées</a></li>
-
-
-    
-  
-    
-    
-	
-<li>2: <a href="#pg-0f6a8b8e81b29a55c0237a0114578bf4">Gestion des certificats</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
-  
-    
-    
-	
-<li>3: <a href="#pg-de03b1ff0ff2188a68d5d13f0a8489ec">Schematron</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
-  
-    
-    
-	
-<li>4: <a href="#pg-9541efc6c6fadf578bd308752f785e9b">Integrateurs checklist</a></li>
-
-
-    
-  
-
-    </ul>
-
-
-<div class="content">
-      
-</div>
-</div>
-
-
-  
-  
-  
-  
-
-  
-  
-
-  
-    
-    
-	
-    
-
-<div class="td-content" style="">
-    
-	<h1 id="pg-f735462b8d0ff314fe0254e1f86e8d07">1 - Transactions supportées</h1>
-    <div class="lead">Contient un exemple d&rsquo;utilisation de l&rsquo;API java et curl des différentes transactions supportées.</div>
+			
+		
+		
+	</header>    
 	<p>Toutes transactions vers le DMP se fait en précisant un <code>DMPCContext</code> et une requête spécifique en argument d&rsquo;une méthode du <code>DMPCClient</code>.</p>
 <p>Le <code>DMPCContext</code> contient les informations permettant de définir :</p>
 <ul>
@@ -615,284 +714,10 @@ La cinématique générale est la suivante :</p>
 <span style="color:#000">td33cRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setContentType</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">contentTypeDuDocumentASupprimer</span><span style="color:#ce5c00;font-weight:bold">);</span> <span style="color:#8f5902;font-style:italic">// le contentType est le même que pour une soumission de document.
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td33cUnpublished</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">td33cRequest</span><span style="color:#ce5c00;font-weight:bold">);</span>
 </code></pre></div>
+	
+	
+	
 </div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-0f6a8b8e81b29a55c0237a0114578bf4">2 - Gestion des certificats</h1>
-    <div class="lead">Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification indirecte</div>
-	<p>Une nouvelle IGC Santé a été mise en place courant 2016 : <a href="http://integrateurs-cps.asipsante.fr/IGC-Sante">http://integrateurs-cps.asipsante.fr/IGC-Sante</a></p>
-<p>Afin d&rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité. 
-Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande à partir d&rsquo;un téléservice dont la procédure est décrite ici.</p>
-<h2 id="procédure-administrative">Procédure Administrative</h2>
-<h3 id="règle-générale">Règle générale</h3>
-<p>Pour obtenir, les certificats et clés nécessaires pour la connexion au DMP en authentification indirecte, il faut que votre établissement soit enregistré au FINESS (Fichier National des Établissements Sanitaires es Sociaux) : <a href="http://finess.sante.gouv.fr/fininter/jsp/index.jsp">http://finess.sante.gouv.fr/fininter/jsp/index.jsp</a></p>
-<p>Les personnes pouvant remplir les conditions d&rsquo;obtentions des certificats sont décrites dans le document de l&rsquo;ANS : <a href="https://esante.gouv.fr/media/3827">Procédure DMP - Structures salariées</a></p>
-<p>Les principes généraux sont les suivants :</p>
-<blockquote>
-<p>Lors du raccordement au DMP, chaque site géographique d’un établissement de santé s’authentifie et s’identifie via son numéro de FINESS géographique.</p>
-<ul>
-<li>Ainsi, chaque site doit générer des certificats d’organisation sur son numéro de FINESS géographique.</li>
-<li>L’administrateur technique est une personne de confiance à qui le représentant légal de l’établissement délègue le droit de gérer le cycle de vie des certificats logiciels commandés.</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>Il est également possible pour le représentant légal d’une structure de désigner un ou plusieurs mandataires pour sa structure.</p>
-</blockquote>
-<h3 id="quels-certificats-">Quels certificats ?</h3>
-<blockquote>
-<p>Pour accéder au DMP en authentification indirecte (création/gestion administrative et alimentation), vous avez besoin de déployer les certificats suivants :</p>
-<ul>
-<li>un certificat client de type ORG AUTH_CLI pour s’authentifier au DMP ;</li>
-<li>un certificat client de type ORG SIGN pour signer les lots de documents soumis au DMP</li>
-</ul>
-</blockquote>
-<p>L&rsquo;dministrateur technique doit commander les certificats via le formulaire n°413 et le retourner à <a href="mailto:monserviceclient.certificats@asipsante.fr">monserviceclient.certificats@asipsante.fr</a>
-Le formulaire peut être télécharger depuis le site : <a href="https://esante.gouv.fr/securite/cartes-et-certificats/commandes">https://esante.gouv.fr/securite/cartes-et-certificats/commandes</a></p>
-<h2 id="procédure-technique">Procédure Technique</h2>
-<p>Il est possible de commander ces certificats sur le site web mis à disposition par l&rsquo;ANS. Il s&rsquo;agit d&rsquo;un service permettant la commande de certificats et cartes :</p>
-<p><a href="https://pfc.eservices.esante.gouv.fr">https://pfc.eservices.esante.gouv.fr</a></p>
-<p>Pour pouvoir y accéder il faut se connecter avec un lecteur de cartes CPS configuré et une carte CPA autorisée au préalable :</p>
-<p><img src="pfcngAccueil.png" alt="pfcngAccueil.png"></p>
-<h3 id="certificats-et-clés-dauthentification">Certificats et clés d&rsquo;authentification</h3>
-<h4 id="demander">Demander</h4>
-<h5 id="étape-1">Étape 1:</h5>
-<p><img src="pfcngDemandeStep1.png" alt="pfcng"></p>
-<h5 id="étape-2">Étape 2:</h5>
-<p>RAS, il s&rsquo;agit d&rsquo;un écran de recherche pour les demandes antérieures. Cliquer sur &ldquo;Demander un nouveau produit&rdquo;</p>
-<h5 id="étape-3">Étape 3:</h5>
-<p>Il faut renseigner :</p>
-<ul>
-<li>l&rsquo;usage : AUTH_CLI</li>
-<li>le nom du service (nom du logiciel) qui va accéder au DMP,</li>
-<li>son adresse email (utiliser plus tard pour envoyer une confirmation)</li>
-</ul>
-<p><img src="pfcngDemandeStep3Auth.png" alt="pfcng"></p>
-<h5 id="étape-4-">Étape 4 :</h5>
-<p>Pour cette étape le plus simple est de générer la CSR sur le site, mais pas obligatoire.</p>
-<ul>
-<li>Saisir un mot de passe assez fort pour convenir au service, et sauvegarder le car il sera demandé lors de la récupération du certificats P12, ainsi que pour configurer la DevBox-Santé DMP.</li>
-<li>Cliquer sur &ldquo;Générer la CSR&rdquo;, puis &ldquo;Finaliser&rdquo;</li>
-</ul>
-<p><img src="pfcngDemandeStep4GenerateCSR.png" alt="pfcng"></p>
-<h5 id="étape-5-">Étape 5 :</h5>
-<p>Vous recevez un email de confirmation de la demande à l&rsquo;email saisie à l&rsquo;étape 3 :</p>
-<h4 id="retirer">Retirer</h4>
-<p>Depuis l&rsquo;étape 5 de la demande vous pouvez accéder au retrait du certificat commandé. Sinon vous pouvez y accéder par le menu Retirer</p>
-<h5 id="étape-1-1">Étape 1:</h5>
-<p>Cette étape consiste à choisir le produit à retirer</p>
-<p><img src="pfcngRetirerStep1.png" alt="pfcng"></p>
-<h5 id="étape-2-1">Étape 2:</h5>
-<p>Dans cette étape, il faut saisir un nouveau mot de passe pour les révocations (identique ou pas de celui de la CSR). Il n&rsquo;est pas utilisé dans l&rsquo;API mais peut servir à l&rsquo;administrateur technique.</p>
-<p><img src="pfcngRetirerStep2.png" alt="pfcng"></p>
-<h4 id="étape-3-finalisation">Étape 3: Finalisation</h4>
-<p>Dans cette étape, il faut saisir le mot de passe de réconciliation celui qui a permis de générer la CSR.</p>
-<p><img src="pfcngRetirerStep3.png" alt="pfcng"></p>
-<p>Le certificat/clé (p12) a un nom qui doit ressembler à asip-p12-EL-TEST-ORG-AUTH_CLI-20170603-173116.p12</p>
-<h3 id="certificats-et-clés-de-signature">Certificats et clés de signature</h3>
-<p>Pour la signature, il faut faire une autre demande avec le même process, à l&rsquo;exception de l&rsquo;étape 3 ou il faudra demander un certificat de signature : Usage SIGN</p>
-<p><img src="pfcngDemandeStep3Sign.png" alt="pfcng"></p>
-<h2 id="configuration-de-la-devbox-santé-dmp">Configuration de la DevBox-Santé DMP</h2>
-<p>Le paramètrage de ces certificats pour la DevBox-Santé DMP se trouve dans le <code>application.yml</code></p>
-<ul>
-<li><code>dmpc.url.prefix</code></li>
-<li><code>dmpc.smime.p12.path</code></li>
-<li><code>dmpc.smime.p12.password</code></li>
-<li><code>dmpc.ssl.p12.path</code></li>
-<li><code>dmpc.ssl.p12.password</code></li>
-<li><code>dmpc.ssl.trust.path</code></li>
-</ul>
-<p>Exemple de configuration à fournir :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#8f5902;font-style:italic"># informations relatives au certificat smime</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">smime</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#8f5902;font-style:italic">#./smime.p12</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">A_renseigner </span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">A_renseigner</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># informations relatives au certificat ssl</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ssl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#8f5902;font-style:italic">#ssl.p12</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">A_renseigner</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">A_renseigner</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># Contient les certificats serveurs autorisés pour authentification mutuelle         </span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">trust</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">truststoreIgcSante-EL-ORG.jks</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></code></pre></div>
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-de03b1ff0ff2188a68d5d13f0a8489ec">3 - Schematron</h1>
-    <div class="lead">Validation manuelle des CDA générés par la DevBox-Santé DMP lors de l&rsquo;homologation</div>
-	<h3 id="utilisation-des-outils-disponibles-sur-le-site-esantegouvfr">Utilisation des outils disponibles sur le site esante.gouv.fr</h3>
-<p>Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit sur le site esante.gouv.fr : 
-<a href="https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda">https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda</a></p>
-<p>La version lors de la rédaction : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip">https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip</a></p>
-<p>Une fois téléchargé, il faut sur un poste windows :</p>
-<ul>
-<li>décompresser l&rsquo;archive.</li>
-<li>naviguer jusqu&rsquo;à <code>testContenuCDA_20200609_V2.25\schematrons\moteur\gui</code></li>
-<li>lancer l&rsquo;exécution de <code>TCC-GUI.exe</code></li>
-<li>copier le fichier cda à valider à la racine du <code>testContenuCDA_20200609_V2.25</code></li>
-<li>cliquer sur générer le rapport :</li>
-</ul>
-<p><img src="schematronRapport.png" alt="Rapport Schematron CDA"></p>
-<h3 id="utilisation-de-lespace-de-tests-de-lans">Utilisation de l&rsquo;espace de tests de l&rsquo;ANS</h3>
-<p>Sur le site <a href="https://interop.esante.gouv.fr">interop.esante.gouv.fr</a> ou plus exactement <a href="https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;extension=ASIP">https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;extension=ASIP</a></p>
-<p>Une fois sur le site :</p>
-<ul>
-<li>Il vous faut télécharger votre fichier CDA</li>
-<li>Choisir le schematron à valider : &ldquo;Structuration minimale des documents de santé&rdquo; par exemple 
-<img src="External_Validation_Service_Front-end_1.png" alt="External Validation Service Front-end_1"></li>
-<li>Cliquer sur valider
-<img src="External_Validation_Service_Front-end_2.png" alt="External Validation Service Front-end_1"></li>
-</ul>
-
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-9541efc6c6fadf578bd308752f785e9b">4 - Integrateurs checklist</h1>
-    <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.</div>
-	<h2 id="administratif">Administratif</h2>
-<ul>
-<li>
-<p>Obtenir un NIE auprès du CNDA</p>
-</li>
-<li>
-<p>Signer un protocole avec le CNDA : <a href="https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/">https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/</a></p>
-<ul>
-<li>Obtenir les cartes vitales de test DMP</li>
-</ul>
-</li>
-<li>
-<p>Obtenir des cartes CPS de test (médecin, CPE, autre) auprès de l&rsquo;ANS</p>
-</li>
-</ul>
-<h2 id="choix-architecture">Choix Architecture</h2>
-<ul>
-<li>
-<p>Choisir un mode d&rsquo;intégration/ authentification</p>
-<ul>
-<li>les moyens d&rsquo;authentification de l&rsquo;utilisateur doivent permettre l&rsquo;identification unique de l&rsquo;utilissateur</li>
-<li>le PS a-t-il accès à sa carte CPS ?</li>
-<li>Se rappeler que l&rsquo;éditeur agit pour le compte d&rsquo;un établissement de santé (RPPS)</li>
-<li>Un certificat serveur est lié au FINESS géographique de l&rsquo;établissement de santé.</li>
-</ul>
-</li>
-<li>
-<p>Choisir les profils d&rsquo;intégration</p>
-<ul>
-<li>getion administrative de DMP</li>
-<li>alimentation</li>
-<li>consultation</li>
-</ul>
-</li>
-</ul>
-<h2 id="développement--intégration">Développement / Intégration</h2>
-<p>Pour cela  :</p>
-<ul>
-<li><a href="../embedded">mode API java</a></li>
-<li><a href="../rest">mode REST</a></li>
-</ul>
-<h2 id="enregistrement-cnda">Enregistrement CNDA </h2>
-<ul>
-<li>Conditions générales des TLSi AMO v3 (Dès le début du projet)</li>
-<li>Conditions Particulières DMP intégrateurs (Une fois l&rsquo;architecture choisie)</li>
-</ul>
-<h2 id="validation-devcoop">Validation DEVCOOP</h2>
-<ul>
-<li>
-<p>Répondre aux exigences du PDV filtré par DevBox-santé</p>
-</li>
-<li>
-<p>Dérouler le plan de test prehomologation filtrés pour validation DEVCOOP
-==&gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP</p>
-</li>
-</ul>
-<h2 id="processus-dhomologation-cnda">Processus d&rsquo;homologation CNDA</h2>
-<p><a href="https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/">https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/</a></p>
-<ul>
-<li>Fournir le PDV entièrement filtré (tests/déclarations par l’EAI) et complété conjointement sur les déclarations.</li>
-<li>Obtention d&rsquo;un environnement dédié pour le passage d&rsquo;homologation et date de passage</li>
-<li>Passer les tests</li>
-<li>Déposer les résultats</li>
-</ul>
-<h2 id="déploiement">Déploiement</h2>
-<h3 id="gestion-des-certificats">Gestion des certificats</h3>
-<ul>
-<li><a href="/dmp/howtos/gestioncertificat/">Dans le cas d&rsquo;une authentification indirecte pour les établissements</a></li>
-</ul>
-
-</div>
-
-
-
-    
-	
-  
-
 
 
           </main>

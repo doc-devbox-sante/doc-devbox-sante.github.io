@@ -124,7 +124,7 @@ Le système de la structure de santé doit être en mesure d&amp;rsquo;authentif
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Exemple curl :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;curl&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;-X&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;GET&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;/dmp/nomenclatures/typesByClassCode&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;transactions-didentification-du-patient&#34;&gt;Transactions d&amp;rsquo;identification du patient&lt;/h2&gt;
-&lt;h3 id=&#34;td02--test-dexistence-du-dmp-dun-patient-et-vérification-de-lautorisation-daccès--depuis-version-10&#34;&gt;TD0.2 : test d’existence du DMP d’un patient et vérification de l’autorisation d’accès  (depuis version 1.0)&lt;/h3&gt;
+&lt;h3 id=&#34;td02--test-dexistence-du-dmp-dun-patient-et-vérification-de-lautorisation-daccès--depuis-version-10&#34;&gt;TD0.2 : test d&amp;rsquo;existence du DMP d&amp;rsquo;un patient et vérification de l&amp;rsquo;autorisation d&amp;rsquo;accès  (depuis version 1.0)&lt;/h3&gt;
 &lt;p&gt;Cette transaction permet de tester l&amp;rsquo;existence d&amp;rsquo;un DMP et de vérifier les autorisations d&amp;rsquo;accès ainsi que de récupérer les informations concernant la création du compte patient.&lt;/p&gt;
 &lt;p&gt;De là peut en découler des actions de créations de DMP, de création de compte internet, ou bien encore de connaître la raison d&amp;rsquo;une interdiction d&amp;rsquo;accès&lt;/p&gt;
 &lt;p&gt;Exemple Java :&lt;/p&gt;
@@ -154,11 +154,11 @@ Le système de la structure de santé doit être en mesure d&amp;rsquo;authentif
         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;ins&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;277076322082910&amp;#34;&lt;/span&gt;
     &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;td03--modifier-lautorisation-daccès-etou-le-statut-médecin-traitant-dmp-ou-passer-en-mode-daccès--bris-de-glace--depuis-version-20&#34;&gt;TD0.3 : modifier l’autorisation d’accès et/ou le statut médecin traitant DMP ou passer en mode d’accès « bris de glace » (depuis version 2.0)&lt;/h3&gt;
-&lt;p&gt;Le LPS permet à l’utilisateur les actions suivantes.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;td03--modifier-lautorisation-daccès-etou-le-statut-médecin-traitant-dmp-ou-passer-en-mode-daccès--bris-de-glace--depuis-version-20&#34;&gt;TD0.3 : modifier l&amp;rsquo;autorisation d&amp;rsquo;accès et/ou le statut médecin traitant DMP ou passer en mode d&amp;rsquo;accès « bris de glace » (depuis version 2.0)&lt;/h3&gt;
+&lt;p&gt;Le LPS permet à l&amp;rsquo;utilisateur les actions suivantes.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Ajouter une autorisation d’accès au DMP du patient ou passer en mode d’accès « bris de glace ». Cf. DMP_0.3a.&lt;/li&gt;
-&lt;li&gt;Supprimer une autorisation d’accès au DMP du patient. Cf. DMP_0.3b.&lt;/li&gt;
+&lt;li&gt;Ajouter une autorisation d&amp;rsquo;accès au DMP du patient ou passer en mode d&amp;rsquo;accès « bris de glace ». Cf. DMP_0.3a.&lt;/li&gt;
+&lt;li&gt;Supprimer une autorisation d&amp;rsquo;accès au DMP du patient. Cf. DMP_0.3b.&lt;/li&gt;
 &lt;li&gt;Modifier le statut médecin traitant DMP. Cf. DMP_0.3c.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Exemple :&lt;/p&gt;
@@ -191,7 +191,7 @@ Le système de la structure de santé doit être en mesure d&amp;rsquo;authentif
 &lt;p&gt;La fonctionnalité DMP_1.5 permet :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;de créer le compte internet du patient afin que celui-ci puisse se connecter sur son DMP (DMP_1.5a),&lt;/li&gt;
-&lt;li&gt;d’ajouter ou modifier ou supprimer un canal OTP (One Time Password - code d’accès à usage unique) (DMP_1.5b),&lt;/li&gt;
+&lt;li&gt;d&amp;rsquo;ajouter ou modifier ou supprimer un canal OTP (One Time Password - code d&amp;rsquo;accès à usage unique) (DMP_1.5b),&lt;/li&gt;
 &lt;li&gt;de débloquer le compte internet patient et de régénérer les paramètres de connexion du patient (DMP_1.5d).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Exemple :&lt;/p&gt;
@@ -226,11 +226,11 @@ Le système de la structure de santé doit être en mesure d&amp;rsquo;authentif
 &lt;p&gt;Le profil alimentation du DMP se fait au travers de transaction XDS (&lt;a href=&#34;https://wiki.ihe.net/index.php/Cross-Enterprise_Document_Sharing&#34;&gt;https://wiki.ihe.net/index.php/Cross-Enterprise_Document_Sharing&lt;/a&gt;) supportée par le serveur DMP ainsi que par la DevBox-Santé DMP.&lt;/p&gt;
 &lt;p&gt;Les transactions XDS permettent de soumettre des documents au format CDA (&lt;a href=&#34;https://www.hl7.org/implement/standards/product_brief.cfm?product_id=7&#34;&gt;https://www.hl7.org/implement/standards/product_brief.cfm?product_id=7&lt;/a&gt;) supporté également par le DMP et la DevBox-Santé DMP.&lt;/p&gt;
 &lt;p&gt;La DevBox-Santé DMP présente un modèle simplifé des informations demandées et s&amp;rsquo;occupe de la cohérence des métadonnées des transactions XDS d&amp;rsquo;avec les métadonnées &lt;a href=&#34;../CDA/structurationMinimale.html&#34;&gt;des documents CDA&lt;/a&gt; )&lt;/p&gt;
-&lt;h3 id=&#34;td21--alimenter-le-dmp-dun-patient-avec-des-documents-depuis-version-10&#34;&gt;TD2.1 : alimenter le DMP d’un patient avec des documents (depuis version 1.0)&lt;/h3&gt;
-&lt;p&gt;Cette fonctionnalité permet d’alimenter le DMP d’un patient avec un ou plusieurs nouveaux documents :&lt;/p&gt;
+&lt;h3 id=&#34;td21--alimenter-le-dmp-dun-patient-avec-des-documents-depuis-version-10&#34;&gt;TD2.1 : alimenter le DMP d&amp;rsquo;un patient avec des documents (depuis version 1.0)&lt;/h3&gt;
+&lt;p&gt;Cette fonctionnalité permet d&amp;rsquo;alimenter le DMP d&amp;rsquo;un patient avec un ou plusieurs nouveaux documents :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;décrits sous la forme de documents CDA et de métadonnées XDS,&lt;/li&gt;
-&lt;li&gt;et transmis au système DMP sous la forme d’un lot de soumission XDS signé (XAdES).&lt;/li&gt;
+&lt;li&gt;et transmis au système DMP sous la forme d&amp;rsquo;un lot de soumission XDS signé (XAdES).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;La cinématique générale est la suivante.
 Le PS constitue le ou les document(s) dans le LPS . 
@@ -288,8 +288,8 @@ Le LPS :&lt;/p&gt;
 &lt;span style=&#34;color:#000&#34;&gt;submission&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;addDocument&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;document2&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;td31--depuis-version-32&#34;&gt;TD3.1 : (depuis version 3.2)&lt;/h3&gt;
 &lt;p&gt;Il est possible de faire des recherches de document ainsi que des recherches des documentation&lt;/p&gt;
-&lt;h3 id=&#34;td31b--rechercher-lidentifiant-technique-dun-document-depuis-version-30&#34;&gt;TD3.1b : rechercher l’identifiant technique d’un document (depuis version 3.0)&lt;/h3&gt;
-&lt;p&gt;Cette fonctionnalité permet, aux LPS qui n’implémentent pas DMP_3.1a, de rechercher l’identifiant technique d’un document (dans le système DMP) à partir de l’identifiant local au LPS de ce document.
+&lt;h3 id=&#34;td31b--rechercher-lidentifiant-technique-dun-document-depuis-version-30&#34;&gt;TD3.1b : rechercher l&amp;rsquo;identifiant technique d&amp;rsquo;un document (depuis version 3.0)&lt;/h3&gt;
+&lt;p&gt;Cette fonctionnalité permet, aux LPS qui n&amp;rsquo;implémentent pas DMP_3.1a, de rechercher l&amp;rsquo;identifiant technique d&amp;rsquo;un document (dans le système DMP) à partir de l&amp;rsquo;identifiant local au LPS de ce document.
 Le LPS peut ensuite supprimer (DMP_3.3c), archiver (DMP_3.3d) ou remplacer un document dans le DMP du patient (DMP_2.1/2.2b).&lt;/p&gt;
 &lt;p&gt;Exemple :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;previousDocumentUniqueId&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;...;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// uniqueId d&amp;#39;un document envoyé précédemment dans le DMP 
@@ -318,12 +318,12 @@ Le LPS peut ensuite supprimer (DMP_3.3c), archiver (DMP_3.3d) ou remplacer un do
 &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// envoie de la soummission
 &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;td21SubmitDocuments&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;TD21Request&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;submissionRemplaceE&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;));&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;td33c--supprimer-un-document-depuis-version-10&#34;&gt;TD33c : Supprimer un document (depuis version 1.0)&lt;/h3&gt;
-&lt;p&gt;Cette fonctionnalité permet à l’utilisateur de supprimer un document dans le DMP d’un patient.
+&lt;p&gt;Cette fonctionnalité permet à l&amp;rsquo;utilisateur de supprimer un document dans le DMP d&amp;rsquo;un patient.
 La cinématique générale est la suivante :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;L’utilisateur indique qu’il souhaite supprimer le document sélectionné.&lt;/li&gt;
-&lt;li&gt;L’utilisateur confirme l’action demandée.&lt;/li&gt;
-&lt;li&gt;Le LPS envoie une requête de mise à jour des attributs d’un document au système DMP&lt;/li&gt;
+&lt;li&gt;L&amp;rsquo;utilisateur indique qu&amp;rsquo;il souhaite supprimer le document sélectionné.&lt;/li&gt;
+&lt;li&gt;L&amp;rsquo;utilisateur confirme l&amp;rsquo;action demandée.&lt;/li&gt;
+&lt;li&gt;Le LPS envoie une requête de mise à jour des attributs d&amp;rsquo;un document au système DMP&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Exemple :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;TD33CRequest&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;td33cRequest&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;TD33CRequest&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
@@ -331,6 +331,58 @@ La cinématique générale est la suivante :&lt;/p&gt;
 &lt;span style=&#34;color:#000&#34;&gt;td33cRequest&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setIns&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;patient&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getIns&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;());&lt;/span&gt; 
 &lt;span style=&#34;color:#000&#34;&gt;td33cRequest&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setContentType&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;contentTypeDuDocumentASupprimer&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// le contentType est le même que pour une soumission de document.
 &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;td33cUnpublished&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;td33cRequest&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;gestion-du-bris-de-glace&#34;&gt;Gestion du Bris de Glace&lt;/h2&gt;
+&lt;p&gt;Lorsque l&amp;rsquo;utilisateur a besoin de consulter le DMP d&amp;rsquo;un patient en cas d&amp;rsquo;urgence, sans avoir la possibilité de lui demander son autorisation, au lieu de se déclarer autorisé à accéder au dossier par le patient, il dispose de la possibilité d&amp;rsquo;accéder au dossier en mode « bris de glace ».&lt;/p&gt;
+&lt;p&gt;Dans l&amp;rsquo;api cela se traduit par une modification du Contexte :&lt;/p&gt;
+&lt;p&gt;En Java :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;DMPCContext&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;...&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;DMPCModeAcces&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;modeAcces&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DMPCModeAcces&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;modeAcces&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setAcces&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;DMPCModeAcces&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;ModeAcces&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;BRIS_DE_GLACE&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;modeAcces&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setRaison&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Accès en urgence&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setModeAcces&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;modeAcces&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En REST :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;author&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
+        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;modeAcces&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;acces&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;BRIS_DE_GLACE&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;raison&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Accès en urgence&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;gestion-de-la-connexion-secrète&#34;&gt;Gestion de la connexion secrète&lt;/h2&gt;
+&lt;p&gt;L&amp;rsquo;exigence EX_0.1-1100 :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Le LPS doit permettre à l&amp;rsquo;utilisateur de mettre en oeuvre une connexion secrète pour les mineurs, en concertation avec son patient. Cf. donnée confidentiality-code dans le VIHF.
+Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exigence EX_GEN-1550 au § 3.1.3) et proposition systématique, choix utilisateur,… devront être précisées par l&amp;rsquo;éditeur lors de son passage en homologation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;La décision de la mise en place de la connexion secrète est laissée à l&amp;rsquo;intégrateur. Dans le càs où, l&amp;rsquo;application veut déclarer la connexion secrète, il suffit d&amp;rsquo;ajouter le code de confidentialité &lt;code&gt;INVISIBLE_REPRESENTANTS_LEGAUX&lt;/code&gt; dans le contexte :&lt;/p&gt;
+&lt;p&gt;EN java :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;DMPCContext&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;...&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;DMPCCode&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;code&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getCodesFor&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;((&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;DMPCCode&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;ASIPJeuxValeurs&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;RESTRICTION_AUDIENCE_VIHF&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
+    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;stream&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt;
+    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;filter&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;dmpcCode&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;dmpcCode&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getCode&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;equals&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;INVISIBLE_REPRESENTANTS_LEGAUX&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;))&lt;/span&gt;
+    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;findFirst&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setConfidentialityCode&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;code&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En REST :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;author&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
+        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;confidentialityCode&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;INVISIBLE_REPRESENTANTS_LEGAUX&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>

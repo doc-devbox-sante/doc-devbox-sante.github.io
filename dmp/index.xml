@@ -383,7 +383,10 @@ Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exige
         &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
     &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;ATTENTION : Ne pas confondre la connexion secrète est la soummission de documents à visibilité réduite comme &lt;code&gt;INVISIBLE_REPRESENTANTS_LEGAUX&lt;/code&gt;, &lt;code&gt;INVISIBLE_PATIENT&lt;/code&gt;, ou encore &lt;code&gt;MASQUE_PS&lt;/code&gt;. Il s&amp;rsquo;agit dans ce cas de spécifier un code de confidentialité spécifique au document. Ces codes sont disponibles dans la nomenclature &lt;code&gt;DMPCCode.ASIPJeuxValeurs.CONFIDENTIALITY_CODE&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
       </description>
     </item>
     
@@ -515,6 +518,65 @@ cloud &amp;quot;**DMP**&amp;quot; as DMP
 frontend -down-&amp;gt; backend
 DMPC_API -d-&amp;gt; DMP : SOAP XDS / CDA
 &lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Dmp: Différents environnements du DMP</title>
+      <link>/dmp/howtos/environnements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/dmp/howtos/environnements/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Pour le DMP, Ils existent quatre types d&amp;rsquo;environnements : &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;développement&lt;/li&gt;
+&lt;li&gt;homologation&lt;/li&gt;
+&lt;li&gt;formation&lt;/li&gt;
+&lt;li&gt;production&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;environnement-de-développement&#34;&gt;Environnement de développement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Accessible à tous les utilisateurs l&amp;rsquo;url LPS v2 : &lt;a href=&#34;https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pas d&amp;rsquo;environnement Web PS et Patient.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;environnement-dhomologation&#34;&gt;Environnement d&amp;rsquo;Homologation&lt;/h2&gt;
+&lt;p&gt;C&amp;rsquo;est un environnement spécifique à l&amp;rsquo;éditeur qui passe son homologation. Le CNDA donne les informations pour y accéder lors de la phase d&amp;rsquo;homologation de l&amp;rsquo;éditeur&lt;/p&gt;
+&lt;h2 id=&#34;environnements-de-formation&#34;&gt;Environnements de Formation&lt;/h2&gt;
+&lt;p&gt;Dans la fiche d&amp;rsquo;information &lt;code&gt;PDT-INF-506v5&lt;/code&gt; en date du 14 janvier 2022, il est fait mention de 4 environnements de formation avec des rétentions de données différentes :&lt;/p&gt;
+&lt;h3 id=&#34;formation-1---jeu-de-données-jamais-réinitialisé&#34;&gt;Formation 1 - Jeu de données jamais réinitialisé&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LPS V2 : &lt;a href=&#34;https://formation1.lps2.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://formation1.lps2.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WebPS : &lt;a href=&#34;https://formation1.ps.dmp.gouv.fr/ps/acces-web&#34;&gt;https://formation1.ps.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Web Patient : &lt;a href=&#34;https://formation1.patient.dmp.gouv.fr&#34;&gt;https://formation1.patient.dmp.gouv.fr&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;formation-3---jeu-de-données-réinitialisé-tous-les-jours&#34;&gt;Formation 3 - Jeu de données réinitialisé tous les jours&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LPS V2 : &lt;a href=&#34;https://formation3.lps2.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://formation3.lps2.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WebPS : &lt;a href=&#34;https://formation3.ps.dmp.gouv.fr/ps/acces-web&#34;&gt;https://formation3.ps.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Web Patient : &lt;a href=&#34;https://formation3.patient.dmp.gouv.fr&#34;&gt;https://formation3.patient.dmp.gouv.fr&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;formation-4---jeu-de-données-réinitialisé-tous-les-15-jours&#34;&gt;Formation 4 - Jeu de données réinitialisé tous les 15 jours&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LPS V2 : &lt;a href=&#34;https://formation4.lps2.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://formation4.lps2.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WebPS : &lt;a href=&#34;https://formation4.ps.dmp.gouv.fr/ps/acces-web&#34;&gt;https://formation4.ps.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Web Patient : &lt;a href=&#34;https://formation4.patient.dmp.gouv.fr&#34;&gt;https://formation4.patient.dmp.gouv.fr&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;formation-5---jeu-de-données-réinitialisé-tous-les-mois&#34;&gt;Formation 5 - Jeu de données réinitialisé tous les mois&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LPS V2 : &lt;a href=&#34;https://formation5.lps2.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://formation5.lps2.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WebPS : &lt;a href=&#34;https://formation5.ps.dmp.gouv.fr/ps/acces-web&#34;&gt;https://formation5.ps.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Web Patient : &lt;a href=&#34;https://formation5.patient.dmp.gouv.fr&#34;&gt;https://formation5.patient.dmp.gouv.fr&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;environnements-de-production&#34;&gt;Environnements de Production&lt;/h2&gt;
+&lt;p&gt;Dans la fiche d&amp;rsquo;information &lt;code&gt;PDT-INF-547 v3&lt;/code&gt; en date du 23 juillet 2019 :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LPS v2 : &lt;a href=&#34;https://lps2.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://lps2.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Web PS : &lt;a href=&#34;https://www.dmp.fr/ps/acces-web/&#34;&gt;https://www.dmp.fr/ps/acces-web/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     

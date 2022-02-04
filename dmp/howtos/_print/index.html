@@ -234,7 +234,15 @@ Version imprimable multipages.
     
     
 	
-<li>2: <a href="#pg-0f6a8b8e81b29a55c0237a0114578bf4">Gestion des certificats</a></li>
+<li>2: <a href="#pg-254923b045df69c3988cd4d88682ddf9">Différents environnements du DMP</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-0f6a8b8e81b29a55c0237a0114578bf4">Gestion des certificats</a></li>
 
 
     
@@ -253,7 +261,7 @@ Version imprimable multipages.
     
     
 	
-<li>3: <a href="#pg-de03b1ff0ff2188a68d5d13f0a8489ec">Schematron</a></li>
+<li>4: <a href="#pg-de03b1ff0ff2188a68d5d13f0a8489ec">Schematron</a></li>
 
 
     
@@ -272,7 +280,7 @@ Version imprimable multipages.
     
     
 	
-<li>4: <a href="#pg-9541efc6c6fadf578bd308752f785e9b">Integrateurs checklist</a></li>
+<li>5: <a href="#pg-9541efc6c6fadf578bd308752f785e9b">Integrateurs checklist</a></li>
 
 
     
@@ -666,7 +674,10 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
         <span style="color:#a40000">...</span>
     <span style="color:#000;font-weight:bold">}</span>
 <span style="color:#000;font-weight:bold">}</span>
-</code></pre></div>
+</code></pre></div><blockquote>
+<p>ATTENTION : Ne pas confondre la connexion secrète est la soummission de documents à visibilité réduite comme <code>INVISIBLE_REPRESENTANTS_LEGAUX</code>, <code>INVISIBLE_PATIENT</code>, ou encore <code>MASQUE_PS</code>. Il s&rsquo;agit dans ce cas de spécifier un code de confidentialité spécifique au document. Ces codes sont disponibles dans la nomenclature <code>DMPCCode.ASIPJeuxValeurs.CONFIDENTIALITY_CODE</code></p>
+</blockquote>
+
 </div>
 
 
@@ -681,7 +692,70 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-0f6a8b8e81b29a55c0237a0114578bf4">2 - Gestion des certificats</h1>
+	<h1 id="pg-254923b045df69c3988cd4d88682ddf9">2 - Différents environnements du DMP</h1>
+    <div class="lead">Les différents environnements pour accéder au DMP</div>
+	<p>Pour le DMP, Ils existent quatre types d&rsquo;environnements : </p>
+<ul>
+<li>développement</li>
+<li>homologation</li>
+<li>formation</li>
+<li>production</li>
+</ul>
+<h2 id="environnement-de-développement">Environnement de développement</h2>
+<ul>
+<li>Accessible à tous les utilisateurs l&rsquo;url LPS v2 : <a href="https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
+<li>Pas d&rsquo;environnement Web PS et Patient.</li>
+</ul>
+<h2 id="environnement-dhomologation">Environnement d&rsquo;Homologation</h2>
+<p>C&rsquo;est un environnement spécifique à l&rsquo;éditeur qui passe son homologation. Le CNDA donne les informations pour y accéder lors de la phase d&rsquo;homologation de l&rsquo;éditeur</p>
+<h2 id="environnements-de-formation">Environnements de Formation</h2>
+<p>Dans la fiche d&rsquo;information <code>PDT-INF-506v5</code> en date du 14 janvier 2022, il est fait mention de 4 environnements de formation avec des rétentions de données différentes :</p>
+<h3 id="formation-1---jeu-de-données-jamais-réinitialisé">Formation 1 - Jeu de données jamais réinitialisé</h3>
+<ul>
+<li>LPS V2 : <a href="https://formation1.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://formation1.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
+<li>WebPS : <a href="https://formation1.ps.dmp.gouv.fr/ps/acces-web">https://formation1.ps.dmp.gouv.fr/ps/acces-web</a></li>
+<li>Web Patient : <a href="https://formation1.patient.dmp.gouv.fr">https://formation1.patient.dmp.gouv.fr</a></li>
+</ul>
+<h3 id="formation-3---jeu-de-données-réinitialisé-tous-les-jours">Formation 3 - Jeu de données réinitialisé tous les jours</h3>
+<ul>
+<li>LPS V2 : <a href="https://formation3.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://formation3.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
+<li>WebPS : <a href="https://formation3.ps.dmp.gouv.fr/ps/acces-web">https://formation3.ps.dmp.gouv.fr/ps/acces-web</a></li>
+<li>Web Patient : <a href="https://formation3.patient.dmp.gouv.fr">https://formation3.patient.dmp.gouv.fr</a></li>
+</ul>
+<h3 id="formation-4---jeu-de-données-réinitialisé-tous-les-15-jours">Formation 4 - Jeu de données réinitialisé tous les 15 jours</h3>
+<ul>
+<li>LPS V2 : <a href="https://formation4.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://formation4.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
+<li>WebPS : <a href="https://formation4.ps.dmp.gouv.fr/ps/acces-web">https://formation4.ps.dmp.gouv.fr/ps/acces-web</a></li>
+<li>Web Patient : <a href="https://formation4.patient.dmp.gouv.fr">https://formation4.patient.dmp.gouv.fr</a></li>
+</ul>
+<h3 id="formation-5---jeu-de-données-réinitialisé-tous-les-mois">Formation 5 - Jeu de données réinitialisé tous les mois</h3>
+<ul>
+<li>LPS V2 : <a href="https://formation5.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://formation5.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
+<li>WebPS : <a href="https://formation5.ps.dmp.gouv.fr/ps/acces-web">https://formation5.ps.dmp.gouv.fr/ps/acces-web</a></li>
+<li>Web Patient : <a href="https://formation5.patient.dmp.gouv.fr">https://formation5.patient.dmp.gouv.fr</a></li>
+</ul>
+<h2 id="environnements-de-production">Environnements de Production</h2>
+<p>Dans la fiche d&rsquo;information <code>PDT-INF-547 v3</code> en date du 23 juillet 2019 :</p>
+<ul>
+<li>LPS v2 : <a href="https://lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
+<li>Web PS : <a href="https://www.dmp.fr/ps/acces-web/">https://www.dmp.fr/ps/acces-web/</a></li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0f6a8b8e81b29a55c0237a0114578bf4">3 - Gestion des certificats</h1>
     <div class="lead">Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification indirecte</div>
 	<p>Une nouvelle IGC Santé a été mise en place courant 2016 : <a href="http://integrateurs-cps.asipsante.fr/IGC-Sante">http://integrateurs-cps.asipsante.fr/IGC-Sante</a></p>
 <p>Afin d&rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité. 
@@ -813,7 +887,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-de03b1ff0ff2188a68d5d13f0a8489ec">3 - Schematron</h1>
+	<h1 id="pg-de03b1ff0ff2188a68d5d13f0a8489ec">4 - Schematron</h1>
     <div class="lead">Validation manuelle des CDA générés par la DevBox-Santé DMP lors de l&rsquo;homologation</div>
 	<h3 id="utilisation-des-outils-disponibles-sur-le-site-esantegouvfr">Utilisation des outils disponibles sur le site esante.gouv.fr</h3>
 <p>Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit sur le site esante.gouv.fr : 
@@ -865,7 +939,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-9541efc6c6fadf578bd308752f785e9b">4 - Integrateurs checklist</h1>
+	<h1 id="pg-9541efc6c6fadf578bd308752f785e9b">5 - Integrateurs checklist</h1>
     <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.</div>
 	<h2 id="administratif">Administratif</h2>
 <ul>

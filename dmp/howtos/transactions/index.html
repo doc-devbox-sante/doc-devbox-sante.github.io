@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/dmp/howtos/transactions/" /><meta property="article:section" content="dmp" />
 
-<meta property="article:modified_time" content="2022-01-26T16:54:23+01:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2022-02-04T12:11:30+01:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Transactions supportées">
 <meta itemprop="description" content="Contient un exemple d&#39;utilisation de l&#39;API java et curl des différentes transactions supportées.
 ">
-<meta itemprop="dateModified" content="2022-01-26T16:54:23+01:00" />
-<meta itemprop="wordCount" content="1865">
+<meta itemprop="dateModified" content="2022-02-04T12:11:30+01:00" />
+<meta itemprop="wordCount" content="1909">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Transactions supportées"/>
 <meta name="twitter:description" content="Contient un exemple d&#39;utilisation de l&#39;API java et curl des différentes transactions supportées.
@@ -250,6 +250,8 @@ if (!doNotTrack) {
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-dmphowtostransactions-li">
   <a href="/dmp/howtos/transactions/" title="Transactions supportées" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-dmphowtostransactions"><span class="td-sidebar-nav-active-item">Toutes les transactions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosenvironnements-li">
+  <a href="/dmp/howtos/environnements/" title="Différents environnements du DMP" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dmphowtosenvironnements"><span class="">Différents environnements</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosgestioncertificat-li">
   <a href="/dmp/howtos/gestioncertificat/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmphowtosgestioncertificat"><span class="">Gestion des certificats</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosschematron-li">
@@ -767,7 +769,10 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
         <span style="color:#a40000">...</span>
     <span style="color:#000;font-weight:bold">}</span>
 <span style="color:#000;font-weight:bold">}</span>
-</code></pre></div>
+</code></pre></div><blockquote>
+<p>ATTENTION : Ne pas confondre la connexion secrète est la soummission de documents à visibilité réduite comme <code>INVISIBLE_REPRESENTANTS_LEGAUX</code>, <code>INVISIBLE_PATIENT</code>, ou encore <code>MASQUE_PS</code>. Il s&rsquo;agit dans ce cas de spécifier un code de confidentialité spécifique au document. Ces codes sont disponibles dans la nomenclature <code>DMPCCode.ASIPJeuxValeurs.CONFIDENTIALITY_CODE</code></p>
+</blockquote>
+
 	
 	
 	

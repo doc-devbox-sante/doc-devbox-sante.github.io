@@ -104,6 +104,9 @@
     <loc>/insi/howtos/gestioncertificatinsi/</loc>
     <lastmod>2022-02-08T12:30:12+01:00</lastmod>
   </url><url>
+    <loc>/insi/howtos/datamatrix/</loc>
+    <lastmod>2022-02-11T18:27:34+01:00</lastmod>
+  </url><url>
     <loc>/dmp/howtos/schematron/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
   </url><url>
@@ -114,15 +117,16 @@
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
   </url><url>
     <loc>/installer/eureka/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/installer/contenu/</loc>
-    <lastmod>2022-02-08T12:30:12+01:00</lastmod>
-  </url><url>
-    <loc>/installer/versions/</loc>
-    <lastmod>2022-02-09T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/blog/1/01/01/versions-de-linstaller/</loc>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
+  </url><url>
+    <loc>/installer/versions/</loc>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/installer/</loc>
     <lastmod>2022-02-08T12:33:55+01:00</lastmod>
@@ -134,7 +138,7 @@
     <lastmod>2022-02-09T16:39:17+01:00</lastmod>
   </url><url>
     <loc>/insi/versions/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-02-11T18:31:41+01:00</lastmod>
   </url><url>
     <loc>/ms-sante/versions/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
@@ -143,49 +147,49 @@
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
   </url><url>
     <loc>/installer/versions/20220209_versions_courantes/</loc>
-    <lastmod>2022-02-09T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/installer/versions/20220117_versions_courantes/</loc>
-    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/blog/2022/01/17/discordance-ins-et-pi%C3%A8ce-didentit%C3%A9/</loc>
     <lastmod>2022-01-17T09:06:46+01:00</lastmod>
   </url><url>
     <loc>/installer/versions/20220110_versions_courantes/</loc>
-    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/installer/versions/20220103_versions_courantes/</loc>
-    <lastmod>2022-01-03T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/installer/versions/20211201_versions_courantes/</loc>
-    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/installer/versions/20211115_versions_courantes/</loc>
-    <lastmod>2021-11-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/installer/versions/20211021_versions_courantes/</loc>
-    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/installer/versions/20211008_versions_courantes/</loc>
-    <lastmod>2021-10-08T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/blog/2021/09/20/devbox-sant%C3%A9-dans-un-environnement-rdp/citrix/</loc>
     <lastmod>2021-11-15T10:01:10+01:00</lastmod>
   </url><url>
     <loc>/installer/versions/20210712_versions_courantes/</loc>
-    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/installer/versions/20210707_versions_courantes/</loc>
-    <lastmod>2021-07-07T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/installer/versions/20210622_versions_courantes/</loc>
-    <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/installer/versions/20210621_versions_courantes/</loc>
-    <lastmod>2021-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/installer/versions/20210618_versions_courantes/</loc>
-    <lastmod>2021-06-18T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-11T18:27:34+01:00</lastmod>
   </url><url>
     <loc>/blog/2021/06/10/les-m%C3%A9tadonn%C3%A9es-des-documents-du-dmp/</loc>
     <lastmod>2021-06-10T18:54:29+02:00</lastmod>
@@ -203,7 +207,7 @@
     <lastmod>2021-05-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/installer/versions/20210512_versions_courantes/</loc>
-    <lastmod>2021-05-12T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/</loc>
     <lastmod>2021-05-12T18:55:36+02:00</lastmod>
@@ -215,6 +219,6 @@
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2021-05-21T15:29:06+02:00</lastmod>
+    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url>
 </urlset>

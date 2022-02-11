@@ -4,7 +4,6 @@
     <link>/installer/versions/</link>
     <description>Recent content in Versions de l&#39;installer on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="/installer/versions/index.xml" rel="self" type="application/rss+xml" />
     
@@ -399,7 +398,7 @@
     </item>
     
     <item>
-      <title>Installer: 1.4</title>
+      <title>Installer: [18/06/2021] 1.4</title>
       <link>/installer/versions/20210618_versions_courantes/</link>
       <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
       

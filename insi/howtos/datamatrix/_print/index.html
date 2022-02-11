@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/insi/howtos/">
-<link rel="alternate" type="application/rss&#43;xml" href="/insi/howtos/index.xml">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/insi/howtos/datamatrix/">
+<link rel="alternate" type="application/rss&#43;xml" href="/insi/howtos/datamatrix/index.xml">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -19,20 +19,23 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Howtos | DevBox-Santé</title>
+<title>Datamatrix | DevBox-Santé</title>
 
 
-  
-  <meta name="description" content="">
-<meta property="og:title" content="Howtos" />
-<meta property="og:description" content="La Documentation" />
+  <meta name="description" content="Générer un datamatrix INS avec la DevBox-Santé INSi et insérer un cartouche dans son DMP
+">
+<meta property="og:title" content="Datamatrix" />
+<meta property="og:description" content="Générer un datamatrix INS avec la DevBox-Santé INSi et insérer un cartouche dans son DMP
+" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/insi/howtos/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="/insi/howtos/datamatrix/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Howtos">
-<meta itemprop="description" content="La Documentation"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Howtos"/>
-<meta name="twitter:description" content="La Documentation"/>
+<meta itemprop="name" content="Datamatrix">
+<meta itemprop="description" content="Générer un datamatrix INS avec la DevBox-Santé INSi et insérer un cartouche dans son DMP
+"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Datamatrix"/>
+<meta name="twitter:description" content="Générer un datamatrix INS avec la DevBox-Santé INSi et insérer un cartouche dans son DMP
+"/>
 
 
 
@@ -203,14 +206,14 @@ if (!doNotTrack) {
 Version imprimable multipages.
 <a href="#" onclick="print();return false;">Cliquer ici pour imprimer</a>.
 </p><p>
-<a href="/insi/howtos/">Retour à la version par défaut</a>.
+<a href="/insi/howtos/datamatrix/">Retour à la version par défaut</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">Howtos</h1>
-
+<h1 class="title">Datamatrix</h1>
+<div class="lead">Générer un datamatrix INS avec la DevBox-Santé INSi et insérer un cartouche dans son DMP</div>
 
 
 
@@ -222,231 +225,13 @@ Version imprimable multipages.
   
   
 
-  
-    
-    
-	
-<li>1: <a href="#pg-5f0ce1be23dc2876d68369f145bce30e">Integrateurs checklist</a></li>
-
-
-    
-  
-    
-    
-	
-<li>2: <a href="#pg-d298870dfc5976d147b75c9cb223ad52">Foire aux questions INSi</a></li>
-
-
-    
-  
-    
-    
-	
-<li>3: <a href="#pg-80e5e55089632da4faee2964e57f1da0">Gestion des certificats</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
-  
-    
-    
-	
-<li>4: <a href="#pg-cf9f436087bd6dae998d9bbec0c08356">Datamatrix</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
   
 
     </ul>
 
 
 <div class="content">
-      
-</div>
-</div>
-
-
-  
-  
-  
-  
-
-  
-  
-
-  
-    
-    
-	
-    
-
-<div class="td-content" style="">
-    
-	<h1 id="pg-5f0ce1be23dc2876d68369f145bce30e">1 - Integrateurs checklist</h1>
-    <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé INSi et faciliter son homologation.</div>
-	
-
-<div class="pageinfo pageinfo-primary">
-<pre><code>Page en cours de construction
-</code></pre>
-
-</div>
-
-<h1 id="documentation-à-prendre-en-compte">Documentation à prendre en compte</h1>
-<h2 id="insi-version-0400">INSi version 04.00</h2>
-<p>Dans le <strong>Package INSi 04.00.00</strong> :</p>
-<ul>
-<li>Fiche d&rsquo;information du contenu du package : <code>PDT-INF-736_Package INSi 04.00.00.pdf</code></li>
-<li><strong>Guide d&rsquo;intégration de SesamVitale <code>SEL-MP-043_04-00-00_INSi sans MR.pdf</code></strong></li>
-</ul>
-<p>Documentation de l&rsquo;ANS :</p>
-<p>L&rsquo;ANS fournit un référentiel à tenir compte également dans vos lectures d&rsquo;intégration car elle définit un certain nombre d&rsquo;exigences à respecter</p>
-<ul>
-<li>Référentiel INS : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_referentiel_identifiant_national_de_sante_v2.0.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_referentiel_identifiant_national_de_sante_v2.0.pdf</a></li>
-<li>Guide d&rsquo;implémentation : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/INS_Guide%20implementation_V2_0.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/INS_Guide%20implementation_V2_0.pdf</a></li>
-<li>RNIV : <a href="https://esante.gouv.fr/securite/identite-nationale-de-sante">https://esante.gouv.fr/securite/identite-nationale-de-sante</a> (ensemble des liens de la page)</li>
-</ul>
-<h1 id="commande-des-cartes-et-certificats-de-test">Commande des Cartes et Certificats de Test</h1>
-<p>Un document de l&rsquo;ANS donne toutes les indications suffisantes pour commander cartes et certificats nécessaires pour les développements :</p>
-<p><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf</a></p>
-<h1 id="intégration-de-la-devbox-santé-insi">Intégration de la DevBox-Santé INSi</h1>
-<p>Lire les autres pages de ce site concernant l&rsquo;intégration INSi</p>
-<h1 id="passage-de-lhomologation">Passage de l&rsquo;homologation</h1>
-<p>TODO</p>
-
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-d298870dfc5976d147b75c9cb223ad52">2 - Foire aux questions INSi</h1>
-    <div class="lead">Compilation des questions au sujet de l&rsquo;intégration INSi</div>
-	<h2 id="authentification-par-certificat-logiciel">Authentification par certificat logiciel</h2>
-<p>Reprises des questions réponses du webinaire <strong>&ldquo;Développer l’authentification TLS mutuelle par certificat logiciel pour INSi&rdquo; - mardi 16 novembre 2021 - 14h30</strong> :</p>
-<ul>
-<li><strong>Pourriez-vous préciser les cas d&rsquo;usage des certificats INSI-MANU et INSI-AUTO ?</strong></li>
-</ul>
-<blockquote>
-<p>Le certificat INSi-MANU permet aux personnes physiques ne disposant pas forcément de CPx nominatives et utilisant des applications de leur structure d’accéder au téléservice INS en mode manuel. Le certificat INSi-AUTO permet aux processus automatiques mis en œuvre par une structure d’accéder au téléservice INSi en mode automatique.</p>
-</blockquote>
-<ul>
-<li><strong>Dans le cadre d&rsquo;une application en mode SAAS partagée par plusieurs établissements, peut-on utiliser un même certificat en tant que logiciel ? Ou doit-on avoir un certificat pour chaque organisation ?</strong> :</li>
-</ul>
-<blockquote>
-<p>Vous devez avoir un certificat pour chaque établissement (si le FINESS géographique est différent entre les établissements).</p>
-</blockquote>
-<ul>
-<li><strong>Dans le cadre d&rsquo;un Organisme Gestionnaire, doit-on utiliser le FINESS de l&rsquo;établissement ou celui du siège ?</strong></li>
-</ul>
-<blockquote>
-<p>Pour un Organisme Gestionnaire ou toute autre structure gérant plusieurs établissements, c&rsquo;est le FINESS géographique de l&rsquo;établissement réalisant l&rsquo;appel au téléservice qui doit être véhiculé dans le flux INSi.</p>
-</blockquote>
-<ul>
-<li><strong>Peut-on télécharger le certificat P12 depuis le site du CNDA avec une carte CPx ?</strong></li>
-</ul>
-<blockquote>
-<p>Le certificat P12 est à télécharger sur le site web de l&rsquo;ANS. Vous trouverez plus d&rsquo;informations sur la procédure de commande des certificats dans la PDT-INF-736 du package V4 de INSi, disponible sur l&rsquo;Espace Industriels (rubrique Téléservice INSi).</p>
-</blockquote>
-<ul>
-<li><strong>A qui adresser les questions techniques lors de blocages dans l&rsquo;utilisation des certificats ?</strong></li>
-</ul>
-<blockquote>
-<p>Contactez directement le centre de services du GIE SESAM-Vitale (<a href="mailto:centre-deservice@sesam-vitale.fr">centre-deservice@sesam-vitale.fr</a> ou 02.43.57.42.88).</p>
-</blockquote>
-<p>_ <strong>Quelle est la procédure de délégation de commande de certificat auprès de l&rsquo;éditeur ?</strong></p>
-<blockquote>
-<p>La procédure de délégation de commande de certificat est décrite dans le document suivant : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_liberales_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_liberales_vf.pdf</a>  Etape 2</p>
-<p>Le formulaire de déclaration des administrateurs techniques autorisés à commander des certificats logiciels - F413 est disponible à cette adresse : <a href="https://esante.gouv.fr/documents/413">https://esante.gouv.fr/documents/413</a></p>
-</blockquote>
-
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-80e5e55089632da4faee2964e57f1da0">3 - Gestion des certificats</h1>
-    <div class="lead">Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification par certificat pour l&rsquo;INSi</div>
-	<p>Obtenir des certificats pour l&rsquo;INSi consiste à réaliser la même <a href="/dmp/howtos/gestioncertificat/">opération que pour le DMP</a>.
-et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package INSi 04.00.00.pdf</code>, une notice explicative est donnée</p>
-<p>Pour les certificats de test :</p>
-<ul>
-<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf</a></li>
-</ul>
-<p>Pour les certificats de production :</p>
-<ul>
-<li>la procédure de commande des certificats de structures salariées : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_salariees_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_salariees_vf.pdf</a></li>
-<li>la procédure de commande des certificats de structures libérales : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_liberales_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_liberales_vf.pdf</a></li>
-<li>la procédure de commande des certificats de laboratoires de biologie médicale : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_lbm_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_lbm_vf.pdf</a></li>
-</ul>
-
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-cf9f436087bd6dae998d9bbec0c08356">4 - Datamatrix</h1>
-    <div class="lead">Générer un datamatrix INS avec la DevBox-Santé INSi et insérer un cartouche dans son DMP</div>
-	<p>Il est dorénavant possible (depuis la version 2.6) de <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans---datamatrix-ins-v2.pdf">générer un datamatrix conforme à la spécification de l&rsquo;ANS</a>.</p>
+      <p>Il est dorénavant possible (depuis la version 2.6) de <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans---datamatrix-ins-v2.pdf">générer un datamatrix conforme à la spécification de l&rsquo;ANS</a>.</p>
 <h2 id="interface">Interface</h2>
 <p>Une interface Java a été mis à disposition :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">package</span> <span style="color:#000">fr.devboxsante.insi.datamatrix</span><span style="color:#ce5c00;font-weight:bold">;</span>
@@ -515,11 +300,9 @@ et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package I
 <p><img src="cartoucheINS.png" alt="cartouche INS"></p>
 
 </div>
+</div>
 
 
-
-    
-      
   
   
   
@@ -528,10 +311,6 @@ et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package I
   
   
 
-  
-
-    
-	
   
 
 

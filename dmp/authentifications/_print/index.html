@@ -250,6 +250,14 @@ Version imprimable multipages.
 
     
   
+    
+    
+	
+<li>4: <a href="#pg-763ad392bdca085f0bae891d2b5feb72">Authentification Directe via OLAQIN TAAS (Terminal As A Service)</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -469,6 +477,95 @@ dbxdmp -&gt; dmp : [SSL] 4. Client certificate
 dbxdmp -&gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public's key)
 dbxdmp -&gt; cpsAgent : HTTP POST /cps/sign/for/authentication/SHA256WithRSA body : {handshake data}
 cpsAgent -&gt; dbxdmp : {signed handshake data}
+dbxdmp -&gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
+dbxdmp -&gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
+dmp -&gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)
+== fin de l'initialisation de la connexion ssl avec le DMP ==
+dbxdmp -&gt; dmp : POST SOAP message de soumission (XDS/CDA)
+dmp -&gt; dbxdmp : SOAP response OK
+dbxdmp -&gt; backend : HTTP 200 Ok
+backend -&gt; frontend : ok
+
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-763ad392bdca085f0bae891d2b5feb72">4 - Authentification Directe via OLAQIN TAAS (Terminal As A Service)</h1>
+    <div class="lead">Un autre moyen d&rsquo;authentification OLAQIN TAAS (Terminal As A Service) via les APIs des serveurs HDS Stellair</div>
+	<p>OLAQIN TAAS (Terminal As A Service) est une technologie développée par la société OLAQIN qui permet aux APIs de la DevBox-Santé DMP d&rsquo;accéder à des terminaux OLAQIN via le réseau Internet.</p>
+<p>Les terminaux OLAQIN compatibles avec la technologie OLAQIN TAAS fournit des accès aux cartes Vitale et CPS au travers d’API.</p>
+<p><img src="OLAQIN_TAAS_architecture.png" alt="OLAQIN_TAAS architecture"></p>
+<p>Pour l’accès aux cartes Vitale, Olaqin s’appuie sur son homologation « Lecture Vitale » (via l’option API). Pour l’accès aux cartes des Professionnels de Santé, Olaqin s’appuie sur les développements réalisés dans le cadre de son homologation « Dispositif Intégré ».</p>
+<h2 id="intégration-dans-la-devbox-santé">Intégration dans la DevBox-santé</h2>
+<p>Vous pouvez donc installer votre solution DevBox-santé DMP dans votre environnement serveur HDS et utiliser les terminaux Olaqin.</p>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/4/themes/theme-devbox-sante.puml
+node &quot;Environnement Utilisateur&quot; {
+    package &quot;Poste client / mobile&quot; {
+        [FrontEnd intégrateur] as frontend
+    }
+    [Lecteur Neo] as lecteur
+}
+
+node &quot;Environnement intégrateur HDS&quot; {
+    [BackEnd intégrateur] as backend
+    package &quot;DevBox-Santé Proxy REST&quot;  DEVBOX_COLOR {
+        component &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {
+            [DevBox-sante CPS security Stellair] as cpsStellair #D34A3C
+        }
+    }
+}
+cloud &quot;**Stellair** API&quot; as stellair
+cloud &quot;**DMP**&quot; as DMP
+
+frontend -up-&gt; backend : REST
+backend -&gt; dmpFacade : REST
+cpsStellair -&gt; stellair: REST
+stellair &lt;-&gt; lecteur : Demande d'autorisation d'accès aux cartes via le SSO Stellair
+dmpFacade -&gt; DMP : SOAP
+</code></pre><h4 id="diagramme-de-séquences">Diagramme de séquences</h4>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+box &quot;Environnement utilisateur&quot;
+    participant &quot;Poste client&quot; as frontend
+    participant &quot;Lecteur Neo&quot; as lecteur
+end box
+
+box &quot;Environnement intégrateur&quot; #white
+participant backend
+participant &quot;DevBox-Santé DMP&quot; as dbxdmp DMP_COLOR
+end box
+participant &quot;**DMP**&quot; as dmp
+participant &quot;**Stellair**&quot; as stellair
+
+
+frontend -&gt; backend : storeDocumentPatient
+backend -&gt; dbxdmp : /dmp/td21SubmitDocuments
+==  initialisation d'une connexion SSL en authentification mutuelle avec le DMP ==
+dbxdmp -&gt; &quot;DMP&quot; as dmp : [SSL] 1. Client Hello
+dmp -&gt; dbxdmp : [SSL] 2. Server Hello (certificat du DMP server inclus)
+dmp -&gt; dbxdmp : [SSL] 3. Client certificate request
+dbxdmp -&gt; stellair : HTTP GET /cps/certificate/auth
+...
+stellair &lt;-&gt; lecteur
+...
+stellair -&gt; dbxdmp : {certificate authentification}
+dbxdmp -&gt; dmp : [SSL] 4. Client certificate
+dbxdmp -&gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public's key)
+dbxdmp -&gt; stellair : HTTP POST /cps/certificate/auth body : {handshake data}
+...
+stellair &lt;-&gt; lecteur
+...
+stellair -&gt; dbxdmp : {signed handshake data}
 dbxdmp -&gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
 dbxdmp -&gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
 dmp -&gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)

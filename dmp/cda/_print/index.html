@@ -229,7 +229,7 @@ Version imprimable multipages.
     
     
 	
-<li>1: <a href="#pg-05d0d06dd94984ae2ee1f8d082044f28">CDA structuration minimale</a></li>
+<li>1: <a href="#pg-05d0d06dd94984ae2ee1f8d082044f28">Volet CDA structuration minimale</a></li>
 
 
     
@@ -237,9 +237,28 @@ Version imprimable multipages.
     
     
 	
-<li>2: <a href="#pg-00acedff0c515c2832231418be77b605">Compte rendu d&#39;examens de biologie</a></li>
+<li>2: <a href="#pg-00acedff0c515c2832231418be77b605">Volet Compte rendu d&#39;examens de biologie</a></li>
 
 
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-da13bc028f9c0bfbdd94acfeef6d83d6">Votre volet CDA</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
     
   
 
@@ -247,7 +266,8 @@ Version imprimable multipages.
 
 
 <div class="content">
-      <h2 id="glossaire">Glossaire</h2>
+      <p>Il est possible dans le DMP de soumettre une multitude de type de document structurés dans le format CDA. Ces documents sont spécifiés dans <a href="https://esante.gouv.fr/offres-services/ci-sis/espace-publication">l&rsquo;Espace de publication du Cadre d’Interopérabilité des Systèmes d’Information de Santé</a></p>
+<h2 id="glossaire">Glossaire</h2>
 <ul>
 <li><strong>CDA</strong> : Clinical Document Architecture</li>
 </ul>
@@ -272,9 +292,9 @@ Version imprimable multipages.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-05d0d06dd94984ae2ee1f8d082044f28">1 - CDA structuration minimale</h1>
+	<h1 id="pg-05d0d06dd94984ae2ee1f8d082044f28">1 - Volet CDA structuration minimale</h1>
     
-	<h2 id="cdade-structuration-minimale">CDA de Structuration minimale</h2>
+	<h2 id="volet-cdade-structuration-minimale">Volet CDA de Structuration minimale</h2>
 <p>La DevBox-Santé DMP prend en charge la soumission de document à structuration minimale.
 Il s&rsquo;agit du format par défaut exigé par le Guide d&rsquo;intégration , il contient les métadonnées de 
 base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binaire.</p>
@@ -324,7 +344,7 @@ base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binai
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-00acedff0c515c2832231418be77b605">2 - Compte rendu d&#39;examens de biologie</h1>
+	<h1 id="pg-00acedff0c515c2832231418be77b605">2 - Volet Compte rendu d&#39;examens de biologie</h1>
     
 	<p>La DevBox-Santé DMP prend également en charge la soumission de document structure comme le CR d&rsquo;examens biologie.</p>
 <p>Ce format de document est spécifié par l&rsquo;ANS : <a href="https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale">https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale</a></p>
@@ -611,6 +631,94 @@ base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binai
 </div>
 
 
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-da13bc028f9c0bfbdd94acfeef6d83d6">3 - Votre volet CDA</h1>
+    <div class="lead">Ou encore un document CDA généré par l&rsquo;intégrateur</div>
+	<p>@Since DMP-4.6.2
+Il est possible que vous souhaitiez maîtriser la génération du document CDA, et que vous souhaitiez seulement déléguer l&rsquo;envoi au DMP de ce dernier.</p>
+<p>Il vous suffit de générer un document CDA conforme au <a href="/dmp/howtos/schematron">schematron</a> et de l&rsquo;envoyer dans une enveloppe de soummission au travers d&rsquo;une transaction <code>TD21submitDocuments</code></p>
+<p>En java, Cela consiste à créer un document enveloppe (Wrapper) <code>DMPCDocumentCDAWrapped</code> avec les quelques metadata non déductibles du CDA et le cda sous forme d&rsquo;un tableau de byte:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#204a87;font-weight:bold">byte</span><span style="color:#ce5c00;font-weight:bold">[]</span> <span style="color:#000">documentCDA</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">integrateur</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">genereUnCDA</span><span style="color:#ce5c00;font-weight:bold">();</span>
+
+    <span style="color:#000">DMPCDocumentCdaWrapped</span> <span style="color:#000">wrappedDocument</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">DMPCDocumentCdaWrapped</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">builder</span><span style="color:#ce5c00;font-weight:bold">()</span>
+                <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">format</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;urn:ihe:lab:xd-lab:2008&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+                <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">classCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;11&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+                <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">confidentialities</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">of</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;N&#34;</span><span style="color:#ce5c00;font-weight:bold">))</span>
+                <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">content</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">documentCda</span><span style="color:#ce5c00;font-weight:bold">)</span>  <span style="color:#8f5902;font-style:italic">// le contenu du CDA sera relu pour récupérer les métadonnées nécessaires à la soumission XDS du DMP.
+</span><span style="color:#8f5902;font-style:italic"></span>                <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">();</span>
+
+    <span style="color:#000">DMPCSoumission</span> <span style="color:#000">dmpcSoumission</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCSoumission</span><span style="color:#ce5c00;font-weight:bold">();</span>
+    <span style="color:#000">dmpcSoumission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addDocument</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">wrappedDocument</span><span style="color:#ce5c00;font-weight:bold">);</span> <span style="color:#8f5902;font-style:italic">// ajout du document dans la soumission
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">dmpcSoumission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setTitle</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Exemple de soumission wrapped&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+    <span style="color:#000">dmpcSoumission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPatient</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">);</span>  <span style="color:#8f5902;font-style:italic">// attention à la cohérence des identifiants patients.
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">dmpcSoumission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setContentType</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;04&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+
+    <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td21SubmitDocuments</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD21Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">dmpcSoumission</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</code></pre></div><p>En Rest, il faut préciser le type de document DMP soumis via <code>dmpcType: &quot;wrapped&quot;</code> et mettre le contenu</p>
+<pre tabindex="0"><code>curl --location --request POST 'http://127.0.0.1:8080/dmp/td21SubmitDocuments' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    &quot;context&quot;: {
+        ...
+    },
+    &quot;request&quot;: {
+        &quot;submission&quot;: {
+            &quot;title&quot;: &quot;soumission d'un document wrapped&quot;,
+            &quot;contentType&quot;: &quot;04&quot;,
+            &quot;patient&quot;: {
+                &quot;ins&quot;: &quot;148115530271002&quot;,
+                &quot;internalId&quot;: &quot;67890&quot;
+                
+            },
+            &quot;documents&quot;: [
+                {
+                    &quot;dmpcType&quot;: &quot;wrapped&quot;,
+                    &quot;auteurs&quot;: [
+                        {
+                            &quot;internalId&quot;: &quot;123456&quot;,
+                            &quot;nom&quot;: &quot;Durand&quot;,
+                            &quot;prenom&quot;: &quot;Pierre&quot;
+                        }
+                    ],
+                    &quot;classCode&quot;: &quot;11&quot;,
+                    &quot;comments&quot;: &quot;Document Wrapped soumis via Postman&quot;,
+                    &quot;confidentialities&quot;: [
+                        &quot;N&quot;
+                    ],
+                    &quot;format&quot;: &quot;urn:ihe:lab:xd-lab:2008&quot;,
+                    &quot;content&quot;: &quot;PD94bWwgdmVyc2lvbj0iMS4wIi
+                    ... Document CDA xml encodé en base64 ...
+                    BlbmNvZGluZz0iVVRGLTgiP1bWVudCB4bWxucz0i+&quot;
+                }
+            ]
+        }
+    }
+}'</code></pre>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
 
     
 	

@@ -644,8 +644,8 @@ base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binai
     
 	<h1 id="pg-da13bc028f9c0bfbdd94acfeef6d83d6">3 - Votre volet CDA</h1>
     <div class="lead">Ou encore un document CDA généré par l&rsquo;intégrateur</div>
-	<p>@Since DMP-4.6.2
-Il est possible que vous souhaitiez maîtriser la génération du document CDA, et que vous souhaitiez seulement déléguer l&rsquo;envoi au DMP de ce dernier.</p>
+	<p><strong>@Since DMP-4.7.0</strong></p>
+<p>Il est possible que vous souhaitiez maîtriser la génération du document CDA, et que vous souhaitiez seulement déléguer l&rsquo;envoi au DMP de ce dernier.</p>
 <p>Il vous suffit de générer un document CDA conforme au <a href="/dmp/howtos/schematron">schematron</a> et de l&rsquo;envoyer dans une enveloppe de soummission au travers d&rsquo;une transaction <code>TD21submitDocuments</code></p>
 <p>En java, Cela consiste à créer un document enveloppe (Wrapper) <code>DMPCDocumentCDAWrapped</code> avec les quelques metadata non déductibles du CDA et le cda sous forme d&rsquo;un tableau de byte:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#204a87;font-weight:bold">byte</span><span style="color:#ce5c00;font-weight:bold">[]</span> <span style="color:#000">documentCDA</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">integrateur</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">genereUnCDA</span><span style="color:#ce5c00;font-weight:bold">();</span>
@@ -664,46 +664,46 @@ Il est possible que vous souhaitiez maîtriser la génération du document CDA, 
 </span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">dmpcSoumission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setContentType</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;04&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 
     <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td21SubmitDocuments</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD21Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">dmpcSoumission</span><span style="color:#ce5c00;font-weight:bold">));</span>
-</code></pre></div><p>En Rest, il faut préciser le type de document DMP soumis via <code>dmpcType: &quot;wrapped&quot;</code> et mettre le contenu</p>
-<pre tabindex="0"><code>curl --location --request POST 'http://127.0.0.1:8080/dmp/td21SubmitDocuments' \
---header 'Content-Type: application/json' \
---data-raw '{
-    &quot;context&quot;: {
-        ...
-    },
-    &quot;request&quot;: {
-        &quot;submission&quot;: {
-            &quot;title&quot;: &quot;soumission d'un document wrapped&quot;,
-            &quot;contentType&quot;: &quot;04&quot;,
-            &quot;patient&quot;: {
-                &quot;ins&quot;: &quot;148115530271002&quot;,
-                &quot;internalId&quot;: &quot;67890&quot;
+</code></pre></div><p>En Rest, il faut préciser le type de document DMP soumis via <code>dmpcType: &quot;wrapped&quot;</code> et mettre le contenu encodé en Base64</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a40000">curl</span> <span style="color:#a40000">--location</span> <span style="color:#a40000">--request</span> <span style="color:#a40000">POST</span> <span style="color:#a40000">&#39;http://</span><span style="color:#0000cf;font-weight:bold">127.0</span><span style="color:#a40000">.</span><span style="color:#0000cf;font-weight:bold">0.1</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">8080</span><span style="color:#a40000">/dmp/td</span><span style="color:#0000cf;font-weight:bold">21</span><span style="color:#a40000">SubmitDocuments&#39;</span> <span style="color:#a40000">\</span>
+<span style="color:#a40000">--header</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+<span style="color:#a40000">--data-raw</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#a40000">...</span>
+    <span style="color:#000;font-weight:bold">},</span>
+    <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">&#34;submission&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">&#34;title&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;soumission d&#39;un document wrapped&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;contentType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;04&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;patient&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#204a87;font-weight:bold">&#34;ins&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;148115530271002&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                <span style="color:#204a87;font-weight:bold">&#34;internalId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;67890&#34;</span>
                 
-            },
-            &quot;documents&quot;: [
-                {
-                    &quot;dmpcType&quot;: &quot;wrapped&quot;,
-                    &quot;auteurs&quot;: [
-                        {
-                            &quot;internalId&quot;: &quot;123456&quot;,
-                            &quot;nom&quot;: &quot;Durand&quot;,
-                            &quot;prenom&quot;: &quot;Pierre&quot;
-                        }
-                    ],
-                    &quot;classCode&quot;: &quot;11&quot;,
-                    &quot;comments&quot;: &quot;Document Wrapped soumis via Postman&quot;,
-                    &quot;confidentialities&quot;: [
-                        &quot;N&quot;
-                    ],
-                    &quot;format&quot;: &quot;urn:ihe:lab:xd-lab:2008&quot;,
-                    &quot;content&quot;: &quot;PD94bWwgdmVyc2lvbj0iMS4wIi
-                    ... Document CDA xml encodé en base64 ...
-                    BlbmNvZGluZz0iVVRGLTgiP1bWVudCB4bWxucz0i+&quot;
-                }
-            ]
-        }
-    }
-}'</code></pre>
+            <span style="color:#000;font-weight:bold">},</span>
+            <span style="color:#204a87;font-weight:bold">&#34;documents&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+                <span style="color:#000;font-weight:bold">{</span>
+                    <span style="color:#204a87;font-weight:bold">&#34;dmpcType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;wrapped&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#204a87;font-weight:bold">&#34;auteurs&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+                        <span style="color:#000;font-weight:bold">{</span>
+                            <span style="color:#204a87;font-weight:bold">&#34;internalId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;123456&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                            <span style="color:#204a87;font-weight:bold">&#34;nom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Durand&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                            <span style="color:#204a87;font-weight:bold">&#34;prenom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pierre&#34;</span>
+                        <span style="color:#000;font-weight:bold">}</span>
+                    <span style="color:#000;font-weight:bold">],</span>
+                    <span style="color:#204a87;font-weight:bold">&#34;classCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#204a87;font-weight:bold">&#34;comments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Document Wrapped soumis via Postman&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#204a87;font-weight:bold">&#34;confidentialities&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+                        <span style="color:#4e9a06">&#34;N&#34;</span>
+                    <span style="color:#000;font-weight:bold">],</span>
+                    <span style="color:#204a87;font-weight:bold">&#34;format&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:ihe:lab:xd-lab:2008&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#204a87;font-weight:bold">&#34;content&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;PD94bWwgdmVyc2lvbj0iMS4wIi
+</span><span style="color:#4e9a06">                    ... Document CDA xml encodé en base64 ...
+</span><span style="color:#4e9a06">                    BlbmNvZGluZz0iVVRGLTgiP1bWVudCB4bWxucz0i+&#34;</span>
+                <span style="color:#000;font-weight:bold">}</span>
+            <span style="color:#000;font-weight:bold">]</span>
+        <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span></code></pre></div>
 </div>
 
 

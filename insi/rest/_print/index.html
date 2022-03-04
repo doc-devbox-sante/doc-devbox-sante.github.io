@@ -332,7 +332,27 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
     
 	<h1 id="pg-19b4240dfaea44626bc7cd6b12659389">1 - Conformité CNDA</h1>
     <div class="lead">Quelques exemples de requêtes JSON des tests de conformité du CNDA</div>
-	<p>Les tests sont décrits dans le document <code>SEL-GCONFORM_INSi_V01.06.pdf</code>. Voici quelques exemples json repris des tests :</p>
+	<p>Les tests sont décrits dans le document <code>SEL-GCONFORM_INSi_Vxx.xx.pdf</code>.</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<p><strong>Attention l&rsquo;environnement de qualification pour les tests restitue bien les cas passants mais pas correctement les non passants.</strong></p>
+
+</div>
+
+<blockquote>
+<p><strong>Précisions sur l’environnement de tests éditeurs :</strong></p>
+<p>Des erreurs « insi_101 » et « insi_102 » en sortie des opérations de recherche vont être restituées lors du déroulement des tests en environnement éditeurs.
+L&rsquo;environnement de tests éditeurs ne gère qu&rsquo;une base de tests RFI (régime général et régimes hébergés) mais pas de base SNGI (autres régimes : pour plus de détail voir le Guide d&rsquo;intégration).
+Le service effectue une première recherche vers le RFI :</p>
+<ul>
+<li>si le patient est trouvé, l&rsquo;INS et les informations associées sont restitués : les cas passants que vous observez</li>
+<li>si le patient n&rsquo;est pas trouvé, le service effectue une recherche au SNGI avec les données de la requête. Comme en environnement de tests éditeurs il n&rsquo;y a pas de branche SNGI, la recherche est en échec et l&rsquo;erreur « insi_101 » ou « insi_102 » (selon l’opération) est restituée (il s&rsquo;agit d&rsquo;une erreur technique : branche SNGI indisponible), un code CR01 ne peut être restitué.
+Dans la configuration actuelle de l&rsquo;environnement de tests, il n&rsquo;est pas possible d&rsquo;obtenir un CR01, c&rsquo;est pour cela (et pour tester les cinématiques attendues dans le Guide d&rsquo;intégration) que dans le package de tests sont fournis des fichiers xml à injecter dans le LPS, pour simuler les réponses du service que l&rsquo;on ne peut obtenir dans notre environnement. En environnement de production, lorsqu’un INS ne sera pas trouvé c’est bien un CR01 qui sera restitué.</li>
+</ul>
+</blockquote>
+<h1 id="exemples-json">Exemples json</h1>
+<p>Voici quelques exemples json repris des tests :</p>
 <h2 id="ws_ins1">WS_INS1</h2>
 <ul>
 <li>Cas du POST par lecture des données vitales en amont :

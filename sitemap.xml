@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/dmp/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-03-16T11:35:55+01:00</lastmod>
   </url><url>
     <loc>/docs/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
@@ -33,7 +33,7 @@
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
   </url><url>
     <loc>/insi/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-03-16T11:35:55+01:00</lastmod>
   </url><url>
     <loc>/insi/rest/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
@@ -42,7 +42,7 @@
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
   </url><url>
     <loc>/ms-sante/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-03-16T11:35:55+01:00</lastmod>
   </url><url>
     <loc>/insi/rest/testcnda/</loc>
     <lastmod>2022-03-04T08:36:40+01:00</lastmod>
@@ -60,16 +60,16 @@
     <lastmod>2022-02-04T12:10:46+01:00</lastmod>
   </url><url>
     <loc>/cps/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-03-16T11:35:55+01:00</lastmod>
   </url><url>
     <loc>/dmp/authentifications/directe/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
   </url><url>
     <loc>/vitale/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-03-16T11:35:55+01:00</lastmod>
   </url><url>
     <loc>/annuaire/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-03-16T11:35:55+01:00</lastmod>
   </url><url>
     <loc>/dmp/authentifications/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
@@ -135,7 +135,7 @@
     <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/installer/</loc>
-    <lastmod>2022-02-08T12:33:55+01:00</lastmod>
+    <lastmod>2022-03-16T11:35:55+01:00</lastmod>
   </url><url>
     <loc>/cps/versions/</loc>
     <lastmod>2022-03-01T19:06:42+01:00</lastmod>

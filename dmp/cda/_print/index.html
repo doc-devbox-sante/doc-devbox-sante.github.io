@@ -229,9 +229,20 @@ Version imprimable multipages.
     
     
 	
-<li>1: <a href="#pg-05d0d06dd94984ae2ee1f8d082044f28">Volet CDA structuration minimale</a></li>
+<li>1: <a href="#pg-8f81b371012d0ab0acef8eba3d204ac6">Volet CDA structuration minimale</a></li>
 
 
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
     
   
     
@@ -292,17 +303,17 @@ Version imprimable multipages.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-05d0d06dd94984ae2ee1f8d082044f28">1 - Volet CDA structuration minimale</h1>
+	<h1 id="pg-8f81b371012d0ab0acef8eba3d204ac6">1 - Volet CDA structuration minimale</h1>
     
 	<h2 id="volet-cdade-structuration-minimale">Volet CDA de Structuration minimale</h2>
 <p>La DevBox-Santé DMP prend en charge la soumission de document à structuration minimale.
-Il s&rsquo;agit du format par défaut exigé par le Guide d&rsquo;intégration , il contient les métadonnées de 
+Il s&rsquo;agit du format par défaut exigé par le Guide d&rsquo;intégration , il contient les métadonnées de
 base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binaire.</p>
 <p>La spécification de ce type de document est défini par l&rsquo;ANS. Pour plus de renseignements sur le Volet Structuration minimal de Documents de santé : <a href="https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante">https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante</a></p>
-<p>Un exemple de création de document à structuration minimale est:</p>
+<p>Un exemple de création de document à structuration minimale est :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCDocument</span><span style="color:#ce5c00;font-weight:bold">();</span>
-<span style="color:#8f5902;font-style:italic">// ajout des métadonnées 
+<span style="color:#8f5902;font-style:italic">// ajout des métadonnées
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setClassCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">CLASS_CODE</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">get</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">0</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">getCode</span><span style="color:#ce5c00;font-weight:bold">());</span>
 <span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addConfidentiality</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">CONFIDENTIALITY_CODE</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">get</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">0</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">getCode</span><span style="color:#ce5c00;font-weight:bold">());</span>
 <span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setComments</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;commentDocument&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
@@ -313,7 +324,7 @@ base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binai
 <span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setTitle</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;titleDocument&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setType</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">TYPE_CODE</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">get</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">0</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">getCode</span><span style="color:#ce5c00;font-weight:bold">());</span>
 <span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setCreationTime</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;20171020194600&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
- 
+
 <span style="color:#8f5902;font-style:italic">// association du format et de son contenu. Ici, il s&#39;agit d&#39;un fichier pdf.
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setFormat</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;urn:ihe:iti:xds-sd:pdf:2008&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 <span style="color:#000">InputStream</span> <span style="color:#000">input</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">FileInputStream</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;monDocumentSante.pdf&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
@@ -329,10 +340,137 @@ base permettant la création d&rsquo;un DMPCDocument ainsi que son contenu binai
 <li><code>urn:ihe:iti-fr:xds-sd:tiff:2010</code></li>
 <li>&hellip;</li>
 </ul>
+<p>Pour plus de renseignements sur l&rsquo;API java du <code>DMPCDocument</code> : <a href="https://bitbucket.org/devbox-sante/dmpc-api/src/master/src/main/java/fr/devboxsante/dmp/model/DMPCDocument.java">https://bitbucket.org/devbox-sante/dmpc-api/src/master/src/main/java/fr/devboxsante/dmp/model/DMPCDocument.java</a></p>
+<p>Exemple de DMPCDocument au format Json :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">&#34;classCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;comments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Document soumis via Postman&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;confidentialities&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;N&#34;</span><span style="color:#000;font-weight:bold">],</span>
+  <span style="color:#204a87;font-weight:bold">&#34;content&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;UmFwcGVsIGNsaW5pcXVlIDogSWwgcydhZ2l0IGQndW4gaG9tbWUgZGUgNTMgYW5zLCAKcHLDqXNlbnRhbnQgdW4gbmFldnVzIGRlIGxhIGZhY2UgaW50ZXJuZSBkZSBsYSBjdWlzc2UgZ2F1Y2hlIGRlIDcgbW0gZGUgZ3JhbmQgYXhlIGVudmlyb24uIApEw6ljaXNpb24gZCdleMOpcsOoc2Ugc291cyBhbmVzdGjDqXNpZSBsb2NhbGUuIAoKSW50ZXJ2ZW50aW9uIDogRVhFUkVTRSBEJ1VOIE5BRVZVUyBERSBMQSBDVUlTU0UgR0FVQ0hFIApTb3VzIGFuZXN0aMOpc2llIGxvY2FsZSDDoCBsYSBYeWxvY2HDr25lIMOgIDEgJSBub24gYWRyw6luYWxpbsOpZS4gCgpJbmNpc2lvbiBjZW50csOpZSBzdXIgbGEgbMOpc2lvbiBwZXJtZXR0YW50IGwnZXjDqXLDqHNlIGR1IG5hZXZ1cyBkYW5zIHNhIHRvdGFsaXTDqS4gCkZlcm1ldHVyZSBjdXRhbsOpZSBlbiB1biBwbGFuIGRlIEZsZXhvY3JpbiAzLzAuICAKCkVYQU1FTiBISVNUT0xPR0lPVUUgVW5lIGzDqXNpb24gcG9seXBvw69kZSBkZSAxIHggMCw3IGNtIGEgw6l0w6kgY29tbXVuaXF1w6llLiAKT24gcmV0cm91dmUgYXUgcGxhbiBoaXN0b2xvZ2lxdWUgdW5lIGzDqXNpb24gdW4gcGV1IHZlcnJ1cXVldXNlLCAKY29tcG9ydGFudCB1bmUgcHJvbGlmw6lyYXRpb24gY2VsbHVsYWlyZSBuYWV2aXF1ZSDDqXBhcmduYW50IGwnw6lwaWTDqW1pZSwgCnNvdXMgZm9ybWUgZGUgdGjDqHF1ZXMgZW4gc3VyZmFjZSwgYXZlYyBxdWVscXVlcyBkw6lww7R0cyBkZSBtw6lsYW5pbmUsIAphc3NvY2nDqWUgw6AgdW4gZ3JhZGllbnQgZGUgbWF0dXJhdGlvbiB0csOocyBuZXQgdmVycyBsYSBwcm9mb25kZXVyLiAKCk9uIG5lIHJldHJvdXZlIHBhcyBkJ2F0eXBpZSBudWNsw6lvY3l0b3BsYXNtaXF1ZS4gCgpDT05DTFVTSU9OIE5BRVZVUyBERVJNSVFVRSBERVZFTE9QUEUgU1VSIFVOIE1PREUgRVhPUEhZVElRVUUgLiAKTEVTIExJTUlURVMgRCdFWEVSRVNFIFNPTlQgU0FJTkVTLiA=&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;creationTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;20200928120000&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;events&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+    <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">&#34;code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;H33&#34;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#204a87;font-weight:bold">&#34;codingScheme&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#204a87;font-weight:bold">&#34;displayName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Décollement et déchirement de la rétine&#34;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">],</span>
+  <span style="color:#204a87;font-weight:bold">&#34;format&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:ihe:iti:xds-sd:text:2008&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;legalAuthenticator&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;internalId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;123456&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;nom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Durand&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;prenom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pierre&#34;</span>
+  <span style="color:#000;font-weight:bold">},</span>
+  <span style="color:#204a87;font-weight:bold">&#34;patient&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;ins&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;279035121518989&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;prenom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;DOMINIQUE&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;nomUsuel&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;pat-trois&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;internalId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;67890&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;dateDeNaissance&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;19790328&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;ordreDeNaissance&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;sexe&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;F&#34;</span>
+  <span style="color:#000;font-weight:bold">},</span>
+  <span style="color:#204a87;font-weight:bold">&#34;practiceSetting&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;AMBULATOIRE&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;serviceStartTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;20200928080000&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;serviceStopTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;20200928080000&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;title&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Titre du document&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11488-4&#34;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><h2 id="alimenter-le-dmp">Alimenter le DMP</h2>
+<p>C&rsquo;est ce <code>DMPCDocument</code> qui permet l&rsquo;alimentation du DMP au travers de <a href="/dmp/howtos/transactions//#alimentation">la transaction d&rsquo;alimentation</a></p>
+<h2 id="générer-un-cda">Générer un CDA</h2>
+<p><strong>@Since DMP-4.7.0</strong></p>
+<p>Il est également possible de transformer ce <code>DMPCDocument</code> en un CDA en vue de le partager avec un autre Système d&rsquo;information comme la MSS par exemple.</p>
+<p>Exemple en Java :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#5c35cc;font-weight:bold">@Autowired</span>
+<span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">DMPCCdaTools</span> <span style="color:#000">cdaTools</span><span style="color:#ce5c00;font-weight:bold">;</span>
+
+<span style="color:#8f5902;font-style:italic">// ... 
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">DMPCDocument</span> <span style="color:#000">document</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">createDMPCDocument</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">auteur</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">);</span>
+<span style="color:#000">OutputStream</span> <span style="color:#000">out</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">ByteArrayOutputStream</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<span style="color:#000">cdaTools</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">map</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">document</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">out</span><span style="color:#ce5c00;font-weight:bold">);</span>
+
+<span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toByteArray</span><span style="color:#ce5c00;font-weight:bold">());</span>
+
+</code></pre></div><p>Exemple en REST : </p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a40000">curl</span> <span style="color:#a40000">--location</span> <span style="color:#a40000">--request</span> <span style="color:#a40000">POST</span> <span style="color:#a40000">&#39;http://</span><span style="color:#0000cf;font-weight:bold">127.0</span><span style="color:#a40000">.</span><span style="color:#0000cf;font-weight:bold">0.1</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">8686</span><span style="color:#a40000">/dmp/to/cda&#39;</span> <span style="color:#a40000">\</span>
+<span style="color:#a40000">--header</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+<span style="color:#a40000">--data-raw</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;entryUuid&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;c2811791-1773-4325-9abf-a2f2d09ccfc9&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;uniqueId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.287.11234&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;secteurActivite&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SA43&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;auteurs&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+        <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">&#34;internalId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;123456&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;nom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Durand&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;prenom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pierre&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;specialite&#34;</span><span style="color:#000;font-weight:bold">:</span>  <span style="color:#4e9a06">&#34;G15_10/SM30&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;secteurActivite&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SA43&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;structureSante&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#204a87;font-weight:bold">&#34;idNational&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;12345&#34;</span><span style="color:#000;font-weight:bold">,</span> 
+                <span style="color:#204a87;font-weight:bold">&#34;nom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Devcoop Bureau de Léognan&#34;</span>
+            <span style="color:#000;font-weight:bold">}</span>
+        <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">],</span>
+    <span style="color:#204a87;font-weight:bold">&#34;classCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;comments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Document soumis via Postman&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;confidentialities&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+        <span style="color:#4e9a06">&#34;N&#34;</span>
+    <span style="color:#000;font-weight:bold">],</span>
+    <span style="color:#204a87;font-weight:bold">&#34;content&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;UmFwcGVsIGNsaW5pcXVlIDogSWwgcydhZ2l0IGQndW4gaG9tbWUgZGUgNTMgYW5zLCAKcHLDqXNlbnRhbnQgdW4gbmFldnVzIGRlIGxhIGZhY2UgaW50ZXJuZSBkZSBsYSBjdWlzc2UgZ2F1Y2hlIGRlIDcgbW0gZGUgZ3JhbmQgYXhlIGVudmlyb24uIApEw6ljaXNpb24gZCdleMOpcsOoc2Ugc291cyBhbmVzdGjDqXNpZSBsb2NhbGUuIAoKSW50ZXJ2ZW50aW9uIDogRVhFUkVTRSBEJ1VOIE5BRVZVUyBERSBMQSBDVUlTU0UgR0FVQ0hFIApTb3VzIGFuZXN0aMOpc2llIGxvY2FsZSDDoCBsYSBYeWxvY2HDr25lIMOgIDEgJSBub24gYWRyw6luYWxpbsOpZS4gCgpJbmNpc2lvbiBjZW50csOpZSBzdXIgbGEgbMOpc2lvbiBwZXJtZXR0YW50IGwnZXjDqXLDqHNlIGR1IG5hZXZ1cyBkYW5zIHNhIHRvdGFsaXTDqS4gCkZlcm1ldHVyZSBjdXRhbsOpZSBlbiB1biBwbGFuIGRlIEZsZXhvY3JpbiAzLzAuICAKCkVYQU1FTiBISVNUT0xPR0lPVUUgVW5lIGzDqXNpb24gcG9seXBvw69kZSBkZSAxIHggMCw3IGNtIGEgw6l0w6kgY29tbXVuaXF1w6llLiAKT24gcmV0cm91dmUgYXUgcGxhbiBoaXN0b2xvZ2lxdWUgdW5lIGzDqXNpb24gdW4gcGV1IHZlcnJ1cXVldXNlLCAKY29tcG9ydGFudCB1bmUgcHJvbGlmw6lyYXRpb24gY2VsbHVsYWlyZSBuYWV2aXF1ZSDDqXBhcmduYW50IGwnw6lwaWTDqW1pZSwgCnNvdXMgZm9ybWUgZGUgdGjDqHF1ZXMgZW4gc3VyZmFjZSwgYXZlYyBxdWVscXVlcyBkw6lww7R0cyBkZSBtw6lsYW5pbmUsIAphc3NvY2nDqWUgw6AgdW4gZ3JhZGllbnQgZGUgbWF0dXJhdGlvbiB0csOocyBuZXQgdmVycyBsYSBwcm9mb25kZXVyLiAKCk9uIG5lIHJldHJvdXZlIHBhcyBkJ2F0eXBpZSBudWNsw6lvY3l0b3BsYXNtaXF1ZS4gCgpDT05DTFVTSU9OIE5BRVZVUyBERVJNSVFVRSBERVZFTE9QUEUgU1VSIFVOIE1PREUgRVhPUEhZVElRVUUgLiAKTEVTIExJTUlURVMgRCdFWEVSRVNFIFNPTlQgU0FJTkVTLiA=&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;creationTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;20200928120000&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;events&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+        <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">&#34;code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;H33&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;codingScheme&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;displayName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Décollement et déchirement de la rétine&#34;</span>
+        <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">],</span>
+    <span style="color:#204a87;font-weight:bold">&#34;format&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:ihe:iti:xds-sd:text:2008&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;legalAuthenticator&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">&#34;internalId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;123456&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;nom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Durand&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;prenom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pierre&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;secteurActivite&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SA43&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;structureSante&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">&#34;idNational&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;12345&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;nom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Devcoop Bureau de Léognan&#34;</span>
+        <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">},</span>
+    <span style="color:#204a87;font-weight:bold">&#34;patient&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">&#34;ins&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;279035121518989&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;insAutorite&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.213.1.4.10&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;prenom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;DOMINIQUE&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;nomUsuel&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;pat-trois&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;internalId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;67890&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;dateDeNaissance&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;19790328&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;ordreDeNaissance&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;sexe&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;F&#34;</span>
+    <span style="color:#000;font-weight:bold">},</span>
+    <span style="color:#204a87;font-weight:bold">&#34;practiceSetting&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;AMBULATOIRE&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;serviceStartTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;20200928080000&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;serviceStopTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;20200928080000&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;title&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Titre du document&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11488-4&#34;</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
+</code></pre></div><p>La réponse contientdra un fichier CDA conforme au schematron de l&rsquo;ANS : <a href="cda_structuration_minimale.xml">cda_structuration_minimale.xml</a></p>
 
 </div>
 
 
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
 
     
 	

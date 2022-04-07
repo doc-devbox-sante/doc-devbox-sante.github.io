@@ -227,6 +227,16 @@ Version imprimable multipages.
     
 	
 
+    <li><a href="#pg-7a795e7ebeb6c3143b5c2e77fa99e773">Vérification d’une signature CPS avec OpenSSL</a></li>
+
+
+
+    
+  
+    
+    
+	
+
     <li><a href="#pg-26341b6d13bd255a6cc6a305c272051f">Discordance INS et pièce d&#39;identité</a></li>
 
 
@@ -331,6 +341,65 @@ Version imprimable multipages.
   
 
 <div class="td-content" style="">
+    <h1 id="pg-7a795e7ebeb6c3143b5c2e77fa99e773">Vérification d’une signature CPS avec OpenSSL</h1>
+	<div class="lead">Comment vérifier une signature réalisée depuis Devbox-santé CPS avec OpenSSL</div>
+	<div class="td-byline mb-4">
+		Par <b>Laurent Forêt</b> |
+        
+		<time datetime="2022-04-07" class="text-muted">Thursday, April 07, 2022</time>
+        
+	</div>
+	<p>La CPSFacade et son proxy REST Devbox-Santé-CPS expose un endpoint permettant de signer tout document. <strong>Mais une fois signé le contenu, comment en vérifier sa signature ?</strong></p>
+<h3 id="signature-avec-devbox-santé-cps">Signature avec DevBox-Santé CPS</h3>
+<p>Supposons le texte à signer suivant stocker dans le fichier <code>message.json</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;message&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;hello DevBox-Santé&#34;</span><span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>Pour le signer vous allez utiliser le proxy cps de la DevBox-santé sur le port 9999, en CURL ça donne : </p>
+<pre tabindex="0"><code class="language-curl" data-lang="curl">curl -X POST &quot;http://localhost:9999/cps/sign/for/SIGNATURE/with/SHA256WithRSA&quot; -H  &quot;accept: */*&quot; -H  &quot;Content-Type: application/json&quot; --data @message.json --output signature.txt
+</code></pre><p>C’est tout ce qu’il vous faut pour obtenir une signature et le fichier <code>signature.txt</code> contiendra la signature du <code>message.json</code>.</p>
+<h3 id="vérification-avec-openssl">Vérification avec OpenSSL</h3>
+<p>Pour cela vous devez obtenir le certificat publique de la carte CPS :</p>
+<pre tabindex="0"><code>curl -X GET &quot;http://localhost:9999/cps/certificate/SIGNATURE&quot; -H &quot;accept: */*&quot;  --output certificat.cer
+</code></pre><p>Le ficher <code>certificat.cer</code> contenant le certificat ressemble à cela :</p>
+<pre tabindex="0"><code>MIIIkjCCBnqgAwIBAgIQY9r/ ... S80hoFHQ=
+</code></pre><p>Pour qu’il plaise à OpenSSL, il faut lui dire ce que c’est en rajoutant les lignes dans le fichier :</p>
+<pre tabindex="0"><code>-----BEGIN CERTIFICATE-----
+MIIIkjCCBnqgAwIBAgIQY9r/ ... S80hoFHQ=
+-----END CERTIFICATE-----
+</code></pre><p>Dans le certificat nous pouvons extraire la clé publique : </p>
+<pre tabindex="0"><code>openssl x509 -in certificat.cer  -pubkey -noout &gt; pubkey.pem
+</code></pre><p>et on obtient un fichier <code>pubkey.pem</code> :</p>
+<pre tabindex="0"><code>-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsjipTM5ec9lNhfI280/S
+YdDIHE0DNPS+ofB24EN4QX669BkAdefzZtAwEPfR29V+zLwRj0tgjGADXVAp/1rT
+F30YPumCLwO2YYXgtx3tkQTQxadb02MIJ447VJPBPr5pqsTc4dcCnLcn/QAgVvdk
+bIU2vRwa7Xkve/npoHhMnSboCCfuHcoP1WNagIZuy7v8EcNiqAXf88bt9qLjMXSE
+Ff7lV5OhroRlSdQ06BHJokXWtEjbrV+TLDT0HuA0XaAfGlHFL2vJnifrhZXklTmr
+ZSUceRSCleTxR0PR8pITpa7yTXz84dB33q0XrCti12YLG7oruJZ064YEzDCr+SJ7
+iQIDAQAB
+-----END PUBLIC KEY-----
+</code></pre><p>Donc maintenant nous avons le texte, une signature, et une clé publique, il ne reste plus qu’à vérifier que la signature soit conforme :</p>
+<pre tabindex="0"><code>$ openssl dgst -sha256 -verify pubkey.pem -signature signature.txt message.json
+Verified OK
+</code></pre><p>Et voilà.</p>
+
+</div>
+
+
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+
+  
+
+<div class="td-content" style="page-break-before: always">
     <h1 id="pg-26341b6d13bd255a6cc6a305c272051f">Discordance INS et pièce d&#39;identité</h1>
 	<div class="lead">Conduite à tenir devant une discordance entre l&rsquo;INS et l&rsquo;identité présente sur une pièce d&rsquo;identité</div>
 	<div class="td-byline mb-4">

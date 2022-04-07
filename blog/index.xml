@@ -28,6 +28,51 @@
     </item>
     
     <item>
+      <title>Blog: Vérification d’une signature CPS avec OpenSSL</title>
+      <link>/blog/2022/04/07/v%C3%A9rification-dune-signature-cps-avec-openssl/</link>
+      <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2022/04/07/v%C3%A9rification-dune-signature-cps-avec-openssl/</guid>
+      <description>
+        
+        
+        &lt;p&gt;La CPSFacade et son proxy REST Devbox-Santé-CPS expose un endpoint permettant de signer tout document. &lt;strong&gt;Mais une fois signé le contenu, comment en vérifier sa signature ?&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;signature-avec-devbox-santé-cps&#34;&gt;Signature avec DevBox-Santé CPS&lt;/h3&gt;
+&lt;p&gt;Supposons le texte à signer suivant stocker dans le fichier &lt;code&gt;message.json&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;hello DevBox-Santé&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pour le signer vous allez utiliser le proxy cps de la DevBox-santé sur le port 9999, en CURL ça donne : &lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-curl&#34; data-lang=&#34;curl&#34;&gt;curl -X POST &amp;quot;http://localhost:9999/cps/sign/for/SIGNATURE/with/SHA256WithRSA&amp;quot; -H  &amp;quot;accept: */*&amp;quot; -H  &amp;quot;Content-Type: application/json&amp;quot; --data @message.json --output signature.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C’est tout ce qu’il vous faut pour obtenir une signature et le fichier &lt;code&gt;signature.txt&lt;/code&gt; contiendra la signature du &lt;code&gt;message.json&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;vérification-avec-openssl&#34;&gt;Vérification avec OpenSSL&lt;/h3&gt;
+&lt;p&gt;Pour cela vous devez obtenir le certificat publique de la carte CPS :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl -X GET &amp;quot;http://localhost:9999/cps/certificate/SIGNATURE&amp;quot; -H &amp;quot;accept: */*&amp;quot;  --output certificat.cer
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Le ficher &lt;code&gt;certificat.cer&lt;/code&gt; contenant le certificat ressemble à cela :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;MIIIkjCCBnqgAwIBAgIQY9r/ ... S80hoFHQ=
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pour qu’il plaise à OpenSSL, il faut lui dire ce que c’est en rajoutant les lignes dans le fichier :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;-----BEGIN CERTIFICATE-----
+MIIIkjCCBnqgAwIBAgIQY9r/ ... S80hoFHQ=
+-----END CERTIFICATE-----
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Dans le certificat nous pouvons extraire la clé publique : &lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;openssl x509 -in certificat.cer  -pubkey -noout &amp;gt; pubkey.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;et on obtient un fichier &lt;code&gt;pubkey.pem&lt;/code&gt; :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsjipTM5ec9lNhfI280/S
+YdDIHE0DNPS+ofB24EN4QX669BkAdefzZtAwEPfR29V+zLwRj0tgjGADXVAp/1rT
+F30YPumCLwO2YYXgtx3tkQTQxadb02MIJ447VJPBPr5pqsTc4dcCnLcn/QAgVvdk
+bIU2vRwa7Xkve/npoHhMnSboCCfuHcoP1WNagIZuy7v8EcNiqAXf88bt9qLjMXSE
+Ff7lV5OhroRlSdQ06BHJokXWtEjbrV+TLDT0HuA0XaAfGlHFL2vJnifrhZXklTmr
+ZSUceRSCleTxR0PR8pITpa7yTXz84dB33q0XrCti12YLG7oruJZ064YEzDCr+SJ7
+iQIDAQAB
+-----END PUBLIC KEY-----
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Donc maintenant nous avons le texte, une signature, et une clé publique, il ne reste plus qu’à vérifier que la signature soit conforme :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ openssl dgst -sha256 -verify pubkey.pem -signature signature.txt message.json
+Verified OK
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Et voilà.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Discordance INS et pièce d&#39;identité</title>
       <link>/blog/2022/01/17/discordance-ins-et-pi%C3%A8ce-didentit%C3%A9/</link>
       <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>

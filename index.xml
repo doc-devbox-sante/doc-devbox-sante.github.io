@@ -13,6 +13,43 @@
     
     
     <item>
+      <title>Blog: Glossaire</title>
+      <link>/blog/2022/04/08/glossaire/</link>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2022/04/08/glossaire/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Contient tous les noms et accronymes barbares dans le domaine de la santé&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;CDA (CDAR2)&lt;/dt&gt;
+&lt;dd&gt;Clinical Document Architecture (&lt;a href=&#34;http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7&#34;&gt;http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7&lt;/a&gt;)&lt;/dd&gt;
+&lt;dt&gt;CDAR2 Niveau1&lt;/dt&gt;
+&lt;dd&gt;architectecture dédiée aux documents cliniques dont le corps du document est non structuré. (&lt;a href=&#34;https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante&#34;&gt;https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante&lt;/a&gt;)&lt;/dd&gt;
+&lt;dt&gt;CDAR2 Niveau 3&lt;/dt&gt;
+&lt;dd&gt;architectecture dédiée aux documents cliniques dont le corps du document est structuré comme le CR-BIO (&lt;a href=&#34;https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda&#34;&gt;https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda&lt;/a&gt;)&lt;/dd&gt;
+&lt;dt&gt;CI-SIS&lt;/dt&gt;
+&lt;dd&gt;Cadre d’Intéropérabilité des Système d’Information de Santé (&lt;a href=&#34;https://esante.gouv.fr/produits-services/ci-sis&#34;&gt;https://esante.gouv.fr/produits-services/ci-sis&lt;/a&gt;)&lt;/dd&gt;
+&lt;dt&gt;DMP&lt;/dt&gt;
+&lt;dd&gt;Dossier Médical Partagé (&lt;a href=&#34;https://www.dmp.fr/&#34;&gt;https://www.dmp.fr/&lt;/a&gt;)&lt;/dd&gt;
+&lt;dt&gt;IHE&lt;/dt&gt;
+&lt;dd&gt;Integrated Healthcare Entreprise (&lt;a href=&#34;https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda&#34;&gt;https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda&lt;/a&gt;)&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id=&#34;ségur&#34;&gt;Ségur&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;Ségur du numérique en santé&lt;/dt&gt;
+&lt;dd&gt;Mise à disposition d’une enveloppe de financement historique de 2 milliards d’euros,&lt;/dd&gt;
+&lt;dt&gt;SONS&lt;/dt&gt;
+&lt;dd&gt;Système Ouvert et Non Sélectif&lt;/dd&gt;
+&lt;dt&gt;SUN-ES&lt;/dt&gt;
+&lt;dd&gt;Ségur Usage Numérie en Établissement de Santé (&lt;a href=&#34;https://solidarites-sante.gouv.fr/systeme-de-sante-et-medico-social/segur-de-la-sante/sun-es&#34;&gt;https://solidarites-sante.gouv.fr/systeme-de-sante-et-medico-social/segur-de-la-sante/sun-es&lt;/a&gt;)&lt;/dd&gt;
+&lt;/dl&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Versions de l&#39;installer</title>
       <link>/blog/1/01/01/versions-de-linstaller/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

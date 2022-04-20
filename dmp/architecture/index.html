@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><link rel="alternate" type="text/html" href="/dmp/architecture/_print/">
+<meta name="generator" content="Hugo 0.96.0" /><link rel="alternate" type="text/html" href="/dmp/architecture/_print/">
 <link rel="alternate" type="application/rss&#43;xml" href="/dmp/architecture/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -375,7 +375,7 @@ if (!doNotTrack) {
 	</header>
 	<h2 id="architecture-interne-des-différents-composants">Architecture interne des différents composants</h2>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
-package &quot;DevBox-santé DMP&quot; {
+package &#34;DevBox-santé DMP&#34; {
     [dmp-proxy-xxx] 
     [dmp-cda]
     [dmp-cda-tools]
@@ -386,7 +386,7 @@ package &quot;DevBox-santé DMP&quot; {
     [dmp-xds-client]
 }
 
-node &quot;DMP&quot;
+node &#34;DMP&#34;
 [dmp-proxy-xxx] - [dmp-client-impl] : Proxy REST/SOAP/... du client DMP
 [dmp-client-impl] - [dmp-ws-client]
 [dmp-client-impl] -d- [dmp-xds-client]
@@ -400,7 +400,6 @@ node &quot;DMP&quot;
 [dmp-security-xxx] - DMP : authentification TLS
 [dmp-ws-client] - DMP : WS soap spécifique DMP
 [dmp-xds-client] - DMP : requête XDS
-
 </code></pre><h3 id="les-différents-modules-maven-">Les différents modules Maven :</h3>
 <ul>
 <li><code>dmp-cda</code> : sérialisation des documents dans le standard CDA-R2</li>
@@ -430,12 +429,12 @@ node &quot;DMP&quot;
 <h4 id="securité-via-la-cps">Securité via la CPS</h4>
 <h5 id="diagramme-de-composants">Diagramme de composants</h5>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
-package &quot;DevBox-santé DMP&quot; {
+package &#34;DevBox-santé DMP&#34; {
     [dmp-security-cps] 
     [cps-facade]
 }
 
-interface &quot;Cryptolib cps&quot; as cryptolib
+interface &#34;Cryptolib cps&#34; as cryptolib
 
 [dmp-security-cps] - [cps-facade]
 [cps-facade] - cryptolib
@@ -453,16 +452,15 @@ CpsConfigurationAdapter : SignatureKeyManager
 CpsConfigurationAdapter : PersonnelSantePopulator
 CpsConfigurationAdapter o-- CxfEndPointFactory
 
-CxfEndPointFactory : createEndPoint(...)  // point d'accès au service DMP
+CxfEndPointFactory : createEndPoint(...)  // point d&#39;accès au service DMP
 CxfEndPointFactory : setVIHF(...)  // gestion du jeton SAML
 CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
-
 </code></pre><p>La <code>CpsConfiguration</code> permet d&rsquo;initialiser deux <code>KeyManager</code> s&rsquo;appuyant sur la <code>CpsFacade</code> pour y accèder. Ces deux <code>KeyManager</code> permettent d&rsquo;accéder aux différents certificats et d&rsquo;effectuer les opérations de signature disponibles dans la carte CPS.
 La <code>CpsConfiguration</code> permet d&rsquo;initialiser la <code>CxfEndPointFactory</code> qui a pour responsabilité la gestion des accès au services du DMP.</p>
 <h4 id="securité-via-les-certificats-p12">Securité via les certificats P12</h4>
 <h5 id="diagramme-de-composants-1">Diagramme de composants</h5>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
-package &quot;DevBox-santé DMP&quot; {
+package &#34;DevBox-santé DMP&#34; {
     [dmp-core] 
 }
 
@@ -478,16 +476,15 @@ P12Configuration - P12KeyManager : SignatureKeyManager
 P12KeyManager - P12KeyLoader
 P12Configuration o-- CxfEndPointFactory
 
-CxfEndPointFactory : createEndPoint(...)  // point d'accès au service DMP
+CxfEndPointFactory : createEndPoint(...)  // point d&#39;accès au service DMP
 CxfEndPointFactory : setVIHF(...)  // gestion du jeton SAML
 CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
-
 </code></pre><p>La <code>P12Configuration</code> permet d&rsquo;initialiser deux <code>KeyManager</code> s&rsquo;appuyant sur la <code>P12KeyLoader</code> qui charge les certificats p12 disponibles. Ces deux <code>KeyManager</code> permettent d&rsquo;accéder aux différents certificats et d&rsquo;effectuer les opérations de signature.
 La <code>P12Configuration</code> permet d&rsquo;initialiser la <code>CxfEndPointFactory</code> qui a pour responsabilité la gestion des accès au services du DMP.</p>
 <h4 id="securité-via-le-cpsagent">Securité via le CPSAgent</h4>
 <h5 id="diagramme-de-composants-2">Diagramme de composants</h5>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
-package &quot;DevBox-santé DMP&quot; {
+package &#34;DevBox-santé DMP&#34; {
     [dmp-security-cps-with-agent] 
     [cps-agent-client]
 }
@@ -510,10 +507,9 @@ CpsConfigurationAdapter : SignatureKeyManager
 CpsConfigurationAdapter : PersonnelSantePopulator
 CpsConfigurationAdapter o-- CxfEndPointFactory
 
-CxfEndPointFactory : createEndPoint(...)  // point d'accès au service DMP
+CxfEndPointFactory : createEndPoint(...)  // point d&#39;accès au service DMP
 CxfEndPointFactory : setVIHF(...)  // gestion du jeton SAML
 CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
-
 </code></pre><p>La <code>CpsConfiguration</code> permet d&rsquo;initialiser deux <code>KeyManager</code> s&rsquo;appuyant sur la <code>CpsAgentClient</code> pour accèder aux opérations disponibles de la carte CPS au travers le réseau. Ces deux <code>KeyManager</code> permettent de manières transparents d&rsquo;accéder aux différents certificats et d&rsquo;effectuer les opérations de signature disponibles dans la carte CPS.
 La <code>CpsConfiguration</code> permet d&rsquo;initialiser la <code>CxfEndPointFactory</code> qui a pour responsabilité la gestion des accès au services du DMP.</p>
 
@@ -615,7 +611,7 @@ La <code>CpsConfiguration</code> permet d&rsquo;initialiser la <code>CxfEndPoint
 
 
 
-<script src="/js/main.min.220147f1a33d9886614fd69a83d04f03c013b0889ac626cef692eb5b08642468.js" integrity="sha256-IgFH8aM9mIZhT9aag9BPA8ATsIiaxibO9pLrWwhkJGg=" crossorigin="anonymous"></script>
+<script src="/js/main.min.bbade233e3c661e42f1ff37f2a44388625aa93ba398f1f954c178060cc91aa94.js" integrity="sha256-u63iM&#43;PGYeQvH/N/KkQ4hiWqk7o5jx&#43;VTBeAYMyRqpQ=" crossorigin="anonymous"></script>
 
 
 

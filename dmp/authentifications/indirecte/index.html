@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.96.0" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -387,20 +387,19 @@ if (!doNotTrack) {
 
 [FrontEnd intégrateur] as frontend
 
-node &quot;Environnement intégrateur&quot; {
+node &#34;Environnement intégrateur&#34; {
    [BackEnd intégrateur] as backend
-    package &quot;DevBox-Santé Proxy REST&quot;  DEVBOX_COLOR {
-        package &quot;DevBox-sante DMP&quot; as dmpFacade DMP_COLOR {
+    package &#34;DevBox-Santé Proxy REST&#34;  DEVBOX_COLOR {
+        package &#34;DevBox-sante DMP&#34; as dmpFacade DMP_COLOR {
             [P12Manager] as P12Manager DMP_COLOR
         }
     }
 }
-cloud &quot;**DMP**&quot; as DMP
+cloud &#34;**DMP**&#34; as DMP
 
 frontend -down-&gt; backend
 backend -right-&gt; dmpFacade: REST
 dmpFacade -down-&gt; DMP : SOAP
-
 </code></pre><h4 id="version-embedded">Version Embedded</h4>
 <h5 id="diagramme-de-composants-1">Diagramme de composants</h5>
 <p>L&rsquo;architecture du mode embedded peut être représentée par ce schéma :</p>
@@ -408,14 +407,14 @@ dmpFacade -down-&gt; DMP : SOAP
 
 [FrontEnd intégrateur] as frontend
 
-node &quot;Environnement intégrateur&quot; {
-   component &quot;BackEnd intégrateur&quot; as backend {
-        component &quot;DevBox-Santé DMP&quot; as DMPC_API  DMP_COLOR {
+node &#34;Environnement intégrateur&#34; {
+   component &#34;BackEnd intégrateur&#34; as backend {
+        component &#34;DevBox-Santé DMP&#34; as DMPC_API  DMP_COLOR {
             [P12Manager] as P12Manager DMP_COLOR
         }
     }
 }
-cloud &quot;**DMP**&quot; as DMP
+cloud &#34;**DMP**&#34; as DMP
 
 frontend -down-&gt; backend
 DMPC_API -d-&gt; DMP : SOAP XDS / CDA
@@ -507,7 +506,7 @@ DMPC_API -d-&gt; DMP : SOAP XDS / CDA
 
 
 
-<script src="/js/main.min.220147f1a33d9886614fd69a83d04f03c013b0889ac626cef692eb5b08642468.js" integrity="sha256-IgFH8aM9mIZhT9aag9BPA8ATsIiaxibO9pLrWwhkJGg=" crossorigin="anonymous"></script>
+<script src="/js/main.min.bbade233e3c661e42f1ff37f2a44388625aa93ba398f1f954c178060cc91aa94.js" integrity="sha256-u63iM&#43;PGYeQvH/N/KkQ4hiWqk7o5jx&#43;VTBeAYMyRqpQ=" crossorigin="anonymous"></script>
 
 
 

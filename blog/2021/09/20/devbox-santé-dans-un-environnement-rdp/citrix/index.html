@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.96.0" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -321,39 +321,39 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<p>Lors d&rsquo;une session RDP / Citrix, il est possible qu&rsquo;un executable installé puisse accéder aux différents ports USB d&rsquo;un poste client. Pour celà, il faut réaliser un mapping des ports USB (<a href="https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop,">https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop,</a> par exemple)</p>
+	<p>Lors d&rsquo;une session RDP / Citrix, il est possible qu&rsquo;un executable installé puisse accéder aux différents ports USB d&rsquo;un poste client. Pour celà, il faut réaliser un mapping des ports USB (<a href="https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop">https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop</a>, par exemple)</p>
 <p>La DevBox-santé lancée dans un environnement Citrix/Windows RDP est accessible sur un numéro de port TCP commun à l&rsquo;ensemble des sessions utilisateurs de ce serveur RDP.</p>
 <p>Dans un environnement Citrix/RDP, il est donc important qu&rsquo;une et une seule DevBox-santé soit lancée par poste utilisateur sur un numéro de port TCP différent, afin de faire le lien entre les lecteur branchés sur les ports USB du poste client et le port TCP utilisé :</p>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
-node &quot;Serveur RDP&quot; {
- package &quot;Session Utilisateur 1&quot; {
+node &#34;Serveur RDP&#34; {
+ package &#34;Session Utilisateur 1&#34; {
   [DevBox-Santé1:9999] as devbox1 DEVBOX_COLOR
  }
- package &quot;Session Utilisateur 2&quot; {
+ package &#34;Session Utilisateur 2&#34; {
   [DevBox-Santé2:9998] as devbox2 DEVBOX_COLOR
  }
 }
 
-node &quot;Poste utilisateur 1&quot; {
+node &#34;Poste utilisateur 1&#34; {
    
    [Lecteur USB / Utilisateur 1] as usb1
 }
-node &quot;Poste utilisateur 2&quot; {
+node &#34;Poste utilisateur 2&#34; {
    [Lecteur USB / Utilisateur 2] as usb2
 }
 
 devbox1 -- usb1 : mapping port USB
 devbox2 -- usb2 : mapping port USB
 </code></pre><p>Dans cet exemple, nous avons deux utilisateurs sur deux postes différents qui ouvrent une session RDP sur un même serveur. Sur chacun de ces postes est installé un lecteur de carte.</p>
-<p>Pour garantir, que l&rsquo;utilisateur 1 puisse accéder à sa DevBox-santé, il faut réaliser un mapping entre la session de l'<strong>utilisateur 1</strong> et le numéro de port <strong>9999</strong>. Idem pour l'<strong>utilisateur 2</strong> et le numéro de port <strong>9998</strong>.</p>
+<p>Pour garantir, que l&rsquo;utilisateur 1 puisse accéder à sa DevBox-santé, il faut réaliser un mapping entre la session de l&rsquo;<strong>utilisateur 1</strong> et le numéro de port <strong>9999</strong>. Idem pour l&rsquo;<strong>utilisateur 2</strong> et le numéro de port <strong>9998</strong>.</p>
 <blockquote>
 <p><strong>ATTENTION : il n&rsquo;est pas possible de lancer la DevBox-santé en tant que service sur le serveur RDP car il ne pourra pas accéder au port USB du client lors de son lancement.</strong></p>
 </blockquote>
 <h3 id="démarrage-à-partir-dune-url-de-la-devbox-santé">Démarrage à partir d&rsquo;une url de la DevBox-santé</h3>
 <p>Il est possible de démarrer la DevBox-santé pour un utilisateur donné via une URL :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">devboxsante://config?server.port<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">10000</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>devboxsante://config?server.port<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">10000</span>
+</span></span></code></pre></div>
 	
 
 	<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
@@ -448,7 +448,7 @@ devbox2 -- usb2 : mapping port USB
 
 
 
-<script src="/js/main.min.220147f1a33d9886614fd69a83d04f03c013b0889ac626cef692eb5b08642468.js" integrity="sha256-IgFH8aM9mIZhT9aag9BPA8ATsIiaxibO9pLrWwhkJGg=" crossorigin="anonymous"></script>
+<script src="/js/main.min.bbade233e3c661e42f1ff37f2a44388625aa93ba398f1f954c178060cc91aa94.js" integrity="sha256-u63iM&#43;PGYeQvH/N/KkQ4hiWqk7o5jx&#43;VTBeAYMyRqpQ=" crossorigin="anonymous"></script>
 
 
 

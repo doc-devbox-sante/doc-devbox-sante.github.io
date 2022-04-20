@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.96.0" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -381,11 +381,11 @@ if (!doNotTrack) {
 <h5 id="diagramme-de-composants">Diagramme de composants</h5>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
-node &quot;Poste Client (Windows/Mac/Linux)&quot; {
+node &#34;Poste Client (Windows/Mac/Linux)&#34; {
     [FrontEnd intégrateur] as frontend
 
-    package &quot;DevBox-Santé Proxy REST&quot;  DEVBOX_COLOR {
-        component &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {
+    package &#34;DevBox-Santé Proxy REST&#34;  DEVBOX_COLOR {
+        component &#34;DevBox-sante DMP&#34; as dmpFacade #35D9C0 {
             [DevBox-sante CPS] as cps #D34A3C
 
         }
@@ -393,7 +393,7 @@ node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     [Cryptolib CPS (ANS)] as cryptolibCPS
 }
 [BackEnd intégrateur] as backend
-cloud &quot;**DMP**&quot; as DMP
+cloud &#34;**DMP**&#34; as DMP
 
 frontend -right-&gt; dmpFacade : REST
 cps &lt;-up-&gt; cryptolibCPS : appel natif
@@ -403,10 +403,10 @@ frontend  -down-&gt; backend
 <h5 id="diagramme-de-composants-1">Diagramme de composants</h5>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
-node &quot;Poste Client (Windows/Mac/Linux)&quot; {
-    component &quot;Client de l'intégrateur&quot; {
-        component &quot;DevBox-Santé Proxy REST&quot;  DEVBOX_COLOR {
-            component &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {
+node &#34;Poste Client (Windows/Mac/Linux)&#34; {
+    component &#34;Client de l&#39;intégrateur&#34; {
+        component &#34;DevBox-Santé Proxy REST&#34;  DEVBOX_COLOR {
+            component &#34;DevBox-sante DMP&#34; as dmpFacade #35D9C0 {
                 [DevBox-sante CPS] as cps #D34A3C
 
             }
@@ -414,7 +414,7 @@ node &quot;Poste Client (Windows/Mac/Linux)&quot; {
     }
     [Cryptolib CPS (ANS)] as cryptolibCPS
 }
-cloud &quot;**DMP**&quot; as DMP
+cloud &#34;**DMP**&#34; as DMP
 
 cps &lt;--&gt; cryptolibCPS : appel natif
 dmpFacade --&gt; DMP : SOAP
@@ -506,7 +506,7 @@ dmpFacade --&gt; DMP : SOAP
 
 
 
-<script src="/js/main.min.220147f1a33d9886614fd69a83d04f03c013b0889ac626cef692eb5b08642468.js" integrity="sha256-IgFH8aM9mIZhT9aag9BPA8ATsIiaxibO9pLrWwhkJGg=" crossorigin="anonymous"></script>
+<script src="/js/main.min.bbade233e3c661e42f1ff37f2a44388625aa93ba398f1f954c178060cc91aa94.js" integrity="sha256-u63iM&#43;PGYeQvH/N/KkQ4hiWqk7o5jx&#43;VTBeAYMyRqpQ=" crossorigin="anonymous"></script>
 
 
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><link rel="alternate" type="text/html" href="/annuaire/_print/">
+<meta name="generator" content="Hugo 0.96.0" /><link rel="alternate" type="text/html" href="/annuaire/_print/">
 <link rel="alternate" type="application/rss&#43;xml" href="/annuaire/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -233,13 +233,10 @@ if (!doNotTrack) {
     <li><a href="#saas">SAAS</a>
       <ul>
         <li><a href="#accès-aux-différents-environnements">Accès aux différents environnements</a></li>
+        <li><a href="#date-de-mise-à-jour-des-données">Date de mise à jour des données</a></li>
       </ul>
     </li>
-    <li><a href="#on-premise">On premise</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
+    <li><a href="#on-premise">On premise</a></li>
   </ul>
 </nav></div>
 
@@ -306,8 +303,16 @@ if (!doNotTrack) {
 	
 
 <div class="pageinfo pageinfo-primary">
-<pre><code>Page en cours de construction
-</code></pre>
+<p>Cette annuaire est le fruit de l&rsquo;intégration de plusieurs bases de données:</p>
+<ul>
+<li>Annuaire Finess: <a href="https://www.data.gouv.fr">https://www.data.gouv.fr</a></li>
+<li>Annuaire Rpps: <a href="https://ws.annuaire.sante.fr">https://ws.annuaire.sante.fr</a></li>
+<li>Annuaire MSSanté: <a href="https://service.annuaire.sante.fr">https://service.annuaire.sante.fr</a></li>
+<li>Nomenclature NOS: <a href="https://esante.gouv.fr">https://esante.gouv.fr</a></li>
+<li>Nomenclature CCAM: <a href="https://www.ameli.fr">https://www.ameli.fr</a></li>
+<li>Nomenclature CIM10: <a href="http://www.departement-information-medicale.com">http://www.departement-information-medicale.com</a></li>
+</ul>
+<p>avec géolocalisation des adresses</p>
 
 </div>
 
@@ -322,11 +327,19 @@ if (!doNotTrack) {
 <p>L&rsquo;accès à la plateforme de production : <a href="https://annuaire.devbox-sante.fr/">https://annuaire.devbox-sante.fr/</a></p>
 </li>
 </ul>
+<p>Les applications front servent de démonstrateur des possibilités de l&rsquo;annuaire mais leurs fonctionnalités ne sont pas exaustives.</p>
 <p><a href="mailto:devbox-sante@devcoop.fr">Contactez-nous</a></p>
-<h2 id="on-premise">On premise</h2>
+<h3 id="date-de-mise-à-jour-des-données">Date de mise à jour des données</h3>
+<p>Le service /api/lastUpdated permet de connaitre la dernière mise à jour des données:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET <span style="color:#4e9a06">&#34;https://annuaire-demo.devbox-sante.fr/api/lastUpdated&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">Finess:</span> <span style="color:#204a87;font-weight:bold">&#34;2022-04-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">Nomenclature:</span> <span style="color:#204a87;font-weight:bold">&#34;2022-04-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">Professionnels:</span> <span style="color:#204a87;font-weight:bold">&#34;2022-04-20&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="on-premise">On premise</h2>
 <p>Installation dans votre propre environnement</p>
-<h3 id="installation">Installation</h3>
-<p>TODO : intégrer <a href="https://docs.google.com/document/d/1Dw6eqxcrayYgUaqCPWzMR4vtuvR4R58vRZZMNMshmxw/edit#heading=h.yxf5u3jrviwd">https://docs.google.com/document/d/1Dw6eqxcrayYgUaqCPWzMR4vtuvR4R58vRZZMNMshmxw/edit#heading=h.yxf5u3jrviwd</a></p>
+<p><a href="mailto:devbox-sante@devcoop.fr">Contactez-nous</a></p>
 
         <div class="section-index">
     
@@ -426,7 +439,7 @@ if (!doNotTrack) {
 
 
 
-<script src="/js/main.min.220147f1a33d9886614fd69a83d04f03c013b0889ac626cef692eb5b08642468.js" integrity="sha256-IgFH8aM9mIZhT9aag9BPA8ATsIiaxibO9pLrWwhkJGg=" crossorigin="anonymous"></script>
+<script src="/js/main.min.bbade233e3c661e42f1ff37f2a44388625aa93ba398f1f954c178060cc91aa94.js" integrity="sha256-u63iM&#43;PGYeQvH/N/KkQ4hiWqk7o5jx&#43;VTBeAYMyRqpQ=" crossorigin="anonymous"></script>
 
 
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.96.0" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -325,13 +325,13 @@ if (!doNotTrack) {
 	<p>La CPSFacade et son proxy REST Devbox-Santé-CPS expose un endpoint permettant de signer tout document. <strong>Mais une fois signé le contenu, comment en vérifier sa signature ?</strong></p>
 <h3 id="signature-avec-devbox-santé-cps">Signature avec DevBox-Santé CPS</h3>
 <p>Supposons le texte à signer suivant stocker dans le fichier <code>message.json</code>:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;message&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;hello DevBox-Santé&#34;</span><span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>Pour le signer vous allez utiliser le proxy cps de la DevBox-santé sur le port 9999, en CURL ça donne : </p>
-<pre tabindex="0"><code class="language-curl" data-lang="curl">curl -X POST &quot;http://localhost:9999/cps/sign/for/SIGNATURE/with/SHA256WithRSA&quot; -H  &quot;accept: */*&quot; -H  &quot;Content-Type: application/json&quot; --data @message.json --output signature.txt
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;message&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;hello DevBox-Santé&#34;</span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Pour le signer vous allez utiliser le proxy cps de la DevBox-santé sur le port 9999, en CURL ça donne : </p>
+<pre tabindex="0"><code class="language-curl" data-lang="curl">curl -X POST &#34;http://localhost:9999/cps/sign/for/SIGNATURE/with/SHA256WithRSA&#34; -H  &#34;accept: */*&#34; -H  &#34;Content-Type: application/json&#34; --data @message.json --output signature.txt
 </code></pre><p>C’est tout ce qu’il vous faut pour obtenir une signature et le fichier <code>signature.txt</code> contiendra la signature du <code>message.json</code>.</p>
 <h3 id="vérification-avec-openssl">Vérification avec OpenSSL</h3>
 <p>Pour cela vous devez obtenir le certificat publique de la carte CPS :</p>
-<pre tabindex="0"><code>curl -X GET &quot;http://localhost:9999/cps/certificate/SIGNATURE&quot; -H &quot;accept: */*&quot;  --output certificat.cer
+<pre tabindex="0"><code>curl -X GET &#34;http://localhost:9999/cps/certificate/SIGNATURE&#34; -H &#34;accept: */*&#34;  --output certificat.cer
 </code></pre><p>Le ficher <code>certificat.cer</code> contenant le certificat ressemble à cela :</p>
 <pre tabindex="0"><code>MIIIkjCCBnqgAwIBAgIQY9r/ ... S80hoFHQ=
 </code></pre><p>Pour qu’il plaise à OpenSSL, il faut lui dire ce que c’est en rajoutant les lignes dans le fichier :</p>
@@ -449,7 +449,7 @@ Verified OK
 
 
 
-<script src="/js/main.min.220147f1a33d9886614fd69a83d04f03c013b0889ac626cef692eb5b08642468.js" integrity="sha256-IgFH8aM9mIZhT9aag9BPA8ATsIiaxibO9pLrWwhkJGg=" crossorigin="anonymous"></script>
+<script src="/js/main.min.bbade233e3c661e42f1ff37f2a44388625aa93ba398f1f954c178060cc91aa94.js" integrity="sha256-u63iM&#43;PGYeQvH/N/KkQ4hiWqk7o5jx&#43;VTBeAYMyRqpQ=" crossorigin="anonymous"></script>
 
 
 

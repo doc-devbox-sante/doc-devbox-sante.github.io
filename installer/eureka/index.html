@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><link rel="alternate" type="text/html" href="/installer/eureka/_print/">
+<meta name="generator" content="Hugo 0.96.0" /><link rel="alternate" type="text/html" href="/installer/eureka/_print/">
 <link rel="alternate" type="application/rss&#43;xml" href="/installer/eureka/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -338,18 +338,18 @@ Eureka est l&rsquo;annuaire des devbox-santé branchés sur les différents lect
 <p>C&rsquo;est pourquoi un service dédié, nommé Eureka peut être lancé sur le serveur RDP. Ce service Eureka joue le rôle d&rsquo;annuaire des différentes sessions utilisateurs devbox-santé :</p>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
-node &quot;Serveur RDP&quot; {
-  package &quot;Eureka&quot; as eureka {
+node &#34;Serveur RDP&#34; {
+  package &#34;Eureka&#34; as eureka {
         [DevBox-Santé1:9999] as devbox1 DEVBOX_COLOR
         [DevBox-Santé2:9998] as devbox2 DEVBOX_COLOR
   }
 }
 
-node &quot;Poste utilisateur 1&quot; {
+node &#34;Poste utilisateur 1&#34; {
    [Application Intégrateur Front/Lourd] as int1
    [Lecteur USB / Utilisateur 1] as usb1
 }
-node &quot;Poste utilisateur 2&quot; {
+node &#34;Poste utilisateur 2&#34; {
    [Application Intégrateur Front/Lourd] as int2
    [Lecteur USB / Utilisateur 2] as usb2
 }
@@ -363,20 +363,20 @@ devbox2 -- usb2 : mapping port USB
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 hide footbox
 actor Utilisateur1 
-box &quot;Serveur RDP&quot;
+box &#34;Serveur RDP&#34;
 participant Eureka
 end box
-box &quot;Session utilisateur 1&quot;
-participant &quot;DBX:8081&quot; as DBX_8081 DEVBOX_COLOR
-participant &quot;Application Intégrateur&quot; as AppInt1
-participant &quot;Application Web Intégrateur (front)&quot; as WebApp1
+box &#34;Session utilisateur 1&#34;
+participant &#34;DBX:8081&#34; as DBX_8081 DEVBOX_COLOR
+participant &#34;Application Intégrateur&#34; as AppInt1
+participant &#34;Application Web Intégrateur (front)&#34; as WebApp1
 end box
 
 == Cas 1 : client lourd ==
 ...
 
 group Démarrage application intégrateur (cas du client lourd)
-    Utilisateur1 -&gt; AppInt1: Démarre l'applicationIntégrateur
+    Utilisateur1 -&gt; AppInt1: Démarre l&#39;applicationIntégrateur
     activate AppInt1
     AppInt1 -&gt; AppInt1 : Appel système pour récupérer utilisateur windows
     AppInt1 -&gt; Eureka : GET /user/Utilisateur1
@@ -388,31 +388,30 @@ end
 
 == Cas 2 : client web ==
 
-group Démarrage application intégrateur (cas de l'application web)
+group Démarrage application intégrateur (cas de l&#39;application web)
     Utilisateur1 -&gt; WebApp1 : Accède depuis un navigateur http://superapp.integrateur 
     activate WebApp1
-    note over WebApp1 : Il n'est pas possible depuis un contexte web \nde récupérer le username windows
-    WebApp1 -&gt; DBX_8081 : Lance une DevBox-sante par l'url devbox-sante://config?sessionId:12345
+    note over WebApp1 : Il n&#39;est pas possible depuis un contexte web \nde récupérer le username windows
+    WebApp1 -&gt; DBX_8081 : Lance une DevBox-sante par l&#39;url devbox-sante://config?sessionId:12345
     WebApp1 -&gt; Eureka : GET /user/12345
     Eureka -&gt; WebApp1 : {user: Utilisateur1, sessionId: 12345, port: 8081}
     WebApp1 -&gt; DBX_8081 : GET localhost:8081/cps/readCps...
 end
 ...
-
 </code></pre><p>Ces diagrammes paraissent un peu magiques pour l&rsquo;intégrateur. C&rsquo;est pourquoi, voici un diagramme de séquence détaillant ce qui se passe dans les coulisses de la DevBox-santé, afin de faire le lien entre Utilisateur windows, session web utilisateur et port http des DevBox-Santé :</p>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 hide footbox
 actor Utilisateur1 
-box &quot;Serveur RDP&quot;
+box &#34;Serveur RDP&#34;
 participant ServeurRDP
 participant Eureka
 end box
-box &quot;Session utilisateur 1&quot;
+box &#34;Session utilisateur 1&#34;
 participant SessionRDP1
-participant &quot;DBX:8081&quot; as DBX_8081 DEVBOX_COLOR
-participant &quot;Application Intégrateur&quot; as AppInt1
-participant &quot;WebApp Intégrateur\n(front)&quot; as WebApp1
-participant &quot;Devbox temporaire&quot; as DBX_TMP DEVBOX_COLOR
+participant &#34;DBX:8081&#34; as DBX_8081 DEVBOX_COLOR
+participant &#34;Application Intégrateur&#34; as AppInt1
+participant &#34;WebApp Intégrateur\n(front)&#34; as WebApp1
+participant &#34;Devbox temporaire&#34; as DBX_TMP DEVBOX_COLOR
 end box
 
 == Démarrage serveur RDP ==
@@ -423,14 +422,14 @@ Utilisateur1 -&gt; SessionRDP1 : Se connecte
 activate SessionRDP1
 ServeurRDP &lt;- SessionRDP1 : Démarre une nouvelle session
 SessionRDP1 &lt;-&gt; ServeurRDP : Mapping port USB
-SessionRDP1 -&gt; DBX_8081 : Démarrage automatique\nd'une instance DevBox-Santé\n(port 8081 par exemple)
+SessionRDP1 -&gt; DBX_8081 : Démarrage automatique\nd&#39;une instance DevBox-Santé\n(port 8081 par exemple)
 activate DBX_8081
 DBX_8081 -&gt; ServeurRDP : accés au port USB (pour lectures cartes)
 DBX_8081 -&gt; Eureka : POST {user: Utilisateur1, port:8081}
 ...
 
 group Démarrage application intégrateur (cas du client lourd)
-    Utilisateur1 -&gt; AppInt1: Démarre l'applicationIntégrateur
+    Utilisateur1 -&gt; AppInt1: Démarre l&#39;applicationIntégrateur
     activate AppInt1
     AppInt1 -&gt; Eureka : GET /user/Utilisateur1
     Eureka -&gt; AppInt1 : {user: Utilisateur1, port: 8081}
@@ -439,7 +438,7 @@ group Démarrage application intégrateur (cas du client lourd)
 end 
 ...
 
-group Démarrage application intégrateur (cas de l'application web)
+group Démarrage application intégrateur (cas de l&#39;application web)
     Utilisateur1 -&gt; WebApp1 : Accède depuis un navigateur http://superapp.integrateur 
     activate WebApp1
     WebApp1 -&gt; DBX_TMP : devbox-sante://config?sessionId:12345
@@ -453,8 +452,6 @@ group Démarrage application intégrateur (cas de l'application web)
     WebApp1 -&gt; DBX_8081 : GET localhost:8081/cps/readCps...
 end
 ...
-
-
 </code></pre>
         <div class="section-index">
     
@@ -554,7 +551,7 @@ end
 
 
 
-<script src="/js/main.min.220147f1a33d9886614fd69a83d04f03c013b0889ac626cef692eb5b08642468.js" integrity="sha256-IgFH8aM9mIZhT9aag9BPA8ATsIiaxibO9pLrWwhkJGg=" crossorigin="anonymous"></script>
+<script src="/js/main.min.bbade233e3c661e42f1ff37f2a44388625aa93ba398f1f954c178060cc91aa94.js" integrity="sha256-u63iM&#43;PGYeQvH/N/KkQ4hiWqk7o5jx&#43;VTBeAYMyRqpQ=" crossorigin="anonymous"></script>
 
 
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><link rel="alternate" type="text/html" href="/cps/_print/">
+<meta name="generator" content="Hugo 0.96.0" /><link rel="alternate" type="text/html" href="/cps/_print/">
 <link rel="alternate" type="application/rss&#43;xml" href="/cps/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -316,21 +316,21 @@ java d&rsquo;accéder à la carte CPS3.</p>
 <h2 id="implémentation">Implémentation</h2>
 <p>Le module cps-impl, fournit l&rsquo;implémentation de la <code>CPSFacade</code> qui intègre la <a href="https://esante.gouv.fr/services/espace-cps/telechargements-libres/cryptolib-cps-windows">Cryptolib CPS</a>  de l&rsquo;ANS.</p>
 <p>Exemple de code dans une application Spring Boot :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonComposantCPS</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-
-    <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
-    <span style="color:#000">CPSFacade</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">;</span>
-
-    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">maMethode</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">assert</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">isAvailable</span><span style="color:#ce5c00;font-weight:bold">();</span>
-        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">CardReaderInfo</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">availableReaders</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getAvailableReaders</span><span style="color:#ce5c00;font-weight:bold">();</span>
-        <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">selectReader</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">0L</span><span style="color:#ce5c00;font-weight:bold">);</span>
-        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">CpsCardInfo</span> <span style="color:#000">cardInfo</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">readInfo</span><span style="color:#ce5c00;font-weight:bold">();</span>  <span style="color:#8f5902;font-style:italic">// Une demande d&#39;authentification auprès de l&#39;utilisateur est réalisée sur cet appel
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">assert</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">isLogged</span><span style="color:#ce5c00;font-weight:bold">();</span>
-        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">PrivateKey</span> <span style="color:#000">signaturePrivateKey</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getSignaturePrivateKey</span><span style="color:#ce5c00;font-weight:bold">();</span>
-   <span style="color:#ce5c00;font-weight:bold">}</span>
-<span style="color:#ce5c00;font-weight:bold">}</span>
-</code></pre></div><h3 id="personnalisation-du-pinprovider">Personnalisation du PinProvider</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MonComposantCPS</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@Autowired</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">CPSFacade</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">maMethode</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">assert</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">isAvailable</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">CardReaderInfo</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">availableReaders</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getAvailableReaders</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">selectReader</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">0L</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">CpsCardInfo</span> <span style="color:#000">cardInfo</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">readInfo</span><span style="color:#ce5c00;font-weight:bold">();</span>  <span style="color:#8f5902;font-style:italic">// Une demande d&#39;authentification auprès de l&#39;utilisateur est réalisée sur cet appel
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">assert</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">isLogged</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">PrivateKey</span> <span style="color:#000">signaturePrivateKey</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getSignaturePrivateKey</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="personnalisation-du-pinprovider">Personnalisation du PinProvider</h3>
 <p>La saisie du code Pin est possible à partir du <code>PinProviderFrame</code> développé en Swing.</p>
 <p><img src="cps-saisie-code-pin.png" alt="cps-proxy saisie du code pin"></p>
 <p>Mais, il est tout à fait possible de fournir son propre provider ou encore utiliser le NoPinProvider, et appelé explicitement la méthode <code>setPin()</code>.</p>
@@ -338,20 +338,20 @@ java d&rsquo;accéder à la carte CPS3.</p>
 <p>Le module cps-pdf, contient le code permettant de générer des signatures PDF  <a href="https://helpx.adobe.com/fr/acrobat/using/signing-pdfs.html">https://helpx.adobe.com/fr/acrobat/using/signing-pdfs.html</a>.</p>
 <p>Il s&rsquo;appuie sur la librairie apache PDF-BOX.</p>
 <p>Exemple de code :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">PdfSignatureInfo</span> <span style="color:#000">pdfSignatureInfo</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">PdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">();</span>
-<span style="color:#000">pdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setLocation</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Léognan, FRANCE&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-<span style="color:#000">pdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setReason</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Parceque&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-
-<span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">PdfSigner</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">sign</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">FileOutputStream</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;exemple.pdf&#34;</span><span style="color:#ce5c00;font-weight:bold">),</span> <span style="color:#000">pdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">FileOutputStream</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;exemple-signe.pdf&#34;</span><span style="color:#ce5c00;font-weight:bold">)));</span>
-</code></pre></div><h2 id="proxy-rest">Proxy REST</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">PdfSignatureInfo</span> <span style="color:#000">pdfSignatureInfo</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">PdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">pdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setLocation</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Léognan, FRANCE&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">pdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setReason</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Parceque&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">PdfSigner</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">sign</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">FileOutputStream</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;exemple.pdf&#34;</span><span style="color:#ce5c00;font-weight:bold">),</span> <span style="color:#000">pdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">FileOutputStream</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;exemple-signe.pdf&#34;</span><span style="color:#ce5c00;font-weight:bold">)));</span>
+</span></span></code></pre></div><h2 id="proxy-rest">Proxy REST</h2>
 <p>Le module cps-proxy, permet de fournit une facade REST à la <code>CPSFacade</code> java.</p>
 <p>L&rsquo;accès au CPS-proxy est indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
-node &quot;Poste Client (Windows/Mac/Linux)&quot; {
+node &#34;Poste Client (Windows/Mac/Linux)&#34; {
     [FrontEnd intégrateur] as frontend 
 
-    package &quot;DevBox-Santé&quot; DEVBOX_COLOR  {
+    package &#34;DevBox-Santé&#34; DEVBOX_COLOR  {
         [interface CPS-API] as cpsFacade CPS_COLOR
     }
     [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
@@ -359,7 +359,7 @@ node &quot;Poste Client (Windows/Mac/Linux)&quot; {
 
 [BackEnd intégrateur] as backend
 
-frontend -down-&gt; cpsFacade : REST &quot;GET &quot;/cps/cardInfo&quot;&quot;
+frontend -down-&gt; cpsFacade : REST &#34;GET &#34;/cps/cardInfo&#34;&#34;
 cpsFacade &lt;-down-&gt; cryptolibCPS : appel natif
 frontend -right-&gt; backend : REST
 </code></pre><h3 id="exécution">Exécution</h3>
@@ -369,23 +369,23 @@ frontend -right-&gt; backend : REST
 <ul>
 <li>Récupérer l&rsquo;état des différents lecteurs de carte :</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/readersInfo&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/readersInfo&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
+</span></span></code></pre></div><ul>
 <li>Lire les informations de la carte</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/cardInfo&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/cardInfo&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
+</span></span></code></pre></div><ul>
 <li>Signer un fichier PDF :</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/signPdf?location=Bordeaux&amp;reason=Parceque&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span> -H <span style="color:#4e9a06">&#34;Content-Type: multipart/form-data&#34;</span> -F <span style="color:#4e9a06">&#34;multipart=@fichier.pdf;type=application/pdf&#34;</span>
-</code></pre></div><h3 id="configuration">Configuration</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST <span style="color:#4e9a06">&#34;http://127.0.0.1:8484/cps/signPdf?location=Bordeaux&amp;reason=Parceque&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span> -H <span style="color:#4e9a06">&#34;Content-Type: multipart/form-data&#34;</span> -F <span style="color:#4e9a06">&#34;multipart=@fichier.pdf;type=application/pdf&#34;</span>
+</span></span></code></pre></div><h3 id="configuration">Configuration</h3>
 <p>Le cps-proxy est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.</p>
 <p>Exemple de configuration de base empêchant toutes les IPs externes :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">cps</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">authorizedIpAddress</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">cps</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">authorizedIpAddress</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div>
         <div class="section-index">
     
     
@@ -494,7 +494,7 @@ frontend -right-&gt; backend : REST
 
 
 
-<script src="/js/main.min.220147f1a33d9886614fd69a83d04f03c013b0889ac626cef692eb5b08642468.js" integrity="sha256-IgFH8aM9mIZhT9aag9BPA8ATsIiaxibO9pLrWwhkJGg=" crossorigin="anonymous"></script>
+<script src="/js/main.min.bbade233e3c661e42f1ff37f2a44388625aa93ba398f1f954c178060cc91aa94.js" integrity="sha256-u63iM&#43;PGYeQvH/N/KkQ4hiWqk7o5jx&#43;VTBeAYMyRqpQ=" crossorigin="anonymous"></script>
 
 
 

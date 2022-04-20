@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.96.0" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -348,19 +348,19 @@ des habilitations : <a href="https://www.dmp.fr/matrice-habilitation">https://ww
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#5c35cc;font-weight:bold">@Autowired</span>
-<span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">DMPCClient</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">;</span>
-<span style="color:#ce5c00;font-weight:bold">...</span>
-<span style="color:#8f5902;font-style:italic">// Récupération des différents classCode
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">CLASS_CODE</span><span style="color:#ce5c00;font-weight:bold">)</span>
-<span style="color:#8f5902;font-style:italic">// Récupération des différents typeCode
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">TYPE_CODE</span><span style="color:#ce5c00;font-weight:bold">)</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Autowired</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">DMPCClient</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Récupération des différents classCode
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">CLASS_CODE</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Récupération des différents typeCode
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCodesFor</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ASIPJeuxValeurs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">TYPE_CODE</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span></code></pre></div><ul>
 <li>API REST</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request GET <span style="color:#4e9a06">&#39;https://dmpc-api-rest-3-1.herokuapp.com/proxy/nomenclatures/?jeuxValeurs=TYPE_CODE&#39;</span> <span style="color:#4e9a06">\
-</span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;Content-Type: application/json&#39;</span> <span style="color:#4e9a06">\
-</span></code></pre></div><h3 id="lors-de-lhomologation">Lors de l&rsquo;homologation</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --location --request GET <span style="color:#4e9a06">&#39;https://dmpc-api-rest-3-1.herokuapp.com/proxy/nomenclatures/?jeuxValeurs=TYPE_CODE&#39;</span> <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;Content-Type: application/json&#39;</span> <span style="color:#4e9a06">\
+</span></span></span></code></pre></div><h3 id="lors-de-lhomologation">Lors de l&rsquo;homologation</h3>
 <p>Exemple de test à valider lors de l&rsquo;homologation :</p>
 <blockquote>
 <p>L&rsquo;utilisateur s&rsquo;authentifie avec une carte CPS autorisée à accéder au DMP du patient. 
@@ -465,7 +465,7 @@ En retour le SI DMP confirme la mise à jour du document.<br>
 
 
 
-<script src="/js/main.min.220147f1a33d9886614fd69a83d04f03c013b0889ac626cef692eb5b08642468.js" integrity="sha256-IgFH8aM9mIZhT9aag9BPA8ATsIiaxibO9pLrWwhkJGg=" crossorigin="anonymous"></script>
+<script src="/js/main.min.bbade233e3c661e42f1ff37f2a44388625aa93ba398f1f954c178060cc91aa94.js" integrity="sha256-u63iM&#43;PGYeQvH/N/KkQ4hiWqk7o5jx&#43;VTBeAYMyRqpQ=" crossorigin="anonymous"></script>
 
 
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.96.0" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -382,48 +382,48 @@ if (!doNotTrack) {
 <h2 id="intégration-dans-la-devbox-santé">Intégration dans la DevBox-santé</h2>
 <p>Vous pouvez donc installer votre solution DevBox-santé DMP dans votre environnement serveur HDS et utiliser les terminaux Olaqin.</p>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/4/themes/theme-devbox-sante.puml
-node &quot;Environnement Utilisateur&quot; {
-    package &quot;Poste client / mobile&quot; {
+node &#34;Environnement Utilisateur&#34; {
+    package &#34;Poste client / mobile&#34; {
         [FrontEnd intégrateur] as frontend
     }
     [Lecteur Neo] as lecteur
 }
 
-node &quot;Environnement intégrateur HDS&quot; {
+node &#34;Environnement intégrateur HDS&#34; {
     [BackEnd intégrateur] as backend
-    package &quot;DevBox-Santé Proxy REST&quot;  DEVBOX_COLOR {
-        component &quot;DevBox-sante DMP&quot; as dmpFacade #35D9C0 {
+    package &#34;DevBox-Santé Proxy REST&#34;  DEVBOX_COLOR {
+        component &#34;DevBox-sante DMP&#34; as dmpFacade #35D9C0 {
             [DevBox-sante CPS security Stellair] as cpsStellair #D34A3C
         }
     }
 }
-cloud &quot;**Stellair** API&quot; as stellair
-cloud &quot;**DMP**&quot; as DMP
+cloud &#34;**Stellair** API&#34; as stellair
+cloud &#34;**DMP**&#34; as DMP
 
 frontend -up-&gt; backend : REST
 backend -&gt; dmpFacade : REST
 cpsStellair -&gt; stellair: REST
-stellair &lt;-&gt; lecteur : Demande d'autorisation d'accès aux cartes via le SSO Stellair
+stellair &lt;-&gt; lecteur : Demande d&#39;autorisation d&#39;accès aux cartes via le SSO Stellair
 dmpFacade -&gt; DMP : SOAP
 </code></pre><h4 id="diagramme-de-séquences">Diagramme de séquences</h4>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
-box &quot;Environnement utilisateur&quot;
-    participant &quot;Poste client&quot; as frontend
-    participant &quot;Lecteur Neo&quot; as lecteur
+box &#34;Environnement utilisateur&#34;
+    participant &#34;Poste client&#34; as frontend
+    participant &#34;Lecteur Neo&#34; as lecteur
 end box
 
-box &quot;Environnement intégrateur&quot; #white
+box &#34;Environnement intégrateur&#34; #white
 participant backend
-participant &quot;DevBox-Santé DMP&quot; as dbxdmp DMP_COLOR
+participant &#34;DevBox-Santé DMP&#34; as dbxdmp DMP_COLOR
 end box
-participant &quot;**DMP**&quot; as dmp
-participant &quot;**Stellair**&quot; as stellair
+participant &#34;**DMP**&#34; as dmp
+participant &#34;**Stellair**&#34; as stellair
 
 
 frontend -&gt; backend : storeDocumentPatient
 backend -&gt; dbxdmp : /dmp/td21SubmitDocuments
-==  initialisation d'une connexion SSL en authentification mutuelle avec le DMP ==
-dbxdmp -&gt; &quot;DMP&quot; as dmp : [SSL] 1. Client Hello
+==  initialisation d&#39;une connexion SSL en authentification mutuelle avec le DMP ==
+dbxdmp -&gt; &#34;DMP&#34; as dmp : [SSL] 1. Client Hello
 dmp -&gt; dbxdmp : [SSL] 2. Server Hello (certificat du DMP server inclus)
 dmp -&gt; dbxdmp : [SSL] 3. Client certificate request
 dbxdmp -&gt; stellair : HTTP GET /cps/certificate/auth
@@ -432,7 +432,7 @@ stellair &lt;-&gt; lecteur
 ...
 stellair -&gt; dbxdmp : {certificate authentification}
 dbxdmp -&gt; dmp : [SSL] 4. Client certificate
-dbxdmp -&gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public's key)
+dbxdmp -&gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public&#39;s key)
 dbxdmp -&gt; stellair : HTTP POST /cps/certificate/auth body : {handshake data}
 ...
 stellair &lt;-&gt; lecteur
@@ -441,12 +441,11 @@ stellair -&gt; dbxdmp : {signed handshake data}
 dbxdmp -&gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
 dbxdmp -&gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
 dmp -&gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)
-== fin de l'initialisation de la connexion ssl avec le DMP ==
+== fin de l&#39;initialisation de la connexion ssl avec le DMP ==
 dbxdmp -&gt; dmp : POST SOAP message de soumission (XDS/CDA)
 dmp -&gt; dbxdmp : SOAP response OK
 dbxdmp -&gt; backend : HTTP 200 Ok
 backend -&gt; frontend : ok
-
 </code></pre>
 	
 	
@@ -535,7 +534,7 @@ backend -&gt; frontend : ok
 
 
 
-<script src="/js/main.min.220147f1a33d9886614fd69a83d04f03c013b0889ac626cef692eb5b08642468.js" integrity="sha256-IgFH8aM9mIZhT9aag9BPA8ATsIiaxibO9pLrWwhkJGg=" crossorigin="anonymous"></script>
+<script src="/js/main.min.bbade233e3c661e42f1ff37f2a44388625aa93ba398f1f954c178060cc91aa94.js" integrity="sha256-u63iM&#43;PGYeQvH/N/KkQ4hiWqk7o5jx&#43;VTBeAYMyRqpQ=" crossorigin="anonymous"></script>
 
 
 

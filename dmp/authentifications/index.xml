@@ -34,20 +34,19 @@
 
 [FrontEnd intégrateur] as frontend
 
-node &amp;quot;Environnement intégrateur&amp;quot; {
+node &amp;#34;Environnement intégrateur&amp;#34; {
    [BackEnd intégrateur] as backend
-    package &amp;quot;DevBox-Santé Proxy REST&amp;quot;  DEVBOX_COLOR {
-        package &amp;quot;DevBox-sante DMP&amp;quot; as dmpFacade DMP_COLOR {
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34;  DEVBOX_COLOR {
+        package &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade DMP_COLOR {
             [P12Manager] as P12Manager DMP_COLOR
         }
     }
 }
-cloud &amp;quot;**DMP**&amp;quot; as DMP
+cloud &amp;#34;**DMP**&amp;#34; as DMP
 
 frontend -down-&amp;gt; backend
 backend -right-&amp;gt; dmpFacade: REST
 dmpFacade -down-&amp;gt; DMP : SOAP
-
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;version-embedded&#34;&gt;Version Embedded&lt;/h4&gt;
 &lt;h5 id=&#34;diagramme-de-composants-1&#34;&gt;Diagramme de composants&lt;/h5&gt;
 &lt;p&gt;L&amp;rsquo;architecture du mode embedded peut être représentée par ce schéma :&lt;/p&gt;
@@ -55,14 +54,14 @@ dmpFacade -down-&amp;gt; DMP : SOAP
 
 [FrontEnd intégrateur] as frontend
 
-node &amp;quot;Environnement intégrateur&amp;quot; {
-   component &amp;quot;BackEnd intégrateur&amp;quot; as backend {
-        component &amp;quot;DevBox-Santé DMP&amp;quot; as DMPC_API  DMP_COLOR {
+node &amp;#34;Environnement intégrateur&amp;#34; {
+   component &amp;#34;BackEnd intégrateur&amp;#34; as backend {
+        component &amp;#34;DevBox-Santé DMP&amp;#34; as DMPC_API  DMP_COLOR {
             [P12Manager] as P12Manager DMP_COLOR
         }
     }
 }
-cloud &amp;quot;**DMP**&amp;quot; as DMP
+cloud &amp;#34;**DMP**&amp;#34; as DMP
 
 frontend -down-&amp;gt; backend
 DMPC_API -d-&amp;gt; DMP : SOAP XDS / CDA
@@ -85,11 +84,11 @@ DMPC_API -d-&amp;gt; DMP : SOAP XDS / CDA
 &lt;h5 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h5&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
-node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
+node &amp;#34;Poste Client (Windows/Mac/Linux)&amp;#34; {
     [FrontEnd intégrateur] as frontend
 
-    package &amp;quot;DevBox-Santé Proxy REST&amp;quot;  DEVBOX_COLOR {
-        component &amp;quot;DevBox-sante DMP&amp;quot; as dmpFacade #35D9C0 {
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34;  DEVBOX_COLOR {
+        component &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade #35D9C0 {
             [DevBox-sante CPS] as cps #D34A3C
 
         }
@@ -97,7 +96,7 @@ node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
     [Cryptolib CPS (ANS)] as cryptolibCPS
 }
 [BackEnd intégrateur] as backend
-cloud &amp;quot;**DMP**&amp;quot; as DMP
+cloud &amp;#34;**DMP**&amp;#34; as DMP
 
 frontend -right-&amp;gt; dmpFacade : REST
 cps &amp;lt;-up-&amp;gt; cryptolibCPS : appel natif
@@ -107,10 +106,10 @@ frontend  -down-&amp;gt; backend
 &lt;h5 id=&#34;diagramme-de-composants-1&#34;&gt;Diagramme de composants&lt;/h5&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
-node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
-    component &amp;quot;Client de l&#39;intégrateur&amp;quot; {
-        component &amp;quot;DevBox-Santé Proxy REST&amp;quot;  DEVBOX_COLOR {
-            component &amp;quot;DevBox-sante DMP&amp;quot; as dmpFacade #35D9C0 {
+node &amp;#34;Poste Client (Windows/Mac/Linux)&amp;#34; {
+    component &amp;#34;Client de l&amp;#39;intégrateur&amp;#34; {
+        component &amp;#34;DevBox-Santé Proxy REST&amp;#34;  DEVBOX_COLOR {
+            component &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade #35D9C0 {
                 [DevBox-sante CPS] as cps #D34A3C
 
             }
@@ -118,7 +117,7 @@ node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
     }
     [Cryptolib CPS (ANS)] as cryptolibCPS
 }
-cloud &amp;quot;**DMP**&amp;quot; as DMP
+cloud &amp;#34;**DMP**&amp;#34; as DMP
 
 cps &amp;lt;--&amp;gt; cryptolibCPS : appel natif
 dmpFacade --&amp;gt; DMP : SOAP
@@ -140,25 +139,25 @@ dmpFacade --&amp;gt; DMP : SOAP
 &lt;h4 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h4&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
-node &amp;quot;Poste Client (Windows/Mac/Linux)&amp;quot; {
+node &amp;#34;Poste Client (Windows/Mac/Linux)&amp;#34; {
     [FrontEnd intégrateur] as frontend
 
-    package &amp;quot;DevBox-Santé Proxy REST&amp;quot; as cpsAgent DEVBOX_COLOR {
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34; as cpsAgent DEVBOX_COLOR {
             [DevBox-sante CPS] as cps CPS_COLOR
 
     }
     [Cryptolib CPS (ANS)] as cryptolibCPS
 }
 
-node &amp;quot;Environnement intégrateur&amp;quot; {
+node &amp;#34;Environnement intégrateur&amp;#34; {
    [BackEnd intégrateur] as backend
-    package &amp;quot;DevBox-Santé Proxy REST&amp;quot; DEVBOX_COLOR {
-        component &amp;quot;DevBox-sante DMP&amp;quot; as dmpFacade DMP_COLOR {
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34; DEVBOX_COLOR {
+        component &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade DMP_COLOR {
             [CpsAgentClient] CPS_COLOR
         }
     }
 }
-cloud &amp;quot;**DMP**&amp;quot; as DMP
+cloud &amp;#34;**DMP**&amp;#34; as DMP
 
 frontend -d-&amp;gt; backend : 1
 backend -d-&amp;gt; dmpFacade  : 2
@@ -168,39 +167,38 @@ dmpFacade -down-&amp;gt; DMP : 5
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;diagramme-de-séquences&#34;&gt;Diagramme de séquences&lt;/h4&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
 
-box &amp;quot;Poste Client&amp;quot;
+box &amp;#34;Poste Client&amp;#34;
 participant frontend
 participant cpsAgent CPS_COLOR
 end box
 
-box &amp;quot;Environnement intégrateur&amp;quot; #white
-participant &amp;quot;DevBox-Santé DMP&amp;quot; as dbxdmp DMP_COLOR
+box &amp;#34;Environnement intégrateur&amp;#34; #white
+participant &amp;#34;DevBox-Santé DMP&amp;#34; as dbxdmp DMP_COLOR
 participant backend
 end box
 
-participant &amp;quot;**DMP**&amp;quot; as dmp
+participant &amp;#34;**DMP**&amp;#34; as dmp
 
 frontend -&amp;gt; backend : storeDocumentPatient
 backend -&amp;gt; dbxdmp : /dmp/td21SubmitDocuments
-==  initialisation d&#39;une connexion SSL en authentification mutuelle avec le DMP ==
-dbxdmp -&amp;gt; &amp;quot;DMP&amp;quot; as dmp : [SSL] 1. Client Hello
+==  initialisation d&amp;#39;une connexion SSL en authentification mutuelle avec le DMP ==
+dbxdmp -&amp;gt; &amp;#34;DMP&amp;#34; as dmp : [SSL] 1. Client Hello
 dmp -&amp;gt; dbxdmp : [SSL] 2. Server Hello (certificat du DMP server inclus)
 dmp -&amp;gt; dbxdmp : [SSL] 3. Client certificate request
 dbxdmp -&amp;gt; cpsAgent : HTTP GET /cps/authenticationCertificate
 cpsAgent -&amp;gt; dbxdmp : {certificate authentification}
 dbxdmp -&amp;gt; dmp : [SSL] 4. Client certificate
-dbxdmp -&amp;gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public&#39;s key)
+dbxdmp -&amp;gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public&amp;#39;s key)
 dbxdmp -&amp;gt; cpsAgent : HTTP POST /cps/sign/for/authentication/SHA256WithRSA body : {handshake data}
 cpsAgent -&amp;gt; dbxdmp : {signed handshake data}
 dbxdmp -&amp;gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
 dbxdmp -&amp;gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
 dmp -&amp;gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)
-== fin de l&#39;initialisation de la connexion ssl avec le DMP ==
+== fin de l&amp;#39;initialisation de la connexion ssl avec le DMP ==
 dbxdmp -&amp;gt; dmp : POST SOAP message de soumission (XDS/CDA)
 dmp -&amp;gt; dbxdmp : SOAP response OK
 dbxdmp -&amp;gt; backend : HTTP 200 Ok
 backend -&amp;gt; frontend : ok
-
 &lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
@@ -221,48 +219,48 @@ backend -&amp;gt; frontend : ok
 &lt;h2 id=&#34;intégration-dans-la-devbox-santé&#34;&gt;Intégration dans la DevBox-santé&lt;/h2&gt;
 &lt;p&gt;Vous pouvez donc installer votre solution DevBox-santé DMP dans votre environnement serveur HDS et utiliser les terminaux Olaqin.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/4/themes/theme-devbox-sante.puml
-node &amp;quot;Environnement Utilisateur&amp;quot; {
-    package &amp;quot;Poste client / mobile&amp;quot; {
+node &amp;#34;Environnement Utilisateur&amp;#34; {
+    package &amp;#34;Poste client / mobile&amp;#34; {
         [FrontEnd intégrateur] as frontend
     }
     [Lecteur Neo] as lecteur
 }
 
-node &amp;quot;Environnement intégrateur HDS&amp;quot; {
+node &amp;#34;Environnement intégrateur HDS&amp;#34; {
     [BackEnd intégrateur] as backend
-    package &amp;quot;DevBox-Santé Proxy REST&amp;quot;  DEVBOX_COLOR {
-        component &amp;quot;DevBox-sante DMP&amp;quot; as dmpFacade #35D9C0 {
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34;  DEVBOX_COLOR {
+        component &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade #35D9C0 {
             [DevBox-sante CPS security Stellair] as cpsStellair #D34A3C
         }
     }
 }
-cloud &amp;quot;**Stellair** API&amp;quot; as stellair
-cloud &amp;quot;**DMP**&amp;quot; as DMP
+cloud &amp;#34;**Stellair** API&amp;#34; as stellair
+cloud &amp;#34;**DMP**&amp;#34; as DMP
 
 frontend -up-&amp;gt; backend : REST
 backend -&amp;gt; dmpFacade : REST
 cpsStellair -&amp;gt; stellair: REST
-stellair &amp;lt;-&amp;gt; lecteur : Demande d&#39;autorisation d&#39;accès aux cartes via le SSO Stellair
+stellair &amp;lt;-&amp;gt; lecteur : Demande d&amp;#39;autorisation d&amp;#39;accès aux cartes via le SSO Stellair
 dmpFacade -&amp;gt; DMP : SOAP
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;diagramme-de-séquences&#34;&gt;Diagramme de séquences&lt;/h4&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
-box &amp;quot;Environnement utilisateur&amp;quot;
-    participant &amp;quot;Poste client&amp;quot; as frontend
-    participant &amp;quot;Lecteur Neo&amp;quot; as lecteur
+box &amp;#34;Environnement utilisateur&amp;#34;
+    participant &amp;#34;Poste client&amp;#34; as frontend
+    participant &amp;#34;Lecteur Neo&amp;#34; as lecteur
 end box
 
-box &amp;quot;Environnement intégrateur&amp;quot; #white
+box &amp;#34;Environnement intégrateur&amp;#34; #white
 participant backend
-participant &amp;quot;DevBox-Santé DMP&amp;quot; as dbxdmp DMP_COLOR
+participant &amp;#34;DevBox-Santé DMP&amp;#34; as dbxdmp DMP_COLOR
 end box
-participant &amp;quot;**DMP**&amp;quot; as dmp
-participant &amp;quot;**Stellair**&amp;quot; as stellair
+participant &amp;#34;**DMP**&amp;#34; as dmp
+participant &amp;#34;**Stellair**&amp;#34; as stellair
 
 
 frontend -&amp;gt; backend : storeDocumentPatient
 backend -&amp;gt; dbxdmp : /dmp/td21SubmitDocuments
-==  initialisation d&#39;une connexion SSL en authentification mutuelle avec le DMP ==
-dbxdmp -&amp;gt; &amp;quot;DMP&amp;quot; as dmp : [SSL] 1. Client Hello
+==  initialisation d&amp;#39;une connexion SSL en authentification mutuelle avec le DMP ==
+dbxdmp -&amp;gt; &amp;#34;DMP&amp;#34; as dmp : [SSL] 1. Client Hello
 dmp -&amp;gt; dbxdmp : [SSL] 2. Server Hello (certificat du DMP server inclus)
 dmp -&amp;gt; dbxdmp : [SSL] 3. Client certificate request
 dbxdmp -&amp;gt; stellair : HTTP GET /cps/certificate/auth
@@ -271,7 +269,7 @@ stellair &amp;lt;-&amp;gt; lecteur
 ...
 stellair -&amp;gt; dbxdmp : {certificate authentification}
 dbxdmp -&amp;gt; dmp : [SSL] 4. Client certificate
-dbxdmp -&amp;gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public&#39;s key)
+dbxdmp -&amp;gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public&amp;#39;s key)
 dbxdmp -&amp;gt; stellair : HTTP POST /cps/certificate/auth body : {handshake data}
 ...
 stellair &amp;lt;-&amp;gt; lecteur
@@ -280,12 +278,11 @@ stellair -&amp;gt; dbxdmp : {signed handshake data}
 dbxdmp -&amp;gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
 dbxdmp -&amp;gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
 dmp -&amp;gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)
-== fin de l&#39;initialisation de la connexion ssl avec le DMP ==
+== fin de l&amp;#39;initialisation de la connexion ssl avec le DMP ==
 dbxdmp -&amp;gt; dmp : POST SOAP message de soumission (XDS/CDA)
 dmp -&amp;gt; dbxdmp : SOAP response OK
 dbxdmp -&amp;gt; backend : HTTP 200 Ok
 backend -&amp;gt; frontend : ok
-
 &lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>

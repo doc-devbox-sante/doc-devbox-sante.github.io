@@ -227,6 +227,16 @@ Version imprimable multipages.
     
 	
 
+    <li><a href="#pg-d3928a75ac050a5401dea3b2d141118f">Intégration de l’annexe CI-SIS INS dans la DevBox-santé DMP</a></li>
+
+
+
+    
+  
+    
+    
+	
+
     <li><a href="#pg-7a795e7ebeb6c3143b5c2e77fa99e773">Vérification d’une signature CPS avec OpenSSL</a></li>
 
 
@@ -341,6 +351,106 @@ Version imprimable multipages.
   
 
 <div class="td-content" style="">
+    <h1 id="pg-d3928a75ac050a5401dea3b2d141118f">Intégration de l’annexe CI-SIS INS dans la DevBox-santé DMP</h1>
+	<div class="lead">La prise en charge de l’identifiant national de santé (INS) dans les standards d’interopérabilité et les volets du CI-SIS dans la DevBox-Santé DMP</div>
+	<div class="td-byline mb-4">
+		Par <b>Laurent Forêt</b> |
+        
+		<time datetime="2022-05-20" class="text-muted">Friday, May 20, 2022</time>
+        
+	</div>
+	<p>La prise en charge de l’identifiant national de santé (INS) dans les standards d’interopérabilité et les volets du CI-SIS défini dans 
+<a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_cisis-tec_annexe-ins_1.3.pdf">l’annexe CISIS de l’ANS</a> a impliqué quelques changements dans la DevBox-Santé DMP (version 4.7.7).</p>
+<p>Voici l’interprétation que nous avons faîtes de la gestion des noms et prénoms de l’annexe INS vers la génération CDA et XDS :</p>
+<p>Supposons les informations du patient Suivante :</p>
+<ul>
+<li><strong>Nom de Famille</strong> : <code>nomNaissance</code>    (origine TS INSi)</li>
+<li><strong>Prénoms de l’acte de naissance</strong> :  <code>Prenom1 Prenom2</code> (origine TS INSi)</li>
+<li><strong>Premier Prénom de l’acte de naissance</strong> : <code>Prenom1</code> (origine TS INSi)</li>
+<li><strong>Nom Utilisé</strong> : <code>nomUtilise</code>    (origine CarteVitale / LPS)</li>
+<li><strong>Prénom Utilisé</strong> : <code>prenomUtilisé</code> (origine Carte Vitale / LPS)</li>
+</ul>
+<p>Alors, le clinical document CDA contiendra : </p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;patient&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;name&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;given&gt;</span>Prenom1 Prenom2<span style="color:#204a87;font-weight:bold">&lt;/given&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;family</span> <span style="color:#c4a000">qualifier=</span><span style="color:#4e9a06">&#34;BR&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>nomNaissance<span style="color:#204a87;font-weight:bold">&lt;/family&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;family</span> <span style="color:#c4a000">qualifier=</span><span style="color:#4e9a06">&#34;CL&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>nomUtilise<span style="color:#204a87;font-weight:bold">&lt;/family&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;given</span> <span style="color:#c4a000">qualifier=</span><span style="color:#4e9a06">&#34;BR&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>Prenom1<span style="color:#204a87;font-weight:bold">&lt;/given&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;given</span> <span style="color:#c4a000">qualifier=</span><span style="color:#4e9a06">&#34;CL&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>PrenomUtilisé<span style="color:#204a87;font-weight:bold">&lt;/given&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/name&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/patient&gt;</span>
+</span></span></code></pre></div><p>la soumission XDS contiendra:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;Slot</span> <span style="color:#c4a000">name=</span><span style="color:#4e9a06">&#34;sourcePatientInfo&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;ValueList&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;Value&gt;</span>PID-5|nomNaissance^Prenom1^Prenom1 Prenom2^^^^L<span style="color:#204a87;font-weight:bold">&lt;/Value&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;Value&gt;</span>PID-5|nomUtilise^PrenomUtilisé^^^^^D<span style="color:#204a87;font-weight:bold">&lt;/Value&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/ValueList&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/Slot&gt;</span>
+</span></span></code></pre></div><p>Dans la DevBox-santé DMP en Java, il faudra le coder de la manière suivante :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">DMPCPatient</span> <span style="color:#000">patient</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setNomPatronymique</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;nomNaissance&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setNomUsuel</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;nomUtilise&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPrenom</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Prenom1 Prenom2&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">prenomUsuel</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;PrénomUtilisé&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span></code></pre></div><p>Dans le cas de RUTH, de la carte vitale de test 01 INSi:</p>
+<ul>
+<li><strong>Nom de Famille</strong> : <code>NESSI</code>    (origine TS INSi)</li>
+<li><strong>Prénoms de l’acte de naissance</strong> :  <code>RUTH ISABELLE</code> (origine TS INSi)</li>
+<li><strong>Premier Prénom de l’acte de naissance</strong> : <code>RUTH</code> (origine TS INSi)</li>
+<li><strong>Nom Utilisé</strong> : <code>DE VINCI</code>    (origine CarteVitale / LPS)</li>
+<li><strong>Prénom Utilisé</strong> : <code>RUTH</code> (origine Carte Vitale / LPS)</li>
+</ul>
+<p>Le CDA : </p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;patient&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;name&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;given&gt;</span>RUTH ISABELLE<span style="color:#204a87;font-weight:bold">&lt;/given&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;family</span> <span style="color:#c4a000">qualifier=</span><span style="color:#4e9a06">&#34;BR&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>NESSI<span style="color:#204a87;font-weight:bold">&lt;/family&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;family</span> <span style="color:#c4a000">qualifier=</span><span style="color:#4e9a06">&#34;CL&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>DE VINCI<span style="color:#204a87;font-weight:bold">&lt;/family&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;given</span> <span style="color:#c4a000">qualifier=</span><span style="color:#4e9a06">&#34;BR&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>RUTH<span style="color:#204a87;font-weight:bold">&lt;/given&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;given</span> <span style="color:#c4a000">qualifier=</span><span style="color:#4e9a06">&#34;CL&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>RUTH<span style="color:#204a87;font-weight:bold">&lt;/given&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/name&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/patient&gt;</span>
+</span></span></code></pre></div><p>La soumission XDS :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;Slot</span> <span style="color:#c4a000">name=</span><span style="color:#4e9a06">&#34;sourcePatientInfo&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;ValueList&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;Value&gt;</span>PID-5|NESSI^RUTH^RUTH ISABELLE^^^^L<span style="color:#204a87;font-weight:bold">&lt;/Value&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;Value&gt;</span>PID-5|DE VINCI^RUTH^^^^^D<span style="color:#204a87;font-weight:bold">&lt;/Value&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/ValueList&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/Slot&gt;</span>
+</span></span></code></pre></div><p>Dans la DevBox-santé DMP en Java :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">DMPCPatient</span> <span style="color:#000">patient</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setNomPatronymique</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;NESSI&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setNomUsuel</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;DE VINCI&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPrenom</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;RUTH ISABELLE&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">prenomUsuel</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;RUTH&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>en Json :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;patient&#34;</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;nomPatronymique&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;NESSI&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;nomUsuel&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;DE VINCI&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;prenom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;RUTH ISABELLE&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;prenomUsuel&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;RUTH&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+
+  
+
+<div class="td-content" style="page-break-before: always">
     <h1 id="pg-7a795e7ebeb6c3143b5c2e77fa99e773">Vérification d’une signature CPS avec OpenSSL</h1>
 	<div class="lead">Comment vérifier une signature réalisée depuis Devbox-santé CPS avec OpenSSL</div>
 	<div class="td-byline mb-4">

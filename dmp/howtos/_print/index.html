@@ -234,7 +234,7 @@ Version imprimable multipages.
     
     
 	
-<li>2: <a href="#pg-254923b045df69c3988cd4d88682ddf9">Différents environnements du DMP</a></li>
+<li>2: <a href="#pg-c2f2ade9ada5510eda41ad4f98eefc3b">UniqueIdGenerator</a></li>
 
 
     
@@ -242,7 +242,15 @@ Version imprimable multipages.
     
     
 	
-<li>3: <a href="#pg-0f6a8b8e81b29a55c0237a0114578bf4">Gestion des certificats</a></li>
+<li>3: <a href="#pg-254923b045df69c3988cd4d88682ddf9">Différents environnements du DMP</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-0f6a8b8e81b29a55c0237a0114578bf4">Gestion des certificats</a></li>
 
 
     
@@ -261,7 +269,7 @@ Version imprimable multipages.
     
     
 	
-<li>4: <a href="#pg-de03b1ff0ff2188a68d5d13f0a8489ec">Schematron</a></li>
+<li>5: <a href="#pg-de03b1ff0ff2188a68d5d13f0a8489ec">Schematron</a></li>
 
 
     
@@ -280,7 +288,7 @@ Version imprimable multipages.
     
     
 	
-<li>5: <a href="#pg-9541efc6c6fadf578bd308752f785e9b">Integrateurs checklist</a></li>
+<li>6: <a href="#pg-9541efc6c6fadf578bd308752f785e9b">Integrateurs checklist</a></li>
 
 
     
@@ -288,7 +296,7 @@ Version imprimable multipages.
     
     
 	
-<li>6: <a href="#pg-19c3ebeab867e0a03ad82e20cb9db692">CNDA : Fiche d&#39;identité du composant DMP</a></li>
+<li>7: <a href="#pg-19c3ebeab867e0a03ad82e20cb9db692">CNDA : Fiche d&#39;identité du composant DMP</a></li>
 
 
     
@@ -699,7 +707,85 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-254923b045df69c3988cd4d88682ddf9">2 - Différents environnements du DMP</h1>
+	<h1 id="pg-c2f2ade9ada5510eda41ad4f98eefc3b">2 - UniqueIdGenerator</h1>
+    <div class="lead">[Alimentation] Génération des UniqueId</div>
+	<p>Afin d&rsquo;être totalement conforme à l’exigence EX_2.1-1130.</p>
+<blockquote>
+<p>Chaque document et lot de document(s) produit par un LPS doit être identifié par un identifiant universel (champ XDS uniqueId au format OID) :</p>
+<ul>
+<li>
+<p>soit le uniqueId est généré à partir d’un UUID (sous la branche OID 2.25), dans ce cas cet OID doit être stocké dans le LPS pour les recherches / remplacements futurs via ce même LPS ;</p>
+</li>
+<li>
+<p>soit le uniqueId est généré à partir d’une racine propre à l’installation du LPS et d’un élément « variable » mais unique vis-à-vis de la racine de l’instance du LPS installée (par exemple horodatage, ou identifiant interne du document dans le LPS) ; il incombe au LPS de pouvoir retrouver ce uniqueId pour les recherches / remplacements futurs via ce même LPS (par exemple en stockant le uniqueId ainsi généré, ou la partie variable uniquement à condition de savoir reconstruire le uniqueId complet).</p>
+</li>
+</ul>
+</blockquote>
+<p>La DMPC-API fournit les deux implémentations demandées dans cette exigence. C&rsquo;est à l&rsquo;intégrateur de la choisir.</p>
+<h2 id="basé-sur-la-source">Basé sur la Source</h2>
+<p>L&rsquo;implémentation par défaut est basée sur les paramètres de la source. Elle est conforme au deuxième point de l&rsquo;exigence :</p>
+<p>La source est définie par les deux paramètres de l&rsquo;<code>application.yml</code> :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">source</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># 1.2.250.1.287 est l&#39;OID de Devcoop</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># 1.2.250.1.287.1 est l&#39;OID correspondant à la DMPC pour Devcoop</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idRoot</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.287.1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idExtension</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1234567</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>L&rsquo;implémentation ressemble à cela :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">*  * un compteur
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">*  * et le temps en ms
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">Default</span> <span style="color:#204a87;font-weight:bold">implements</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ce5c00;font-weight:bold">...</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#5c35cc;font-weight:bold">@Override</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">Id</span> <span style="color:#000">generate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">IdBuilder</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">setRoot</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">source</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ToOID</span><span style="color:#ce5c00;font-weight:bold">()).</span><span style="color:#c4a000">setExtension</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">currentTimeMillis</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#4e9a06">&#34;.&#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">cpt</span><span style="color:#ce5c00;font-weight:bold">++)).</span><span style="color:#c4a000">toId</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="basée-sur-luuid">Basée sur l&rsquo;UUID</h2>
+<p>Il est possible d’utiliser une autre implémentation proposée par la DMPC-API pour utiliser l’OID UUID : &ldquo;2.25&rdquo; . Cette implémentation est conforme à la première méthode de l&rsquo;exigence.</p>
+<p>Il suffit de configurer un bean implémentant <code>UniqueIdGenerator</code>, de la manière suivante:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#5c35cc;font-weight:bold">@Configuration</span>
+</span></span><span style="display:flex;"><span> <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@Bean</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#000">idGenerate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">UniqueIdGenerator</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">WithUuid</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="implémentée-par-lintégrateur">Implémentée par l&rsquo;intégrateur</h2>
+<p>Il est néanmoins possible de générer ses UniqueId, l&rsquo;intégrateur devra donc proposer sa propre implémentation du <code>UniqueIdGenerator</code> et de l&rsquo;ajouter à sa configuration spring .</p>
+<p>Attention : Elle devra être conforme à l&rsquo;une des deux exigences mentionnées ci-dessus.</p>
+<p>Exemple :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Configuration</span>
+</span></span><span style="display:flex;"><span> <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@Bean</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#000">idGenerate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">MyOwnImplementationOfUniqueIdGenerator</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><p>‌</p>
+<p>‌</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-254923b045df69c3988cd4d88682ddf9">3 - Différents environnements du DMP</h1>
     <div class="lead">Les différents environnements pour accéder au DMP</div>
 	<p>Pour le DMP, Ils existent quatre types d&rsquo;environnements : </p>
 <ul>
@@ -762,7 +848,7 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-0f6a8b8e81b29a55c0237a0114578bf4">3 - Gestion des certificats</h1>
+	<h1 id="pg-0f6a8b8e81b29a55c0237a0114578bf4">4 - Gestion des certificats</h1>
     <div class="lead">Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification indirecte</div>
 	<p>Une nouvelle IGC Santé a été mise en place courant 2016 : <a href="http://integrateurs-cps.asipsante.fr/IGC-Sante">http://integrateurs-cps.asipsante.fr/IGC-Sante</a></p>
 <p>Afin d&rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité. 
@@ -894,7 +980,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-de03b1ff0ff2188a68d5d13f0a8489ec">4 - Schematron</h1>
+	<h1 id="pg-de03b1ff0ff2188a68d5d13f0a8489ec">5 - Schematron</h1>
     <div class="lead">Validation manuelle des CDA générés par la DevBox-Santé DMP lors de l&rsquo;homologation</div>
 	<h3 id="utilisation-des-outils-disponibles-sur-le-site-esantegouvfr">Utilisation des outils disponibles sur le site esante.gouv.fr</h3>
 <p>Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit sur le site esante.gouv.fr : 
@@ -946,7 +1032,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-9541efc6c6fadf578bd308752f785e9b">5 - Integrateurs checklist</h1>
+	<h1 id="pg-9541efc6c6fadf578bd308752f785e9b">6 - Integrateurs checklist</h1>
     <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.</div>
 	<h2 id="administratif">Administratif</h2>
 <ul>
@@ -1032,7 +1118,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-19c3ebeab867e0a03ad82e20cb9db692">6 - CNDA : Fiche d&#39;identité du composant DMP</h1>
+	<h1 id="pg-19c3ebeab867e0a03ad82e20cb9db692">7 - CNDA : Fiche d&#39;identité du composant DMP</h1>
     
 	<p>NIE DEVCOOP : DEV331918</p>
 <h3 id="homologation-du-27092021">Homologation du 27/09/2021</h3>

@@ -227,6 +227,16 @@ Version imprimable multipages.
     
 	
 
+    <li><a href="#pg-16efb94d07fcae11c5ef318ceab3a267">SEGUR : la DevBox-Santé dans le référentiel d’exigences Hopital</a></li>
+
+
+
+    
+  
+    
+    
+	
+
     <li><a href="#pg-d3928a75ac050a5401dea3b2d141118f">Intégration de l’annexe CI-SIS INS dans la DevBox-santé DMP</a></li>
 
 
@@ -351,6 +361,132 @@ Version imprimable multipages.
   
 
 <div class="td-content" style="">
+    <h1 id="pg-16efb94d07fcae11c5ef318ceab3a267">SEGUR : la DevBox-Santé dans le référentiel d’exigences Hopital</h1>
+	<div class="lead">Exemple de la prise en charge de XDM et CDA dans un DPI du couloir Hôpital</div>
+	<div class="td-byline mb-4">
+		Par <b>Laurent Forêt</b> |
+        
+		<time datetime="2022-06-09" class="text-muted">Thursday, June 09, 2022</time>
+        
+	</div>
+	<h2 id="outils-xdm">Outils XDM</h2>
+<h3 id="scenario-hop-11">Scenario HOP-11</h3>
+<p>Dans le <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/REM-HOP-DPI-Va1.xlsx">Référentiel d&rsquo;exigences – Hôpital – DPI – Annexe 1 – Vague 1 (xlsx)</a>, on peut lire l’exigence HOP-11.</p>
+<blockquote>
+<p>Le système DOIT proposer une interface pour intégrer, a minima de façon manuelle, voire de façon automatique, les documents en CDAR2 N1 reçus via MSSanté au format IHE_XDM.zip.</p>
+</blockquote>
+<p>Cette exigence demande de pouvoir récupérer un fichier attaché au format XDM.zip d’un document reçu de la Messagerie Sécurisé de Santé. Récupérer ce fichier et l’interpréter via la DevBox-Santé rien de plus simple, il suffit de réaliser un POST HTTP à la boite à outils XDM :</p>
+<p><img src="XDM_TO_DMP_SwaggerUI.png" alt="XDM_TO_DMP_SwaggerUI.png"></p>
+<p>ou autrement dit en curl :</p>
+<pre tabindex="0"><code class="language-curl" data-lang="curl">curl -X POST &#34;http://localhost:8080/xdm/to/dmp&#34; -H &#34;accept: application/json&#34; -H &#34;Content-Type: multipart/form-data&#34; -F &#34;file=@xdm.zip;type=application/x-zip-compressed&#34;
+</code></pre><p>La DevBox-santé va lire l’archive ZIP, l’interpréter, et vous obtenez la réponse json suivante :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;comments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;submissionComments&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;contentType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;04&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;documents&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;classCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;comments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;document comments&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;confidentialities&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;N&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;content&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ZG9jdW1lbnQgY29udGVudA==&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;creationTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;20220608162831&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;entryUuid&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;76875ea0-e741-41ae-93e6-a5026bb0b0f8&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;events&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;H33&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;codingScheme&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2.16.840.1.113883.6.3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;displayName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;DÃ©collement et dÃ©chirement de la rÃ©tine&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;format&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:ihe:iti:xds-sd:text:2008&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;legalAuthenticator&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;internalId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3750100125/123&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;nom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;auteurNom&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;prenom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;auteurPrenom&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;specialite&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;G15_10/SM30&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;structureSante&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;idNational&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1750100125&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;nom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;structureNom&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;patient&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;ins&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;279035121518989&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;insAutorite&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.213.1.4.10&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;nomUsuel&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;PAT-TROIS&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;prenomUsuel&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Dominique&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;dateDeNaissance&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;19530724&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;ordreDeNaissance&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;sexe&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;M&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;practiceSetting&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;AMBULATOIRE&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;serviceStartTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;20111025&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;serviceStopTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;20111125&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;title&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;document titre&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11488-4&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;uniqueId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.287.1.1234567.1.16547057180821&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;repositoryUniqueId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.287.1.1234567&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;confidentialitiesAsListOfEnum&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;N&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;patient&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ins&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;279035121518989&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;insAutorite&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.213.1.4.10&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ordreDeNaissance&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;title&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;submissionTitle&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;uuid&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;83bd0ae8-ccfb-4313-bd6b-4ee77f73a0f8&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;uniqueId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.287.1.1234567.3.16547057180852&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Si vous avez déjà intégré la DevBox-Santé DMP vous remarquerez que c’est exactement la même structure de données que pour une soumission de documents vers le DMP. Le contenu binaire du document et dans la balise <code>content</code> encodé en Base64.</p>
+<p>Vous voulez réaliser l’opération inverse, générer une archive XDM.zip à partir d’une soumission :</p>
+<p><img src="DMP_TO_XDM_SwaggerUI.png" alt="DMP_TO_XDM_SwaggerUI.png"></p>
+<h2 id="outils-cda">Outils CDA </h2>
+<p>Comme pour l’archive XDM, il est possible de lire/écrire les documents CDA R2 N1 à structuration minimale et récupérer un <code>DMPCDocument</code> de la DevBox-santé DMP.</p>
+<h3 id="exigence-doc2">Exigence DOC2 </h3>
+<p>En effet, l’exigence DOC 2 nous dit :</p>
+<blockquote>
+<p>Le système DOIT produire TYPE_DE_DOCUMENT au format CDA R2 N1 avec un PDF encapsulé en base 64 conformément au volet Structuration Minimale du CI-SIS [CISIS1].</p>
+</blockquote>
+<p>Pour cela :</p>
+<p><img src="DMP_TO_CDA_SwaggerUI.png" alt="DMP_TO_CDA_SwaggerUI.png"></p>
+<h2 id="outils-pdf-et-datamatrix-ins">Outils PDF et Datamatrix INS</h2>
+<h3 id="exigenc-doc4">Exigenc DOC4</h3>
+<p>Mais encore, que répondre à l’exigence DOC4 :</p>
+<blockquote>
+<p>Le système DOIT produire les documents &ldquo;Lettre de liaison en sortie&rdquo; et &ldquo;Compte rendu opératoire&rdquo;  avec l&rsquo;apposition du datamatrix INS dans le PDF/A-1 conformément au référentiel datamatrix de l&rsquo;INS [INS5].</p>
+</blockquote>
+<p>Pour cela, la DevBox-Santé peut vous aider également pour la génération des PDF/A :</p>
+<p><img src="PDF-A_tooling_swagger.png" alt="PDF-A_tooling_swagger.png"></p>
+<p>Mais aussi pour les datamatrix INS : <a href="/insi/howtos/datamatrix/">/insi/howtos/datamatrix/</a></p>
+<h2 id="outils-annuaire">Outils Annuaire</h2>
+<p>L’annuaire de la devbox-santé peut également répondre aux exigences concernant l’annuaire, comme par exemple <strong>ANN1</strong> :</p>
+<blockquote>
+<p>Le système DOIT être en capacité d’intégrer automatiquement l’extraction publique « PS_LibreAcces_Personne_activite »  de l’annuaire santé.fr, conformément au Dossier des Spécifications Fonctionnelles et Techniques Fichiers d&rsquo;extraction des données en libre accès [ANN1].</p>
+</blockquote>
+<p>Une présentation de l’annuaire est disponible <a href="/annuaire">ici</a>.</p>
+
+</div>
+
+
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+
+  
+
+<div class="td-content" style="page-break-before: always">
     <h1 id="pg-d3928a75ac050a5401dea3b2d141118f">Intégration de l’annexe CI-SIS INS dans la DevBox-santé DMP</h1>
 	<div class="lead">La prise en charge de l’identifiant national de santé (INS) dans les standards d’interopérabilité et les volets du CI-SIS dans la DevBox-Santé DMP</div>
 	<div class="td-byline mb-4">

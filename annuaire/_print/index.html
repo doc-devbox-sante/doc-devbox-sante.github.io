@@ -40,8 +40,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.295d7e658f561e18a4830ad7471be02701977db5d7a3e8f47b23f34696125f79.css" as="style">
-<link href="/scss/main.min.295d7e658f561e18a4830ad7471be02701977db5d7a3e8f47b23f34696125f79.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.9ed9ca22a2a8e50a02a8477bfbb3d08ba806ef494b1164911a959fa74757d94a.css" as="style">
+<link href="/scss/main.min.9ed9ca22a2a8e50a02a8477bfbb3d08ba806ef494b1164911a959fa74757d94a.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -260,15 +260,45 @@ Version imprimable multipages.
 </ul>
 <p>Les applications front servent de démonstrateur des possibilités de l&rsquo;annuaire mais leurs fonctionnalités ne sont pas exaustives.</p>
 <p><a href="mailto:devbox-sante@devcoop.fr">Contactez-nous</a></p>
-<h3 id="date-de-mise-à-jour-des-données">Date de mise à jour des données</h3>
-<p>Le service /api/lastUpdated permet de connaitre la dernière mise à jour des données:</p>
+<h3 id="mise-à-jour-des-données">Mise à jour des données</h3>
+<p>Les données sont chargées chaque semaine via un cron paramétrable dans le fichier de configuration de l&rsquo;annuaire.
+Par exemple pour le chargement des professionnels:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">professionel</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">host</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://service.annuaire.sante.fr/annuaire-sante-webservices/V300/services/extraction/PS_LibreAcces</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">file</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">PS_LibreAcces_Personne_activite</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">cron</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">${PROFESSIONEL_CRON:0 0 2 * * 1}</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>Chaque mise à jour de données envoi aux administrateurs un rapport par mail:
+<img src="annuaire_mail.png" alt="Mail"></p>
+<p>Les utilisateurs de l&rsquo;annuaire dispose du service suivant /api/lastUpdated afin de connaitre la dernière mise à jour des données:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET <span style="color:#4e9a06">&#34;https://annuaire-demo.devbox-sante.fr/api/lastUpdated&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a40000">Finess:</span> <span style="color:#204a87;font-weight:bold">&#34;2022-04-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a40000">Nomenclature:</span> <span style="color:#204a87;font-weight:bold">&#34;2022-04-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a40000">Professionnels:</span> <span style="color:#204a87;font-weight:bold">&#34;2022-04-20&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
-</span></span></code></pre></div><h2 id="on-premise">On premise</h2>
+</span></span></code></pre></div><p>Ces fonctionnalités respectent les exigences suivantes du SEGUR:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Exigence</th>
+<th style="text-align:right">Scénario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Le système DOIT être en capacité d’intégrer automatiquement l’extraction publique « PS_LibreAcces_Personne_activite »  de l’annuaire santé.fr, conformément au Dossier des Spécifications Fonctionnelles et Techniques Fichiers d&rsquo;extraction des données en libre accès [ANN1].</td>
+<td>ANN 1.1</td>
+<td style="text-align:right">L&rsquo;éditeur DOIT exécuter le scénario de conformité suivant : 1 Charger les données en libre acès sur le site <a href="https://annuaire.sante.fr">https://annuaire.sante.fr</a></td>
+</tr>
+<tr>
+<td>Le Système DOIT permettre de paramétrer la fréquence d’intégration automatique de l’annuaire santé.</td>
+<td>ANN 4.1</td>
+<td style="text-align:right">L&rsquo;éditeur DOIT exécuter le scénario de conformité suivant : 1. Paramétrer la fréquence d&rsquo;intégration automatique de l&rsquo;annuaire santé.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="on-premise">On premise</h2>
 <p>Installation dans votre propre environnement</p>
 <p><a href="mailto:devbox-sante@devcoop.fr">Contactez-nous</a></p>
 

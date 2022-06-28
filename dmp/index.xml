@@ -630,6 +630,35 @@ cloud &amp;#34;**DMP**&amp;#34; as DMP
 
 cps &amp;lt;--&amp;gt; cryptolibCPS : appel natif
 dmpFacade --&amp;gt; DMP : SOAP
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;diagramme-de-séquences&#34;&gt;Diagramme de séquences&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+
+box &amp;#34;Poste Client&amp;#34;
+participant frontend
+participant &amp;#34;DevBox-Santé DMP&amp;#34; as dbxdmp DMP_COLOR
+participant &amp;#34;DevBox-Santé CPS&amp;#34; as dbxCps CPS_COLOR
+end box
+
+participant &amp;#34;**DMP**&amp;#34; as dmp
+
+frontend -&amp;gt; dbxdmp : /dmp/td21SubmitDocuments
+==  initialisation d&amp;#39;une connexion SSL en authentification mutuelle avec le DMP ==
+dbxdmp -&amp;gt; &amp;#34;DMP&amp;#34; as dmp : [SSL] 1. Client Hello
+dmp -&amp;gt; dbxdmp : [SSL] 2. Server Hello (certificat du DMP server inclus)
+dmp -&amp;gt; dbxdmp : [SSL] 3. Client certificate request
+dbxdmp -&amp;gt; dbxCps : readAuthenticationCertificate
+dbxCps -&amp;gt; dbxdmp : {certificate authentification}
+dbxdmp -&amp;gt; dmp : [SSL] 4. Client certificate
+dbxdmp -&amp;gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public&amp;#39;s key)
+dbxdmp -&amp;gt; dbxCps : signForAuthentication(SHA256WithRSA, hanshake data)
+dbxCps -&amp;gt; dbxdmp : {signed handshake data}
+dbxdmp -&amp;gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
+dbxdmp -&amp;gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
+dmp -&amp;gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)
+== fin de l&amp;#39;initialisation de la connexion ssl avec le DMP ==
+dbxdmp -&amp;gt; dmp : POST SOAP message de soumission (XDS/CDA)
+dmp -&amp;gt; dbxdmp : SOAP response OK
+dbxdmp -&amp;gt; frontend : ok
 &lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>

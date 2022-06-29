@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.96.0" /><link rel="alternate" type="text/html" href="/insi/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="/insi/index.xml">
+<meta name="generator" content="Hugo 0.96.0" /><link rel="alternate" type="text/html" href="/insi/howtos/testcnda/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="/insi/howtos/testcnda/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
@@ -19,22 +19,22 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>INSi | DevBox-Santé</title>
+<title>Conformité CNDA | DevBox-Santé</title>
 
 
-  <meta name="description" content="Téléservice Identité National de Santé (INS) intégré aux LPS 
+  <meta name="description" content="Quelques exemples de requêtes JSON des tests de conformité du CNDA 
 ">
-<meta property="og:title" content="INSi" />
-<meta property="og:description" content="Téléservice Identité National de Santé (INS) intégré aux LPS 
+<meta property="og:title" content="Conformité CNDA" />
+<meta property="og:description" content="Quelques exemples de requêtes JSON des tests de conformité du CNDA 
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/insi/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="/insi/howtos/testcnda/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="INSi">
-<meta itemprop="description" content="Téléservice Identité National de Santé (INS) intégré aux LPS 
+<meta itemprop="name" content="Conformité CNDA">
+<meta itemprop="description" content="Quelques exemples de requêtes JSON des tests de conformité du CNDA 
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="INSi"/>
-<meta name="twitter:description" content="Téléservice Identité National de Santé (INS) intégré aux LPS 
+<meta name="twitter:title" content="Conformité CNDA"/>
+<meta name="twitter:description" content="Quelques exemples de requêtes JSON des tests de conformité du CNDA 
 "/>
 
 
@@ -202,7 +202,7 @@ if (!doNotTrack) {
   <nav class="collapse td-sidebar-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-insi-li">
-  <a href="/insi/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-insi"><span class="td-sidebar-nav-active-item">INSi</span></a>
+  <a href="/insi/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-insi"><span class="">INSi</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insiembedded-li">
   <a href="/insi/embedded/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-insiembedded"><span class="">Java API</span></a>
@@ -210,13 +210,13 @@ if (!doNotTrack) {
   <a href="/insi/rest/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-insirest"><span class="">REST Proxy</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insiconfiguration-li">
   <a href="/insi/configuration/" title="Configuration DevBox-santé INSi" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-insiconfiguration"><span class="">Configuration</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-insihowtos-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-insihowtos-li">
   <a href="/insi/howtos/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-insihowtos"><span class="">Howtos</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtosintegrateurchecklist-li">
   <a href="/insi/howtos/integrateurchecklist/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-insihowtosintegrateurchecklist"><span class="">Integrateurs checklist</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtostestcnda-li">
-  <a href="/insi/howtos/testcnda/" title="Conformité CNDA" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-insihowtostestcnda"><span class="">Conformité CNDA</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-insihowtostestcnda-li">
+  <a href="/insi/howtos/testcnda/" title="Conformité CNDA" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-insihowtostestcnda"><span class="td-sidebar-nav-active-item">Conformité CNDA</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtosfaq-li">
   <a href="/insi/howtos/faq/" title="Foire aux questions INSi" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-insihowtosfaq"><span class="">FAQ</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtosgestioncertificatinsi-li">
@@ -248,13 +248,22 @@ if (!doNotTrack) {
   <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
   
   
-    <a id="print" href="/insi/_print/"><i class="fa fa-print fa-fw"></i> Imprimer la section entière</a>
+    <a id="print" href="/insi/howtos/testcnda/_print/"><i class="fa fa-print fa-fw"></i> Imprimer la section entière</a>
   
   </div>
 
 
             
 
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#ws_ins1">WS_INS1</a></li>
+    <li><a href="#ws_ins2">WS_INS2</a></li>
+    <li><a href="#ws_ins3">WS_INS3</a></li>
+    <li><a href="#ws_ins4">WS_INS4 </a></li>
+  </ul>
+</nav></div>
 
 
 
@@ -290,8 +299,28 @@ if (!doNotTrack) {
 
 
 
-<li class="breadcrumb-item active" aria-current="page">
+
+
+
+
+
+
+<li class="breadcrumb-item" >
 	<a href="/insi/">INSi</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/insi/howtos/">Howtos</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="/insi/howtos/testcnda/">Conformité CNDA</a>
 </li>
 
 	</ol>
@@ -299,8 +328,8 @@ if (!doNotTrack) {
 
             
 <div class="td-content">
-	<h1>INSi</h1>
-  <div class="lead">Téléservice Identité National de Santé (INS) intégré aux LPS</div>
+	<h1>Conformité CNDA</h1>
+  <div class="lead">Quelques exemples de requêtes JSON des tests de conformité du CNDA</div>
 	<header class="article-meta">
 		
 		
@@ -316,16 +345,49 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<p>Ce projet contient l&rsquo;API java proposé par la DevBox-santé pour l&rsquo;intégration du téléservice. Pour une description de l&rsquo;INS, consultez la page de l&rsquo;ANS : https://esante.gouv.fr/securite/identite-nationale-de-sante</p>
-<p>Elle est basée sur le Guide d&rsquo;intégration du GIE SESAM-Vitale SEL-MP-043 : <a href="https://www.sesam-vitale.fr/documents/20182/75606/SEL-MP-043_01-00_INSi+sans+MR/92d6e408-012d-4dc5-9fd1-d3bdda78735a">https://www.sesam-vitale.fr/documents/20182/75606/SEL-MP-043_01-00_INSi+sans+MR/92d6e408-012d-4dc5-9fd1-d3bdda78735a</a></p>
-<p>Cette API respecte quand c&rsquo;est possible le <a href="https://esante.gouv.fr/interoperabilite/mos-nos">Modèle d&rsquo;Objet de Santé proposé par l&rsquo;ANS</a></p>
-<h3 id="glossaire">Glossaire</h3>
+	<p>Les tests sont décrits dans le document <code>SEL-GCONFORM_INSi_Vxx.xx.pdf</code>.</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<p><strong>Attention l&rsquo;environnement de qualification pour les tests restitue bien les cas passants mais pas correctement les non passants.</strong></p>
+<p>Pour injecter les réponses souhaitées du document de vérification il faut configurer la DevBox-santé INSI avec  <a href="/insi/configuration#jeu-de-test-cnda">le profil de test cnda</a></p>
+
+</div>
+
+<blockquote>
+<p><strong>Précisions sur l’environnement de tests éditeurs :</strong></p>
+<p>Des erreurs « insi_101 » et « insi_102 » en sortie des opérations de recherche vont être restituées lors du déroulement des tests en environnement éditeurs.
+L&rsquo;environnement de tests éditeurs ne gère qu&rsquo;une base de tests RFI (régime général et régimes hébergés) mais pas de base SNGI (autres régimes : pour plus de détail voir le Guide d&rsquo;intégration).
+Le service effectue une première recherche vers le RFI :</p>
 <ul>
-<li><strong>ANS</strong> : Agence du Numérique en Santé</li>
-<li><strong>CPS / CPx</strong> : Carte de Professionnel de Santé</li>
-<li><strong>INS</strong> : Identité National de Santé</li>
-<li><strong>INSi</strong> : Identité National de Santé integré</li>
-<li><strong>MOS</strong> : Modèle d&rsquo;Objets de Santé</li>
+<li>si le patient est trouvé, l&rsquo;INS et les informations associées sont restitués : les cas passants que vous observez</li>
+<li>si le patient n&rsquo;est pas trouvé, le service effectue une recherche au SNGI avec les données de la requête. Comme en environnement de tests éditeurs il n&rsquo;y a pas de branche SNGI, la recherche est en échec et l&rsquo;erreur « insi_101 » ou « insi_102 » (selon l’opération) est restituée (il s&rsquo;agit d&rsquo;une erreur technique : branche SNGI indisponible), un code CR01 ne peut être restitué.
+Dans la configuration actuelle de l&rsquo;environnement de tests, il n&rsquo;est pas possible d&rsquo;obtenir un CR01, c&rsquo;est pour cela (et pour tester les cinématiques attendues dans le Guide d&rsquo;intégration) que dans le package de tests sont fournis des fichiers xml à injecter dans le LPS, pour simuler les réponses du service que l&rsquo;on ne peut obtenir dans notre environnement. En environnement de production, lorsqu’un INS ne sera pas trouvé c’est bien un CR01 qui sera restitué.</li>
+</ul>
+</blockquote>
+<h1 id="exemples-json">Exemples json</h1>
+<p>Voici quelques exemples json repris des tests :</p>
+<h2 id="ws_ins1">WS_INS1</h2>
+<ul>
+<li>Cas du POST par lecture des données vitales en amont :
+<ul>
+<li>Carte vitale INSi 01 DE VINCI Ruth : <a href="./test1_01.json">test1_01.json</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="ws_ins2">WS_INS2</h2>
+<ul>
+<li><a href="./test2_03_cas1.json">test2_03_cas1.json</a></li>
+</ul>
+<h2 id="ws_ins3">WS_INS3</h2>
+<ul>
+<li><a href="./test3_01.json">test3_01.json</a></li>
+</ul>
+<h2 id="ws_ins4">WS_INS4 </h2>
+<ul>
+<li><a href="./insi_a_verifier_lot1_1.0.1.json">insi_a_verifier_lot1_1.0.1.json</a></li>
+<li><a href="./insi_a_verifier_lot2_1.0.1.json">insi_a_verifier_lot2_1.0.1.json</a></li>
+<li><a href="./insi_a_verifier_lot3_1.0.1.json">insi_a_verifier_lot3_1.0.1.json</a></li>
 </ul>
 
         <div class="section-index">
@@ -337,56 +399,6 @@ if (!doNotTrack) {
     
     
     
-    <hr class="panel-line">
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/insi/embedded/">Java API</a>
-                </h5>
-                <p>Intégrer directement dans votre application spring-boot</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/insi/rest/">REST Proxy</a>
-                </h5>
-                <p>Une interface REST pour le Téléservice INSi</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/insi/configuration/">Configuration DevBox-santé INSi</a>
-                </h5>
-                <p>Configuration de la DevBox-santé INSi</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/insi/howtos/">Howtos</a>
-                </h5>
-                <p></p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/insi/versions/">Versions</a>
-                </h5>
-                <p>Note sur les différentes versions de la DevBox-Santé INSi</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/insi/gestion_certificat/"></a>
-                </h5>
-                <p></p>
-            </div>
-        
     
 </div>
 

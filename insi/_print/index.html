@@ -260,25 +260,6 @@ Version imprimable multipages.
   
 
   
-    
-    
-	
-<li>2.1: <a href="#pg-19b4240dfaea44626bc7cd6b12659389">Conformité CNDA</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
-  
 
     </ul>
     
@@ -328,15 +309,7 @@ Version imprimable multipages.
     
     
 	
-<li>4.2: <a href="#pg-d298870dfc5976d147b75c9cb223ad52">Foire aux questions INSi</a></li>
-
-
-    
-  
-    
-    
-	
-<li>4.3: <a href="#pg-80e5e55089632da4faee2964e57f1da0">Gestion des certificats</a></li>
+<li>4.2: <a href="#pg-e683af811ccc50a546ed6d81ebb8d2f2">Conformité CNDA</a></li>
 
 
     
@@ -355,7 +328,34 @@ Version imprimable multipages.
     
     
 	
-<li>4.4: <a href="#pg-cf9f436087bd6dae998d9bbec0c08356">Datamatrix</a></li>
+<li>4.3: <a href="#pg-d298870dfc5976d147b75c9cb223ad52">Foire aux questions INSi</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.4: <a href="#pg-80e5e55089632da4faee2964e57f1da0">Gestion des certificats</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4.5: <a href="#pg-cf9f436087bd6dae998d9bbec0c08356">Datamatrix</a></li>
 
 
     
@@ -579,78 +579,6 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
   
 
   
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-19b4240dfaea44626bc7cd6b12659389">2.1 - Conformité CNDA</h1>
-    <div class="lead">Quelques exemples de requêtes JSON des tests de conformité du CNDA</div>
-	<p>Les tests sont décrits dans le document <code>SEL-GCONFORM_INSi_Vxx.xx.pdf</code>.</p>
-
-
-<div class="pageinfo pageinfo-primary">
-<p><strong>Attention l&rsquo;environnement de qualification pour les tests restitue bien les cas passants mais pas correctement les non passants.</strong></p>
-
-</div>
-
-<blockquote>
-<p><strong>Précisions sur l’environnement de tests éditeurs :</strong></p>
-<p>Des erreurs « insi_101 » et « insi_102 » en sortie des opérations de recherche vont être restituées lors du déroulement des tests en environnement éditeurs.
-L&rsquo;environnement de tests éditeurs ne gère qu&rsquo;une base de tests RFI (régime général et régimes hébergés) mais pas de base SNGI (autres régimes : pour plus de détail voir le Guide d&rsquo;intégration).
-Le service effectue une première recherche vers le RFI :</p>
-<ul>
-<li>si le patient est trouvé, l&rsquo;INS et les informations associées sont restitués : les cas passants que vous observez</li>
-<li>si le patient n&rsquo;est pas trouvé, le service effectue une recherche au SNGI avec les données de la requête. Comme en environnement de tests éditeurs il n&rsquo;y a pas de branche SNGI, la recherche est en échec et l&rsquo;erreur « insi_101 » ou « insi_102 » (selon l’opération) est restituée (il s&rsquo;agit d&rsquo;une erreur technique : branche SNGI indisponible), un code CR01 ne peut être restitué.
-Dans la configuration actuelle de l&rsquo;environnement de tests, il n&rsquo;est pas possible d&rsquo;obtenir un CR01, c&rsquo;est pour cela (et pour tester les cinématiques attendues dans le Guide d&rsquo;intégration) que dans le package de tests sont fournis des fichiers xml à injecter dans le LPS, pour simuler les réponses du service que l&rsquo;on ne peut obtenir dans notre environnement. En environnement de production, lorsqu’un INS ne sera pas trouvé c’est bien un CR01 qui sera restitué.</li>
-</ul>
-</blockquote>
-<h1 id="exemples-json">Exemples json</h1>
-<p>Voici quelques exemples json repris des tests :</p>
-<h2 id="ws_ins1">WS_INS1</h2>
-<ul>
-<li>Cas du POST par lecture des données vitales en amont :
-<ul>
-<li>Carte vitale INSi 01 DE VINCI Ruth : <a href="./test1_01.json">test1_01.json</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="ws_ins2">WS_INS2</h2>
-<ul>
-<li><a href="./test2_03_cas1.json">test2_03_cas1.json</a></li>
-</ul>
-<h2 id="ws_ins3">WS_INS3</h2>
-<ul>
-<li><a href="./test3_01.json">test3_01.json</a></li>
-</ul>
-<h2 id="ws_ins4">WS_INS4 </h2>
-<ul>
-<li><a href="./insi_a_verifier_lot1_1.0.1.json">insi_a_verifier_lot1_1.0.1.json</a></li>
-<li><a href="./insi_a_verifier_lot2_1.0.1.json">insi_a_verifier_lot2_1.0.1.json</a></li>
-<li><a href="./insi_a_verifier_lot3_1.0.1.json">insi_a_verifier_lot3_1.0.1.json</a></li>
-</ul>
-
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
 
     
 	
@@ -787,7 +715,10 @@ Dans la configuration actuelle de l&rsquo;environnement de tests, il n&rsquo;est
 </ul>
 <p>Exemple :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -Dspring.profiles.active<span style="color:#ce5c00;font-weight:bold">=</span>CNDA_WEB -jar insi-proxy.jar
-</span></span></code></pre></div><h3 id="configuration-de-la-sécurité">Configuration de la sécurité</h3>
+</span></span></code></pre></div><p>Vous pouvez également injecter la resource de votre choix à partir du moment où elle correspond au format de la réponse SOAP souhaitée : 
+<img src="CNDA_injection_swagger_file.png" alt="CNDA_injection_swagger_file.png"></p>
+<p>Exemple de fichier soap.xml demandé : <a href="Reponse_numcasINSI_11_DateNaissance00_Annee.xml">Reponse_numcasINSI_11_DateNaissance00_Annee.xml</a> </p>
+<h3 id="configuration-de-la-sécurité">Configuration de la sécurité</h3>
 <p>Le proxy insi est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.</p>
 <p>Exemple de configuration par défaut empêchant toutes les IPs externes :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -922,7 +853,80 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-d298870dfc5976d147b75c9cb223ad52">4.2 - Foire aux questions INSi</h1>
+	<h1 id="pg-e683af811ccc50a546ed6d81ebb8d2f2">4.2 - Conformité CNDA</h1>
+    <div class="lead">Quelques exemples de requêtes JSON des tests de conformité du CNDA</div>
+	<p>Les tests sont décrits dans le document <code>SEL-GCONFORM_INSi_Vxx.xx.pdf</code>.</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<p><strong>Attention l&rsquo;environnement de qualification pour les tests restitue bien les cas passants mais pas correctement les non passants.</strong></p>
+<p>Pour injecter les réponses souhaitées du document de vérification il faut configurer la DevBox-santé INSI avec  <a href="/insi/configuration#jeu-de-test-cnda">le profil de test cnda</a></p>
+
+</div>
+
+<blockquote>
+<p><strong>Précisions sur l’environnement de tests éditeurs :</strong></p>
+<p>Des erreurs « insi_101 » et « insi_102 » en sortie des opérations de recherche vont être restituées lors du déroulement des tests en environnement éditeurs.
+L&rsquo;environnement de tests éditeurs ne gère qu&rsquo;une base de tests RFI (régime général et régimes hébergés) mais pas de base SNGI (autres régimes : pour plus de détail voir le Guide d&rsquo;intégration).
+Le service effectue une première recherche vers le RFI :</p>
+<ul>
+<li>si le patient est trouvé, l&rsquo;INS et les informations associées sont restitués : les cas passants que vous observez</li>
+<li>si le patient n&rsquo;est pas trouvé, le service effectue une recherche au SNGI avec les données de la requête. Comme en environnement de tests éditeurs il n&rsquo;y a pas de branche SNGI, la recherche est en échec et l&rsquo;erreur « insi_101 » ou « insi_102 » (selon l’opération) est restituée (il s&rsquo;agit d&rsquo;une erreur technique : branche SNGI indisponible), un code CR01 ne peut être restitué.
+Dans la configuration actuelle de l&rsquo;environnement de tests, il n&rsquo;est pas possible d&rsquo;obtenir un CR01, c&rsquo;est pour cela (et pour tester les cinématiques attendues dans le Guide d&rsquo;intégration) que dans le package de tests sont fournis des fichiers xml à injecter dans le LPS, pour simuler les réponses du service que l&rsquo;on ne peut obtenir dans notre environnement. En environnement de production, lorsqu’un INS ne sera pas trouvé c’est bien un CR01 qui sera restitué.</li>
+</ul>
+</blockquote>
+<h1 id="exemples-json">Exemples json</h1>
+<p>Voici quelques exemples json repris des tests :</p>
+<h2 id="ws_ins1">WS_INS1</h2>
+<ul>
+<li>Cas du POST par lecture des données vitales en amont :
+<ul>
+<li>Carte vitale INSi 01 DE VINCI Ruth : <a href="./test1_01.json">test1_01.json</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="ws_ins2">WS_INS2</h2>
+<ul>
+<li><a href="./test2_03_cas1.json">test2_03_cas1.json</a></li>
+</ul>
+<h2 id="ws_ins3">WS_INS3</h2>
+<ul>
+<li><a href="./test3_01.json">test3_01.json</a></li>
+</ul>
+<h2 id="ws_ins4">WS_INS4 </h2>
+<ul>
+<li><a href="./insi_a_verifier_lot1_1.0.1.json">insi_a_verifier_lot1_1.0.1.json</a></li>
+<li><a href="./insi_a_verifier_lot2_1.0.1.json">insi_a_verifier_lot2_1.0.1.json</a></li>
+<li><a href="./insi_a_verifier_lot3_1.0.1.json">insi_a_verifier_lot3_1.0.1.json</a></li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d298870dfc5976d147b75c9cb223ad52">4.3 - Foire aux questions INSi</h1>
     <div class="lead">Compilation des questions au sujet de l&rsquo;intégration INSi</div>
 	<h2 id="authentification-par-certificat-logiciel">Authentification par certificat logiciel</h2>
 <p>Reprises des questions réponses du webinaire <strong>&ldquo;Développer l’authentification TLS mutuelle par certificat logiciel pour INSi&rdquo; - mardi 16 novembre 2021 - 14h30</strong> :</p>
@@ -976,7 +980,7 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-80e5e55089632da4faee2964e57f1da0">4.3 - Gestion des certificats</h1>
+	<h1 id="pg-80e5e55089632da4faee2964e57f1da0">4.4 - Gestion des certificats</h1>
     <div class="lead">Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification par certificat pour l&rsquo;INSi</div>
 	<p>Obtenir des certificats pour l&rsquo;INSi consiste à réaliser la même <a href="/dmp/howtos/gestioncertificat/">opération que pour le DMP</a>.
 et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package INSi 04.00.00.pdf</code>, une notice explicative est donnée</p>
@@ -1017,7 +1021,7 @@ et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package I
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-cf9f436087bd6dae998d9bbec0c08356">4.4 - Datamatrix</h1>
+	<h1 id="pg-cf9f436087bd6dae998d9bbec0c08356">4.5 - Datamatrix</h1>
     <div class="lead">Générer un datamatrix INS avec la DevBox-Santé INSi et insérer un cartouche dans un PDF</div>
 	<p>Il est dorénavant possible (depuis la version 2.6) de <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans---datamatrix-ins-v2.pdf">générer un datamatrix conforme à la spécification de l&rsquo;ANS</a>.</p>
 <h2 id="interface">Interface</h2>

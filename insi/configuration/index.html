@@ -206,13 +206,8 @@ if (!doNotTrack) {
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insiembedded-li">
   <a href="/insi/embedded/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-insiembedded"><span class="">Java API</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-insirest-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insirest-li">
   <a href="/insi/rest/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-insirest"><span class="">REST Proxy</span></a>
-  <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insiresttestcnda-li">
-  <a href="/insi/rest/testcnda/" title="Conformité CNDA" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-insiresttestcnda"><span class="">Conformité CNDA</span></a>
-</li>
-  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-insiconfiguration-li">
   <a href="/insi/configuration/" title="Configuration DevBox-santé INSi" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-insiconfiguration"><span class="td-sidebar-nav-active-item">Configuration</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-insihowtos-li">
@@ -220,6 +215,8 @@ if (!doNotTrack) {
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtosintegrateurchecklist-li">
   <a href="/insi/howtos/integrateurchecklist/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-insihowtosintegrateurchecklist"><span class="">Integrateurs checklist</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtostestcnda-li">
+  <a href="/insi/howtos/testcnda/" title="Conformité CNDA" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-insihowtostestcnda"><span class="">Conformité CNDA</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtosfaq-li">
   <a href="/insi/howtos/faq/" title="Foire aux questions INSi" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-insihowtosfaq"><span class="">FAQ</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtosgestioncertificatinsi-li">
@@ -466,7 +463,10 @@ if (!doNotTrack) {
 </ul>
 <p>Exemple :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -Dspring.profiles.active<span style="color:#ce5c00;font-weight:bold">=</span>CNDA_WEB -jar insi-proxy.jar
-</span></span></code></pre></div><h3 id="configuration-de-la-sécurité">Configuration de la sécurité</h3>
+</span></span></code></pre></div><p>Vous pouvez également injecter la resource de votre choix à partir du moment où elle correspond au format de la réponse SOAP souhaitée : 
+<img src="CNDA_injection_swagger_file.png" alt="CNDA_injection_swagger_file.png"></p>
+<p>Exemple de fichier soap.xml demandé : <a href="Reponse_numcasINSI_11_DateNaissance00_Annee.xml">Reponse_numcasINSI_11_DateNaissance00_Annee.xml</a> </p>
+<h3 id="configuration-de-la-sécurité">Configuration de la sécurité</h3>
 <p>Le proxy insi est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.</p>
 <p>Exemple de configuration par défaut empêchant toutes les IPs externes :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">

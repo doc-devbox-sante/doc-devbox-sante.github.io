@@ -57,6 +57,63 @@
     </item>
     
     <item>
+      <title>Insi: Conformité CNDA</title>
+      <link>/insi/howtos/testcnda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/insi/howtos/testcnda/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Les tests sont décrits dans le document &lt;code&gt;SEL-GCONFORM_INSi_Vxx.xx.pdf&lt;/code&gt;.&lt;/p&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Attention l&amp;rsquo;environnement de qualification pour les tests restitue bien les cas passants mais pas correctement les non passants.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Pour injecter les réponses souhaitées du document de vérification il faut configurer la DevBox-santé INSI avec  &lt;a href=&#34;/insi/configuration#jeu-de-test-cnda&#34;&gt;le profil de test cnda&lt;/a&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Précisions sur l’environnement de tests éditeurs :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Des erreurs « insi_101 » et « insi_102 » en sortie des opérations de recherche vont être restituées lors du déroulement des tests en environnement éditeurs.
+L&amp;rsquo;environnement de tests éditeurs ne gère qu&amp;rsquo;une base de tests RFI (régime général et régimes hébergés) mais pas de base SNGI (autres régimes : pour plus de détail voir le Guide d&amp;rsquo;intégration).
+Le service effectue une première recherche vers le RFI :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;si le patient est trouvé, l&amp;rsquo;INS et les informations associées sont restitués : les cas passants que vous observez&lt;/li&gt;
+&lt;li&gt;si le patient n&amp;rsquo;est pas trouvé, le service effectue une recherche au SNGI avec les données de la requête. Comme en environnement de tests éditeurs il n&amp;rsquo;y a pas de branche SNGI, la recherche est en échec et l&amp;rsquo;erreur « insi_101 » ou « insi_102 » (selon l’opération) est restituée (il s&amp;rsquo;agit d&amp;rsquo;une erreur technique : branche SNGI indisponible), un code CR01 ne peut être restitué.
+Dans la configuration actuelle de l&amp;rsquo;environnement de tests, il n&amp;rsquo;est pas possible d&amp;rsquo;obtenir un CR01, c&amp;rsquo;est pour cela (et pour tester les cinématiques attendues dans le Guide d&amp;rsquo;intégration) que dans le package de tests sont fournis des fichiers xml à injecter dans le LPS, pour simuler les réponses du service que l&amp;rsquo;on ne peut obtenir dans notre environnement. En environnement de production, lorsqu’un INS ne sera pas trouvé c’est bien un CR01 qui sera restitué.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;exemples-json&#34;&gt;Exemples json&lt;/h1&gt;
+&lt;p&gt;Voici quelques exemples json repris des tests :&lt;/p&gt;
+&lt;h2 id=&#34;ws_ins1&#34;&gt;WS_INS1&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Cas du POST par lecture des données vitales en amont :
+&lt;ul&gt;
+&lt;li&gt;Carte vitale INSi 01 DE VINCI Ruth : &lt;a href=&#34;./test1_01.json&#34;&gt;test1_01.json&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ws_ins2&#34;&gt;WS_INS2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./test2_03_cas1.json&#34;&gt;test2_03_cas1.json&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ws_ins3&#34;&gt;WS_INS3&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./test3_01.json&#34;&gt;test3_01.json&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ws_ins4&#34;&gt;WS_INS4 &lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./insi_a_verifier_lot1_1.0.1.json&#34;&gt;insi_a_verifier_lot1_1.0.1.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./insi_a_verifier_lot2_1.0.1.json&#34;&gt;insi_a_verifier_lot2_1.0.1.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./insi_a_verifier_lot3_1.0.1.json&#34;&gt;insi_a_verifier_lot3_1.0.1.json&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Insi: Foire aux questions INSi</title>
       <link>/insi/howtos/faq/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

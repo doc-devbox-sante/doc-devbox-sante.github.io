@@ -23,7 +23,7 @@
         
         
         &lt;h1 id=&#34;documentation-à-prendre-en-compte&#34;&gt;Documentation à prendre en compte&lt;/h1&gt;
-&lt;p&gt;Résumé des différents documents : &lt;a href=&#34;&#34;&gt;https://www.sesam-vitale.fr/documents/20182/75606/Documentation_INS.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Résumé des différents documents : &lt;a href=&#34;https://www.sesam-vitale.fr/documents/20182/75606/Documentation_INS.pdf&#34;&gt;https://www.sesam-vitale.fr/documents/20182/75606/Documentation_INS.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;insi-version-0400&#34;&gt;INSi version 04.00&lt;/h2&gt;
 &lt;p&gt;Dans le &lt;strong&gt;Package INSi 04.00.00&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
@@ -55,7 +55,7 @@
 &lt;p&gt;L&amp;rsquo;article 6 des conditions particulières décrit la «Procédure d&amp;rsquo;autorisation».&lt;/p&gt;
 &lt;p&gt;En résumé :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Vous effectuez les tests dans votre environnement le jeu de test et envoyer le résultat au CNDA. Plus d&amp;rsquo;info sur l&amp;rsquo;exécution du jeu de tests : &lt;a href=&#34;&#34;&gt;/insi/howtos/testcnda/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vous effectuez les tests dans votre environnement le jeu de test et envoyer le résultat au CNDA. Plus d&amp;rsquo;info sur l&amp;rsquo;exécution du jeu de tests : &lt;a href=&#34;/insi/howtos/testcnda/&#34;&gt;/insi/howtos/testcnda/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Après vérification du CNDA, prise de rendez-vous pour un rejeu en condition réelle.&lt;/li&gt;
 &lt;/ul&gt;
 

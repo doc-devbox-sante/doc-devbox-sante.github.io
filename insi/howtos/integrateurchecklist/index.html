@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/insi/howtos/integrateurchecklist/" /><meta property="article:section" content="insi" />
 
-<meta property="article:modified_time" content="2022-05-04T16:59:01+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2022-07-18T09:43:50+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Integrateurs checklist">
 <meta itemprop="description" content="Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé INSi et faciliter son homologation.
 ">
-<meta itemprop="dateModified" content="2022-05-04T16:59:01+02:00" />
-<meta itemprop="wordCount" content="130">
+<meta itemprop="dateModified" content="2022-07-18T09:43:50+02:00" />
+<meta itemprop="wordCount" content="297">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Integrateurs checklist"/>
 <meta name="twitter:description" content="Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé INSi et faciliter son homologation.
@@ -259,6 +259,17 @@ if (!doNotTrack) {
             
 
 
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#insi-version-0400">INSi version 04.00</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#cnda">CNDA</a></li>
+    <li><a href="#ans---commande-des-cartes-cpset-certificats-serveurs-de-test">ANS - Commande des Cartes CPS et Certificats serveurs de Test</a></li>
+  </ul>
+</nav></div>
+
 
 
             
@@ -339,16 +350,8 @@ if (!doNotTrack) {
 		
 		
 	</header>    
-	
-
-<div class="pageinfo pageinfo-primary">
-<pre><code>Page en cours de construction
-</code></pre>
-
-</div>
-
-<h1 id="documentation-à-prendre-en-compte">Documentation à prendre en compte</h1>
-<p>Résumé des différents documents : https://www.sesam-vitale.fr/documents/20182/75606/Documentation_INS.pdf</p>
+	<h1 id="documentation-à-prendre-en-compte">Documentation à prendre en compte</h1>
+<p>Résumé des différents documents : <a href="">https://www.sesam-vitale.fr/documents/20182/75606/Documentation_INS.pdf</a></p>
 <h2 id="insi-version-0400">INSi version 04.00</h2>
 <p>Dans le <strong>Package INSi 04.00.00</strong> :</p>
 <ul>
@@ -362,13 +365,27 @@ if (!doNotTrack) {
 <li>Guide d&rsquo;implémentation : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/INS_Guide%20implementation_V2_0.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/INS_Guide%20implementation_V2_0.pdf</a></li>
 <li>RNIV : <a href="https://esante.gouv.fr/securite/identite-nationale-de-sante">https://esante.gouv.fr/securite/identite-nationale-de-sante</a> (ensemble des liens de la page)</li>
 </ul>
-<h1 id="commande-des-cartes-et-certificats-de-test">Commande des Cartes et Certificats de Test</h1>
-<p>Un document de l&rsquo;ANS donne toutes les indications suffisantes pour commander cartes et certificats nécessaires pour les développements :</p>
+<h1 id="démarches-administratives">Démarches Administratives</h1>
+<h2 id="cnda">CNDA</h2>
+<p>Vous pouvez vous référencer à la documentation du CNDA sur le sujet : <a href="https://cnda.ameli.fr/editeurs/referencer-un-logiciel/">https://cnda.ameli.fr/editeurs/referencer-un-logiciel/</a></p>
+<p>En résumé :</p>
+<ul>
+<li>Obtenir un NIE (Numéro Identifiant Éditeur) : Téléchargez et retournez le <a href="https://cnda.ameli.fr/?dl_name=Formulaire_NIE.pdf">formulaire_NIE</a> disponible sur <a href="https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/">cette page</a></li>
+<li>Signer les <a href="https://cnda.ameli.fr/?dl_name=Convention_Generale_teleservices_V3.0.pdf">conditions générales</a>* depuis le même espace .</li>
+<li>Signer les <a href="https://cnda.ameli.fr/?dl_name=Conditions_INSi-V4.0.pdf">conditions particulières INSi</a>* depuis le même espace. Les annexes nécessitent certaines informations liées à la DevBox-Santé. Nous contacter pour les informations à jour.</li>
+<li>Obtention des cartes vitales de test . Suite à la signature des conditions particulières et l’envoi d’un chéque de caution, le CNDA vous envoie les cartes vitales de tests comme précisé dans l&rsquo;article 5 des conditions particulières.</li>
+</ul>
+<p><em>* si les liens ne fonctionnent plus, c’est que les versions des différents protocoles ont changé. Il faut se référer au site du CNDA.</em></p>
+<h2 id="ans---commande-des-cartes-cpset-certificats-serveurs-de-test">ANS - Commande des Cartes CPS et Certificats serveurs de Test</h2>
+<p>Un document de l&rsquo;ANS donne toutes les indications suffisantes pour commander cartes et certificats serveurs nécessaires pour les développements :</p>
 <p><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf</a></p>
-<h1 id="intégration-de-la-devbox-santé-insi">Intégration de la DevBox-Santé INSi</h1>
-<p>Lire les autres pages de ce site concernant l&rsquo;intégration INSi</p>
 <h1 id="passage-de-lhomologation">Passage de l&rsquo;homologation</h1>
-<p>TODO</p>
+<p>L&rsquo;article 6 des conditions particulières décrit la «Procédure d&rsquo;autorisation».</p>
+<p>En résumé :</p>
+<ul>
+<li>Vous effectuez les tests dans votre environnement le jeu de test et envoyer le résultat au CNDA. Plus d&rsquo;info sur l&rsquo;exécution du jeu de tests : <a href="">/insi/howtos/testcnda/</a></li>
+<li>Après vérification du CNDA, prise de rendez-vous pour un rejeu en condition réelle.</li>
+</ul>
 
 	
 	

@@ -22,16 +22,8 @@
       <description>
         
         
-        
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;pre&gt;&lt;code&gt;Page en cours de construction
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;h1 id=&#34;documentation-à-prendre-en-compte&#34;&gt;Documentation à prendre en compte&lt;/h1&gt;
-&lt;p&gt;Résumé des différents documents : https://www.sesam-vitale.fr/documents/20182/75606/Documentation_INS.pdf&lt;/p&gt;
+        &lt;h1 id=&#34;documentation-à-prendre-en-compte&#34;&gt;Documentation à prendre en compte&lt;/h1&gt;
+&lt;p&gt;Résumé des différents documents : &lt;a href=&#34;&#34;&gt;https://www.sesam-vitale.fr/documents/20182/75606/Documentation_INS.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;insi-version-0400&#34;&gt;INSi version 04.00&lt;/h2&gt;
 &lt;p&gt;Dans le &lt;strong&gt;Package INSi 04.00.00&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
@@ -45,13 +37,27 @@
 &lt;li&gt;Guide d&amp;rsquo;implémentation : &lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/INS_Guide%20implementation_V2_0.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/INS_Guide%20implementation_V2_0.pdf&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;RNIV : &lt;a href=&#34;https://esante.gouv.fr/securite/identite-nationale-de-sante&#34;&gt;https://esante.gouv.fr/securite/identite-nationale-de-sante&lt;/a&gt; (ensemble des liens de la page)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;commande-des-cartes-et-certificats-de-test&#34;&gt;Commande des Cartes et Certificats de Test&lt;/h1&gt;
-&lt;p&gt;Un document de l&amp;rsquo;ANS donne toutes les indications suffisantes pour commander cartes et certificats nécessaires pour les développements :&lt;/p&gt;
+&lt;h1 id=&#34;démarches-administratives&#34;&gt;Démarches Administratives&lt;/h1&gt;
+&lt;h2 id=&#34;cnda&#34;&gt;CNDA&lt;/h2&gt;
+&lt;p&gt;Vous pouvez vous référencer à la documentation du CNDA sur le sujet : &lt;a href=&#34;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/&#34;&gt;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;En résumé :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Obtenir un NIE (Numéro Identifiant Éditeur) : Téléchargez et retournez le &lt;a href=&#34;https://cnda.ameli.fr/?dl_name=Formulaire_NIE.pdf&#34;&gt;formulaire_NIE&lt;/a&gt; disponible sur &lt;a href=&#34;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&#34;&gt;cette page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Signer les &lt;a href=&#34;https://cnda.ameli.fr/?dl_name=Convention_Generale_teleservices_V3.0.pdf&#34;&gt;conditions générales&lt;/a&gt;* depuis le même espace .&lt;/li&gt;
+&lt;li&gt;Signer les &lt;a href=&#34;https://cnda.ameli.fr/?dl_name=Conditions_INSi-V4.0.pdf&#34;&gt;conditions particulières INSi&lt;/a&gt;* depuis le même espace. Les annexes nécessitent certaines informations liées à la DevBox-Santé. Nous contacter pour les informations à jour.&lt;/li&gt;
+&lt;li&gt;Obtention des cartes vitales de test . Suite à la signature des conditions particulières et l’envoi d’un chéque de caution, le CNDA vous envoie les cartes vitales de tests comme précisé dans l&amp;rsquo;article 5 des conditions particulières.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;* si les liens ne fonctionnent plus, c’est que les versions des différents protocoles ont changé. Il faut se référer au site du CNDA.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ans---commande-des-cartes-cpset-certificats-serveurs-de-test&#34;&gt;ANS - Commande des Cartes CPS et Certificats serveurs de Test&lt;/h2&gt;
+&lt;p&gt;Un document de l&amp;rsquo;ANS donne toutes les indications suffisantes pour commander cartes et certificats serveurs nécessaires pour les développements :&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;intégration-de-la-devbox-santé-insi&#34;&gt;Intégration de la DevBox-Santé INSi&lt;/h1&gt;
-&lt;p&gt;Lire les autres pages de ce site concernant l&amp;rsquo;intégration INSi&lt;/p&gt;
 &lt;h1 id=&#34;passage-de-lhomologation&#34;&gt;Passage de l&amp;rsquo;homologation&lt;/h1&gt;
-&lt;p&gt;TODO&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;article 6 des conditions particulières décrit la «Procédure d&amp;rsquo;autorisation».&lt;/p&gt;
+&lt;p&gt;En résumé :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vous effectuez les tests dans votre environnement le jeu de test et envoyer le résultat au CNDA. Plus d&amp;rsquo;info sur l&amp;rsquo;exécution du jeu de tests : &lt;a href=&#34;&#34;&gt;/insi/howtos/testcnda/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Après vérification du CNDA, prise de rendez-vous pour un rejeu en condition réelle.&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>

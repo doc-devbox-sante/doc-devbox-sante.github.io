@@ -9,10 +9,10 @@
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
   </url><url>
     <loc>/insi/howtos/integrateurchecklist/</loc>
-    <lastmod>2022-05-04T16:59:01+02:00</lastmod>
+    <lastmod>2022-07-18T09:43:50+02:00</lastmod>
   </url><url>
     <loc>/dmp/embedded/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-07-18T09:43:50+02:00</lastmod>
   </url><url>
     <loc>/insi/embedded/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
@@ -155,6 +155,9 @@
     <loc>/vitale/versions/</loc>
     <lastmod>2022-05-31T14:31:33+02:00</lastmod>
   </url><url>
+    <loc>/dmp/ui/</loc>
+    <lastmod>2022-07-18T09:43:50+02:00</lastmod>
+  </url><url>
     <loc>/installer/versions/20220711_versions_courantes/</loc>
     <lastmod>2022-07-14T18:29:46+02:00</lastmod>
   </url><url>
@@ -265,6 +268,18 @@
   </url><url>
     <loc>/insi/gestion_certificat/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+  </url><url>
+    <loc>/dmp/ui/cnda/0.1-060/</loc>
+    <lastmod>2022-07-06T16:24:41+02:00</lastmod>
+  </url><url>
+    <loc>/dmp/ui/cnda/2.1-010/</loc>
+    <lastmod>2022-07-06T16:24:41+02:00</lastmod>
+  </url><url>
+    <loc>/dmp/ui/cnda/3.1-040/</loc>
+    <lastmod>2022-07-06T16:24:41+02:00</lastmod>
+  </url><url>
+    <loc>/dmp/ui/cnda/3.3-120/</loc>
+    <lastmod>2022-07-06T16:24:41+02:00</lastmod>
   </url><url>
     <loc>/blog/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>

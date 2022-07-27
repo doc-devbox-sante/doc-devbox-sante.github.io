@@ -217,12 +217,12 @@ if (!doNotTrack) {
   <a href="/insi/howtos/integrateurchecklist/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-insihowtosintegrateurchecklist"><span class="">Integrateurs checklist</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtostestcnda-li">
   <a href="/insi/howtos/testcnda/" title="Conformité CNDA" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-insihowtostestcnda"><span class="">Conformité CNDA</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtosfaq-li">
-  <a href="/insi/howtos/faq/" title="Foire aux questions INSi" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-insihowtosfaq"><span class="">FAQ</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtosgestioncertificatinsi-li">
   <a href="/insi/howtos/gestioncertificatinsi/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-insihowtosgestioncertificatinsi"><span class="">Gestion des certificats</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtosdatamatrix-li">
   <a href="/insi/howtos/datamatrix/" title="Datamatrix" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-insihowtosdatamatrix"><span class="">Générer un datamatrix</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtosfaq-li">
+  <a href="/insi/howtos/faq/" title="Foire aux questions INSi" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-insihowtosfaq"><span class="">FAQ</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insiversions-li">
@@ -428,7 +428,7 @@ if (!doNotTrack) {
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER_MOT_DE_PASSE_FICHIER</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">             </span>- <span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">FINESS_ETAB_2-manu</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">FINESS_ETAB_1_CERTIFICAT_AUTO.p12</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">FINESS_ETAB_2_CERTIFICAT_AUTO.p12</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">À_CHANGER_MOT_DE_PASSE_FICHIER</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span></code></pre></div><p>Il est toutefois possible de définir un autre <code>AmoP12Provider</code>, il suffit de configurer un nouvau Bean Spring avec une autre implémentation. Comme par exemple, une implémentation qui va charger le certificat en base de données :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#5c35cc;font-weight:bold">@Component</span>

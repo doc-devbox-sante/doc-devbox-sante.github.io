@@ -71,7 +71,20 @@
       <description>
         
         
-        &lt;h2 id=&#34;authentification-par-certificat-logiciel&#34;&gt;Authentification par certificat logiciel&lt;/h2&gt;
+        &lt;h2 id=&#34;intégration-technique-du-composant&#34;&gt;Intégration technique du composant&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&amp;quot;(desir_620, Le certificat de la carte PS est erroné. )&amp;quot;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Vérifier que vous êtes sur le bon environnement (deux environnements distincts entre les cps et p12 ainsi que pour les environnements de qualification et de production)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Des erreurs insi_101 et insi_102 apparaissent sur les environnement de qualification&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Les environnements de qualification ne gèrent pas correctement les recherches sans résultat. Plus d’information : &lt;a href=&#34;/insi/howtos/testCNDA&#34;&gt;/insi/howtos/testCNDA&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;webinaire-authentification-par-certificat-logiciel-du-16novembre-2021&#34;&gt;Webinaire Authentification par certificat logiciel du 16 novembre 2021&lt;/h2&gt;
 &lt;p&gt;Reprises des questions réponses du webinaire &lt;strong&gt;&amp;ldquo;Développer l’authentification TLS mutuelle par certificat logiciel pour INSi&amp;rdquo; - mardi 16 novembre 2021 - 14h30&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Pourriez-vous préciser les cas d&amp;rsquo;usage des certificats INSI-MANU et INSI-AUTO ?&lt;/strong&gt;&lt;/li&gt;

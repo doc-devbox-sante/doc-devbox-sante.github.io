@@ -44,9 +44,6 @@
     <loc>/insi/howtos/testcnda/</loc>
     <lastmod>2022-06-29T20:00:59+02:00</lastmod>
   </url><url>
-    <loc>/insi/howtos/faq/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
-  </url><url>
     <loc>/dmp/authentifications/indirecte/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
   </url><url>
@@ -54,7 +51,7 @@
     <lastmod>2022-02-04T12:10:02+01:00</lastmod>
   </url><url>
     <loc>/insi/configuration/</loc>
-    <lastmod>2022-07-08T17:25:59+02:00</lastmod>
+    <lastmod>2022-07-27T14:20:00+02:00</lastmod>
   </url><url>
     <loc>/cps/</loc>
     <lastmod>2022-03-16T11:35:55+01:00</lastmod>
@@ -141,7 +138,7 @@
     <lastmod>2022-05-10T11:22:46+02:00</lastmod>
   </url><url>
     <loc>/cps/versions/</loc>
-    <lastmod>2022-05-09T17:57:36+02:00</lastmod>
+    <lastmod>2022-07-27T14:18:46+02:00</lastmod>
   </url><url>
     <loc>/dmp/versions/</loc>
     <lastmod>2022-07-08T17:26:56+02:00</lastmod>
@@ -157,6 +154,9 @@
   </url><url>
     <loc>/dmp/ui/</loc>
     <lastmod>2022-07-18T09:43:50+02:00</lastmod>
+  </url><url>
+    <loc>/insi/howtos/faq/</loc>
+    <lastmod>2022-07-27T14:20:00+02:00</lastmod>
   </url><url>
     <loc>/installer/versions/20220711_versions_courantes/</loc>
     <lastmod>2022-07-14T18:29:46+02:00</lastmod>
@@ -273,7 +273,7 @@
     <lastmod>2022-07-06T16:24:41+02:00</lastmod>
   </url><url>
     <loc>/dmp/ui/cnda/2.1-010/</loc>
-    <lastmod>2022-07-06T16:24:41+02:00</lastmod>
+    <lastmod>2022-07-27T14:20:00+02:00</lastmod>
   </url><url>
     <loc>/dmp/ui/cnda/3.1-040/</loc>
     <lastmod>2022-07-06T16:24:41+02:00</lastmod>

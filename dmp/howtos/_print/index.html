@@ -234,7 +234,7 @@ Version imprimable multipages.
     
     
 	
-<li>2: <a href="#pg-c2f2ade9ada5510eda41ad4f98eefc3b">UniqueIdGenerator</a></li>
+<li>2: <a href="#pg-254923b045df69c3988cd4d88682ddf9">Différents environnements du DMP</a></li>
 
 
     
@@ -242,7 +242,7 @@ Version imprimable multipages.
     
     
 	
-<li>3: <a href="#pg-254923b045df69c3988cd4d88682ddf9">Différents environnements du DMP</a></li>
+<li>3: <a href="#pg-9541efc6c6fadf578bd308752f785e9b">Integrateurs checklist</a></li>
 
 
     
@@ -288,7 +288,26 @@ Version imprimable multipages.
     
     
 	
-<li>6: <a href="#pg-9541efc6c6fadf578bd308752f785e9b">Integrateurs checklist</a></li>
+<li>6: <a href="#pg-5108f66151c5bdb9b3237f215debe81d">Démo Stellair</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>7: <a href="#pg-c2f2ade9ada5510eda41ad4f98eefc3b">UniqueIdGenerator</a></li>
 
 
     
@@ -296,7 +315,7 @@ Version imprimable multipages.
     
     
 	
-<li>7: <a href="#pg-19c3ebeab867e0a03ad82e20cb9db692">CNDA : Fiche d&#39;identité du composant DMP</a></li>
+<li>8: <a href="#pg-19c3ebeab867e0a03ad82e20cb9db692">CNDA : Fiche d&#39;identité du composant DMP</a></li>
 
 
     
@@ -707,85 +726,7 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-c2f2ade9ada5510eda41ad4f98eefc3b">2 - UniqueIdGenerator</h1>
-    <div class="lead">[Alimentation] Génération des UniqueId</div>
-	<p>Afin d&rsquo;être totalement conforme à l’exigence EX_2.1-1130.</p>
-<blockquote>
-<p>Chaque document et lot de document(s) produit par un LPS doit être identifié par un identifiant universel (champ XDS uniqueId au format OID) :</p>
-<ul>
-<li>
-<p>soit le uniqueId est généré à partir d’un UUID (sous la branche OID 2.25), dans ce cas cet OID doit être stocké dans le LPS pour les recherches / remplacements futurs via ce même LPS ;</p>
-</li>
-<li>
-<p>soit le uniqueId est généré à partir d’une racine propre à l’installation du LPS et d’un élément « variable » mais unique vis-à-vis de la racine de l’instance du LPS installée (par exemple horodatage, ou identifiant interne du document dans le LPS) ; il incombe au LPS de pouvoir retrouver ce uniqueId pour les recherches / remplacements futurs via ce même LPS (par exemple en stockant le uniqueId ainsi généré, ou la partie variable uniquement à condition de savoir reconstruire le uniqueId complet).</p>
-</li>
-</ul>
-</blockquote>
-<p>La DMPC-API fournit les deux implémentations demandées dans cette exigence. C&rsquo;est à l&rsquo;intégrateur de la choisir.</p>
-<h2 id="basé-sur-la-source">Basé sur la Source</h2>
-<p>L&rsquo;implémentation par défaut est basée sur les paramètres de la source. Elle est conforme au deuxième point de l&rsquo;exigence :</p>
-<p>La source est définie par les deux paramètres de l&rsquo;<code>application.yml</code> :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">source</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># 1.2.250.1.287 est l&#39;OID de Devcoop</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># 1.2.250.1.287.1 est l&#39;OID correspondant à la DMPC pour Devcoop</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idRoot</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.287.1</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idExtension</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1234567</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>L&rsquo;implémentation ressemble à cela :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">*  * un compteur
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">*  * et le temps en ms
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">*/</span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">Default</span> <span style="color:#204a87;font-weight:bold">implements</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#ce5c00;font-weight:bold">...</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#5c35cc;font-weight:bold">@Override</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">Id</span> <span style="color:#000">generate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">IdBuilder</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">setRoot</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">source</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ToOID</span><span style="color:#ce5c00;font-weight:bold">()).</span><span style="color:#c4a000">setExtension</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">currentTimeMillis</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#4e9a06">&#34;.&#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">cpt</span><span style="color:#ce5c00;font-weight:bold">++)).</span><span style="color:#c4a000">toId</span><span style="color:#ce5c00;font-weight:bold">();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><h2 id="basée-sur-luuid">Basée sur l&rsquo;UUID</h2>
-<p>Il est possible d’utiliser une autre implémentation proposée par la DMPC-API pour utiliser l’OID UUID : &ldquo;2.25&rdquo; . Cette implémentation est conforme à la première méthode de l&rsquo;exigence.</p>
-<p>Il suffit de configurer un bean implémentant <code>UniqueIdGenerator</code>, de la manière suivante:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#5c35cc;font-weight:bold">@Configuration</span>
-</span></span><span style="display:flex;"><span> <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@Bean</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#000">idGenerate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">UniqueIdGenerator</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">WithUuid</span><span style="color:#ce5c00;font-weight:bold">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><h2 id="implémentée-par-lintégrateur">Implémentée par l&rsquo;intégrateur</h2>
-<p>Il est néanmoins possible de générer ses UniqueId, l&rsquo;intégrateur devra donc proposer sa propre implémentation du <code>UniqueIdGenerator</code> et de l&rsquo;ajouter à sa configuration spring .</p>
-<p>Attention : Elle devra être conforme à l&rsquo;une des deux exigences mentionnées ci-dessus.</p>
-<p>Exemple :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Configuration</span>
-</span></span><span style="display:flex;"><span> <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@Bean</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#000">idGenerate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">MyOwnImplementationOfUniqueIdGenerator</span><span style="color:#ce5c00;font-weight:bold">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><p>‌</p>
-<p>‌</p>
-
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-254923b045df69c3988cd4d88682ddf9">3 - Différents environnements du DMP</h1>
+	<h1 id="pg-254923b045df69c3988cd4d88682ddf9">2 - Différents environnements du DMP</h1>
     <div class="lead">Les différents environnements pour accéder au DMP</div>
 	<p>Pour le DMP, Ils existent quatre types d&rsquo;environnements : </p>
 <ul>
@@ -832,6 +773,92 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
 <ul>
 <li>LPS v2 : <a href="https://lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
 <li>Web PS : <a href="https://www.dmp.fr/ps/acces-web/">https://www.dmp.fr/ps/acces-web/</a></li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-9541efc6c6fadf578bd308752f785e9b">3 - Integrateurs checklist</h1>
+    <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.</div>
+	<h2 id="administratif">Administratif</h2>
+<ul>
+<li>
+<p>Obtenir un NIE auprès du CNDA</p>
+</li>
+<li>
+<p>Signer un protocole avec le CNDA : <a href="https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/">https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/</a></p>
+<ul>
+<li>Obtenir les cartes vitales de test DMP</li>
+</ul>
+</li>
+<li>
+<p>Obtenir des cartes CPS de test (médecin, CPE, autre) auprès de l&rsquo;ANS</p>
+</li>
+</ul>
+<h2 id="choix-architecture">Choix Architecture</h2>
+<ul>
+<li>
+<p>Choisir un mode d&rsquo;intégration/ authentification</p>
+<ul>
+<li>les moyens d&rsquo;authentification de l&rsquo;utilisateur doivent permettre l&rsquo;identification unique de l&rsquo;utilissateur</li>
+<li>le PS a-t-il accès à sa carte CPS ?</li>
+<li>Se rappeler que l&rsquo;éditeur agit pour le compte d&rsquo;un établissement de santé (RPPS)</li>
+<li>Un certificat serveur est lié au FINESS géographique de l&rsquo;établissement de santé.</li>
+</ul>
+</li>
+<li>
+<p>Choisir les profils d&rsquo;intégration</p>
+<ul>
+<li>getion administrative de DMP</li>
+<li>alimentation</li>
+<li>consultation</li>
+</ul>
+</li>
+</ul>
+<h2 id="développement--intégration">Développement / Intégration</h2>
+<p>Pour cela  :</p>
+<ul>
+<li><a href="../embedded">mode API java</a></li>
+<li><a href="../rest">mode REST</a></li>
+</ul>
+<h2 id="enregistrement-cnda">Enregistrement CNDA </h2>
+<ul>
+<li>Conditions générales des TLSi AMO v3 (Dès le début du projet)</li>
+<li>Conditions Particulières DMP intégrateurs (Une fois l&rsquo;architecture choisie)</li>
+</ul>
+<h2 id="validation-devcoop">Validation DEVCOOP</h2>
+<ul>
+<li>
+<p>Répondre aux exigences du PDV filtré par DevBox-santé</p>
+</li>
+<li>
+<p>Dérouler le plan de test prehomologation filtrés pour validation DEVCOOP
+==&gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP</p>
+</li>
+</ul>
+<h2 id="processus-dhomologation-cnda">Processus d&rsquo;homologation CNDA</h2>
+<p><a href="https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/">https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/</a></p>
+<ul>
+<li>Fournir le PDV entièrement filtré (tests/déclarations par l’EAI) et complété conjointement sur les déclarations.</li>
+<li>Obtention d&rsquo;un environnement dédié pour le passage d&rsquo;homologation et date de passage</li>
+<li>Passer les tests</li>
+<li>Déposer les résultats</li>
+</ul>
+<h2 id="déploiement">Déploiement</h2>
+<h3 id="gestion-des-certificats">Gestion des certificats</h3>
+<ul>
+<li><a href="/dmp/howtos/gestioncertificat/">Dans le cas d&rsquo;une authentification indirecte pour les établissements</a></li>
 </ul>
 
 </div>
@@ -1032,77 +1059,168 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-9541efc6c6fadf578bd308752f785e9b">6 - Integrateurs checklist</h1>
-    <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.</div>
-	<h2 id="administratif">Administratif</h2>
-<ul>
+	<h1 id="pg-5108f66151c5bdb9b3237f215debe81d">6 - Démo Stellair</h1>
+    <div class="lead">Tester les mécanismes Olaqin TAAS (Terminal As A Service) sur l’environnement de démonstration.</div>
+	<p>Vous avez accès à l’environnement de démonstration de Stellair d’Olaqin : <a href="https://demo.stellair.fr">https://demo.stellair.fr</a> :</p>
+<p><img src="Stellair-accueil-demo.png" alt="Stellair-accueil-demo.png"></p>
+<p>Vous pouvez également accéder avec vos terminaux Olaqin compatible aux APIs REST de la DevBox-Santé.</p>
+<p>Pour celà, un environnement de démonstration a été mis à votre disposition : <a href="https://demo-stellair.devbox-sante.fr">https://demo-stellair.devbox-sante.fr</a></p>
+<h2 id="authentification-et-accès-à-swagger">Authentification et Accès à Swagger</h2>
+<p>Depuis l’environnement de démonstration , vous pouvez obtenir un jeton d’identification :</p>
+<ol>
 <li>
-<p>Obtenir un NIE auprès du CNDA</p>
+<p><strong>Sur la page d’accueil, accéder à la connexion Stellair :</strong>
+<img src="1-devbox-sante-demo-stellair-home.png" alt="1-devbox-sante-demo-stellair-home.png"></p>
 </li>
 <li>
-<p>Signer un protocole avec le CNDA : <a href="https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/">https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/</a></p>
-<ul>
-<li>Obtenir les cartes vitales de test DMP</li>
-</ul>
+<p><strong>Après redirection vers le SSO Stellair, connectez-vous avec vos identifiants</strong>
+<img src="2-stellair-redirection.png" alt="2-stellair-redirection.png"></p>
 </li>
 <li>
-<p>Obtenir des cartes CPS de test (médecin, CPE, autre) auprès de l&rsquo;ANS</p>
+<p><strong>Une fois authentifié, vous pouvez accéder aux APIs rest via SWAGGER :</strong>
+<img src="3-lien-swagger.png" alt="3-lien-swagger.png"></p>
 </li>
+</ol>
+<h2 id="test-dexistence-sur-le-dmp">Test d’existence sur le DMP</h2>
+<ol start="4">
+<li><strong>POST de la requete http pour un test d’existence DMP :</strong>
+<img src="4-POST-td02.png" alt="4-POST-td02.png"></li>
+</ol>
+<p>En curl :</p>
+<pre tabindex="0"><code>curl -X POST &#34;https://demo-stellair.devbox-sante.fr/dmp/td02Exist&#34; -H &#34;accept: */*&#34; -H &#34;Content-Type: application/json&#34; -d &#34;{ \&#34;context\&#34;: { \&#34;author\&#34;: {}, \&#34;insNirAutorite\&#34;: \&#34;TEST\&#34;, \&#34;modeAcces\&#34;: { \&#34;acces\&#34;: \&#34;NORMAL\&#34; } }, \&#34;request\&#34;: { \&#34;ins\&#34;: \&#34;277076322082910\&#34; }}&#34;
+</code></pre><p>Où le corps de la requête est :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;author&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;insNirAutorite&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;TEST&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;modeAcces&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;acces&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;NORMAL&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ins&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;277076322082910&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><ol start="5">
+<li><strong>Et récupérer la réponse :</strong> 
+<img src="5-reponse-POST-td02.png" alt="5-reponse-POST-td02.png">
+La réponse étant :</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;patient&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ins&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;277076322082910&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;insAutorite&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.213.1.4.10&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;nomPatronymique&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;NESSI&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;prenom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;RUTH&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;dateDeNaissance&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;19770714&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ordreDeNaissance&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sexe&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;F&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;role&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;STANDARD&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ACTIF&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;autorisation&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;NON_EXISTE&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;compteInternetOuvert&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Ce workflow permet de mettre en évidence l’accès au différentes fonctionnalités de Terminal As A Service d’Olaqin pour accéder au DMP, c’est à dire :</p>
+<ul>
+<li>La lecture des informationss de la carte CPS</li>
+<li>L’accès au certificat d’authentification de la carte CPS</li>
+<li>L’accès au mécanisme de signature du lecteur combiné à la carte CPS</li>
 </ul>
-<h2 id="choix-architecture">Choix Architecture</h2>
+<p>Pour plus d’informations, sur les transactions du DMP : <a href="/dmp/howtos/transactions">/dmp/howtos/transactions</a></p>
+<p>Il est également possible d’accéder à la lecture de la Carte Vitale et au téléservice INSi</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c2f2ade9ada5510eda41ad4f98eefc3b">7 - UniqueIdGenerator</h1>
+    <div class="lead">[Alimentation] Génération des UniqueId</div>
+	<p>Afin d&rsquo;être totalement conforme à l’exigence EX_2.1-1130.</p>
+<blockquote>
+<p>Chaque document et lot de document(s) produit par un LPS doit être identifié par un identifiant universel (champ XDS uniqueId au format OID) :</p>
 <ul>
 <li>
-<p>Choisir un mode d&rsquo;intégration/ authentification</p>
-<ul>
-<li>les moyens d&rsquo;authentification de l&rsquo;utilisateur doivent permettre l&rsquo;identification unique de l&rsquo;utilissateur</li>
-<li>le PS a-t-il accès à sa carte CPS ?</li>
-<li>Se rappeler que l&rsquo;éditeur agit pour le compte d&rsquo;un établissement de santé (RPPS)</li>
-<li>Un certificat serveur est lié au FINESS géographique de l&rsquo;établissement de santé.</li>
-</ul>
+<p>soit le uniqueId est généré à partir d’un UUID (sous la branche OID 2.25), dans ce cas cet OID doit être stocké dans le LPS pour les recherches / remplacements futurs via ce même LPS ;</p>
 </li>
 <li>
-<p>Choisir les profils d&rsquo;intégration</p>
-<ul>
-<li>getion administrative de DMP</li>
-<li>alimentation</li>
-<li>consultation</li>
-</ul>
+<p>soit le uniqueId est généré à partir d’une racine propre à l’installation du LPS et d’un élément « variable » mais unique vis-à-vis de la racine de l’instance du LPS installée (par exemple horodatage, ou identifiant interne du document dans le LPS) ; il incombe au LPS de pouvoir retrouver ce uniqueId pour les recherches / remplacements futurs via ce même LPS (par exemple en stockant le uniqueId ainsi généré, ou la partie variable uniquement à condition de savoir reconstruire le uniqueId complet).</p>
 </li>
 </ul>
-<h2 id="développement--intégration">Développement / Intégration</h2>
-<p>Pour cela  :</p>
-<ul>
-<li><a href="../embedded">mode API java</a></li>
-<li><a href="../rest">mode REST</a></li>
-</ul>
-<h2 id="enregistrement-cnda">Enregistrement CNDA </h2>
-<ul>
-<li>Conditions générales des TLSi AMO v3 (Dès le début du projet)</li>
-<li>Conditions Particulières DMP intégrateurs (Une fois l&rsquo;architecture choisie)</li>
-</ul>
-<h2 id="validation-devcoop">Validation DEVCOOP</h2>
-<ul>
-<li>
-<p>Répondre aux exigences du PDV filtré par DevBox-santé</p>
-</li>
-<li>
-<p>Dérouler le plan de test prehomologation filtrés pour validation DEVCOOP
-==&gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP</p>
-</li>
-</ul>
-<h2 id="processus-dhomologation-cnda">Processus d&rsquo;homologation CNDA</h2>
-<p><a href="https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/">https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/</a></p>
-<ul>
-<li>Fournir le PDV entièrement filtré (tests/déclarations par l’EAI) et complété conjointement sur les déclarations.</li>
-<li>Obtention d&rsquo;un environnement dédié pour le passage d&rsquo;homologation et date de passage</li>
-<li>Passer les tests</li>
-<li>Déposer les résultats</li>
-</ul>
-<h2 id="déploiement">Déploiement</h2>
-<h3 id="gestion-des-certificats">Gestion des certificats</h3>
-<ul>
-<li><a href="/dmp/howtos/gestioncertificat/">Dans le cas d&rsquo;une authentification indirecte pour les établissements</a></li>
-</ul>
+</blockquote>
+<p>La DMPC-API fournit les deux implémentations demandées dans cette exigence. C&rsquo;est à l&rsquo;intégrateur de la choisir.</p>
+<h2 id="basé-sur-la-source">Basé sur la Source</h2>
+<p>L&rsquo;implémentation par défaut est basée sur les paramètres de la source. Elle est conforme au deuxième point de l&rsquo;exigence :</p>
+<p>La source est définie par les deux paramètres de l&rsquo;<code>application.yml</code> :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">source</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># 1.2.250.1.287 est l&#39;OID de Devcoop</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># 1.2.250.1.287.1 est l&#39;OID correspondant à la DMPC pour Devcoop</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idRoot</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1.2.250.1.287.1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">idExtension</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1234567</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>L&rsquo;implémentation ressemble à cela :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">*  * un compteur
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">*  * et le temps en ms
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">Default</span> <span style="color:#204a87;font-weight:bold">implements</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ce5c00;font-weight:bold">...</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#5c35cc;font-weight:bold">@Override</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">Id</span> <span style="color:#000">generate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">IdBuilder</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">setRoot</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">source</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ToOID</span><span style="color:#ce5c00;font-weight:bold">()).</span><span style="color:#c4a000">setExtension</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">currentTimeMillis</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#4e9a06">&#34;.&#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">cpt</span><span style="color:#ce5c00;font-weight:bold">++)).</span><span style="color:#c4a000">toId</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="basée-sur-luuid">Basée sur l&rsquo;UUID</h2>
+<p>Il est possible d’utiliser une autre implémentation proposée par la DMPC-API pour utiliser l’OID UUID : &ldquo;2.25&rdquo; . Cette implémentation est conforme à la première méthode de l&rsquo;exigence.</p>
+<p>Il suffit de configurer un bean implémentant <code>UniqueIdGenerator</code>, de la manière suivante:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#5c35cc;font-weight:bold">@Configuration</span>
+</span></span><span style="display:flex;"><span> <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@Bean</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#000">idGenerate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">UniqueIdGenerator</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">WithUuid</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="implémentée-par-lintégrateur">Implémentée par l&rsquo;intégrateur</h2>
+<p>Il est néanmoins possible de générer ses UniqueId, l&rsquo;intégrateur devra donc proposer sa propre implémentation du <code>UniqueIdGenerator</code> et de l&rsquo;ajouter à sa configuration spring .</p>
+<p>Attention : Elle devra être conforme à l&rsquo;une des deux exigences mentionnées ci-dessus.</p>
+<p>Exemple :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Configuration</span>
+</span></span><span style="display:flex;"><span> <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyOwnDmpcApiConfiguration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@Bean</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">UniqueIdGenerator</span> <span style="color:#000">idGenerate</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">MyOwnImplementationOfUniqueIdGenerator</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><p>‌</p>
+<p>‌</p>
 
 </div>
 
@@ -1118,7 +1236,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-19c3ebeab867e0a03ad82e20cb9db692">7 - CNDA : Fiche d&#39;identité du composant DMP</h1>
+	<h1 id="pg-19c3ebeab867e0a03ad82e20cb9db692">8 - CNDA : Fiche d&#39;identité du composant DMP</h1>
     
 	<p>NIE DEVCOOP : DEV331918</p>
 <h3 id="homologation-du-27092021">Homologation du 27/09/2021</h3>

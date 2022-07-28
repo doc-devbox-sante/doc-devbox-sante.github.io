@@ -390,80 +390,6 @@ Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exige
     </item>
     
     <item>
-      <title>Dmp: UniqueIdGenerator</title>
-      <link>/dmp/howtos/uniqueidgenerator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/dmp/howtos/uniqueidgenerator/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Afin d&amp;rsquo;être totalement conforme à l’exigence EX_2.1-1130.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Chaque document et lot de document(s) produit par un LPS doit être identifié par un identifiant universel (champ XDS uniqueId au format OID) :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;soit le uniqueId est généré à partir d’un UUID (sous la branche OID 2.25), dans ce cas cet OID doit être stocké dans le LPS pour les recherches / remplacements futurs via ce même LPS ;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;soit le uniqueId est généré à partir d’une racine propre à l’installation du LPS et d’un élément « variable » mais unique vis-à-vis de la racine de l’instance du LPS installée (par exemple horodatage, ou identifiant interne du document dans le LPS) ; il incombe au LPS de pouvoir retrouver ce uniqueId pour les recherches / remplacements futurs via ce même LPS (par exemple en stockant le uniqueId ainsi généré, ou la partie variable uniquement à condition de savoir reconstruire le uniqueId complet).&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;La DMPC-API fournit les deux implémentations demandées dans cette exigence. C&amp;rsquo;est à l&amp;rsquo;intégrateur de la choisir.&lt;/p&gt;
-&lt;h2 id=&#34;basé-sur-la-source&#34;&gt;Basé sur la Source&lt;/h2&gt;
-&lt;p&gt;L&amp;rsquo;implémentation par défaut est basée sur les paramètres de la source. Elle est conforme au deuxième point de l&amp;rsquo;exigence :&lt;/p&gt;
-&lt;p&gt;La source est définie par les deux paramètres de l&amp;rsquo;&lt;code&gt;application.yml&lt;/code&gt; :&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;dmpc&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;   &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;source&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# 1.2.250.1.287 est l&amp;#39;OID de Devcoop&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# 1.2.250.1.287.1 est l&amp;#39;OID correspondant à la DMPC pour Devcoop&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;idRoot&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1.2.250.1.287.1&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;idExtension&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1234567&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;L&amp;rsquo;implémentation ressemble à cela :&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;/**
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;*  * un compteur
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;*  * et le temps en ms
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;*/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Default&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;implements&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UniqueIdGenerator&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Override&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;generate&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;IdBuilder&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setRoot&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;source&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;ToOID&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()).&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setExtension&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;System&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;currentTimeMillis&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;cpt&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;++)).&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;toId&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;basée-sur-luuid&#34;&gt;Basée sur l&amp;rsquo;UUID&lt;/h2&gt;
-&lt;p&gt;Il est possible d’utiliser une autre implémentation proposée par la DMPC-API pour utiliser l’OID UUID : &amp;ldquo;2.25&amp;rdquo; . Cette implémentation est conforme à la première méthode de l&amp;rsquo;exigence.&lt;/p&gt;
-&lt;p&gt;Il suffit de configurer un bean implémentant &lt;code&gt;UniqueIdGenerator&lt;/code&gt;, de la manière suivante:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Configuration&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MyOwnDmpcApiConfiguration&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Bean&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UniqueIdGenerator&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;idGenerate&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UniqueIdGenerator&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;WithUuid&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;implémentée-par-lintégrateur&#34;&gt;Implémentée par l&amp;rsquo;intégrateur&lt;/h2&gt;
-&lt;p&gt;Il est néanmoins possible de générer ses UniqueId, l&amp;rsquo;intégrateur devra donc proposer sa propre implémentation du &lt;code&gt;UniqueIdGenerator&lt;/code&gt; et de l&amp;rsquo;ajouter à sa configuration spring .&lt;/p&gt;
-&lt;p&gt;Attention : Elle devra être conforme à l&amp;rsquo;une des deux exigences mentionnées ci-dessus.&lt;/p&gt;
-&lt;p&gt;Exemple :&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Configuration&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MyOwnDmpcApiConfiguration&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Bean&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UniqueIdGenerator&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;idGenerate&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MyOwnImplementationOfUniqueIdGenerator&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;‌&lt;/p&gt;
-&lt;p&gt;‌&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Dmp: Authentification Indirecte (via certificat serveur)</title>
       <link>/dmp/authentifications/indirecte/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -664,6 +590,88 @@ dbxdmp -&amp;gt; frontend : ok
     </item>
     
     <item>
+      <title>Dmp: Integrateurs checklist</title>
+      <link>/dmp/howtos/integrateurchecklist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/dmp/howtos/integrateurchecklist/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;administratif&#34;&gt;Administratif&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Obtenir un NIE auprès du CNDA&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Signer un protocole avec le CNDA : &lt;a href=&#34;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&#34;&gt;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Obtenir les cartes vitales de test DMP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Obtenir des cartes CPS de test (médecin, CPE, autre) auprès de l&amp;rsquo;ANS&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;choix-architecture&#34;&gt;Choix Architecture&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Choisir un mode d&amp;rsquo;intégration/ authentification&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;les moyens d&amp;rsquo;authentification de l&amp;rsquo;utilisateur doivent permettre l&amp;rsquo;identification unique de l&amp;rsquo;utilissateur&lt;/li&gt;
+&lt;li&gt;le PS a-t-il accès à sa carte CPS ?&lt;/li&gt;
+&lt;li&gt;Se rappeler que l&amp;rsquo;éditeur agit pour le compte d&amp;rsquo;un établissement de santé (RPPS)&lt;/li&gt;
+&lt;li&gt;Un certificat serveur est lié au FINESS géographique de l&amp;rsquo;établissement de santé.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Choisir les profils d&amp;rsquo;intégration&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;getion administrative de DMP&lt;/li&gt;
+&lt;li&gt;alimentation&lt;/li&gt;
+&lt;li&gt;consultation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;développement--intégration&#34;&gt;Développement / Intégration&lt;/h2&gt;
+&lt;p&gt;Pour cela  :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../embedded&#34;&gt;mode API java&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../rest&#34;&gt;mode REST&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;enregistrement-cnda&#34;&gt;Enregistrement CNDA &lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Conditions générales des TLSi AMO v3 (Dès le début du projet)&lt;/li&gt;
+&lt;li&gt;Conditions Particulières DMP intégrateurs (Une fois l&amp;rsquo;architecture choisie)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;validation-devcoop&#34;&gt;Validation DEVCOOP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Répondre aux exigences du PDV filtré par DevBox-santé&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dérouler le plan de test prehomologation filtrés pour validation DEVCOOP
+==&amp;gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;processus-dhomologation-cnda&#34;&gt;Processus d&amp;rsquo;homologation CNDA&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/&#34;&gt;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fournir le PDV entièrement filtré (tests/déclarations par l’EAI) et complété conjointement sur les déclarations.&lt;/li&gt;
+&lt;li&gt;Obtention d&amp;rsquo;un environnement dédié pour le passage d&amp;rsquo;homologation et date de passage&lt;/li&gt;
+&lt;li&gt;Passer les tests&lt;/li&gt;
+&lt;li&gt;Déposer les résultats&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;déploiement&#34;&gt;Déploiement&lt;/h2&gt;
+&lt;h3 id=&#34;gestion-des-certificats&#34;&gt;Gestion des certificats&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/dmp/howtos/gestioncertificat/&#34;&gt;Dans le cas d&amp;rsquo;une authentification indirecte pour les établissements&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Dmp: Authentification Directe via le CPS Agent</title>
       <link>/dmp/authentifications/cps_agent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -729,90 +737,6 @@ dbxdmp -&amp;gt; dmp : [SSL] 4. Client certificate
 dbxdmp -&amp;gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public&amp;#39;s key)
 dbxdmp -&amp;gt; cpsAgent : HTTP POST /cps/sign/for/authentication/SHA256WithRSA body : {handshake data}
 cpsAgent -&amp;gt; dbxdmp : {signed handshake data}
-dbxdmp -&amp;gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
-dbxdmp -&amp;gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
-dmp -&amp;gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)
-== fin de l&amp;#39;initialisation de la connexion ssl avec le DMP ==
-dbxdmp -&amp;gt; dmp : POST SOAP message de soumission (XDS/CDA)
-dmp -&amp;gt; dbxdmp : SOAP response OK
-dbxdmp -&amp;gt; backend : HTTP 200 Ok
-backend -&amp;gt; frontend : ok
-&lt;/code&gt;&lt;/pre&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Dmp: Authentification Directe via OLAQIN TAAS (Terminal As A Service)</title>
-      <link>/dmp/authentifications/olaqin_taas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/dmp/authentifications/olaqin_taas/</guid>
-      <description>
-        
-        
-        &lt;p&gt;OLAQIN TAAS (Terminal As A Service) est une technologie développée par la société OLAQIN qui permet aux APIs de la DevBox-Santé DMP d&amp;rsquo;accéder à des terminaux OLAQIN via le réseau Internet.&lt;/p&gt;
-&lt;p&gt;Les terminaux OLAQIN compatibles avec la technologie OLAQIN TAAS fournit des accès aux cartes Vitale et CPS au travers d’API.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;OLAQIN_TAAS_architecture.png&#34; alt=&#34;OLAQIN_TAAS architecture&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Pour l’accès aux cartes Vitale, Olaqin s’appuie sur son homologation « Lecture Vitale » (via l’option API). Pour l’accès aux cartes des Professionnels de Santé, Olaqin s’appuie sur les développements réalisés dans le cadre de son homologation « Dispositif Intégré ».&lt;/p&gt;
-&lt;h2 id=&#34;intégration-dans-la-devbox-santé&#34;&gt;Intégration dans la DevBox-santé&lt;/h2&gt;
-&lt;p&gt;Vous pouvez donc installer votre solution DevBox-santé DMP dans votre environnement serveur HDS et utiliser les terminaux Olaqin.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/4/themes/theme-devbox-sante.puml
-node &amp;#34;Environnement Utilisateur&amp;#34; {
-    package &amp;#34;Poste client / mobile&amp;#34; {
-        [FrontEnd intégrateur] as frontend
-    }
-    [Lecteur Neo] as lecteur
-}
-
-node &amp;#34;Environnement intégrateur HDS&amp;#34; {
-    [BackEnd intégrateur] as backend
-    package &amp;#34;DevBox-Santé Proxy REST&amp;#34;  DEVBOX_COLOR {
-        component &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade #35D9C0 {
-            [DevBox-sante CPS security Stellair] as cpsStellair #D34A3C
-        }
-    }
-}
-cloud &amp;#34;**Stellair** API&amp;#34; as stellair
-cloud &amp;#34;**DMP**&amp;#34; as DMP
-
-frontend -up-&amp;gt; backend : REST
-backend -&amp;gt; dmpFacade : REST
-cpsStellair -&amp;gt; stellair: REST
-stellair &amp;lt;-&amp;gt; lecteur : Demande d&amp;#39;autorisation d&amp;#39;accès aux cartes via le SSO Stellair
-dmpFacade -&amp;gt; DMP : SOAP
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;diagramme-de-séquences&#34;&gt;Diagramme de séquences&lt;/h4&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
-box &amp;#34;Environnement utilisateur&amp;#34;
-    participant &amp;#34;Poste client&amp;#34; as frontend
-    participant &amp;#34;Lecteur Neo&amp;#34; as lecteur
-end box
-
-box &amp;#34;Environnement intégrateur&amp;#34; #white
-participant backend
-participant &amp;#34;DevBox-Santé DMP&amp;#34; as dbxdmp DMP_COLOR
-end box
-participant &amp;#34;**DMP**&amp;#34; as dmp
-participant &amp;#34;**Stellair**&amp;#34; as stellair
-
-
-frontend -&amp;gt; backend : storeDocumentPatient
-backend -&amp;gt; dbxdmp : /dmp/td21SubmitDocuments
-==  initialisation d&amp;#39;une connexion SSL en authentification mutuelle avec le DMP ==
-dbxdmp -&amp;gt; &amp;#34;DMP&amp;#34; as dmp : [SSL] 1. Client Hello
-dmp -&amp;gt; dbxdmp : [SSL] 2. Server Hello (certificat du DMP server inclus)
-dmp -&amp;gt; dbxdmp : [SSL] 3. Client certificate request
-dbxdmp -&amp;gt; stellair : HTTP GET /cps/certificate/auth
-...
-stellair &amp;lt;-&amp;gt; lecteur
-...
-stellair -&amp;gt; dbxdmp : {certificate authentification}
-dbxdmp -&amp;gt; dmp : [SSL] 4. Client certificate
-dbxdmp -&amp;gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public&amp;#39;s key)
-dbxdmp -&amp;gt; stellair : HTTP POST /cps/certificate/auth body : {handshake data}
-...
-stellair &amp;lt;-&amp;gt; lecteur
-...
-stellair -&amp;gt; dbxdmp : {signed handshake data}
 dbxdmp -&amp;gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
 dbxdmp -&amp;gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
 dmp -&amp;gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)
@@ -1120,83 +1044,75 @@ backend -&amp;gt; frontend : ok
     </item>
     
     <item>
-      <title>Dmp: Integrateurs checklist</title>
-      <link>/dmp/howtos/integrateurchecklist/</link>
+      <title>Dmp: UniqueIdGenerator</title>
+      <link>/dmp/howtos/uniqueidgenerator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/integrateurchecklist/</guid>
+      <guid>/dmp/howtos/uniqueidgenerator/</guid>
       <description>
         
         
-        &lt;h2 id=&#34;administratif&#34;&gt;Administratif&lt;/h2&gt;
+        &lt;p&gt;Afin d&amp;rsquo;être totalement conforme à l’exigence EX_2.1-1130.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Chaque document et lot de document(s) produit par un LPS doit être identifié par un identifiant universel (champ XDS uniqueId au format OID) :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Obtenir un NIE auprès du CNDA&lt;/p&gt;
+&lt;p&gt;soit le uniqueId est généré à partir d’un UUID (sous la branche OID 2.25), dans ce cas cet OID doit être stocké dans le LPS pour les recherches / remplacements futurs via ce même LPS ;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Signer un protocole avec le CNDA : &lt;a href=&#34;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&#34;&gt;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Obtenir les cartes vitales de test DMP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Obtenir des cartes CPS de test (médecin, CPE, autre) auprès de l&amp;rsquo;ANS&lt;/p&gt;
+&lt;p&gt;soit le uniqueId est généré à partir d’une racine propre à l’installation du LPS et d’un élément « variable » mais unique vis-à-vis de la racine de l’instance du LPS installée (par exemple horodatage, ou identifiant interne du document dans le LPS) ; il incombe au LPS de pouvoir retrouver ce uniqueId pour les recherches / remplacements futurs via ce même LPS (par exemple en stockant le uniqueId ainsi généré, ou la partie variable uniquement à condition de savoir reconstruire le uniqueId complet).&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;choix-architecture&#34;&gt;Choix Architecture&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Choisir un mode d&amp;rsquo;intégration/ authentification&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;les moyens d&amp;rsquo;authentification de l&amp;rsquo;utilisateur doivent permettre l&amp;rsquo;identification unique de l&amp;rsquo;utilissateur&lt;/li&gt;
-&lt;li&gt;le PS a-t-il accès à sa carte CPS ?&lt;/li&gt;
-&lt;li&gt;Se rappeler que l&amp;rsquo;éditeur agit pour le compte d&amp;rsquo;un établissement de santé (RPPS)&lt;/li&gt;
-&lt;li&gt;Un certificat serveur est lié au FINESS géographique de l&amp;rsquo;établissement de santé.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Choisir les profils d&amp;rsquo;intégration&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;getion administrative de DMP&lt;/li&gt;
-&lt;li&gt;alimentation&lt;/li&gt;
-&lt;li&gt;consultation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;développement--intégration&#34;&gt;Développement / Intégration&lt;/h2&gt;
-&lt;p&gt;Pour cela  :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../embedded&#34;&gt;mode API java&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../rest&#34;&gt;mode REST&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;enregistrement-cnda&#34;&gt;Enregistrement CNDA &lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Conditions générales des TLSi AMO v3 (Dès le début du projet)&lt;/li&gt;
-&lt;li&gt;Conditions Particulières DMP intégrateurs (Une fois l&amp;rsquo;architecture choisie)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;validation-devcoop&#34;&gt;Validation DEVCOOP&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Répondre aux exigences du PDV filtré par DevBox-santé&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Dérouler le plan de test prehomologation filtrés pour validation DEVCOOP
-==&amp;gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;processus-dhomologation-cnda&#34;&gt;Processus d&amp;rsquo;homologation CNDA&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/&#34;&gt;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Fournir le PDV entièrement filtré (tests/déclarations par l’EAI) et complété conjointement sur les déclarations.&lt;/li&gt;
-&lt;li&gt;Obtention d&amp;rsquo;un environnement dédié pour le passage d&amp;rsquo;homologation et date de passage&lt;/li&gt;
-&lt;li&gt;Passer les tests&lt;/li&gt;
-&lt;li&gt;Déposer les résultats&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;déploiement&#34;&gt;Déploiement&lt;/h2&gt;
-&lt;h3 id=&#34;gestion-des-certificats&#34;&gt;Gestion des certificats&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/dmp/howtos/gestioncertificat/&#34;&gt;Dans le cas d&amp;rsquo;une authentification indirecte pour les établissements&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;La DMPC-API fournit les deux implémentations demandées dans cette exigence. C&amp;rsquo;est à l&amp;rsquo;intégrateur de la choisir.&lt;/p&gt;
+&lt;h2 id=&#34;basé-sur-la-source&#34;&gt;Basé sur la Source&lt;/h2&gt;
+&lt;p&gt;L&amp;rsquo;implémentation par défaut est basée sur les paramètres de la source. Elle est conforme au deuxième point de l&amp;rsquo;exigence :&lt;/p&gt;
+&lt;p&gt;La source est définie par les deux paramètres de l&amp;rsquo;&lt;code&gt;application.yml&lt;/code&gt; :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;dmpc&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;   &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;source&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# 1.2.250.1.287 est l&amp;#39;OID de Devcoop&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# 1.2.250.1.287.1 est l&amp;#39;OID correspondant à la DMPC pour Devcoop&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;idRoot&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1.2.250.1.287.1&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;idExtension&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1234567&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;L&amp;rsquo;implémentation ressemble à cela :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;* Implémentation par défaut basé sur les informations du logiciel @see fr.devboxsante.dmp.core.Source
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;*  * un compteur
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;*  * et le temps en ms
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;*/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Default&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;implements&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UniqueIdGenerator&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Id&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;generate&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;IdBuilder&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setRoot&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;source&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;ToOID&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()).&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setExtension&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;System&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;currentTimeMillis&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;cpt&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;++)).&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;toId&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;basée-sur-luuid&#34;&gt;Basée sur l&amp;rsquo;UUID&lt;/h2&gt;
+&lt;p&gt;Il est possible d’utiliser une autre implémentation proposée par la DMPC-API pour utiliser l’OID UUID : &amp;ldquo;2.25&amp;rdquo; . Cette implémentation est conforme à la première méthode de l&amp;rsquo;exigence.&lt;/p&gt;
+&lt;p&gt;Il suffit de configurer un bean implémentant &lt;code&gt;UniqueIdGenerator&lt;/code&gt;, de la manière suivante:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Configuration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MyOwnDmpcApiConfiguration&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Bean&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UniqueIdGenerator&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;idGenerate&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UniqueIdGenerator&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;WithUuid&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;implémentée-par-lintégrateur&#34;&gt;Implémentée par l&amp;rsquo;intégrateur&lt;/h2&gt;
+&lt;p&gt;Il est néanmoins possible de générer ses UniqueId, l&amp;rsquo;intégrateur devra donc proposer sa propre implémentation du &lt;code&gt;UniqueIdGenerator&lt;/code&gt; et de l&amp;rsquo;ajouter à sa configuration spring .&lt;/p&gt;
+&lt;p&gt;Attention : Elle devra être conforme à l&amp;rsquo;une des deux exigences mentionnées ci-dessus.&lt;/p&gt;
+&lt;p&gt;Exemple :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Configuration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MyOwnDmpcApiConfiguration&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Bean&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UniqueIdGenerator&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;idGenerate&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MyOwnImplementationOfUniqueIdGenerator&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;‌&lt;/p&gt;
+&lt;p&gt;‌&lt;/p&gt;
 
       </description>
     </item>

@@ -655,20 +655,7 @@ Le formulaire peut être télécharger depuis le site : &lt;a href=&#34;https://
       <description>
         
         
-        &lt;h3 id=&#34;utilisation-des-outils-disponibles-sur-le-site-esantegouvfr&#34;&gt;Utilisation des outils disponibles sur le site esante.gouv.fr&lt;/h3&gt;
-&lt;p&gt;Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit sur le site esante.gouv.fr : 
-&lt;a href=&#34;https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda&#34;&gt;https://esante.gouv.fr/annexe-outil-de-verification-des-documents-cda&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;La version lors de la rédaction : &lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/testContenuCDA_20200609_V2.25.zip&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Une fois téléchargé, il faut sur un poste windows :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;décompresser l&amp;rsquo;archive.&lt;/li&gt;
-&lt;li&gt;naviguer jusqu&amp;rsquo;à &lt;code&gt;testContenuCDA_20200609_V2.25\schematrons\moteur\gui&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;lancer l&amp;rsquo;exécution de &lt;code&gt;TCC-GUI.exe&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;copier le fichier cda à valider à la racine du &lt;code&gt;testContenuCDA_20200609_V2.25&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;cliquer sur générer le rapport :&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;schematronRapport.png&#34; alt=&#34;Rapport Schematron CDA&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;utilisation-de-lespace-de-tests-de-lans&#34;&gt;Utilisation de l&amp;rsquo;espace de tests de l&amp;rsquo;ANS&lt;/h3&gt;
+        &lt;h3 id=&#34;utilisation-de-lespace-de-tests-de-lans&#34;&gt;Utilisation de l&amp;rsquo;espace de tests de l&amp;rsquo;ANS&lt;/h3&gt;
 &lt;p&gt;Sur le site &lt;a href=&#34;https://interop.esante.gouv.fr&#34;&gt;interop.esante.gouv.fr&lt;/a&gt; ou plus exactement &lt;a href=&#34;https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;amp;extension=ASIP&#34;&gt;https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;amp;extension=ASIP&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Une fois sur le site :&lt;/p&gt;
 &lt;ul&gt;
@@ -678,6 +665,9 @@ Le formulaire peut être télécharger depuis le site : &lt;a href=&#34;https://
 &lt;li&gt;Cliquer sur valider
 &lt;img src=&#34;External_Validation_Service_Front-end_2.png&#34; alt=&#34;External Validation Service Front-end_1&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;utilisation-des-outils-mis-à-disposition-par-lans&#34;&gt;Utilisation des outils mis à disposition par l&amp;rsquo;ANS&lt;/h3&gt;
+&lt;p&gt;Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit par l&amp;rsquo;ANS. Ils sont dorénavant héberger sur Github : &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA&#34;&gt;https://github.com/ansforge/TestContenuCDA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;La documentation se trouve ici : &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA/wiki&#34;&gt;https://github.com/ansforge/TestContenuCDA/wiki&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>

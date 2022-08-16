@@ -464,7 +464,7 @@ DMPC_API -d-&amp;gt; DMP : SOAP XDS / CDA
 &lt;h2 id=&#34;environnement-de-développement&#34;&gt;Environnement de développement&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Accessible à tous les utilisateurs l&amp;rsquo;url LPS v2 : &lt;a href=&#34;https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Pas d&amp;rsquo;environnement Web PS et Patient.&lt;/li&gt;
+&lt;li&gt;Environnement Web PS et Patient : &lt;a href=&#34;https://dev1.ps.dmp.gouv.fr/ps/acces-web&#34;&gt;https://dev1.ps.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;environnement-dhomologation&#34;&gt;Environnement d&amp;rsquo;Homologation&lt;/h2&gt;
 &lt;p&gt;C&amp;rsquo;est un environnement spécifique à l&amp;rsquo;éditeur qui passe son homologation. Le CNDA donne les informations pour y accéder lors de la phase d&amp;rsquo;homologation de l&amp;rsquo;éditeur&lt;/p&gt;

@@ -245,7 +245,7 @@ Eureka est l&rsquo;annuaire des devbox-santé branchés sur les différents lect
 <p>Chaque session utilisateur devait être associé à une DevBox-Santé sur un port http spécifique.</p>
 <h2 id="eureka-service">Eureka service</h2>
 <p>C&rsquo;est pourquoi un service dédié, nommé Eureka peut être lancé sur le serveur RDP. Ce service Eureka joue le rôle d&rsquo;annuaire des différentes sessions utilisateurs devbox-santé :</p>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 
 node &#34;Serveur RDP&#34; {
   package &#34;Eureka&#34; as eureka {
@@ -269,7 +269,7 @@ devbox2 -- usb2 : mapping port USB
 </code></pre><p>Ainsi, il suffit à l&rsquo;application intégrateur de faire un appel à eureka pour connaître le numéro de port http d&rsquo;écoute qui lui est spécifique.</p>
 <h2 id="diagrammes-de-séquence">Diagrammes de séquence</h2>
 <p>Du point de vue de l&rsquo;intégrateur</p>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 hide footbox
 actor Utilisateur1 
 box &#34;Serveur RDP&#34;
@@ -308,7 +308,7 @@ group Démarrage application intégrateur (cas de l&#39;application web)
 end
 ...
 </code></pre><p>Ces diagrammes paraissent un peu magiques pour l&rsquo;intégrateur. C&rsquo;est pourquoi, voici un diagramme de séquence détaillant ce qui se passe dans les coulisses de la DevBox-santé, afin de faire le lien entre Utilisateur windows, session web utilisateur et port http des DevBox-Santé :</p>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 hide footbox
 actor Utilisateur1 
 box &#34;Serveur RDP&#34;

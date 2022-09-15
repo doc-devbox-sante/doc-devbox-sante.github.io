@@ -701,7 +701,7 @@ Elle informe sur l&rsquo;origine des différentes discordances, leurs fréquence
 	<p>Lors d&rsquo;une session RDP / Citrix, il est possible qu&rsquo;un executable installé puisse accéder aux différents ports USB d&rsquo;un poste client. Pour celà, il faut réaliser un mapping des ports USB (<a href="https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop">https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop</a>, par exemple)</p>
 <p>La DevBox-santé lancée dans un environnement Citrix/Windows RDP est accessible sur un numéro de port TCP commun à l&rsquo;ensemble des sessions utilisateurs de ce serveur RDP.</p>
 <p>Dans un environnement Citrix/RDP, il est donc important qu&rsquo;une et une seule DevBox-santé soit lancée par poste utilisateur sur un numéro de port TCP différent, afin de faire le lien entre les lecteur branchés sur les ports USB du poste client et le port TCP utilisé :</p>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 
 node &#34;Serveur RDP&#34; {
  package &#34;Session Utilisateur 1&#34; {

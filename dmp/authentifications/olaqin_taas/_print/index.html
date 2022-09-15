@@ -237,7 +237,7 @@ Version imprimable multipages.
 <p>Pour l’accès aux cartes Vitale, Olaqin s’appuie sur son homologation « Lecture Vitale » (via l’option API). Pour l’accès aux cartes des Professionnels de Santé, Olaqin s’appuie sur les développements réalisés dans le cadre de son homologation « Dispositif Intégré ».</p>
 <h2 id="intégration-dans-la-devbox-santé">Intégration dans la DevBox-santé</h2>
 <p>Vous pouvez donc installer votre solution DevBox-santé DMP dans votre environnement serveur HDS et utiliser les terminaux Olaqin.</p>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/4/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 node &#34;Environnement Utilisateur&#34; {
     package &#34;Poste client / mobile&#34; {
         [FrontEnd intégrateur] as frontend
@@ -262,7 +262,7 @@ cpsStellair -&gt; stellair: REST
 stellair &lt;-&gt; lecteur : Demande d&#39;autorisation d&#39;accès aux cartes via le SSO Stellair
 dmpFacade -&gt; DMP : SOAP
 </code></pre><h4 id="diagramme-de-séquences">Diagramme de séquences</h4>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 box &#34;Environnement utilisateur&#34;
     participant &#34;Poste client&#34; as frontend
     participant &#34;Lecteur Neo&#34; as lecteur

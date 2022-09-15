@@ -232,7 +232,7 @@ Version imprimable multipages.
 
 <div class="content">
       <h2 id="architecture-interne-des-différents-composants">Architecture interne des différents composants</h2>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 package &#34;DevBox-santé DMP&#34; {
     [dmp-proxy-xxx] 
     [dmp-cda]
@@ -286,7 +286,7 @@ node &#34;DMP&#34;
 <p>La sécurité est configurée via les mécanismes d&rsquo;injection de Spring.</p>
 <h4 id="securité-via-la-cps">Securité via la CPS</h4>
 <h5 id="diagramme-de-composants">Diagramme de composants</h5>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 package &#34;DevBox-santé DMP&#34; {
     [dmp-security-cps] 
     [cps-facade]
@@ -298,7 +298,7 @@ interface &#34;Cryptolib cps&#34; as cryptolib
 [cps-facade] - cryptolib
 </code></pre><h5 id="diagramme-de-classes">Diagramme de classes</h5>
 <p>Les différentes classes en charge de la sécurité dans le mode CPS :</p>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 
 interface CpsOperationProviderSpi
 
@@ -317,7 +317,7 @@ CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
 La <code>CpsConfiguration</code> permet d&rsquo;initialiser la <code>CxfEndPointFactory</code> qui a pour responsabilité la gestion des accès au services du DMP.</p>
 <h4 id="securité-via-les-certificats-p12">Securité via les certificats P12</h4>
 <h5 id="diagramme-de-composants-1">Diagramme de composants</h5>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 package &#34;DevBox-santé DMP&#34; {
     [dmp-core] 
 }
@@ -326,7 +326,7 @@ interface fichier.p12
 [dmp-core] - fichier.p12 : load
 </code></pre><h5 id="diagramme-de-classes-1">Diagramme de classes</h5>
 <p>Les différentes classes en charge de la sécurité dans le mode CPS :</p>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 
 
 P12Configuration - P12KeyManager : AuthenticationKeyManager
@@ -341,7 +341,7 @@ CxfEndPointFactory : setTLS(...)  // gestion du canal TLS
 La <code>P12Configuration</code> permet d&rsquo;initialiser la <code>CxfEndPointFactory</code> qui a pour responsabilité la gestion des accès au services du DMP.</p>
 <h4 id="securité-via-le-cpsagent">Securité via le CPSAgent</h4>
 <h5 id="diagramme-de-composants-2">Diagramme de composants</h5>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 package &#34;DevBox-santé DMP&#34; {
     [dmp-security-cps-with-agent] 
     [cps-agent-client]
@@ -353,7 +353,7 @@ interface CpsProxy
 [cps-agent-client] - CpsProxy : transaction sur internet 
 </code></pre><h5 id="diagramme-de-classes-2">Diagramme de classes</h5>
 <p>Les différentes classes en charge de la sécurité dans le mode CPS :</p>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/3/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 
 interface CpsOperationProviderSpi
 

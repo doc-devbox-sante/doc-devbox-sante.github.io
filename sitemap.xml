@@ -12,7 +12,7 @@
     <lastmod>2022-07-18T09:50:15+02:00</lastmod>
   </url><url>
     <loc>/dmp/embedded/</loc>
-    <lastmod>2022-07-18T09:43:50+02:00</lastmod>
+    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/insi/embedded/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
@@ -30,10 +30,10 @@
     <lastmod>2022-03-16T11:35:55+01:00</lastmod>
   </url><url>
     <loc>/insi/rest/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/dmp/soap/</loc>
-    <lastmod>2022-07-28T15:16:48+02:00</lastmod>
+    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/ms-sante/</loc>
     <lastmod>2022-03-16T11:35:55+01:00</lastmod>
@@ -42,7 +42,7 @@
     <lastmod>2022-06-29T20:00:59+02:00</lastmod>
   </url><url>
     <loc>/dmp/authentifications/indirecte/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/dmp/howtos/environnements/</loc>
     <lastmod>2022-08-16T11:28:04+02:00</lastmod>
@@ -51,16 +51,16 @@
     <lastmod>2022-07-27T14:20:00+02:00</lastmod>
   </url><url>
     <loc>/cps/</loc>
-    <lastmod>2022-03-16T11:35:55+01:00</lastmod>
+    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/dmp/authentifications/directe/</loc>
-    <lastmod>2022-06-28T15:32:59+02:00</lastmod>
+    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/dmp/howtos/integrateurchecklist/</loc>
     <lastmod>2022-07-28T12:13:18+02:00</lastmod>
   </url><url>
     <loc>/vitale/</loc>
-    <lastmod>2022-03-16T11:35:55+01:00</lastmod>
+    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/annuaire/</loc>
     <lastmod>2022-06-28T15:32:59+02:00</lastmod>
@@ -69,7 +69,7 @@
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
   </url><url>
     <loc>/dmp/authentifications/cps_agent/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/blog/articles/</loc>
     <lastmod>2021-05-12T18:55:36+02:00</lastmod>
@@ -78,7 +78,7 @@
     <lastmod>2022-03-01T19:06:42+01:00</lastmod>
   </url><url>
     <loc>/dmp/authentifications/olaqin_taas/</loc>
-    <lastmod>2022-07-28T12:13:18+02:00</lastmod>
+    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/dmp/cda/structurationminimale/</loc>
     <lastmod>2022-03-18T16:02:23+01:00</lastmod>
@@ -111,13 +111,13 @@
     <lastmod>2022-08-10T11:49:09+02:00</lastmod>
   </url><url>
     <loc>/dmp/architecture/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/blog/2022/04/08/glossaire/</loc>
     <lastmod>2022-04-20T15:58:13+02:00</lastmod>
   </url><url>
     <loc>/installer/eureka/</loc>
-    <lastmod>2022-02-09T17:21:45+01:00</lastmod>
+    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/installer/contenu/</loc>
     <lastmod>2022-05-20T18:24:00+02:00</lastmod>
@@ -150,7 +150,7 @@
     <lastmod>2022-07-27T14:52:03+02:00</lastmod>
   </url><url>
     <loc>/ms-sante/versions/</loc>
-    <lastmod>2022-06-07T12:55:03+02:00</lastmod>
+    <lastmod>2022-09-15T17:52:32+02:00</lastmod>
   </url><url>
     <loc>/vitale/versions/</loc>
     <lastmod>2022-07-27T14:32:02+02:00</lastmod>
@@ -231,7 +231,7 @@
     <lastmod>2022-02-09T17:21:45+01:00</lastmod>
   </url><url>
     <loc>/blog/2021/09/20/devbox-sant%C3%A9-dans-un-environnement-rdp/citrix/</loc>
-    <lastmod>2021-11-15T10:01:10+01:00</lastmod>
+    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/installer/versions/20210712_versions_courantes/</loc>
     <lastmod>2022-02-09T17:21:45+01:00</lastmod>

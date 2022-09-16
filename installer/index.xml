@@ -14,6 +14,35 @@
     
     
     <item>
+      <title>Installer: [16/09/2022] 2.18</title>
+      <link>/installer/versions/20220916_versions_courantes/</link>
+      <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/installer/versions/20220916_versions_courantes/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Les versions actuelles de nos composants dans nos installers sont :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Installer&lt;/code&gt; : &lt;strong&gt;2.17&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.7.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;4.7.12&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.6.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Installer: [11/07/2022] 2.17</title>
       <link>/installer/versions/20220711_versions_courantes/</link>
       <pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate>

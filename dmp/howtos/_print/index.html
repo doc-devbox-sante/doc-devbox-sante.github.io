@@ -898,11 +898,12 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
     <div class="lead">Les différents points à connaître le jour de l&rsquo;homologation</div>
 	<h3 id="interpréter-les-logs">Interpréter les logs</h3>
 <p>Dans la totalité des tests il vous sera demandé de fournir &ldquo;les requête/réponse de l&rsquo;appel au service&rdquo;</p>
-<p>Pour celà, il faut s&rsquo;assurer que la configuration <code>application.yml</code> de votre installation (par exemple <code>C:\Program Files\DevBoxSante\application.yml</code> dans le cas d’une installation poste client sous windows), contient bien les lignes suivantes : </p>
+<p>Pour celà, il faut s&rsquo;assurer que la configuration <code>application.yml</code> de votre installation (par exemple <code>C:\Program Files\DevBoxSante\application.yml</code> dans le cas d’une installation poste client sous windows), ne contient pas les lignes suivantes : </p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">logging</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">level</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">fr.devboxsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;debug&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>Une fois lancé dans le fichier <code>output.log</code> :</p>
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">org.apache.cxf</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;warn&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>Remarque : cette configuration est à ajouter pour un accès en production.</p>
+<p>Une fois lancé dans le fichier <code>output.log</code> :</p>
 <pre tabindex="0"><code>  ____             ____                                 _            
  |  _ \  _____   _| __ )  _____  __     ___  __ _ _ __ | |_ ___ 
  | | | |/ _ \ \ / /  _ \ / _ \ \/ /____/ __|/ _` | &#39;_ \| __/ _ \

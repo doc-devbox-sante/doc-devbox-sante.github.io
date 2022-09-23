@@ -21,8 +21,35 @@
       <description>
         
         
-        &lt;p&gt;Contient tous les noms et accronymes barbares dans le domaine de la santé&lt;/p&gt;
+        &lt;p&gt;Contient tous les noms et accronymes barbares dans le domaine de l’informatique de santé&lt;/p&gt;
 &lt;dl&gt;
+&lt;dt&gt;AC&lt;/dt&gt;
+&lt;dd&gt;Autorité de Certification&lt;/dd&gt;
+&lt;dt&gt;ADELI&lt;/dt&gt;
+&lt;dd&gt;Automatisation des Listes
+(répertoires de professionnels de santé en cours de remplacement par le RPPS)&lt;/dd&gt;
+&lt;dt&gt;AE&lt;/dt&gt;
+&lt;dd&gt;Autorité d’Enregistrement&lt;/dd&gt;
+&lt;dt&gt;AF&lt;/dt&gt;
+&lt;dd&gt;Appel à Financement / Document d’Appel à Financement&lt;/dd&gt;
+&lt;dt&gt;Annuaire Santé&lt;/dt&gt;
+&lt;dd&gt;L&amp;rsquo;Annuaire Santé recense les professionnels de santé enregistrés dans les répertoires nationaux RPPS et ADELI et leurs situations d&amp;rsquo;exercice.
+Ces données proviennent des autorités chargées de leur enregistrement (ordres professionnels, ARS, service de santé des armées)&lt;/dd&gt;
+&lt;dt&gt;ANS&lt;/dt&gt;
+&lt;dd&gt;Agence du Numérique en Santé&lt;/dd&gt;
+&lt;dt&gt;ANSSI&lt;/dt&gt;
+&lt;dd&gt;Agence Nationale pour la Sécurité des Systèmes d’Information&lt;/dd&gt;
+&lt;dt&gt;ARS&lt;/dt&gt;
+&lt;dd&gt;Agence Régionale de Santé&lt;/dd&gt;
+&lt;dt&gt;BAL&lt;/dt&gt;
+&lt;dd&gt;Boîte Aux Lettres&lt;/dd&gt;
+&lt;dt&gt;BAL personnelle&lt;/dt&gt;
+&lt;dd&gt;Boîte Aux Lettres nominatives, rattachée dans l’annuaire santé à une personne physique. Elle est réservée à l’usage d’un professionnel habilité ou d’un usager.&lt;/dd&gt;
+&lt;dt&gt;BAL organisationnelle&lt;/dt&gt;
+&lt;dd&gt;Boîte Aux Lettres dont l’accès est possible pour un ensemble de professionnels habilités. Elle est rattachée dans l’annuaire santé à une personne morale.&lt;/dd&gt;
+&lt;dt&gt;BAL applicative&lt;/dt&gt;
+&lt;dd&gt;Boîte Aux Lettres accédée par un logiciel métier ou à une machine.
+Elle est rattachée dans l’annuaire santé à une personne morale.&lt;/dd&gt;
 &lt;dt&gt;CDA (CDAR2)&lt;/dt&gt;
 &lt;dd&gt;Clinical Document Architecture (&lt;a href=&#34;http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7&#34;&gt;http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7&lt;/a&gt;)&lt;/dd&gt;
 &lt;dt&gt;CDAR2 Niveau1&lt;/dt&gt;
@@ -31,20 +58,170 @@
 &lt;dd&gt;architectecture dédiée aux documents cliniques dont le corps du document est structuré comme le CR-BIO (&lt;a href=&#34;https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda&#34;&gt;https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda&lt;/a&gt;)&lt;/dd&gt;
 &lt;dt&gt;CI-SIS&lt;/dt&gt;
 &lt;dd&gt;Cadre d’Intéropérabilité des Système d’Information de Santé (&lt;a href=&#34;https://esante.gouv.fr/produits-services/ci-sis&#34;&gt;https://esante.gouv.fr/produits-services/ci-sis&lt;/a&gt;)&lt;/dd&gt;
+&lt;dt&gt;CGU&lt;/dt&gt;
+&lt;dd&gt;Conditions Générales d’Utilisation&lt;/dd&gt;
+&lt;dt&gt;CNAM&lt;/dt&gt;
+&lt;dd&gt;Caisse Nationale d’Assurance Maladie&lt;/dd&gt;
+&lt;dt&gt;CNDA&lt;/dt&gt;
+&lt;dd&gt;Centre National de Dépôt et d’Agrément
+(organisme autorisant les logiciels à échanger des données de santé)&lt;/dd&gt;
+&lt;dt&gt;CNIL&lt;/dt&gt;
+&lt;dd&gt;Commission Nationale de l’Informatique et des Libertés&lt;/dd&gt;
+&lt;dt&gt;CNOP&lt;/dt&gt;
+&lt;dd&gt;Conseil National de l’Ordre des Pharmaciens&lt;/dd&gt;
 &lt;dt&gt;Convergence&lt;/dt&gt;
 &lt;dd&gt;Plateforme nationale d&amp;rsquo;accompagnement de la convergence vers la cible d&amp;rsquo;urbanisation sectorielle du virage numérique (&lt;a href=&#34;https://convergence.esante.gouv.fr&#34;&gt;https://convergence.esante.gouv.fr&lt;/a&gt;)&lt;/dd&gt;
+&lt;dt&gt;CPS/ CPx&lt;/dt&gt;
+&lt;dd&gt;Carte de Professionnel de Santé&lt;/dd&gt;
+&lt;dt&gt;CRL&lt;/dt&gt;
+&lt;dd&gt;Certificate Revocation List&lt;/dd&gt;
+&lt;dt&gt;DGOS&lt;/dt&gt;
+&lt;dd&gt;Direction Générale de l’Offre de Soins&lt;/dd&gt;
+&lt;dt&gt;DGS&lt;/dt&gt;
+&lt;dd&gt;Direction Générale de Santé&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;DSR
+: Dossier des Spécifications de Référencement
+(publié par l’ANS)&lt;/p&gt;
+&lt;dl&gt;
 &lt;dt&gt;DMP&lt;/dt&gt;
 &lt;dd&gt;Dossier Médical Partagé (&lt;a href=&#34;https://www.dmp.fr/&#34;&gt;https://www.dmp.fr/&lt;/a&gt;)&lt;/dd&gt;
+&lt;dt&gt;DN&lt;/dt&gt;
+&lt;dd&gt;Distinguished Name&lt;/dd&gt;
+&lt;dt&gt;DNS&lt;/dt&gt;
+&lt;dd&gt;Domain Name Server (Système de Noms de Domaine, en Français)&lt;/dd&gt;
+&lt;dt&gt;DPI&lt;/dt&gt;
+&lt;dd&gt;Dossier Patient Informatisé&lt;/dd&gt;
+&lt;dt&gt;DSN&lt;/dt&gt;
+&lt;dd&gt;Delivery Status Notification&lt;/dd&gt;
+&lt;dt&gt;DSFT&lt;/dt&gt;
+&lt;dd&gt;Dossier des Spécifications Fonctionnelles et Techniques,
+aussi appelé « Référentiel » ou « Guide d’Implémentation »&lt;/dd&gt;
+&lt;dt&gt;EF&lt;/dt&gt;
+&lt;dd&gt;Entité Fonctionnelle&lt;/dd&gt;
+&lt;dt&gt;ENS&lt;/dt&gt;
+&lt;dd&gt;Espace Numérique de Santé&lt;/dd&gt;
+&lt;dt&gt;ES&lt;/dt&gt;
+&lt;dd&gt;Établissement de Santé : terme recouvrant les établissements de soins publics et privés, incluant les plateaux techniques en ville et en hôpital&lt;/dd&gt;
+&lt;dt&gt;EXI&lt;/dt&gt;
+&lt;dd&gt;Exigence (implémentation obligatoire)&lt;/dd&gt;
+&lt;dt&gt;FINESS&lt;/dt&gt;
+&lt;dd&gt;Fichier National des Établissements Sanitaires et Sociaux&lt;/dd&gt;
+&lt;dt&gt;GAP/GAM&lt;/dt&gt;
+&lt;dd&gt;Gestion Administrative du Patient / du Malade&lt;/dd&gt;
+&lt;dt&gt;GIE&lt;/dt&gt;
+&lt;dd&gt;Groupement d’Intérêt Économique
+Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services de l&amp;rsquo;assurance maladie&lt;/dd&gt;
+&lt;dt&gt;GRADeS&lt;/dt&gt;
+&lt;dd&gt;Groupements Régionaux d’Appui au Développement de l’e-Santé
+(anciennement GCS : Groupements de Coopération Sanitaire)&lt;/dd&gt;
+&lt;dt&gt;HAS&lt;/dt&gt;
+&lt;dd&gt;Haute Autorité de Santé&lt;/dd&gt;
+&lt;dt&gt;HDS&lt;/dt&gt;
+&lt;dd&gt;Hébergeur de Données de Santé&lt;/dd&gt;
+&lt;dt&gt;IETF&lt;/dt&gt;
+&lt;dd&gt;Internet Engineering Task Force&lt;/dd&gt;
+&lt;dt&gt;IHM&lt;/dt&gt;
+&lt;dd&gt;Interface Homme-Machine&lt;/dd&gt;
+&lt;dt&gt;INSEE&lt;/dt&gt;
+&lt;dd&gt;Institut National de la Statistique et des Études Économiques&lt;/dd&gt;
+&lt;dt&gt;IGC&lt;/dt&gt;
+&lt;dd&gt;Infrastructure de Gestion de Clés&lt;/dd&gt;
 &lt;dt&gt;IHE&lt;/dt&gt;
 &lt;dd&gt;Integrated Healthcare Entreprise (&lt;a href=&#34;https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda&#34;&gt;https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda&lt;/a&gt;)&lt;/dd&gt;
+&lt;dt&gt;INS&lt;/dt&gt;
+&lt;dd&gt;Identité Nationale de Santé / Identifiant National de Santé
+(composé de : matricule INS + OID + 5 traits stricts de référence / critères d’identité)&lt;/dd&gt;
+&lt;dt&gt;IMAP&lt;/dt&gt;
+&lt;dd&gt;Internet Mail Access Protocol&lt;/dd&gt;
+&lt;dt&gt;LDAP&lt;/dt&gt;
+&lt;dd&gt;Lightweight Directory Access Protocol&lt;/dd&gt;
+&lt;dt&gt;LGO&lt;/dt&gt;
+&lt;dd&gt;Logiciel de Gestion d’Officine&lt;/dd&gt;
+&lt;dt&gt;LPS&lt;/dt&gt;
+&lt;dd&gt;Logiciel de Professionnel de Santé (abréviation générique désignant une application utilisée par un professionnel de santé, dans ou hors Établissement de Santé)&lt;/dd&gt;
+&lt;dt&gt;Mailiz&lt;/dt&gt;
+&lt;dd&gt;Opérateur MSSanté, géré par l’ANS, proposant une BAL personnelle à tout professionnel habilité doté d’une CPS&lt;/dd&gt;
+&lt;dt&gt;MIME&lt;/dt&gt;
+&lt;dd&gt;Multipurpose Internet Mail Extensions&lt;/dd&gt;
+&lt;dt&gt;MDN&lt;/dt&gt;
+&lt;dd&gt;Message Disposition Notification&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;p&gt;Mon Espace Santé
 : (&lt;a href=&#34;https://editeurs.monespacesante.fr/&#34;&gt;https://editeurs.monespacesante.fr/&lt;/a&gt;)&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;MSSanté&lt;/dt&gt;
+&lt;dd&gt;Messagerie Sécurisée de Santé&lt;/dd&gt;
+&lt;dt&gt;MTA&lt;/dt&gt;
+&lt;dd&gt;Mail Transport Agent&lt;/dd&gt;
+&lt;dt&gt;MUA&lt;/dt&gt;
+&lt;dd&gt;Mail User Agent (client de messagerie)&lt;/dd&gt;
+&lt;dt&gt;NAS&lt;/dt&gt;
+&lt;dd&gt;Nomenclature des Acteurs de Santé&lt;/dd&gt;
+&lt;dt&gt;NDR&lt;/dt&gt;
+&lt;dd&gt;Non-Delivery Report&lt;/dd&gt;
+&lt;dt&gt;NIA&lt;/dt&gt;
+&lt;dd&gt;Numéro d&amp;rsquo;Identification d&amp;rsquo;Attente&lt;/dd&gt;
+&lt;dt&gt;NIE&lt;/dt&gt;
+&lt;dd&gt;Numéro d’Identification Éditeur&lt;/dd&gt;
+&lt;dt&gt;NIL&lt;/dt&gt;
+&lt;dd&gt;Numéro d’Identification Logiciel&lt;/dd&gt;
+&lt;dt&gt;NTT&lt;/dt&gt;
+&lt;dd&gt;Numéro Technique Temporaire&lt;/dd&gt;
+&lt;dt&gt;OCSP&lt;/dt&gt;
+&lt;dd&gt;Online Certifcate Status Protocol&lt;/dd&gt;
+&lt;dt&gt;OID&lt;/dt&gt;
+&lt;dd&gt;Object Identifier (Identifiant d’Objets)&lt;/dd&gt;
+&lt;dt&gt;OTP&lt;/dt&gt;
+&lt;dd&gt;One Time Password&lt;/dd&gt;
+&lt;dt&gt;PM&lt;/dt&gt;
+&lt;dd&gt;Personne Morale&lt;/dd&gt;
+&lt;dt&gt;Professionnel Habilité&lt;/dt&gt;
+&lt;dd&gt;Désigne les professionnels de santé et tout professionnel habilité par la loi à collecter et échanger des données de santé à caractère personnel.&lt;/dd&gt;
+&lt;dt&gt;PP&lt;/dt&gt;
+&lt;dd&gt;Personne Physique&lt;/dd&gt;
+&lt;dt&gt;PS&lt;/dt&gt;
+&lt;dd&gt;Professionnel de Santé (acteur de santé humain)&lt;/dd&gt;
+&lt;dt&gt;PSSI&lt;/dt&gt;
+&lt;dd&gt;Politique de Sécurité des Systèmes d’Information&lt;/dd&gt;
+&lt;dt&gt;PUI&lt;/dt&gt;
+&lt;dd&gt;Pharmacie à Usage Intérieur&lt;/dd&gt;
+&lt;dt&gt;RCP&lt;/dt&gt;
+&lt;dd&gt;Réunion de Concertation Pluridisciplinaire&lt;/dd&gt;
+&lt;dt&gt;REST&lt;/dt&gt;
+&lt;dd&gt;Representational State Transfer&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;RFC
+: Request For Comments (série numérotée de documents officiels publiés par l’IETF)&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;RGPD&lt;/dt&gt;
+&lt;dd&gt;Règlement Général sur la Protection des Données&lt;/dd&gt;
+&lt;dt&gt;RNIPP&lt;/dt&gt;
+&lt;dd&gt;Répertoire National d’Identification des Personnes Physiques&lt;/dd&gt;
+&lt;dt&gt;RNIV&lt;/dt&gt;
+&lt;dd&gt;Référentiel National d’IdentitoVigilance&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;RPPS
+: Répertoire Partagé des Professionnels de Santé&lt;/p&gt;
 &lt;dl&gt;
 &lt;dt&gt;Ségur du numérique en santé&lt;/dt&gt;
 &lt;dd&gt;Mise à disposition d’une enveloppe de financement historique de 2 milliards d’euros,&lt;/dd&gt;
 &lt;dt&gt;SESALI&lt;/dt&gt;
 &lt;dd&gt;Service européen de santé en ligne (&lt;a href=&#34;https://sesali.fr/&#34;&gt;https://sesali.fr/&lt;/a&gt;) (&lt;a href=&#34;https://industriels.esante.gouv.fr/produits-et-services/sesali&#34;&gt;https://industriels.esante.gouv.fr/produits-et-services/sesali&lt;/a&gt;)&lt;/dd&gt;
+&lt;dt&gt;SI&lt;/dt&gt;
+&lt;dd&gt;Système d’Information&lt;/dd&gt;
+&lt;dt&gt;SIR&lt;/dt&gt;
+&lt;dd&gt;Système Inter-Régime&lt;/dd&gt;
+&lt;dt&gt;SNGI&lt;/dt&gt;
+&lt;dd&gt;Système National de Gestion des Identités&lt;/dd&gt;
+&lt;dt&gt;SSI&lt;/dt&gt;
+&lt;dd&gt;Sécurité du Système d’Information&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;SMTP
+: Simple Mail Transport Protocol&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;SOAP&lt;/dt&gt;
+&lt;dd&gt;Simple Object Access Protocol&lt;/dd&gt;
 &lt;dt&gt;SONS&lt;/dt&gt;
 &lt;dd&gt;Système Ouvert et Non Sélectif (&lt;a href=&#34;https://esante.gouv.fr/segur-de-la-sante/hopital&#34;&gt;https://esante.gouv.fr/segur-de-la-sante/hopital&lt;/a&gt;)&lt;/dd&gt;
 &lt;/dl&gt;
@@ -52,8 +229,20 @@
 &lt;p&gt;Le dispositif SONS (Système Ouvert et Non Sélectif) d’achat de l’Etat pour les comptes des acteurs de l’offre de soins : ce dispositif aide les établissements à acquérir et déployer des versions logicielles référencées Ségur, c’est-à-dire respectant l’ensemble des exigences Ségur édictées dans les Dossiers de Spécifications de Référencement (DSR)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;dl&gt;
+&lt;dt&gt;SSL&lt;/dt&gt;
+&lt;dd&gt;Secure Sockets Layer&lt;/dd&gt;
 &lt;dt&gt;SUN-ES&lt;/dt&gt;
 &lt;dd&gt;Ségur Usage Numérie en Établissement de Santé (&lt;a href=&#34;https://solidarites-sante.gouv.fr/systeme-de-sante-et-medico-social/segur-de-la-sante/sun-es&#34;&gt;https://solidarites-sante.gouv.fr/systeme-de-sante-et-medico-social/segur-de-la-sante/sun-es&lt;/a&gt;)&lt;/dd&gt;
+&lt;dt&gt;TF&lt;/dt&gt;
+&lt;dd&gt;Task Force&lt;/dd&gt;
+&lt;dt&gt;TLS&lt;/dt&gt;
+&lt;dd&gt;Transport Layer Security - Norme de sécurisation par chiffrement du transport de l&amp;rsquo;information au sein des réseaux (anciennement SSL)&lt;/dd&gt;
+&lt;dt&gt;WS&lt;/dt&gt;
+&lt;dd&gt;Web Service&lt;/dd&gt;
+&lt;dt&gt;WSDL&lt;/dt&gt;
+&lt;dd&gt;Web Services Description Language&lt;/dd&gt;
+&lt;dt&gt;XSD&lt;/dt&gt;
+&lt;dd&gt;XML Schema Definition&lt;/dd&gt;
 &lt;/dl&gt;
 
       </description>

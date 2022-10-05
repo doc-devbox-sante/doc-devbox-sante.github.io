@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.96.0" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.104.2" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -27,7 +27,7 @@ Ce format de document est …">
 <meta property="og:description" content="La DevBox-Santé DMP prend également en charge la soumission de document structure comme le CR d&rsquo;examens biologie.
 Ce format de document est spécifié par l&rsquo;ANS : https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale
 Un exemple de création de document conforme à la spécification est :
-private void createCRBiologie(DMPCStructureSante structureSante) {  final String creationTime = &#34;20111020194600&#34;;  final String startTime = &#34;20140520174600&#34;;  final String stopTime = &#34;20140520184600&#34;;   DMPCDocumentCRBiologie template = new DMPCDocumentCRBiologie();  template." />
+private void createCRBiologie(DMPCStructureSante structureSante) { final String creationTime = &#34;20111020194600&#34;; final String startTime = &#34;20140520174600&#34;; final String stopTime = &#34;20140520184600&#34;; DMPCDocumentCRBiologie template = new DMPCDocumentCRBiologie(); template.setClassCode(&#34;10&#34;); template.addConfidentiality(&#34;N&#34;); template.setComments(&#34;Commentaire du document&#34;); template.setFormat(&#34;urn:ihe:lab:xd-lab:2008&#34;); // format obligatoire template." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/dmp/cda/crbiologie/" /><meta property="article:section" content="dmp" />
 
@@ -37,7 +37,7 @@ private void createCRBiologie(DMPCStructureSante structureSante) {  final String
 <meta itemprop="description" content="La DevBox-Santé DMP prend également en charge la soumission de document structure comme le CR d&rsquo;examens biologie.
 Ce format de document est spécifié par l&rsquo;ANS : https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale
 Un exemple de création de document conforme à la spécification est :
-private void createCRBiologie(DMPCStructureSante structureSante) {  final String creationTime = &#34;20111020194600&#34;;  final String startTime = &#34;20140520174600&#34;;  final String stopTime = &#34;20140520184600&#34;;   DMPCDocumentCRBiologie template = new DMPCDocumentCRBiologie();  template.">
+private void createCRBiologie(DMPCStructureSante structureSante) { final String creationTime = &#34;20111020194600&#34;; final String startTime = &#34;20140520174600&#34;; final String stopTime = &#34;20140520184600&#34;; DMPCDocumentCRBiologie template = new DMPCDocumentCRBiologie(); template.setClassCode(&#34;10&#34;); template.addConfidentiality(&#34;N&#34;); template.setComments(&#34;Commentaire du document&#34;); template.setFormat(&#34;urn:ihe:lab:xd-lab:2008&#34;); // format obligatoire template.">
 <meta itemprop="dateModified" content="2022-03-01T19:06:42+01:00" />
 <meta itemprop="wordCount" content="606">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
@@ -45,13 +45,13 @@ private void createCRBiologie(DMPCStructureSante structureSante) {  final String
 <meta name="twitter:description" content="La DevBox-Santé DMP prend également en charge la soumission de document structure comme le CR d&rsquo;examens biologie.
 Ce format de document est spécifié par l&rsquo;ANS : https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale
 Un exemple de création de document conforme à la spécification est :
-private void createCRBiologie(DMPCStructureSante structureSante) {  final String creationTime = &#34;20111020194600&#34;;  final String startTime = &#34;20140520174600&#34;;  final String stopTime = &#34;20140520184600&#34;;   DMPCDocumentCRBiologie template = new DMPCDocumentCRBiologie();  template."/>
+private void createCRBiologie(DMPCStructureSante structureSante) { final String creationTime = &#34;20111020194600&#34;; final String startTime = &#34;20140520174600&#34;; final String stopTime = &#34;20140520184600&#34;; DMPCDocumentCRBiologie template = new DMPCDocumentCRBiologie(); template.setClassCode(&#34;10&#34;); template.addConfidentiality(&#34;N&#34;); template.setComments(&#34;Commentaire du document&#34;); template.setFormat(&#34;urn:ihe:lab:xd-lab:2008&#34;); // format obligatoire template."/>
 
 
 
 
-<link rel="preload" href="/scss/main.min.9ed9ca22a2a8e50a02a8477bfbb3d08ba806ef494b1164911a959fa74757d94a.css" as="style">
-<link href="/scss/main.min.9ed9ca22a2a8e50a02a8477bfbb3d08ba806ef494b1164911a959fa74757d94a.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.scss" as="style">
+<link href="/scss/main.scss" rel="stylesheet" integrity="">
 
 
 <script
@@ -238,7 +238,7 @@ if (!doNotTrack) {
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpcdastructurationminimale-li">
   <a href="/dmp/cda/structurationminimale/" title="Volet CDA structuration minimale" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmpcdastructurationminimale"><span class="">CDA-minimal</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-dmpcdacrbiologie-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpcdacrbiologie-li">
   <a href="/dmp/cda/crbiologie/" title="Volet Compte rendu d&#39;examens de biologie" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-dmpcdacrbiologie"><span class="td-sidebar-nav-active-item">CDA Biologie</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpcdawrapped-li">
   <a href="/dmp/cda/wrapped/" title="Votre volet CDA" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmpcdawrapped"><span class="">CDA-wrapped</span></a>
@@ -751,7 +751,7 @@ if (!doNotTrack) {
 
 
 
-<script src="/js/main.min.bbade233e3c661e42f1ff37f2a44388625aa93ba398f1f954c178060cc91aa94.js" integrity="sha256-u63iM&#43;PGYeQvH/N/KkQ4hiWqk7o5jx&#43;VTBeAYMyRqpQ=" crossorigin="anonymous"></script>
+<script src="/js/main.min.58cc45861639a851f47a108ea89d791a7f0f2084913c78c79b392fdf7ac9a733.js" integrity="sha256-WMxFhhY5qFH0ehCOqJ15Gn8PIISRPHjHmzkv33rJpzM=" crossorigin="anonymous"></script>
 
 
 

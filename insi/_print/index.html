@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.96.0" /><link rel="canonical" type="text/html" href="/insi/">
+<meta name="generator" content="Hugo 0.104.2" /><link rel="canonical" type="text/html" href="/insi/">
 <link rel="alternate" type="application/rss&#43;xml" href="/insi/index.xml">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
@@ -40,8 +40,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.9ed9ca22a2a8e50a02a8477bfbb3d08ba806ef494b1164911a959fa74757d94a.css" as="style">
-<link href="/scss/main.min.9ed9ca22a2a8e50a02a8477bfbb3d08ba806ef494b1164911a959fa74757d94a.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.scss" as="style">
+<link href="/scss/main.scss" rel="stylesheet" integrity="">
 
 
 <script
@@ -328,7 +328,7 @@ Version imprimable multipages.
     
     
 	
-<li>4.3: <a href="#pg-80e5e55089632da4faee2964e57f1da0">Gestion des certificats</a></li>
+<li>4.3: <a href="#pg-cf9f436087bd6dae998d9bbec0c08356">Datamatrix</a></li>
 
 
     
@@ -347,7 +347,7 @@ Version imprimable multipages.
     
     
 	
-<li>4.4: <a href="#pg-cf9f436087bd6dae998d9bbec0c08356">Datamatrix</a></li>
+<li>4.4: <a href="#pg-80e5e55089632da4faee2964e57f1da0">Gestion des certificats</a></li>
 
 
     
@@ -378,7 +378,7 @@ Version imprimable multipages.
     
     
 	
-<li>5: <a href="#pg-e661aca952fdd42de0e410979c74bd44">Versions</a></li>
+<li>5: <a href="#pg-2b1a1095ea386dd4af3b0bc3c2ac5b4e">Architecture interne des différents composants</a></li>
 
 
     
@@ -397,7 +397,26 @@ Version imprimable multipages.
     
     
 	
-<li>6: <a href="#pg-2e645bfcd34d722959966b4fd136d1a3"></a></li>
+<li>6: <a href="#pg-e661aca952fdd42de0e410979c74bd44">Versions</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>7: <a href="#pg-2e645bfcd34d722959966b4fd136d1a3"></a></li>
 
 
     
@@ -932,48 +951,7 @@ Dans la configuration actuelle de l&rsquo;environnement de tests, il n&rsquo;est
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-80e5e55089632da4faee2964e57f1da0">4.3 - Gestion des certificats</h1>
-    <div class="lead">Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification par certificat pour l&rsquo;INSi</div>
-	<p>Obtenir des certificats pour l&rsquo;INSi consiste à réaliser la même <a href="/dmp/howtos/gestioncertificat/">opération que pour le DMP</a>.
-et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package INSi 04.00.00.pdf</code>, une notice explicative est donnée</p>
-<p>Pour les certificats de test :</p>
-<ul>
-<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf</a></li>
-</ul>
-<p>Pour les certificats de production :</p>
-<ul>
-<li>la procédure de commande des certificats de structures salariées : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_TLS_INSi_structures_salari%C3%A9es_VF.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_TLS_INSi_structures_salari%C3%A9es_VF.pdf</a></li>
-<li>la procédure de commande des certificats de structures libérales : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_TLS_INSi_structures_liberales_VF.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_TLS_INSi_structures_liberales_VF.pdf</a></li>
-<li>la procédure de commande des certificats de laboratoires de biologie médicale : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_TLS_INSi_LBM_VF_0.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_TLS_INSi_LBM_VF_0.pdf</a></li>
-</ul>
-
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-cf9f436087bd6dae998d9bbec0c08356">4.4 - Datamatrix</h1>
+	<h1 id="pg-cf9f436087bd6dae998d9bbec0c08356">4.3 - Datamatrix</h1>
     <div class="lead">Générer un datamatrix INS avec la DevBox-Santé INSi et insérer un cartouche dans un PDF</div>
 	<p>Il est dorénavant possible (depuis la version 2.6) de <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans---datamatrix-ins-v2.pdf">générer un datamatrix conforme à la spécification de l&rsquo;ANS</a>.</p>
 <h2 id="interface">Interface</h2>
@@ -1042,6 +1020,47 @@ et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package I
 <pre tabindex="0"><code class="language-curl" data-lang="curl">curl -X POST &#34;http://127.0.0.1:8484/insi/v2/datamatrix/pdf/insertCartouche&#34; -H &#34;accept: */*&#34; -H &#34;Content-Type: multipart/form-data&#34; -F &#34;cartoucheContexte={ &#34;info&#34;: { &#34;height&#34;: 60, &#34;pageNumber&#34;: 0, &#34;startX&#34;: 20, &#34;startY&#34;: 70, &#34;unite&#34;: &#34;MM&#34;, &#34;width&#34;: 170 }, &#34;ins&#34;: { &#34;matriculeINS&#34;: { &#34;valeur&#34;: &#34;2770763220829&#34;, &#34;cle&#34;: &#34;10&#34;, &#34;identifiantSysteme&#34;: &#34;1.2.250.1.213.1.4.8&#34; }, &#34;traitsIdentite&#34;: { &#34;nomFamille&#34;: &#34;NESSI&#34;, &#34;prenomUtilise&#34;: &#34;RUTH&#34;, &#34;prenomActeNaissance&#34;: &#34;RUTH ISABELLE&#34;, &#34;sexeAdministratif&#34;: &#34;F&#34;, &#34;dateNaissance&#34;: &#34;1977-07-14&#34;, &#34;lieuNaissance&#34;: &#34;63220&#34; } } }&#34; -F &#34;file=@1.pdf;type=application/pdf&#34;
 </code></pre><p>vous permet d&rsquo;obtenir un nouveau fichier comportant le cartouche INS où vous vouliez l&rsquo;insérer :</p>
 <p><img src="cartoucheINS.png" alt="cartouche INS"></p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-80e5e55089632da4faee2964e57f1da0">4.4 - Gestion des certificats</h1>
+    <div class="lead">Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification par certificat pour l&rsquo;INSi</div>
+	<p>Obtenir des certificats pour l&rsquo;INSi consiste à réaliser la même <a href="/dmp/howtos/gestioncertificat/">opération que pour le DMP</a>.
+et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package INSi 04.00.00.pdf</code>, une notice explicative est donnée</p>
+<p>Pour les certificats de test :</p>
+<ul>
+<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf</a></li>
+</ul>
+<p>Pour les certificats de production :</p>
+<ul>
+<li>la procédure de commande des certificats de structures salariées : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_TLS_INSi_structures_salari%C3%A9es_VF.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_TLS_INSi_structures_salari%C3%A9es_VF.pdf</a></li>
+<li>la procédure de commande des certificats de structures libérales : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_TLS_INSi_structures_liberales_VF.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_TLS_INSi_structures_liberales_VF.pdf</a></li>
+<li>la procédure de commande des certificats de laboratoires de biologie médicale : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_TLS_INSi_LBM_VF_0.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_TLS_INSi_LBM_VF_0.pdf</a></li>
+</ul>
 
 </div>
 
@@ -1140,15 +1159,57 @@ et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package I
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-e661aca952fdd42de0e410979c74bd44">5 - Versions</h1>
+	<h1 id="pg-2b1a1095ea386dd4af3b0bc3c2ac5b4e">5 - Architecture interne des différents composants</h1>
+    <div class="lead">Pour les intéressés, l&rsquo;architecture interne des différents composants</div>
+	<h2 id="diagramme-de-flux">Diagramme de flux</h2>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
+component &#34;DevBox-santé INSi&#34; as DevBoxSanteINSi
+
+cloud &#34;Téléservice INSi&#34; as INSi
+
+DevBoxSanteINSi --&gt; INSi  : https (TLS 1.2 / IGC Santé)
+</code></pre>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e661aca952fdd42de0e410979c74bd44">6 - Versions</h1>
     <div class="lead">Note sur les différentes versions de la DevBox-Santé INSi</div>
-	<h2 id="version-264-27072022">Version 2.6.4 (27/07/2022)</h2>
+	<h1 id="version-265-05102022">Version 2.6.5 (05/10/2022)</h1>
 <h3 id="story">Story</h3>
+<p><a href="https://devbox-sante.atlassian.net/browse/INSI-66">INSI-66</a> [Repository] reorganisation de repo.dev.coop</p>
+<p><a href="https://devbox-sante.atlassian.net/browse/INSI-63">INSI-63</a> [Actuator] ajout d’un InsiLpsInfoContributor.</p>
+<p><a href="https://devbox-sante.atlassian.net/browse/INSI-61">INSI-61</a> [IGC-Santé] intégré IGCSanteTrustStoreManager</p>
+<h2 id="version-264-27072022">Version 2.6.4 (27/07/2022)</h2>
+<h3 id="story-1">Story</h3>
 <p><a href="https://devbox-sante.atlassian.net/browse/INSI-60">INSI-60</a> [Stellair] externaliser configuration</p>
+<p><a href="https://devbox-sante.atlassian.net/browse/INSI-62">INSI-62</a> [INSi-CPS] Sélection intempestive de la structure de santé via la CPS à chaque Appel REST</p>
 <h2 id="version-263-29062022">Version 2.6.3 (29/06/2022)</h2>
 <h4 id="bug">Bug</h4>
 <p><a href="https://devbox-sante.atlassian.net/browse/INSI-58">INSI-58</a> [Datamatrix] encodage C40</p>
-<h4 id="story-1">Story</h4>
+<h4 id="story-2">Story</h4>
 <p><a href="https://devbox-sante.atlassian.net/browse/INSI-59">INSI-59</a> [CNDA Controller] permettre l&rsquo;injection de n&rsquo;importe quel retour.</p>
 <p><a href="https://devbox-sante.atlassian.net/browse/INSI-56">INSI-56</a> [Datamatrix] retourner le datamatrix en base64</p>
 <p><a href="https://devbox-sante.atlassian.net/browse/INSI-55">INSI-55</a> [Spring] qualify l’authenticationKeyManager</p>
@@ -1198,7 +1259,7 @@ et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package I
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-2e645bfcd34d722959966b4fd136d1a3">6 - </h1>
+	<h1 id="pg-2e645bfcd34d722959966b4fd136d1a3">7 - </h1>
     
 	<p>TODO : rFprendre procédure du DMP pour l&rsquo;INSI</p>
 <p><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_salariees_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_salariees_vf.pdf</a></p>
@@ -1294,7 +1355,7 @@ et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package I
 
 
 
-<script src="/js/main.min.bbade233e3c661e42f1ff37f2a44388625aa93ba398f1f954c178060cc91aa94.js" integrity="sha256-u63iM&#43;PGYeQvH/N/KkQ4hiWqk7o5jx&#43;VTBeAYMyRqpQ=" crossorigin="anonymous"></script>
+<script src="/js/main.min.58cc45861639a851f47a108ea89d791a7f0f2084913c78c79b392fdf7ac9a733.js" integrity="sha256-WMxFhhY5qFH0ehCOqJ15Gn8PIISRPHjHmzkv33rJpzM=" crossorigin="anonymous"></script>
 
 
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.96.0" /><link rel="alternate" type="text/html" href="/dmp/architecture/_print/">
+<meta name="generator" content="Hugo 0.104.2" /><link rel="alternate" type="text/html" href="/dmp/architecture/_print/">
 <link rel="alternate" type="application/rss&#43;xml" href="/dmp/architecture/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -40,8 +40,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.9ed9ca22a2a8e50a02a8477bfbb3d08ba806ef494b1164911a959fa74757d94a.css" as="style">
-<link href="/scss/main.min.9ed9ca22a2a8e50a02a8477bfbb3d08ba806ef494b1164911a959fa74757d94a.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.scss" as="style">
+<link href="/scss/main.scss" rel="stylesheet" integrity="">
 
 
 <script
@@ -259,7 +259,7 @@ if (!doNotTrack) {
   <a href="/dmp/howtos/identifiantcomposant/" title="CNDA : Fiche d&#39;identité du composant DMP" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dmphowtosidentifiantcomposant"><span class="">CNDA identité DMP</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-dmparchitecture-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmparchitecture-li">
   <a href="/dmp/architecture/" title="Architecture interne des différents composants" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-dmparchitecture"><span class="td-sidebar-nav-active-item">Architecture interne</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpversions-li">
   <a href="/dmp/versions/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dmpversions"><span class="">Versions</span></a>
@@ -294,6 +294,7 @@ if (!doNotTrack) {
 
 <div class="td-toc"><nav id="TableOfContents">
   <ul>
+    <li><a href="#diagramme-de-flux">Diagramme de flux</a></li>
     <li><a href="#architecture-interne-des-différents-composants">Architecture interne des différents composants</a>
       <ul>
         <li><a href="#les-différents-modules-maven-">Les différents modules Maven :</a></li>
@@ -373,7 +374,16 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<h2 id="architecture-interne-des-différents-composants">Architecture interne des différents composants</h2>
+	<h2 id="diagramme-de-flux">Diagramme de flux</h2>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
+component &#34;DevBox-santé DMP&#34; as DevBoxSanteDMP
+
+cloud &#34;DMP&#34; as DMP
+cloud &#34;fr.pool.ntp.org&#34; as NTP
+
+DevBoxSanteDMP --&gt; DMP  : https (TLS 1.2 / IGC Santé)
+DevBoxSanteDMP --&gt; NTP : ntp 
+</code></pre><h2 id="architecture-interne-des-différents-composants">Architecture interne des différents composants</h2>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
 package &#34;DevBox-santé DMP&#34; {
     [dmp-proxy-xxx] 
@@ -611,7 +621,7 @@ La <code>CpsConfiguration</code> permet d&rsquo;initialiser la <code>CxfEndPoint
 
 
 
-<script src="/js/main.min.bbade233e3c661e42f1ff37f2a44388625aa93ba398f1f954c178060cc91aa94.js" integrity="sha256-u63iM&#43;PGYeQvH/N/KkQ4hiWqk7o5jx&#43;VTBeAYMyRqpQ=" crossorigin="anonymous"></script>
+<script src="/js/main.min.58cc45861639a851f47a108ea89d791a7f0f2084913c78c79b392fdf7ac9a733.js" integrity="sha256-WMxFhhY5qFH0ehCOqJ15Gn8PIISRPHjHmzkv33rJpzM=" crossorigin="anonymous"></script>
 
 
 

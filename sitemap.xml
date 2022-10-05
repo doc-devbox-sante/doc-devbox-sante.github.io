@@ -18,7 +18,7 @@
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
   </url><url>
     <loc>/vitale/issues/</loc>
-    <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+    <lastmod>2022-10-04T15:10:01+02:00</lastmod>
   </url><url>
     <loc>/dmp/rest/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
@@ -101,20 +101,26 @@
     <loc>/insi/howtos/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
   </url><url>
+    <loc>/insi/howtos/datamatrix/</loc>
+    <lastmod>2022-02-11T18:33:39+01:00</lastmod>
+  </url><url>
     <loc>/dmp/howtos/gestioncertificat/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
   </url><url>
     <loc>/insi/howtos/gestioncertificatinsi/</loc>
     <lastmod>2022-03-14T14:41:18+01:00</lastmod>
   </url><url>
-    <loc>/insi/howtos/datamatrix/</loc>
-    <lastmod>2022-02-11T18:33:39+01:00</lastmod>
-  </url><url>
     <loc>/dmp/howtos/schematron/</loc>
     <lastmod>2022-08-10T11:49:09+02:00</lastmod>
   </url><url>
     <loc>/dmp/architecture/</loc>
-    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
+    <lastmod>2022-10-04T15:11:00+02:00</lastmod>
+  </url><url>
+    <loc>/insi/architecture/</loc>
+    <lastmod>2022-10-04T15:11:00+02:00</lastmod>
+  </url><url>
+    <loc>/ms-sante/architecture/</loc>
+    <lastmod>2022-10-04T15:14:43+02:00</lastmod>
   </url><url>
     <loc>/blog/2022/09/23/glossaire/</loc>
     <lastmod>2022-09-23T15:49:29+02:00</lastmod>
@@ -147,16 +153,16 @@
     <lastmod>2022-08-10T11:49:09+02:00</lastmod>
   </url><url>
     <loc>/dmp/versions/</loc>
-    <lastmod>2022-09-26T18:12:09+02:00</lastmod>
+    <lastmod>2022-09-27T18:04:29+02:00</lastmod>
   </url><url>
     <loc>/insi/versions/</loc>
-    <lastmod>2022-07-27T14:52:03+02:00</lastmod>
+    <lastmod>2022-10-05T10:32:46+02:00</lastmod>
   </url><url>
     <loc>/ms-sante/versions/</loc>
-    <lastmod>2022-09-16T09:34:45+02:00</lastmod>
+    <lastmod>2022-09-27T18:04:29+02:00</lastmod>
   </url><url>
     <loc>/vitale/versions/</loc>
-    <lastmod>2022-07-27T14:32:02+02:00</lastmod>
+    <lastmod>2022-10-04T15:10:01+02:00</lastmod>
   </url><url>
     <loc>/dmp/ui/</loc>
     <lastmod>2022-07-18T09:43:50+02:00</lastmod>

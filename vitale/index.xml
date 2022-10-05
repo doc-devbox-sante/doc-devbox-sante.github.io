@@ -22,7 +22,12 @@
       <description>
         
         
-        &lt;h3 id=&#34;pcsc-ou-galss-&#34;&gt;PC/SC ou galss ?&lt;/h3&gt;
+        &lt;h3 id=&#34;erreur-logicielle&#34;&gt;Erreur logicielle&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;module origine de l&amp;rsquo;erreur logicielle (Erreur : 1))&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;c’est lié à un appel sans carte vitale avec une session CPS en cours, il faut changer par une lecture avec CPS .&lt;/p&gt;
+&lt;h3 id=&#34;pcsc-ou-galss-&#34;&gt;PC/SC ou galss ?&lt;/h3&gt;
 &lt;p&gt;Le galss n&amp;rsquo;est officiellement plus supporté au 31 décembre 2021, donc il faut configurer les lecteurs en PC/SC&lt;/p&gt;
 &lt;h3 id=&#34;changement-de-lecteur-pcsc---galss&#34;&gt;Changement de lecteur PC/SC -&amp;gt; Galss&lt;/h3&gt;
 &lt;p&gt;Le lecteur carte vitale, enregistre dans le fchier %Program_FILES%/DevBoxSante-%client%/santesocial/api_lec/api_lec.ini les lecteurs PC/SC utilisés, 

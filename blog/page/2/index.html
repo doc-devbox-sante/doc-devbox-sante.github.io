@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="fr" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,8 +21,7 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>DevBox-Santé Blog | DevBox-Santé</title>
-<meta name="description" content="Ceci est la section blog de la DevBox-Santé. Elle contient des articles sur la DevBox-Santé ainsi que des informations
-sur les différentes livraisons …">
+<meta name="description" content="La Documentation">
 <meta property="og:title" content="DevBox-Santé Blog" />
 <meta property="og:description" content="La Documentation" />
 <meta property="og:type" content="website" />
@@ -36,8 +35,8 @@ sur les différentes livraisons …">
 
 
 
-<link rel="preload" href="/scss/main.min.cc6f37db5ddec5ce81afee19b8e77ec00635d9232699bf8ba583fe0275cbcf02.css" as="style">
-<link href="/scss/main.min.cc6f37db5ddec5ce81afee19b8e77ec00635d9232699bf8ba583fe0275cbcf02.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.scss" as="style">
+<link href="/scss/main.scss" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -59,118 +58,41 @@ if (!doNotTrack) {
   </head>
   <body class="td-section td-blog">
     <header>
-      
-<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
-        <a class="navbar-brand" href="/">
-		<span class="navbar-logo"><svg id="Composant_16_14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 132.5 118.9" style="enable-background:new 0 0 132.5 118.9"><style>.st0{fill:url(#SVGID_1_)}.st1{fill:#fff}.st2{fill:url(#SVGID_2_)}.st3{fill:url(#SVGID_3_)}.st4{fill:#d34a3c}.st5{fill:none;stroke:#fff;stroke-width:6}</style><g id="Rectangle_69" transform="translate(65.996 38.892)"><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-44.4861" y1="64.4079" x2="-45.1313" y2="65.2243" gradientTransform="matrix(66.506 0 0 -66.507 3013.5039 4344.1382)"><stop offset="0" style="stop-color:#7613E0"/><stop offset="1" style="stop-color:#9F57ED"/></linearGradient><path class="st0" d="M23.3 3.8h19.9c10.7.0 19.4 8.7 19.4 19.4v19.9c0 10.7-8.7 19.4-19.4 19.4H23.3c-10.7.0-19.4-8.7-19.4-19.4V23.2C3.9 12.5 12.6 3.8 23.3 3.8z"/><g><path class="st1" d="M44.5 66.5H22c-12.1.0-22-9.9-22-22V22C0 9.9 9.9.0 22 0h22.5c12.1.0 22 9.9 22 22v22.5c0 12.1-9.9 22-22 22zM22 6C13.2 6 6 13.2 6 22v22.5c0 8.8 7.2 16 16 16h22.5c8.8.0 16-7.2 16-16V22c0-8.8-7.2-16-16-16H22z"/></g></g><g id="Rectangle_70" transform="translate(110.109) rotate(90)"><linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="103.5653" y1="89.1427" x2="104.2366" y2="89.9162" gradientTransform="matrix(0 -66.506 -66.507 0 5940.3726 6895.6235)"><stop offset="0" style="stop-color:#67ED9A"/><stop offset="1" style="stop-color:#4AC87A"/></linearGradient><path class="st2" d="M23 1.5h21.5c11.6.0 21 9.4 21 21V44c0 11.6-9.4 21-21 21H23C11.4 65 2 55.6 2 44V22.5c0-11.6 9.4-21 21-21z"/><g><path class="st1" d="M66.5 22v22.5c0 12.1-9.9 22-22 22H22c-12.1.0-22-9.9-22-22V22C0 9.9 9.9.0 22 0h22.5c12.1.0 22 9.9 22 22zM6 44.5c0 8.8 7.2 16 16 16h22.5c8.8.0 16-7.2 16-16V22c0-8.8-7.2-16-16-16H22C13.2 6 6 13.2 6 22V44.5z"/></g></g><g id="Rectangle_71" transform="translate(88.714 52.366) rotate(90)"><linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="50.3774" y1="67.1362" x2="49.7677" y2="66.2039" gradientTransform="matrix(0 -66.506 -66.507 0 4517.4551 3412.9705)"><stop offset="0" style="stop-color:#FFA800"/><stop offset="1" style="stop-color:#FFC24D"/></linearGradient><path class="st3" d="M22.8 2.3h21c11.3.0 20.5 9.2 20.5 20.5v21c0 11.3-9.2 20.5-20.5 20.5h-21c-11.3.0-20.5-9.2-20.5-20.5v-21C2.3 11.4 11.4 2.3 22.8 2.3z"/><g><path class="st1" d="M66.5 22v22.5c0 12.1-9.9 22-22 22H22c-12.1.0-22-9.9-22-22V22C0 9.9 9.9.0 22 0h22.5c12.1.0 22 9.9 22 22zM6 44.5c0 8.8 7.2 16 16 16h22.5c8.8.0 16-7.2 16-16V22c0-8.8-7.2-16-16-16H22C13.2 6 6 13.2 6 22V44.5z"/></g></g><g id="Rectangle_72" transform="translate(66.506 13.481) rotate(90)"><g><path class="st4" d="M23 1.5h21.5c11.6.0 21 9.4 21 21V44c0 11.6-9.4 21-21 21H23C11.4 65 2 55.6 2 44V22.5c0-11.6 9.4-21 21-21z"/></g><path class="st5" d="M22 3h22.5c10.5.0 19 8.5 19 19v22.5c0 10.5-8.5 19-19 19H22c-10.5.0-19-8.5-19-19V22C3 11.5 11.5 3 22 3z"/></g></svg></span><span class="font-weight-bold">DevBox-Santé</span>
-	</a>
-	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
-		<ul class="navbar-nav mt-2 mt-lg-0">
-			
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link" href="/dmp/" ><i class='icon iconNav icon-dmp'></i><span>DMP</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link" href="/insi/" ><i class='icon iconNav icon-ins'></i><span>INSi</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link" href="/ms-sante/" ><i class='icon iconNav icon-mssante'></i><span>MSS</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link" href="/cps/" ><i class='icon iconNav icon-cps-puce'></i><span>CPS</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link" href="/vitale/" ><i class='icon iconNav icon-sesam-puce'></i><span>Vitale</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link" href="/annuaire/" ><i class='icon iconNav icon-directory'></i><span>Annuaire</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link" href="/installer/" ><i class='icon icon-devbox'></i><span>Installer</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link active" href="/blog/" ><i class='fa fa-blog'></i><span class="active">Blog</span></a>
-			</li>
-			
-			
-			
-		</ul>
-	</div>
-	<div class="navbar-nav d-none d-lg-block"></div>
+      <nav
+  class="js-navbar-scroll navbar navbar-expand navbar-dark  flex-column flex-md-row td-navbar">
+  <a class="navbar-brand" href="/"><span class="navbar-logo"><svg id="Composant_16_14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 132.5 118.9" style="enable-background:new 0 0 132.5 118.9"><style>.st0{fill:url(#SVGID_1_)}.st1{fill:#fff}.st2{fill:url(#SVGID_2_)}.st3{fill:url(#SVGID_3_)}.st4{fill:#d34a3c}.st5{fill:none;stroke:#fff;stroke-width:6}</style><g id="Rectangle_69" transform="translate(65.996 38.892)"><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-44.4861" y1="64.4079" x2="-45.1313" y2="65.2243" gradientTransform="matrix(66.506 0 0 -66.507 3013.5039 4344.1382)"><stop offset="0" style="stop-color:#7613E0"/><stop offset="1" style="stop-color:#9F57ED"/></linearGradient><path class="st0" d="M23.3 3.8h19.9c10.7.0 19.4 8.7 19.4 19.4v19.9c0 10.7-8.7 19.4-19.4 19.4H23.3c-10.7.0-19.4-8.7-19.4-19.4V23.2C3.9 12.5 12.6 3.8 23.3 3.8z"/><g><path class="st1" d="M44.5 66.5H22c-12.1.0-22-9.9-22-22V22C0 9.9 9.9.0 22 0h22.5c12.1.0 22 9.9 22 22v22.5c0 12.1-9.9 22-22 22zM22 6C13.2 6 6 13.2 6 22v22.5c0 8.8 7.2 16 16 16h22.5c8.8.0 16-7.2 16-16V22c0-8.8-7.2-16-16-16H22z"/></g></g><g id="Rectangle_70" transform="translate(110.109) rotate(90)"><linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="103.5653" y1="89.1427" x2="104.2366" y2="89.9162" gradientTransform="matrix(0 -66.506 -66.507 0 5940.3726 6895.6235)"><stop offset="0" style="stop-color:#67ED9A"/><stop offset="1" style="stop-color:#4AC87A"/></linearGradient><path class="st2" d="M23 1.5h21.5c11.6.0 21 9.4 21 21V44c0 11.6-9.4 21-21 21H23C11.4 65 2 55.6 2 44V22.5c0-11.6 9.4-21 21-21z"/><g><path class="st1" d="M66.5 22v22.5c0 12.1-9.9 22-22 22H22c-12.1.0-22-9.9-22-22V22C0 9.9 9.9.0 22 0h22.5c12.1.0 22 9.9 22 22zM6 44.5c0 8.8 7.2 16 16 16h22.5c8.8.0 16-7.2 16-16V22c0-8.8-7.2-16-16-16H22C13.2 6 6 13.2 6 22V44.5z"/></g></g><g id="Rectangle_71" transform="translate(88.714 52.366) rotate(90)"><linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="50.3774" y1="67.1362" x2="49.7677" y2="66.2039" gradientTransform="matrix(0 -66.506 -66.507 0 4517.4551 3412.9705)"><stop offset="0" style="stop-color:#FFA800"/><stop offset="1" style="stop-color:#FFC24D"/></linearGradient><path class="st3" d="M22.8 2.3h21c11.3.0 20.5 9.2 20.5 20.5v21c0 11.3-9.2 20.5-20.5 20.5h-21c-11.3.0-20.5-9.2-20.5-20.5v-21C2.3 11.4 11.4 2.3 22.8 2.3z"/><g><path class="st1" d="M66.5 22v22.5c0 12.1-9.9 22-22 22H22c-12.1.0-22-9.9-22-22V22C0 9.9 9.9.0 22 0h22.5c12.1.0 22 9.9 22 22zM6 44.5c0 8.8 7.2 16 16 16h22.5c8.8.0 16-7.2 16-16V22c0-8.8-7.2-16-16-16H22C13.2 6 6 13.2 6 22V44.5z"/></g></g><g id="Rectangle_72" transform="translate(66.506 13.481) rotate(90)"><g><path class="st4" d="M23 1.5h21.5c11.6.0 21 9.4 21 21V44c0 11.6-9.4 21-21 21H23C11.4 65 2 55.6 2 44V22.5c0-11.6 9.4-21 21-21z"/></g><path class="st5" d="M22 3h22.5c10.5.0 19 8.5 19 19v22.5c0 10.5-8.5 19-19 19H22c-10.5.0-19-8.5-19-19V22C3 11.5 11.5 3 22 3z"/></g></svg></span><span class="font-weight-bold">DevBox-Santé</span></a>
+  <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+    <ul class="navbar-nav mt-2 mt-lg-0">
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/dmp/"><i class='icon iconNav icon-dmp'></i><span>DMP</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/insi/"><i class='icon iconNav icon-ins'></i><span>INSi</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/ms-sante/"><i class='icon iconNav icon-mssante'></i><span>MSS</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/cps/"><i class='icon iconNav icon-cps-puce'></i><span>CPS</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/vitale/"><i class='icon iconNav icon-sesam-puce'></i><span>Vitale</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/annuaire/"><i class='icon iconNav icon-directory'></i><span>Annuaire</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/installer/"><i class='icon icon-devbox'></i><span>Installer</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link active" href="/blog/"><i class='fa fa-blog'></i><span class="active">Blog</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="navbar-nav d-none d-lg-block">
+    
+  </div>
 </nav>
-
     </header>
     <div class="container-fluid td-outer">
       <div class="td-main">
@@ -180,45 +102,73 @@ if (!doNotTrack) {
 <div id="td-sidebar-menu" class="td-sidebar__inner">
   <form class="td-sidebar__search d-flex align-items-center">
     
-    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
   </form>
-  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+  <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
-      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-blog-li">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-blog-li">
   <a href="/blog/" title="DevBox-Santé Blog" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-blog"><span class="td-sidebar-nav-active-item">Blog</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-blogarticles-li">
-  <a href="/blog/articles/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-blogarticles"><span class="">Articles</span></a>
+  <input type="checkbox" id="m-blogarticles-check"/>
+  <label for="m-blogarticles-check"><a href="/blog/articles/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-blogarticles"><span class="">Articles</span></a></label>
+  
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20220609segur-la-devbox-santc3a9-dans-le-rc3a9fc3a9rentiel-dexigences-hopital-li">
-  <a href="/blog/2022/06/09/segur-la-devbox-sant%C3%A9-dans-le-r%C3%A9f%C3%A9rentiel-dexigences-hopital/" title="SEGUR : la DevBox-Santé dans le référentiel d’exigences Hopital" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20220609segur-la-devbox-santc3a9-dans-le-rc3a9fc3a9rentiel-dexigences-hopital"><span class="">La DevBox-santé et le référentiel d’exigences du couloir Hôpital du SEGUR</span></a>
+  <input type="checkbox" id="m-blog20220609segur-la-devbox-santc3a9-dans-le-rc3a9fc3a9rentiel-dexigences-hopital-check"/>
+  <label for="m-blog20220609segur-la-devbox-santc3a9-dans-le-rc3a9fc3a9rentiel-dexigences-hopital-check"><a href="/blog/2022/06/09/segur-la-devbox-sant%C3%A9-dans-le-r%C3%A9f%C3%A9rentiel-dexigences-hopital/" title="SEGUR : la DevBox-Santé dans le référentiel d’exigences Hopital" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20220609segur-la-devbox-santc3a9-dans-le-rc3a9fc3a9rentiel-dexigences-hopital"><span class="">La DevBox-santé et le référentiel d’exigences du couloir Hôpital du SEGUR</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20220520intc3a9gration-de-lannexe-ci-sis-ins-dans-la-devbox-santc3a9-dmp-li">
-  <a href="/blog/2022/05/20/int%C3%A9gration-de-lannexe-ci-sis-ins-dans-la-devbox-sant%C3%A9-dmp/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20220520intc3a9gration-de-lannexe-ci-sis-ins-dans-la-devbox-santc3a9-dmp"><span class="">Intégration de l’annexe CI-SIS INS dans la DevBox-santé DMP</span></a>
+  <input type="checkbox" id="m-blog20220520intc3a9gration-de-lannexe-ci-sis-ins-dans-la-devbox-santc3a9-dmp-check"/>
+  <label for="m-blog20220520intc3a9gration-de-lannexe-ci-sis-ins-dans-la-devbox-santc3a9-dmp-check"><a href="/blog/2022/05/20/int%C3%A9gration-de-lannexe-ci-sis-ins-dans-la-devbox-sant%C3%A9-dmp/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20220520intc3a9gration-de-lannexe-ci-sis-ins-dans-la-devbox-santc3a9-dmp"><span class="">Intégration de l’annexe CI-SIS INS dans la DevBox-santé DMP</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20220407vc3a9rification-dune-signature-cps-avec-openssl-li">
-  <a href="/blog/2022/04/07/v%C3%A9rification-dune-signature-cps-avec-openssl/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20220407vc3a9rification-dune-signature-cps-avec-openssl"><span class="">Vérification d’une signature CPS avec OpenSSL</span></a>
+  <input type="checkbox" id="m-blog20220407vc3a9rification-dune-signature-cps-avec-openssl-check"/>
+  <label for="m-blog20220407vc3a9rification-dune-signature-cps-avec-openssl-check"><a href="/blog/2022/04/07/v%C3%A9rification-dune-signature-cps-avec-openssl/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20220407vc3a9rification-dune-signature-cps-avec-openssl"><span class="">Vérification d’une signature CPS avec OpenSSL</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20220117discordance-ins-et-pic3a8ce-didentitc3a9-li">
-  <a href="/blog/2022/01/17/discordance-ins-et-pi%C3%A8ce-didentit%C3%A9/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20220117discordance-ins-et-pic3a8ce-didentitc3a9"><span class="">Discordance INS et pièce d&#39;identité</span></a>
+  <input type="checkbox" id="m-blog20220117discordance-ins-et-pic3a8ce-didentitc3a9-check"/>
+  <label for="m-blog20220117discordance-ins-et-pic3a8ce-didentitc3a9-check"><a href="/blog/2022/01/17/discordance-ins-et-pi%C3%A8ce-didentit%C3%A9/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20220117discordance-ins-et-pic3a8ce-didentitc3a9"><span class="">Discordance INS et pièce d&#39;identité</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20210920devbox-santc3a9-dans-un-environnement-rdpcitrix-li">
-  <a href="/blog/2021/09/20/devbox-sant%C3%A9-dans-un-environnement-rdp/citrix/" title="DevBox-santé dans un environnement RDP/Citrix" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20210920devbox-santc3a9-dans-un-environnement-rdpcitrix"><span class="">DevBox-sante RDP Citrix</span></a>
+  <input type="checkbox" id="m-blog20210920devbox-santc3a9-dans-un-environnement-rdpcitrix-check"/>
+  <label for="m-blog20210920devbox-santc3a9-dans-un-environnement-rdpcitrix-check"><a href="/blog/2021/09/20/devbox-sant%C3%A9-dans-un-environnement-rdp/citrix/" title="DevBox-santé dans un environnement RDP/Citrix" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20210920devbox-santc3a9-dans-un-environnement-rdpcitrix"><span class="">DevBox-sante RDP Citrix</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20210610les-mc3a9tadonnc3a9es-des-documents-du-dmp-li">
-  <a href="/blog/2021/06/10/les-m%C3%A9tadonn%C3%A9es-des-documents-du-dmp/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20210610les-mc3a9tadonnc3a9es-des-documents-du-dmp"><span class="">Les métadonnées des documents du DMP</span></a>
+  <input type="checkbox" id="m-blog20210610les-mc3a9tadonnc3a9es-des-documents-du-dmp-check"/>
+  <label for="m-blog20210610les-mc3a9tadonnc3a9es-des-documents-du-dmp-check"><a href="/blog/2021/06/10/les-m%C3%A9tadonn%C3%A9es-des-documents-du-dmp/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20210610les-mc3a9tadonnc3a9es-des-documents-du-dmp"><span class="">Les métadonnées des documents du DMP</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20210601ecps-intc3a9gration-de-prosantc3a9connect-li">
-  <a href="/blog/2021/06/01/ecps-int%C3%A9gration-de-prosant%C3%A9connect/" title="eCPS &gt; Intégration de ProSantéConnect" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20210601ecps-intc3a9gration-de-prosantc3a9connect"><span class="">eCPS &gt; Intégration de ProSantéConnect</span></a>
+  <input type="checkbox" id="m-blog20210601ecps-intc3a9gration-de-prosantc3a9connect-check"/>
+  <label for="m-blog20210601ecps-intc3a9gration-de-prosantc3a9connect-check"><a href="/blog/2021/06/01/ecps-int%C3%A9gration-de-prosant%C3%A9connect/" title="eCPS &gt; Intégration de ProSantéConnect" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20210601ecps-intc3a9gration-de-prosantc3a9connect"><span class="">eCPS &gt; Intégration de ProSantéConnect</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20210527installer-lancer-la-devbox-santc3a9-depuis-un-navigateur-li">
-  <a href="/blog/2021/05/27/installer-lancer-la-devbox-sant%C3%A9-depuis-un-navigateur/" title="Installer &gt; lancer la DevBox-Santé depuis un navigateur" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20210527installer-lancer-la-devbox-santc3a9-depuis-un-navigateur"><span class="">Installer &gt; lancer la DevBox-santé</span></a>
+  <input type="checkbox" id="m-blog20210527installer-lancer-la-devbox-santc3a9-depuis-un-navigateur-check"/>
+  <label for="m-blog20210527installer-lancer-la-devbox-santc3a9-depuis-un-navigateur-check"><a href="/blog/2021/05/27/installer-lancer-la-devbox-sant%C3%A9-depuis-un-navigateur/" title="Installer &gt; lancer la DevBox-Santé depuis un navigateur" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20210527installer-lancer-la-devbox-santc3a9-depuis-un-navigateur"><span class="">Installer &gt; lancer la DevBox-santé</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20210520dmp-matrice-habilitation-li">
-  <a href="/blog/2021/05/20/dmp-matrice-habilitation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20210520dmp-matrice-habilitation"><span class="">DMP &gt; matrice habilitation</span></a>
+  <input type="checkbox" id="m-blog20210520dmp-matrice-habilitation-check"/>
+  <label for="m-blog20210520dmp-matrice-habilitation-check"><a href="/blog/2021/05/20/dmp-matrice-habilitation/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20210520dmp-matrice-habilitation"><span class="">DMP &gt; matrice habilitation</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20210514diagnostiquer-des-problc3a8mes-daccc3a8s-aux-lecteurs-li">
-  <a href="/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/" title="Diagnostiquer des problèmes d&#39;accès aux lecteurs" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20210514diagnostiquer-des-problc3a8mes-daccc3a8s-aux-lecteurs"><span class="">Diagnostiquer vos lecteurs</span></a>
+  <input type="checkbox" id="m-blog20210514diagnostiquer-des-problc3a8mes-daccc3a8s-aux-lecteurs-check"/>
+  <label for="m-blog20210514diagnostiquer-des-problc3a8mes-daccc3a8s-aux-lecteurs-check"><a href="/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/" title="Diagnostiquer des problèmes d&#39;accès aux lecteurs" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20210514diagnostiquer-des-problc3a8mes-daccc3a8s-aux-lecteurs"><span class="">Diagnostiquer vos lecteurs</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20210512gc3a9nc3a9ration-de-la-documentation-de-la-devbox-santc3a9-li">
-  <a href="/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/" title="Génération de la documentation de la DevBox-Santé" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20210512gc3a9nc3a9ration-de-la-documentation-de-la-devbox-santc3a9"><span class="">GoDevBox-Santé avec Hugo</span></a>
+  <input type="checkbox" id="m-blog20210512gc3a9nc3a9ration-de-la-documentation-de-la-devbox-santc3a9-check"/>
+  <label for="m-blog20210512gc3a9nc3a9ration-de-la-documentation-de-la-devbox-santc3a9-check"><a href="/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/" title="Génération de la documentation de la DevBox-Santé" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20210512gc3a9nc3a9ration-de-la-documentation-de-la-devbox-santc3a9"><span class="">GoDevBox-Santé avec Hugo</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20220923glossaire-li">
-  <a href="/blog/2022/09/23/glossaire/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20220923glossaire"><span class="">Glossaire</span></a>
+  <input type="checkbox" id="m-blog20220923glossaire-check"/>
+  <label for="m-blog20220923glossaire-check"><a href="/blog/2022/09/23/glossaire/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20220923glossaire"><span class="">Glossaire</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog10101versions-de-linstaller-li">
-  <a href="/blog/1/01/01/versions-de-linstaller/" title="Versions de l&#39;installer" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog10101versions-de-linstaller"><span class="">Releases</span></a>
+  <input type="checkbox" id="m-blog10101versions-de-linstaller-check"/>
+  <label for="m-blog10101versions-de-linstaller-check"><a href="/blog/1/01/01/versions-de-linstaller/" title="Versions de l&#39;installer" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog10101versions-de-linstaller"><span class="">Releases</span></a></label>
+  
 </li>
   </ul>
 </li>
@@ -230,15 +180,11 @@ if (!doNotTrack) {
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a id="print" href="/blog/_print/"><i class="fa fa-print fa-fw"></i> Imprimer la section entière</a>
+<a id="print" href="/blog/_print/"><i class="fa-solid fa-print fa-fw"></i> Imprimer la section entière</a>
 
 </div>
 
             
-
-
-
-
             
 
 	
@@ -261,8 +207,8 @@ if (!doNotTrack) {
 
           </aside>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role="main">
-            <a class="btn btn-lg -bg-orange td-rss-button d-none d-lg-block" href="/blog/index.xml" target="_blank">
-              RSS <i class="fa fa-rss ml-2 "></i>
+            <a class="td-rss-button" title="RSS" href="/blog/index.xml" target="_blank" rel="noopener">
+              <i class="fa-solid fa-rss" aria-hidden="true"></i>
             </a>
             
 
@@ -272,13 +218,13 @@ if (!doNotTrack) {
 <div class="row">
 	<div class="col-12">
 			
-			<h2>Articles dans 2021</h2>
+			<h2>Articles dans 2022</h2>
 			<ul class="list-unstyled mt-4">
 				
 				<li class="media mb-4">
 					<div class="media-body">
-						<h5 class="mt-0 mb-1"><a href="/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/">Diagnostiquer des problèmes d&#39;accès aux lecteurs</a></h5>
-						<p class="mb-2 mb-md-3"><small class="text-muted">Friday, May 14, 2021 dans Articles</small></p>
+						<h5 class="mt-0 mb-1"><a href="/blog/2022/05/20/int%C3%A9gration-de-lannexe-ci-sis-ins-dans-la-devbox-sant%C3%A9-dmp/">Intégration de l’annexe CI-SIS INS dans la DevBox-santé DMP</a></h5>
+						<p class="mb-2 mb-md-3"><small class="text-muted">Friday, May 20, 2022 dans Articles</small></p>
 						<header class="article-meta">
 							
 
@@ -300,17 +246,16 @@ if (!doNotTrack) {
 
 
 
-						<p class="pt-0 mt-0">Lors de l&rsquo;utilisation de composants de lecteur CPS et de Carte Vitale de la DevBox-Santé, vous pouvez rencontrer des problèmes d&rsquo;accés aux lecteurs.
-Ces problèmes sont dues principalement à deux sources de problème.
-La première, …</p>
-						<p class="pt-0"><a href="/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/" aria-label="Lire plus - Diagnostiquer vos lecteurs">Lire plus</a></p>
+						<p class="pt-0 mt-0">La prise en charge de l’identifiant national de santé (INS) dans les standards d’interopérabilité et les volets du CI-SIS défini dans l’annexe CISIS de l’ANS a impliqué quelques changements dans la DevBox-Santé DMP (version 4.7.7).
+Voici …</p>
+						<p class="pt-0"><a href="/blog/2022/05/20/int%C3%A9gration-de-lannexe-ci-sis-ins-dans-la-devbox-sant%C3%A9-dmp/" aria-label="Lire plus - Intégration de l’annexe CI-SIS INS dans la DevBox-santé DMP">Lire plus</a></p>
 					</div>
 				</li>
 				
 				<li class="media mb-4">
 					<div class="media-body">
-						<h5 class="mt-0 mb-1"><a href="/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/">Génération de la documentation de la DevBox-Santé</a></h5>
-						<p class="mb-2 mb-md-3"><small class="text-muted">Wednesday, May 12, 2021 dans Articles</small></p>
+						<h5 class="mt-0 mb-1"><a href="/blog/2022/06/09/segur-la-devbox-sant%C3%A9-dans-le-r%C3%A9f%C3%A9rentiel-dexigences-hopital/">SEGUR : la DevBox-Santé dans le référentiel d’exigences Hopital</a></h5>
+						<p class="mb-2 mb-md-3"><small class="text-muted">Thursday, June 09, 2022 dans Articles</small></p>
 						<header class="article-meta">
 							
 
@@ -332,20 +277,16 @@ La première, …</p>
 
 
 
-						<p class="pt-0 mt-0">Ça y est nous avons pris le temps de regrouper la documentation disponible de la DevBox-Santé en un seul endroit. Cela donne ce site de documentation, qui pourra s&rsquo;étoffer également d&rsquo;articles parlant de sujet d&rsquo;intégration de la …</p>
-						<p class="pt-0"><a href="/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/" aria-label="Lire plus - GoDevBox-Santé avec Hugo">Lire plus</a></p>
+						<p class="pt-0 mt-0">Outils XDM Scenario HOP-11 Dans le Référentiel d&rsquo;exigences – Hôpital – DPI – Annexe 1 – Vague 1 (xlsx), on peut lire l’exigence HOP-11.
+Le système DOIT proposer une interface pour intégrer, a minima de façon manuelle, voire de façon …</p>
+						<p class="pt-0"><a href="/blog/2022/06/09/segur-la-devbox-sant%C3%A9-dans-le-r%C3%A9f%C3%A9rentiel-dexigences-hopital/" aria-label="Lire plus - La DevBox-santé et le référentiel d’exigences du couloir Hôpital du SEGUR">Lire plus</a></p>
 					</div>
 				</li>
 				
-			</ul>
-			
-			<h2>Articles dans 0001</h2>
-			<ul class="list-unstyled mt-4">
-				
 				<li class="media mb-4">
 					<div class="media-body">
-						<h5 class="mt-0 mb-1"><a href="/blog/1/01/01/versions-de-linstaller/">Versions de l&#39;installer</a></h5>
-						<p class="mb-2 mb-md-3"><small class="text-muted">Monday, January 01, 0001 dans Blog</small></p>
+						<h5 class="mt-0 mb-1"><a href="/blog/2022/09/23/glossaire/">Glossaire</a></h5>
+						<p class="mb-2 mb-md-3"><small class="text-muted">Friday, September 23, 2022 dans Blog</small></p>
 						<header class="article-meta">
 							
 
@@ -367,9 +308,9 @@ La première, …</p>
 
 
 
-						<p class="pt-0 mt-0">Cette section a été déplacée dans /installer/versions
-</p>
-						<p class="pt-0"><a href="/blog/1/01/01/versions-de-linstaller/" aria-label="Lire plus - Releases">Lire plus</a></p>
+						<p class="pt-0 mt-0">Contient tous les noms et accronymes barbares dans le domaine de l’informatique de santé
+AC Autorité de Certification ADELI Automatisation des Listes (répertoires de professionnels de santé en cours de remplacement par le RPPS) AE Autorité …</p>
+						<p class="pt-0"><a href="/blog/2022/09/23/glossaire/" aria-label="Lire plus - Glossaire">Lire plus</a></p>
 					</div>
 				</li>
 				
@@ -460,41 +401,9 @@ La première, …</p>
 
 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-    integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
-    crossorigin="anonymous"></script>
-
-
-
-
-
+    <script src='/js/deflate.js'></script>
+<script src="/js/main.min.b2c228e9d49b9866f2d740684c4b5bc89930c2e83a39650daa082aeede30596e.js" integrity="sha256-ssIo6dSbmGby10BoTEtbyJkwwug6OWUNqggq7t4wWW4=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
-
-
-
-<script src='/js/deflate.js'></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="/js/main.min.6af5d1895b6d3e3786bc1887fc78204760fcfa81f77fb75d98b1f7933dbf4f4e.js" integrity="sha256-avXRiVttPjeGvBiH/HggR2D8&#43;oH3f7ddmLH3kz2/T04=" crossorigin="anonymous"></script>
-
-
 
 
   </body>

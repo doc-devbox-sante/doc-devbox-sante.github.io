@@ -541,5 +541,24 @@ base permettant la création d&amp;rsquo;un DMPCDocument ainsi que son contenu b
       </description>
     </item>
     
+    <item>
+      <title>Dmp: CDA autoprésentable</title>
+      <link>/dmp/cda/autopresentable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/dmp/cda/autopresentable/</guid>
+      <description>
+        
+        
+        &lt;p&gt;La Devbox-santé DMP retourne ce type de document CDA sous trois formes :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;f28f10a2-d288-11ec-8cbb-0050569e46a0-binary.xml&#34;&gt;binaire&lt;/a&gt; , c’est à dire, le document xml contenant le cda et sa feuille de style&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;f28f10a2-d288-11ec-8cbb-0050569e46a0-cda.xml&#34;&gt;cda&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;f28f10a2-d288-11ec-8cbb-0050569e46a0.html&#34;&gt;html&lt;/a&gt;, c’est à dire le rendu html une fois la feuille de style xslt appliquée au cda.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

@@ -140,7 +140,45 @@ Version imprimable multipages.
     
     
 	
-<li>1: <a href="#pg-543a805332bd0423b3101618b1d938a5">Architecture interne des différents composants</a></li>
+<li>1: <a href="#pg-bc101cabb606e03a532ab98e7c662dd2">Howtos</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.1: <a href="#pg-4d669ea2758d08186a649d09451a5b67">Preuves Segur</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-543a805332bd0423b3101618b1d938a5">Architecture interne des différents composants</a></li>
 
 
     
@@ -159,7 +197,7 @@ Version imprimable multipages.
     
     
 	
-<li>2: <a href="#pg-31a3d0d8a67de401d0d1edbc704a0012">Versions</a></li>
+<li>3: <a href="#pg-31a3d0d8a67de401d0d1edbc704a0012">Versions</a></li>
 
 
     
@@ -320,7 +358,330 @@ ils ont tous leur équivalent en REST avec l&rsquo;email passé en paramètre.</
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-543a805332bd0423b3101618b1d938a5">1 - Architecture interne des différents composants</h1>
+	<h1 id="pg-bc101cabb606e03a532ab98e7c662dd2">1 - Howtos</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-4d669ea2758d08186a649d09451a5b67">1.1 - Preuves Segur</h1>
+    <div class="lead">Comment configurer la DevBox-sante MSS pour apporter les preuves SEGUR</div>
+	<h2 id="génération-de-preuves">Génération de preuves</h2>
+<p>Pour générer une preuve, il faut :</p>
+<ol start="0">
+<li>
+<p>configurer la DevBox-Sante MSS sur mailiz de formation via le fichier <code>application.yml</code> :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">mailiz</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">servicesUrl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">authenticationServiceUrl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://mss-idp-igcsante.formation.mssante.fr/openam/SSOSoap/metaAlias/asip/idp</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">igcsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">gammes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ELEMENTAIRE_ORGANISATIONS, ELEMENTAIRE_ORGANISATIONS_TEST</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div></li>
+<li>
+<p>configurer les logs de l’<code>IGCSanteTrustoreManager</code> en debug via le fichier <code>application.yml</code></p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">logging</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">level</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">fr.devboxsante.igsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">DEBUG </span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># à minima</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">fr.devboxsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">DEBUG </span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># pour plus de traces</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><ol start="2">
+<li>
+<p>activer les logs de debug SSL de la JVM : <code>javax.net.debug=ssl:handshake</code></p>
+</li>
+<li>
+<p>lancer la DevBox-Sante MSS avec cette configuration.
+Exemple de ligne de commande depuis l’installation de la devbox-sante :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#204a87">cd</span> <span style="color:#4e9a06">&#34;C:\Program Files\DevBoxSante&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#4e9a06">&#34;jre\bin\java.exe&#34;</span> -Djavax.net.debug<span style="color:#ce5c00;font-weight:bold">=</span>ssl:handshake -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>application.yml -jar <span style="color:#4e9a06">&#34;repository\devboxsante.jar&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Une fois lancée, accéder à l’authentification CPS pour générer les traces nécessaires comparable à celles-ci : <a href="all.log">all.log</a></p>
+<pre tabindex="0"><code class="language-curl" data-lang="curl">curl -X GET &#34;http://localhost:9999/mssante/authentication/cps&#34; -H &#34;accept: */*&#34;
+</code></pre></li>
+</ol>
+<p>Ces traces fournissent les preuves de la prise en compte des exigences [MSS1] (Référentiel socle MSSanté #2 -Clients de Messageries Sécurisées de Santé)</p>
+<h2 id="mss-1-trust-igcsante-seulement">MSS 1 : trust IGCSante seulement</h2>
+<blockquote>
+<p>Un client de messagerie MSSanté doit établir une connexion TLS avec un Opérateur MSSanté, quels que soient les transactions et protocoles utilisés entre les 2 parties.</p>
+</blockquote>
+<h3 id="mss-11-étapes">MSS 1.1 Étapes</h3>
+<ol>
+<li>
+<p>Vérifier que la configuration TLS du logiciel accepte les certificats serveurs IGC Santé de la branche de TEST</p>
+</li>
+<li>
+<p>Monter une connexion TLS depuis le logiciel via une requete HTTP GET sur l&rsquo;URL <a href="https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails">https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails</a>.</p>
+</li>
+</ol>
+<h4 id="111-preuve">1.1.1 Preuve</h4>
+<blockquote>
+<p>Extrait de configuration TLS du client de messagerie.</p>
+</blockquote>
+<p>La DevBox-sante a développé un <code>IGCSanteTrustoreManager</code> spécifique afin de prendre en compte les différentes IGC-Santé définies sur <a href="http://igc-sante.esante.gouv.fr/PC/">http://igc-sante.esante.gouv.fr/PC/</a> . Tous les composants DevBox-Sante comme la MSS peuvent être configurés de manière à accepter les certificats d’une ou plusieurs gammes. Comme par exemple, pour l’environnement de formation de Mailiz :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">igcsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">gammes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ELEMENTAIRE_ORGANISATIONS, ELEMENTAIRE_ORGANISATIONS_TEST</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h4 id="112-preuve">1.1.2 Preuve</h4>
+<blockquote>
+<p>Logs de la connexion TLS</p>
+</blockquote>
+<p>Dans les logs (all.log) on peut s’intéresser à l’initialisation de l’<code>IGCSanteTrustStoreManager</code> :</p>
+<pre tabindex="0"><code>2022-10-12 12:00:29.519  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Initialisation du truststore
+2022-10-12 12:00:29.520  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout du certificat http://igc-sante.esante.gouv.fr/AC/ACI-EL-ORG.cer au trustStore
+2022-10-12 12:00:30.357  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout du certificat http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer au trustStore
+</code></pre><h2 id="mss-2-tlsv12-uniquement">MSS 2 : TLSv1.2 uniquement</h2>
+<blockquote>
+<p>Conformément au référentiel socle MSSanté #2 (Clients de Messageries Sécurisées de Santé):
+Le client de messageries MSSanté du système doit supporter uniquement la version TLS 1.2 pour établir la connexion TLS avec l’Opérateur MSSanté, lors de la négociation TLS. (cf. RFC 2246 - <a href="http://tools.ietf.org/html/rfc2246)">http://tools.ietf.org/html/rfc2246)</a>. Dans le cas contraire, la connexion ne doit pas être établie.</p>
+</blockquote>
+<h4 id="mss-21-scenario">MSS 2.1 Scenario</h4>
+<ol>
+<li>
+<p>Vérifier que la configuration TLS du logiciel accepte les certificats serveurs IGC Santé de la branche de TEST</p>
+</li>
+<li>
+<p>Monter une connexion TLS depuis le logiciel via une requete HTTP GET sur l&rsquo;URL <a href="https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails">https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails</a>.</p>
+</li>
+</ol>
+<h4 id="mss-211-preuve">MSS 2.1.1 Preuve</h4>
+<blockquote>
+<p>Extrait de configuration TLS du client de messagerie.</p>
+</blockquote>
+<p>Réponse :</p>
+<p>Nous utilisons une JVM en version 11 minimale. Lors de l’initialisation d’un contexte SSL via la JVM nous spécifions de manière statique le protocole TLSv1.2.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">SSLContext</span> <span style="color:#000">sslContext</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">SSLContext</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getInstance</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;TLSv1.2&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><h4 id="mss-212-preuve">MSS 2.1.2 Preuve</h4>
+<blockquote>
+<p>Logs de connexion TLS</p>
+</blockquote>
+<p>Dans les logs (all.log) on peut s’intéresser à juste après l’envoi de la requête :</p>
+<pre tabindex="0"><code>2022-10-12 11:43:32.117  INFO 20756 --- [           main] o.a.c.services.AnnuaireService.REQ_OUT   : REQ_OUT
+    Address: https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails
+    HttpMethod: POST
+   ...
+</code></pre><p>le Handshake Message du client demande une TLSv1.2:</p>
+<pre tabindex="0"><code>javax.net.ssl|DEBUG|01|main|2022-10-12 11:43:32.279 CEST|ClientHello.java:653|Produced ClientHello handshake message (
+&#34;ClientHello&#34;: {
+  &#34;client version&#34;      : &#34;TLSv1.2&#34;,
+  ...
+}
+)
+</code></pre><p>et la réponse du serveur valide le protocole :</p>
+<pre tabindex="0"><code>javax.net.ssl|DEBUG|01|main|2022-10-12 11:43:32.337 CEST|ServerHello.java:872|Consuming ServerHello handshake message (
+&#34;ServerHello&#34;: {
+  &#34;server version&#34;      : &#34;TLSv1.2&#34;,
+  ...
+}
+)
+</code></pre><h2 id="mss-3--choix-des-cyphers">MSS 3 : choix des cyphers</h2>
+<blockquote>
+<p>Conformément au référentiel socle MSSanté #2 (Clients de Messageries Sécurisées de Santé) [MSS1] :
+Le client de messageries MSSanté du système doit nécessairement utiliser l’une des suites de chiffrement suivantes, lors de la négociation TLS :</p>
+<ul>
+<li>0xC030: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</li>
+<li>0xC02F: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</li>
+<li>0xC028: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</li>
+<li>0xC027: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA25</li>
+</ul>
+<p>Dans le cas contraire, la connexion ne doit pas être établie.</p>
+</blockquote>
+<h3 id="mss-31-étapes">MSS 3.1 Étapes</h3>
+<ol>
+<li>
+<p>Vérifier que la configuration TLS du logiciel accepte les certificats serveurs IGC Santé de la branche de TEST</p>
+</li>
+<li>
+<p>Monter une connexion TLS depuis le logiciel via une requete HTTP GET sur l&rsquo;URL <a href="https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails">https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails</a>.</p>
+</li>
+</ol>
+<h4 id="mss-311">MSS 3.1.1</h4>
+<blockquote>
+<p>Notre connecteur s’appuie sur la connexion TLS proposé par le serveur Mailiz, le choix du protocole est à l’initiative de l’opérateur.</p>
+</blockquote>
+<h4 id="mss-312">MSS 3.1.2</h4>
+<p>Dans les logs (all.log) on peut s’intéresser à juste après l’envoi de la requête :</p>
+<pre tabindex="0"><code>2022-10-12 11:43:32.117  INFO 20756 --- [           main] o.a.c.services.AnnuaireService.REQ_OUT   : REQ_OUT
+    Address: https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails
+    HttpMethod: POST
+   ...
+</code></pre><p>le Handshake Message du client demande les cyphers suivants :</p>
+<pre tabindex="0"><code class="language-log" data-lang="log">javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.363 CEST|ClientHello.java:653|Produced ClientHello handshake message (
+&#34;ClientHello&#34;: {
+  &#34;client version&#34;      : &#34;TLSv1.2&#34;,
+  ...
+  &#34;cipher suites&#34;       : &#34;[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384(0xC02C), TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256(0xC02B), TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384(0xC030), TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256(0xC02F), TLS_DHE_RSA_WITH_AES_256_GCM_SHA384(0x009F), TLS_DHE_DSS_WITH_AES_256_GCM_SHA384(0x00A3), TLS_DHE_RSA_WITH_AES_128_GCM_SHA256(0x009E), TLS_DHE_DSS_WITH_AES_128_GCM_SHA256(0x00A2), TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384(0xC024), TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384(0xC028), TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256(0xC023), TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256(0xC027), TLS_DHE_RSA_WITH_AES_256_CBC_SHA256(0x006B), TLS_DHE_DSS_WITH_AES_256_CBC_SHA256(0x006A), TLS_DHE_RSA_WITH_AES_128_CBC_SHA256(0x0067), TLS_DHE_DSS_WITH_AES_128_CBC_SHA256(0x0040), TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384(0xC02E), TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384(0xC032), TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256(0xC02D), TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256(0xC031), TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384(0xC026), TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384(0xC02A), TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256(0xC025), TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256(0xC029), TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA(0xC00A), TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA(0xC014), TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA(0xC009), TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA(0xC013), TLS_DHE_RSA_WITH_AES_256_CBC_SHA(0x0039), TLS_DHE_DSS_WITH_AES_256_CBC_SHA(0x0038), TLS_DHE_RSA_WITH_AES_128_CBC_SHA(0x0033), TLS_DHE_DSS_WITH_AES_128_CBC_SHA(0x0032), TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA(0xC005), TLS_ECDH_RSA_WITH_AES_256_CBC_SHA(0xC00F), TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA(0xC004), TLS_ECDH_RSA_WITH_AES_128_CBC_SHA(0xC00E), TLS_RSA_WITH_AES_256_GCM_SHA384(0x009D), TLS_RSA_WITH_AES_128_GCM_SHA256(0x009C), TLS_RSA_WITH_AES_256_CBC_SHA256(0x003D), TLS_RSA_WITH_AES_128_CBC_SHA256(0x003C), TLS_RSA_WITH_AES_256_CBC_SHA(0x0035), TLS_RSA_WITH_AES_128_CBC_SHA(0x002F), TLS_EMPTY_RENEGOTIATION_INFO_SCSV(0x00FF)]&#34;,
+  ...
+}
+)
+</code></pre><p>Le serveur choisit :</p>
+<pre tabindex="0"><code class="language-log" data-lang="log">javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.415 CEST|ServerHello.java:872|Consuming ServerHello handshake message (
+&#34;ServerHello&#34;: {
+  &#34;server version&#34;      : &#34;TLSv1.2&#34;,
+  ...
+  &#34;cipher suite&#34;        : &#34;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384(0xC030)&#34;,
+}
+)
+</code></pre><h2 id="mss-4--certificat-igc-santé">MSS 4 : certificat IGC Santé</h2>
+<blockquote>
+<p>Les clients de messageries MSSanté du système doivent être en capacité d’établir une connexion TLS avec un Opérateur MSSanté présentant un certificat serveur de l’IGC Santé,conformément au référentiel socle MSSanté #2 (Clients de Messageries Sécurisées de Santé) [MSS1].</p>
+</blockquote>
+<h3 id="mss-41-étapes">MSS 4.1 Étapes</h3>
+<ol>
+<li>
+<p>Vérifier que la configuration TLS du logiciel accepte les certificats serveurs IGC Santé de la branche de TEST</p>
+</li>
+<li>
+<p>Monter une connexion TLS depuis le logiciel via une requete HTTP GET sur l&rsquo;URL <a href="https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails">https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails</a>.</p>
+</li>
+</ol>
+<h4 id="mss-411">MSS 4.1.1</h4>
+<blockquote>
+<p>Extrait de configuration des AC supportées par le client de messagerie.</p>
+</blockquote>
+<p>idem 1.1.1</p>
+<h2 id="mss-5-certificat-opérateur-non-expiré">MSS 5 : certificat Opérateur non expiré</h2>
+<blockquote>
+<p>Le client de messageries MSSanté du système DOIT vérifier que le certificat présenté par l’opérateur MSSanté n’est pas expiré, conformément au référentiel socle MSSanté #2 (Clients de Messageries Sécurisées de Santé) [MSS1].</p>
+</blockquote>
+<h3 id="mss-51-étapes">MSS 5.1 Étapes</h3>
+<ol>
+<li>
+<p>Vérifier que la configuration TLS du logiciel accepte les certificats serveurs IGC Santé de la branche de TEST</p>
+</li>
+<li>
+<p>Monter une connexion TLS depuis le logiciel via une requete HTTP GET sur l&rsquo;URL <a href="https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails">https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails</a>.</p>
+</li>
+</ol>
+<h4 id="mss-511">MSS 5.1.1</h4>
+<blockquote>
+<p>Extrait de configuration qui permet de montrer que le client a bien configuré pour respecter cette exigence.</p>
+</blockquote>
+<p>Pas de configuration ici, les traces parlent d’elles mêmes.</p>
+<p>A l’initialisation, l’<code>IGCSanteTrustoreManager</code> vérifie que les CRLS utilisés ne sont pas expirés.</p>
+<pre tabindex="0"><code class="language-log" data-lang="log">2022-10-12 12:00:29.519  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Initialisation du truststore
+2022-10-12 12:00:29.520  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout du certificat http://igc-sante.esante.gouv.fr/AC/ACI-EL-ORG.cer au trustStore
+2022-10-12 12:00:30.357 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE, OU=0002 187512751, O=ASIP-SANTE, C=FR) est : Fri Jun 24 02:00:00 CEST 2033
+2022-10-12 12:00:30.357  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout du certificat http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer au trustStore
+2022-10-12 12:00:30.756 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR) est : Fri Jun 24 02:00:00 CEST 2033
+</code></pre><p>Puis plus tard lors de la vérification du certificat présenté par le serveur :</p>
+<pre tabindex="0"><code>javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.074 CEST|CertificateMessage.java:366|Consuming server Certificate handshake message (
+&#34;Certificates&#34;: [
+  &#34;certificate&#34; : {
+    &#34;version&#34;            : &#34;v3&#34;,
+    &#34;serial number&#34;      : &#34;1D 5D E2 5E 3D C1 4B DE 21 0F 2C 0F 23 0E 86 52&#34;,
+    &#34;signature algorithm&#34;: &#34;SHA256withRSA&#34;,
+    &#34;issuer&#34;             : &#34;CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR&#34;,
+    &#34;not before&#34;         : &#34;2022-06-02 13:49:28.000 CEST&#34;,
+    &#34;not  after&#34;         : &#34;2024-06-02 13:49:28.000 CEST&#34;,
+    ...
+]
+)
+2022-10-12 12:00:40.075 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=mss-msg-igcsante.formation.mssante.fr, OU=300000000099622, O=GIP - TEST9962, ST=Paris (75), C=FR) est : Sun Jun 02 13:49:28 CEST 2024
+2022-10-12 12:00:40.075 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR) est : Fri Jun 24 02:00:00 CEST 2033
+</code></pre><p>On voit que l’<code>IGCSanteTrustoreManager</code> vérifie la date d’expiration de la chaîne de certificats utilisée.</p>
+<h4 id="mss-512">MSS 5.1.2</h4>
+<blockquote>
+<p>Si besoin, extrait du code qui vérifie la non expiration du certificat</p>
+</blockquote>
+<p>Lors de l’initialisation d’une connexion et une fois le certificat validé par le truststore la date d’expiration du certificat présenté par l’opérateur MSS est vérifiée : </p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">log</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">debug</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Date expiration du certificat ({}) est : {}&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">certificat</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getSubjectDN</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">toString</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#000">certificat</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getNotAfter</span><span style="color:#ce5c00;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Instant</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">now</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">isAfter</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">certificat</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getNotAfter</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">toInstant</span><span style="color:#ce5c00;font-weight:bold">()))</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">throw</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">IGCSanteException</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">format</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Le certificat (%s) est expiré. La date d&#39;expiration est : &#34;</span> <span style="color:#ce5c00;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">certificat</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getSubjectDN</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">toString</span><span style="color:#ce5c00;font-weight:bold">(),</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">certificat</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getNotAfter</span><span style="color:#ce5c00;font-weight:bold">())</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="mss-6--non-révocation-du-certificat">MSS 6 : non révocation du certificat</h2>
+<blockquote>
+<p>Le client de messageries MSSanté du système doit vérifier que le certificat présenté par l’Opérateur MSSanté n’est pas révoqué au moyen des CRL ou d’un répondeur OCSP, et ce quelle que soit l’autorité de certification utilisée par un Opérateur MSSanté, conformément au référentiel socle MSSanté #2 (Clients de Messageries Sécurisées de Santé) [MSS1].</p>
+</blockquote>
+<h3 id="mss-61-étapes">MSS 6.1 : Étapes</h3>
+<ol>
+<li>
+<p>Vérifier que la configuration TLS du logiciel accepte les certificats serveurs IGC Santé de la branche de TEST</p>
+</li>
+<li>
+<p>Monter une connexion TLS depuis le logiciel via une requête HTTP GET sur l&rsquo;URL <a href="https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails">https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails</a>.</p>
+</li>
+</ol>
+<h4 id="mss-611">MSS 6.1.1</h4>
+<blockquote>
+<p>Extrait de configuration qui permet de montrer que le client a bien configuré pour respecter cette exigence.</p>
+</blockquote>
+<p>Lors du lancement de la JVM (version 11 minimal) du connecteur MSS un truststore est généré avec un sous ensemble de la gamme de certificats de l’AC définit à l’url suivante : <a href="http://igc-sante.esante.gouv.fr/PC/">http://igc-sante.esante.gouv.fr/PC/</a></p>
+<p>Nous prenons en compte les CRL disponibles pour chaque certificat donné à cette même URL.</p>
+<p>Les logs montrent cette prise en charge :</p>
+<pre tabindex="0"><code class="language-log" data-lang="log">2022-10-12 12:00:30.758  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout de la CRL http://igc-sante.esante.gouv.fr/CRL/ACI-EL-ORG.crl au trustStore
+2022-10-12 12:00:31.848  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout de la CRL http://igc-sante.esante.gouv.fr/CRL/ACI-EL-ORG-TEST.crl au trustStore
+</code></pre><h4 id="msc612">MSC 6.1.2</h4>
+<blockquote>
+<p>Si besoin, extrait du code qui vérifie la non révocation du certificat</p>
+</blockquote>
+<p>L’<code>IGCSanteTrustoreManager</code> est codé pour vérifier les CRLs disponibles sur <a href="http://igc-sante.esante.gouv.fr/PC/">http://igc-sante.esante.gouv.fr/PC/</a>, dont voici l’extrait de code :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">PKIXBuilderParameters</span> <span style="color:#000">pkixParams</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">PKIXBuilderParameters</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">trustStore</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">X509CertSelector</span><span style="color:#ce5c00;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">IGCSanteGammeCertificat</span> <span style="color:#000">gammeCertificat</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">gammeCertificats</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000">String</span> <span style="color:#000">crlUrl</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">gammeCertificat</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getCrlUrl</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000">log</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">info</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Ajout de la CRL {} au trustStore&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">crlUrl</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000">pkixParams</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addCertStore</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">_loadCRL</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">crlUrl</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">pkixParams</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setRevocationEnabled</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">ManagerFactoryParameters</span> <span style="color:#000">trustParams</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">CertPathTrustManagerParameters</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">pkixParams</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-543a805332bd0423b3101618b1d938a5">2 - Architecture interne des différents composants</h1>
     <div class="lead">Pour les intéressés, l&rsquo;architecture interne des différents composants</div>
 	<h2 id="diagramme-de-flux">Diagramme de flux</h2>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
@@ -358,7 +719,7 @@ DevBoxSanteMSS --&gt; LDAP  : ldap
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-31a3d0d8a67de401d0d1edbc704a0012">2 - Versions</h1>
+	<h1 id="pg-31a3d0d8a67de401d0d1edbc704a0012">3 - Versions</h1>
     <div class="lead">Les différentes versions de la DevBox-Santé MS-Santé</div>
 	<h2 id="notesversion-122-05102022">NotesVersion 1.2.2 (05/10/2022)</h2>
 <h3 id="story">Story</h3>

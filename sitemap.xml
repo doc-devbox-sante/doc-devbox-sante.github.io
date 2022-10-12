@@ -51,13 +51,16 @@
     <lastmod>2022-07-27T14:20:00+02:00</lastmod>
   </url><url>
     <loc>/installer/contenu/</loc>
-    <lastmod>2022-05-20T18:24:00+02:00</lastmod>
+    <lastmod>2022-10-12T10:23:51+02:00</lastmod>
   </url><url>
     <loc>/cps/</loc>
-    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
+    <lastmod>2022-10-12T10:23:51+02:00</lastmod>
   </url><url>
     <loc>/dmp/authentifications/directe/</loc>
     <lastmod>2022-09-15T18:37:57+02:00</lastmod>
+  </url><url>
+    <loc>/ms-sante/howtos/preuve_segur/</loc>
+    <lastmod>2022-10-12T18:44:08+02:00</lastmod>
   </url><url>
     <loc>/dmp/howtos/integrateurchecklist/</loc>
     <lastmod>2022-07-28T12:13:18+02:00</lastmod>
@@ -84,7 +87,7 @@
     <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/installer/eureka/</loc>
-    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
+    <lastmod>2022-10-12T10:23:51+02:00</lastmod>
   </url><url>
     <loc>/dmp/cda/structurationminimale/</loc>
     <lastmod>2022-03-18T16:02:23+01:00</lastmod>
@@ -106,6 +109,9 @@
   </url><url>
     <loc>/insi/howtos/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
+  </url><url>
+    <loc>/ms-sante/howtos/</loc>
+    <lastmod>2022-10-12T18:44:08+02:00</lastmod>
   </url><url>
     <loc>/insi/howtos/datamatrix/</loc>
     <lastmod>2022-02-11T18:33:39+01:00</lastmod>
@@ -129,11 +135,13 @@
     <lastmod>2022-10-04T15:14:43+02:00</lastmod>
   </url><url>
     <loc>/installer/flux/</loc>
+    <lastmod>2022-10-12T18:44:08+02:00</lastmod>
   </url><url>
     <loc>/blog/2022/09/23/glossaire/</loc>
     <lastmod>2022-09-23T15:49:29+02:00</lastmod>
   </url><url>
     <loc>/dmp/cda/autopresentable/</loc>
+    <lastmod>2022-10-12T10:23:51+02:00</lastmod>
   </url><url>
     <loc>/dmp/howtos/demo-stellair/</loc>
     <lastmod>2022-07-28T12:13:18+02:00</lastmod>

@@ -1,0 +1,1731 @@
+cd C:\Users\lfo\scm\bitbucket\devbox-sante\MS-SANTE\ms-sante\ms-sante-impl; "JAVA_HOME=C:\\Program Files\\Java\\jdk-11.0.13" M2_HOME=C:\\Users\\lfo\\softwares\\maven\\apache-maven-3.8.5 cmd /c "\"C:\\Users\\lfo\\softwares\\maven\\apache-maven-3.8.5\\bin\\mvn.cmd\" -Dtest=fr.devboxsante.sante.Mss_WithCps_Test -Dfile.encodign=UTF-8 \"-Dmaven.ext.class.path=C:\\Program Files\\NetBeans-15\\netbeans\\java\\maven-nblib\\netbeans-eventspy.jar;C:\\Program Files\\NetBeans-15\\netbeans\\java\\maven-nblib\\netbeans-cos.jar\" surefire:test"
+Running NetBeans Compile On Save execution. Phase execution is skipped and output directories of dependency projects (with Compile on Save turned on) will be used instead of their jar artifacts.
+Scanning for projects...
+
+----------------< fr.devboxsante.mssante:ms-sante-impl >----------------
+Building MS Santé :: impl 1.2.3-SNAPSHOT
+--------------------------------[ jar ]---------------------------------
+
+--- maven-surefire-plugin:2.22.2:test (default-cli) @ ms-sante-impl ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+12:00:26.678 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.680 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+12:00:26.685 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+12:00:26.705 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [fr.devboxsante.sante.Mss_WithCps_Test] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+12:00:26.720 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fr.devboxsante.sante.Mss_WithCps_Test]: class path resource [fr/devboxsante/sante/Mss_WithCps_Test-context.xml] does not exist
+12:00:26.720 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fr.devboxsante.sante.Mss_WithCps_Test]: class path resource [fr/devboxsante/sante/Mss_WithCps_TestContext.groovy] does not exist
+12:00:26.720 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [fr.devboxsante.sante.Mss_WithCps_Test]: no resource found for suffixes {-context.xml, Context.groovy}.
+12:00:26.746 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.842 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [fr.devboxsante.sante.Mss_WithCps_Test]: using defaults.
+12:00:26.842 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+12:00:26.848 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+12:00:26.849 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+12:00:26.850 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+12:00:26.850 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@66565121, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2fc6f97f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3d2ee678, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6179e425, org.springframework.test.context.event.EventPublishingTestExecutionListener@35f26e72, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2d6764b2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@67304a40, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@49c6c24f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6fe1b4fb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@79351f41, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1c32386d]
+12:00:26.851 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.852 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.853 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.853 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.855 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.855 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.873 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.874 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+12:00:26.874 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+12:00:26.874 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [fr.devboxsante.sante.Mss_WithCps_Test] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+12:00:26.875 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fr.devboxsante.sante.Mss_WithCps_Test]: class path resource [fr/devboxsante/sante/Mss_WithCps_Test-context.xml] does not exist
+12:00:26.875 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fr.devboxsante.sante.Mss_WithCps_Test]: class path resource [fr/devboxsante/sante/Mss_WithCps_TestContext.groovy] does not exist
+12:00:26.875 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [fr.devboxsante.sante.Mss_WithCps_Test]: no resource found for suffixes {-context.xml, Context.groovy}.
+12:00:26.877 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.878 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [fr.devboxsante.sante.Mss_WithCps_Test]: using defaults.
+12:00:26.878 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+12:00:26.878 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+12:00:26.879 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+12:00:26.879 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+12:00:26.879 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2072acb2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@50ecde95, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@35a9782c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@70a36a66, org.springframework.test.context.event.EventPublishingTestExecutionListener@45815ffc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@732f29af, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@d3957fe, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6622fc65, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@299321e2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@23fb172e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@64ba3208]
+12:00:26.879 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.879 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.879 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.879 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.879 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.880 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.912 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.913 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.devboxsante.sante.Mss_WithCps_Test]
+Running fr.devboxsante.sante.Mss_WithCps_Test
+12:00:26.915 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.915 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.915 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.915 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.920 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@fb9c7aa testClass = Mss_WithCps_Test, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4c398c80 testClass = Mss_WithCps_Test, locations = '{}', classes = '{class fr.devboxsante.mssante.MssClientApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@126253fd, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5c86a017, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@38145825, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4f49f6af, org.springframework.boot.test.context.SpringBootTestArgs@1], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+12:00:26.924 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.924 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.devboxsante.sante.Mss_WithCps_Test]
+12:00:26.926 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@fb9c7aa testClass = Mss_WithCps_Test, testInstance = fr.devboxsante.sante.Mss_WithCps_Test@30bcf3c1, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4c398c80 testClass = Mss_WithCps_Test, locations = '{}', classes = '{class fr.devboxsante.mssante.MssClientApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@126253fd, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5c86a017, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@38145825, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4f49f6af, org.springframework.boot.test.context.SpringBootTestArgs@1], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
+12:00:26.940 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  ____             ____                                 _                            
+ |  _ \  _____   _| __ )  _____  __     ___  __ _ _ __ | |_ ___        ___ _ __  ___ 
+ | | | |/ _ \ \ / /  _ \ / _ \ \/ /____/ __|/ _` | '_ \| __/ _ \_____ / __| '_ \/ __|
+ | |_| |  __/\ V /| |_) | (_) >  <_____\__ \ (_| | | | | ||  __/_____| (__| |_) \__ \
+ |____/ \___| \_/ |____/ \___/_/\_\    |___/\__,_|_| |_|\__\___|      \___| .__/|___/
+                                                                          |_|        
+
+
+2022-10-12 12:00:27.141  INFO 7092 --- [           main] fr.devboxsante.sante.Mss_WithCps_Test    : Starting Mss_WithCps_Test on lfo-xps15-2 with PID 7092 (started by lfo in C:\Users\lfo\scm\bitbucket\devbox-sante\MS-SANTE\ms-sante\ms-sante-impl)
+2022-10-12 12:00:27.142 DEBUG 7092 --- [           main] fr.devboxsante.sante.Mss_WithCps_Test    : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-12 12:00:27.143  INFO 7092 --- [           main] fr.devboxsante.sante.Mss_WithCps_Test    : No active profile set, falling back to default profiles: default
+2022-10-12 12:00:27.475  INFO 7092 --- [           main] o.o.core.config.InitializationService    : Initializing OpenSAML using the Java Services API
+2022-10-12 12:00:27.837  INFO 7092 --- [           main] o.o.xmlsec.algorithm.AlgorithmRegistry   : Algorithm failed runtime support check, will not be usable: http://www.w3.org/2001/04/xmlenc#ripemd160
+2022-10-12 12:00:27.840  INFO 7092 --- [           main] o.o.xmlsec.algorithm.AlgorithmRegistry   : Algorithm failed runtime support check, will not be usable: http://www.w3.org/2001/04/xmldsig-more#hmac-ripemd160
+2022-10-12 12:00:27.846  INFO 7092 --- [           main] o.o.xmlsec.algorithm.AlgorithmRegistry   : Algorithm failed runtime support check, will not be usable: http://www.w3.org/2001/04/xmldsig-more#rsa-ripemd160
+2022-10-12 12:00:29.505  INFO 7092 --- [           main] fr.devboxsante.cps.internal.SystemUtils  : Path init = null
+2022-10-12 12:00:29.506  INFO 7092 --- [           main] fr.devboxsante.cps.internal.SystemUtils  : OS name = windows 10
+2022-10-12 12:00:29.507  INFO 7092 --- [           main] fr.devboxsante.cps.internal.SystemUtils  : Path init = null
+2022-10-12 12:00:29.507  INFO 7092 --- [           main] fr.devboxsante.cps.internal.SystemUtils  : OS name = windows 10
+2022-10-12 12:00:29.507  INFO 7092 --- [           main] f.d.cps.boot.CpsAutoConfiguration        : springConfigLocation = null
+2022-10-12 12:00:29.507 DEBUG 7092 --- [           main] f.d.cps.boot.CpsAutoConfiguration        : springConfigLocation non spécifiée
+2022-10-12 12:00:29.519  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Initialisation du truststore
+2022-10-12 12:00:29.520  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout du certificat http://igc-sante.esante.gouv.fr/AC/ACI-EL-ORG.cer au trustStore
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:29.528 CEST|SSLCipher.java:438|jdk.tls.keyLimits:  entry = AES/GCM/NoPadding KeyUpdate 2^37. AES/GCM/NOPADDING:KEYUPDATE = 137438953472
+2022-10-12 12:00:30.357 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE, OU=0002 187512751, O=ASIP-SANTE, C=FR) est : Fri Jun 24 02:00:00 CEST 2033
+2022-10-12 12:00:30.357  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout du certificat http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer au trustStore
+2022-10-12 12:00:30.756 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR) est : Fri Jun 24 02:00:00 CEST 2033
+2022-10-12 12:00:30.758  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout de la CRL http://igc-sante.esante.gouv.fr/CRL/ACI-EL-ORG.crl au trustStore
+2022-10-12 12:00:31.848  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout de la CRL http://igc-sante.esante.gouv.fr/CRL/ACI-EL-ORG-TEST.crl au trustStore
+2022-10-12 12:00:32.340  INFO 7092 --- [           main] fr.devboxsante.sante.Mss_WithCps_Test    : Started Mss_WithCps_Test in 5.399 seconds (JVM running for 6.036)
+2022-10-12 12:00:32.571 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : Load module : C:\Windows\System32\cps3_pkcs11_w64.dll
+2022-10-12 12:00:33.100 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _hasSession() : false
+2022-10-12 12:00:33.100 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : init with pinProvider : fr.devboxsante.cps.CpsFacadeImpl$WrappedPinProvider
+2022-10-12 12:00:33.101 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : getAvailableReaders()
+2022-10-12 12:00:33.109 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : 2 readers found
+2022-10-12 12:00:33.109 DEBUG 7092 --- [           main] f.d.cps.providers.PinProviderFrame       : getPin()
+2022-10-12 12:00:33.127 DEBUG 7092 --- [           main] f.d.cps.providers.PinProviderFrame       : _checkErrors()
+2022-10-12 12:00:33.127 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : getAvailableReaders()
+2022-10-12 12:00:33.132 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : 2 readers found
+2022-10-12 12:00:33.136 DEBUG 7092 --- [           main] f.d.cps.providers.PinProviderFrame       : _initInputs()
+2022-10-12 12:00:33.136 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : getAvailableReaders()
+2022-10-12 12:00:33.141 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : 2 readers found
+2022-10-12 12:00:33.142 DEBUG 7092 --- [           main] f.d.cps.providers.PinProviderFrame       : _initReadersInputs()
+2022-10-12 12:00:33.143 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : selectReader(1)
+2022-10-12 12:00:33.158 DEBUG 7092 --- [           main] f.d.cps.providers.PinProviderFrame       : _putLock()
+2022-10-12 12:00:37.597 DEBUG 7092 --- [WT-EventQueue-0] f.d.cps.providers.PinProviderFrame       : _checkErrors()
+2022-10-12 12:00:37.598 DEBUG 7092 --- [WT-EventQueue-0] f.d.cps.internal.IAIKCpsFacadeImpl       : getAvailableReaders()
+2022-10-12 12:00:37.604 DEBUG 7092 --- [WT-EventQueue-0] f.d.cps.internal.IAIKCpsFacadeImpl       : 2 readers found
+2022-10-12 12:00:37.608 DEBUG 7092 --- [WT-EventQueue-0] f.d.cps.providers.PinProviderFrame       : notifyLock()
+2022-10-12 12:00:37.614 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _init(****)
+2022-10-12 12:00:37.614 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _isLogged() : false
+2022-10-12 12:00:37.616 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _hasSession() : false
+2022-10-12 12:00:37.616 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _initSession()
+2022-10-12 12:00:37.616 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : hasCard() : true
+2022-10-12 12:00:37.616 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : selectedSlot : Slot ID: 0x1
+Module: Module Name: C:\Windows\System32\cps3_pkcs11_w64.dll
+2022-10-12 12:00:37.617 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : openSession on token 1
+2022-10-12 12:00:37.619 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : session.login(****)
+2022-10-12 12:00:37.674 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _isLogged() : true
+2022-10-12 12:00:37.674 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _fireLoggedInEvent()
+2022-10-12 12:00:37.681 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _hasSession() : true
+2022-10-12 12:00:37.681 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _isLogged() : true
+2022-10-12 12:00:37.702 DEBUG 7092 --- [           main] fr.devboxsante.cps.asn1.ASN1Decoder      : DER ApplicationSpecific[3]
+    Tagged [0] IMPLICIT 
+        DER Octet String[5] 
+            8025000001                                                          %
+    Tagged [1] IMPLICIT 
+        DER Octet String[5] 
+            2800811112                                                          (
+    Tagged [2] IMPLICIT 
+        DER Octet String[1] 
+            80                                                                  
+    Tagged [3] IMPLICIT 
+        DER Octet String[4] 
+            20201215                                                              
+    Tagged [4] IMPLICIT 
+        DER Octet String[4] 
+            20231215                                                             #
+
+2022-10-12 12:00:37.703 DEBUG 7092 --- [           main] fr.devboxsante.cps.asn1.ASN1Decoder      : DER ApplicationSpecific[4]
+    Tagged [0] IMPLICIT 
+        DER Octet String[1] 
+            16                                                                  
+    Tagged [1] IMPLICIT 
+        DER Octet String[18] 
+            4d45442d4353205250505330303239363134                                MED-CS RPPS0029614
+    Tagged [3] IMPLICIT 
+        DER Octet String[4] 
+            414e4e45                                                            ANNE
+    Tagged [4] IMPLICIT 
+        DER Octet String[4] 
+            414e4e45                                                            ANNE
+
+2022-10-12 12:00:37.704 DEBUG 7092 --- [           main] fr.devboxsante.cps.asn1.ASN1Decoder      : DER ApplicationSpecific[5]
+    Tagged [0] IMPLICIT 
+        DER Octet String[8] 
+            6672202020202020                                                    fr      
+
+2022-10-12 12:00:37.705 DEBUG 7092 --- [           main] fr.devboxsante.cps.asn1.ASN1Decoder      : DER ApplicationSpecific[13]
+    Tagged [0] IMPLICIT 
+        DER Octet String[1] 
+            00                                                                  
+    Tagged [1] IMPLICIT 
+        DER Octet String[12] 
+            383939373030323936313430                                            899700296140
+    Tagged [2] IMPLICIT 
+        DER Octet String[1] 
+            0a                                                                  
+    Tagged [4] IMPLICIT 
+        DER Octet String[18] 
+            4d45442d4353205250505330303239363134                                MED-CS RPPS0029614
+    Tagged [5] IMPLICIT 
+        DER Octet String[4] 
+            534d3236                                                            SM26
+
+2022-10-12 12:00:37.709 DEBUG 7092 --- [           main] fr.devboxsante.cps.asn1.ASN1Decoder      : DER ApplicationSpecific[0]
+    Tagged [0] IMPLICIT 
+        Sequence
+            Tagged [0] IMPLICIT 
+                DER Octet String[1] 
+                    01                                                                  
+            Tagged [1] IMPLICIT 
+                DER Octet String[5] 
+                    2000156836                                                           h6
+            Tagged [2] IMPLICIT 
+                DER Octet String[3] 
+                    999999                                                              
+            Tagged [3] IMPLICIT 
+                DER Octet String[3] 
+                    999999                                                              
+            Tagged [4] IMPLICIT 
+                DER Octet String[1] 
+                    11                                                                  
+
+2022-10-12 12:00:37.711 DEBUG 7092 --- [           main] fr.devboxsante.cps.asn1.ASN1Decoder      : DER ApplicationSpecific[14]
+    Tagged [0] IMPLICIT 
+        DER Octet String[1] 
+            01                                                                  
+    Tagged [1] IMPLICIT 
+        DER Octet String[1] 
+            00                                                                  
+    Tagged [3] IMPLICIT 
+        DER Octet String[1] 
+            01                                                                  
+    Tagged [4] IMPLICIT 
+        DER Octet String[25] 
+            43454e5452452044452053414e544520525050533135363833                  CENTRE DE SANTE RPPS15683
+    Tagged [5] IMPLICIT 
+        DER Octet String[10] 
+            31304230313536383332                                                10B0156832
+    Tagged [6] IMPLICIT 
+        DER Octet String[4] 
+            53413035                                                            SA05
+
+2022-10-12 12:00:37.713 DEBUG 7092 --- [           main] f.d.cps.providers.PinProviderFrame       : selectActivity(1)
+2022-10-12 12:00:37.814  INFO 7092 --- [           main] o.a.c.w.s.f.ReflectionServiceFactoryBean : Creating Service {http://services.msg.mss.asip.fr/}AnnuaireServiceService from class fr.asip.mss.msg.services.AnnuaireService
+2022-10-12 12:00:38.289  INFO 7092 --- [           main] o.a.c.services.AnnuaireService.REQ_OUT   : REQ_OUT
+    Address: https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails
+    HttpMethod: POST
+    Content-Type: text/xml
+    ExchangeId: a7b7e3ba-b7be-4cfd-b2a7-616a7afcd78e
+    ServiceName: AnnuaireServiceService
+    PortName: AnnuaireServicePort
+    PortTypeName: AnnuaireService
+    Headers: {PAOS=ver='urn:liberty:paos:2003-08';'urn:oasis:names:tc:SAML:2.0:profiles:SSO:ecp', SOAPAction="", Accept=application/vnd.paos+xml', Connection=Keep-Alive}
+    Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Header><Action xmlns="http://www.w3.org/2005/08/addressing">http://services.msg.mss.asip.fr/AnnuaireService/listEmails</Action><MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:b4432f07-1d20-40b9-8c92-8b4dfce954d2</MessageID><To xmlns="http://www.w3.org/2005/08/addressing">https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails</To><ReplyTo xmlns="http://www.w3.org/2005/08/addressing"><Address>http://www.w3.org/2005/08/addressing/anonymous</Address></ReplyTo></soap:Header><soap:Body><ns2:listEmails xmlns:ns2="http://services.msg.mss.asip.fr/"><userId>899700296140</userId></ns2:listEmails></soap:Body></soap:Envelope>
+
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.346 CEST|Utilities.java:73|the previous server name in SNI (type=host_name (0), value=mss-msg-igcsante.formation.mssante.fr) was replaced with (type=host_name (0), value=mss-msg-igcsante.formation.mssante.fr)
+javax.net.ssl|WARNING|01|main|2022-10-12 12:00:38.358 CEST|SignatureScheme.java:295|Signature algorithm, ed25519, is not supported by the underlying providers
+javax.net.ssl|WARNING|01|main|2022-10-12 12:00:38.358 CEST|SignatureScheme.java:295|Signature algorithm, ed448, is not supported by the underlying providers
+javax.net.ssl|INFO|01|main|2022-10-12 12:00:38.360 CEST|AlpnExtension.java:178|No available application protocols
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.360 CEST|SSLExtensions.java:260|Ignore, context unavailable extension: application_layer_protocol_negotiation
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.361 CEST|SSLExtensions.java:260|Ignore, context unavailable extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.363 CEST|ClientHello.java:653|Produced ClientHello handshake message (
+"ClientHello": {
+  "client version"      : "TLSv1.2",
+  "random"              : "CB 76 1D 60 2F 39 92 91 10 CF A3 D6 9A 84 B8 C3 3D 08 65 DE 70 C5 79 3D 57 BB C9 41 E9 21 6E 21",
+  "session id"          : "",
+  "cipher suites"       : "[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384(0xC02C), TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256(0xC02B), TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384(0xC030), TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256(0xC02F), TLS_DHE_RSA_WITH_AES_256_GCM_SHA384(0x009F), TLS_DHE_DSS_WITH_AES_256_GCM_SHA384(0x00A3), TLS_DHE_RSA_WITH_AES_128_GCM_SHA256(0x009E), TLS_DHE_DSS_WITH_AES_128_GCM_SHA256(0x00A2), TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384(0xC024), TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384(0xC028), TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256(0xC023), TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256(0xC027), TLS_DHE_RSA_WITH_AES_256_CBC_SHA256(0x006B), TLS_DHE_DSS_WITH_AES_256_CBC_SHA256(0x006A), TLS_DHE_RSA_WITH_AES_128_CBC_SHA256(0x0067), TLS_DHE_DSS_WITH_AES_128_CBC_SHA256(0x0040), TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384(0xC02E), TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384(0xC032), TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256(0xC02D), TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256(0xC031), TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384(0xC026), TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384(0xC02A), TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256(0xC025), TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256(0xC029), TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA(0xC00A), TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA(0xC014), TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA(0xC009), TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA(0xC013), TLS_DHE_RSA_WITH_AES_256_CBC_SHA(0x0039), TLS_DHE_DSS_WITH_AES_256_CBC_SHA(0x0038), TLS_DHE_RSA_WITH_AES_128_CBC_SHA(0x0033), TLS_DHE_DSS_WITH_AES_128_CBC_SHA(0x0032), TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA(0xC005), TLS_ECDH_RSA_WITH_AES_256_CBC_SHA(0xC00F), TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA(0xC004), TLS_ECDH_RSA_WITH_AES_128_CBC_SHA(0xC00E), TLS_RSA_WITH_AES_256_GCM_SHA384(0x009D), TLS_RSA_WITH_AES_128_GCM_SHA256(0x009C), TLS_RSA_WITH_AES_256_CBC_SHA256(0x003D), TLS_RSA_WITH_AES_128_CBC_SHA256(0x003C), TLS_RSA_WITH_AES_256_CBC_SHA(0x0035), TLS_RSA_WITH_AES_128_CBC_SHA(0x002F), TLS_EMPTY_RENEGOTIATION_INFO_SCSV(0x00FF)]",
+  "compression methods" : "00",
+  "extensions"          : [
+    "server_name (0)": {
+      type=host_name (0), value=mss-msg-igcsante.formation.mssante.fr
+    },
+    "status_request (5)": {
+      "certificate status type": ocsp
+      "OCSP status request": {
+        "responder_id": <empty>
+        "request extensions": {
+          <empty>
+        }
+      }
+    },
+    "supported_groups (10)": {
+      "versions": [x25519, secp256r1, secp384r1, secp521r1, x448, ffdhe2048, ffdhe3072, ffdhe4096, ffdhe6144, ffdhe8192]
+    },
+    "ec_point_formats (11)": {
+      "formats": [uncompressed]
+    },
+    "signature_algorithms (13)": {
+      "signature schemes": [ecdsa_secp256r1_sha256, ecdsa_secp384r1_sha384, ecdsa_secp521r1_sha512, rsa_pss_rsae_sha256, rsa_pss_rsae_sha384, rsa_pss_rsae_sha512, rsa_pss_pss_sha256, rsa_pss_pss_sha384, rsa_pss_pss_sha512, rsa_pkcs1_sha256, rsa_pkcs1_sha384, rsa_pkcs1_sha512, dsa_sha256, ecdsa_sha1, rsa_pkcs1_sha1, dsa_sha1]
+    },
+    "signature_algorithms_cert (50)": {
+      "signature schemes": [ecdsa_secp256r1_sha256, ecdsa_secp384r1_sha384, ecdsa_secp521r1_sha512, rsa_pss_rsae_sha256, rsa_pss_rsae_sha384, rsa_pss_rsae_sha512, rsa_pss_pss_sha256, rsa_pss_pss_sha384, rsa_pss_pss_sha512, rsa_pkcs1_sha256, rsa_pkcs1_sha384, rsa_pkcs1_sha512, dsa_sha256, ecdsa_sha1, rsa_pkcs1_sha1, dsa_sha1]
+    },
+    "status_request_v2 (17)": {
+      "cert status request": {
+        "certificate status type": ocsp_multi
+        "OCSP status request": {
+          "responder_id": <empty>
+          "request extensions": {
+            <empty>
+          }
+        }
+      }
+    },
+    "extended_master_secret (23)": {
+      <empty>
+    },
+    "supported_versions (43)": {
+      "versions": [TLSv1.2]
+    }
+  ]
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.415 CEST|ServerHello.java:872|Consuming ServerHello handshake message (
+"ServerHello": {
+  "server version"      : "TLSv1.2",
+  "random"              : "7F 4B CB B3 CF 43 FE 8B 29 B0 36 61 B0 23 CE 3F 58 0B 1A 6F B8 F7 78 CD 1D 98 F5 A2 E6 75 B4 69",
+  "session id"          : "C9 81 30 CC 16 00 5A DD D6 8E 82 01 85 81 65 0F 7E E9 BC C2 45 A3 D7 8E A8 BC 8B 0D 8B 71 B6 92",
+  "cipher suite"        : "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384(0xC030)",
+  "compression methods" : "00",
+  "extensions"          : [
+    "renegotiation_info (65,281)": {
+      "renegotiated connection": [<no renegotiated connection>]
+    },
+    "ec_point_formats (11)": {
+      "formats": [uncompressed, ansiX962_compressed_prime, ansiX962_compressed_char2]
+    }
+  ]
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.416 CEST|SSLExtensions.java:173|Ignore unavailable extension: supported_versions
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.416 CEST|ServerHello.java:968|Negotiated protocol version: TLSv1.2
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.416 CEST|SSLExtensions.java:192|Consumed extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.416 CEST|SSLExtensions.java:173|Ignore unavailable extension: server_name
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.416 CEST|SSLExtensions.java:173|Ignore unavailable extension: max_fragment_length
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.416 CEST|SSLExtensions.java:173|Ignore unavailable extension: status_request
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.416 CEST|SSLExtensions.java:192|Consumed extension: ec_point_formats
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.417 CEST|SSLExtensions.java:173|Ignore unavailable extension: status_request_v2
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.417 CEST|SSLExtensions.java:192|Consumed extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.417 CEST|SSLExtensions.java:207|Ignore unavailable extension: server_name
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.417 CEST|SSLExtensions.java:207|Ignore unavailable extension: max_fragment_length
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.417 CEST|SSLExtensions.java:207|Ignore unavailable extension: status_request
+javax.net.ssl|WARNING|01|main|2022-10-12 12:00:38.417 CEST|SSLExtensions.java:215|Ignore impact of unsupported extension: ec_point_formats
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.417 CEST|SSLExtensions.java:207|Ignore unavailable extension: application_layer_protocol_negotiation
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.417 CEST|SSLExtensions.java:207|Ignore unavailable extension: status_request_v2
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.417 CEST|SSLExtensions.java:207|Ignore unavailable extension: extended_master_secret
+javax.net.ssl|WARNING|01|main|2022-10-12 12:00:38.417 CEST|SSLExtensions.java:215|Ignore impact of unsupported extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.423 CEST|CertificateMessage.java:366|Consuming server Certificate handshake message (
+"Certificates": [
+  "certificate" : {
+    "version"            : "v3",
+    "serial number"      : "1D 5D E2 5E 3D C1 4B DE 21 0F 2C 0F 23 0E 86 52",
+    "signature algorithm": "SHA256withRSA",
+    "issuer"             : "CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR",
+    "not before"         : "2022-06-02 13:49:28.000 CEST",
+    "not  after"         : "2024-06-02 13:49:28.000 CEST",
+    "subject"            : "CN=mss-msg-igcsante.formation.mssante.fr, OU=300000000099622, O=GIP - TEST9962, ST=Paris (75), C=FR",
+    "subject public key" : "RSA",
+    "extensions"         : [
+      {
+        ObjectId: 1.2.250.1.71.1.2.5 Criticality=false
+      },
+      {
+        ObjectId: 1.3.6.1.5.5.7.1.1 Criticality=false
+        AuthorityInfoAccess [
+          [
+           accessMethod: ocsp
+           accessLocation: URIName: http://ocsp.esante.gouv.fr
+        , 
+           accessMethod: caIssuers
+           accessLocation: URIName: http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.35 Criticality=false
+        AuthorityKeyIdentifier [
+        KeyIdentifier [
+        0000: 21 2E 84 7D 3B 1E F5 12   DE 51 A2 21 5C AE 93 A8  !...;....Q.!\...
+        0010: EF 5B E3 F5                                        .[..
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.19 Criticality=false
+        BasicConstraints:[
+          CA:false
+          PathLen: undefined
+        ]
+      },
+      {
+        ObjectId: 2.5.29.31 Criticality=false
+        CRLDistributionPoints [
+          [DistributionPoint:
+             [URIName: http://igc-sante.esante.gouv.fr/CRL/ACI-EL-ORG-TEST.crl]
+        , DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/cn=TEST%20AC%20IGC-SANTE%20ELEMENTAIRE%20ORGANISATIONS,ou=TEST%20AC%20RACINE%20IGC-SANTE%20ELEMENTAIRE,ou=IGC-SANTE%20TEST,ou=0002%20187512751,o=ASIP-SANTE,c=FR?certificaterevocationlist;binary?base?objectClass=pkiCA]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.32 Criticality=false
+        CertificatePolicies [
+          [CertificatePolicyId: [1.2.250.1.213.1.7.2.1.1.1.1]
+        [PolicyQualifierInfo: [
+          qualifierID: 1.3.6.1.5.5.7.2.1
+          qualifier: 0000: 16 29 68 74 74 70 3A 2F   2F 69 67 63 2D 73 61 6E  .)http://igc-san
+        0010: 74 65 2E 65 73 61 6E 74   65 2E 67 6F 75 76 2E 66  te.esante.gouv.f
+        0020: 72 2F 50 43 25 32 30 54   45 53 54                 r/PC%20TEST
+        
+        ]]  ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.37 Criticality=false
+        ExtendedKeyUsages [
+          serverAuth
+          clientAuth
+        ]
+      },
+      {
+        ObjectId: 2.5.29.46 Criticality=false
+        FreshestCRL [
+          [DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/cn=TEST%20AC%20IGC-SANTE%20ELEMENTAIRE%20ORGANISATIONS,ou=TEST%20AC%20RACINE%20IGC-SANTE%20ELEMENTAIRE,ou=IGC-SANTE%20TEST,ou=0002%20187512751,o=ASIP-SANTE,c=FR?deltarevocationlist;binary?base?objectClass=pkiCA]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.15 Criticality=true
+        KeyUsage [
+          DigitalSignature
+          Key_Encipherment
+        ]
+      },
+      {
+        ObjectId: 2.5.29.17 Criticality=false
+        SubjectAlternativeName [
+          DNSName: mss-msg-igcsante.formation.mssante.fr
+        ]
+      },
+      {
+        ObjectId: 2.5.29.14 Criticality=false
+        SubjectKeyIdentifier [
+        KeyIdentifier [
+        0000: 7C C2 8A BF AB F2 40 56   48 DD 78 75 9B A6 42 F9  ......@VH.xu..B.
+        0010: 04 05 4D D4                                        ..M.
+        ]
+        ]
+      }
+    ]},
+  "certificate" : {
+    "version"            : "v3",
+    "serial number"      : "11 20 61 F3 C6 E8 4F C2 EF B1 8B F5 25 8E 1D EB 4E C6",
+    "signature algorithm": "SHA256withRSA",
+    "issuer"             : "CN=TEST AC RACINE IGC-SANTE ELEMENTAIRE, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR",
+    "not before"         : "2013-06-25 02:00:00.000 CEST",
+    "not  after"         : "2033-06-24 02:00:00.000 CEST",
+    "subject"            : "CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR",
+    "subject public key" : "RSA",
+    "extensions"         : [
+      {
+        ObjectId: 2.5.29.35 Criticality=false
+        AuthorityKeyIdentifier [
+        KeyIdentifier [
+        0000: 9C AD 86 BB A6 AA CA C5   61 3A 04 B0 47 FD DC 3B  ........a:..G..;
+        0010: CD 3D 57 F4                                        .=W.
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.19 Criticality=true
+        BasicConstraints:[
+          CA:true
+          PathLen:0
+        ]
+      },
+      {
+        ObjectId: 2.5.29.31 Criticality=false
+        CRLDistributionPoints [
+          [DistributionPoint:
+             [URIName: http://igc-sante.esante.gouv.fr/CRL/ACR-EL-TEST.crl]
+        , DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/CN=TEST%20AC%20RACINE%20IGC-SANTE%20ELEMENTAIRE,OU=IGC-SANTE%20TEST,OU=0002%20187512751,O=ASIP-SANTE,C=FR?certificaterevocationlist;binary?base?objectclass=pkiCa]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.32 Criticality=false
+        CertificatePolicies [
+          [CertificatePolicyId: [2.5.29.32.0]
+        [PolicyQualifierInfo: [
+          qualifierID: 1.3.6.1.5.5.7.2.1
+          qualifier: 0000: 16 29 68 74 74 70 3A 2F   2F 69 67 63 2D 73 61 6E  .)http://igc-san
+        0010: 74 65 2E 65 73 61 6E 74   65 2E 67 6F 75 76 2E 66  te.esante.gouv.f
+        0020: 72 2F 50 43 25 32 30 54   45 53 54                 r/PC%20TEST
+        
+        ]]  ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.15 Criticality=true
+        KeyUsage [
+          Key_CertSign
+          Crl_Sign
+        ]
+      },
+      {
+        ObjectId: 2.5.29.14 Criticality=false
+        SubjectKeyIdentifier [
+        KeyIdentifier [
+        0000: 21 2E 84 7D 3B 1E F5 12   DE 51 A2 21 5C AE 93 A8  !...;....Q.!\...
+        0010: EF 5B E3 F5                                        .[..
+        ]
+        ]
+      }
+    ]}
+]
+)
+2022-10-12 12:00:38.423 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=mss-msg-igcsante.formation.mssante.fr, OU=300000000099622, O=GIP - TEST9962, ST=Paris (75), C=FR) est : Sun Jun 02 13:49:28 CEST 2024
+2022-10-12 12:00:38.424 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR) est : Fri Jun 24 02:00:00 CEST 2033
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.443 CEST|ECDHServerKeyExchange.java:523|Consuming ECDH ServerKeyExchange handshake message (
+"ECDH ServerKeyExchange": {
+  "parameters": {
+    "named group": "secp256r1"
+    "ecdh public": {
+      0000: 04 AA 00 6D 04 12 7C 51   C0 9B FC 4C E9 DF FB 03  ...m...Q...L....
+      0010: E4 88 25 F2 A4 6A B5 EF   96 09 95 7B 36 25 B3 CF  ..%..j......6%..
+      0020: C3 21 E1 4F 77 64 A8 DD   A1 9D 6D 46 34 2C E8 25  .!.Owd....mF4,.%
+      0030: 93 6C 24 DC 17 B9 6F E4   15 16 63 54 64 F3 47 25  .l$...o...cTd.G%
+      0040: 37                                                 7
+    },
+  },
+  "digital signature":  {
+    "signature algorithm": "rsa_pkcs1_sha512"
+    "signature": {
+      0000: 8F D3 8B 0B EE 5E 3F 6F   1D 36 EA 7D B5 2E 17 71  .....^?o.6.....q
+      0010: 1B C4 23 4E 06 12 C2 A8   E2 75 95 FB 94 48 64 51  ..#N.....u...HdQ
+      0020: 6C 0A 0D AE 9D 14 8E 88   A6 21 FF E6 C6 56 4C A8  l........!...VL.
+      0030: 5D 40 80 5F 5A 39 E1 4E   49 96 D6 E6 00 5B 50 B8  ]@._Z9.NI....[P.
+      0040: 9E F6 E5 B2 1B B1 FF 9F   85 5A 07 EE A5 5F B6 C1  .........Z..._..
+      0050: 3B 45 D3 DF 01 B2 96 24   62 B7 1C 82 48 DC 4D 41  ;E.....$b...H.MA
+      0060: A3 A8 6D 6A A2 68 20 2E   32 4C 80 00 C7 75 2C D3  ..mj.h .2L...u,.
+      0070: 10 2E 13 18 F2 C4 02 20   9C 3E 09 26 1B 71 FF 20  ....... .>.&.q. 
+      0080: EC 31 D1 9A 77 D9 78 6C   0C 65 68 15 1A 57 39 DD  .1..w.xl.eh..W9.
+      0090: E9 10 A0 5A 0E FA 6F 0F   47 59 47 11 CA 46 85 0A  ...Z..o.GYG..F..
+      00A0: 98 F5 8F 74 6B 50 C5 55   BC 19 29 86 98 0E 9E 71  ...tkP.U..)....q
+      00B0: 62 8F E8 6C 4F 5D D1 CA   D5 D4 DE 91 4E C3 EC DF  b..lO]......N...
+      00C0: 41 88 40 A8 E4 8A 5E B5   57 F8 C6 57 B3 F8 4F 8F  A.@...^.W..W..O.
+      00D0: 53 12 F1 95 B2 F6 FF 24   89 37 17 2B 2B A3 6B 82  S......$.7.++.k.
+      00E0: 92 FF 35 E6 D7 4A E9 8A   D3 6E E8 ED 3C B0 E0 23  ..5..J...n..<..#
+      00F0: 25 ED BE 2D 6D 3E B8 5F   CD FE FD 5A 97 01 30 43  %..-m>._...Z..0C
+    },
+  }
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.444 CEST|ServerHelloDone.java:151|Consuming ServerHelloDone handshake message (
+<empty>
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.452 CEST|ECDHClientKeyExchange.java:409|Produced ECDHE ClientKeyExchange handshake message (
+"ECDH ClientKeyExchange": {
+  "ecdh public": {
+    0000: 04 BB BC D7 4C 75 A7 F5   2E 52 44 19 6F B8 AF CC  ....Lu...RD.o...
+    0010: 51 EE 58 A4 8A 2D 13 E6   BF 79 26 EB 13 78 D3 CA  Q.X..-...y&..x..
+    0020: B4 17 5E D3 1F AF 7E 7D   B4 2A 76 D8 DC AA 04 B3  ..^......*v.....
+    0030: FA FE E5 69 0C 0C F2 F9   73 1E C3 BE 5A 29 C8 55  ...i....s...Z).U
+    0040: 02                                                 .
+  },
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.462 CEST|ChangeCipherSpec.java:115|Produced ChangeCipherSpec message
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.462 CEST|Finished.java:398|Produced client Finished handshake message (
+"Finished": {
+  "verify data": {
+    0000: 7C 3C 69 A6 0E AB AA 7C   47 1E CF 3B 
+  }'}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.512 CEST|ChangeCipherSpec.java:149|Consuming ChangeCipherSpec message
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.514 CEST|Finished.java:535|Consuming server Finished handshake message (
+"Finished": {
+  "verify data": {
+    0000: 46 F4 14 4B 92 5E 3E 3C   1A 0D 33 16 
+  }'}
+)
+2022-10-12 12:00:38.597 DEBUG 7092 --- [           main] f.d.mssante.paos.PAOSInterceptor         : handling authentication Request
+2022-10-12 12:00:38.677  INFO 7092 --- [           main] f.d.mssante.paos.PAOSInterceptor         : cookieHeader : ROUTEID=.MOB_1; path=/; DOMAIN=.formation.mssante.fr
+2022-10-12 12:00:38.677  INFO 7092 --- [           main] f.d.mssante.paos.PAOSInterceptor         : cookieHeader : JSESSIONID=AE3B7536F5AFFFF55B536F0F1A9BCABC.MOB_2; Path=/mss-msg-services-igcsante; Secure; HttpOnly
+2022-10-12 12:00:38.678 DEBUG 7092 --- [           main] f.d.mssante.paos.PAOSInterceptor         : sessionId from request : JSESSIONID=AE3B7536F5AFFFF55B536F0F1A9BCABC.MOB_2
+2022-10-12 12:00:38.678  INFO 7092 --- [           main] f.d.mssante.paos.PAOSInterceptor         : cookieHeader : SessionStatId=b7ba464b.5ead376f86eb3; path=/; expires=Thu, 10-Oct-30 10:00:38 GMT; domain=.mss.sii.local
+2022-10-12 12:00:38.678 DEBUG 7092 --- [           main] f.d.mssante.paos.PAOSInterceptor         : sessionId is : JSESSIONID=AE3B7536F5AFFFF55B536F0F1A9BCABC.MOB_2
+2022-10-12 12:00:38.678 DEBUG 7092 --- [           main] f.d.mssante.paos.PAOSInterceptor         : finally sessionId is : JSESSIONID=AE3B7536F5AFFFF55B536F0F1A9BCABC.MOB_2
+2022-10-12 12:00:38.678 DEBUG 7092 --- [           main] f.d.mssante.paos.PAOSInterceptor         : finally store MssSessionId : JSESSIONID=AE3B7536F5AFFFF55B536F0F1A9BCABC.MOB_2
+2022-10-12 12:00:38.678 DEBUG 7092 --- [           main] f.d.m.security.cps.CpsPAOSAuthenticator  : authenticateLocal : Perform PAOS authentication
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.802 CEST|Utilities.java:73|the previous server name in SNI (type=host_name (0), value=mss-idp-igcsante.formation.mssante.fr) was replaced with (type=host_name (0), value=mss-idp-igcsante.formation.mssante.fr)
+javax.net.ssl|INFO|01|main|2022-10-12 12:00:38.810 CEST|AlpnExtension.java:178|No available application protocols
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.810 CEST|SSLExtensions.java:260|Ignore, context unavailable extension: application_layer_protocol_negotiation
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.810 CEST|SSLExtensions.java:260|Ignore, context unavailable extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.811 CEST|ClientHello.java:653|Produced ClientHello handshake message (
+"ClientHello": {
+  "client version"      : "TLSv1.2",
+  "random"              : "7E 1D 92 63 A1 BE 54 86 15 FC 0F 72 40 DB A4 90 48 C7 83 35 C3 6F D5 50 66 2B 08 8A 9A 2E 27 4F",
+  "session id"          : "",
+  "cipher suites"       : "[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384(0xC02C), TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256(0xC02B), TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384(0xC030), TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256(0xC02F), TLS_DHE_RSA_WITH_AES_256_GCM_SHA384(0x009F), TLS_DHE_DSS_WITH_AES_256_GCM_SHA384(0x00A3), TLS_DHE_RSA_WITH_AES_128_GCM_SHA256(0x009E), TLS_DHE_DSS_WITH_AES_128_GCM_SHA256(0x00A2), TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384(0xC024), TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384(0xC028), TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256(0xC023), TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256(0xC027), TLS_DHE_RSA_WITH_AES_256_CBC_SHA256(0x006B), TLS_DHE_DSS_WITH_AES_256_CBC_SHA256(0x006A), TLS_DHE_RSA_WITH_AES_128_CBC_SHA256(0x0067), TLS_DHE_DSS_WITH_AES_128_CBC_SHA256(0x0040), TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384(0xC02E), TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384(0xC032), TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256(0xC02D), TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256(0xC031), TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384(0xC026), TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384(0xC02A), TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256(0xC025), TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256(0xC029), TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA(0xC00A), TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA(0xC014), TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA(0xC009), TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA(0xC013), TLS_DHE_RSA_WITH_AES_256_CBC_SHA(0x0039), TLS_DHE_DSS_WITH_AES_256_CBC_SHA(0x0038), TLS_DHE_RSA_WITH_AES_128_CBC_SHA(0x0033), TLS_DHE_DSS_WITH_AES_128_CBC_SHA(0x0032), TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA(0xC005), TLS_ECDH_RSA_WITH_AES_256_CBC_SHA(0xC00F), TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA(0xC004), TLS_ECDH_RSA_WITH_AES_128_CBC_SHA(0xC00E), TLS_RSA_WITH_AES_256_GCM_SHA384(0x009D), TLS_RSA_WITH_AES_128_GCM_SHA256(0x009C), TLS_RSA_WITH_AES_256_CBC_SHA256(0x003D), TLS_RSA_WITH_AES_128_CBC_SHA256(0x003C), TLS_RSA_WITH_AES_256_CBC_SHA(0x0035), TLS_RSA_WITH_AES_128_CBC_SHA(0x002F), TLS_EMPTY_RENEGOTIATION_INFO_SCSV(0x00FF)]",
+  "compression methods" : "00",
+  "extensions"          : [
+    "server_name (0)": {
+      type=host_name (0), value=mss-idp-igcsante.formation.mssante.fr
+    },
+    "status_request (5)": {
+      "certificate status type": ocsp
+      "OCSP status request": {
+        "responder_id": <empty>
+        "request extensions": {
+          <empty>
+        }
+      }
+    },
+    "supported_groups (10)": {
+      "versions": [x25519, secp256r1, secp384r1, secp521r1, x448, ffdhe2048, ffdhe3072, ffdhe4096, ffdhe6144, ffdhe8192]
+    },
+    "ec_point_formats (11)": {
+      "formats": [uncompressed]
+    },
+    "signature_algorithms (13)": {
+      "signature schemes": [ecdsa_secp256r1_sha256, ecdsa_secp384r1_sha384, ecdsa_secp521r1_sha512, rsa_pss_rsae_sha256, rsa_pss_rsae_sha384, rsa_pss_rsae_sha512, rsa_pss_pss_sha256, rsa_pss_pss_sha384, rsa_pss_pss_sha512, rsa_pkcs1_sha256, rsa_pkcs1_sha384, rsa_pkcs1_sha512, dsa_sha256, ecdsa_sha1, rsa_pkcs1_sha1, dsa_sha1]
+    },
+    "signature_algorithms_cert (50)": {
+      "signature schemes": [ecdsa_secp256r1_sha256, ecdsa_secp384r1_sha384, ecdsa_secp521r1_sha512, rsa_pss_rsae_sha256, rsa_pss_rsae_sha384, rsa_pss_rsae_sha512, rsa_pss_pss_sha256, rsa_pss_pss_sha384, rsa_pss_pss_sha512, rsa_pkcs1_sha256, rsa_pkcs1_sha384, rsa_pkcs1_sha512, dsa_sha256, ecdsa_sha1, rsa_pkcs1_sha1, dsa_sha1]
+    },
+    "status_request_v2 (17)": {
+      "cert status request": {
+        "certificate status type": ocsp_multi
+        "OCSP status request": {
+          "responder_id": <empty>
+          "request extensions": {
+            <empty>
+          }
+        }
+      }
+    },
+    "extended_master_secret (23)": {
+      <empty>
+    },
+    "supported_versions (43)": {
+      "versions": [TLSv1.2]
+    }
+  ]
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|ServerHello.java:872|Consuming ServerHello handshake message (
+"ServerHello": {
+  "server version"      : "TLSv1.2",
+  "random"              : "45 F0 CD 3A 23 89 F3 46 71 07 82 83 A7 32 80 4E 90 54 55 84 5E 8A 07 06 44 24 4F B2 F6 BF BC 9F",
+  "session id"          : "A2 D4 27 9D 3A 8E 33 9B 68 DA 30 9B 02 4F 9A 20 71 8A 52 23 AB 77 D7 8C E6 AC 1A 8B B6 FA 56 B6",
+  "cipher suite"        : "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384(0xC030)",
+  "compression methods" : "00",
+  "extensions"          : [
+    "renegotiation_info (65,281)": {
+      "renegotiated connection": [<no renegotiated connection>]
+    },
+    "ec_point_formats (11)": {
+      "formats": [uncompressed, ansiX962_compressed_prime, ansiX962_compressed_char2]
+    }
+  ]
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:173|Ignore unavailable extension: supported_versions
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|ServerHello.java:968|Negotiated protocol version: TLSv1.2
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:192|Consumed extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:173|Ignore unavailable extension: server_name
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:173|Ignore unavailable extension: max_fragment_length
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:173|Ignore unavailable extension: status_request
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:192|Consumed extension: ec_point_formats
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:173|Ignore unavailable extension: status_request_v2
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:192|Consumed extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:207|Ignore unavailable extension: server_name
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:207|Ignore unavailable extension: max_fragment_length
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:207|Ignore unavailable extension: status_request
+javax.net.ssl|WARNING|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:215|Ignore impact of unsupported extension: ec_point_formats
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:207|Ignore unavailable extension: application_layer_protocol_negotiation
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:207|Ignore unavailable extension: status_request_v2
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:207|Ignore unavailable extension: extended_master_secret
+javax.net.ssl|WARNING|01|main|2022-10-12 12:00:38.867 CEST|SSLExtensions.java:215|Ignore impact of unsupported extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.870 CEST|CertificateMessage.java:366|Consuming server Certificate handshake message (
+"Certificates": [
+  "certificate" : {
+    "version"            : "v3",
+    "serial number"      : "1D 5D E2 5E 3D C1 4B DE B7 F5 6F 4A 37 32 E4 4B",
+    "signature algorithm": "SHA256withRSA",
+    "issuer"             : "CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR",
+    "not before"         : "2022-06-02 14:01:29.000 CEST",
+    "not  after"         : "2024-06-02 14:01:29.000 CEST",
+    "subject"            : "CN=mss-idp-igcsante.formation.mssante.fr, OU=300000000099622, O=GIP - TEST9962, ST=Paris (75), C=FR",
+    "subject public key" : "RSA",
+    "extensions"         : [
+      {
+        ObjectId: 1.2.250.1.71.1.2.5 Criticality=false
+      },
+      {
+        ObjectId: 1.3.6.1.5.5.7.1.1 Criticality=false
+        AuthorityInfoAccess [
+          [
+           accessMethod: ocsp
+           accessLocation: URIName: http://ocsp.esante.gouv.fr
+        , 
+           accessMethod: caIssuers
+           accessLocation: URIName: http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.35 Criticality=false
+        AuthorityKeyIdentifier [
+        KeyIdentifier [
+        0000: 21 2E 84 7D 3B 1E F5 12   DE 51 A2 21 5C AE 93 A8  !...;....Q.!\...
+        0010: EF 5B E3 F5                                        .[..
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.19 Criticality=false
+        BasicConstraints:[
+          CA:false
+          PathLen: undefined
+        ]
+      },
+      {
+        ObjectId: 2.5.29.31 Criticality=false
+        CRLDistributionPoints [
+          [DistributionPoint:
+             [URIName: http://igc-sante.esante.gouv.fr/CRL/ACI-EL-ORG-TEST.crl]
+        , DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/cn=TEST%20AC%20IGC-SANTE%20ELEMENTAIRE%20ORGANISATIONS,ou=TEST%20AC%20RACINE%20IGC-SANTE%20ELEMENTAIRE,ou=IGC-SANTE%20TEST,ou=0002%20187512751,o=ASIP-SANTE,c=FR?certificaterevocationlist;binary?base?objectClass=pkiCA]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.32 Criticality=false
+        CertificatePolicies [
+          [CertificatePolicyId: [1.2.250.1.213.1.7.2.1.1.1.1]
+        [PolicyQualifierInfo: [
+          qualifierID: 1.3.6.1.5.5.7.2.1
+          qualifier: 0000: 16 29 68 74 74 70 3A 2F   2F 69 67 63 2D 73 61 6E  .)http://igc-san
+        0010: 74 65 2E 65 73 61 6E 74   65 2E 67 6F 75 76 2E 66  te.esante.gouv.f
+        0020: 72 2F 50 43 25 32 30 54   45 53 54                 r/PC%20TEST
+        
+        ]]  ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.37 Criticality=false
+        ExtendedKeyUsages [
+          serverAuth
+          clientAuth
+        ]
+      },
+      {
+        ObjectId: 2.5.29.46 Criticality=false
+        FreshestCRL [
+          [DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/cn=TEST%20AC%20IGC-SANTE%20ELEMENTAIRE%20ORGANISATIONS,ou=TEST%20AC%20RACINE%20IGC-SANTE%20ELEMENTAIRE,ou=IGC-SANTE%20TEST,ou=0002%20187512751,o=ASIP-SANTE,c=FR?deltarevocationlist;binary?base?objectClass=pkiCA]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.15 Criticality=true
+        KeyUsage [
+          DigitalSignature
+          Key_Encipherment
+        ]
+      },
+      {
+        ObjectId: 2.5.29.17 Criticality=false
+        SubjectAlternativeName [
+          DNSName: mss-idp-igcsante.formation.mssante.fr
+        ]
+      },
+      {
+        ObjectId: 2.5.29.14 Criticality=false
+        SubjectKeyIdentifier [
+        KeyIdentifier [
+        0000: 97 A1 EF 08 5D 06 3D C0   41 DA EB 7D 06 B5 3A 8D  ....].=.A.....:.
+        0010: 55 46 C8 07                                        UF..
+        ]
+        ]
+      }
+    ]},
+  "certificate" : {
+    "version"            : "v3",
+    "serial number"      : "11 20 61 F3 C6 E8 4F C2 EF B1 8B F5 25 8E 1D EB 4E C6",
+    "signature algorithm": "SHA256withRSA",
+    "issuer"             : "CN=TEST AC RACINE IGC-SANTE ELEMENTAIRE, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR",
+    "not before"         : "2013-06-25 02:00:00.000 CEST",
+    "not  after"         : "2033-06-24 02:00:00.000 CEST",
+    "subject"            : "CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR",
+    "subject public key" : "RSA",
+    "extensions"         : [
+      {
+        ObjectId: 2.5.29.35 Criticality=false
+        AuthorityKeyIdentifier [
+        KeyIdentifier [
+        0000: 9C AD 86 BB A6 AA CA C5   61 3A 04 B0 47 FD DC 3B  ........a:..G..;
+        0010: CD 3D 57 F4                                        .=W.
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.19 Criticality=true
+        BasicConstraints:[
+          CA:true
+          PathLen:0
+        ]
+      },
+      {
+        ObjectId: 2.5.29.31 Criticality=false
+        CRLDistributionPoints [
+          [DistributionPoint:
+             [URIName: http://igc-sante.esante.gouv.fr/CRL/ACR-EL-TEST.crl]
+        , DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/CN=TEST%20AC%20RACINE%20IGC-SANTE%20ELEMENTAIRE,OU=IGC-SANTE%20TEST,OU=0002%20187512751,O=ASIP-SANTE,C=FR?certificaterevocationlist;binary?base?objectclass=pkiCa]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.32 Criticality=false
+        CertificatePolicies [
+          [CertificatePolicyId: [2.5.29.32.0]
+        [PolicyQualifierInfo: [
+          qualifierID: 1.3.6.1.5.5.7.2.1
+          qualifier: 0000: 16 29 68 74 74 70 3A 2F   2F 69 67 63 2D 73 61 6E  .)http://igc-san
+        0010: 74 65 2E 65 73 61 6E 74   65 2E 67 6F 75 76 2E 66  te.esante.gouv.f
+        0020: 72 2F 50 43 25 32 30 54   45 53 54                 r/PC%20TEST
+        
+        ]]  ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.15 Criticality=true
+        KeyUsage [
+          Key_CertSign
+          Crl_Sign
+        ]
+      },
+      {
+        ObjectId: 2.5.29.14 Criticality=false
+        SubjectKeyIdentifier [
+        KeyIdentifier [
+        0000: 21 2E 84 7D 3B 1E F5 12   DE 51 A2 21 5C AE 93 A8  !...;....Q.!\...
+        0010: EF 5B E3 F5                                        .[..
+        ]
+        ]
+      }
+    ]}
+]
+)
+2022-10-12 12:00:38.870 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=mss-idp-igcsante.formation.mssante.fr, OU=300000000099622, O=GIP - TEST9962, ST=Paris (75), C=FR) est : Sun Jun 02 14:01:29 CEST 2024
+2022-10-12 12:00:38.870 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR) est : Fri Jun 24 02:00:00 CEST 2033
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.880 CEST|ECDHServerKeyExchange.java:523|Consuming ECDH ServerKeyExchange handshake message (
+"ECDH ServerKeyExchange": {
+  "parameters": {
+    "named group": "secp256r1"
+    "ecdh public": {
+      0000: 04 5D E4 3C 23 67 5D B7   B9 BB 57 E1 B6 E0 13 29  .].<#g]...W....)
+      0010: 57 40 D3 09 6D AF 87 F5   83 B8 60 08 3E 2F 47 1A  W@..m.....`.>/G.
+      0020: 3E B2 AC D9 A2 E8 C2 01   49 11 70 4D D3 47 A4 46  >.......I.pM.G.F
+      0030: 4A BC 82 7E A1 0F 89 8E   26 52 4B 8D BF 11 BC FD  J.......&RK.....
+      0040: DD                                                 .
+    },
+  },
+  "digital signature":  {
+    "signature algorithm": "rsa_pkcs1_sha512"
+    "signature": {
+      0000: 5C 83 8E 47 47 FF 98 8A   30 25 E2 17 E8 D6 1A E8  \..GG...0%......
+      0010: DB 34 16 54 1A 6C 44 6B   8D C8 22 0D F5 ED 56 6F  .4.T.lDk.."...Vo
+      0020: BE C9 76 53 31 B0 92 D3   CB AC AF F3 36 40 D4 4B  ..vS1.......6@.K
+      0030: DA 49 39 96 38 A5 39 85   4F 70 2B 94 4F 50 F2 9C  .I9.8.9.Op+.OP..
+      0040: 90 4E 71 62 4A 0D E0 36   F7 FC 45 66 A3 1B EC D0  .NqbJ..6..Ef....
+      0050: 06 97 6A C4 AA 70 C8 85   84 70 00 58 74 D3 C6 13  ..j..p...p.Xt...
+      0060: 68 90 FA F3 72 61 B3 5C   CD 53 FB 2D 0A 93 13 8E  h...ra.\.S.-....
+      0070: C0 63 D7 05 9F 29 09 0E   3A B5 79 C4 0F 9D 07 06  .c...)..:.y.....
+      0080: 63 52 C9 F3 21 BF DF EA   8D 9B 6D DF 68 29 87 17  cR..!.....m.h)..
+      0090: 3B 5D 03 3E F6 6D 56 F2   31 2C 08 C7 42 0F 45 CB  ;].>.mV.1,..B.E.
+      00A0: 61 8C FA 7D 49 30 C4 44   3C 25 97 0A 0D BA 6B 3D  a...I0.D<%....k=
+      00B0: 0F B9 F3 56 68 02 2F FB   2A BE 04 54 F4 40 DF CB  ...Vh./.*..T.@..
+      00C0: FE E6 8D 79 6D 0A 67 41   43 29 B8 B1 F1 CD 21 D1  ...ym.gAC)....!.
+      00D0: 0C 44 73 15 88 17 65 50   B3 CB C8 FD 5A 63 61 54  .Ds...eP....ZcaT
+      00E0: 88 F8 E1 F2 95 43 C9 92   AC 5A 3D 76 36 C0 C5 91  .....C...Z=v6...
+      00F0: 44 C3 78 21 D3 DF 38 5A   FF 33 63 5C F4 BF AD 1B  D.x!..8Z.3c\....
+    },
+  }
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.881 CEST|ServerHelloDone.java:151|Consuming ServerHelloDone handshake message (
+<empty>
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.882 CEST|ECDHClientKeyExchange.java:409|Produced ECDHE ClientKeyExchange handshake message (
+"ECDH ClientKeyExchange": {
+  "ecdh public": {
+    0000: 04 26 42 14 DC B8 7E A1   18 B8 CD 4B 07 35 A2 AF  .&B........K.5..
+    0010: 63 64 A6 76 12 95 ED 2A   47 A5 24 47 D9 92 A4 2E  cd.v...*G.$G....
+    0020: 78 97 F8 AA CB 60 D8 0E   3C 15 5E 92 46 36 1D 7D  x....`..<.^.F6..
+    0030: ED 17 C3 15 D3 28 DA 3B   5A DB DF 13 21 78 C8 64  .....(.;Z...!x.d
+    0040: 77                                                 w
+  },
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.885 CEST|ChangeCipherSpec.java:115|Produced ChangeCipherSpec message
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.885 CEST|Finished.java:398|Produced client Finished handshake message (
+"Finished": {
+  "verify data": {
+    0000: FB 4B 19 A6 27 F9 84 5F   43 70 EF C5 
+  }'}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.934 CEST|ChangeCipherSpec.java:149|Consuming ChangeCipherSpec message
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.934 CEST|Finished.java:535|Consuming server Finished handshake message (
+"Finished": {
+  "verify data": {
+    0000: A3 E0 11 1B F6 E5 6C E9   EC AB 76 15 
+  }'}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.989 CEST|HelloRequest.java:181|Consuming HelloRequest handshake message (
+<empty>
+)
+javax.net.ssl|INFO|01|main|2022-10-12 12:00:38.991 CEST|AlpnExtension.java:178|No available application protocols
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.991 CEST|SSLExtensions.java:260|Ignore, context unavailable extension: application_layer_protocol_negotiation
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:38.991 CEST|ClientHello.java:653|Produced ClientHello handshake message (
+"ClientHello": {
+  "client version"      : "TLSv1.2",
+  "random"              : "C6 7F AF A3 9D 59 3E BF 7C 42 F0 19 E0 2B 2B E0 E4 1C 63 C8 7C FB 84 A4 B3 B5 BC F4 0B ED B7 90",
+  "session id"          : "A2 D4 27 9D 3A 8E 33 9B 68 DA 30 9B 02 4F 9A 20 71 8A 52 23 AB 77 D7 8C E6 AC 1A 8B B6 FA 56 B6",
+  "cipher suites"       : "[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384(0xC02C), TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256(0xC02B), TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384(0xC030), TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256(0xC02F), TLS_DHE_RSA_WITH_AES_256_GCM_SHA384(0x009F), TLS_DHE_DSS_WITH_AES_256_GCM_SHA384(0x00A3), TLS_DHE_RSA_WITH_AES_128_GCM_SHA256(0x009E), TLS_DHE_DSS_WITH_AES_128_GCM_SHA256(0x00A2), TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384(0xC024), TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384(0xC028), TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256(0xC023), TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256(0xC027), TLS_DHE_RSA_WITH_AES_256_CBC_SHA256(0x006B), TLS_DHE_DSS_WITH_AES_256_CBC_SHA256(0x006A), TLS_DHE_RSA_WITH_AES_128_CBC_SHA256(0x0067), TLS_DHE_DSS_WITH_AES_128_CBC_SHA256(0x0040), TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384(0xC02E), TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384(0xC032), TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256(0xC02D), TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256(0xC031), TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384(0xC026), TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384(0xC02A), TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256(0xC025), TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256(0xC029), TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA(0xC00A), TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA(0xC014), TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA(0xC009), TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA(0xC013), TLS_DHE_RSA_WITH_AES_256_CBC_SHA(0x0039), TLS_DHE_DSS_WITH_AES_256_CBC_SHA(0x0038), TLS_DHE_RSA_WITH_AES_128_CBC_SHA(0x0033), TLS_DHE_DSS_WITH_AES_128_CBC_SHA(0x0032), TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA(0xC005), TLS_ECDH_RSA_WITH_AES_256_CBC_SHA(0xC00F), TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA(0xC004), TLS_ECDH_RSA_WITH_AES_128_CBC_SHA(0xC00E), TLS_RSA_WITH_AES_256_GCM_SHA384(0x009D), TLS_RSA_WITH_AES_128_GCM_SHA256(0x009C), TLS_RSA_WITH_AES_256_CBC_SHA256(0x003D), TLS_RSA_WITH_AES_128_CBC_SHA256(0x003C), TLS_RSA_WITH_AES_256_CBC_SHA(0x0035), TLS_RSA_WITH_AES_128_CBC_SHA(0x002F)]",
+  "compression methods" : "00",
+  "extensions"          : [
+    "server_name (0)": {
+      type=host_name (0), value=mss-idp-igcsante.formation.mssante.fr
+    },
+    "status_request (5)": {
+      "certificate status type": ocsp
+      "OCSP status request": {
+        "responder_id": <empty>
+        "request extensions": {
+          <empty>
+        }
+      }
+    },
+    "supported_groups (10)": {
+      "versions": [x25519, secp256r1, secp384r1, secp521r1, x448, ffdhe2048, ffdhe3072, ffdhe4096, ffdhe6144, ffdhe8192]
+    },
+    "ec_point_formats (11)": {
+      "formats": [uncompressed]
+    },
+    "signature_algorithms (13)": {
+      "signature schemes": [ecdsa_secp256r1_sha256, ecdsa_secp384r1_sha384, ecdsa_secp521r1_sha512, rsa_pss_rsae_sha256, rsa_pss_rsae_sha384, rsa_pss_rsae_sha512, rsa_pss_pss_sha256, rsa_pss_pss_sha384, rsa_pss_pss_sha512, rsa_pkcs1_sha256, rsa_pkcs1_sha384, rsa_pkcs1_sha512, dsa_sha256, ecdsa_sha1, rsa_pkcs1_sha1, dsa_sha1]
+    },
+    "signature_algorithms_cert (50)": {
+      "signature schemes": [ecdsa_secp256r1_sha256, ecdsa_secp384r1_sha384, ecdsa_secp521r1_sha512, rsa_pss_rsae_sha256, rsa_pss_rsae_sha384, rsa_pss_rsae_sha512, rsa_pss_pss_sha256, rsa_pss_pss_sha384, rsa_pss_pss_sha512, rsa_pkcs1_sha256, rsa_pkcs1_sha384, rsa_pkcs1_sha512, dsa_sha256, ecdsa_sha1, rsa_pkcs1_sha1, dsa_sha1]
+    },
+    "status_request_v2 (17)": {
+      "cert status request": {
+        "certificate status type": ocsp_multi
+        "OCSP status request": {
+          "responder_id": <empty>
+          "request extensions": {
+            <empty>
+          }
+        }
+      }
+    },
+    "extended_master_secret (23)": {
+      <empty>
+    },
+    "supported_versions (43)": {
+      "versions": [TLSv1.2]
+    },
+    "renegotiation_info (65,281)": {
+      "renegotiated connection": [FB 4B 19 A6 27 F9 84 5F 43 70 EF C5]
+    }
+  ]
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.045 CEST|ServerHello.java:872|Consuming ServerHello handshake message (
+"ServerHello": {
+  "server version"      : "TLSv1.2",
+  "random"              : "F3 25 9B 28 CB ED 91 09 C7 F0 3F 88 31 47 AE CD AB F4 6A 1D 2C 52 A5 7D B8 A8 71 50 76 C3 EC EA",
+  "session id"          : "E1 8E 3A A1 8D CF 1F D7 4B F0 FB 72 9B D9 76 D4 E0 6B 95 14 EC 0C 40 CA E8 39 02 EA 2C F4 0F 65",
+  "cipher suite"        : "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384(0xC030)",
+  "compression methods" : "00",
+  "extensions"          : [
+    "renegotiation_info (65,281)": {
+      "renegotiated connection": [FB 4B 19 A6 27 F9 84 5F 43 70 EF C5 A3 E0 11 1B F6 E5 6C E9 EC AB 76 15]
+    },
+    "ec_point_formats (11)": {
+      "formats": [uncompressed, ansiX962_compressed_prime, ansiX962_compressed_char2]
+    }
+  ]
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.045 CEST|SSLExtensions.java:173|Ignore unavailable extension: supported_versions
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.045 CEST|ServerHello.java:968|Negotiated protocol version: TLSv1.2
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.045 CEST|SSLExtensions.java:192|Consumed extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:173|Ignore unavailable extension: server_name
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:173|Ignore unavailable extension: max_fragment_length
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:173|Ignore unavailable extension: status_request
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:192|Consumed extension: ec_point_formats
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:173|Ignore unavailable extension: status_request_v2
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:192|Consumed extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:207|Ignore unavailable extension: server_name
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:207|Ignore unavailable extension: max_fragment_length
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:207|Ignore unavailable extension: status_request
+javax.net.ssl|WARNING|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:215|Ignore impact of unsupported extension: ec_point_formats
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:207|Ignore unavailable extension: application_layer_protocol_negotiation
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:207|Ignore unavailable extension: status_request_v2
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:207|Ignore unavailable extension: extended_master_secret
+javax.net.ssl|WARNING|01|main|2022-10-12 12:00:39.046 CEST|SSLExtensions.java:215|Ignore impact of unsupported extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.058 CEST|CertificateMessage.java:366|Consuming server Certificate handshake message (
+"Certificates": [
+  "certificate" : {
+    "version"            : "v3",
+    "serial number"      : "1D 5D E2 5E 3D C1 4B DE B7 F5 6F 4A 37 32 E4 4B",
+    "signature algorithm": "SHA256withRSA",
+    "issuer"             : "CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR",
+    "not before"         : "2022-06-02 14:01:29.000 CEST",
+    "not  after"         : "2024-06-02 14:01:29.000 CEST",
+    "subject"            : "CN=mss-idp-igcsante.formation.mssante.fr, OU=300000000099622, O=GIP - TEST9962, ST=Paris (75), C=FR",
+    "subject public key" : "RSA",
+    "extensions"         : [
+      {
+        ObjectId: 1.2.250.1.71.1.2.5 Criticality=false
+      },
+      {
+        ObjectId: 1.3.6.1.5.5.7.1.1 Criticality=false
+        AuthorityInfoAccess [
+          [
+           accessMethod: ocsp
+           accessLocation: URIName: http://ocsp.esante.gouv.fr
+        , 
+           accessMethod: caIssuers
+           accessLocation: URIName: http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.35 Criticality=false
+        AuthorityKeyIdentifier [
+        KeyIdentifier [
+        0000: 21 2E 84 7D 3B 1E F5 12   DE 51 A2 21 5C AE 93 A8  !...;....Q.!\...
+        0010: EF 5B E3 F5                                        .[..
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.19 Criticality=false
+        BasicConstraints:[
+          CA:false
+          PathLen: undefined
+        ]
+      },
+      {
+        ObjectId: 2.5.29.31 Criticality=false
+        CRLDistributionPoints [
+          [DistributionPoint:
+             [URIName: http://igc-sante.esante.gouv.fr/CRL/ACI-EL-ORG-TEST.crl]
+        , DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/cn=TEST%20AC%20IGC-SANTE%20ELEMENTAIRE%20ORGANISATIONS,ou=TEST%20AC%20RACINE%20IGC-SANTE%20ELEMENTAIRE,ou=IGC-SANTE%20TEST,ou=0002%20187512751,o=ASIP-SANTE,c=FR?certificaterevocationlist;binary?base?objectClass=pkiCA]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.32 Criticality=false
+        CertificatePolicies [
+          [CertificatePolicyId: [1.2.250.1.213.1.7.2.1.1.1.1]
+        [PolicyQualifierInfo: [
+          qualifierID: 1.3.6.1.5.5.7.2.1
+          qualifier: 0000: 16 29 68 74 74 70 3A 2F   2F 69 67 63 2D 73 61 6E  .)http://igc-san
+        0010: 74 65 2E 65 73 61 6E 74   65 2E 67 6F 75 76 2E 66  te.esante.gouv.f
+        0020: 72 2F 50 43 25 32 30 54   45 53 54                 r/PC%20TEST
+        
+        ]]  ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.37 Criticality=false
+        ExtendedKeyUsages [
+          serverAuth
+          clientAuth
+        ]
+      },
+      {
+        ObjectId: 2.5.29.46 Criticality=false
+        FreshestCRL [
+          [DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/cn=TEST%20AC%20IGC-SANTE%20ELEMENTAIRE%20ORGANISATIONS,ou=TEST%20AC%20RACINE%20IGC-SANTE%20ELEMENTAIRE,ou=IGC-SANTE%20TEST,ou=0002%20187512751,o=ASIP-SANTE,c=FR?deltarevocationlist;binary?base?objectClass=pkiCA]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.15 Criticality=true
+        KeyUsage [
+          DigitalSignature
+          Key_Encipherment
+        ]
+      },
+      {
+        ObjectId: 2.5.29.17 Criticality=false
+        SubjectAlternativeName [
+          DNSName: mss-idp-igcsante.formation.mssante.fr
+        ]
+      },
+      {
+        ObjectId: 2.5.29.14 Criticality=false
+        SubjectKeyIdentifier [
+        KeyIdentifier [
+        0000: 97 A1 EF 08 5D 06 3D C0   41 DA EB 7D 06 B5 3A 8D  ....].=.A.....:.
+        0010: 55 46 C8 07                                        UF..
+        ]
+        ]
+      }
+    ]},
+  "certificate" : {
+    "version"            : "v3",
+    "serial number"      : "11 20 61 F3 C6 E8 4F C2 EF B1 8B F5 25 8E 1D EB 4E C6",
+    "signature algorithm": "SHA256withRSA",
+    "issuer"             : "CN=TEST AC RACINE IGC-SANTE ELEMENTAIRE, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR",
+    "not before"         : "2013-06-25 02:00:00.000 CEST",
+    "not  after"         : "2033-06-24 02:00:00.000 CEST",
+    "subject"            : "CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR",
+    "subject public key" : "RSA",
+    "extensions"         : [
+      {
+        ObjectId: 2.5.29.35 Criticality=false
+        AuthorityKeyIdentifier [
+        KeyIdentifier [
+        0000: 9C AD 86 BB A6 AA CA C5   61 3A 04 B0 47 FD DC 3B  ........a:..G..;
+        0010: CD 3D 57 F4                                        .=W.
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.19 Criticality=true
+        BasicConstraints:[
+          CA:true
+          PathLen:0
+        ]
+      },
+      {
+        ObjectId: 2.5.29.31 Criticality=false
+        CRLDistributionPoints [
+          [DistributionPoint:
+             [URIName: http://igc-sante.esante.gouv.fr/CRL/ACR-EL-TEST.crl]
+        , DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/CN=TEST%20AC%20RACINE%20IGC-SANTE%20ELEMENTAIRE,OU=IGC-SANTE%20TEST,OU=0002%20187512751,O=ASIP-SANTE,C=FR?certificaterevocationlist;binary?base?objectclass=pkiCa]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.32 Criticality=false
+        CertificatePolicies [
+          [CertificatePolicyId: [2.5.29.32.0]
+        [PolicyQualifierInfo: [
+          qualifierID: 1.3.6.1.5.5.7.2.1
+          qualifier: 0000: 16 29 68 74 74 70 3A 2F   2F 69 67 63 2D 73 61 6E  .)http://igc-san
+        0010: 74 65 2E 65 73 61 6E 74   65 2E 67 6F 75 76 2E 66  te.esante.gouv.f
+        0020: 72 2F 50 43 25 32 30 54   45 53 54                 r/PC%20TEST
+        
+        ]]  ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.15 Criticality=true
+        KeyUsage [
+          Key_CertSign
+          Crl_Sign
+        ]
+      },
+      {
+        ObjectId: 2.5.29.14 Criticality=false
+        SubjectKeyIdentifier [
+        KeyIdentifier [
+        0000: 21 2E 84 7D 3B 1E F5 12   DE 51 A2 21 5C AE 93 A8  !...;....Q.!\...
+        0010: EF 5B E3 F5                                        .[..
+        ]
+        ]
+      }
+    ]}
+]
+)
+2022-10-12 12:00:39.058 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=mss-idp-igcsante.formation.mssante.fr, OU=300000000099622, O=GIP - TEST9962, ST=Paris (75), C=FR) est : Sun Jun 02 14:01:29 CEST 2024
+2022-10-12 12:00:39.058 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR) est : Fri Jun 24 02:00:00 CEST 2033
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.060 CEST|ECDHServerKeyExchange.java:523|Consuming ECDH ServerKeyExchange handshake message (
+"ECDH ServerKeyExchange": {
+  "parameters": {
+    "named group": "secp256r1"
+    "ecdh public": {
+      0000: 04 C8 FC 76 15 A8 72 59   E1 EA B2 9B D5 58 16 AA  ...v..rY.....X..
+      0010: CF 7C D0 82 94 3F 95 5A   9C D1 DA A0 D5 78 8D 29  .....?.Z.....x.)
+      0020: 63 FE 44 B7 DC 34 44 73   A2 B1 21 DA 3C AC F7 C7  c.D..4Ds..!.<...
+      0030: F7 F9 0A 4C 5C 65 F9 52   FD CC 29 8F DE 74 1B 63  ...L\e.R..)..t.c
+      0040: F6                                                 .
+    },
+  },
+  "digital signature":  {
+    "signature algorithm": "rsa_pkcs1_sha512"
+    "signature": {
+      0000: 18 F0 1B B5 20 8B CF DA   3F 6B 0B A6 0A 7D 2D AD  .... ...?k....-.
+      0010: A9 B3 9D FB C0 7D 08 D5   26 1F 41 41 46 96 2A F6  ........&.AAF.*.
+      0020: F4 5D 53 A7 AD AF D1 8F   DD F9 D2 5B 20 02 A2 EB  .]S........[ ...
+      0030: 19 48 0A 61 7D 42 B1 8A   34 4C 79 46 46 A6 ED 9B  .H.a.B..4LyFF...
+      0040: 1B D3 4D 67 02 66 8F 8B   04 A0 06 28 E9 8B 64 55  ..Mg.f.....(..dU
+      0050: CE D1 D2 08 39 AE 78 82   DF 33 DE D5 97 40 59 29  ....9.x..3...@Y)
+      0060: AB 01 67 ED E9 6B B6 81   AD 78 E5 98 9F FB CC 80  ..g..k...x......
+      0070: A8 4B 00 A1 22 D0 5A 25   06 68 5B A8 FB B7 6F 25  .K..".Z%.h[...o%
+      0080: D3 85 92 49 16 3E CE F3   71 E2 2B C6 9E 06 63 11  ...I.>..q.+...c.
+      0090: 42 0E 14 4E 36 AA 4D BB   AA CA FC 34 10 3F B6 65  B..N6.M....4.?.e
+      00A0: B8 00 F7 25 49 6D 90 2D   F2 A7 04 77 59 8F 44 84  ...%Im.-...wY.D.
+      00B0: FE E9 76 2C 21 1D 7B FB   9B 17 79 4F 17 C6 4D 56  ..v,!.....yO..MV
+      00C0: EF B9 D3 8C F1 12 C3 C3   77 06 0A BC F5 B0 54 8E  ........w.....T.
+      00D0: DB E7 1F 77 8A DE 1D 6B   76 1A C0 86 17 E9 52 72  ...w...kv.....Rr
+      00E0: 4A EA 99 19 10 31 92 5A   B9 97 FD 5D CA 72 76 9C  J....1.Z...].rv.
+      00F0: 07 C3 BA C9 60 D1 22 5C   97 4B 3E C3 52 05 D1 E1  ....`."\.K>.R...
+    },
+  }
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.061 CEST|CertificateRequest.java:692|Consuming CertificateRequest handshake message (
+"CertificateRequest": {
+  "certificate types": [rsa_sign, dss_sign, ecdsa_sign]
+  "supported signature algorithms": [rsa_pkcs1_sha512, dsa_sha512, ecdsa_secp521r1_sha512, rsa_pkcs1_sha384, dsa_sha384, ecdsa_secp384r1_sha384, rsa_pkcs1_sha256, dsa_sha256, ecdsa_secp256r1_sha256, rsa_sha224, dsa_sha224, ecdsa_sha224, rsa_pkcs1_sha1, dsa_sha1, ecdsa_sha1]
+  "certificate authorities": [CN=TEST AC RACINE IGC-SANTE FORT, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR, CN=TEST AC IGC-SANTE FORT PERSONNES, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR, CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR, CN=TEST AC RACINE IGC-SANTE ELEMENTAIRE, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR]
+}
+)
+2022-10-12 12:00:39.065 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _hasSession() : true
+2022-10-12 12:00:39.065 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _isLogged() : true
+2022-10-12 12:00:39.065 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _readCertificates()
+2022-10-12 12:00:39.068 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : Label du certificat CPS : Certificat de Signature CPS
+2022-10-12 12:00:39.069 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : CPS certificat de signature trouvé.
+2022-10-12 12:00:39.069 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : Label du certificat CPS : Certificat d'Authentification CPS
+2022-10-12 12:00:39.069 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : CPS certificat d'Authentification trouvé.
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.069 CEST|ServerHelloDone.java:151|Consuming ServerHelloDone handshake message (
+<empty>
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.070 CEST|CertificateMessage.java:330|Produced client Certificate handshake message (
+"Certificates": [
+  "certificate" : {
+    "version"            : "v3",
+    "serial number"      : "63 DA FF CF C8 03 4B DC 4D BF 87 30 FA F3 4A 5F",
+    "signature algorithm": "SHA256withRSA",
+    "issuer"             : "CN=TEST AC IGC-SANTE FORT PERSONNES, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR",
+    "not before"         : "2020-12-15 14:06:40.000 CET",
+    "not  after"         : "2023-12-15 14:06:40.000 CET",
+    "subject"            : "GIVENNAME=ANNE + CN=899700296140 + SURNAME=MED-CS RPPS0029614, T=MÃ©decin, C=FR",
+    "subject public key" : "RSA",
+    "extensions"         : [
+      {
+        ObjectId: 1.2.250.1.71.1.2.2 Criticality=false
+      },
+      {
+        ObjectId: 1.2.250.1.71.1.2.3 Criticality=false
+      },
+      {
+        ObjectId: 1.2.250.1.71.1.2.5 Criticality=false
+      },
+      {
+        ObjectId: 1.2.250.1.71.1.2.7 Criticality=false
+      },
+      {
+        ObjectId: 1.2.250.1.71.4.2.5 Criticality=false
+      },
+      {
+        ObjectId: 1.3.6.1.5.5.7.1.1 Criticality=false
+        AuthorityInfoAccess [
+          [
+           accessMethod: ocsp
+           accessLocation: URIName: http://ocsp.esante.gouv.fr
+        , 
+           accessMethod: caIssuers
+           accessLocation: URIName: http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-FO-PP-TEST.cer
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.35 Criticality=false
+        AuthorityKeyIdentifier [
+        KeyIdentifier [
+        0000: 3A F1 E7 F5 CE EB ED F7   8D C9 C9 B2 9F ED D4 65  :..............e
+        0010: 29 DC 1F FD                                        )...
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.19 Criticality=false
+        BasicConstraints:[
+          CA:false
+          PathLen: undefined
+        ]
+      },
+      {
+        ObjectId: 2.5.29.31 Criticality=false
+        CRLDistributionPoints [
+          [DistributionPoint:
+             [URIName: http://igc-sante.esante.gouv.fr/CRL/ACI-FO-PP-TEST.crl]
+        , DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/cn=TEST%20AC%20IGC-SANTE%20FORT%20PERSONNES,ou=TEST%20AC%20RACINE%20IGC-SANTE%20FORT,ou=IGC-SANTE%20TEST,ou=0002%20187512751,o=ASIP-SANTE,c=FR?certificaterevocationlist;binary?base?objectClass=pkiCA]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.32 Criticality=false
+        CertificatePolicies [
+          [CertificatePolicyId: [1.2.250.1.213.1.7.2.1.1.1.1]
+        [PolicyQualifierInfo: [
+          qualifierID: 1.3.6.1.5.5.7.2.1
+          qualifier: 0000: 16 29 68 74 74 70 3A 2F   2F 69 67 63 2D 73 61 6E  .)http://igc-san
+        0010: 74 65 2E 65 73 61 6E 74   65 2E 67 6F 75 76 2E 66  te.esante.gouv.f
+        0020: 72 2F 50 43 25 32 30 54   45 53 54                 r/PC%20TEST
+        
+        ]]  ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.37 Criticality=false
+        ExtendedKeyUsages [
+          clientAuth
+          1.3.6.1.4.1.311.20.2.2
+        ]
+      },
+      {
+        ObjectId: 2.5.29.46 Criticality=false
+        FreshestCRL [
+          [DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/cn=TEST%20AC%20IGC-SANTE%20FORT%20PERSONNES,ou=TEST%20AC%20RACINE%20IGC-SANTE%20FORT,ou=IGC-SANTE%20TEST,ou=0002%20187512751,o=ASIP-SANTE,c=FR?deltarevocationlist;binary?base?objectClass=pkiCA]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.15 Criticality=true
+        KeyUsage [
+          DigitalSignature
+        ]
+      },
+      {
+        ObjectId: 2.5.29.17 Criticality=false
+        SubjectAlternativeName [
+          Other-Name: Unrecognized ObjectIdentifier: 1.3.6.1.4.1.311.20.2.3
+        ]
+      },
+      {
+        ObjectId: 2.5.29.14 Criticality=false
+        SubjectKeyIdentifier [
+        KeyIdentifier [
+        0000: 53 3B C4 E9 E9 F0 AA D5   DA 26 9D 4E F5 97 41 BF  S;.......&.N..A.
+        0010: EA 27 89 23                                        .'.#
+        ]
+        ]
+      }
+    ]}
+]
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.072 CEST|ECDHClientKeyExchange.java:409|Produced ECDHE ClientKeyExchange handshake message (
+"ECDH ClientKeyExchange": {
+  "ecdh public": {
+    0000: 04 6B B7 95 73 33 2B 3A   E4 BC 59 A7 B0 67 E1 6F  .k..s3+:..Y..g.o
+    0010: B1 13 CD 9E 36 24 26 52   5C 5D D4 CF C2 C7 45 9C  ....6$&R\]....E.
+    0020: 45 9C 07 E5 53 DB 5B 0A   E2 42 3E EF 33 4E FA 01  E...S.[..B>.3N..
+    0030: 22 DF EF 6C 4F 98 AA D5   30 FC 2A AD F7 38 FA 08  "..lO...0.*..8..
+    0040: 60                                                 `
+  },
+}
+)
+2022-10-12 12:00:39.075 DEBUG 7092 --- [           main] f.d.cps.security.CpsOperationSignature   : engineInitSign(fr.devboxsante.cps.security.CpsPrivateKey@3e8eea59)
+2022-10-12 12:00:39.075 DEBUG 7092 --- [           main] f.d.cps.security.CpsOperationSignature   : engineUpdate(7827, 0, 7827)
+2022-10-12 12:00:39.075 DEBUG 7092 --- [           main] f.d.cps.security.CpsOperationSignature   : engineSign(7827)
+2022-10-12 12:00:39.077 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _hasSession() : true
+2022-10-12 12:00:39.077 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : _isLogged() : true
+2022-10-12 12:00:39.081 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : Label de la clé privé CPS : CPS_PRIV_SIG
+2022-10-12 12:00:39.081 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : CPS clé privé de signature trouvé avec le label CPS_PRIV_SIG.
+2022-10-12 12:00:39.081 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : Label de la clé privé CPS : CPS_PRIV_AUT
+2022-10-12 12:00:39.081 DEBUG 7092 --- [           main] f.d.cps.internal.IAIKCpsFacadeImpl       : CPS clé privé d’authentification trouvé avec le label CPS_PRIV_AUT.
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.732 CEST|CertificateVerify.java:764|Produced CertificateVerify handshake message (
+"CertificateVerify": {
+  "signature algorithm": rsa_pkcs1_sha256
+  "signature": {
+    0000: 67 F0 F3 EB 18 F1 CF D2   4C A0 02 24 FD C2 E3 5F  g.......L..$..._
+    0010: 37 62 FA 69 3C EB 01 CB   68 BD 8D 59 D0 14 F8 30  7b.i<...h..Y...0
+    0020: 8E 10 5E 53 24 7E 5C 3D   5E 85 72 23 9D E2 66 D0  ..^S$.\=^.r#..f.
+    0030: 06 9C 0E 90 14 B3 06 E5   0A 7F A0 B1 5A 96 C3 21  ............Z..!
+    0040: 04 C0 2F DB AD B5 AF 28   54 AD 66 0C 3E 17 DD 66  ../....(T.f.>..f
+    0050: 2D D2 18 31 B6 83 E5 B2   1D D8 55 24 BB 89 DA 72  -..1......U$...r
+    0060: 30 FB F9 B8 91 42 DB 72   DD D0 D6 DC 4B E5 DE 7E  0....B.r....K...
+    0070: 77 FD 2A A5 3B D2 16 A9   22 BA 19 7C 48 0A 02 70  w.*.;..."...H..p
+    0080: 1D A8 EF 19 8E B2 25 15   59 D7 58 F1 9A 20 44 B4  ......%.Y.X.. D.
+    0090: DE 98 69 41 F9 1D 2C 98   8A F0 E2 CB 1F C7 11 FA  ..iA..,.........
+    00A0: 26 D6 D6 4B 85 E0 73 38   E6 BC F7 7E 3C 6E 28 ED  &..K..s8....<n(.
+    00B0: FB AB 3C 5C C8 A3 80 6A   15 5D B2 15 AC 75 54 80  ..<\...j.]...uT.
+    00C0: DB 4C 2C 15 FF 04 DA 05   3E 78 74 1E 88 B2 1E DC  .L,.....>xt.....
+    00D0: 2A F7 0D CD 49 9F 64 E2   51 9A 89 62 50 FA 78 3F  *...I.d.Q..bP.x?
+    00E0: DC 30 5B 6E 6A 47 C9 34   DD 7B 13 9F E3 D4 0B 92  .0[njG.4........
+    00F0: DE 18 CC 8E FA B1 B6 06   EF 14 2B 2B 9B 4A E8 8F  ..........++.J..
+  }
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.733 CEST|ChangeCipherSpec.java:115|Produced ChangeCipherSpec message
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.733 CEST|Finished.java:398|Produced client Finished handshake message (
+"Finished": {
+  "verify data": {
+    0000: 5A 09 AB A9 F9 3B D8 59   9C F8 B6 F2 
+  }'}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.794 CEST|ChangeCipherSpec.java:149|Consuming ChangeCipherSpec message
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.796 CEST|Finished.java:535|Consuming server Finished handshake message (
+"Finished": {
+  "verify data": {
+    0000: 01 9D 58 A4 6E 1A 61 EB   17 94 79 88 
+  }'}
+)
+2022-10-12 12:00:39.956 DEBUG 7092 --- [           main] f.d.m.security.cps.CpsPAOSAuthenticator  : <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header><ecp:Response xmlns:ecp="urn:oasis:names:tc:SAML:2.0:profiles:SSO:ecp" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" soap-env:mustUnderstand="true" soap-env:actor="http://schemas.xmlsoap.org/soap/actor/next" AssertionConsumerServiceURL=""></ecp:Response></soap-env:Header><soap-env:Body><samlp:Response xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" Destination="https://mss-msg-igcsante.formation.mssante.fr:443/mss-msg-services-igcsante/saml/SSO/alias/defaultAlias" ID="ID_85caac51-e279-4dbc-bedc-2439b19dbdb1" InResponseTo="a392gbf2de04ggb33bbi0fah35i854g" IssueInstant="2022-10-12T10:00:39.863Z" Version="2.0"><saml:Issuer>http://localhost:8089/auth/realms/mssante</saml:Issuer><samlp:Status><samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/></samlp:Status><saml:Assertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" ID="ID_d9ab76b3-3387-40e0-8ee4-491679975126" IssueInstant="2022-10-12T10:00:39.863Z" Version="2.0"><saml:Issuer>http://localhost:8089/auth/realms/mssante</saml:Issuer><dsig:Signature xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><dsig:SignedInfo><dsig:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><dsig:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><dsig:Reference URI="#ID_d9ab76b3-3387-40e0-8ee4-491679975126"><dsig:Transforms><dsig:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><dsig:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></dsig:Transforms><dsig:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><dsig:DigestValue>q3MhqJGDY42CG10FHROFurJPXm/Tc8PpSpOEa/L+w4k=</dsig:DigestValue></dsig:Reference></dsig:SignedInfo><dsig:SignatureValue>gxmGF5bCyIzCtdvwGcC4lCswQyFDLwp7V+vM3M3/zX2UHbhvMw0Kd3JZiJ3ZTF7no3pdC0TyCj9U/31syi7MkIbkQPyGg1fU+2BEs8jZ/5sDv9EDGA+M59qR7Yu/h4eykUVdyUjr0e+RQ4ettQwJQX/fLWujMlzyPYIaTJdvTn3mLOEbUCbLm2QBjcts8YDUAIE6IdGc+rvRZGa2hcA2nbpJSA9C+hGabXjpBCq3unlM3oAyzzNxro6vWIvioTDeS9jpB476NXVUjb1pPMWr85dTE9KEbNsrEiQvwTIelGNeCNzCMOMTQMuSZRizFsgszPh1oXuNu2t4k1UqGYVedA==</dsig:SignatureValue><dsig:KeyInfo><dsig:KeyName>5g3GujdMPhDp1ZgMarujAVlWTpCPqpPHMI2X11bAMpo</dsig:KeyName><dsig:X509Data><dsig:X509Certificate>MIICnTCCAYUCBgF8MfD9iDANBgkqhkiG9w0BAQsFADASMRAwDgYDVQQDDAdtc3NhbnRlMB4XDTIxMDkyOTE0MjIyOVoXDTMxMDkyOTE0MjQwOVowEjEQMA4GA1UEAwwHbXNzYW50ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJxHvTCU+KBDgmOrkzlHjKITlRoCWGsclm3MFZ54FOYpoxB+atSbsbWC3cJ7G97QTee0VVU/JkU1jlKdcqYpcxKJQNSLeo5GVB682zb/AD+bCiQdNU8DpGzJX/1HyJsA0DKIwaEnI4fvO+2Wl2tVO5ZNmlD9VX9pGNzrCUsUrC33qhsGoyau6K8t5K972DWDHCgDC31yGn540aaJu0W2B/kGAma7B3W2ngtaRo6XsmcKwJJbc5MlEs6lNn/XZjmgujsgYLLZIu5hmO3BVT2xwUc3Li73oz+cFc38neM83m3GvtRbRY6IkefoP1Xq5hyZS0UVTSldt/Kd3t9DkRR02H8CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAfFS/tBDjjB5rt0av68UzXn9Ak+HjMRSjWQJr64rzUKpY/0l60/q/03cGHFdFewQuIPKUB1iBANfmHibZwnirKhGafQELzQR6NDcbTsA+4NZfE0+mnLTjNUy/HuM9yTjCSb5dAuNT3apnAvz2Pg7mjjSI2xczJfQrIr26yyJuW0qAq3LhJKyo6A3ox7EA09VkJ7PTf5vsZfiU1b7gIGL5xdyJGFTGcTLnChF24UzIW1utsU18iaNDoVAH8lF/FjugLuMa3u7ABQ28E8f9gXfa4mxvR91nt3ZTWvZHikimr+S8dk+/HtyqrnR42pzTgDvv7tFywqC9Nn2KoUiaav02wg==</dsig:X509Certificate></dsig:X509Data><dsig:KeyValue><dsig:RSAKeyValue><dsig:Modulus>nEe9MJT4oEOCY6uTOUeMohOVGgJYaxyWbcwVnngU5imjEH5q1JuxtYLdwnsb3tBN57RVVT8mRTWOUp1ypilzEolA1It6jkZUHrzbNv8AP5sKJB01TwOkbMlf/UfImwDQMojBoScjh+877ZaXa1U7lk2aUP1Vf2kY3OsJSxSsLfeqGwajJq7ory3kr3vYNYMcKAMLfXIafnjRpom7RbYH+QYCZrsHdbaeC1pGjpeyZwrAkltzkyUSzqU2f9dmOaC6OyBgstki7mGY7cFVPbHBRzcuLvejP5wVzfyd4zzebca+1FtFjoiR5+g/VermHJlLRRVNKV238p3e30ORFHTYfw==</dsig:Modulus><dsig:Exponent>AQAB</dsig:Exponent></dsig:RSAKeyValue></dsig:KeyValue></dsig:KeyInfo></dsig:Signature><saml:Subject><saml:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified">899700296140</saml:NameID><saml:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"><saml:SubjectConfirmationData InResponseTo="a392gbf2de04ggb33bbi0fah35i854g" NotOnOrAfter="2022-10-12T10:05:37.863Z" Recipient="https://mss-msg-igcsante.formation.mssante.fr:443/mss-msg-services-igcsante/saml/SSO/alias/defaultAlias"/></saml:SubjectConfirmation></saml:Subject><saml:Conditions NotBefore="2022-10-12T10:00:37.863Z" NotOnOrAfter="2022-10-12T10:01:37.863Z"><saml:AudienceRestriction><saml:Audience>mss-msg-services-igcsante</saml:Audience></saml:AudienceRestriction></saml:Conditions><saml:AuthnStatement AuthnInstant="2022-10-12T10:00:39.863Z" SessionIndex="5513cee2-3704-46bf-8c50-e700fec3ea09::cc34bc7e-abd7-4228-a17a-eb430e8a333e" SessionNotOnOrAfter="2022-10-12T20:00:39.863Z"><saml:AuthnContext><saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified</saml:AuthnContextClassRef></saml:AuthnContext></saml:AuthnStatement><saml:AttributeStatement><saml:Attribute FriendlyName="TypeUtilisateur" Name="TypeUtilisateur" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"><saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" xsi:type="xs:string"/></saml:Attribute><saml:Attribute FriendlyName="Nom" Name="Nom" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"><saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">MED-CS RPPS0029614</saml:AttributeValue></saml:Attribute><saml:Attribute FriendlyName="IdNat" Name="IdNat" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"><saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">899700296140</saml:AttributeValue></saml:Attribute><saml:Attribute FriendlyName="Profession" Name="Profession" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"><saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">Médecin</saml:AttributeValue></saml:Attribute><saml:Attribute FriendlyName="Prenom" Name="Prenom" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"><saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">ANNE</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion></samlp:Response></soap-env:Body></soap-env:Envelope>
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.992 CEST|Utilities.java:73|the previous server name in SNI (type=host_name (0), value=mss-msg-igcsante.formation.mssante.fr) was replaced with (type=host_name (0), value=mss-msg-igcsante.formation.mssante.fr)
+javax.net.ssl|INFO|01|main|2022-10-12 12:00:39.995 CEST|AlpnExtension.java:178|No available application protocols
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.995 CEST|SSLExtensions.java:260|Ignore, context unavailable extension: application_layer_protocol_negotiation
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.995 CEST|SSLExtensions.java:260|Ignore, context unavailable extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:39.996 CEST|ClientHello.java:653|Produced ClientHello handshake message (
+"ClientHello": {
+  "client version"      : "TLSv1.2",
+  "random"              : "2B DC 37 76 3D D7 54 D8 4B 52 E6 3D EB 40 E1 E4 99 22 A4 BD A7 4F 4C FD 80 25 EE 11 3D F0 5E 09",
+  "session id"          : "",
+  "cipher suites"       : "[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384(0xC02C), TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256(0xC02B), TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384(0xC030), TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256(0xC02F), TLS_DHE_RSA_WITH_AES_256_GCM_SHA384(0x009F), TLS_DHE_DSS_WITH_AES_256_GCM_SHA384(0x00A3), TLS_DHE_RSA_WITH_AES_128_GCM_SHA256(0x009E), TLS_DHE_DSS_WITH_AES_128_GCM_SHA256(0x00A2), TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384(0xC024), TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384(0xC028), TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256(0xC023), TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256(0xC027), TLS_DHE_RSA_WITH_AES_256_CBC_SHA256(0x006B), TLS_DHE_DSS_WITH_AES_256_CBC_SHA256(0x006A), TLS_DHE_RSA_WITH_AES_128_CBC_SHA256(0x0067), TLS_DHE_DSS_WITH_AES_128_CBC_SHA256(0x0040), TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384(0xC02E), TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384(0xC032), TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256(0xC02D), TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256(0xC031), TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384(0xC026), TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384(0xC02A), TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256(0xC025), TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256(0xC029), TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA(0xC00A), TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA(0xC014), TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA(0xC009), TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA(0xC013), TLS_DHE_RSA_WITH_AES_256_CBC_SHA(0x0039), TLS_DHE_DSS_WITH_AES_256_CBC_SHA(0x0038), TLS_DHE_RSA_WITH_AES_128_CBC_SHA(0x0033), TLS_DHE_DSS_WITH_AES_128_CBC_SHA(0x0032), TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA(0xC005), TLS_ECDH_RSA_WITH_AES_256_CBC_SHA(0xC00F), TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA(0xC004), TLS_ECDH_RSA_WITH_AES_128_CBC_SHA(0xC00E), TLS_RSA_WITH_AES_256_GCM_SHA384(0x009D), TLS_RSA_WITH_AES_128_GCM_SHA256(0x009C), TLS_RSA_WITH_AES_256_CBC_SHA256(0x003D), TLS_RSA_WITH_AES_128_CBC_SHA256(0x003C), TLS_RSA_WITH_AES_256_CBC_SHA(0x0035), TLS_RSA_WITH_AES_128_CBC_SHA(0x002F), TLS_EMPTY_RENEGOTIATION_INFO_SCSV(0x00FF)]",
+  "compression methods" : "00",
+  "extensions"          : [
+    "server_name (0)": {
+      type=host_name (0), value=mss-msg-igcsante.formation.mssante.fr
+    },
+    "status_request (5)": {
+      "certificate status type": ocsp
+      "OCSP status request": {
+        "responder_id": <empty>
+        "request extensions": {
+          <empty>
+        }
+      }
+    },
+    "supported_groups (10)": {
+      "versions": [x25519, secp256r1, secp384r1, secp521r1, x448, ffdhe2048, ffdhe3072, ffdhe4096, ffdhe6144, ffdhe8192]
+    },
+    "ec_point_formats (11)": {
+      "formats": [uncompressed]
+    },
+    "signature_algorithms (13)": {
+      "signature schemes": [ecdsa_secp256r1_sha256, ecdsa_secp384r1_sha384, ecdsa_secp521r1_sha512, rsa_pss_rsae_sha256, rsa_pss_rsae_sha384, rsa_pss_rsae_sha512, rsa_pss_pss_sha256, rsa_pss_pss_sha384, rsa_pss_pss_sha512, rsa_pkcs1_sha256, rsa_pkcs1_sha384, rsa_pkcs1_sha512, dsa_sha256, ecdsa_sha1, rsa_pkcs1_sha1, dsa_sha1]
+    },
+    "signature_algorithms_cert (50)": {
+      "signature schemes": [ecdsa_secp256r1_sha256, ecdsa_secp384r1_sha384, ecdsa_secp521r1_sha512, rsa_pss_rsae_sha256, rsa_pss_rsae_sha384, rsa_pss_rsae_sha512, rsa_pss_pss_sha256, rsa_pss_pss_sha384, rsa_pss_pss_sha512, rsa_pkcs1_sha256, rsa_pkcs1_sha384, rsa_pkcs1_sha512, dsa_sha256, ecdsa_sha1, rsa_pkcs1_sha1, dsa_sha1]
+    },
+    "status_request_v2 (17)": {
+      "cert status request": {
+        "certificate status type": ocsp_multi
+        "OCSP status request": {
+          "responder_id": <empty>
+          "request extensions": {
+            <empty>
+          }
+        }
+      }
+    },
+    "extended_master_secret (23)": {
+      <empty>
+    },
+    "supported_versions (43)": {
+      "versions": [TLSv1.2]
+    }
+  ]
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.072 CEST|ServerHello.java:872|Consuming ServerHello handshake message (
+"ServerHello": {
+  "server version"      : "TLSv1.2",
+  "random"              : "6A 05 3C 64 DA 86 FF 9B 39 E8 78 44 F2 61 FE 5F A7 10 46 3C 36 27 EF 0D AD 11 BF F0 48 CD D1 FD",
+  "session id"          : "85 E4 0B F8 0E 8B 73 82 0B 52 BB 06 31 9D 35 4A 47 A0 9A 19 9C 5A C4 86 43 C0 A3 E2 7F EE 49 9E",
+  "cipher suite"        : "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384(0xC030)",
+  "compression methods" : "00",
+  "extensions"          : [
+    "renegotiation_info (65,281)": {
+      "renegotiated connection": [<no renegotiated connection>]
+    },
+    "ec_point_formats (11)": {
+      "formats": [uncompressed, ansiX962_compressed_prime, ansiX962_compressed_char2]
+    }
+  ]
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.072 CEST|SSLExtensions.java:173|Ignore unavailable extension: supported_versions
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.072 CEST|ServerHello.java:968|Negotiated protocol version: TLSv1.2
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.072 CEST|SSLExtensions.java:192|Consumed extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.072 CEST|SSLExtensions.java:173|Ignore unavailable extension: server_name
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.072 CEST|SSLExtensions.java:173|Ignore unavailable extension: max_fragment_length
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.072 CEST|SSLExtensions.java:173|Ignore unavailable extension: status_request
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.072 CEST|SSLExtensions.java:192|Consumed extension: ec_point_formats
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.072 CEST|SSLExtensions.java:173|Ignore unavailable extension: status_request_v2
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.072 CEST|SSLExtensions.java:192|Consumed extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.072 CEST|SSLExtensions.java:207|Ignore unavailable extension: server_name
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.072 CEST|SSLExtensions.java:207|Ignore unavailable extension: max_fragment_length
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.073 CEST|SSLExtensions.java:207|Ignore unavailable extension: status_request
+javax.net.ssl|WARNING|01|main|2022-10-12 12:00:40.073 CEST|SSLExtensions.java:215|Ignore impact of unsupported extension: ec_point_formats
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.073 CEST|SSLExtensions.java:207|Ignore unavailable extension: application_layer_protocol_negotiation
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.073 CEST|SSLExtensions.java:207|Ignore unavailable extension: status_request_v2
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.073 CEST|SSLExtensions.java:207|Ignore unavailable extension: extended_master_secret
+javax.net.ssl|WARNING|01|main|2022-10-12 12:00:40.073 CEST|SSLExtensions.java:215|Ignore impact of unsupported extension: renegotiation_info
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.074 CEST|CertificateMessage.java:366|Consuming server Certificate handshake message (
+"Certificates": [
+  "certificate" : {
+    "version"            : "v3",
+    "serial number"      : "1D 5D E2 5E 3D C1 4B DE 21 0F 2C 0F 23 0E 86 52",
+    "signature algorithm": "SHA256withRSA",
+    "issuer"             : "CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR",
+    "not before"         : "2022-06-02 13:49:28.000 CEST",
+    "not  after"         : "2024-06-02 13:49:28.000 CEST",
+    "subject"            : "CN=mss-msg-igcsante.formation.mssante.fr, OU=300000000099622, O=GIP - TEST9962, ST=Paris (75), C=FR",
+    "subject public key" : "RSA",
+    "extensions"         : [
+      {
+        ObjectId: 1.2.250.1.71.1.2.5 Criticality=false
+      },
+      {
+        ObjectId: 1.3.6.1.5.5.7.1.1 Criticality=false
+        AuthorityInfoAccess [
+          [
+           accessMethod: ocsp
+           accessLocation: URIName: http://ocsp.esante.gouv.fr
+        , 
+           accessMethod: caIssuers
+           accessLocation: URIName: http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.35 Criticality=false
+        AuthorityKeyIdentifier [
+        KeyIdentifier [
+        0000: 21 2E 84 7D 3B 1E F5 12   DE 51 A2 21 5C AE 93 A8  !...;....Q.!\...
+        0010: EF 5B E3 F5                                        .[..
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.19 Criticality=false
+        BasicConstraints:[
+          CA:false
+          PathLen: undefined
+        ]
+      },
+      {
+        ObjectId: 2.5.29.31 Criticality=false
+        CRLDistributionPoints [
+          [DistributionPoint:
+             [URIName: http://igc-sante.esante.gouv.fr/CRL/ACI-EL-ORG-TEST.crl]
+        , DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/cn=TEST%20AC%20IGC-SANTE%20ELEMENTAIRE%20ORGANISATIONS,ou=TEST%20AC%20RACINE%20IGC-SANTE%20ELEMENTAIRE,ou=IGC-SANTE%20TEST,ou=0002%20187512751,o=ASIP-SANTE,c=FR?certificaterevocationlist;binary?base?objectClass=pkiCA]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.32 Criticality=false
+        CertificatePolicies [
+          [CertificatePolicyId: [1.2.250.1.213.1.7.2.1.1.1.1]
+        [PolicyQualifierInfo: [
+          qualifierID: 1.3.6.1.5.5.7.2.1
+          qualifier: 0000: 16 29 68 74 74 70 3A 2F   2F 69 67 63 2D 73 61 6E  .)http://igc-san
+        0010: 74 65 2E 65 73 61 6E 74   65 2E 67 6F 75 76 2E 66  te.esante.gouv.f
+        0020: 72 2F 50 43 25 32 30 54   45 53 54                 r/PC%20TEST
+        
+        ]]  ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.37 Criticality=false
+        ExtendedKeyUsages [
+          serverAuth
+          clientAuth
+        ]
+      },
+      {
+        ObjectId: 2.5.29.46 Criticality=false
+        FreshestCRL [
+          [DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/cn=TEST%20AC%20IGC-SANTE%20ELEMENTAIRE%20ORGANISATIONS,ou=TEST%20AC%20RACINE%20IGC-SANTE%20ELEMENTAIRE,ou=IGC-SANTE%20TEST,ou=0002%20187512751,o=ASIP-SANTE,c=FR?deltarevocationlist;binary?base?objectClass=pkiCA]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.15 Criticality=true
+        KeyUsage [
+          DigitalSignature
+          Key_Encipherment
+        ]
+      },
+      {
+        ObjectId: 2.5.29.17 Criticality=false
+        SubjectAlternativeName [
+          DNSName: mss-msg-igcsante.formation.mssante.fr
+        ]
+      },
+      {
+        ObjectId: 2.5.29.14 Criticality=false
+        SubjectKeyIdentifier [
+        KeyIdentifier [
+        0000: 7C C2 8A BF AB F2 40 56   48 DD 78 75 9B A6 42 F9  ......@VH.xu..B.
+        0010: 04 05 4D D4                                        ..M.
+        ]
+        ]
+      }
+    ]},
+  "certificate" : {
+    "version"            : "v3",
+    "serial number"      : "11 20 61 F3 C6 E8 4F C2 EF B1 8B F5 25 8E 1D EB 4E C6",
+    "signature algorithm": "SHA256withRSA",
+    "issuer"             : "CN=TEST AC RACINE IGC-SANTE ELEMENTAIRE, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR",
+    "not before"         : "2013-06-25 02:00:00.000 CEST",
+    "not  after"         : "2033-06-24 02:00:00.000 CEST",
+    "subject"            : "CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR",
+    "subject public key" : "RSA",
+    "extensions"         : [
+      {
+        ObjectId: 2.5.29.35 Criticality=false
+        AuthorityKeyIdentifier [
+        KeyIdentifier [
+        0000: 9C AD 86 BB A6 AA CA C5   61 3A 04 B0 47 FD DC 3B  ........a:..G..;
+        0010: CD 3D 57 F4                                        .=W.
+        ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.19 Criticality=true
+        BasicConstraints:[
+          CA:true
+          PathLen:0
+        ]
+      },
+      {
+        ObjectId: 2.5.29.31 Criticality=false
+        CRLDistributionPoints [
+          [DistributionPoint:
+             [URIName: http://igc-sante.esante.gouv.fr/CRL/ACR-EL-TEST.crl]
+        , DistributionPoint:
+             [URIName: ldap://annuaire-igc.esante.gouv.fr/CN=TEST%20AC%20RACINE%20IGC-SANTE%20ELEMENTAIRE,OU=IGC-SANTE%20TEST,OU=0002%20187512751,O=ASIP-SANTE,C=FR?certificaterevocationlist;binary?base?objectclass=pkiCa]
+        ]]
+      },
+      {
+        ObjectId: 2.5.29.32 Criticality=false
+        CertificatePolicies [
+          [CertificatePolicyId: [2.5.29.32.0]
+        [PolicyQualifierInfo: [
+          qualifierID: 1.3.6.1.5.5.7.2.1
+          qualifier: 0000: 16 29 68 74 74 70 3A 2F   2F 69 67 63 2D 73 61 6E  .)http://igc-san
+        0010: 74 65 2E 65 73 61 6E 74   65 2E 67 6F 75 76 2E 66  te.esante.gouv.f
+        0020: 72 2F 50 43 25 32 30 54   45 53 54                 r/PC%20TEST
+        
+        ]]  ]
+        ]
+      },
+      {
+        ObjectId: 2.5.29.15 Criticality=true
+        KeyUsage [
+          Key_CertSign
+          Crl_Sign
+        ]
+      },
+      {
+        ObjectId: 2.5.29.14 Criticality=false
+        SubjectKeyIdentifier [
+        KeyIdentifier [
+        0000: 21 2E 84 7D 3B 1E F5 12   DE 51 A2 21 5C AE 93 A8  !...;....Q.!\...
+        0010: EF 5B E3 F5                                        .[..
+        ]
+        ]
+      }
+    ]}
+]
+)
+2022-10-12 12:00:40.075 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=mss-msg-igcsante.formation.mssante.fr, OU=300000000099622, O=GIP - TEST9962, ST=Paris (75), C=FR) est : Sun Jun 02 13:49:28 CEST 2024
+2022-10-12 12:00:40.075 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR) est : Fri Jun 24 02:00:00 CEST 2033
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.076 CEST|ECDHServerKeyExchange.java:523|Consuming ECDH ServerKeyExchange handshake message (
+"ECDH ServerKeyExchange": {
+  "parameters": {
+    "named group": "secp256r1"
+    "ecdh public": {
+      0000: 04 F1 FA BD BA B6 D8 89   D2 C4 8C 8F FE 2E E2 46  ...............F
+      0010: F0 DB 05 99 CB CF 80 37   02 7A 52 14 02 59 27 35  .......7.zR..Y'5
+      0020: 97 63 77 88 31 BE 16 6B   65 19 3D 5F 97 9C C4 80  .cw.1..ke.=_....
+      0030: 9F 43 7D 42 1D 24 D6 AB   B3 60 58 2D B0 3A 0E E7  .C.B.$...`X-.:..
+      0040: 40                                                 @
+    },
+  },
+  "digital signature":  {
+    "signature algorithm": "rsa_pkcs1_sha512"
+    "signature": {
+      0000: BF 26 BF 3E 30 D7 F2 87   79 4E 1F 6E AF 17 9C EE  .&.>0...yN.n....
+      0010: 20 68 65 A8 A1 D7 F5 BF   C2 1A 3C 34 7C 3B C3 5E   he.......<4.;.^
+      0020: 85 E0 11 DF C8 1F 77 AA   08 A0 E1 B6 1E 92 3D 08  ......w.......=.
+      0030: C8 12 DD 83 84 A5 A8 98   B1 33 CA C9 36 15 BF B9  .........3..6...
+      0040: 11 EF BF A4 A5 02 A5 CA   71 E9 EC D1 3E 3E 65 7E  ........q...>>e.
+      0050: 19 4A 14 CE 34 BA E2 1E   A6 97 FD 68 FB EE 9C 77  .J..4......h...w
+      0060: 69 82 EF 8A EA 94 5F 16   FB A6 89 24 64 BA 28 E3  i....._....$d.(.
+      0070: 0B B7 17 43 99 51 8C E4   86 3A 6E 09 61 1D 1E 5F  ...C.Q...:n.a.._
+      0080: 0A FB 11 5B 3E 8A 0E B6   6D A7 59 8C EA E7 34 B9  ...[>...m.Y...4.
+      0090: 2C C8 73 EF E6 8A 93 7B   76 FF C5 F4 3D 9A 8F B2  ,.s.....v...=...
+      00A0: 8D B3 33 5F 0E 6C 6A 40   26 60 8F D4 59 FC 83 D8  ..3_.lj@&`..Y...
+      00B0: 11 30 0B 4B 32 F7 68 38   6E FF 6E C7 05 E9 1D 29  .0.K2.h8n.n....)
+      00C0: E9 51 6B F9 0E 66 25 65   99 2C 29 8A E2 B5 DE D4  .Qk..f%e.,).....
+      00D0: 63 4C 5A 34 AA 30 B1 48   8F 59 E5 B2 3E 9A 69 D4  cLZ4.0.H.Y..>.i.
+      00E0: 2C DC 15 27 A8 23 66 10   56 3C 90 8E 61 FB 22 E3  ,..'.#f.V<..a.".
+      00F0: 33 68 FB 92 39 D6 6B AC   A7 2E FE 9A C3 22 2E 81  3h..9.k......"..
+    },
+  }
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.077 CEST|ServerHelloDone.java:151|Consuming ServerHelloDone handshake message (
+<empty>
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.077 CEST|ECDHClientKeyExchange.java:409|Produced ECDHE ClientKeyExchange handshake message (
+"ECDH ClientKeyExchange": {
+  "ecdh public": {
+    0000: 04 A9 37 68 DF D0 BB B5   A0 73 98 39 29 53 BA BD  ..7h.....s.9)S..
+    0010: 33 78 33 74 35 A8 CC 3C   56 80 0B 25 FA 55 96 D1  3x3t5..<V..%.U..
+    0020: 2C CE F4 CE 29 F7 92 74   5C 33 FC FD 97 E7 D3 1F  ,...)..t\3......
+    0030: F9 B4 9F 59 FE 5A 3D 57   88 B5 D2 20 BD 12 B0 CA  ...Y.Z=W... ....
+    0040: CF                                                 .
+  },
+}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.079 CEST|ChangeCipherSpec.java:115|Produced ChangeCipherSpec message
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.079 CEST|Finished.java:398|Produced client Finished handshake message (
+"Finished": {
+  "verify data": {
+    0000: FF 9E 71 FD 49 5C E5 C9   4A E2 4E 4B 
+  }'}
+)
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.131 CEST|ChangeCipherSpec.java:149|Consuming ChangeCipherSpec message
+javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.132 CEST|Finished.java:535|Consuming server Finished handshake message (
+"Finished": {
+  "verify data": {
+    0000: FF C1 73 27 13 91 92 9F   15 ED AA D3 
+  }'}
+)
+2022-10-12 12:00:40.218  INFO 7092 --- [           main] o.a.c.services.AnnuaireService.REQ_OUT   : REQ_OUT
+    Address: https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails
+    HttpMethod: POST
+    Content-Type: text/xml
+    ExchangeId: 5c706d64-0f58-47ed-a55e-ff0dd3ef47e8
+    ServiceName: AnnuaireServiceService
+    PortName: AnnuaireServicePort
+    PortTypeName: AnnuaireService
+    Headers: {Cookie=JSESSIONID=AE3B7536F5AFFFF55B536F0F1A9BCABC.MOB_2, PAOS=ver='urn:liberty:paos:2003-08';'urn:oasis:names:tc:SAML:2.0:profiles:SSO:ecp', SOAPAction="", Accept=application/vnd.paos+xml', Connection=Keep-Alive}
+    Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Header><Action xmlns="http://www.w3.org/2005/08/addressing">http://services.msg.mss.asip.fr/AnnuaireService/listEmails</Action><MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:e751f6f0-0fbc-4c0e-90ad-6c5b98f82ed6</MessageID><To xmlns="http://www.w3.org/2005/08/addressing">https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails</To><ReplyTo xmlns="http://www.w3.org/2005/08/addressing"><Address>http://www.w3.org/2005/08/addressing/anonymous</Address></ReplyTo></soap:Header><soap:Body><ns2:listEmails xmlns:ns2="http://services.msg.mss.asip.fr/"><userId>899700296140</userId></ns2:listEmails></soap:Body></soap:Envelope>
+
+2022-10-12 12:00:40.324  WARN 7092 --- [           main] o.a.cxf.ws.addressing.soap.MAPCodec      : Response message does not contain WS-Addressing properties.  Not correlating response.
+2022-10-12 12:00:40.332  WARN 7092 --- [           main] o.apache.cxf.ws.addressing.ContextUtils  : WS-Addressing - failed to retrieve Message Addressing Properties from context
+2022-10-12 12:00:40.332  INFO 7092 --- [           main] o.a.c.services.AnnuaireService.RESP_IN   : RESP_IN
+    Address: https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails
+    Content-Type: text/xml;charset=UTF-8
+    ResponseCode: 200
+    ExchangeId: 5c706d64-0f58-47ed-a55e-ff0dd3ef47e8
+    ServiceName: AnnuaireServiceService
+    PortName: AnnuaireServicePort
+    PortTypeName: AnnuaireService
+    Headers: {Keep-Alive=timeout=15, max=99, Server=Apache, X-Content-Type-Options=nosniff, Pragma=no-cache, Date=Wed, 12 Oct 2022 10:00:40 GMT, X-Frame-Options=DENY, Strict-Transport-Security=max-age=31536000 ; includeSubDomains, Cache-Control=no-cache, no-store, max-age=0, must-revalidate, connection=Keep-Alive, content-type=text/xml;charset=UTF-8, Set-Cookie=[ROUTEID=.MOB_1; path=/; DOMAIN=.formation.mssante.fr, SessionStatId=aee6acdf.5ead377125fb7; path=/; expires=Thu, 10-Oct-30 10:00:40 GMT; domain=.mss.sii.local], Vary=Accept-Encoding, Expires=0, Content-Length=271, X-XSS-Protection=1; mode=block}
+    Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:listEmailsResponse xmlns:ns2="http://services.msg.mss.asip.fr/"><emails>anne.med-csrpps0029614@medecin.formation.mssante.fr</emails></ns2:listEmailsResponse></soap:Body></soap:Envelope>
+
+2022-10-12 12:00:40.333  INFO 7092 --- [           main] f.d.mssante.paos.PAOSTargetSelector      : FAILOVER_NOT_REQUIRED

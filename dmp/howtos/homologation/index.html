@@ -21,19 +21,19 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Passage de l&#39;homologation | DevBox-Santé</title>
-<meta name="description" content="Les différents points à connaître le jour de l&#39;homologation
+<meta name="description" content="Les différents points à connaître pour homologuer votre solution
 ">
 <meta property="og:title" content="Passage de l&#39;homologation" />
-<meta property="og:description" content="Les différents points à connaître le jour de l&#39;homologation
+<meta property="og:description" content="Les différents points à connaître pour homologuer votre solution
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/dmp/howtos/homologation/" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Passage de l&#39;homologation">
-<meta itemprop="description" content="Les différents points à connaître le jour de l&#39;homologation
+<meta itemprop="description" content="Les différents points à connaître pour homologuer votre solution
 "><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Passage de l&#39;homologation"/>
-<meta name="twitter:description" content="Les différents points à connaître le jour de l&#39;homologation
+<meta name="twitter:description" content="Les différents points à connaître pour homologuer votre solution
 "/>
 
 
@@ -249,10 +249,12 @@ if (!doNotTrack) {
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#plan-de-vérification">Plan De Vérification</a>
       <ul>
+        <li><a href="#onglet-arborescence">Onglet Arborescence</a></li>
+        <li><a href="#onglet-déclaration">Onglet Déclaration</a></li>
+        <li><a href="#onglet-plan-de-tests">Onglet Plan de tests</a></li>
         <li><a href="#interpréter-les-logs">Interpréter les logs</a></li>
-        <li><a href="#plan-de-vérification">Plan De Vérification</a></li>
       </ul>
     </li>
   </ul>
@@ -300,7 +302,7 @@ if (!doNotTrack) {
             
 <div class="td-content">
 	<h1>Passage de l&#39;homologation</h1>
-  <div class="lead">Les différents points à connaître le jour de l&rsquo;homologation</div>
+  <div class="lead">Les différents points à connaître pour homologuer votre solution</div>
 	<header class="article-meta">
 		
 		
@@ -316,7 +318,28 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<h3 id="interpréter-les-logs">Interpréter les logs</h3>
+	<h2 id="plan-de-vérification">Plan De Vérification</h2>
+<p>Une fois que vous avez reçu votre PDV filtré par les équipes de DEVCOOP. Il vous faut :</p>
+<ul>
+<li><strong>prendre connaissance de la Notice #EAI-int</strong></li>
+<li>générer l’arborescence</li>
+<li>répondre aux exigences dans l’onglet <code>Déclarations</code></li>
+<li>exécuter le plan de test</li>
+</ul>
+<h3 id="onglet-arborescence">Onglet Arborescence</h3>
+<p>Une macro est disponible pour créer l’arborescence des répertoires de test (activer les macros excel) :</p>
+<p><img src="creation_arborescence.png" alt="creation_arborescence.png"></p>
+<p>Qui vous permet d’obtenir ces répertoires :</p>
+<p><img src="arborescence_cr%C3%A9%C3%A9.png" alt="arborescence_créé"></p>
+<h3 id="onglet-déclaration">Onglet Déclaration</h3>
+<p><img src="pdv_onglet_d%C3%A9clarations.png" alt="pdv_onglet_déclarations.png"></p>
+<p>Pour vous aider nous avons partagé un projet reprenant l’ensemble des réponses possibles au différentes exigences.</p>
+<p>Exemple : la réponse à</p>
+<p><img src="EX_GEN-1350_excel.png" alt="EX_GEN-1350_excel.png"></p>
+<p>peut être trouvé dans <a href="https://bitbucket.org/devbox-sante/homologation/issues/8/ex_gen-1350">https://bitbucket.org/devbox-sante/homologation/issues/8/ex_gen-1350</a></p>
+<h3 id="onglet-plan-de-tests">Onglet Plan de tests</h3>
+<p>Pour chaque test suivre la consigne et fournir les éléments nécessaires, pour celà vous devez interpréter les logs de la DevBox-Santé DMP :</p>
+<h3 id="interpréter-les-logs">Interpréter les logs</h3>
 <p>Dans la totalité des tests il vous sera demandé de fournir &ldquo;les requête/réponse de l&rsquo;appel au service&rdquo;</p>
 <p>Pour celà, il faut s&rsquo;assurer que la configuration <code>application.yml</code> de votre installation (par exemple <code>C:\Program Files\DevBoxSante\application.yml</code> dans le cas d’une installation poste client sous windows), ne contient pas les lignes suivantes : </p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">logging</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -432,15 +455,8 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&lt;/ds:X509Certificate&gt;&lt;/ds:X
     Headers: {vary=Origin, content-type=application/soap+xml;charset=UTF-8, Content-Length=3604, Date=Fri, 16 Sep 2022 12:21:43 GMT}
     Payload: &lt;soap:Envelope xmlns:ns1=&#34;urn:si-dmp-patients&#34; xmlns:soap=&#34;http://www.w3.org/2003/05/soap-envelope&#34;&gt;&lt;soap:Header&gt;&lt;Action xmlns=&#34;http://www.w3.org/2005/08/addressing&#34;&gt;urn:hl7-org:v3:PRPA_IN201308UV02&lt;/Action&gt;&lt;MessageID xmlns=&#34;http://www.w3.org/2005/08/addressing&#34;&gt;urn:uuid:388c97d8-280f-4c9e-b275-53026cd3256b&lt;/MessageID&gt;&lt;To xmlns=&#34;http://www.w3.org/2005/08/addressing&#34;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/To&gt;&lt;RelatesTo xmlns=&#34;http://www.w3.org/2005/08/addressing&#34;&gt;urn:uuid:c6de458d-4527-4959-a9c6-0e913af58247&lt;/RelatesTo&gt;&lt;/soap:Header&gt;&lt;soap:Body&gt;&lt;PRPA_IN201308UV02 xmlns=&#34;urn:hl7-org:v3&#34; xmlns:ns2=&#34;asip:ci-sis:gdp:2010&#34; ITSVersion=&#34;XML_1.0&#34;&gt;&lt;id root=&#34;93e46b54-3076-4d33-981f-131af01e8597&#34;/&gt;&lt;creationTime value=&#34;20220916122143&#34;/&gt;&lt;interactionId extension=&#34;PRPA_IN201308UV02&#34; root=&#34;2.16.840.1.113883.1.6&#34;/&gt;&lt;processingCode code=&#34;P&#34;/&gt;&lt;processingModeCode code=&#34;T&#34;/&gt;&lt;acceptAckCode code=&#34;NE&#34;/&gt;&lt;receiver typeCode=&#34;RCV&#34;&gt;&lt;device classCode=&#34;DEV&#34; determinerCode=&#34;INSTANCE&#34;&gt;&lt;id root=&#34;1.2.250.1.287.1.1234567&#34;/&gt;&lt;softwareName&gt;DEVBOX-SANTE DMP&lt;/softwareName&gt;&lt;/device&gt;&lt;/receiver&gt;&lt;sender typeCode=&#34;SND&#34;&gt;&lt;device classCode=&#34;DEV&#34; determinerCode=&#34;INSTANCE&#34;&gt;&lt;id root=&#34;1.2.250.1.213.4.1.1.1&#34;/&gt;&lt;softwareName&gt;DMP&lt;/softwareName&gt;&lt;/device&gt;&lt;/sender&gt;&lt;attentionLine&gt;&lt;keyWordText code=&#34;AUTORISATION&#34; codeSystem=&#34;1.2.250.1.213.4.1.2.6.1&#34;/&gt;&lt;value xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; code=&#34;NON_EXISTE&#34; codeSystem=&#34;1.2.250.1.213.4.1.2.6.2&#34; xsi:type=&#34;CV&#34;/&gt;&lt;/attentionLine&gt;&lt;attentionLine&gt;&lt;keyWordText code=&#34;STATUT_MT&#34; codeSystem=&#34;1.2.250.1.213.4.1.2.6.3&#34;/&gt;&lt;value xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; value=&#34;false&#34; xsi:type=&#34;BL&#34;/&gt;&lt;/attentionLine&gt;&lt;acknowledgement typeCode=&#34;AA&#34;&gt;&lt;targetMessage&gt;&lt;id extension=&#34;11a12948-8a2d-478a-828a-46daea093cd5&#34; root=&#34;1.2.250.1.287.1.1234567.10&#34;/&gt;&lt;/targetMessage&gt;&lt;/acknowledgement&gt;&lt;controlActProcess classCode=&#34;CACT&#34; moodCode=&#34;EVN&#34;&gt;&lt;reasonCode code=&#34;TEST_EXST&#34; codeSystem=&#34;1.2.250.1.213.1.1.4.11&#34; displayName=&#34;Test d&#39;existence de dossier&#34;/&gt;&lt;subject contextConductionInd=&#34;false&#34; typeCode=&#34;SUBJ&#34;&gt;&lt;registrationEvent classCode=&#34;REG&#34; moodCode=&#34;EVN&#34;&gt;&lt;statusCode code=&#34;completed&#34;/&gt;&lt;subject1 typeCode=&#34;SBJ&#34;&gt;&lt;patient classCode=&#34;PAT&#34;&gt;&lt;id extension=&#34;1418878867934420256667&#34; root=&#34;1.2.250.1.213.1.4.2&#34;/&gt;&lt;id extension=&#34;157069329642881&#34; root=&#34;1.2.250.1.213.1.4.10&#34;/&gt;&lt;statusCode code=&#34;active&#34;/&gt;&lt;patientPerson classCode=&#34;PSN&#34; determinerCode=&#34;INSTANCE&#34;&gt;&lt;name&gt;&lt;prefix&gt;Mme&lt;/prefix&gt;&lt;given&gt;IRENE&lt;/given&gt;&lt;family qualifier=&#34;BR&#34;&gt;DECHAINE&lt;/family&gt;&lt;family qualifier=&#34;SP&#34;&gt;ENCHAINE&lt;/family&gt;&lt;/name&gt;&lt;administrativeGenderCode code=&#34;F&#34;/&gt;&lt;birthTime value=&#34;19570628&#34;/&gt;&lt;/patientPerson&gt;&lt;subjectOf typeCode=&#34;SBJ&#34;&gt;&lt;administrativeObservation classCode=&#34;OBS&#34; moodCode=&#34;EVN&#34;&gt;&lt;code code=&#34;RATTACHEMENT_ENS&#34; codeSystem=&#34;1.2.250.1.213.4.1.2.3&#34; displayName=&#34;information de rattachement du DMP à un ENS&#34;/&gt;&lt;value xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; value=&#34;false&#34; xsi:type=&#34;BL&#34;/&gt;&lt;/administrativeObservation&gt;&lt;/subjectOf&gt;&lt;subjectOf typeCode=&#34;SBJ&#34;&gt;&lt;administrativeObservation classCode=&#34;OBS&#34; moodCode=&#34;EVN&#34;&gt;&lt;code code=&#34;COMPTE_INTERNET_OUVERT&#34; codeSystem=&#34;1.2.250.1.213.4.1.2.9&#34;/&gt;&lt;value xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; value=&#34;false&#34; xsi:type=&#34;BL&#34;/&gt;&lt;/administrativeObservation&gt;&lt;/subjectOf&gt;&lt;/patient&gt;&lt;/subject1&gt;&lt;custodian typeCode=&#34;CST&#34;&gt;&lt;assignedEntity classCode=&#34;ASSIGNED&#34;&gt;&lt;id root=&#34;1.2.250.1.213.4.1.1.1&#34;/&gt;&lt;/assignedEntity&gt;&lt;/custodian&gt;&lt;/registrationEvent&gt;&lt;/subject&gt;&lt;queryAck&gt;&lt;queryId extension=&#34;2f2b5d56-2bf2-42f0-b186-60076dfc3602&#34; root=&#34;1.2.250.1.287.1.1234567.11&#34;/&gt;&lt;queryResponseCode code=&#34;OK&#34;/&gt;&lt;/queryAck&gt;&lt;/controlActProcess&gt;&lt;/PRPA_IN201308UV02&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
 </code></pre><p>Et bien sur ce qui nous intérresse c’est le payload xml, que l’on mettera dans <code>REPONSE_DMP.xml</code></p>
-<p>Chaque trame se trouve dans l’arborescence : </p>
+<p>Chaque trame se trouve dans l’arborescence :</p>
 <p><img src="arborescence_plan_test.png" alt=""></p>
-<h3 id="plan-de-vérification">Plan De Vérification</h3>
-<ul>
-<li>Comment Remplir le PDV ?</li>
-</ul>
-<blockquote>
-<p>TODO</p>
-</blockquote>
 
         <div class="section-index">
     

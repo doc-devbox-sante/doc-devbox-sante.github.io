@@ -84,6 +84,11 @@
 &lt;blockquote&gt;
 &lt;p&gt;Les environnements de qualification ne gèrent pas correctement les recherches sans résultat. Plus d’information : &lt;a href=&#34;/insi/howtos/testCNDA&#34;&gt;/insi/howtos/testCNDA&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;À quoi correspond l’identifiant de facturation, obligatoire dans le contexte des requêtes ?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Il s’agit du numero FINESS géographique de la structure ou son SIRET, information que l’on ne peut déduire de la carte CPS&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;insi_id_facturation_pour_assertion.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;webinaire-authentification-par-certificat-logiciel-du-16novembre-2021&#34;&gt;Webinaire Authentification par certificat logiciel du 16 novembre 2021&lt;/h2&gt;
 &lt;p&gt;Reprises des questions réponses du webinaire &lt;strong&gt;&amp;ldquo;Développer l’authentification TLS mutuelle par certificat logiciel pour INSi&amp;rdquo; - mardi 16 novembre 2021 - 14h30&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;

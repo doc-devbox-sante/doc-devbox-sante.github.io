@@ -103,12 +103,38 @@ Dans la configuration actuelle de l&amp;rsquo;environnement de tests, il n&amp;r
 &lt;/ul&gt;
 &lt;h2 id=&#34;ws_ins2&#34;&gt;WS_INS2&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;./test2_03_cas1.json&#34;&gt;test2_03_cas1.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;./test2_03_cas1.json&#34;&gt;test2_03_cas1.json&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Test2_02 : Répoonse de DEVCOOP au CNDA pour ce test&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Le connecteur devbox-santé-insi est conforme au niveau 1 de sécurité pour l&amp;rsquo;assertion PS. En effet, avant tout appel au TéléService INSi, la carte CPS est accédé afin de vérifier sa présence. 
+Si une session pkcs11 est ouverte, cette dernière est utilisée pour générer l&amp;rsquo;assertion.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dans le cas où plusieurs structures d&amp;rsquo;activité sont trouvées, il est demandé à l’intégrateur de fournir son identifiant National et une vérification de son existence sur la carte CPS est réalisée.
+L&amp;rsquo;attribut identifiantFacturation est demandé pour chaque requête de l’intégrateur&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;ws_ins3&#34;&gt;WS_INS3&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;./test3_01.json&#34;&gt;test3_01.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;./test3_01.json&#34;&gt;test3_01.json&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Test3_02 : Réponse de DEVCOOP au CNDA pour ce test&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Le connecteur devbox-santé-insi est conforme au niveau 1 de sécurité pour l&amp;rsquo;assertion PS. En effet, avant tout appel au TéléService INSi, la carte CPS est accédé afin de vérifier sa présence, 
+si une session pkcs11 est ouverte, cette dernière est utilisée pour générer l&amp;rsquo;assertion.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dans le cas où plusieurs structures d&amp;rsquo;activité sont trouvées, il est demandé à l’intégrateur de fournir son identifiant National et une vérification de son existence sur la carte CPS est réalisée.
+L&amp;rsquo;attribut identifiantFacturation est demandé pour chaque requête de l’intégrateur&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;ws_ins4&#34;&gt;WS_INS4 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;./insi_a_verifier_lot1_1.0.1.json&#34;&gt;insi_a_verifier_lot1_1.0.1.json&lt;/a&gt;&lt;/li&gt;
@@ -248,6 +274,11 @@ et dans les mêmes conditions. Néanmoins, comme dit &lt;code&gt;PDT-INF-736_Pac
 &lt;blockquote&gt;
 &lt;p&gt;Les environnements de qualification ne gèrent pas correctement les recherches sans résultat. Plus d’information : &lt;a href=&#34;/insi/howtos/testCNDA&#34;&gt;/insi/howtos/testCNDA&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;À quoi correspond l’identifiant de facturation, obligatoire dans le contexte des requêtes ?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Il s’agit du numero FINESS géographique de la structure ou son SIRET, information que l’on ne peut déduire de la carte CPS&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;insi_id_facturation_pour_assertion.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;webinaire-authentification-par-certificat-logiciel-du-16novembre-2021&#34;&gt;Webinaire Authentification par certificat logiciel du 16 novembre 2021&lt;/h2&gt;
 &lt;p&gt;Reprises des questions réponses du webinaire &lt;strong&gt;&amp;ldquo;Développer l’authentification TLS mutuelle par certificat logiciel pour INSi&amp;rdquo; - mardi 16 novembre 2021 - 14h30&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;

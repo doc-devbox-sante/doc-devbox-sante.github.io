@@ -74,10 +74,23 @@
         &lt;p&gt;NIE DEVCOOP : DEV331918&lt;/p&gt;
 &lt;h3 id=&#34;homologation-du-25082021&#34;&gt;Homologation du 25/08/2021&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Nom du logiciel : &lt;strong&gt;DEVBOX_SANTE_INSI&lt;/strong&gt;_&lt;/li&gt;
-&lt;li&gt;Version : &lt;strong&gt;2.0&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;NIL : &lt;strong&gt;DEV428043&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Homologation package GIE SV : &lt;strong&gt;04.00&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nom du logiciel : &lt;strong&gt;DEVBOX_SANTE_INSI&lt;/strong&gt;_&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Version : &lt;strong&gt;2.0&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;NIL : &lt;strong&gt;DEV428043&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Homologation package GIE SV : &lt;strong&gt;04.00&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Description :&lt;/p&gt;
+&lt;p&gt;La DevBox-Santé INSI est un connecteur homologué par le CNDA qui s’interface avec le téléservice INSi.
+Elle prend en charge la complexité de l’intégration et facilite ainsi aux éditeurs de logiciel de santé l’intéropérabilité avec l’INSi en vous fournissant une API simple à utiliser.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

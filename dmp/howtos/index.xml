@@ -558,6 +558,9 @@ Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exige
 &lt;p&gt;Exemple : la réponse à&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;EX_GEN-1350_excel.png&#34; alt=&#34;EX_GEN-1350_excel.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;peut être trouvé dans &lt;a href=&#34;https://bitbucket.org/devbox-sante/homologation/issues/8/ex_gen-1350&#34;&gt;https://bitbucket.org/devbox-sante/homologation/issues/8/ex_gen-1350&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Une fois les exigences remplies et validées par DEVCOOP, DEVCOOP vous fournit l’attestation de conformité vous permettant de continuer vos démarches auprès du CNDA.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;onglet-plan-de-tests&#34;&gt;Onglet Plan de tests&lt;/h3&gt;
 &lt;p&gt;Pour chaque test suivre la consigne et fournir les éléments nécessaires, pour celà vous devez interpréter les logs de la DevBox-Santé DMP :&lt;/p&gt;
 &lt;h3 id=&#34;interpréter-les-logs&#34;&gt;Interpréter les logs&lt;/h3&gt;

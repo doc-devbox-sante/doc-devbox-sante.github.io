@@ -189,6 +189,8 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;dd&gt;Pharmacie à Usage Intérieur&lt;/dd&gt;
 &lt;dt&gt;RCP&lt;/dt&gt;
 &lt;dd&gt;Réunion de Concertation Pluridisciplinaire&lt;/dd&gt;
+&lt;dt&gt;REM&lt;/dt&gt;
+&lt;dd&gt;Référentiel d’Exigences Minimales (désigne les fichiers tableurs contenant l’ensemble des exigences à respecter pour chaque couloir)&lt;/dd&gt;
 &lt;dt&gt;REST&lt;/dt&gt;
 &lt;dd&gt;Representational State Transfer&lt;/dd&gt;
 &lt;/dl&gt;

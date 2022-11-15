@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DevBox-Santé – Installer</title>
+    <title>DevBox-Santé – Installation</title>
     <link>/installer/</link>
-    <description>Recent content in Installer on DevBox-Santé</description>
+    <description>Recent content in Installation on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="/installer/index.xml" rel="self" type="application/rss+xml" />
@@ -15,10 +15,10 @@
     
     <item>
       <title>Installer: [27/09/2022] 2.19</title>
-      <link>/installer/versions/20220927_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220927_versions_courantes/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220927_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220927_versions_courantes/</guid>
       <description>
         
         
@@ -44,10 +44,10 @@
     
     <item>
       <title>Installer: [16/09/2022] 2.18</title>
-      <link>/installer/versions/20220916_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220916_versions_courantes/</link>
       <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220916_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220916_versions_courantes/</guid>
       <description>
         
         
@@ -73,10 +73,10 @@
     
     <item>
       <title>Installer: [11/07/2022] 2.17</title>
-      <link>/installer/versions/20220711_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220711_versions_courantes/</link>
       <pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220711_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220711_versions_courantes/</guid>
       <description>
         
         
@@ -102,10 +102,10 @@
     
     <item>
       <title>Installer: [29/06/2022] 2.16</title>
-      <link>/installer/versions/20220629_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220629_versions_courantes/</link>
       <pubDate>Wed, 29 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220629_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220629_versions_courantes/</guid>
       <description>
         
         
@@ -131,10 +131,10 @@
     
     <item>
       <title>Installer: [07/06/2022] 2.15</title>
-      <link>/installer/versions/20220607_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220607_versions_courantes/</link>
       <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220607_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220607_versions_courantes/</guid>
       <description>
         
         
@@ -160,10 +160,10 @@
     
     <item>
       <title>Installer: [20/05/2022] 2.14</title>
-      <link>/installer/versions/20220520_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220520_versions_courantes/</link>
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220520_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220520_versions_courantes/</guid>
       <description>
         
         
@@ -189,10 +189,10 @@
     
     <item>
       <title>Installer: [09/05/2022] 2.13</title>
-      <link>/installer/versions/20220509_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220509_versions_courantes/</link>
       <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220509_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220509_versions_courantes/</guid>
       <description>
         
         
@@ -218,10 +218,10 @@
     
     <item>
       <title>Installer: [04/05/2022] 2.12</title>
-      <link>/installer/versions/20220504_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220504_versions_courantes/</link>
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220504_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220504_versions_courantes/</guid>
       <description>
         
         
@@ -247,10 +247,10 @@
     
     <item>
       <title>Installer: [20/04/2022] 2.11</title>
-      <link>/installer/versions/20220420_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220420_versions_courantes/</link>
       <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220420_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220420_versions_courantes/</guid>
       <description>
         
         
@@ -276,10 +276,10 @@
     
     <item>
       <title>Installer: [01/04/2022] 2.10</title>
-      <link>/installer/versions/20220401_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220401_versions_courantes/</link>
       <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220401_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220401_versions_courantes/</guid>
       <description>
         
         
@@ -305,10 +305,10 @@
     
     <item>
       <title>Installer: [02/03/2022] 2.9</title>
-      <link>/installer/versions/20220302_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220302_versions_courantes/</link>
       <pubDate>Wed, 02 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220302_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220302_versions_courantes/</guid>
       <description>
         
         
@@ -334,10 +334,10 @@
     
     <item>
       <title>Installer: [17/02/2022] 2.8</title>
-      <link>/installer/versions/20220217_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220217_versions_courantes/</link>
       <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220217_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220217_versions_courantes/</guid>
       <description>
         
         
@@ -363,10 +363,10 @@
     
     <item>
       <title>Installer: [11/02/2022] 2.7</title>
-      <link>/installer/versions/20220211_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220211_versions_courantes/</link>
       <pubDate>Fri, 11 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220211_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220211_versions_courantes/</guid>
       <description>
         
         
@@ -392,10 +392,10 @@
     
     <item>
       <title>Installer: [09/02/2022] 2.6</title>
-      <link>/installer/versions/20220209_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220209_versions_courantes/</link>
       <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220209_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220209_versions_courantes/</guid>
       <description>
         
         
@@ -421,10 +421,10 @@
     
     <item>
       <title>Installer: [17/01/2022] 2.5</title>
-      <link>/installer/versions/20220117_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220117_versions_courantes/</link>
       <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220117_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220117_versions_courantes/</guid>
       <description>
         
         
@@ -450,10 +450,10 @@
     
     <item>
       <title>Installer: [10/01/2022] 2.4</title>
-      <link>/installer/versions/20220110_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220110_versions_courantes/</link>
       <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220110_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220110_versions_courantes/</guid>
       <description>
         
         
@@ -479,10 +479,10 @@
     
     <item>
       <title>Installer: [03/01/2022] 2.3</title>
-      <link>/installer/versions/20220103_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20220103_versions_courantes/</link>
       <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20220103_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20220103_versions_courantes/</guid>
       <description>
         
         
@@ -520,10 +520,10 @@
     
     <item>
       <title>Installer: [01/12/2021] 2.2 et 1.9</title>
-      <link>/installer/versions/20211201_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20211201_versions_courantes/</link>
       <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20211201_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20211201_versions_courantes/</guid>
       <description>
         
         
@@ -561,10 +561,10 @@
     
     <item>
       <title>Installer: [15/11/2021] 2.1 et 1.9</title>
-      <link>/installer/versions/20211115_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20211115_versions_courantes/</link>
       <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20211115_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20211115_versions_courantes/</guid>
       <description>
         
         
@@ -606,10 +606,10 @@
     
     <item>
       <title>Installer: [21/10/2021] 2.0 et 1.9</title>
-      <link>/installer/versions/20211021_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20211021_versions_courantes/</link>
       <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20211021_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20211021_versions_courantes/</guid>
       <description>
         
         
@@ -647,10 +647,10 @@
     
     <item>
       <title>Installer: [08/10/2021] 1.9</title>
-      <link>/installer/versions/20211008_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20211008_versions_courantes/</link>
       <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20211008_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20211008_versions_courantes/</guid>
       <description>
         
         
@@ -678,10 +678,10 @@
     
     <item>
       <title>Installer: [12/07/2021] 1.8</title>
-      <link>/installer/versions/20210712_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20210712_versions_courantes/</link>
       <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20210712_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20210712_versions_courantes/</guid>
       <description>
         
         
@@ -705,10 +705,10 @@
     
     <item>
       <title>Installer: [07/07/2021] 1.7</title>
-      <link>/installer/versions/20210707_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20210707_versions_courantes/</link>
       <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20210707_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20210707_versions_courantes/</guid>
       <description>
         
         
@@ -730,10 +730,10 @@
     
     <item>
       <title>Installer: [22/06/2021] 1.6</title>
-      <link>/installer/versions/20210622_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20210622_versions_courantes/</link>
       <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20210622_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20210622_versions_courantes/</guid>
       <description>
         
         
@@ -753,10 +753,10 @@
     
     <item>
       <title>Installer: [21/06/2021] 1.5</title>
-      <link>/installer/versions/20210621_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20210621_versions_courantes/</link>
       <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20210621_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20210621_versions_courantes/</guid>
       <description>
         
         
@@ -776,10 +776,10 @@
     
     <item>
       <title>Installer: [18/06/2021] 1.4</title>
-      <link>/installer/versions/20210618_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20210618_versions_courantes/</link>
       <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20210618_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20210618_versions_courantes/</guid>
       <description>
         
         
@@ -799,10 +799,10 @@
     
     <item>
       <title>Installer: [12/05/2021] 1.3</title>
-      <link>/installer/versions/20210512_versions_courantes/</link>
+      <link>/installer/poste_client/versions/20210512_versions_courantes/</link>
       <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>/installer/versions/20210512_versions_courantes/</guid>
+      <guid>/installer/poste_client/versions/20210512_versions_courantes/</guid>
       <description>
         
         

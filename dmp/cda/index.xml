@@ -805,7 +805,24 @@ Les spécifications de ce volet vaccination sont disponibles sur le site de l’
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;historique-de-vaccinations&#34;&gt;Historique de Vaccinations&lt;/h2&gt;
-&lt;p&gt;TODO&lt;/p&gt;
+&lt;p&gt;L’historique de vaccinations peut être récupéré un un seul aller retour grâce à un nouveau point d’entrée dans l’API  :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;En Java :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DMPCClient&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;//...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#000&#34;&gt;TD32Response&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;td31_32findAndRetrieve&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;DMPCContext&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;TD31Request&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;FindHistoriqueVaccinations&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;request&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;En REST&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-curl&#34; data-lang=&#34;curl&#34;&gt;curl -X POST &amp;#34;http://localhost:8080/dmp/td31_32FindAndRetrieveContent&amp;#34; -H &amp;#34;accept: */*&amp;#34; -H &amp;#34;Content-Type: application/json&amp;#34; -d &amp;#34;{ \&amp;#34;context\&amp;#34;: { \&amp;#34;author\&amp;#34;: { }, \&amp;#34;modeAcces\&amp;#34;: { \&amp;#34;acces\&amp;#34;: \&amp;#34;NORMAL\&amp;#34; } }, \&amp;#34;request\&amp;#34;: { \&amp;#34;matriculeINS\&amp;#34;: { \&amp;#34;identifiantSysteme\&amp;#34;: \&amp;#34;string\&amp;#34;, \&amp;#34;valeur\&amp;#34;: \&amp;#34;string\&amp;#34; }, \&amp;#34;query\&amp;#34;: \&amp;#34;FindDocuments\&amp;#34; }}&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;La réponse retourné contiendra le document CDA généré par le serveur DMP, le rendu HTML mais aussi et surtout un &lt;code&gt;DMPCHistoriqueVaccinations&lt;/code&gt; retournant une liste de vaccination dans le même format que la vaccination envoyé dans une &lt;code&gt;DMPCNoteVaccination&lt;/code&gt;.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;public class DMPCHistoriqueVaccinations extends DMPCDocument {
+    //...
+    List&amp;lt;DMPCNoteVaccination.Vaccination&amp;gt; vaccinations; 
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Voici un exemple d’historique de vaccinations retourné : &lt;a href=&#34;historique_vaccinations.json&#34;&gt;historique_vaccinations.json&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>
@@ -878,7 +895,7 @@ Les spécifications de ce volet vaccination sont disponibles sur le site de l’
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>

@@ -14,8 +14,11 @@
     <loc>/dmp/embedded/</loc>
     <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
+    <loc>/dmp/howtos/migrations/</loc>
+    <lastmod>2022-11-18T16:38:36+01:00</lastmod>
+  </url><url>
     <loc>/installer/poste_client/</loc>
-    <lastmod>2022-11-15T11:55:06+01:00</lastmod>
+    <lastmod>2022-11-18T15:21:54+01:00</lastmod>
   </url><url>
     <loc>/installer/docker/</loc>
     <lastmod>2022-11-15T11:55:06+01:00</lastmod>
@@ -27,18 +30,15 @@
     <lastmod>2022-10-04T15:10:01+02:00</lastmod>
   </url><url>
     <loc>/dmp/rest/</loc>
-    <lastmod>2022-10-25T11:05:31+02:00</lastmod>
+    <lastmod>2022-11-18T16:38:36+01:00</lastmod>
   </url><url>
     <loc>/dmp/howtos/transactions/</loc>
-    <lastmod>2022-02-04T12:11:30+01:00</lastmod>
+    <lastmod>2022-11-18T15:21:54+01:00</lastmod>
   </url><url>
     <loc>/insi/</loc>
     <lastmod>2022-03-16T11:35:55+01:00</lastmod>
   </url><url>
     <loc>/insi/rest/</loc>
-    <lastmod>2022-09-15T18:37:57+02:00</lastmod>
-  </url><url>
-    <loc>/dmp/soap/</loc>
     <lastmod>2022-09-15T18:37:57+02:00</lastmod>
   </url><url>
     <loc>/ms-sante/</loc>
@@ -53,8 +53,11 @@
     <loc>/dmp/howtos/environnements/</loc>
     <lastmod>2022-08-16T11:28:04+02:00</lastmod>
   </url><url>
+    <loc>/dmp/howtos/migrations/4.7_5.0/</loc>
+    <lastmod>2022-11-18T16:38:36+01:00</lastmod>
+  </url><url>
     <loc>/insi/configuration/</loc>
-    <lastmod>2022-07-27T14:20:00+02:00</lastmod>
+    <lastmod>2022-11-18T16:38:36+01:00</lastmod>
   </url><url>
     <loc>/installer/poste_client/contenu/</loc>
     <lastmod>2022-11-15T11:55:06+01:00</lastmod>
@@ -114,7 +117,7 @@
     <lastmod>2022-11-15T11:29:25+01:00</lastmod>
   </url><url>
     <loc>/dmp/configuration/</loc>
-    <lastmod>2022-04-15T11:57:51+02:00</lastmod>
+    <lastmod>2022-11-18T16:38:36+01:00</lastmod>
   </url><url>
     <loc>/dmp/howtos/</loc>
     <lastmod>2022-01-21T10:41:35+01:00</lastmod>
@@ -183,7 +186,7 @@
     <lastmod>2022-10-05T14:56:38+02:00</lastmod>
   </url><url>
     <loc>/dmp/versions/</loc>
-    <lastmod>2022-10-13T16:36:14+02:00</lastmod>
+    <lastmod>2022-11-18T16:38:36+01:00</lastmod>
   </url><url>
     <loc>/insi/versions/</loc>
     <lastmod>2022-10-05T10:32:46+02:00</lastmod>

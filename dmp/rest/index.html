@@ -122,10 +122,6 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-dmprest-check" checked/>
   <label for="m-dmprest-check"><a href="/dmp/rest/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__section" id="m-dmprest"><span class="td-sidebar-nav-active-item">REST Proxy</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpsoap-li">
-  <input type="checkbox" id="m-dmpsoap-check"/>
-  <label for="m-dmpsoap-check"><a href="/dmp/soap/" title="DEPRECATED - SOAP Proxy" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmpsoap"><span class="">SOAP Proxy</span></a></label>
-  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmpauthentifications-li">
   <input type="checkbox" id="m-dmpauthentifications-check"/>
   <label for="m-dmpauthentifications-check"><a href="/dmp/authentifications/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmpauthentifications"><span class="">Authentifications</span></a></label>
@@ -185,7 +181,18 @@ if (!doNotTrack) {
   <label for="m-dmphowtos-check"><a href="/dmp/howtos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtos"><span class="">Howtos</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactions-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmphowtosmigrations-li">
+  <input type="checkbox" id="m-dmphowtosmigrations-check"/>
+  <label for="m-dmphowtosmigrations-check"><a href="/dmp/howtos/migrations/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtosmigrations"><span class="">Migrations</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosmigrations47_50-li">
+  <input type="checkbox" id="m-dmphowtosmigrations47_50-check"/>
+  <label for="m-dmphowtosmigrations47_50-check"><a href="/dmp/howtos/migrations/4.7_5.0/" title="Migration 4.7 vers la 5.0" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtosmigrations47_50"><span class="">4.7_5.0</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactions-li">
   <input type="checkbox" id="m-dmphowtostransactions-check"/>
   <label for="m-dmphowtostransactions-check"><a href="/dmp/howtos/transactions/" title="Transactions supportées" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dmphowtostransactions"><span class="">Toutes les transactions</span></a></label>
   
@@ -325,12 +332,13 @@ un formalisme simplifié.</p>
 <p>Vous pouvez commencer à intégrer la DevBox-Santé DMP depuis l&rsquo;environnement de démonstration.</p>
 <p>Pour cela vous pouvez :</p>
 <ul>
-<li>consulter toute la documentation <a href="https://dmpc-demo.devbox-sante.fr/swagger-ui.html">REST de l&rsquo;API</a></li>
-<li>utiliser la collection Postman :</li>
-</ul>
-<ul>
-<li>@Version 4.7 <a target="_blank" href="https://www.getpostman.com/collections/5b5fce5a7dd60e0147ca"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></li>
-<li>@Version 5.0 : comming soon</li>
+<li>
+<p>consulter toute la documentation depuis l’environnement de démonstration <a href="https://dmpc-demo.devbox-sante.fr/swagger-ui.html">REST de l&rsquo;API</a></p>
+</li>
+<li>
+<p>essayer avec une collection postman :</p>
+<p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
+</li>
 </ul>
 <blockquote>
 <p>Attention : seule l&rsquo;authentification indirecte est supportée dans un environnement cloud.</p>

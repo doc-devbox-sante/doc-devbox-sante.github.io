@@ -136,7 +136,45 @@ Version imprimable multipages.
     
     
 	
-<li>1: <a href="#pg-f735462b8d0ff314fe0254e1f86e8d07">Transactions supportées</a></li>
+<li>1: <a href="#pg-9b74348bb827fc0660b4ba571dc86437">Migrations</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.1: <a href="#pg-6710e3281519b88ee2aa5944e262c072">Migration 4.7 vers la 5.0</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-f735462b8d0ff314fe0254e1f86e8d07">Transactions supportées</a></li>
 
 
     
@@ -144,7 +182,7 @@ Version imprimable multipages.
     
     
 	
-<li>2: <a href="#pg-254923b045df69c3988cd4d88682ddf9">Différents environnements du DMP</a></li>
+<li>3: <a href="#pg-254923b045df69c3988cd4d88682ddf9">Différents environnements du DMP</a></li>
 
 
     
@@ -152,7 +190,7 @@ Version imprimable multipages.
     
     
 	
-<li>3: <a href="#pg-9541efc6c6fadf578bd308752f785e9b">Integrateurs checklist</a></li>
+<li>4: <a href="#pg-9541efc6c6fadf578bd308752f785e9b">Integrateurs checklist</a></li>
 
 
     
@@ -160,7 +198,7 @@ Version imprimable multipages.
     
     
 	
-<li>4: <a href="#pg-8b8e215b0b4cbdb8f1420baec42100c4">Passage de l&#39;homologation</a></li>
+<li>5: <a href="#pg-8b8e215b0b4cbdb8f1420baec42100c4">Passage de l&#39;homologation</a></li>
 
 
     
@@ -179,7 +217,7 @@ Version imprimable multipages.
     
     
 	
-<li>5: <a href="#pg-0f6a8b8e81b29a55c0237a0114578bf4">Gestion des certificats</a></li>
+<li>6: <a href="#pg-0f6a8b8e81b29a55c0237a0114578bf4">Gestion des certificats</a></li>
 
 
     
@@ -198,7 +236,7 @@ Version imprimable multipages.
     
     
 	
-<li>6: <a href="#pg-de03b1ff0ff2188a68d5d13f0a8489ec">Schematron</a></li>
+<li>7: <a href="#pg-de03b1ff0ff2188a68d5d13f0a8489ec">Schematron</a></li>
 
 
     
@@ -217,7 +255,7 @@ Version imprimable multipages.
     
     
 	
-<li>7: <a href="#pg-5108f66151c5bdb9b3237f215debe81d">Démo Stellair</a></li>
+<li>8: <a href="#pg-5108f66151c5bdb9b3237f215debe81d">Démo Stellair</a></li>
 
 
     
@@ -236,7 +274,7 @@ Version imprimable multipages.
     
     
 	
-<li>8: <a href="#pg-c2f2ade9ada5510eda41ad4f98eefc3b">UniqueIdGenerator</a></li>
+<li>9: <a href="#pg-c2f2ade9ada5510eda41ad4f98eefc3b">UniqueIdGenerator</a></li>
 
 
     
@@ -244,7 +282,7 @@ Version imprimable multipages.
     
     
 	
-<li>9: <a href="#pg-19c3ebeab867e0a03ad82e20cb9db692">CNDA : Fiche d&#39;identité du composant DMP</a></li>
+<li>10: <a href="#pg-19c3ebeab867e0a03ad82e20cb9db692">CNDA : Fiche d&#39;identité du composant DMP</a></li>
 
 
     
@@ -275,7 +313,133 @@ Version imprimable multipages.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-f735462b8d0ff314fe0254e1f86e8d07">1 - Transactions supportées</h1>
+	<h1 id="pg-9b74348bb827fc0660b4ba571dc86437">1 - Migrations</h1>
+    <div class="lead">Guide de migration vers les versions supérieures de la DevBox-Santé DMP</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-6710e3281519b88ee2aa5944e262c072">1.1 - Migration 4.7 vers la 5.0</h1>
+    <div class="lead">Guide de migration vers la nouvelle version 5.0</div>
+	<p>La version 5.0 apporte son lot de nouveautés, et tend vers une intégration la plus souple avec le DMP mais aussi les autres téléservices de santé.</p>
+<p>Cette version supporte encore les anciennes requêtes mais déprecient certaines notions.</p>
+<p>Une nouvelle collection postman est disponible dans l’espace public Postman : <a href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview">https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples</a></p>
+<h2 id="note-et-historique-de-vaccination">Note et Historique de vaccination</h2>
+<p>Tout d’abord, nous avons ajouté le support de la note et historique de vaccinations, pour plus d’information consulter la documentation à ce sujet : <a href="/dmp/cda/vaccination">/dmp/cda/vaccination</a></p>
+<h2 id="gestion-de-linsaméliorée">Gestion de l’INS améliorée</h2>
+<p>Pour être en conformité avec l’INSi et simplifier l’intégration entre les deux composants DMP et INSi, dans tous les objets faisant référence à un INS, le couple identifiant/autorité est dorénavant utilisé au lieu de spécifier cette autorité dans le contexte de la requête.</p>
+<p>Par exemple, une requête (td0.2 test d’existence) en version 4.7 :</p>
+<p><img src="td0.2_4.7.png" alt="td0.2_4.7.png"></p>
+<p>devient en 5.0 :</p>
+<p><img src="td0.2_5.0.png" alt="td0.2_5.0.png"></p>
+<p>Bien sur, l’ancienne forme est encore supporté sur cette version mais il est fortement conseillé d’adopter la nouvelle forme.</p>
+<p>Le même exemple en java, un test d’existence en 4.7 :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setInsNirAutorite</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCContext</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">DMPCInsNirAutorite</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">TEST</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">TD02Response</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;277076322082910&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span></code></pre></div><p>devient en 5.0</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">var</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span>  
+</span></span><span style="display:flex;"><span>                    <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">builder</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">matriculeINS</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Identifiant</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">builder</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">valeur</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;277076322082910&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">identifiantSysteme</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Oids</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ANS_1_2_250_1_213</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">_1_4_10_INS_NIR_TEST</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">val</span><span style="color:#ce5c00;font-weight:bold">())</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">())</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><h2 id="validation">Validation</h2>
+<p>Les messages de validation ont été améliorés en contextualisant la plupart des validations (en soumission, en récupération). Mais aussi plus finement, comme par exemple, la vérification qu’un code d’un document est bien dans son jeu de valeurs spécifique.</p>
+<p>Quelques exemples de validations effectuées sur un <a href="https://bitbucket.org/devbox-sante/dmpc-api/src/master/src/main/java/fr/devboxsante/dmp/model/DMPCDocument.java"><code>DMPCDocument</code></a> :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">DMPCDocument</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@CodeValid</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">jeuValeurs</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">JeuxValeursDMP</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">FORMAT_CODE</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">groups</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#000">OnSubmit</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">})</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">DMPCCode</span> <span style="color:#000">formatCode</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@NotNull</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">groups</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#000">BinaryRequired</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">})</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">byte</span><span style="color:#ce5c00;font-weight:bold">[]</span> <span style="color:#000">content</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@NotNull</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">groups</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#000">OnRetrieve</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">})</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">String</span> <span style="color:#000">entryUuid</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span></code></pre></div><p>Exemple de message obtenu dorénavant pour un classCode erronné dans le document :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span> <span style="color:#4e9a06">&#34;message&#34;</span><span style="color:#a40000">:</span> <span style="color:#4e9a06">&#34;Code 55 inexistant dans la nomenclature JDV_J57-ClassCode-DMP.tabs&#34;</span>
+</span></span></code></pre></div><p>Par conséquent, certains contrôles sont plus sévères, et donc certains cas passant peuvent ne plus l’être. Par exemple, il n’est plus possible d’identifier un Personnel de santé avec un <code>internalId</code> sans préciser son identifiant de structure. Ou encore, une vérification du format des RPPS est effectué dans les documents envoyés.</p>
+<p>Consulter, les sources pour visualiser les contrôles possibles : <a href="https://bitbucket.org/devbox-sante/dmpc-api/src/master/">https://bitbucket.org/devbox-sante/dmpc-api/src/master/</a></p>
+<h2 id="ajout-de-la-td04">Ajout de la TD0.4</h2>
+<p>La documentation sur cette nouvelle transaction est <a href="/dmp/howtos/transactions/#td04--lister-les-dmp-autoris%C3%A9s-depuis-version-50">ici</a></p>
+<h2 id="autres-évolutions">Autres évolutions</h2>
+<ul>
+<li>
+<p>Suppression de la TD0.0</p>
+</li>
+<li>
+<p>Meilleur gestion des cartes CPF (en formation)</p>
+</li>
+<li>
+<p>Gestion multicertificats</p>
+</li>
+<li>
+<p>Suppression de la transaction TD1.5</p>
+</li>
+<li>
+<p>Suppression du statut Médecint Traitant (TD0.3)</p>
+</li>
+<li>
+<p>Contrôle des formats d’identifiant (RPPS, FINESS &hellip;)</p>
+</li>
+<li>
+<p>&hellip; et d’autres encore cf. <a href="/dmp/versions">le release note</a></p>
+</li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-f735462b8d0ff314fe0254e1f86e8d07">2 - Transactions supportées</h1>
     <div class="lead">Contient un exemple d&rsquo;utilisation de l&rsquo;API java et curl des différentes transactions supportées.</div>
 	<p>Toutes transactions vers le DMP se fait en précisant un <code>DMPCContext</code> et une requête spécifique en argument d&rsquo;une méthode du <code>DMPCClient</code>.</p>
 <p>Le <code>DMPCContext</code> contient les informations permettant de définir :</p>
@@ -383,7 +547,13 @@ Le système de la structure de santé doit être en mesure d&rsquo;authentifié 
 <p>Cette transaction permet de tester l&rsquo;existence d&rsquo;un DMP et de vérifier les autorisations d&rsquo;accès ainsi que de récupérer les informations concernant la création du compte patient.</p>
 <p>De là peut en découler des actions de créations de DMP, de création de compte internet, ou bien encore de connaître la raison d&rsquo;une interdiction d&rsquo;accès</p>
 <p>Exemple Java :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">TD02Response</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;211066322074514&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">TD02Response</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">builder</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">matriculeINS</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Identifiant</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">builder</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">valeur</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;277076322082910&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">identifiantSysteme</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Oids</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ANS_1_2_250_1_213</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">_1_4_10_INS_NIR_TEST</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">val</span><span style="color:#ce5c00;font-weight:bold">())</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">())</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#ce5c00;font-weight:bold">);</span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getAutorisation</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">equals</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">EXPIRE</span><span style="color:#ce5c00;font-weight:bold">))</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// prévoir une client.td03AddAuthorization()
 </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#ce5c00;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getAutorisation</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">equals</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">INTERDIT</span><span style="color:#ce5c00;font-weight:bold">))</span> <span style="color:#ce5c00;font-weight:bold">{</span>
@@ -406,7 +576,10 @@ Le système de la structure de santé doit être en mesure d&rsquo;authentifié 
 </span></span><span style="display:flex;"><span><span style="color:#a40000">--data-raw</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#a40000">...</span><span style="color:#000;font-weight:bold">},</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;ins&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;277076322082910&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;matriculeINS&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;valeur&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;279035121518989&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;identifiantSysteme&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.213.1.4.10&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
 </span></span></code></pre></div><h3 id="td03--modifier-lautorisation-daccès-etou-le-statut-médecin-traitant-dmp-ou-passer-en-mode-daccès--bris-de-glace--depuis-version-20">TD0.3 : modifier l&rsquo;autorisation d&rsquo;accès et/ou le statut médecin traitant DMP ou passer en mode d&rsquo;accès « bris de glace » (depuis version 2.0)</h3>
@@ -417,15 +590,17 @@ Le système de la structure de santé doit être en mesure d&rsquo;authentifié 
 <li>Modifier le statut médecin traitant DMP. Cf. DMP_0.3c.</li>
 </ul>
 <p>Exemple :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td03AddAuthorization</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD03Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;211066322074514&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">DMPCRole</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">STANDARD</span><span style="color:#ce5c00;font-weight:bold">));</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td03RemoveAuthorization</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD03Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getIns</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#000">DMPCRole</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">STANDARD</span><span style="color:#ce5c00;font-weight:bold">));</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td03AddAuthorization</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD03Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getIns</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#000">DMPCRole</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">MEDECIN_TRAITANT</span><span style="color:#ce5c00;font-weight:bold">));</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td03AddAuthorization</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD03Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getMatriculeINS</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#000">DMPCRole</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">STANDARD</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td03RemoveAuthorization</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD03Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getMatriculeINS</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#000">DMPCRole</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">STANDARD</span><span style="color:#ce5c00;font-weight:bold">));</span>
 </span></span></code></pre></div><p>Exemple curl :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span>  <span style="color:#a40000">--request</span> <span style="color:#a40000">PUT</span> <span style="color:#a40000">&#39;/dmp/td</span><span style="color:#0000cf;font-weight:bold">03</span><span style="color:#a40000">AddAuthorization&#39;</span> <span style="color:#a40000">\</span>
 </span></span><span style="display:flex;"><span><span style="color:#a40000">--data-raw</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#a40000">...</span>  <span style="color:#000;font-weight:bold">},</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ins&#34;</span><span style="color:#000;font-weight:bold">:</span>  <span style="color:#4e9a06">&#34;279035121518989&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;matriculeINS&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;valeur&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;279035121518989&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;identifiantSysteme&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.213.1.4.10&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;role&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;STANDARD&#34;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
@@ -434,49 +609,56 @@ Le système de la structure de santé doit être en mesure d&rsquo;authentifié 
 </span></span><span style="display:flex;"><span><span style="color:#a40000">--data-raw</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#a40000">...</span><span style="color:#000;font-weight:bold">},</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ins&#34;</span><span style="color:#000;font-weight:bold">:</span>  <span style="color:#4e9a06">&#34;277076322082910&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;matriculeINS&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;valeur&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;279035121518989&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;identifiantSysteme&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.213.1.4.10&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;role&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;STANDARD&#34;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
-</span></span></code></pre></div><h3 id="td04">TD0.4</h3>
+</span></span></code></pre></div><h3 id="td04--lister-les-dmp-autorisés-depuis-version-50">TD0.4 : lister les DMP autorisés (depuis version 5.0)</h3>
+<p>Les deux usages sont les suivants :</p>
+<ol>
+<li>
+<p>Elle permet de récupérer la liste des nouveaux DMP autorisés pour l’acteur de santé (avec les INS de patient et les traits d’identités). Outre les habituelles informations d’authentification, il est possible de paramétrer en entrée une date à partir de laquelle la recherche est effectuée. Par exemple : (date du jour - 3 jours) ou (date du jour - 1 semaine). L’éditeur peut mettre en oeuvre dans le LPS un appel planifié régulièrement à cette transaction (par exemple tous les 3 jours ou toutes les semaines). Exemple : Cette transaction peut être utile dans le cas d’un logiciel du SIH ne recueillant pas directement l’autorisation du patient.
+NB : l’autorisation d’accès est facultative pour alimenter le DMP avec des documents et pour supprimer des documents si le LPS implémente le profil Alimentation.</p>
+</li>
+<li>
+<p>Cette transaction permet de récupérer la liste des patients pour lesquels un nouveau document a été ajouté dans son DMP depuis une date donnée. Le retour est le même, seul le paramétrage en entrée est différent.</p>
+</li>
+</ol>
+<p>Exemple Java : </p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// cas 1
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">var</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td04ListDMPActifs</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">TD04Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">builder</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">from</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">clock</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getLocal</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">minusYears</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">1</span><span style="color:#ce5c00;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">searchType</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">TD04Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">PatientSearchType</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">LAST_AUTORIZATION</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// cas 2 
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">var</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td04ListDMPActifs</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">TD04Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">builder</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">from</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">clock</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getLocal</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">minusYears</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">1</span><span style="color:#ce5c00;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">searchType</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">TD04Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">PatientSearchType</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">LAST_DOC</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>Exemple curl :</p>
+<p>// cas 2</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">--location</span> <span style="color:#a40000">--request</span> <span style="color:#a40000">PUT</span> <span style="color:#a40000">&#39;http:</span><span style="color:#8f5902;font-style:italic">//localhost:8080/dmp/td04ListDMPActifs&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#a40000">--header</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span><span style="color:#a40000">--data-raw</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;author&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;modeAcces&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;acces&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;NORMAL&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;from&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-08-12T15:16:10Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;searchType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;LAST_DOC&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
+</span></span></code></pre></div><h3 id="td05">TD0.5</h3>
 <p>Non requis pour le DMP</p>
-<h3 id="td05">TD0.5</h3>
-<p>Non requis pour le DMP</p>
-<h3 id="td15--créer-ou-mettre-à-jour-le-compte-internet-du-patient-depuis-version-20">TD1.5 : créer ou mettre à jour le compte internet du patient (depuis version 2.0)</h3>
-<p>La fonctionnalité DMP_1.5 permet :</p>
-<ul>
-<li>de créer le compte internet du patient afin que celui-ci puisse se connecter sur son DMP (DMP_1.5a),</li>
-<li>d&rsquo;ajouter ou modifier ou supprimer un canal OTP (One Time Password - code d&rsquo;accès à usage unique) (DMP_1.5b),</li>
-<li>de débloquer le compte internet patient et de régénérer les paramètres de connexion du patient (DMP_1.5d).</li>
-</ul>
-<p>Exemple :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">DMPCPatient</span> <span style="color:#000">patient</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">createDMP</span><span style="color:#ce5c00;font-weight:bold">();</span>
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Création de l&#39;accès internet
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">TD15aRequest</span> <span style="color:#000">aRequest</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD15aRequest</span><span style="color:#ce5c00;font-weight:bold">();</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">aRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPatient</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">aRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setEmail</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;laurent.foret@dev.coop&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">TD15aResponse</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td15aCreerAccesInternetPatient</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">aRequest</span><span style="color:#ce5c00;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">Files</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">write</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getFormulairePatient</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">File</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;./target/documentDesSecrets.pdf&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Ajout d&#39;un canal OTP
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">TD15bRequest</span> <span style="color:#000">bRequest</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD15bRequest</span><span style="color:#ce5c00;font-weight:bold">();</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">bRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setIns</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getIns</span><span style="color:#ce5c00;font-weight:bold">());</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">bRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setTelephone</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;0663285980&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td15bAddCanalOTP</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">bRequest</span><span style="color:#ce5c00;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Suppression d&#39;un canal OTP
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">bRequest</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD15bRequest</span><span style="color:#ce5c00;font-weight:bold">();</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">bRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setIns</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getIns</span><span style="color:#ce5c00;font-weight:bold">());</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">bRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setEmail</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;laurent.foret@dev.coop&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td15bRemoveCanalOTP</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">bRequest</span><span style="color:#ce5c00;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Déblocage accès internet patient
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">TD15cRequest</span> <span style="color:#000">dRequest</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD15cRequest</span><span style="color:#ce5c00;font-weight:bold">();</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">dRequest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPatient</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">TD15cResponse</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td15dDeblocageAccesInternetPatient</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">dRequest</span><span style="color:#ce5c00;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">Files</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">write</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getFormulairePatient</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">File</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;./target/documentDesSecrets15d110.pdf&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
-</span></span></code></pre></div><h2 id="alimentation">Alimentation</h2>
+<h2 id="alimentation">Alimentation</h2>
 <p>Le profil alimentation du DMP se fait au travers de transaction XDS (<a href="https://wiki.ihe.net/index.php/Cross-Enterprise_Document_Sharing">https://wiki.ihe.net/index.php/Cross-Enterprise_Document_Sharing</a>) supportée par le serveur DMP ainsi que par la DevBox-Santé DMP.</p>
 <p>Les transactions XDS permettent de soumettre des documents au format CDA (<a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=7">https://www.hl7.org/implement/standards/product_brief.cfm?product_id=7</a>) supporté également par le DMP et la DevBox-Santé DMP.</p>
 <p>La DevBox-Santé DMP présente un modèle simplifé des informations demandées et s&rsquo;occupe de la cohérence des métadonnées des transactions XDS d&rsquo;avec les métadonnées <a href="../CDA/structurationMinimale.html">des documents CDA</a> )</p>
@@ -655,7 +837,7 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-254923b045df69c3988cd4d88682ddf9">2 - Différents environnements du DMP</h1>
+	<h1 id="pg-254923b045df69c3988cd4d88682ddf9">3 - Différents environnements du DMP</h1>
     <div class="lead">Les différents environnements pour accéder au DMP</div>
 	<p>Pour le DMP, Ils existent quatre types d&rsquo;environnements : </p>
 <ul>
@@ -718,7 +900,7 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-9541efc6c6fadf578bd308752f785e9b">3 - Integrateurs checklist</h1>
+	<h1 id="pg-9541efc6c6fadf578bd308752f785e9b">4 - Integrateurs checklist</h1>
     <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.</div>
 	<h2 id="administratif">Administratif</h2>
 <ul>
@@ -804,7 +986,7 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-8b8e215b0b4cbdb8f1420baec42100c4">4 - Passage de l&#39;homologation</h1>
+	<h1 id="pg-8b8e215b0b4cbdb8f1420baec42100c4">5 - Passage de l&#39;homologation</h1>
     <div class="lead">Les différents points à connaître pour homologuer votre solution</div>
 	<h2 id="plan-de-vérification">Plan De Vérification</h2>
 <p>Une fois que vous avez reçu votre PDV filtré par les équipes de DEVCOOP. Il vous faut :</p>
@@ -975,7 +1157,7 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&lt;/ds:X509Certificate&gt;&lt;/ds:X
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-0f6a8b8e81b29a55c0237a0114578bf4">5 - Gestion des certificats</h1>
+	<h1 id="pg-0f6a8b8e81b29a55c0237a0114578bf4">6 - Gestion des certificats</h1>
     <div class="lead">Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification indirecte</div>
 	<p>Une nouvelle IGC Santé a été mise en place courant 2016 : <a href="http://integrateurs-cps.asipsante.fr/IGC-Sante">http://integrateurs-cps.asipsante.fr/IGC-Sante</a></p>
 <p>Afin d&rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité. 
@@ -1107,7 +1289,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-de03b1ff0ff2188a68d5d13f0a8489ec">6 - Schematron</h1>
+	<h1 id="pg-de03b1ff0ff2188a68d5d13f0a8489ec">7 - Schematron</h1>
     <div class="lead">Validation manuelle des CDA générés par la DevBox-Santé DMP lors de l&rsquo;homologation</div>
 	<h3 id="utilisation-de-lespace-de-tests-de-lans">Utilisation de l&rsquo;espace de tests de l&rsquo;ANS</h3>
 <p>Sur le site <a href="https://interop.esante.gouv.fr">interop.esante.gouv.fr</a> ou plus exactement <a href="https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;extension=ASIP">https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;extension=ASIP</a></p>
@@ -1149,7 +1331,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-5108f66151c5bdb9b3237f215debe81d">7 - Démo Stellair</h1>
+	<h1 id="pg-5108f66151c5bdb9b3237f215debe81d">8 - Démo Stellair</h1>
     <div class="lead">Tester les mécanismes Olaqin TAAS (Terminal As A Service) sur l’environnement de démonstration.</div>
 	<p>Vous avez accès à l’environnement de démonstration de Stellair d’Olaqin : <a href="https://demo.stellair.fr">https://demo.stellair.fr</a> :</p>
 <p><img src="Stellair-accueil-demo.png" alt="Stellair-accueil-demo.png"></p>
@@ -1248,7 +1430,7 @@ La réponse étant :</li>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-c2f2ade9ada5510eda41ad4f98eefc3b">8 - UniqueIdGenerator</h1>
+	<h1 id="pg-c2f2ade9ada5510eda41ad4f98eefc3b">9 - UniqueIdGenerator</h1>
     <div class="lead">[Alimentation] Génération des UniqueId</div>
 	<p>Afin d&rsquo;être totalement conforme à l’exigence EX_2.1-1130.</p>
 <blockquote>
@@ -1326,7 +1508,7 @@ La réponse étant :</li>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-19c3ebeab867e0a03ad82e20cb9db692">9 - CNDA : Fiche d&#39;identité du composant DMP</h1>
+	<h1 id="pg-19c3ebeab867e0a03ad82e20cb9db692">10 - CNDA : Fiche d&#39;identité du composant DMP</h1>
     
 	<p>NIE DEVCOOP : DEV331918</p>
 <h3 id="homologation-du-27092021">Homologation du 27/09/2021</h3>

@@ -161,11 +161,13 @@ Version imprimable multipages.
 </span></span></span></code></pre></div><p>Pour charger le fichier de configuration :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>./application.yml -jar insi-proxy.jar
 </span></span></code></pre></div><h3 id="mode-de-sécurité">Mode de sécurité</h3>
-<p>Il existe trois modes d&rsquo;authentification pour accéder au téléservice INSi dans le composant DevBox-Santé :</p>
+<p>Il existe quatre modes d&rsquo;authentification pour accéder au téléservice INSi dans le composant DevBox-Santé :</p>
 <ul>
 <li>CPS : génération des signatures des messages SOAP en utilisant la cryptolib CPS au travers du composant DevBox-Santé CPS.</li>
+<li>CPS Stellair : mode d’authentification spécifique offre Stellair</li>
 <li>P12 : initialisation des connexion TLS avec le Téléservice INSi avec un certificat d&rsquo;établissement p12</li>
 <li>P12Multiple : permet la connexion TLS avec plusieurs certificats d&rsquo;établissements p12</li>
+<li>P12InHeader : permet lo connexion TLS avec le certificat P12 passé dans le header HTTP.</li>
 </ul>
 
 

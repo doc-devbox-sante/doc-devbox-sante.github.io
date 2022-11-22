@@ -294,6 +294,13 @@ end
 &lt;td&gt;accès à un serveur de temps ntp &lt;br&gt; &lt;code&gt;fr.pool.ntp.org&lt;/code&gt; configuré par défaut mais configurable&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;IGCSanté (DMP, MSS, INSi)&lt;/td&gt;
+&lt;td&gt;http&lt;/td&gt;
+&lt;td&gt;80&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;igc-sante.esante.gouv.fr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;accès au certificats de l’IGC santé&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;MSS&lt;/td&gt;
 &lt;td&gt;ldap&lt;/td&gt;
 &lt;td&gt;389&lt;/td&gt;

@@ -101,15 +101,7 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&amp;lt;/ds:X509Certificate&amp;gt;&
       <description>
         
         
-        
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;pre&gt;&lt;code&gt;Attention : Page en cours de construction
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;Afin de gérer les déploiements de la DevBox-Santé dans des environnements type Windows RDP (Remote Desktop Protocol) / Citrix, nous avons créé le projet &lt;strong&gt;Eureka&lt;/strong&gt;.
+        &lt;p&gt;Afin de gérer les déploiements de la DevBox-Santé dans des environnements type Windows RDP (Remote Desktop Protocol) / Citrix, nous avons créé le projet &lt;strong&gt;Eureka&lt;/strong&gt;.
 Eureka est l&amp;rsquo;annuaire des devbox-santé branchés sur les différents lecteurs de carte PC/SC:&lt;/p&gt;
 &lt;p&gt;Dans &lt;a href=&#34;/blog/2021/09/20/devbox-sant%C3%A9-dans-un-environnement-rdp/citrix/&#34;&gt;notre post du 20 septembre 2021&lt;/a&gt;, nous expliquions qu&amp;rsquo;il était difficile de faire le lien entre un partage de port USB (spécifique à chaque session utilisateur RDP) et un partage de port HTTP.&lt;/p&gt;
 &lt;p&gt;Chaque session utilisateur devait être associé à une DevBox-Santé sur un port http spécifique.&lt;/p&gt;

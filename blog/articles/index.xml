@@ -14,6 +14,26 @@
     
     
     <item>
+      <title>Blog: Homologation DMP</title>
+      <link>/blog/articles/20221130_homologation_dmp_2.6.1/</link>
+      <pubDate>Wed, 30 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/articles/20221130_homologation_dmp_2.6.1/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Pour notre dernier passage d’homologation, nous sommes fiers de cocher toutes les cases.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;PDV_toutes_les_cases.png&#34; alt=&#34;Homologation_PDV_toutes_les_cases&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Mais ce n’est pas fini, nous apportons désormais une API permettant de générer facilement :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Les volets de &lt;a href=&#34;/dmp/cda/crBiologie&#34;&gt;CR-BIO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Les volets de &lt;a href=&#34;/dmp/cda/vaccination&#34;&gt;Note de vaccination&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: SEGUR : la DevBox-Santé dans le référentiel d’exigences Hopital</title>
       <link>/blog/2022/06/09/segur-la-devbox-sant%C3%A9-dans-le-r%C3%A9f%C3%A9rentiel-dexigences-hopital/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>

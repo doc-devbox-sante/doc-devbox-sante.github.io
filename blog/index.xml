@@ -120,6 +120,28 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;dd&gt;Haute Autorité de Santé&lt;/dd&gt;
 &lt;dt&gt;HDS&lt;/dt&gt;
 &lt;dd&gt;Hébergeur de Données de Santé&lt;/dd&gt;
+&lt;dt&gt;Identité homonyme&lt;/dt&gt;
+&lt;dd&gt;Attribut utilisé pour signaler un fort taux de ressemblance entre des identités numériques et alerter les professionnels lors de la prise en charge de ces usagers homonymes ou à identités approchantes.&lt;/dd&gt;
+&lt;dt&gt;Identité INS&lt;/dt&gt;
+&lt;dd&gt;Ensemble des informations numériques renvoyés par le téléservice INSi, constituées :
+&lt;ul&gt;
+&lt;li&gt;du matricule INS : numéro d’identification au répertoire des personnes physiques (NIR ou NIA) ;&lt;/li&gt;
+&lt;li&gt;des traits INS (Nom de naissance, liste des prénoms de l’état civil, date de naissance, sexe, code commune du lieu de naissance ou code pays pour les personnes nées à l’étranger) ;&lt;/li&gt;
+&lt;li&gt;de l’OID (object identifier) qui identifie l’origine et le type de l’information (INSEE, NIR/NIA…).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;dt&gt;Identité numérique&lt;/dt&gt;
+&lt;dd&gt;L’identité numérique correspond à la représentation d’un individu physique dans un système d’information (cf. Annexe I). Un même usager peut avoir plusieurs identités numériques : dans le (ou les) domaines d’identification ou de rapprochement utilisés par la structure, dans son dossier médical partagé (DMP), dans la base de données de facturation de l’assurance maladie… En revanche, lorsque l’usager a plusieurs identités numériques dans un même domaine d’identification, il s’agit de doublons.&lt;/dd&gt;
+&lt;dt&gt;Identité provisoire&lt;/dt&gt;
+&lt;dd&gt;Statut d’une identité numérique locale qui n’a pas été récupérée sur le téléservice INSi et qui n’a pas encore fait l’objet d’un contrôle de cohérence avec les traits portés par un dispositif d’identité à haut niveau de confiance. Ce statut peut, si besoin, être associé à un attribut Identité douteuse ou Identité fictive.&lt;/dd&gt;
+&lt;dt&gt;Identité qualifiée&lt;/dt&gt;
+&lt;dd&gt;Statut d’une identité numérique locale qui a été récupérée sur le téléservice INSi, et comparée avec succès aux traits de la personne physique portés par un dispositif d’identité à haut niveau de confiance.&lt;/dd&gt;
+&lt;dt&gt;Identité récupérée&lt;/dt&gt;
+&lt;dd&gt;Statut d’une identité numérique locale qui a été récupérée sur le téléservice INSi après avoir été comparée avec succès aux traits de la personne physique mais qui n’a pas encore pu être contrôlée à partir d’un document d’identité à haut niveau de confiance.&lt;/dd&gt;
+&lt;dt&gt;Identité sensible&lt;/dt&gt;
+&lt;dd&gt;Le terme d’identité sensible s’utilise de façon générique pour regrouper tous les cas où il existe un droit renforcé par la réglementation vis-à-vis de la confidentialité, notamment en termes d’anonymat des soins.&lt;/dd&gt;
+&lt;dt&gt;Identité validée&lt;/dt&gt;
+&lt;dd&gt;Statut d’une identité numérique qui n’a pas été récupérée sur le téléservice INSi mais qui a fait l’objet d’un contrôle de cohérence avec le jeu de traits portés par un dispositif d’identité à haut niveau de confiance, ce qui garantit l’absence d’erreur dans l’enregistrement des traits d’identité d’un usager.&lt;/dd&gt;
 &lt;dt&gt;IETF&lt;/dt&gt;
 &lt;dd&gt;Internet Engineering Task Force&lt;/dd&gt;
 &lt;dt&gt;IHM&lt;/dt&gt;
@@ -167,6 +189,8 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;dd&gt;Numéro d’Identification Éditeur&lt;/dd&gt;
 &lt;dt&gt;NIL&lt;/dt&gt;
 &lt;dd&gt;Numéro d’Identification Logiciel&lt;/dd&gt;
+&lt;dt&gt;NIR&lt;/dt&gt;
+&lt;dd&gt;Numéro d’inscription au répertoire des personnes physiques (NIRPP ou NIR)&lt;/dd&gt;
 &lt;dt&gt;NTT&lt;/dt&gt;
 &lt;dd&gt;Numéro Technique Temporaire&lt;/dd&gt;
 &lt;dt&gt;OCSP&lt;/dt&gt;

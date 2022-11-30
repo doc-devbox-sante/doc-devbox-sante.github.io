@@ -313,6 +313,27 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
 &lt;/ul&gt;
 &lt;p&gt;Il s’agit du numero FINESS géographique de la structure ou son SIRET, information que l’on ne peut déduire de la carte CPS&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;insi_id_facturation_pour_assertion.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Quels sont les différents statuts d’identité à gérer pour le RNIV ?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;dl&gt;
+&lt;dt&gt;Identité INS&lt;/dt&gt;
+&lt;dd&gt;Ensemble des informations numériques renvoyés par le téléservice INSi, constituées :
+&lt;ul&gt;
+&lt;li&gt;du matricule INS : numéro d’identification au répertoire des personnes physiques (NIR ou NIA) ;&lt;/li&gt;
+&lt;li&gt;des traits INS (Nom de naissance, liste des prénoms de l’état civil, date de naissance, sexe, code commune du lieu de naissance ou code pays pour les personnes nées à l’étranger) ;&lt;/li&gt;
+&lt;li&gt;de l’OID (object identifier) qui identifie l’origine et le type de l’information (INSEE, NIR/NIA…).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;dt&gt;Identité provisoire&lt;/dt&gt;
+&lt;dd&gt;Statut d’une identité numérique locale qui n’a pas été récupérée sur le téléservice INSi et qui n’a pas encore fait l’objet d’un contrôle de cohérence avec les traits portés par un dispositif d’identité à haut niveau de confiance. Ce statut peut, si besoin, être associé à un attribut Identité douteuse ou Identité fictive.&lt;/dd&gt;
+&lt;dt&gt;Identité qualifiée&lt;/dt&gt;
+&lt;dd&gt;Statut d’une identité numérique locale qui a été récupérée sur le téléservice INSi, et comparée avec succès aux traits de la personne physique portés par un dispositif d’identité à haut niveau de confiance.&lt;/dd&gt;
+&lt;dt&gt;Identité récupérée&lt;/dt&gt;
+&lt;dd&gt;Statut d’une identité numérique locale qui a été récupérée sur le téléservice INSi après avoir été comparée avec succès aux traits de la personne physique mais qui n’a pas encore pu être contrôlée à partir d’un document d’identité à haut niveau de confiance.&lt;/dd&gt;
+&lt;dt&gt;Identité validée&lt;/dt&gt;
+&lt;dd&gt;Statut d’une identité numérique qui n’a pas été récupérée sur le téléservice INSi mais qui a fait l’objet d’un contrôle de cohérence avec le jeu de traits portés par un dispositif d’identité à haut niveau de confiance, ce qui garantit l’absence d’erreur dans l’enregistrement des traits d’identité d’un usager.&lt;/dd&gt;
+&lt;/dl&gt;
 &lt;h2 id=&#34;webinaire-authentification-par-certificat-logiciel-du-16novembre-2021&#34;&gt;Webinaire Authentification par certificat logiciel du 16 novembre 2021&lt;/h2&gt;
 &lt;p&gt;Reprises des questions réponses du webinaire &lt;strong&gt;&amp;ldquo;Développer l’authentification TLS mutuelle par certificat logiciel pour INSi&amp;rdquo; - mardi 16 novembre 2021 - 14h30&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;

@@ -391,21 +391,21 @@ ils ont tous leur équivalent en REST avec l&rsquo;email passé en paramètre.</
 <li>
 <p>configurer la DevBox-Sante MSS sur mailiz de formation via le fichier <code>application.yml</code> :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">mailiz</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">servicesUrl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">authenticationServiceUrl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://mss-idp-igcsante.formation.mssante.fr/openam/SSOSoap/metaAlias/asip/idp</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">igcsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">gammes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ELEMENTAIRE_ORGANISATIONS, ELEMENTAIRE_ORGANISATIONS_TEST</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">mailiz</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">servicesUrl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">authenticationServiceUrl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://mss-idp-igcsante.formation.mssante.fr/openam/SSOSoap/metaAlias/asip/idp</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">igcsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">gammes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ELEMENTAIRE_ORGANISATIONS, ELEMENTAIRE_ORGANISATIONS_TEST</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span></code></pre></div></li>
 <li>
 <p>configurer les logs de l’<code>IGCSanteTrustoreManager</code> en debug via le fichier <code>application.yml</code></p>
 </li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">logging</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">level</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">fr.devboxsante.igsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">DEBUG </span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># à minima</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">fr.devboxsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">DEBUG </span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># pour plus de traces</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">level</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">fr.devboxsante.igsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">DEBUG</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># à minima</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">fr.devboxsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">DEBUG</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># pour plus de traces</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span></code></pre></div><ol start="2">
 <li>
 <p>activer les logs de debug SSL de la JVM : <code>javax.net.debug=ssl:handshake</code></p>
@@ -441,17 +441,35 @@ Exemple de ligne de commande depuis l’installation de la devbox-sante :</p>
 </blockquote>
 <p>La DevBox-sante a développé un <code>IGCSanteTrustoreManager</code> spécifique afin de prendre en compte les différentes IGC-Santé définies sur <a href="http://igc-sante.esante.gouv.fr/PC/">http://igc-sante.esante.gouv.fr/PC/</a> . Tous les composants DevBox-Sante comme la MSS peuvent être configurés de manière à accepter les certificats d’une ou plusieurs gammes. Comme par exemple, pour l’environnement de formation de Mailiz :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">igcsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">gammes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ELEMENTAIRE_ORGANISATIONS, ELEMENTAIRE_ORGANISATIONS_TEST</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><h4 id="112-preuve">1.1.2 Preuve</h4>
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">igcsante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">gammes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ELEMENTAIRE_ORGANISATIONS, ELEMENTAIRE_ORGANISATIONS_TEST</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>Le choix de cette gamme en configuration permet le téléchargement à la volée des certificat à ajouter au trust store lors de son lancement :</p>
+<pre tabindex="0"><code>for (IGCSanteGammeCertificat gammeCertificat : gammeCertificats) {
+    log.info(&#34;Ajout du certificat {} au trustStore&#34;, gammeCertificat.getCertificatUrl());
+    final X509Certificate certificat = _loadCertificate(gammeCertificat);
+    _checkExpirationDate(certificat);
+    trustStore.setCertificateEntry(gammeCertificat.getAlias(), certificat);
+}
+
+private X509Certificate _loadCertificate(IGCSanteGammeCertificat gammeCertificat) {
+        URLConnection urlConnection = HttpHelper.noCheckCertificateOpenConnection(url);
+        X509Certificate certificate = (X509Certificate) CertificateFactory.getInstance(X_509).generateCertificate(urlConnection.getInputStream());
+        if (certificate == null) {
+            certificate = (X509Certificate) CertificateFactory.getInstance(X_509).generateCertificate(this.getClass().getClassLoader().getResourceAsStream(gammeCertificat.getCertificateFilename()));
+        }
+    }
+    return certificate;
+}
+</code></pre><h4 id="112-preuve">1.1.2 Preuve</h4>
 <blockquote>
 <p>Logs de la connexion TLS</p>
 </blockquote>
 <p>Dans les logs (all.log) on peut s’intéresser à l’initialisation de l’<code>IGCSanteTrustStoreManager</code> :</p>
-<pre tabindex="0"><code>2022-10-12 12:00:29.519  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Initialisation du truststore
-2022-10-12 12:00:29.520  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout du certificat http://igc-sante.esante.gouv.fr/AC/ACI-EL-ORG.cer au trustStore
-2022-10-12 12:00:30.357  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout du certificat http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer au trustStore
+<pre tabindex="0"><code>2022-10-12 12:00:29.519 INFO igcsante.IGCSanteTrustoreManager : Initialisation du truststore
+2022-10-12 12:00:29.520 INFO igcsante.IGCSanteTrustoreManager : Ajout du certificat http://igc-sante.esante.gouv.fr/AC/ACI-EL-ORG.cer au trustStore
+2022-10-12 12:00:30.357 INFO igcsante.IGCSanteTrustoreManager : Ajout du certificat http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer au trustStore
+trustStore
 </code></pre><h2 id="mss-2-tlsv12-uniquement">MSS 2 : TLSv1.2 uniquement</h2>
 <blockquote>
 <p>Conformément au référentiel socle MSSanté #2 (Clients de Messageries Sécurisées de Santé):
@@ -518,12 +536,29 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
 </li>
 </ol>
 <h4 id="mss-311">MSS 3.1.1</h4>
-<blockquote>
-<p>Notre connecteur s’appuie sur la connexion TLS proposé par le serveur Mailiz, le choix du protocole est à l’initiative de l’opérateur.</p>
-</blockquote>
-<h4 id="mss-312">MSS 3.1.2</h4>
+<p>Afin de forcer le choix des cyphers nous avons introduit une nouvelle <code>SSLSocketFactory</code> java réduisant le choix des cipher suites par défaute de la JVM :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">abstract</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">IGCSanteSSLSocketFactory</span> <span style="color:#204a87;font-weight:bold">extends</span> <span style="color:#000">SSLSocketFactory</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">String</span> <span style="color:#000">VERSION</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;TLSv1.2&#34;</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">protected</span> <span style="color:#204a87;font-weight:bold">abstract</span> <span style="color:#000">SSLSocketFactory</span> <span style="color:#000">getSocketFactory</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">String</span><span style="color:#ce5c00;font-weight:bold">[]</span> <span style="color:#000">getDefaultCipherSuites</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">String</span><span style="color:#ce5c00;font-weight:bold">[]{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#4e9a06">&#34;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#4e9a06">&#34;TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#4e9a06">&#34;TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#4e9a06">&#34;TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256&#34;</span><span style="color:#ce5c00;font-weight:bold">};</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">String</span><span style="color:#ce5c00;font-weight:bold">[]</span> <span style="color:#000">getSupportedCipherSuites</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">getDefaultCipherSuites</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h4 id="mss-312">MSS 3.1.2</h4>
 <p>Dans les logs (all.log) on peut s’intéresser à juste après l’envoi de la requête :</p>
-<pre tabindex="0"><code>2022-10-12 11:43:32.117  INFO 20756 --- [           main] o.a.c.services.AnnuaireService.REQ_OUT   : REQ_OUT
+<pre tabindex="0"><code class="language-log" data-lang="log">2022-10-12 11:43:32.117  INFO 20756 --- [           main] o.a.c.services.AnnuaireService.REQ_OUT   : REQ_OUT
     Address: https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails
     HttpMethod: POST
    ...
@@ -581,11 +616,20 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
 </blockquote>
 <p>Pas de configuration ici, les traces parlent d’elles mêmes.</p>
 <p>A l’initialisation, l’<code>IGCSanteTrustoreManager</code> vérifie que les certificats de confiance utilisés ne sont pas expirés.</p>
-<pre tabindex="0"><code class="language-log" data-lang="log">2022-10-12 12:00:29.519  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Initialisation du truststore
-2022-10-12 12:00:29.520  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout du certificat http://igc-sante.esante.gouv.fr/AC/ACI-EL-ORG.cer au trustStore
-2022-10-12 12:00:30.357 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE, OU=0002 187512751, O=ASIP-SANTE, C=FR) est : Fri Jun 24 02:00:00 CEST 2033
-2022-10-12 12:00:30.357  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout du certificat http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer au trustStore
-2022-10-12 12:00:30.756 DEBUG 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Date expiration du certificat (CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR) est : Fri Jun 24 02:00:00 CEST 2033
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">Optional</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">CertStore</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">_loadCRL</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">url</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">URLConnection</span> <span style="color:#000">urlConnection</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">HttpHelper</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">noCheckCertificateOpenConnection</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">url</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">InputStream</span> <span style="color:#000">is</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">urlConnection</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getInputStream</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">var</span> <span style="color:#000">crls</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">certificateFactory</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">generateCRLs</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">is</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">var</span> <span style="color:#000">certStore</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">CertStore</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getInstance</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Collection&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">CollectionCertStoreParameters</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">crls</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">certStoreMap</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">put</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">url</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">certStore</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">is</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">close</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">Optional</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">of</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">certStore</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><pre tabindex="0"><code class="language-log" data-lang="log">2022-10-12 12:00:29.519  INFO - igcsante.IGCSanteTrustoreManager : Initialisation du truststore
+2022-10-12 12:00:29.520  INFO - igcsante.IGCSanteTrustoreManager : Ajout du certificat http://igc-sante.esante.gouv.fr/AC/ACI-EL-ORG.cer au trustStore
+2022-10-12 12:00:30.357 DEBUG - igcsante.IGCSanteTrustoreManager : Date expiration du certificat (CN=AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE, OU=0002 187512751, O=ASIP-SANTE, C=FR) est : Fri Jun 24 02:00:00 CEST 2033
+2022-10-12 12:00:30.357  INFO - igcsante.IGCSanteTrustoreManager : Ajout du certificat http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer au trustStore
+2022-10-12 12:00:30.756 DEBUG - igcsante.IGCSanteTrustoreManager : Date expiration du certificat (CN=TEST AC IGC-SANTE ELEMENTAIRE ORGANISATIONS, OU=IGC-SANTE TEST, OU=0002 187512751, O=ASIP-SANTE, C=FR) est : Fri Jun 24 02:00:00 CEST 2033
 </code></pre><p>Puis plus tard lors de la vérification du certificat présenté par le serveur :</p>
 <pre tabindex="0"><code class="language-log" data-lang="log">javax.net.ssl|DEBUG|01|main|2022-10-12 12:00:40.074 CEST|CertificateMessage.java:366|Consuming server Certificate handshake message (
 &#34;Certificates&#34;: [
@@ -606,7 +650,7 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
 <blockquote>
 <p>Si besoin, extrait du code qui vérifie la non expiration du certificat</p>
 </blockquote>
-<p>Lors de l’initialisation d’une connexion et une fois le certificat validé par le truststore la date d’expiration du certificat présenté par l’opérateur MSS est vérifiée : </p>
+<p>Lors de l’initialisation d’une connexion et une fois le certificat validé par le truststore la date d’expiration du certificat présenté par l’opérateur MSS est vérifiée :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">log</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">debug</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Date expiration du certificat ({}) est : {}&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">certificat</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getSubjectDN</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">toString</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#000">certificat</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getNotAfter</span><span style="color:#ce5c00;font-weight:bold">());</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Instant</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">now</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">isAfter</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">certificat</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getNotAfter</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">toInstant</span><span style="color:#ce5c00;font-weight:bold">()))</span> <span style="color:#ce5c00;font-weight:bold">{</span>
@@ -635,8 +679,8 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
 <p>Lors du lancement de la JVM (version 11 minimal) du connecteur MSS un truststore est généré avec un sous ensemble de la gamme de certificats de l’AC définit à l’url suivante : <a href="http://igc-sante.esante.gouv.fr/PC/">http://igc-sante.esante.gouv.fr/PC/</a></p>
 <p>Nous prenons en compte les CRL disponibles pour chaque certificat donné à cette même URL.</p>
 <p>Les logs montrent cette prise en charge :</p>
-<pre tabindex="0"><code class="language-log" data-lang="log">2022-10-12 12:00:30.758  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout de la CRL http://igc-sante.esante.gouv.fr/CRL/ACI-EL-ORG.crl au trustStore
-2022-10-12 12:00:31.848  INFO 7092 --- [           main] f.d.igcsante.IGCSanteTrustoreManager     : Ajout de la CRL http://igc-sante.esante.gouv.fr/CRL/ACI-EL-ORG-TEST.crl au trustStore
+<pre tabindex="0"><code class="language-log" data-lang="log">2022-10-12 12:00:30.758 - igcsante.IGCSanteTrustoreManager : Ajout de la CRL http://igc-sante.esante.gouv.fr/CRL/ACI-EL-ORG.crl au trustStore
+2022-10-12 12:00:31.848 - igcsante.IGCSanteTrustoreManager : Ajout de la CRL http://igc-sante.esante.gouv.fr/CRL/ACI-EL-ORG-TEST.crl au trustStore
 </code></pre><h4 id="msc612">MSC 6.1.2</h4>
 <blockquote>
 <p>Si besoin, extrait du code qui vérifie la non révocation du certificat</p>

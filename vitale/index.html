@@ -114,10 +114,21 @@ if (!doNotTrack) {
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-vitale-li">
   <a href="/vitale/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-vitale"><span class="td-sidebar-nav-active-item">Vitale</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-vitaleissues-li">
-  <input type="checkbox" id="m-vitaleissues-check"/>
-  <label for="m-vitaleissues-check"><a href="/vitale/issues/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-vitaleissues"><span class="">Problèmes connus</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-vitalehowtos-li">
+  <input type="checkbox" id="m-vitalehowtos-check"/>
+  <label for="m-vitalehowtos-check"><a href="/vitale/howtos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-vitalehowtos"><span class="">Howtos</span></a></label>
   
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-vitalehowtosissues-li">
+  <input type="checkbox" id="m-vitalehowtosissues-check"/>
+  <label for="m-vitalehowtosissues-check"><a href="/vitale/howtos/issues/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-vitalehowtosissues"><span class="">Problèmes connus</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-vitalehowtosidentifiantcomposant-li">
+  <input type="checkbox" id="m-vitalehowtosidentifiantcomposant-check"/>
+  <label for="m-vitalehowtosidentifiantcomposant-check"><a href="/vitale/howtos/identifiantcomposant/" title="CNDA : Fiche d&#39;identité du composant Vitale" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-vitalehowtosidentifiantcomposant"><span class="">CNDA identité Vitale</span></a></label>
+  
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-vitaleversions-li">
   <input type="checkbox" id="m-vitaleversions-check"/>
   <label for="m-vitaleversions-check"><a href="/vitale/versions/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-vitaleversions"><span class="">Versions</span></a></label>
@@ -271,7 +282,7 @@ frontend -right-&gt; backend : REST
             
             <div class="entry">
                 <h5>
-                    <a href="/vitale/issues/">Problèmes connus</a>
+                    <a href="/vitale/howtos/">Howtos</a>
                 </h5>
                 <p></p>
             </div>

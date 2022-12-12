@@ -4,7 +4,9 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.104.2" />
-<meta name="robots" content="index, follow">
+<link rel="canonical" type="text/html" href="/vitale/howtos/">
+<link rel="alternate" type="application/rss&#43;xml" href="/vitale/howtos/index.xml">
+<meta name="robots" content="noindex, nofollow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -18,34 +20,17 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Problèmes connus | DevBox-Santé</title>
-<meta name="description" content="Erreur logicielle module origine de l&amp;rsquo;erreur logicielle (Erreur : 1))
-c’est lié à un appel sans carte vitale avec une session CPS en cours, il faut changer par une lecture avec CPS .
-PC/SC ou galss ? Le galss n&amp;rsquo;est officiellement plus supporté au 31 décembre 2021, donc il faut configurer les lecteurs en PC/SC
-Changement de lecteur PC/SC -&amp;gt; Galss Le lecteur carte vitale, enregistre dans le fchier %Program_FILES%/DevBoxSante-%client%/santesocial/api_lec/api_lec.ini les lecteurs PC/SC utilisés, une fois enregistré si l&amp;rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté car les api sesam vitale ne recherche les lecteurs galss que si il n&amp;rsquo;y a pas de lecteurs PS/SC d&amp;rsquo;enregistrés.">
-<meta property="og:title" content="Problèmes connus" />
-<meta property="og:description" content="Erreur logicielle module origine de l&rsquo;erreur logicielle (Erreur : 1))
-c’est lié à un appel sans carte vitale avec une session CPS en cours, il faut changer par une lecture avec CPS .
-PC/SC ou galss ? Le galss n&rsquo;est officiellement plus supporté au 31 décembre 2021, donc il faut configurer les lecteurs en PC/SC
-Changement de lecteur PC/SC -&gt; Galss Le lecteur carte vitale, enregistre dans le fchier %Program_FILES%/DevBoxSante-%client%/santesocial/api_lec/api_lec.ini les lecteurs PC/SC utilisés, une fois enregistré si l&rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté car les api sesam vitale ne recherche les lecteurs galss que si il n&rsquo;y a pas de lecteurs PS/SC d&rsquo;enregistrés." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/vitale/issues/" /><meta property="article:section" content="vitale" />
+<title>Howtos | DevBox-Santé</title>
+<meta name="description" content="La Documentation">
+<meta property="og:title" content="Howtos" />
+<meta property="og:description" content="La Documentation" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/vitale/howtos/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta property="article:modified_time" content="2022-10-04T15:10:01+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
-
-<meta itemprop="name" content="Problèmes connus">
-<meta itemprop="description" content="Erreur logicielle module origine de l&rsquo;erreur logicielle (Erreur : 1))
-c’est lié à un appel sans carte vitale avec une session CPS en cours, il faut changer par une lecture avec CPS .
-PC/SC ou galss ? Le galss n&rsquo;est officiellement plus supporté au 31 décembre 2021, donc il faut configurer les lecteurs en PC/SC
-Changement de lecteur PC/SC -&gt; Galss Le lecteur carte vitale, enregistre dans le fchier %Program_FILES%/DevBoxSante-%client%/santesocial/api_lec/api_lec.ini les lecteurs PC/SC utilisés, une fois enregistré si l&rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté car les api sesam vitale ne recherche les lecteurs galss que si il n&rsquo;y a pas de lecteurs PS/SC d&rsquo;enregistrés.">
-<meta itemprop="dateModified" content="2022-10-04T15:10:01+02:00" />
-<meta itemprop="wordCount" content="144">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Problèmes connus"/>
-<meta name="twitter:description" content="Erreur logicielle module origine de l&rsquo;erreur logicielle (Erreur : 1))
-c’est lié à un appel sans carte vitale avec une session CPS en cours, il faut changer par une lecture avec CPS .
-PC/SC ou galss ? Le galss n&rsquo;est officiellement plus supporté au 31 décembre 2021, donc il faut configurer les lecteurs en PC/SC
-Changement de lecteur PC/SC -&gt; Galss Le lecteur carte vitale, enregistre dans le fchier %Program_FILES%/DevBoxSante-%client%/santesocial/api_lec/api_lec.ini les lecteurs PC/SC utilisés, une fois enregistré si l&rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté car les api sesam vitale ne recherche les lecteurs galss que si il n&rsquo;y a pas de lecteurs PS/SC d&rsquo;enregistrés."/>
+<meta itemprop="name" content="Howtos">
+<meta itemprop="description" content="La Documentation"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Howtos"/>
+<meta name="twitter:description" content="La Documentation"/>
 
 
 
@@ -71,7 +56,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
   </head>
-  <body class="td-page">
+  <body class="td-section">
     <header>
       <nav
   class="js-navbar-scroll navbar navbar-expand navbar-dark  flex-column flex-md-row td-navbar">
@@ -112,114 +97,86 @@ if (!doNotTrack) {
     <div class="container-fluid td-outer">
       <div class="td-main">
         <div class="row flex-xl-nowrap">
-          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
-            
-<div id="td-sidebar-menu" class="td-sidebar__inner">
-  <form class="td-sidebar__search d-flex align-items-center">
-    
-    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
-    </button>
-  </form>
-  <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
-    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
-      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-vitale-li">
-  <a href="/vitale/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-vitale"><span class="">Vitale</span></a>
-  <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-vitaleissues-li">
-  <input type="checkbox" id="m-vitaleissues-check" checked/>
-  <label for="m-vitaleissues-check"><a href="/vitale/issues/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-vitaleissues"><span class="td-sidebar-nav-active-item">Problèmes connus</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-vitalehowtosidentifiantcomposant-li">
-  <input type="checkbox" id="m-vitalehowtosidentifiantcomposant-check"/>
-  <label for="m-vitalehowtosidentifiantcomposant-check"><a href="/vitale/howtos/identifiantcomposant/" title="CNDA : Fiche d&#39;identité du composant INSi" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-vitalehowtosidentifiantcomposant"><span class="">CNDA identité INSi</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-vitaleversions-li">
-  <input type="checkbox" id="m-vitaleversions-check"/>
-  <label for="m-vitaleversions-check"><a href="/vitale/versions/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-vitaleversions"><span class="">Versions</span></a></label>
-  
-</li>
-  </ul>
-</li>
-    </ul>
-  </nav>
-</div>
-
-          </aside>
-          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
-            
-<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a id="print" href="/vitale/_print/"><i class="fa-solid fa-print fa-fw"></i> Imprimer la section entière</a>
-
-</div>
-
-            <div class="td-toc">
-        <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#erreur-logicielle">Erreur logicielle</a></li>
-        <li><a href="#pcsc-ou-galss-">PC/SC ou galss ?</a></li>
-        <li><a href="#changement-de-lecteur-pcsc---galss">Changement de lecteur PC/SC -&gt; Galss</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-      </div>
-    
-            
-
-	
-		
-
-
-
-  
-  
-
-	
-		
-
-
-
-  
-  
-
-	
-
-          </aside>
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+          </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
-  
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs">
-  <ol class="breadcrumb">
-  <li class="breadcrumb-item">
-    <a href="/vitale/">Vitale</a>
-  </li>
-  <li class="breadcrumb-item active" aria-current="page">
-    <a href="/vitale/issues/" aria-disabled="true" class="btn-link disabled">Problèmes connus</a>
-  </li>
-  </ol>
-</nav>
-            
+
+
+
 <div class="td-content">
-	<h1>Problèmes connus</h1>
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+Version imprimable multipages.
+<a href="#" onclick="print();return false;">Cliquer ici pour imprimer</a>.
+</p><p>
+<a href="/vitale/howtos/">Retour à la version par défaut</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Howtos</h1>
+
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
 	
-	<header class="article-meta">
-		
+<li>1: <a href="#pg-a043b85f206f1239f835b6d08a9b3276">Problèmes connus</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-85e098b3ee95ade01ec5c133f476c6f0">CNDA : Fiche d&#39;identité du composant Vitale</a></li>
+
+
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
 
   
     
-
-
-  
+    
+	
     
 
-
-  
-
-		
-	</header>    
+<div class="td-content" style="">
+    
+	<h1 id="pg-a043b85f206f1239f835b6d08a9b3276">1 - Problèmes connus</h1>
+    
 	<h3 id="erreur-logicielle">Erreur logicielle</h3>
 <blockquote>
 <p>module origine de l&rsquo;erreur logicielle (Erreur : 1))</p>
@@ -239,10 +196,39 @@ Ressource_CPS=
 <p>PS: Le changement de lecteur PS/SC pour un autre PS/SC ne pose aucun soucis</p>
 </blockquote>
 
-	
-	
-	
 </div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-85e098b3ee95ade01ec5c133f476c6f0">2 - CNDA : Fiche d&#39;identité du composant Vitale</h1>
+    
+	<p>NIE DEVCOOP : DEV331918</p>
+<h3 id="homologation-du-14082020">Homologation du 14/08/2020</h3>
+<ul>
+<li>Nom du logiciel : <strong>DEVBOX_SANTE_VITALE</strong>_</li>
+<li>Version : <strong>1.0</strong></li>
+<li>NIL : <strong>VIT539244</strong></li>
+<li>Version API de lecture  : <strong>6.31</strong></li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+
 
 
           </main>

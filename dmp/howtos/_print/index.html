@@ -902,19 +902,18 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
     
 	<h1 id="pg-9541efc6c6fadf578bd308752f785e9b">4 - Integrateurs checklist</h1>
     <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.</div>
-	<h2 id="administratif">Administratif</h2>
+	<p>Pour plus d’information officielle &ldquo;Cas des intégrateurs EAI&rdquo; : <a href="https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/">https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/</a></p>
+<p>Sinon, voici un petit récapitulatif des démarches à suivre :</p>
+<h2 id="administratif">Administratif</h2>
 <ul>
 <li>
 <p>Obtenir un NIE auprès du CNDA</p>
 </li>
 <li>
-<p>Signer un protocole avec le CNDA : <a href="https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/">https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/</a></p>
-<ul>
-<li>Obtenir les cartes vitales de test DMP</li>
-</ul>
+<p>Remplir les conditions générales des TLSi AMO v3 (<a href="https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/">https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/</a>)</p>
 </li>
 <li>
-<p>Obtenir des cartes CPS de test (médecin, CPE, autre) auprès de l&rsquo;ANS</p>
+<p>Obtenir des cartes CPS et/ou certificats de test (médecin, CPE, autre) auprès de l&rsquo;ANS</p>
 </li>
 </ul>
 <h2 id="choix-architecture">Choix Architecture</h2>
@@ -929,9 +928,8 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
 </ul>
 </li>
 <li>
-<p>Choisir les profils d&rsquo;intégration</p>
+<p>Choisir les profils d&rsquo;intégration :</p>
 <ul>
-<li>getion administrative de DMP</li>
 <li>alimentation</li>
 <li>consultation</li>
 </ul>
@@ -943,28 +941,44 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
 <li><a href="../embedded">mode API java</a></li>
 <li><a href="../rest">mode REST</a></li>
 </ul>
-<h2 id="enregistrement-cnda">Enregistrement CNDA </h2>
-<ul>
-<li>Conditions générales des TLSi AMO v3 (Dès le début du projet)</li>
-<li>Conditions Particulières DMP intégrateurs (Une fois l&rsquo;architecture choisie)</li>
-</ul>
-<h2 id="validation-devcoop">Validation DEVCOOP</h2>
+<h2 id="conditions-particulières-et-validation-devcoop">Conditions Particulières et validation DEVCOOP</h2>
 <ul>
 <li>
-<p>Répondre aux exigences du PDV filtré par DevBox-santé</p>
+<p>Récupérer et remplir les Conditions Particulières DMP intégrateurs sur le site du CNDA (Une fois l&rsquo;architecture et les profils choisis)</p>
 </li>
 <li>
-<p>Dérouler le plan de test prehomologation filtrés pour validation DEVCOOP
+<p>Fournir les Conditions Particulières à DEVCOOP</p>
+</li>
+<li>
+<p>Récupérer puis répondre aux exigences du PDV (Plan de vérification) filtré par DEVCOOP</p>
+</li>
+<li>
+<p>Dérouler le plan de test prehomologation filtrés pour validation DEVCOOP (un test par transaction)
 ==&gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP</p>
 </li>
 </ul>
 <h2 id="processus-dhomologation-cnda">Processus d&rsquo;homologation CNDA</h2>
-<p><a href="https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/">https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/</a></p>
 <ul>
-<li>Fournir le PDV entièrement filtré (tests/déclarations par l’EAI) et complété conjointement sur les déclarations.</li>
-<li>Obtention d&rsquo;un environnement dédié pour le passage d&rsquo;homologation et date de passage</li>
-<li>Passer les tests</li>
-<li>Déposer les résultats</li>
+<li>
+<p>Pour initier le passage d’homologation auprès du CNDA, fournir :</p>
+<ul>
+<li>les conditions particulières signées</li>
+<li>l’attestation de conformité de DEVCOOP</li>
+<li>le PDV entièrement filtré (tests/déclarations par l’EAI) et complété conjointement sur les déclarations.</li>
+</ul>
+</li>
+<li>
+<p>Obtention d&rsquo;un environnement dédié pour le passage d&rsquo;homologation et date de passage</p>
+</li>
+<li>
+<p>Obtention des cartes vitales de test DMP</p>
+</li>
+<li>
+<p>Passer les tests</p>
+</li>
+<li>
+<p>Déposer les résultats sur <a href="https://cnda.ameli.fr/PortailNie/?page_id=153">l’espace personnel du CNDA</a></p>
+</li>
 </ul>
 <h2 id="déploiement">Déploiement</h2>
 <h3 id="gestion-des-certificats">Gestion des certificats</h3>

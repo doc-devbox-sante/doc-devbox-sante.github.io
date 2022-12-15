@@ -1181,5 +1181,27 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
       </description>
     </item>
     
+    <item>
+      <title>Dmp: FAQ</title>
+      <link>/dmp/howtos/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/dmp/howtos/faq/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;Le champ &lt;strong&gt;Resource_id&lt;/strong&gt; est incorrect : 2770763220829^^^&amp;amp;1.2.250.1.213.1.4.10&amp;amp;ISO^NH&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Vérifier la taille de l’INS, il manque généralement la clé. La bonne valeur de cet INS pour les transactions DMP est : &lt;code&gt;277076322082910&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Quel statut d’INS pour l’alimentation DMP ?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Une INS qualifiée sera nécessaire pour l’alimentation du DMP. A défaut, le DMP ne pourra pas être alimenté.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Source : &lt;code&gt;INS_Guide implementation_V2_0.pdf&lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

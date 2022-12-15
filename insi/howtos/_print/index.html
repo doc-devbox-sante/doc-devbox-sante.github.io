@@ -588,28 +588,12 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
 <li><strong>À quoi correspond l’identifiant de facturation, obligatoire dans le contexte des requêtes ?</strong></li>
 </ul>
 <p>Il s’agit du numero FINESS géographique de la structure ou son SIRET, information que l’on ne peut déduire de la carte CPS</p>
-<p><img src="insi_id_facturation_pour_assertion.png" alt=""></p>
+<p><img src="/insi/howtos/insi_id_facturation_pour_assertion.png" alt=""></p>
 <ul>
-<li><strong>Quels sont les différents statuts d’identité à gérer pour le RNIV ?</strong></li>
+<li><strong>Quels sont les différents statuts d’identité ?</strong></li>
 </ul>
-<dl>
-<dt>Identité INS</dt>
-<dd>Ensemble des informations numériques renvoyés par le téléservice INSi, constituées :
-<ul>
-<li>du matricule INS : numéro d’identification au répertoire des personnes physiques (NIR ou NIA) ;</li>
-<li>des traits INS (Nom de naissance, liste des prénoms de l’état civil, date de naissance, sexe, code commune du lieu de naissance ou code pays pour les personnes nées à l’étranger) ;</li>
-<li>de l’OID (object identifier) qui identifie l’origine et le type de l’information (INSEE, NIR/NIA…).</li>
-</ul>
-</dd>
-<dt>Identité provisoire</dt>
-<dd>Statut d’une identité numérique locale qui n’a pas été récupérée sur le téléservice INSi et qui n’a pas encore fait l’objet d’un contrôle de cohérence avec les traits portés par un dispositif d’identité à haut niveau de confiance. Ce statut peut, si besoin, être associé à un attribut Identité douteuse ou Identité fictive.</dd>
-<dt>Identité qualifiée</dt>
-<dd>Statut d’une identité numérique locale qui a été récupérée sur le téléservice INSi, et comparée avec succès aux traits de la personne physique portés par un dispositif d’identité à haut niveau de confiance.</dd>
-<dt>Identité récupérée</dt>
-<dd>Statut d’une identité numérique locale qui a été récupérée sur le téléservice INSi après avoir été comparée avec succès aux traits de la personne physique mais qui n’a pas encore pu être contrôlée à partir d’un document d’identité à haut niveau de confiance.</dd>
-<dt>Identité validée</dt>
-<dd>Statut d’une identité numérique qui n’a pas été récupérée sur le téléservice INSi mais qui a fait l’objet d’un contrôle de cohérence avec le jeu de traits portés par un dispositif d’identité à haut niveau de confiance, ce qui garantit l’absence d’erreur dans l’enregistrement des traits d’identité d’un usager.</dd>
-</dl>
+<p><img src="/insi/howtos/differentsStatutsINS.png" alt="differentsStatutsINS.png"></p>
+<p><em><strong>Source : <code>INS_Guide implementation_V2_0.pdf</code></strong></em></p>
 <h2 id="webinaire-authentification-par-certificat-logiciel-du-16novembre-2021">Webinaire Authentification par certificat logiciel du 16 novembre 2021</h2>
 <p>Reprises des questions réponses du webinaire <strong>&ldquo;Développer l’authentification TLS mutuelle par certificat logiciel pour INSi&rdquo; - mardi 16 novembre 2021 - 14h30</strong> :</p>
 <ul>
@@ -642,7 +626,9 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
 <blockquote>
 <p>Contactez directement le centre de services du GIE SESAM-Vitale (<a href="mailto:centre-deservice@sesam-vitale.fr">centre-deservice@sesam-vitale.fr</a> ou 02.43.57.42.88).</p>
 </blockquote>
-<p>_ <strong>Quelle est la procédure de délégation de commande de certificat auprès de l&rsquo;éditeur ?</strong></p>
+<ul>
+<li><strong>Quelle est la procédure de délégation de commande de certificat auprès de l&rsquo;éditeur ?</strong></li>
+</ul>
 <blockquote>
 <p>La procédure de délégation de commande de certificat est décrite dans le document suivant : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_liberales_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_liberales_vf.pdf</a>  Etape 2</p>
 <p>Le formulaire de déclaration des administrateurs techniques autorisés à commander des certificats logiciels - F413 est disponible à cette adresse : <a href="https://esante.gouv.fr/documents/413">https://esante.gouv.fr/documents/413</a></p>

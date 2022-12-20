@@ -14,7 +14,49 @@
     
     
     <item>
-      <title>Installer: [21/11/28] 3.0 et 2.20</title>
+      <title>Installer: [20/12/2020] 3.1 et 2.21</title>
+      <link>/installer/poste_client/versions/20221220_versions_courantes/</link>
+      <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/installer/poste_client/versions/20221220_versions_courantes/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Les versions actuelles de nos composants dans nos installers sont :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Installer&lt;/code&gt; : &lt;strong&gt;3.1&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.10&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.6.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Installer&lt;/code&gt; : &lt;strong&gt;2.21&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.7.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;4.7.18&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.6.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Installer: [28/11/2022] 3.0 et 2.20</title>
       <link>/installer/poste_client/versions/20221128_versions_courantes/</link>
       <pubDate>Mon, 28 Nov 2022 00:00:00 +0000</pubDate>
       
@@ -56,9 +98,9 @@
     </item>
     
     <item>
-      <title>Installer: [21/11/22] 3.0</title>
+      <title>Installer: [21/11/2022] 3.0</title>
       <link>/installer/poste_client/versions/20221121_versions_courantes/</link>
-      <pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>/installer/poste_client/versions/20221121_versions_courantes/</guid>
       <description>

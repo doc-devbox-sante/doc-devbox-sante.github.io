@@ -804,7 +804,14 @@ Les spécifications de ce volet vaccination sont disponibles sur le site de l’
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;historique-de-vaccinations&#34;&gt;Historique de Vaccinations&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;nomenclatures-utilisées&#34;&gt;Nomenclatures utilisées&lt;/h3&gt;
+&lt;h4 id=&#34;consommable&#34;&gt;Consommable&lt;/h4&gt;
+&lt;p&gt;Les consommables décrivant le vaccin doivent utiliser des nomenclatures spécifiques telle que la CIS, la CIP et l&amp;rsquo;ATC dans les conditions définies par le guide d&amp;rsquo;intégration. Elles sont liées aux bases de données scientifiques et nomenclatures standards. Pour plus de renseignements, allez vers &lt;a href=&#34;https://base-donnees-publique.medicaments.gouv.fr/&#34;&gt;https://base-donnees-publique.medicaments.gouv.fr/&lt;/a&gt; ou encore &lt;a href=&#34;https://smt.esante.gouv.fr/&#34;&gt;https://smt.esante.gouv.fr/&lt;/a&gt; .
+Pour information, dans l&amp;rsquo;&lt;a href=&#34;https://annuaire-demo.devbox-sante.fr&#34;&gt;annuaire&lt;/a&gt; DevBox-Santé, nous proposons un moteur de recherche dans ces nomenclatures accessibles par API.&lt;/p&gt;
+&lt;h4 id=&#34;type-de-vaccination-région-et-voie-dadministration&#34;&gt;Type de vaccination, région et voie d&amp;rsquo;administration&lt;/h4&gt;
+&lt;p&gt;Ces jeux de valeurs sont directement accessibles depuis les APIs de la DevBox-Santé DMP :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;NoteVaccination_JDVs.png&#34; alt=&#34;note vaccination JDV&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;historique-de-vaccinations&#34;&gt;Historique de Vaccinations&lt;/h2&gt;
 &lt;p&gt;L’historique de vaccinations peut être récupéré un un seul aller retour grâce à un nouveau point d’entrée dans l’API  :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;En Java :&lt;/li&gt;

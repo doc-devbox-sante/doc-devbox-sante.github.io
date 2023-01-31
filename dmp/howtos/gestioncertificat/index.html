@@ -266,7 +266,6 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#procédure-administrative">Procédure Administrative</a>
       <ul>
-        <li><a href="#règle-générale">Règle générale</a></li>
         <li><a href="#quels-certificats-">Quels certificats ?</a></li>
       </ul>
     </li>
@@ -338,18 +337,24 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<p>Une nouvelle IGC Santé a été mise en place courant 2016 : <a href="http://integrateurs-cps.asipsante.fr/IGC-Sante">http://integrateurs-cps.asipsante.fr/IGC-Sante</a></p>
-<p>Afin d&rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité. 
+	<p>Afin d&rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité. 
 Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande à partir d&rsquo;un téléservice dont la procédure est décrite ici.</p>
 <h2 id="procédure-administrative">Procédure Administrative</h2>
-<h3 id="règle-générale">Règle générale</h3>
 <p>Pour obtenir, les certificats et clés nécessaires pour la connexion au DMP en authentification indirecte, il faut que votre établissement soit enregistré au FINESS (Fichier National des Établissements Sanitaires es Sociaux) : <a href="http://finess.sante.gouv.fr/fininter/jsp/index.jsp">http://finess.sante.gouv.fr/fininter/jsp/index.jsp</a></p>
-<p>Les personnes pouvant remplir les conditions d&rsquo;obtentions des certificats sont décrites dans le document de l&rsquo;ANS : <a href="https://esante.gouv.fr/media/3827">Procédure DMP - Structures salariées</a></p>
+<p>Depuis le SEGUR santé, les guides de commandes de certificats sont spécifiques à chaque couloir :</p>
+<ul>
+<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-medico-social-guide-certificats.pdf">Médico-social</a></li>
+<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-mdv-guide-certificats.pdf">Médecine de ville</a></li>
+<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-hopital-guide-certificats.pdf">Hôpital</a></li>
+<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-biologie-guide-certificats.pdf">Biologie</a></li>
+<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-radiologie-guide-certificats.pdf">Radiologie</a></li>
+<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-officine-guide-certificats.pdf">Officine</a></li>
+</ul>
 <p>Les principes généraux sont les suivants :</p>
 <blockquote>
-<p>Lors du raccordement au DMP, chaque site géographique d’un établissement de santé s’authentifie et s’identifie via son numéro de FINESS géographique.</p>
+<p>Lors du raccordement au DMP, chaque site géographique d’un établissement de santé s’authentifie et s’identifie via son numéro de FINESS géographique/juridique.</p>
 <ul>
-<li>Ainsi, chaque site doit générer des certificats d’organisation sur son numéro de FINESS géographique.</li>
+<li>Ainsi, chaque site doit générer des certificats d’organisation sur son numéro de FINESS géographique/juridique.</li>
 <li>L’administrateur technique est une personne de confiance à qui le représentant légal de l’établissement délègue le droit de gérer le cycle de vie des certificats logiciels commandés.</li>
 </ul>
 </blockquote>
@@ -501,7 +506,7 @@ Le formulaire peut être télécharger depuis le site : <a href="https://esante.
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2022 DevBox Santé Tous droits réservés</small>
+        <small class="text-white">&copy; 2023 DevBox Santé Tous droits réservés</small>
         <small class="ml-1"><a href="https://www.devbox-sante.fr/mentions" target="_blank" rel="noopener">Politique de confidentialité</a></small>
 	
 		

@@ -753,7 +753,7 @@ dbxdmp -&amp;gt; frontend : ok
 &lt;li&gt;les moyens d&amp;rsquo;authentification de l&amp;rsquo;utilisateur doivent permettre l&amp;rsquo;identification unique de l&amp;rsquo;utilissateur&lt;/li&gt;
 &lt;li&gt;le PS a-t-il accès à sa carte CPS ?&lt;/li&gt;
 &lt;li&gt;Se rappeler que l&amp;rsquo;éditeur agit pour le compte d&amp;rsquo;un établissement de santé (RPPS)&lt;/li&gt;
-&lt;li&gt;Un certificat serveur est lié au FINESS géographique de l&amp;rsquo;établissement de santé.&lt;/li&gt;
+&lt;li&gt;Un certificat serveur est lié au FINESS géographique/juridique de l&amp;rsquo;établissement de santé.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;

@@ -157,8 +157,12 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 (composé de : matricule INS + OID + 5 traits stricts de référence / critères d’identité)&lt;/dd&gt;
 &lt;dt&gt;IMAP&lt;/dt&gt;
 &lt;dd&gt;Internet Mail Access Protocol&lt;/dd&gt;
+&lt;dt&gt;LAP&lt;/dt&gt;
+&lt;dd&gt;Logiciel d&amp;rsquo;Aide à la Prescription&lt;/dd&gt;
 &lt;dt&gt;LDAP&lt;/dt&gt;
 &lt;dd&gt;Lightweight Directory Access Protocol&lt;/dd&gt;
+&lt;dt&gt;LGC&lt;/dt&gt;
+&lt;dd&gt;Logiciel de Gestion de Cabinet&lt;/dd&gt;
 &lt;dt&gt;LGO&lt;/dt&gt;
 &lt;dd&gt;Logiciel de Gestion d’Officine&lt;/dd&gt;
 &lt;dt&gt;LPS&lt;/dt&gt;
@@ -271,20 +275,6 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;dt&gt;XSD&lt;/dt&gt;
 &lt;dd&gt;XML Schema Definition&lt;/dd&gt;
 &lt;/dl&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Blog: Versions de l&#39;installer</title>
-      <link>/blog/1/01/01/versions-de-linstaller/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/1/01/01/versions-de-linstaller/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Cette section a été déplacée dans &lt;a href=&#34;/installer/versions&#34;&gt;/installer/versions&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>

@@ -234,11 +234,19 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
 Il s&rsquo;agit du mode d&rsquo;authentification directe (avec l&rsquo;usage de la carte CPS) et indirecte (avec l&rsquo;usage des certificats serveurs).
 Ils peuvent être mis en œuvre de manière différente.</p>
 <h3 id="authentification-directe">Authentification directe</h3>
+<p>Configuration de la DevBox-santé DMP en authentification directe pour un usage des cartes CPS/CPE pour les authentifications et signatures.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">dmp</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification directe utilisant les certificats de la carte CPS</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">cps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h4 id="authentification-directe--cpsagent">Authentification directe : CPS Agent</h4>
+<p>Un mode d&rsquo;authentification intégrant le module CPS agent se fait de la manière suivante :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">dmp: </span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification directe depuis le backend par l&#39;intermédiaire d&#39;un agent CPS sur le poste du client</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">withCpsAgent</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span></code></pre></div><h3 id="authentification-indirecte">Authentification indirecte</h3>
+<p>Authentification indirecte par l&rsquo;utilisation des certificats serveurs. Pour en savoir plus sur l&rsquo;obtention des certificats, suivez cette <a href="/dmp/howtos/gestioncertificat">documentation</a>.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">dmp: </span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification indirecte utilisant les certificats p12 serveurs</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -258,14 +266,8 @@ Ils peuvent être mis en œuvre de manière différente.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">asip-p12-EL-TEST-ORG-AUTH_CLI-xxxx.p12</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">password</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><h3 id="authentification-directe--cpsagent">Authentification directe : CPS Agent</h3>
-<p>Un mode d&rsquo;authentification intégrant le module CPS agent est possible de la manière suivante :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">dmp: </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification directe depuis le backend par l&#39;intermédiaire d&#39;un agent CPS sur le poste du client</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">withCpsAgent</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><h3 id="authentification-indirecte-multi-certificats">Authentification indirecte multi-certificats</h3>
-<p>Possibilité de supporter plusieurs certificats pour des établissements géographiques différents :</p>
+</span></span></span></code></pre></div><h4 id="authentification-indirecte--multi-certificats">Authentification indirecte : multi-certificats</h4>
+<p>Possibilité de supporter plusieurs certificats pour des établissements géographiques/juridiques différents :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">dmp: </span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification indirecte avec certificat nommé</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -292,9 +294,34 @@ Ils peuvent être mis en œuvre de manière différente.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">devcoop-auth2</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">autre_auth.p12</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">autre_authPassword</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>Pour charger dynamiquement les certificats, ssl et smpime il suffit de rajouter les noms des certificats (<code>dmpAuthenticationP12.name</code>, <code>dmpSignatureP12.name</code>) dans le header de la requête HTTP :</p>
+</span></span></span></code></pre></div><p>Pour charger dynamiquement les certificats, ssl et smime il suffit de rajouter les noms des certificats (<code>dmpAuthenticationP12.name</code>, <code>dmpSignatureP12.name</code>) dans le header de la requête HTTP :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET <span style="color:#4e9a06">&#34;http://hostname:port/dmp/td...&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;amoP12.name: ÀPréciser&#34;</span>
-</span></span></code></pre></div><h3 id="authentificatino-directe-stellair">Authentificatino directe Stellair</h3>
+</span></span></code></pre></div><h4 id="authentification-indirecte--p12-in-header-http">Authentification indirecte : P12 in Header HTTP</h4>
+<p>Le mode <code>p12InHeader</code> permet de faire passer les deux certificats p12 dans l&rsquo;entête HTTP de la requête, cela permet à l&rsquo;appelant de conserver et décider des certificats utilisés lors de l&rsquo;appel du proxy.</p>
+<p>Le header étant plus lourd il faudra veiller à ce que la configuration spring prenne en compte la taille du header d&rsquo;au moins 40Kb.</p>
+<p>La configuration <code>application.yml</code> est :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">server</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">max-http-header-size</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">50KB</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">dmp: </span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification indirecte avec certificat nommé</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">p12s</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>Et la requête doit contenir les informations dans le header.</p>
+<pre tabindex="0"><code>curl --location --request POST &#39;http://localhost:8080/dmp/td21SubmitDocuments&#39; \
+--header &#39;Content-Type: application/json&#39; \
+--header &#39;dmpAuthentification.p12: MIIcdAIBAzCCHDo...AA==&#39; \
+--header &#39;dmpAuthentification.password: PASSWORD&#39; \
+--header &#39;dmpSignature.p12: MIIcoQIBAzCCH...IAA==&#39; \
+--header &#39;dmpSignature.password: PASSWORD&#39; \
+--data-raw &#39;{
+    &#34;context&#34;: {
+    },
+    &#34;request&#34;: {
+        ...
+    }
+}&#39;
+</code></pre><h3 id="authentificatino-directe-stellair">Authentificatino directe Stellair</h3>
 <p>Une page de documentation spécifique se trouve ici : <a href="/dmp/howtos/demo-stellair">/dmp/howtos/demo-stellair</a></p>
 
 </div>

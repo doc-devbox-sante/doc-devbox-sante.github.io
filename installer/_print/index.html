@@ -2025,6 +2025,8 @@ end
 </span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">WORKDIR</span><span style="color:#4e9a06"> /workspace</span><span style="color:#a40000">
 </span></span></span><span style="display:flex;"><span><span style="color:#a40000">
 </span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">EXPOSE</span><span style="color:#4e9a06"> 8080</span><span style="color:#a40000">
+</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">COPY</span> asip-p12-EL-TEST-ORG-SIGN.p12 /workspace/sign.p12<span style="color:#a40000">
+</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">COPY</span> asip-p12-EL-TEST-ORG-AUTH.p12 /workspace/auth.p12<span style="color:#a40000">
 </span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">COPY</span> application-clientname.yml /workspace/BOOT-INF/classes/application.yml<span style="color:#a40000">
 </span></span></span></code></pre></div>
 </div>
@@ -2056,7 +2058,7 @@ end
 	<h1 id="pg-366c034a67ef7dcfd4cfb4ad9271c69e">3 - Versions</h1>
     <div class="lead">Gestion des différentes versions de la DevBox-Santé</div>
 	<p>Quelques soient le mode de déploiement <code>embedded-java</code>, <code>docker</code>, <code>installer</code>, les différentes versions sont gérés via un BOM (Bill Of Materials) qui centralise l&rsquo;ensemble des versions des composants compatibles entre eux : <a href="https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/master/pom.xml">https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/master/pom.xml</a></p>
-<h2 id="version-20232">Version 2023.2</h2>
+<h2 id="version-32">Version 3.2</h2>
 <ul>
 <li><a href="/cps/versions"><code>DevBox-Sante CPS</code></a> : <strong>3.1.10</strong></li>
 <li><a href="/vitale/versions"><code>DevBox-Sante Vitale</code></a> : <strong>1.8.2</strong></li>
@@ -2067,19 +2069,9 @@ end
 <li><code>Eureka</code> : <strong>1.2</strong></li>
 <li><code>JRE</code> : <strong>^11_0_9</strong></li>
 </ul>
-<p>Plus de détails : <a href="https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/2023.2/pom.xml">https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/2023.2/pom.xml</a></p>
-<h2 id="version-2023-1">Version 2023-1</h2>
-<ul>
-<li><a href="/cps/versions"><code>DevBox-Sante CPS</code></a> : <strong>3.1.10</strong></li>
-<li><a href="/vitale/versions"><code>DevBox-Sante Vitale</code></a> : <strong>1.8.2</strong></li>
-<li><a href="/dmp/versions"><code>DevBox-Sante DMP</code></a> : <strong>5.0.2</strong></li>
-<li><a href="/insi/versions"><code>DevBox-Sante INSi</code></a> : <strong>2.6.5</strong></li>
-<li><a href="/ms-sante/versions"><code>DevBox-Sante MSS</code></a> : <strong>1.2.2</strong></li>
-<li><code>Licence Manager</code> : <strong>1.2</strong></li>
-<li><code>Eureka</code> : <strong>1.2</strong></li>
-<li><code>JRE</code> : <strong>^11_0_9</strong></li>
-</ul>
-<p>Plus de détails : <a href="https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/2023-1/pom.xml">https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/2023-1/pom.xml</a></p>
+<p>Plus de détails : <a href="https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.2/pom.xml">https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.2/pom.xml</a></p>
+<h2 id="archives">Archives</h2>
+<p>Les anciennes versions de l&rsquo;installer se trouvent <a href="/installer/poste_client/versions">ici</a></p>
 
 </div>
 

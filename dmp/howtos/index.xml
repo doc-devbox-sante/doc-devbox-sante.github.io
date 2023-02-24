@@ -863,6 +863,11 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&amp;lt;/ds:X509Certificate&amp;gt;&
         &lt;p&gt;Afin d&amp;rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité. 
 Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande à partir d&amp;rsquo;un téléservice dont la procédure est décrite ici.&lt;/p&gt;
 &lt;h2 id=&#34;procédure-administrative&#34;&gt;Procédure Administrative&lt;/h2&gt;
+&lt;h3 id=&#34;industriel-pour-les-tests&#34;&gt;Industriel pour les tests&lt;/h3&gt;
+&lt;p&gt;Pour l&amp;rsquo;industriel la liste des formulaires de gestion des certificats sont ici : &lt;a href=&#34;https://esante.gouv.fr/index-des-formulaires#23241&#34;&gt;https://esante.gouv.fr/index-des-formulaires#23241&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Le formulaire de commande de cartes et certificats de test est le F414 : &lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/F414.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/F414.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Il est possible de faire la démarche en ligne : &lt;a href=&#34;https://www.demarches-simplifiees.fr/commencer/f414&#34;&gt;https://www.demarches-simplifiees.fr/commencer/f414&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;en-production&#34;&gt;En production&lt;/h3&gt;
 &lt;p&gt;Pour obtenir, les certificats et clés nécessaires pour la connexion au DMP en authentification indirecte, il faut que votre établissement soit enregistré au FINESS (Fichier National des Établissements Sanitaires es Sociaux) : &lt;a href=&#34;http://finess.sante.gouv.fr/fininter/jsp/index.jsp&#34;&gt;http://finess.sante.gouv.fr/fininter/jsp/index.jsp&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Depuis le SEGUR santé, les guides de commandes de certificats sont spécifiques à chaque couloir :&lt;/p&gt;
 &lt;ul&gt;
@@ -892,8 +897,6 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 &lt;li&gt;un certificat client de type ORG SIGN pour signer les lots de documents soumis au DMP&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;L&amp;rsquo;dministrateur technique doit commander les certificats via le formulaire n°413 et le retourner à &lt;a href=&#34;mailto:monserviceclient.certificats@asipsante.fr&#34;&gt;monserviceclient.certificats@asipsante.fr&lt;/a&gt;
-Le formulaire peut être télécharger depuis le site : &lt;a href=&#34;https://esante.gouv.fr/securite/cartes-et-certificats/commandes&#34;&gt;https://esante.gouv.fr/securite/cartes-et-certificats/commandes&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;procédure-technique&#34;&gt;Procédure Technique&lt;/h2&gt;
 &lt;p&gt;Il est possible de commander ces certificats sur le site web mis à disposition par l&amp;rsquo;ANS. Il s&amp;rsquo;agit d&amp;rsquo;un service permettant la commande de certificats et cartes :&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://pfc.eservices.esante.gouv.fr&#34;&gt;https://pfc.eservices.esante.gouv.fr&lt;/a&gt;&lt;/p&gt;

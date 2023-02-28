@@ -535,7 +535,7 @@ Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exige
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;ATTENTION : Ne pas confondre la connexion secrète est la soummission de documents à visibilité réduite comme &lt;code&gt;INVISIBLE_REPRESENTANTS_LEGAUX&lt;/code&gt;, &lt;code&gt;INVISIBLE_PATIENT&lt;/code&gt;, ou encore &lt;code&gt;MASQUE_PS&lt;/code&gt;. Il s&amp;rsquo;agit dans ce cas de spécifier un code de confidentialité spécifique au document. Ces codes sont disponibles dans la nomenclature &lt;code&gt;DMPCCode.ASIPJeuxValeurs.CONFIDENTIALITY_CODE&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ATTENTION : Ne pas confondre la connexion secrète et la soumission de documents à visibilité réduite comme &lt;code&gt;INVISIBLE_REPRESENTANTS_LEGAUX&lt;/code&gt;, &lt;code&gt;INVISIBLE_PATIENT&lt;/code&gt;, ou encore &lt;code&gt;MASQUE_PS&lt;/code&gt;. Il s&amp;rsquo;agit dans ce cas de spécifier un code de confidentialité spécifique au document. Ces codes sont disponibles dans la nomenclature &lt;code&gt;DMPCCode.ASIPJeuxValeurs.CONFIDENTIALITY_CODE&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
       </description>

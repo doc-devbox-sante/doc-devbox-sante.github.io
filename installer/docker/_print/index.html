@@ -154,13 +154,24 @@ Version imprimable multipages.
 <pre tabindex="0"><code>docker run --name devbox-sante-clientname -d --env-file=clientname.env -p 8080:8080  devboxsante/clientname:tagname
 </code></pre><h3 id="recréer-une-image">Recréer une image</h3>
 <p>Vous pouvez même recréer une image en déposant votre configuration et autres certificats. Comme par exemple pour remplacer le fichier <code>application.yml</code> fourni par défaut :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">FROM</span><span style="color:#4e9a06"> devboxsante/phealing:20221110-1</span><span style="color:#a40000">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">FROM</span><span style="color:#4e9a06"> devboxsante/devbox:version</span><span style="color:#a40000">
 </span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">WORKDIR</span><span style="color:#4e9a06"> /workspace</span><span style="color:#a40000">
 </span></span></span><span style="display:flex;"><span><span style="color:#a40000">
 </span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">EXPOSE</span><span style="color:#4e9a06"> 8080</span><span style="color:#a40000">
 </span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">COPY</span> asip-p12-EL-TEST-ORG-SIGN.p12 /workspace/sign.p12<span style="color:#a40000">
 </span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">COPY</span> asip-p12-EL-TEST-ORG-AUTH.p12 /workspace/auth.p12<span style="color:#a40000">
 </span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">COPY</span> application-clientname.yml /workspace/BOOT-INF/classes/application.yml<span style="color:#a40000">
+</span></span></span></code></pre></div><h4 id="une-image-permettant-la-génération-des-ins_datamatrix">Une image permettant la génération des INS_DATAMATRIX</h4>
+<p>Les datamatrix générées par nos outils, ne permettent pas d&rsquo;accéder à l&rsquo;environnement graphique et génère une erreur de chargement de FONT.
+Cf. le stackoverflow sur ce sujet : <a href="https://stackoverflow.com/questions/69814102/spring-boot-in-docker-build-by-buildpack-cannot-load-font">https://stackoverflow.com/questions/69814102/spring-boot-in-docker-build-by-buildpack-cannot-load-font</a></p>
+<p>Donc en attendant que notre issue <a href="https://devbox-sante.atlassian.net/browse/INSI-64">https://devbox-sante.atlassian.net/browse/INSI-64</a> soit réglée  et que les Datamatrix puissent être générés dans un environnement docker depuis l&rsquo;image livrée, vous pouvez générer une nouvelle image en installant la <code>fontconfig</code> nécessaire.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">FROM</span><span style="color:#4e9a06"> devboxsante/devbox:version</span><span style="color:#a40000">
+</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">USER</span><span style="color:#4e9a06"> root </span><span style="color:#a40000">
+</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">RUN</span> apt-get update <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    apt-get install --assume-yes fontconfig <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    rm -rf /var/lib/apt/lists/* /var/cache/debconf/*<span style="color:#a40000">
+</span></span></span><span style="display:flex;"><span><span style="color:#a40000">
+</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">EXPOSE</span><span style="color:#4e9a06"> 8080</span><span style="color:#a40000">
 </span></span></span></code></pre></div>
 </div>
 </div>

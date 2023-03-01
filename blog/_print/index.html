@@ -154,21 +154,30 @@ Version imprimable multipages.
     
 	
 
-    <li><a href="#pg-1255f1aec1fb66984442327faa1b4436">Homologation DMP</a></li>
+    <li><a href="#pg-a39e056eb44a3a13be81a9edc262d0fe">INSi : Datamatrix dans Docker</a></li>
 
 
 
     
-    <ul>
-        
   
-  
-  
-  
+    
+    
+	
 
-  
+    <li><a href="#pg-b8aed82ac63ffbbc9521a73c3dcab002">DMP : Homologation 2.6.1</a></li>
 
-    </ul>
+
+
+    
+  
+    
+    
+	
+
+    <li><a href="#pg-48929fa5d0ca4b4f7a93839187889ff9">Les identifiants nationaux expliqués</a></li>
+
+
+
     
   
     
@@ -358,17 +367,59 @@ sur les différentes livraisons des composants/connecteurs de la DevBox-santé.<
   
 
 <div class="td-content" style="">
-    <h1 id="pg-1255f1aec1fb66984442327faa1b4436">Homologation DMP</h1>
-	<div class="lead">Fier d’avoir coché toutes les cases</div>
+    <h1 id="pg-a39e056eb44a3a13be81a9edc262d0fe">INSi : Datamatrix dans Docker</h1>
+	<div class="lead">Une image permettant la génération des INS_DATAMATRIX</div>
+	<div class="td-byline mb-4">
+		Par <b>Laurent Forêt</b> |
+        
+		<time datetime="2023-03-01" class="text-muted">Wednesday, March 01, 2023</time>
+        
+	</div>
+	<p>Les datamatrix générées par nos outils, ne permettent pas d&rsquo;accéder à l&rsquo;environnement graphique et génère une erreur de chargement de FONT.
+En effet, un appel au <code>ins datamatrix controller</code> :</p>
+<pre tabindex="0"><code class="language-curl" data-lang="curl">curl -X POST &#34;http://localhost:8080/insi/v2/datamatrix/jpg?sizeInPx=128&#34; -H &#34;accept: */*&#34; -H &#34;Content-Type: application/json&#34; \
+-d &#34;{ \&#34;matriculeINS\&#34;: { \&#34;valeur\&#34;: \&#34;1010663220754\&#34;, \&#34;cle\&#34;: \&#34;60\&#34;, \&#34;identifiantSysteme\&#34;: \&#34;1.2.250.1.213.1.4.8\&#34; }, \&#34;traitsIdentite\&#34;: { \&#34;nomFamille\&#34;: \&#34;D&#39;ARTAGNAN DE L&#39;HERAULT\&#34;, \&#34;prenomActeNaissance\&#34;: \&#34;PIERRE-ALAIN GUNTHER\&#34;, \&#34;sexeAdministratif\&#34;: \&#34;M\&#34;, \&#34;dateNaissance\&#34;: \&#34;2001-06-17\&#34;, \&#34;lieuNaissance\&#34;: \&#34;63220\&#34; }}&#34;
+</code></pre><p>Peut générer l&rsquo;erreur décrite dans le stackoverflow : <a href="https://stackoverflow.com/questions/69814102/spring-boot-in-docker-build-by-buildpack-cannot-load-font">https://stackoverflow.com/questions/69814102/spring-boot-in-docker-build-by-buildpack-cannot-load-font</a></p>
+<p>Donc pour que les Datamatrix puissent être générés correctement dans ce cas d&rsquo;erreur dans Docker, vous pouvez générer une nouvelle image en installant la <code>fontconfig</code> nécessaire.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">FROM</span><span style="color:#4e9a06"> devboxsante/devbox:version</span><span style="color:#a40000">
+</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">USER</span><span style="color:#4e9a06"> root </span><span style="color:#a40000">
+</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">RUN</span> apt-get update <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    apt-get install --assume-yes fontconfig <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    rm -rf /var/lib/apt/lists/* /var/cache/debconf/*<span style="color:#a40000">
+</span></span></span><span style="display:flex;"><span><span style="color:#a40000">
+</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">EXPOSE</span><span style="color:#4e9a06"> 8080</span><span style="color:#a40000">
+</span></span></span></code></pre></div><p>Nous allons trouver un moyen d&rsquo;incorporer cette config dans notre image et régler cette issue <a href="https://devbox-sante.atlassian.net/browse/INSI-64">https://devbox-sante.atlassian.net/browse/INSI-64</a> .</p>
+<p>Stay tuned&hellip;</p>
+
+</div>
+
+
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+
+  
+
+<div class="td-content" style="page-break-before: always">
+    <h1 id="pg-b8aed82ac63ffbbc9521a73c3dcab002">DMP : Homologation 2.6.1</h1>
+	<div class="lead">Fier d&rsquo;avoir coché toutes les cases</div>
 	<div class="td-byline mb-4">
 		Par <b>Laurent Forêt</b> |
         
 		<time datetime="2022-11-30" class="text-muted">Wednesday, November 30, 2022</time>
         
 	</div>
-	<p>Pour notre dernier passage d’homologation, nous sommes fiers de cocher toutes les cases.</p>
+	<p>Lors de notre dernier passage d’homologation, nous avons été fiers de cocher toutes les cases.</p>
 <p><img src="PDV_toutes_les_cases.png" alt="Homologation_PDV_toutes_les_cases"></p>
-<p>Mais ce n’est pas fini, nous apportons désormais une API permettant de générer facilement :</p>
+<p>Mais ce n’est pas fini, nous apportons désormais une API permettant de générer facilement :</p>
 <ul>
 <li>Les volets de <a href="/dmp/cda/crBiologie">CR-BIO</a></li>
 <li>Les volets de <a href="/dmp/cda/vaccination">Note de vaccination</a></li>
@@ -381,16 +432,40 @@ sur les différentes livraisons des composants/connecteurs de la DevBox-santé.<
 
 
     
-      
+	
   
-  
-  
-  
+    
+    
+	
+    
+
 
   
-  
 
-  
+<div class="td-content" style="page-break-before: always">
+    <h1 id="pg-48929fa5d0ca4b4f7a93839187889ff9">Les identifiants nationaux expliqués</h1>
+	<div class="lead">Une tentative d&rsquo;explication des structures des différents identifiants IdNatPs et IdNatStruct</div>
+	<div class="td-byline mb-4">
+		Par <b>Laurent Forêt</b> |
+        
+		<time datetime="2022-11-23" class="text-muted">Wednesday, November 23, 2022</time>
+        
+	</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p><strong>Work  In Progress.</strong>
+La structure des différents Identifiants nationaux sont décrits dans le MOS.</p>
+
+</div>
+
+<p><img src="idnat_screen.png" alt="Génération des Id dans CDA"></p>
+
+</div>
+
+
+
+
 
     
 	

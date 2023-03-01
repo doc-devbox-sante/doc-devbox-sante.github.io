@@ -279,6 +279,76 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
     </item>
     
     <item>
+      <title>Blog: INSi : Datamatrix dans Docker</title>
+      <link>/blog/2023/03/01/insi-datamatrix-dans-docker/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2023/03/01/insi-datamatrix-dans-docker/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Les datamatrix générées par nos outils, ne permettent pas d&amp;rsquo;accéder à l&amp;rsquo;environnement graphique et génère une erreur de chargement de FONT.
+En effet, un appel au &lt;code&gt;ins datamatrix controller&lt;/code&gt; :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-curl&#34; data-lang=&#34;curl&#34;&gt;curl -X POST &amp;#34;http://localhost:8080/insi/v2/datamatrix/jpg?sizeInPx=128&amp;#34; -H &amp;#34;accept: */*&amp;#34; -H &amp;#34;Content-Type: application/json&amp;#34; \
+-d &amp;#34;{ \&amp;#34;matriculeINS\&amp;#34;: { \&amp;#34;valeur\&amp;#34;: \&amp;#34;1010663220754\&amp;#34;, \&amp;#34;cle\&amp;#34;: \&amp;#34;60\&amp;#34;, \&amp;#34;identifiantSysteme\&amp;#34;: \&amp;#34;1.2.250.1.213.1.4.8\&amp;#34; }, \&amp;#34;traitsIdentite\&amp;#34;: { \&amp;#34;nomFamille\&amp;#34;: \&amp;#34;D&amp;#39;ARTAGNAN DE L&amp;#39;HERAULT\&amp;#34;, \&amp;#34;prenomActeNaissance\&amp;#34;: \&amp;#34;PIERRE-ALAIN GUNTHER\&amp;#34;, \&amp;#34;sexeAdministratif\&amp;#34;: \&amp;#34;M\&amp;#34;, \&amp;#34;dateNaissance\&amp;#34;: \&amp;#34;2001-06-17\&amp;#34;, \&amp;#34;lieuNaissance\&amp;#34;: \&amp;#34;63220\&amp;#34; }}&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Peut générer l&amp;rsquo;erreur décrite dans le stackoverflow : &lt;a href=&#34;https://stackoverflow.com/questions/69814102/spring-boot-in-docker-build-by-buildpack-cannot-load-font&#34;&gt;https://stackoverflow.com/questions/69814102/spring-boot-in-docker-build-by-buildpack-cannot-load-font&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Donc pour que les Datamatrix puissent être générés correctement dans ce cas d&amp;rsquo;erreur dans Docker, vous pouvez générer une nouvelle image en installant la &lt;code&gt;fontconfig&lt;/code&gt; nécessaire.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-Dockerfile&#34; data-lang=&#34;Dockerfile&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;FROM&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt; devboxsante/devbox:version&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;USER&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt; root &lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;RUN&lt;/span&gt; apt-get update &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;    apt-get install --assume-yes fontconfig &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;    rm -rf /var/lib/apt/lists/* /var/cache/debconf/*&lt;span style=&#34;color:#a40000&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;EXPOSE&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt; 8080&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Nous allons trouver un moyen d&amp;rsquo;incorporer cette config dans notre image et régler cette issue &lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-64&#34;&gt;https://devbox-sante.atlassian.net/browse/INSI-64&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Stay tuned&amp;hellip;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: DMP : Homologation 2.6.1</title>
+      <link>/blog/2022/11/30/dmp-homologation-2.6.1/</link>
+      <pubDate>Wed, 30 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2022/11/30/dmp-homologation-2.6.1/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Lors de notre dernier passage d’homologation, nous avons été fiers de cocher toutes les cases.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;PDV_toutes_les_cases.png&#34; alt=&#34;Homologation_PDV_toutes_les_cases&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Mais ce n’est pas fini, nous apportons désormais une API permettant de générer facilement :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Les volets de &lt;a href=&#34;/dmp/cda/crBiologie&#34;&gt;CR-BIO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Les volets de &lt;a href=&#34;/dmp/cda/vaccination&#34;&gt;Note de vaccination&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Les identifiants nationaux expliqués</title>
+      <link>/blog/2022/11/23/les-identifiants-nationaux-expliqu%C3%A9s/</link>
+      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2022/11/23/les-identifiants-nationaux-expliqu%C3%A9s/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Work  In Progress.&lt;/strong&gt;
+La structure des différents Identifiants nationaux sont décrits dans le MOS.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&#34;idnat_screen.png&#34; alt=&#34;Génération des Id dans CDA&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: SEGUR : la DevBox-Santé dans le référentiel d’exigences Hopital</title>
       <link>/blog/2022/06/09/segur-la-devbox-sant%C3%A9-dans-le-r%C3%A9f%C3%A9rentiel-dexigences-hopital/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>

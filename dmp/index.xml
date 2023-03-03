@@ -785,11 +785,17 @@ dbxdmp -&amp;gt; frontend : ok
 &lt;p&gt;Fournir les Conditions Particulières à DEVCOOP&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Récupérer puis répondre aux exigences du PDV (Plan de vérification) filtré par DEVCOOP&lt;/p&gt;
+&lt;p&gt;Récupérer le PDV (Plan de vérification) filtré par DEVCOOP&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Dérouler le plan de test prehomologation filtrés pour validation DEVCOOP (un test par transaction)
-==&amp;gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP&lt;/p&gt;
+&lt;p&gt;Remplir l&amp;rsquo;onglet &amp;ldquo;Déclarations&amp;rdquo; du PDV contenant l&amp;rsquo;ensemble des exigences&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Réaliser un test par transaction de l&amp;rsquo;onglet &amp;ldquo;Plan de tests&amp;rdquo; du PDV&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fournir à DEVCOOP le PDV rempli de ces &amp;ldquo;Déclarations&amp;rdquo; ainsi que les logs des tests réalisés&lt;/p&gt;
+&lt;p&gt;==&amp;gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;processus-dhomologation-cnda&#34;&gt;Processus d&amp;rsquo;homologation CNDA&lt;/h2&gt;

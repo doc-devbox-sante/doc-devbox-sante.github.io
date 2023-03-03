@@ -54,11 +54,15 @@ Exemple de ligne de commande depuis l’installation de la devbox-sante :&lt;/p&
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;jre\bin\java.exe&amp;#34;&lt;/span&gt; -Djavax.net.debug&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;ssl:handshake -Dspring.config.location&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;application.yml -jar &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;repository\devboxsante.jar&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Une fois lancée, accéder à l’authentification CPS pour générer les traces nécessaires comparable à celles-ci : &lt;a href=&#34;all.log&#34;&gt;all.log&lt;/a&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-curl&#34; data-lang=&#34;curl&#34;&gt;curl -X GET &amp;#34;http://localhost:9999/mssante/authentication/cps&amp;#34; -H &amp;#34;accept: */*&amp;#34;
+&lt;p&gt;Une fois lancée, accéder à un endpoint &lt;code&gt;/mssante&lt;/code&gt; pour générer les traces nécessaires comparable à celles-ci : &lt;a href=&#34;all.log&#34;&gt;all.log&lt;/a&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-curl&#34; data-lang=&#34;curl&#34;&gt;curl -X GET &amp;#34;http://localhost:9999/mssante/authentification/cps&amp;#34; -H &amp;#34;accept: */*&amp;#34;
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Ces traces fournissent les preuves de la prise en compte des exigences [MSS1] (Référentiel socle MSSanté #2 -Clients de Messageries Sécurisées de Santé)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Remarque&lt;/strong&gt; : Les preuves demandées nécessitent l&amp;rsquo;appel de l&amp;rsquo;url &lt;a href=&#34;https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails&#34;&gt;https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails&lt;/a&gt; qui correspond au endpoint &lt;code&gt;/mssante/emails&lt;/code&gt; de la DevBox-santé.&lt;/p&gt;
+&lt;p&gt;Néanmoins pour que la DevBox-santé MSS se comporte normalement, il faut au préalable appeler un des endpoints d&amp;rsquo;authentification, c&amp;rsquo;est à dire &lt;code&gt;/mssante/authentification/otp&lt;/code&gt; ou &lt;code&gt;/mssante/authentification/cps&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;mss-1-trust-igcsante-seulement&#34;&gt;MSS 1 : trust IGCSante seulement&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Un client de messagerie MSSanté doit établir une connexion TLS avec un Opérateur MSSanté, quels que soient les transactions et protocoles utilisés entre les 2 parties.&lt;/p&gt;

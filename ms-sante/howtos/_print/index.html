@@ -212,11 +212,15 @@ Exemple de ligne de commande depuis l’installation de la devbox-sante :</p>
 </span></span><span style="display:flex;"><span><span style="color:#4e9a06">&#34;jre\bin\java.exe&#34;</span> -Djavax.net.debug<span style="color:#ce5c00;font-weight:bold">=</span>ssl:handshake -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>application.yml -jar <span style="color:#4e9a06">&#34;repository\devboxsante.jar&#34;</span>
 </span></span></code></pre></div></li>
 <li>
-<p>Une fois lancée, accéder à l’authentification CPS pour générer les traces nécessaires comparable à celles-ci : <a href="all.log">all.log</a></p>
-<pre tabindex="0"><code class="language-curl" data-lang="curl">curl -X GET &#34;http://localhost:9999/mssante/authentication/cps&#34; -H &#34;accept: */*&#34;
+<p>Une fois lancée, accéder à un endpoint <code>/mssante</code> pour générer les traces nécessaires comparable à celles-ci : <a href="all.log">all.log</a></p>
+<pre tabindex="0"><code class="language-curl" data-lang="curl">curl -X GET &#34;http://localhost:9999/mssante/authentification/cps&#34; -H &#34;accept: */*&#34;
 </code></pre></li>
 </ol>
 <p>Ces traces fournissent les preuves de la prise en compte des exigences [MSS1] (Référentiel socle MSSanté #2 -Clients de Messageries Sécurisées de Santé)</p>
+<blockquote>
+<p><strong>Remarque</strong> : Les preuves demandées nécessitent l&rsquo;appel de l&rsquo;url <a href="https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails">https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services/Annuaire/soap/v1/listEmails</a> qui correspond au endpoint <code>/mssante/emails</code> de la DevBox-santé.</p>
+<p>Néanmoins pour que la DevBox-santé MSS se comporte normalement, il faut au préalable appeler un des endpoints d&rsquo;authentification, c&rsquo;est à dire <code>/mssante/authentification/otp</code> ou <code>/mssante/authentification/cps</code></p>
+</blockquote>
 <h2 id="mss-1-trust-igcsante-seulement">MSS 1 : trust IGCSante seulement</h2>
 <blockquote>
 <p>Un client de messagerie MSSanté doit établir une connexion TLS avec un Opérateur MSSanté, quels que soient les transactions et protocoles utilisés entre les 2 parties.</p>

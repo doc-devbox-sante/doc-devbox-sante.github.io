@@ -558,11 +558,6 @@ Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exige
 &lt;li&gt;formation&lt;/li&gt;
 &lt;li&gt;production&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;environnement-de-développement&#34;&gt;Environnement de développement&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Accessible à tous les utilisateurs l&amp;rsquo;url LPS v2 : &lt;a href=&#34;https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Environnement Web PS et Patient : &lt;a href=&#34;https://dev1.ps.dmp.gouv.fr/ps/acces-web&#34;&gt;https://dev1.ps.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&#34;environnement-dhomologation&#34;&gt;Environnement d&amp;rsquo;Homologation&lt;/h2&gt;
 &lt;p&gt;C&amp;rsquo;est un environnement spécifique à l&amp;rsquo;éditeur qui passe son homologation. Le CNDA donne les informations pour y accéder lors de la phase d&amp;rsquo;homologation de l&amp;rsquo;éditeur&lt;/p&gt;
 &lt;h2 id=&#34;environnements-de-formation&#34;&gt;Environnements de Formation&lt;/h2&gt;
@@ -597,6 +592,15 @@ Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exige
 &lt;li&gt;LPS v2 : &lt;a href=&#34;https://lps2.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://lps2.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Web PS : &lt;a href=&#34;https://www.dmp.fr/ps/acces-web/&#34;&gt;https://www.dmp.fr/ps/acces-web/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1 id=&#34;environnement-de-développement&#34;&gt;Environnement de Développement&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Accessible à tous les utilisateurs l&amp;rsquo;url LPS v2 : &lt;a href=&#34;https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Environnement Web PS et Patient : &lt;a href=&#34;https://dev1.ps.dmp.gouv.fr/ps/acces-web&#34;&gt;https://dev1.ps.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cet environnement est remis à jour toutes les semaines.&lt;/p&gt;
+&lt;h3 id=&#34;vaccination&#34;&gt;Vaccination&lt;/h3&gt;
+&lt;p&gt;Les différentes vaccinations possibles de valider pour le patient &lt;strong&gt;Jean BON&lt;/strong&gt; :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;validation_vaccination.png&#34; alt=&#34;Validation Vaccination Jean Bon&#34;&gt;&lt;/p&gt;
 
       </description>
     </item>

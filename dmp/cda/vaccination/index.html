@@ -661,7 +661,14 @@ Les spécifications de ce volet vaccination sont disponibles sur le site de l’
 </span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
-</span></span></code></pre></div><h3 id="nomenclatures-utilisées">Nomenclatures utilisées</h3>
+</span></span></code></pre></div><h5 id="remplacement-dune-note-de-vaccination">Remplacement d&rsquo;une note de vaccination</h5>
+<p>Le remplacement d&rsquo;une note de vaccination est identique au <a href="/dmp/howtos/transactions/#remplacement">remplacement d&rsquo;un document</a> à l&rsquo;exception près qu&rsquo;il faut préciser la même <code>idVaccination</code> dans la vaccination. remplaçante.</p>
+<blockquote>
+<p><strong>EX_2.1-2030</strong> : Les identifiants des vaccinations (i.e. identifiant des entry/substanceAdministration) dans les notes de vaccination doivent être générés de manière « mondialement unique », via un UUID (voir <a href="https://fr.wikipedia.org/wiki/Universally_unique_identifier">https://fr.wikipedia.org/wiki/Universally_unique_identifier</a>) dans l’attribut id/@root seulement.
+Cet identifiant sert ensuite à retrouver la vaccination dans l’historique de vaccinations lors de sa mise à jour par le SI DMP. Il ne doit donc jamais rentrer en conflit avec l’identifiant d’une autre vaccination.</p>
+</blockquote>
+<p>L&rsquo;identifiant de vaccination est donc utile au DMP pour la bonne génération de l&rsquo;historique de vaccinations.</p>
+<h3 id="nomenclatures-utilisées">Nomenclatures utilisées</h3>
 <h4 id="consommable">Consommable</h4>
 <p>Les consommables décrivant le vaccin doivent utiliser des nomenclatures spécifiques telle que la CIS, la CIP et l&rsquo;ATC dans les conditions définies par le guide d&rsquo;intégration. Elles sont liées aux bases de données scientifiques et nomenclatures standards. Pour plus de renseignements, allez vers <a href="https://base-donnees-publique.medicaments.gouv.fr/">https://base-donnees-publique.medicaments.gouv.fr/</a> ou encore <a href="https://smt.esante.gouv.fr/">https://smt.esante.gouv.fr/</a> .
 Pour information, dans l&rsquo;<a href="https://annuaire-demo.devbox-sante.fr">annuaire</a> DevBox-Santé, nous proposons un moteur de recherche dans ces nomenclatures accessibles par API.</p>

@@ -88,7 +88,10 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&amp;lt;/ds:X509Certificate&amp;gt;&
 &lt;li&gt;pour l&amp;rsquo;INSi : &lt;a href=&#34;../../insi/configuration&#34;&gt;../../insi/configuration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;h3 id=&#34;lancer-la-devbox-santé-en-ssl-debug&#34;&gt;Lancer la devbox-santé en ssl debug&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd C:\Program Files\DevBoxSante-client\
+C:\Program Files\DevBoxSante-client&amp;gt;jre\bin\java.exe -Dspring.config.location=.\application.yml -Djavax.net.debug=all -jar repository\devboxsante.jar &amp;gt; output.log
+&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     

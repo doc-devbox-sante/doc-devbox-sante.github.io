@@ -723,6 +723,19 @@ dbxdmp -&amp;gt; frontend : ok
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;Une nouvelle procédure d&amp;rsquo;homologation est en cours de mise en place par le CNDA. Nous prenons en compte les nouvelles recommendations et nous mettrons à jour toute la documentation.&lt;/p&gt;
+&lt;!---
+Procédure temporaire :
+
+ - Intégrateur : dépot des « prérequis » (ancien pdv avec déclarations) + contrat (les nouvelles CP) + l’attestation de conformité fournie par DEVCOOP au CNDA ;
+
+ - CNDA rapatrie les déclarations sur le nouveau plan de test filtré (avec ou sans demande de précisons) ;
+
+ - CNDA fournit le nouveau plan de test et l’accès à l’environnement dédié (mais aussi à DV1 pour faire des tests en parallèle) ;
+
+ - Intégrateur réalise les tests de la phase 2 + terminent les déclarations du nouveau plan de test;
+
+ - Intégrateur passage en « salle » (demo live).
+  --&gt;
 
 &lt;/div&gt;
 

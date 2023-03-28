@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/installer/versions/3.6/</loc>
+    <lastmod>2023-03-28T16:39:54+02:00</lastmod>
+  </url><url>
     <loc>/installer/versions/3.5/</loc>
     <lastmod>2023-03-07T10:05:23+01:00</lastmod>
   </url><url>

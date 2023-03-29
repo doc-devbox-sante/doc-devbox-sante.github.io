@@ -1036,7 +1036,49 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 &lt;h3 id=&#34;utilisation-des-outils-mis-à-disposition-par-lans&#34;&gt;Utilisation des outils mis à disposition par l&amp;rsquo;ANS&lt;/h3&gt;
 &lt;p&gt;Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit par l&amp;rsquo;ANS. Ils sont dorénavant héberger sur Github : &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA&#34;&gt;https://github.com/ansforge/TestContenuCDA&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;La documentation se trouve ici : &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA/wiki&#34;&gt;https://github.com/ansforge/TestContenuCDA/wiki&lt;/a&gt;&lt;/p&gt;
-
+&lt;h3 id=&#34;commentaire-sur-lintégration-des-outils-de-lans-dans-la-devbox-santé&#34;&gt;Commentaire sur l&amp;rsquo;intégration des outils de l&amp;rsquo;ANS dans la DevBox-Santé&lt;/h3&gt;
+&lt;p&gt;La DevBox-santé santé intègre les différents composants du projet github de l&amp;rsquo;ANS, et propose la validation SCHEMATRON automatique par l&amp;rsquo;utilisation des feuilles de style &lt;code&gt;xslt&lt;/code&gt; fournies dans le projet &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA&#34;&gt;https://github.com/ansforge/TestContenuCDA&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Or ces dernières ne sont plus disponibles dans le projet et ne fait plus l&amp;rsquo;objet de livraison. Pour plus d&amp;rsquo;informations sur ce sujet : &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA/issues/4&#34;&gt;https://github.com/ansforge/TestContenuCDA/issues/4&lt;/a&gt; . Les feuilles de style xslt sont donc générés au moment du build de la DevBox-Santé.&lt;/p&gt;
+&lt;p&gt;Pour apporter les preuves schematrons nécessaires pour les tests d&amp;rsquo;alimentation, vous pouvez retrouver les traces d&amp;rsquo;exécution de cette validation dans les logs.&lt;/p&gt;
+&lt;p&gt;Exemple de validation pour un document CDAR2 Niveau 1 (structuration minimale) :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+ANS_CDA_ToolsManager   : load tools from : testContenuCDA-2.40.zip
+ANS_CDA_ToolsManager   : directory created : C:\Users\lfo\AppData\Local\Temp\dmpc-api8808336379869609192
+ANS_CDA_ToolsManager   : testContenuCDA-2.40.zip unzipped in C:\Users\lfo\AppData\Local\Temp\dmpc-api8808336379869609192\testContenuCDA_20220310_V2.40
+DMPCCdaValidator       : validate with schema : C:\Users\lfo\AppData\Local\Temp\dmpc-api8808336379869609192\testContenuCDA_20220310_V2.40\infrastructure\cda\CDA_extended.xsd
+DMPCCdaValidator       : validate with schematron : C:\Users\lfo\AppData\Local\Temp\dmpc-api8808336379869609192\testContenuCDA_20220310_V2.40\schematrons\profils\CI-SIS_StructurationMinimale.xsl
+DMPCCdaValidator       : 
+---------  SCHEMATRON_VALIDATION_RESULT -----  :
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; standalone=&amp;#34;no&amp;#34;?&amp;gt;
+&amp;lt;?xml-stylesheet type=&amp;#34;text/xsl&amp;#34; href=&amp;#34;rapportSchematronToHtml4.xsl&amp;#34;?&amp;gt;&amp;lt;svrl:schematron-output xmlns:cda=&amp;#34;urn:hl7-org:v3&amp;#34; xmlns:iso=&amp;#34;http://purl.oclc.org/dsdl/schematron&amp;#34; xmlns:jdv=&amp;#34;http://esante.gouv.fr&amp;#34; xmlns:lab=&amp;#34;urn:oid:1.3.6.1.4.1.19376.1.3.2&amp;#34; xmlns:saxon=&amp;#34;http://saxon.sf.net/&amp;#34; xmlns:schold=&amp;#34;http://www.ascc.net/xml/schematron&amp;#34; xmlns:svrl=&amp;#34;http://purl.oclc.org/dsdl/svrl&amp;#34; xmlns:svs=&amp;#34;urn:ihe:iti:svs:2008&amp;#34; xmlns:xhtml=&amp;#34;http://www.w3.org/1999/xhtml&amp;#34; xmlns:xs=&amp;#34;http://www.w3.org/2001/XMLSchema&amp;#34; xmlns:xsd=&amp;#34;http://www.w3.org/2001/XMLSchema&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; dateHeure=&amp;#34;6/10/2022 à 14:37:13 (temps UTC+02:00)&amp;#34; document=&amp;#34;&amp;#34; phase=&amp;#34;Struct_minimale&amp;#34; schemaVersion=&amp;#34;CI-SIS_StructurationMinimale.sch&amp;#34; title=&amp;#34;Rapport de conformité du document aux spécifications françaises (en-tête)&amp;#34;&amp;gt;
+    &amp;lt;svrl:active-pattern id=&amp;#34;addr&amp;#34;/&amp;gt;
+    &amp;lt;svrl:fired-rule context=&amp;#34;cda:addr&amp;#34;/&amp;gt;
+    
+    ...
+    &amp;lt;svrl:active-pattern id=&amp;#34;variablesSM&amp;#34;/&amp;gt;
+&amp;lt;/svrl:schematron-output&amp;gt;
+---------
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Il vous suffira d&amp;rsquo;extraire le fichier xml de bonne exécution du schematron.&lt;/p&gt;
+&lt;p&gt;Pour une NoteVaccination, une deuxième validation est effectuée avec le schematron dédié à ce type de document CDA R2 de Niveau 3 (document structuré) :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;DMPCCdaValidator       : validate with schematron : C:\Users\lfo\AppData\Local\Temp\devbox-sante-dmp4342499872869358088\testContenuCDA_20220310_V2.40\schematrons\CI-SIS_VAC-NOTE_2021.01.xsl
+DMPCCdaValidator       : 
+---------  SCHEMATRON_VALIDATION_RESULT -----  :
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; standalone=&amp;#34;no&amp;#34;?&amp;gt;
+&amp;lt;?xml-stylesheet type=&amp;#34;text/xsl&amp;#34; href=&amp;#34;rapportSchematronToHtml4.xsl&amp;#34;?&amp;gt;&amp;lt;svrl:schematron-output xmlns:cda=&amp;#34;urn:hl7-org:v3&amp;#34; xmlns:iso=&amp;#34;http://purl.oclc.org/dsdl/schematron&amp;#34; xmlns:jdv=&amp;#34;http://esante.gouv.fr&amp;#34; xmlns:saxon=&amp;#34;http://saxon.sf.net/&amp;#34; xmlns:schold=&amp;#34;http://www.ascc.net/xml/schematron&amp;#34; xmlns:svrl=&amp;#34;http://purl.oclc.org/dsdl/svrl&amp;#34; xmlns:svs=&amp;#34;urn:ihe:iti:svs:2008&amp;#34; xmlns:xhtml=&amp;#34;http://www.w3.org/1999/xhtml&amp;#34; xmlns:xs=&amp;#34;http://www.w3.org/2001/XMLSchema&amp;#34; xmlns:xsd=&amp;#34;http://www.w3.org/2001/XMLSchema&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; dateHeure=&amp;#34;3/11/2022 à 18:22:00 (temps UTC+01:00)&amp;#34; document=&amp;#34;&amp;#34; phase=&amp;#34;CI-SIS_VAC-NOTE_2021.01&amp;#34; schemaVersion=&amp;#34;CI-SIS_VAC-NOTE_2021.01.sch&amp;#34; title=&amp;#34;Vérification de la conformité au modèle Note de vaccination 2021.01&amp;#34;&amp;gt;
+    &amp;lt;svrl:active-pattern id=&amp;#34;JDV_UsageDrogues-CISIS&amp;#34;&amp;gt;
+        &amp;lt;svrl:text&amp;gt;Conformité d&amp;#39;un élément codé obligatoire par rapport à un jeu de valeurs du CI-SIS&amp;lt;/svrl:text&amp;gt;
+    &amp;lt;/svrl:active-pattern&amp;gt;
+    &amp;lt;svrl:active-pattern id=&amp;#34;JDV_ProfessionsExposees-CISIS&amp;#34;&amp;gt;
+        &amp;lt;svrl:text&amp;gt;Conformité d&amp;#39;un élément codé obligatoire par rapport à un jeu de valeurs du CI-SIS&amp;lt;/svrl:text&amp;gt;
+   ...
+    &amp;lt;svrl:active-pattern id=&amp;#34;Entete_VAC-NOTE_2021.01&amp;#34;/&amp;gt;
+    &amp;lt;svrl:fired-rule context=&amp;#34;cda:ClinicalDocument&amp;#34;/&amp;gt;
+    &amp;lt;svrl:fired-rule context=&amp;#34;cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient&amp;#34;/&amp;gt;
+    &amp;lt;svrl:active-pattern id=&amp;#34;variables&amp;#34;/&amp;gt;
+    &amp;lt;svrl:fired-rule context=&amp;#34;cda:ClinicalDocument&amp;#34;/&amp;gt;
+&amp;lt;/svrl:schematron-output&amp;gt;
+----------
+&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     

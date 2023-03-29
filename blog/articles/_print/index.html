@@ -237,6 +237,16 @@ Version imprimable multipages.
     
 	
 
+    <li><a href="#pg-fb097e60bfd5ea8478e641381706b920">Installation d&#39;un lecteur PC/SC sous linux ubuntu</a></li>
+
+
+
+    
+  
+    
+    
+	
+
     <li><a href="#pg-16ce0b61ec2098c0edd36dbc9f3228b1">Installer &gt; lancer la DevBox-Santé depuis un navigateur</a></li>
 
 
@@ -898,6 +908,54 @@ devbox2 -- usb2 : mapping port USB
 En effet, ProSantéConnect fournit une bonne alternative à nos outils SSO basés sur la carte CPS et le standard PKCS11. J&rsquo;ai donc voulu décrire un peu les mécanismes d&rsquo;intégration dans spring-boot qui est notre framework de prédilection.</p>
 <p>Or, nous n&rsquo;avons que réaliser ce qui est déjà bien décrit par <a href="https://patriceblanchardie.fr/pro-sante-connect/">Patrice Blanchardie dans son blog</a>. Nous vous invitons donc à lire son article.</p>
 
+</div>
+
+
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+
+  
+
+<div class="td-content" style="page-break-before: always">
+    <h1 id="pg-fb097e60bfd5ea8478e641381706b920">Installation d&#39;un lecteur PC/SC sous linux ubuntu</h1>
+	<div class="lead">Comment installer un lecteur PC/SC sous linux Ubuntu</div>
+	<div class="td-byline mb-4">
+		Par <b>Laurent Forêt</b> |
+        
+		<time datetime="2021-06-01" class="text-muted">Tuesday, June 01, 2021</time>
+        
+	</div>
+	<p>L&rsquo;installation sous Linux, Ubuntu dans mon cas, d&rsquo;un lecteur PC/SC. </p>
+<p>En résumé, il faut installer les packages suivants :</p>
+<p>J&rsquo;ai récupéré les drivers spécifiques pour mon lecteur, un Liteo Olaqin dans mon cas : <a href="https://www.olaqin.fr/actualite-et-support-de-votre-liteo/">https://www.olaqin.fr/actualite-et-support-de-votre-liteo/</a></p>
+<ul>
+<li>Télécharger le driver</li>
+<li>Décompresser le driver</li>
+<li>lire le Readme</li>
+</ul>
+<h2 id="step-1-installation-les-librairies-pcsc-on-trouve-toutes-les-informations-sur-httpsdocubuntu-frorgsmartcards">Step 1 : Installation les librairies PC/SC. On trouve toutes les informations sur <a href="https://doc.ubuntu-fr.org/smartcards">https://doc.ubuntu-fr.org/smartcards</a></h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo apt-get install pcscd
+</span></span><span style="display:flex;"><span>sudo apt-get install libpcsclite1
+</span></span><span style="display:flex;"><span>sudo apt-get install pcsc-tools
+</span></span></code></pre></div><p>Check de l&rsquo;installation : <code>pcsc_scan</code></p>
+<h2 id="step-2-installation-des-libusb">Step 2 : Installation des libusb</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo apt-get install libusb-1.0-0-dev
+</span></span></code></pre></div><h2 id="step-3-">Step 3 :</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#204a87">cd</span> scmccid_5.0.35_linux
+</span></span><span style="display:flex;"><span>sudo ./install.sh
+</span></span></code></pre></div><p>## Step 4 : optionnel</p>
+<p>## Step 5 : reload pcsclite deamon</p>
+<pre tabindex="0"><code>ldd /usr/sbin/pcscd
+</code></pre>
 </div>
 
 

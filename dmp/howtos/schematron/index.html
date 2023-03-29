@@ -21,19 +21,19 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Schematron | DevBox-Santé</title>
-<meta name="description" content="Validation manuelle des CDA générés par la DevBox-Santé DMP lors de l&#39;homologation
+<meta name="description" content="Validation des CDA générés par la DevBox-Santé DMP lors de l&#39;homologation
 ">
 <meta property="og:title" content="Schematron" />
-<meta property="og:description" content="Validation manuelle des CDA générés par la DevBox-Santé DMP lors de l&#39;homologation
+<meta property="og:description" content="Validation des CDA générés par la DevBox-Santé DMP lors de l&#39;homologation
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/dmp/howtos/schematron/" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Schematron">
-<meta itemprop="description" content="Validation manuelle des CDA générés par la DevBox-Santé DMP lors de l&#39;homologation
+<meta itemprop="description" content="Validation des CDA générés par la DevBox-Santé DMP lors de l&#39;homologation
 "><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Schematron"/>
-<meta name="twitter:description" content="Validation manuelle des CDA générés par la DevBox-Santé DMP lors de l&#39;homologation
+<meta name="twitter:description" content="Validation des CDA générés par la DevBox-Santé DMP lors de l&#39;homologation
 "/>
 
 
@@ -264,9 +264,13 @@ if (!doNotTrack) {
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#validation-manuelle">Validation manuelle</a>
       <ul>
         <li><a href="#utilisation-de-lespace-de-tests-de-lans">Utilisation de l&rsquo;espace de tests de l&rsquo;ANS</a></li>
+      </ul>
+    </li>
+    <li><a href="#validation-automatique">Validation automatique</a>
+      <ul>
         <li><a href="#utilisation-des-outils-mis-à-disposition-par-lans">Utilisation des outils mis à disposition par l&rsquo;ANS</a></li>
         <li><a href="#commentaire-sur-lintégration-des-outils-de-lans-dans-la-devbox-santé">Commentaire sur l&rsquo;intégration des outils de l&rsquo;ANS dans la DevBox-Santé</a></li>
       </ul>
@@ -316,7 +320,7 @@ if (!doNotTrack) {
             
 <div class="td-content">
 	<h1>Schematron</h1>
-  <div class="lead">Validation manuelle des CDA générés par la DevBox-Santé DMP lors de l&rsquo;homologation</div>
+  <div class="lead">Validation des CDA générés par la DevBox-Santé DMP lors de l&rsquo;homologation</div>
 	<header class="article-meta">
 		
 		
@@ -332,7 +336,8 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<h3 id="utilisation-de-lespace-de-tests-de-lans">Utilisation de l&rsquo;espace de tests de l&rsquo;ANS</h3>
+	<h2 id="validation-manuelle">Validation manuelle</h2>
+<h3 id="utilisation-de-lespace-de-tests-de-lans">Utilisation de l&rsquo;espace de tests de l&rsquo;ANS</h3>
 <p>Sur le site <a href="https://interop.esante.gouv.fr">interop.esante.gouv.fr</a> ou plus exactement <a href="https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;extension=ASIP">https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;extension=ASIP</a></p>
 <p>Une fois sur le site :</p>
 <ul>
@@ -342,6 +347,7 @@ if (!doNotTrack) {
 <li>Cliquer sur valider
 <img src="External_Validation_Service_Front-end_2.png" alt="External Validation Service Front-end_1"></li>
 </ul>
+<h2 id="validation-automatique">Validation automatique</h2>
 <h3 id="utilisation-des-outils-mis-à-disposition-par-lans">Utilisation des outils mis à disposition par l&rsquo;ANS</h3>
 <p>Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit par l&rsquo;ANS. Ils sont dorénavant héberger sur Github : <a href="https://github.com/ansforge/TestContenuCDA">https://github.com/ansforge/TestContenuCDA</a></p>
 <p>La documentation se trouve ici : <a href="https://github.com/ansforge/TestContenuCDA/wiki">https://github.com/ansforge/TestContenuCDA/wiki</a></p>

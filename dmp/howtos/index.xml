@@ -1023,7 +1023,8 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
       <description>
         
         
-        &lt;h3 id=&#34;utilisation-de-lespace-de-tests-de-lans&#34;&gt;Utilisation de l&amp;rsquo;espace de tests de l&amp;rsquo;ANS&lt;/h3&gt;
+        &lt;h2 id=&#34;validation-manuelle&#34;&gt;Validation manuelle&lt;/h2&gt;
+&lt;h3 id=&#34;utilisation-de-lespace-de-tests-de-lans&#34;&gt;Utilisation de l&amp;rsquo;espace de tests de l&amp;rsquo;ANS&lt;/h3&gt;
 &lt;p&gt;Sur le site &lt;a href=&#34;https://interop.esante.gouv.fr&#34;&gt;interop.esante.gouv.fr&lt;/a&gt; ou plus exactement &lt;a href=&#34;https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;amp;extension=ASIP&#34;&gt;https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;amp;extension=ASIP&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Une fois sur le site :&lt;/p&gt;
 &lt;ul&gt;
@@ -1033,6 +1034,7 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 &lt;li&gt;Cliquer sur valider
 &lt;img src=&#34;External_Validation_Service_Front-end_2.png&#34; alt=&#34;External Validation Service Front-end_1&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;validation-automatique&#34;&gt;Validation automatique&lt;/h2&gt;
 &lt;h3 id=&#34;utilisation-des-outils-mis-à-disposition-par-lans&#34;&gt;Utilisation des outils mis à disposition par l&amp;rsquo;ANS&lt;/h3&gt;
 &lt;p&gt;Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit par l&amp;rsquo;ANS. Ils sont dorénavant héberger sur Github : &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA&#34;&gt;https://github.com/ansforge/TestContenuCDA&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;La documentation se trouve ici : &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA/wiki&#34;&gt;https://github.com/ansforge/TestContenuCDA/wiki&lt;/a&gt;&lt;/p&gt;

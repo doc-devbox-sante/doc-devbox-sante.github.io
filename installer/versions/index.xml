@@ -28,7 +28,7 @@
 &lt;li&gt;&lt;a href=&#34;/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.6&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.3&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.3&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;`Igc-sante-tools\ : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.0&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;

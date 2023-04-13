@@ -84,8 +84,8 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&amp;lt;/ds:X509Certificate&amp;gt;&
 &lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
 &lt;p&gt;La DevBox-santé est paramétré par défaut lors de l&amp;rsquo;installation, mais elle est personnalisable en modifiant le fichier &lt;code&gt;application.yml&lt;/code&gt;. Les modifications possibles de cette configuration est décrite pour chacun des composants dans leur espace de documentation :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;pour le DMP : &lt;a href=&#34;../../dmp/configuration&#34;&gt;../../dmp/configuration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;pour l&amp;rsquo;INSi : &lt;a href=&#34;../../insi/configuration&#34;&gt;../../insi/configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;pour le DMP : &lt;a href=&#34;/dmp/configuration&#34;&gt;/dmp/configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;pour l&amp;rsquo;INSi : &lt;a href=&#34;/insi/configuration&#34;&gt;/insi/configuration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;lancer-la-devbox-santé-en-ssl-debug&#34;&gt;Lancer la devbox-santé en ssl debug&lt;/h3&gt;

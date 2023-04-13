@@ -27,13 +27,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/dmp/howtos/transactions/" /><meta property="article:section" content="dmp" />
 
-<meta property="article:modified_time" content="2023-03-14T11:22:11+01:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2023-04-13T15:17:52+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Transactions supportées">
 <meta itemprop="description" content="Contient un exemple d&#39;utilisation de l&#39;API java et curl des différentes transactions supportées.
 ">
-<meta itemprop="dateModified" content="2023-03-14T11:22:11+01:00" />
-<meta itemprop="wordCount" content="2264">
+<meta itemprop="dateModified" content="2023-04-13T15:17:52+02:00" />
+<meta itemprop="wordCount" content="2292">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Transactions supportées"/>
 <meta name="twitter:description" content="Contient un exemple d&#39;utilisation de l&#39;API java et curl des différentes transactions supportées.
@@ -205,7 +205,7 @@ if (!doNotTrack) {
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosintegrateurchecklist-li">
   <input type="checkbox" id="m-dmphowtosintegrateurchecklist-check"/>
-  <label for="m-dmphowtosintegrateurchecklist-check"><a href="/dmp/howtos/integrateurchecklist/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dmphowtosintegrateurchecklist"><span class="">Integrateurs checklist</span></a></label>
+  <label for="m-dmphowtosintegrateurchecklist-check"><a href="/dmp/howtos/integrateurchecklist/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtosintegrateurchecklist"><span class="">Integrateurs checklist</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtoshomologation-li">
   <input type="checkbox" id="m-dmphowtoshomologation-check"/>
@@ -360,12 +360,20 @@ if (!doNotTrack) {
 
 		
 	</header>    
-	<p>Toutes transactions vers le DMP se fait en précisant un <code>DMPCContext</code> et une requête spécifique en argument d&rsquo;une méthode du <code>DMPCClient</code>.</p>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p><strong>Attention :</strong></p>
+<p>Suivre cette documentation ne vous dispense pas de lire attentivement le guide d&rsquo;intégration &ldquo;Service DMP intégré aux LPS&rdquo; (SEL-MP-037) dans la version du package cible.
+Ce document est disponible sur l&rsquo;espace industriel de Sesam-Vitale : <a href="https://industriels.sesam-vitale.fr/group/dmp-compatibilite">https://industriels.sesam-vitale.fr/group/dmp-compatibilite</a></p>
+
+</div>
+
+<p>Toutes transactions vers le DMP se fait en précisant un <code>DMPCContext</code> et une requête spécifique en argument d&rsquo;une méthode du <code>DMPCClient</code>.</p>
 <p>Le <code>DMPCContext</code> contient les informations permettant de définir :</p>
 <ul>
 <li>L&rsquo;auteur de la transaction,</li>
 <li>Le code de confidentialité de la transaction (connexion secrète, invisible aux représentants légaux du patient)</li>
-<li>L&rsquo;autorité des cartes vitales utilisées (réelles ou test)</li>
 </ul>
 <p>À ce <code>DMPCContext</code> est associé un autre argument dépendant de la transaction réalisée.</p>
 <h2 id="mode-dauthentification">Mode d&rsquo;authentification</h2>
@@ -403,7 +411,6 @@ Le système de la structure de santé doit être en mesure d&rsquo;authentifié 
 </span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;nom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Devcoop Bureau de Léognan&#34;</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;insNirAutorite&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;TEST&#34;</span><span style="color:#000;font-weight:bold">,</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;modeAcces&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;acces&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;NORMAL&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>

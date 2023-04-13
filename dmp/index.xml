@@ -22,12 +22,20 @@
       <description>
         
         
-        &lt;p&gt;Toutes transactions vers le DMP se fait en précisant un &lt;code&gt;DMPCContext&lt;/code&gt; et une requête spécifique en argument d&amp;rsquo;une méthode du &lt;code&gt;DMPCClient&lt;/code&gt;.&lt;/p&gt;
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Attention :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Suivre cette documentation ne vous dispense pas de lire attentivement le guide d&amp;rsquo;intégration &amp;ldquo;Service DMP intégré aux LPS&amp;rdquo; (SEL-MP-037) dans la version du package cible.
+Ce document est disponible sur l&amp;rsquo;espace industriel de Sesam-Vitale : &lt;a href=&#34;https://industriels.sesam-vitale.fr/group/dmp-compatibilite&#34;&gt;https://industriels.sesam-vitale.fr/group/dmp-compatibilite&lt;/a&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Toutes transactions vers le DMP se fait en précisant un &lt;code&gt;DMPCContext&lt;/code&gt; et une requête spécifique en argument d&amp;rsquo;une méthode du &lt;code&gt;DMPCClient&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Le &lt;code&gt;DMPCContext&lt;/code&gt; contient les informations permettant de définir :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;L&amp;rsquo;auteur de la transaction,&lt;/li&gt;
 &lt;li&gt;Le code de confidentialité de la transaction (connexion secrète, invisible aux représentants légaux du patient)&lt;/li&gt;
-&lt;li&gt;L&amp;rsquo;autorité des cartes vitales utilisées (réelles ou test)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;À ce &lt;code&gt;DMPCContext&lt;/code&gt; est associé un autre argument dépendant de la transaction réalisée.&lt;/p&gt;
 &lt;h2 id=&#34;mode-dauthentification&#34;&gt;Mode d&amp;rsquo;authentification&lt;/h2&gt;
@@ -65,7 +73,6 @@ Le système de la structure de santé doit être en mesure d&amp;rsquo;authentif
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;nom&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Devcoop Bureau de Léognan&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;insNirAutorite&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;TEST&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;modeAcces&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;acces&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;NORMAL&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
@@ -667,128 +674,6 @@ dbxdmp -&amp;gt; dmp : POST SOAP message de soumission (XDS/CDA)
 dmp -&amp;gt; dbxdmp : SOAP response OK
 dbxdmp -&amp;gt; frontend : ok
 &lt;/code&gt;&lt;/pre&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Dmp: Integrateurs checklist</title>
-      <link>/dmp/howtos/integrateurchecklist/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/dmp/howtos/integrateurchecklist/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Pour plus d’information officielle &amp;ldquo;Cas des intégrateurs EAI&amp;rdquo; : &lt;a href=&#34;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/&#34;&gt;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Sinon, voici un petit récapitulatif des démarches à suivre :&lt;/p&gt;
-&lt;h2 id=&#34;administratif&#34;&gt;Administratif&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Obtenir un NIE auprès du CNDA&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Remplir les conditions générales des TLSi AMO v3 (&lt;a href=&#34;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&#34;&gt;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&lt;/a&gt;)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Obtenir des cartes CPS et/ou certificats de test (médecin, CPE, autre) auprès de l&amp;rsquo;ANS&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;choix-architecture&#34;&gt;Choix Architecture&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Choisir un mode d&amp;rsquo;intégration/ authentification&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;les moyens d&amp;rsquo;authentification de l&amp;rsquo;utilisateur doivent permettre l&amp;rsquo;identification unique de l&amp;rsquo;utilissateur&lt;/li&gt;
-&lt;li&gt;le PS a-t-il accès à sa carte CPS ?&lt;/li&gt;
-&lt;li&gt;Se rappeler que l&amp;rsquo;éditeur agit pour le compte d&amp;rsquo;un établissement de santé (RPPS)&lt;/li&gt;
-&lt;li&gt;Un certificat serveur est lié au FINESS géographique/juridique de l&amp;rsquo;établissement de santé.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Choisir les profils d&amp;rsquo;intégration :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;alimentation&lt;/li&gt;
-&lt;li&gt;consultation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;développement--intégration&#34;&gt;Développement / Intégration&lt;/h2&gt;
-&lt;p&gt;Pour cela  :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../embedded&#34;&gt;mode API java&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../rest&#34;&gt;mode REST&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;conditions-particulières-et-validation-devcoop&#34;&gt;Conditions Particulières et validation DEVCOOP&lt;/h2&gt;
-
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Une nouvelle procédure d&amp;rsquo;homologation est en cours de mise en place par le CNDA. Nous prenons en compte les nouvelles recommendations et nous mettrons à jour toute la documentation.&lt;/p&gt;
-&lt;!---
-Procédure temporaire :
-
- - Intégrateur : dépot des « prérequis » (ancien pdv avec déclarations) + contrat (les nouvelles CP) + l’attestation de conformité fournie par DEVCOOP au CNDA ;
-
- - CNDA rapatrie les déclarations sur le nouveau plan de test filtré (avec ou sans demande de précisons) ;
-
- - CNDA fournit le nouveau plan de test et l’accès à l’environnement dédié (mais aussi à DV1 pour faire des tests en parallèle) ;
-
- - Intégrateur réalise les tests de la phase 2 + terminent les déclarations du nouveau plan de test;
-
- - Intégrateur passage en « salle » (demo live).
-  --&gt;
-
-&lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Récupérer et remplir les Conditions Particulières DMP intégrateurs sur le site du CNDA (Une fois l&amp;rsquo;architecture et les profils choisis)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Fournir les Conditions Particulières à DEVCOOP&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Récupérer le PDV (Plan de vérification) filtré par DEVCOOP&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Remplir l&amp;rsquo;onglet &amp;ldquo;Déclarations&amp;rdquo; du PDV contenant l&amp;rsquo;ensemble des exigences&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Réaliser un test par transaction de l&amp;rsquo;onglet &amp;ldquo;Plan de tests&amp;rdquo; du PDV&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Fournir à DEVCOOP le PDV rempli de ces &amp;ldquo;Déclarations&amp;rdquo; ainsi que les logs des tests réalisés&lt;/p&gt;
-&lt;p&gt;==&amp;gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;processus-dhomologation-cnda&#34;&gt;Processus d&amp;rsquo;homologation CNDA&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Pour initier le passage d’homologation auprès du CNDA, fournir :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;les conditions particulières signées&lt;/li&gt;
-&lt;li&gt;l’attestation de conformité de DEVCOOP&lt;/li&gt;
-&lt;li&gt;le PDV entièrement filtré (tests/déclarations par l’EAI) et complété conjointement sur les déclarations.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Obtention d&amp;rsquo;un environnement dédié pour le passage d&amp;rsquo;homologation et date de passage&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Obtention des cartes vitales de test DMP&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Passer les tests :  &lt;a href=&#34;/dmp/howtos/homologation&#34;&gt;/dmp/howtos/homologation&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Déposer les résultats sur &lt;a href=&#34;https://cnda.ameli.fr/PortailNie/?page_id=153&#34;&gt;l’espace personnel du CNDA&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;déploiement&#34;&gt;Déploiement&lt;/h2&gt;
-&lt;h3 id=&#34;gestion-des-certificats&#34;&gt;Gestion des certificats&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/dmp/howtos/gestioncertificat/&#34;&gt;Dans le cas d&amp;rsquo;une authentification indirecte pour les établissements&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
       </description>
     </item>
     

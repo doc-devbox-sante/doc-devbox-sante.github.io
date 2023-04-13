@@ -35,12 +35,20 @@
       <description>
         
         
-        &lt;p&gt;Toutes transactions vers le DMP se fait en précisant un &lt;code&gt;DMPCContext&lt;/code&gt; et une requête spécifique en argument d&amp;rsquo;une méthode du &lt;code&gt;DMPCClient&lt;/code&gt;.&lt;/p&gt;
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Attention :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Suivre cette documentation ne vous dispense pas de lire attentivement le guide d&amp;rsquo;intégration &amp;ldquo;Service DMP intégré aux LPS&amp;rdquo; (SEL-MP-037) dans la version du package cible.
+Ce document est disponible sur l&amp;rsquo;espace industriel de Sesam-Vitale : &lt;a href=&#34;https://industriels.sesam-vitale.fr/group/dmp-compatibilite&#34;&gt;https://industriels.sesam-vitale.fr/group/dmp-compatibilite&lt;/a&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Toutes transactions vers le DMP se fait en précisant un &lt;code&gt;DMPCContext&lt;/code&gt; et une requête spécifique en argument d&amp;rsquo;une méthode du &lt;code&gt;DMPCClient&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Le &lt;code&gt;DMPCContext&lt;/code&gt; contient les informations permettant de définir :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;L&amp;rsquo;auteur de la transaction,&lt;/li&gt;
 &lt;li&gt;Le code de confidentialité de la transaction (connexion secrète, invisible aux représentants légaux du patient)&lt;/li&gt;
-&lt;li&gt;L&amp;rsquo;autorité des cartes vitales utilisées (réelles ou test)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;À ce &lt;code&gt;DMPCContext&lt;/code&gt; est associé un autre argument dépendant de la transaction réalisée.&lt;/p&gt;
 &lt;h2 id=&#34;mode-dauthentification&#34;&gt;Mode d&amp;rsquo;authentification&lt;/h2&gt;
@@ -78,7 +86,6 @@ Le système de la structure de santé doit être en mesure d&amp;rsquo;authentif
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;nom&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Devcoop Bureau de Léognan&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;insNirAutorite&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;TEST&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;modeAcces&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;acces&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;NORMAL&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
@@ -616,24 +623,18 @@ Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exige
         
         &lt;p&gt;Pour plus d’information officielle &amp;ldquo;Cas des intégrateurs EAI&amp;rdquo; : &lt;a href=&#34;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/&#34;&gt;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Sinon, voici un petit récapitulatif des démarches à suivre :&lt;/p&gt;
-&lt;h2 id=&#34;administratif&#34;&gt;Administratif&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Obtenir un NIE auprès du CNDA&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Remplir les conditions générales des TLSi AMO v3 (&lt;a href=&#34;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&#34;&gt;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&lt;/a&gt;)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Obtenir des cartes CPS et/ou certificats de test (médecin, CPE, autre) auprès de l&amp;rsquo;ANS&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&#34;pré-requis&#34;&gt;Pré-requis&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Obtenir un NIE auprès du CNDA&lt;/li&gt;
+&lt;li&gt;Remplir les conditions générales des TLSi AMO v3 (&lt;a href=&#34;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&#34;&gt;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Obtenir des cartes CPS et/ou certificats de test (médecin, CPE, autre) auprès de l&amp;rsquo;ANS&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2 id=&#34;choix-architecture&#34;&gt;Choix Architecture&lt;/h2&gt;
-&lt;ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;Choisir un mode d&amp;rsquo;intégration/ authentification&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;les moyens d&amp;rsquo;authentification de l&amp;rsquo;utilisateur doivent permettre l&amp;rsquo;identification unique de l&amp;rsquo;utilissateur&lt;/li&gt;
+&lt;li&gt;les moyens d&amp;rsquo;authentification de l&amp;rsquo;utilisateur doivent permettre l&amp;rsquo;identification unique de l&amp;rsquo;utilisateur&lt;/li&gt;
 &lt;li&gt;le PS a-t-il accès à sa carte CPS ?&lt;/li&gt;
 &lt;li&gt;Se rappeler que l&amp;rsquo;éditeur agit pour le compte d&amp;rsquo;un établissement de santé (RPPS)&lt;/li&gt;
 &lt;li&gt;Un certificat serveur est lié au FINESS géographique/juridique de l&amp;rsquo;établissement de santé.&lt;/li&gt;
@@ -646,18 +647,42 @@ Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exige
 &lt;li&gt;consultation&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;
 &lt;h2 id=&#34;développement--intégration&#34;&gt;Développement / Intégration&lt;/h2&gt;
-&lt;p&gt;Pour cela  :&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Intégrer l&amp;rsquo;ensemble des transactions choisies sur les profils choisis. La description de l&amp;rsquo;ensemble des transactions se trouvent &lt;a href=&#34;/dmp/howtos/transactions/&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Deux modes d&amp;rsquo;intégration :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../embedded&#34;&gt;mode API java&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../rest&#34;&gt;mode REST&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/dmp/embedded&#34;&gt;Java&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/dmp/rest&#34;&gt;REST&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;conditions-particulières-et-validation-devcoop&#34;&gt;Conditions Particulières et validation DEVCOOP&lt;/h2&gt;
-
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Une nouvelle procédure d&amp;rsquo;homologation est en cours de mise en place par le CNDA. Nous prenons en compte les nouvelles recommendations et nous mettrons à jour toute la documentation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;nouvelle-procédure-dhomologation&#34;&gt;Nouvelle procédure d&amp;rsquo;homologation&lt;/h2&gt;
+&lt;p&gt;Une nouvelle procédure d&amp;rsquo;homologation a été mise en place le 23 mars 2023. Cette procédure est décrite dans l&amp;rsquo;article 6 des conditions particulières.&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;Récupérer les condition particulières DMP sur le site du &lt;strong&gt;&lt;a href=&#34;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&#34;&gt;CNDA&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Remplir et signer une attestation sur l&amp;rsquo;honneur vous déclarant détenir d&amp;rsquo;un contrat de licence de la DevBox-santé (Article 4 conditions particulières)&lt;/li&gt;
+&lt;li&gt;Remplir et signer les conditions et leurs annexes avec le(s) mode(s) d&amp;rsquo;authentification et profil(s) choisi(s) (support &lt;strong&gt;DEVCOOP&lt;/strong&gt; possible)&lt;/li&gt;
+&lt;li&gt;Faire parvenir au CNDA les conditions particulières ainsi que l&amp;rsquo;attestation&lt;/li&gt;
+&lt;li&gt;Récupérer les autorisations d&amp;rsquo;accés aux différents environnements et en tester les accès&lt;/li&gt;
+&lt;li&gt;Faire Valider la Phase 1 par &lt;strong&gt;DEVCOOP&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Récupérer le &lt;a href=&#34;CDT_DMP_20230320_v2.7.0.xlsm&#34;&gt;cahier de test&lt;/a&gt; à jour&lt;/li&gt;
+&lt;li&gt;Filtrer l&amp;rsquo;onglet Phase 1 sur les trois premières colonnes : Profil DMP-C, Authentification, Transaction en fonction de vos annexes remplies des conditions particulières.&lt;/li&gt;
+&lt;li&gt;Fournir à &lt;strong&gt;DEVCOOP&lt;/strong&gt; pour chaque code de test un répertoire contenant la trame d&amp;rsquo;exécution ainsi que si besoin une ou deux impressions écrans pour illustration.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Remplir, signer et envoyer au &lt;strong&gt;CNDA&lt;/strong&gt; le fichier &lt;code&gt;ATTESTATION_Realisation_Prerequis_DMPC_V1.pdf&lt;/code&gt; disponible avec les conditions particulières téléchargées, en cohérence avec la réalisation des tests de la phase 1.&lt;/li&gt;
+&lt;li&gt;Début de l&amp;rsquo;examen par le &lt;strong&gt;CNDA&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Phase 2 : Pré-Examen (&lt;strong&gt;VALIDATION_CNDA&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;Phase 3 : Examen de conformité (&lt;strong&gt;VALIDATION_CNDA&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;deprecated-conditions-particulières-et-validation-devcoop&#34;&gt;[DEPRECATED] Conditions Particulières et validation DEVCOOP&lt;/h3&gt;
 &lt;!---
 Procédure temporaire :
 
@@ -671,9 +696,6 @@ Procédure temporaire :
 
  - Intégrateur passage en « salle » (demo live).
   --&gt;
-
-&lt;/div&gt;
-
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Récupérer et remplir les Conditions Particulières DMP intégrateurs sur le site du CNDA (Une fois l&amp;rsquo;architecture et les profils choisis)&lt;/p&gt;
@@ -695,7 +717,7 @@ Procédure temporaire :
 &lt;p&gt;==&amp;gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;processus-dhomologation-cnda&#34;&gt;Processus d&amp;rsquo;homologation CNDA&lt;/h2&gt;
+&lt;h4 id=&#34;deprecated-processus-dhomologation-cnda&#34;&gt;[DEPRECATED] Processus d&amp;rsquo;homologation CNDA&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Pour initier le passage d’homologation auprès du CNDA, fournir :&lt;/p&gt;
@@ -717,11 +739,6 @@ Procédure temporaire :
 &lt;li&gt;
 &lt;p&gt;Déposer les résultats sur &lt;a href=&#34;https://cnda.ameli.fr/PortailNie/?page_id=153&#34;&gt;l’espace personnel du CNDA&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;déploiement&#34;&gt;Déploiement&lt;/h2&gt;
-&lt;h3 id=&#34;gestion-des-certificats&#34;&gt;Gestion des certificats&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/dmp/howtos/gestioncertificat/&#34;&gt;Dans le cas d&amp;rsquo;une authentification indirecte pour les établissements&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

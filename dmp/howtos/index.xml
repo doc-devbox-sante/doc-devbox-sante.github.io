@@ -56,7 +56,7 @@ Ce document est disponible sur l&amp;rsquo;espace industriel de Sesam-Vitale : &
 &lt;p&gt;En authentification directe, l&amp;rsquo;utilisateur personnel de santé est authentifié par sa carte CPS/CPE, ces informations sont récupérées lors de la lecture de la carte CPS.&lt;/p&gt;
 &lt;h3 id=&#34;indirecte-depuis-version-10&#34;&gt;Indirecte (depuis version 1.0)&lt;/h3&gt;
 &lt;p&gt;En authentification indirecte, seule la structure de santé (par son certificat serveur) est authentifiée.&lt;/p&gt;
-&lt;p&gt;L&amp;rsquo;auteur de la requête, c&amp;rsquo;est à dire le personnel de santé utilisateur (&lt;code&gt;DMPCPersonnelSante&lt;/code&gt;), doit donc être authentifié localement. 
+&lt;p&gt;L&amp;rsquo;auteur de la requête, c&amp;rsquo;est à dire le personnel de santé utilisateur (&lt;code&gt;DMPCPersonnelSante&lt;/code&gt;), doit donc être authentifié localement.
 Le système de la structure de santé doit être en mesure d&amp;rsquo;authentifié ses utilisateurs. Cet identifiant local au système doit être spécifié dans &lt;code&gt;DMPCPersonnelSante.internalId&lt;/code&gt; même si le rpps est connu.&lt;/p&gt;
 &lt;p&gt;Lors de la lecture de la Carte Vitale, l&amp;rsquo;intégrateur doit être en mesure de définir la provenance du nir (Réel, Test, Démo) passé en paramètres des différentes requêtes en précisant la valeur &lt;code&gt;DMPCContext.DMPCInsNirAutorite&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Exemple Java :&lt;/p&gt;
@@ -270,7 +270,7 @@ NB : l’autorisation d’accès est facultative pour alimenter le DMP avec des 
 &lt;li&gt;et transmis au système DMP sous la forme d&amp;rsquo;un lot de soumission XDS signé (XAdES).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;La cinématique générale est la suivante.
-Le PS constitue le ou les document(s) dans le LPS . 
+Le PS constitue le ou les document(s) dans le LPS .
 Le LPS :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;construit le ou les document(s)
@@ -915,7 +915,7 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&amp;lt;/ds:X509Certificate&amp;gt;&
       <description>
         
         
-        &lt;p&gt;Afin d&amp;rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité. 
+        &lt;p&gt;Afin d&amp;rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité.
 Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande à partir d&amp;rsquo;un téléservice dont la procédure est décrite ici.&lt;/p&gt;
 &lt;h2 id=&#34;procédure-administrative&#34;&gt;Procédure Administrative&lt;/h2&gt;
 &lt;h3 id=&#34;industriel-pour-les-tests&#34;&gt;Industriel pour les tests&lt;/h3&gt;
@@ -1046,7 +1046,7 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 &lt;p&gt;Une fois sur le site :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Il vous faut télécharger votre fichier CDA&lt;/li&gt;
-&lt;li&gt;Choisir le schematron à valider : &amp;ldquo;Structuration minimale des documents de santé&amp;rdquo; par exemple 
+&lt;li&gt;Choisir le schematron à valider : &amp;ldquo;Structuration minimale des documents de santé&amp;rdquo; par exemple
 &lt;img src=&#34;External_Validation_Service_Front-end_1.png&#34; alt=&#34;External Validation Service Front-end_1&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Cliquer sur valider
 &lt;img src=&#34;External_Validation_Service_Front-end_2.png&#34; alt=&#34;External Validation Service Front-end_1&#34;&gt;&lt;/li&gt;

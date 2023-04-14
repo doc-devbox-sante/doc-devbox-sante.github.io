@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.633244ef1c2fb3aa12f15e8dfea092f63629f4a4ce9c183b387081511d6d3dd9.css" as="style">
-<link href="/scss/main.min.633244ef1c2fb3aa12f15e8dfea092f63629f4a4ce9c183b387081511d6d3dd9.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.78eb66b81f05778e73ed7018a48352a1dc370ca88b3476c17f48f8694110228d.css" as="style">
+<link href="/scss/main.min.78eb66b81f05778e73ed7018a48352a1dc370ca88b3476c17f48f8694110228d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -635,7 +635,7 @@ Version imprimable multipages.
 
 
 <div class="content">
-      <p>La DevBox-santé DMP est une api Java dont tous les composants sont injectables dans un environnement SpringFramework. 
+      <p>La DevBox-santé DMP est une api Java dont tous les composants sont injectables dans un environnement SpringFramework.
 Elle suit le guide d&rsquo;intégration définit par le GIE SESAM-Vitale : <a href="https://www.sesam-vitale.fr/documents/20182/54758/SEL-MP-037+DMPi.pdf">https://www.sesam-vitale.fr/documents/20182/54758/SEL-MP-037+DMPi.pdf</a></p>
 <p>Ces composants sont tous basés sur des librairies de l&rsquo;opensource comme Joda-time, Log4j, Apache Santuario, Apache CXF… .</p>
 <ul>
@@ -797,7 +797,7 @@ Un contexte peut être définit de la manière suivante :</p>
     
 	<h1 id="pg-885451189c2b211bbc27974c7d9b1e15">2 - REST Proxy</h1>
     <div class="lead">Les transactions du DMP en mode REST</div>
-	<p>Le proxy REST embarque l&rsquo;API java dans une application REST spring-boot, elle accepte des requetes simples JSON et les retransmet 
+	<p>Le proxy REST embarque l&rsquo;API java dans une application REST spring-boot, elle accepte des requetes simples JSON et les retransmet
 au DMP dans le bon formalisme et dans le respect des différentes transactions,  il interprète les réponses du serveur DMP et les retourne au client initial dans
 un formalisme simplifié.</p>
 <h3 id="intégration-sur-un-environnement-de-démonstration">Intégration sur un environnement de démonstration</h3>
@@ -818,7 +818,7 @@ un formalisme simplifié.</p>
 <h3 id="déploiement-avec-un-java-runtime-environnement">Déploiement avec un Java Runtime Environnement</h3>
 <p>Pour démarrer le serveur, depuis une ligne de commande exécuter :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -Dspring.config.location<span style="color:#ce5c00;font-weight:bold">=</span>application.yml -jar dmpc-proxy-rest.jar
-</span></span></code></pre></div><p>Au lancement du serveur est chargé un fichier de configuration <code>application.yml</code> permettant de 
+</span></span></code></pre></div><p>Au lancement du serveur est chargé un fichier de configuration <code>application.yml</code> permettant de
 charger différents KeyStore les informations concernant le LPS et le serveur DMP.
 Il est initialisé par défaut sur un environnement de test.</p>
 <p>Une fois démarré, le serveur est accessible à l&rsquo;url suivante : <a href="http://127.0.0.1:8080/proxy">http://127.0.0.1:8080/proxy</a></p>
@@ -2640,7 +2640,7 @@ Ce document est disponible sur l&rsquo;espace industriel de Sesam-Vitale : <a hr
 <p>En authentification directe, l&rsquo;utilisateur personnel de santé est authentifié par sa carte CPS/CPE, ces informations sont récupérées lors de la lecture de la carte CPS.</p>
 <h3 id="indirecte-depuis-version-10">Indirecte (depuis version 1.0)</h3>
 <p>En authentification indirecte, seule la structure de santé (par son certificat serveur) est authentifiée.</p>
-<p>L&rsquo;auteur de la requête, c&rsquo;est à dire le personnel de santé utilisateur (<code>DMPCPersonnelSante</code>), doit donc être authentifié localement. 
+<p>L&rsquo;auteur de la requête, c&rsquo;est à dire le personnel de santé utilisateur (<code>DMPCPersonnelSante</code>), doit donc être authentifié localement.
 Le système de la structure de santé doit être en mesure d&rsquo;authentifié ses utilisateurs. Cet identifiant local au système doit être spécifié dans <code>DMPCPersonnelSante.internalId</code> même si le rpps est connu.</p>
 <p>Lors de la lecture de la Carte Vitale, l&rsquo;intégrateur doit être en mesure de définir la provenance du nir (Réel, Test, Démo) passé en paramètres des différentes requêtes en précisant la valeur <code>DMPCContext.DMPCInsNirAutorite</code>.</p>
 <p>Exemple Java :</p>
@@ -2854,7 +2854,7 @@ NB : l’autorisation d’accès est facultative pour alimenter le DMP avec des 
 <li>et transmis au système DMP sous la forme d&rsquo;un lot de soumission XDS signé (XAdES).</li>
 </ul>
 <p>La cinématique générale est la suivante.
-Le PS constitue le ou les document(s) dans le LPS . 
+Le PS constitue le ou les document(s) dans le LPS .
 Le LPS :</p>
 <ul>
 <li>construit le ou les document(s)
@@ -3551,7 +3551,7 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&lt;/ds:X509Certificate&gt;&lt;/ds:X
     
 	<h1 id="pg-0f6a8b8e81b29a55c0237a0114578bf4">6.6 - Gestion des certificats</h1>
     <div class="lead">Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification indirecte</div>
-	<p>Afin d&rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité. 
+	<p>Afin d&rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité.
 Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande à partir d&rsquo;un téléservice dont la procédure est décrite ici.</p>
 <h2 id="procédure-administrative">Procédure Administrative</h2>
 <h3 id="industriel-pour-les-tests">Industriel pour les tests</h3>
@@ -3698,7 +3698,7 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 <p>Une fois sur le site :</p>
 <ul>
 <li>Il vous faut télécharger votre fichier CDA</li>
-<li>Choisir le schematron à valider : &ldquo;Structuration minimale des documents de santé&rdquo; par exemple 
+<li>Choisir le schematron à valider : &ldquo;Structuration minimale des documents de santé&rdquo; par exemple
 <img src="External_Validation_Service_Front-end_1.png" alt="External Validation Service Front-end_1"></li>
 <li>Cliquer sur valider
 <img src="External_Validation_Service_Front-end_2.png" alt="External Validation Service Front-end_1"></li>

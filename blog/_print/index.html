@@ -35,8 +35,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.633244ef1c2fb3aa12f15e8dfea092f63629f4a4ce9c183b387081511d6d3dd9.css" as="style">
-<link href="/scss/main.min.633244ef1c2fb3aa12f15e8dfea092f63629f4a4ce9c183b387081511d6d3dd9.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.78eb66b81f05778e73ed7018a48352a1dc370ca88b3476c17f48f8694110228d.css" as="style">
+<link href="/scss/main.min.78eb66b81f05778e73ed7018a48352a1dc370ca88b3476c17f48f8694110228d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -623,7 +623,7 @@ La structure des différents Identifiants nationaux sont décrits dans le MOS.</
 		<time datetime="2022-05-20" class="text-muted">Friday, May 20, 2022</time>
         
 	</div>
-	<p>La prise en charge de l’identifiant national de santé (INS) dans les standards d’interopérabilité et les volets du CI-SIS défini dans 
+	<p>La prise en charge de l’identifiant national de santé (INS) dans les standards d’interopérabilité et les volets du CI-SIS défini dans
 <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_cisis-tec_annexe-ins_1.3.pdf">l’annexe CISIS de l’ANS</a> a impliqué quelques changements dans la DevBox-Santé DMP (<a href="/dmp/versions">version 4.7.7</a>).</p>
 <p>Voici l’interprétation que nous avons faîtes de la gestion des noms et prénoms de l’annexe INS vers la génération CDA et XDS :</p>
 <p>Supposons les informations du patient suivantes :</p>
@@ -970,7 +970,7 @@ devbox2 -- usb2 : mapping port USB
 		<time datetime="2021-06-01" class="text-muted">Tuesday, June 01, 2021</time>
         
 	</div>
-	<p>Lors de nos différentes intégrations, nous avons eu besoin de nous interfacer avec <a href="https://integrateurs-cps.asipsante.fr/pages/prosanteconnect/presentation-generale">ProSantéConnect</a>. 
+	<p>Lors de nos différentes intégrations, nous avons eu besoin de nous interfacer avec <a href="https://integrateurs-cps.asipsante.fr/pages/prosanteconnect/presentation-generale">ProSantéConnect</a>.
 En effet, ProSantéConnect fournit une bonne alternative à nos outils SSO basés sur la carte CPS et le standard PKCS11. J&rsquo;ai donc voulu décrire un peu les mécanismes d&rsquo;intégration dans spring-boot qui est notre framework de prédilection.</p>
 <p>Or, nous n&rsquo;avons que réaliser ce qui est déjà bien décrit par <a href="https://patriceblanchardie.fr/pro-sante-connect/">Patrice Blanchardie dans son blog</a>. Nous vous invitons donc à lire son article.</p>
 
@@ -1056,7 +1056,7 @@ Exemple, dans Windows : <a href="https://docs.microsoft.com/en-us/previous-versi
 <p><img src="2021-05-27_lancement_depuis_navigateur.png" alt="DevBox-sante lancer depuis le navigateur"></p>
 <p>Il est possible de le faire simplement en javascript depuis une page html de votre client :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">html</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">body</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">open</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;devboxsante://&#34;</span><span style="color:#000;font-weight:bold">);&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">body</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">html</span><span style="color:#000;font-weight:bold">&gt;</span>
-</span></span></code></pre></div><p>Comme si ça ne suffisait pas, il est également possible de passer dans l&rsquo;url un ensemble d&rsquo;arguments configurables par ce mécanisme. 
+</span></span></code></pre></div><p>Comme si ça ne suffisait pas, il est également possible de passer dans l&rsquo;url un ensemble d&rsquo;arguments configurables par ce mécanisme.
 Par exemple, le numéro de port :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>devboxsante://config?server.port<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">10000</span>
 </span></span></code></pre></div><p>Par ce type de mécanisme, il est possible de lancer la devbox-sante avec un contexte qui est le votre et moyennant un callback vers vos serveurs lier la DevBox-Santé avec une session utilisateur.</p>
@@ -1127,9 +1127,9 @@ des habilitations : <a href="https://www.dmp.fr/matrice-habilitation">https://ww
 </span></span></span></code></pre></div><h3 id="lors-de-lhomologation">Lors de l&rsquo;homologation</h3>
 <p>Exemple de test à valider lors de l&rsquo;homologation :</p>
 <blockquote>
-<p>L&rsquo;utilisateur s&rsquo;authentifie avec une carte CPS autorisée à accéder au DMP du patient. 
-Un document invisible  (confidentialityCode  « INVISIBLE_PATIENT») est déjà présent sur le DMP. 
-Le PS est habilité à accéder à ce type de document (cf. matrice d&rsquo;habilitations). 
+<p>L&rsquo;utilisateur s&rsquo;authentifie avec une carte CPS autorisée à accéder au DMP du patient.
+Un document invisible  (confidentialityCode  « INVISIBLE_PATIENT») est déjà présent sur le DMP.
+Le PS est habilité à accéder à ce type de document (cf. matrice d&rsquo;habilitations).
 Le PS demande à mettre à jour le document afin de le rendre visible du patient (confidentialityCode  : vide).
 En retour le SI DMP confirme la mise à jour du document.<br>
 =&gt; Mode opératoire :   Rendre visible le document 70 (typeCode 11502-2 (CR d&rsquo;examens biologiques))</p>
@@ -1164,7 +1164,7 @@ En retour le SI DMP confirme la mise à jour du document.<br>
 	<p>Lors de l&rsquo;utilisation de composants de lecteur CPS et de Carte Vitale de la DevBox-Santé, vous pouvez rencontrer des problèmes d&rsquo;accés aux lecteurs.</p>
 <p>Ces problèmes sont dues principalement à deux sources de problème.</p>
 <ul>
-<li>La première, l&rsquo;utilisation du galss qui nécessite d&rsquo;être 
+<li>La première, l&rsquo;utilisation du galss qui nécessite d&rsquo;être
 installé qu&rsquo;une seule fois sur le poste et est très sensible aux différents ports physiques choisis pour connecter vos lecteurs.</li>
 <li>La deuxième est que certains composants sont installés dans des versions anciennes.</li>
 </ul>
@@ -1177,7 +1177,7 @@ Pour vous aider, <a href="https://industriels.sesam-vitale.fr/documents/10192/35
 <li><a href="Proc%C3%A9dures_manuelles_OLAQIN.pdf">Olaqin</a></li>
 </ul>
 <h2 id="proscrire-le-galss">Proscrire le GALSS</h2>
-<p>Les vieux lecteurs PSS utilisant le GALSS sont dépréciés et devront ne plus être installés à la fin de l&rsquo;année 2021. Alors, 
+<p>Les vieux lecteurs PSS utilisant le GALSS sont dépréciés et devront ne plus être installés à la fin de l&rsquo;année 2021. Alors,
 préférez dans la mesure du possible des lecteurs configurés en PC/SC.</p>
 <p><img src="AbandonGalss_communication_sesam_vitale_pcsc.png" alt="20210514_diagnostiquer_problèmes_lecteurs\AbandonGalss_communication_sesam_vitale_pcsc.png"></p>
 <h2 id="utilisation-de-loutil-de-diagnostic-diagam">Utilisation de l&rsquo;outil de diagnostic DiagAM</h2>
@@ -1196,9 +1196,9 @@ préférez dans la mesure du possible des lecteurs configurés en PC/SC.</p>
 <li>Sauvegarder le rapport pour analyse</li>
 </ul>
 <p><img src="DiagAM_running.png" alt="DiagAM_running.png"></p>
-<p>Ici on voit que la cryptolib nécessite une réinstallation. Ce qui est rendu possible en appuyant sur la clé a molette. 
+<p>Ici on voit que la cryptolib nécessite une réinstallation. Ce qui est rendu possible en appuyant sur la clé a molette.
 Néanmoins, ce n&rsquo;est pas un soucis car nos installers embarquent la cryptolib nécessaire.</p>
-<p>Par contre les informations concernant l&rsquo;installation du GALSS nous est nécessaire en cas d&rsquo;utilisation d&rsquo;un lecteur en 
+<p>Par contre les informations concernant l&rsquo;installation du GALSS nous est nécessaire en cas d&rsquo;utilisation d&rsquo;un lecteur en
 mode PSS :</p>
 <p>Exemple, dans le cas suivant le galss.ini n&rsquo;existe pas dans le répertoire <code>%WINDIR%</code> et aucun lecteur n&rsquo;est trouvé:</p>
 <p><img src="DiagAM_galss_problem.png" alt="DiagAM_galss_problem.png"></p>
@@ -1232,13 +1232,13 @@ mode PSS :</p>
 		<time datetime="2021-05-12" class="text-muted">Wednesday, May 12, 2021</time>
         
 	</div>
-	<p>Ça y est nous avons pris le temps de regrouper la documentation disponible de la DevBox-Santé en un seul endroit. 
+	<p>Ça y est nous avons pris le temps de regrouper la documentation disponible de la DevBox-Santé en un seul endroit.
 Cela donne ce site de documentation, qui pourra s&rsquo;étoffer également d&rsquo;articles parlant de sujet d&rsquo;intégration de la DevBox-Santé d&rsquo;une part,
 et d&rsquo;intéropérabilité dans la santé d&rsquo;autre part.</p>
 <p>Les quelques sujets du moment (liste non exhaustive) :</p>
 <ul>
 <li>Les Modèles d&rsquo;Objets de Santé : <a href="https://esante.gouv.fr/interoperabilite/mos-nos">https://esante.gouv.fr/interoperabilite/mos-nos</a></li>
-<li>Les priorités du Ségur : <a href="https://solidarites-sante.gouv.fr/systeme-de-sante-et-medico-social/segur-de-la-sante-les-conclusions/">https://solidarites-sante.gouv.fr/systeme-de-sante-et-medico-social/segur-de-la-sante-les-conclusions/</a> 
+<li>Les priorités du Ségur : <a href="https://solidarites-sante.gouv.fr/systeme-de-sante-et-medico-social/segur-de-la-sante-les-conclusions/">https://solidarites-sante.gouv.fr/systeme-de-sante-et-medico-social/segur-de-la-sante-les-conclusions/</a>
 et comment les outils de la DevBox-Santé peuvent fournir des briques essentielles.</li>
 </ul>
 <p>Si vous souhaitez générer un site de documentation similaire au notre, je ne peux que vous conseiller d&rsquo;utiliser un <a href="https://themes.gohugo.io/">thème Hugo</a>.

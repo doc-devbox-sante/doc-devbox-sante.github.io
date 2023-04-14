@@ -46,6 +46,7 @@
 &lt;li&gt;Signer les &lt;a href=&#34;https://cnda.ameli.fr/?dl_name=Convention_Generale_teleservices_V3.0.pdf&#34;&gt;conditions générales&lt;/a&gt;* depuis le même espace .&lt;/li&gt;
 &lt;li&gt;Signer les &lt;a href=&#34;https://cnda.ameli.fr/?dl_name=Conditions_INSi-V4.0.pdf&#34;&gt;conditions particulières INSi&lt;/a&gt;* depuis le même espace. Les annexes nécessitent certaines informations liées à la DevBox-Santé. Nous contacter pour les informations à jour.&lt;/li&gt;
 &lt;li&gt;Obtention des cartes vitales de test . Suite à la signature des conditions particulières et l’envoi d’un chéque de caution, le CNDA vous envoie les cartes vitales de tests comme précisé dans l&amp;rsquo;article 5 des conditions particulières.&lt;/li&gt;
+&lt;li&gt;Renseigner la fiche d&amp;rsquo;engagement de conformité avec les informations des &lt;a href=&#34;/insi/howtos/identifiantcomposant/&#34;&gt;versions des composants intégrés&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;* si les liens ne fonctionnent plus, c’est que les versions des différents protocoles ont changé. Il faut se référer au site du CNDA.&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ans---commande-des-cartes-cpset-certificats-serveurs-de-test&#34;&gt;ANS - Commande des Cartes CPS et Certificats serveurs de Test&lt;/h2&gt;
@@ -111,7 +112,7 @@ Dans la configuration actuelle de l&amp;rsquo;environnement de tests, il n&amp;r
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Le connecteur devbox-santé-insi est conforme au niveau 1 de sécurité pour l&amp;rsquo;assertion PS. En effet, avant tout appel au TéléService INSi, la carte CPS est accédé afin de vérifier sa présence. 
+&lt;p&gt;Le connecteur devbox-santé-insi est conforme au niveau 1 de sécurité pour l&amp;rsquo;assertion PS. En effet, avant tout appel au TéléService INSi, la carte CPS est accédé afin de vérifier sa présence.
 Si une session pkcs11 est ouverte, cette dernière est utilisée pour générer l&amp;rsquo;assertion.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
@@ -128,7 +129,7 @@ L&amp;rsquo;attribut identifiantFacturation est demandé pour chaque requête de
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Le connecteur devbox-santé-insi est conforme au niveau 1 de sécurité pour l&amp;rsquo;assertion PS. En effet, avant tout appel au TéléService INSi, la carte CPS est accédé afin de vérifier sa présence, 
+&lt;p&gt;Le connecteur devbox-santé-insi est conforme au niveau 1 de sécurité pour l&amp;rsquo;assertion PS. En effet, avant tout appel au TéléService INSi, la carte CPS est accédé afin de vérifier sa présence,
 si une session pkcs11 est ouverte, cette dernière est utilisée pour générer l&amp;rsquo;assertion.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
@@ -264,26 +265,21 @@ et dans les mêmes conditions. Néanmoins, comme dit &lt;code&gt;PDT-INF-736_Pac
         
         
         &lt;p&gt;NIE DEVCOOP : DEV331918&lt;/p&gt;
-&lt;h3 id=&#34;homologation-du-25082021&#34;&gt;Homologation du 25/08/2021&lt;/h3&gt;
+&lt;h2 id=&#34;homologation-du-25082021&#34;&gt;Homologation du 25/08/2021&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Nom du logiciel : &lt;strong&gt;DEVBOX_SANTE_INSI&lt;/strong&gt;_&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Version : &lt;strong&gt;2.0&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;NIL : &lt;strong&gt;DEV428043&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Homologation package GIE SV : &lt;strong&gt;04.00&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Description :&lt;/p&gt;
+&lt;li&gt;Nom du logiciel : &lt;strong&gt;DEVBOX_SANTE_INSI&lt;/strong&gt;_&lt;/li&gt;
+&lt;li&gt;Version : &lt;strong&gt;2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;NIL : &lt;strong&gt;DEV428043&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Homologation package GIE SV : &lt;strong&gt;04.00&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;versions-des-composants-intégrés&#34;&gt;Versions des composants intégrés&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Crypto librairie CPS : Version 5.1.7&lt;/li&gt;
+&lt;li&gt;API lecture vitale : Version 6.32&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;description&#34;&gt;Description&lt;/h4&gt;
 &lt;p&gt;La DevBox-Santé INSI est un connecteur homologué par le CNDA qui s’interface avec le téléservice INSi.
 Elle prend en charge la complexité de l’intégration et facilite ainsi aux éditeurs de logiciel de santé l’intéropérabilité avec l’INSi en vous fournissant une API simple à utiliser.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 
       </description>
     </item>

@@ -32,7 +32,7 @@
 &lt;h2 id=&#34;macos&#34;&gt;MacOS&lt;/h2&gt;
 &lt;p&gt;TODO&lt;/p&gt;
 &lt;h3 id=&#34;logs&#34;&gt;Logs&lt;/h3&gt;
-&lt;p&gt;Il est possible de récupérer dans les répertoires de log, et plus précisément &lt;code&gt;output.log&lt;/code&gt; les traces d&amp;rsquo;exécution. 
+&lt;p&gt;Il est possible de récupérer dans les répertoires de log, et plus précisément &lt;code&gt;output.log&lt;/code&gt; les traces d&amp;rsquo;exécution.
 Dans une installation de développement les trames de message SOAP avec l&amp;rsquo;ensemble des téléservices sont récupérables, comme dans cet exemple de log pour un appel INSi :&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;2022-02-08 10:17:17.371  INFO 32672 --- [nio-9999-exec-1] o.a.cxf.services.ICIRService.REQ_OUT     : REQ_OUT
     Address: https://qualiflps.services-ps.ameli.fr/lps

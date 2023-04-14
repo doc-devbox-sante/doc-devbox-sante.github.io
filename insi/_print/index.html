@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.633244ef1c2fb3aa12f15e8dfea092f63629f4a4ce9c183b387081511d6d3dd9.css" as="style">
-<link href="/scss/main.min.633244ef1c2fb3aa12f15e8dfea092f63629f4a4ce9c183b387081511d6d3dd9.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.78eb66b81f05778e73ed7018a48352a1dc370ca88b3476c17f48f8694110228d.css" as="style">
+<link href="/scss/main.min.78eb66b81f05778e73ed7018a48352a1dc370ca88b3476c17f48f8694110228d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -444,7 +444,7 @@ Version imprimable multipages.
     
 	<h1 id="pg-6226766ba680a770ad4612d51e7ad330">2 - REST Proxy</h1>
     <div class="lead">Une interface REST pour le Téléservice INSi</div>
-	<p>Le module insi-proxy, permet de fournit une facade REST à la facade <code>INSiClient</code> java. 
+	<p>Le module insi-proxy, permet de fournit une facade REST à la facade <code>INSiClient</code> java.
 Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.</p>
 <p>L&rsquo;accès a l&rsquo;insi-proxy est donc indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
@@ -496,7 +496,7 @@ insFacade &lt;-d-&gt; insi : SOAP
 <p>L&rsquo;ensemble des requêtes sont documentées via l&rsquo;interface swagger et sont accessibles sur l&rsquo;url suivante : http://127.0.0.1:PORT/swagger-ui.png</p>
 <p><img src="insi-swagger.png" alt="insi-proxy swagger"></p>
 <h3 id="configuration">Configuration</h3>
-<p>Les paramètres de configuration du composant DevBox-santé INSi se réalise dans le fichier <code>application.yml</code>. 
+<p>Les paramètres de configuration du composant DevBox-santé INSi se réalise dans le fichier <code>application.yml</code>.
 Outre les configurations liées à la sécurité et le port HTTP utilisé, la configuration est identique à celle du <a href="../configuration">mode embedded</a>.</p>
 <h3 id="utilisation-de-linstaller-devbox-santé">Utilisation de l&rsquo;installer DevBox-Santé</h3>
 <p>La DevBox Santé propose des solutions de &ldquo;packaging&rdquo; des différents modules, pour Windows, MacOS et Linux.</p>
@@ -770,6 +770,7 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
 <li>Signer les <a href="https://cnda.ameli.fr/?dl_name=Convention_Generale_teleservices_V3.0.pdf">conditions générales</a>* depuis le même espace .</li>
 <li>Signer les <a href="https://cnda.ameli.fr/?dl_name=Conditions_INSi-V4.0.pdf">conditions particulières INSi</a>* depuis le même espace. Les annexes nécessitent certaines informations liées à la DevBox-Santé. Nous contacter pour les informations à jour.</li>
 <li>Obtention des cartes vitales de test . Suite à la signature des conditions particulières et l’envoi d’un chéque de caution, le CNDA vous envoie les cartes vitales de tests comme précisé dans l&rsquo;article 5 des conditions particulières.</li>
+<li>Renseigner la fiche d&rsquo;engagement de conformité avec les informations des <a href="/insi/howtos/identifiantcomposant/">versions des composants intégrés</a>.</li>
 </ul>
 <p><em>* si les liens ne fonctionnent plus, c’est que les versions des différents protocoles ont changé. Il faut se référer au site du CNDA.</em></p>
 <h2 id="ans---commande-des-cartes-cpset-certificats-serveurs-de-test">ANS - Commande des Cartes CPS et Certificats serveurs de Test</h2>
@@ -839,7 +840,7 @@ Dans la configuration actuelle de l&rsquo;environnement de tests, il n&rsquo;est
 </li>
 </ul>
 <blockquote>
-<p>Le connecteur devbox-santé-insi est conforme au niveau 1 de sécurité pour l&rsquo;assertion PS. En effet, avant tout appel au TéléService INSi, la carte CPS est accédé afin de vérifier sa présence. 
+<p>Le connecteur devbox-santé-insi est conforme au niveau 1 de sécurité pour l&rsquo;assertion PS. En effet, avant tout appel au TéléService INSi, la carte CPS est accédé afin de vérifier sa présence.
 Si une session pkcs11 est ouverte, cette dernière est utilisée pour générer l&rsquo;assertion.</p>
 </blockquote>
 <blockquote>
@@ -856,7 +857,7 @@ L&rsquo;attribut identifiantFacturation est demandé pour chaque requête de l�
 </li>
 </ul>
 <blockquote>
-<p>Le connecteur devbox-santé-insi est conforme au niveau 1 de sécurité pour l&rsquo;assertion PS. En effet, avant tout appel au TéléService INSi, la carte CPS est accédé afin de vérifier sa présence, 
+<p>Le connecteur devbox-santé-insi est conforme au niveau 1 de sécurité pour l&rsquo;assertion PS. En effet, avant tout appel au TéléService INSi, la carte CPS est accédé afin de vérifier sa présence,
 si une session pkcs11 est ouverte, cette dernière est utilisée pour générer l&rsquo;assertion.</p>
 </blockquote>
 <blockquote>
@@ -1040,26 +1041,21 @@ et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package I
 	<h1 id="pg-6038fea62438fa100cdead99cfa09e16">4.5 - CNDA : Fiche d&#39;identité du composant INSi</h1>
     
 	<p>NIE DEVCOOP : DEV331918</p>
-<h3 id="homologation-du-25082021">Homologation du 25/08/2021</h3>
+<h2 id="homologation-du-25082021">Homologation du 25/08/2021</h2>
 <ul>
-<li>
-<p>Nom du logiciel : <strong>DEVBOX_SANTE_INSI</strong>_</p>
-</li>
-<li>
-<p>Version : <strong>2.0</strong></p>
-</li>
-<li>
-<p>NIL : <strong>DEV428043</strong></p>
-</li>
-<li>
-<p>Homologation package GIE SV : <strong>04.00</strong></p>
-</li>
-<li>
-<p>Description :</p>
+<li>Nom du logiciel : <strong>DEVBOX_SANTE_INSI</strong>_</li>
+<li>Version : <strong>2.0</strong></li>
+<li>NIL : <strong>DEV428043</strong></li>
+<li>Homologation package GIE SV : <strong>04.00</strong></li>
+</ul>
+<h4 id="versions-des-composants-intégrés">Versions des composants intégrés</h4>
+<ul>
+<li>Crypto librairie CPS : Version 5.1.7</li>
+<li>API lecture vitale : Version 6.32</li>
+</ul>
+<h4 id="description">Description</h4>
 <p>La DevBox-Santé INSI est un connecteur homologué par le CNDA qui s’interface avec le téléservice INSi.
 Elle prend en charge la complexité de l’intégration et facilite ainsi aux éditeurs de logiciel de santé l’intéropérabilité avec l’INSi en vous fournissant une API simple à utiliser.</p>
-</li>
-</ul>
 
 </div>
 

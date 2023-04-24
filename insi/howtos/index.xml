@@ -294,26 +294,18 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
         
         
         &lt;h2 id=&#34;intégration-technique-du-composant&#34;&gt;Intégration technique du composant&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&amp;quot;(desir_620, Le certificat de la carte PS est erroné. )&amp;quot;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4 id=&#34;desir_620-le-certificat-de-la-carte-ps-est-erroné-&#34;&gt;&amp;ldquo;(desir_620, Le certificat de la carte PS est erroné. )&amp;rdquo;&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Vérifier que vous êtes sur le bon environnement (deux environnements distincts entre les cps et p12 ainsi que pour les environnements de qualification et de production)&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Des erreurs insi_101 et insi_102 apparaissent sur les environnement de qualification&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4 id=&#34;des-erreurs-insi_101-et-insi_102-apparaissent-sur-les-environnement-de-qualification&#34;&gt;Des erreurs insi_101 et insi_102 apparaissent sur les environnement de qualification&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Les environnements de qualification ne gèrent pas correctement les recherches sans résultat. Plus d’information : &lt;a href=&#34;/insi/howtos/testCNDA&#34;&gt;/insi/howtos/testCNDA&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;À quoi correspond l’identifiant de facturation, obligatoire dans le contexte des requêtes ?&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4 id=&#34;àquoi-correspond-lidentifiant-de-facturation-obligatoire-dans-le-contexte-des-requêtes-&#34;&gt;À quoi correspond l’identifiant de facturation, obligatoire dans le contexte des requêtes ?&lt;/h4&gt;
 &lt;p&gt;Il s’agit du numero FINESS géographique de la structure ou son SIRET, information que l’on ne peut déduire de la carte CPS&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/insi/howtos/insi_id_facturation_pour_assertion.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Quels sont les différents statuts d’identité ?&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4 id=&#34;quels-sont-les-différents-statuts-didentité-&#34;&gt;Quels sont les différents statuts d’identité ?&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&#34;/insi/howtos/differentsStatutsINS.png&#34; alt=&#34;differentsStatutsINS.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Source : &lt;code&gt;INS_Guide implementation_V2_0.pdf&lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;webinaire-authentification-par-certificat-logiciel-du-16novembre-2021&#34;&gt;Webinaire Authentification par certificat logiciel du 16 novembre 2021&lt;/h2&gt;

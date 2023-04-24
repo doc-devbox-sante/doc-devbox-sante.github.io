@@ -264,15 +264,11 @@ if (!doNotTrack) {
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
+    <li><a href="#validation-automatique">Validation automatique</a></li>
     <li><a href="#validation-manuelle">Validation manuelle</a>
       <ul>
-        <li><a href="#utilisation-de-lespace-de-tests-de-lans">Utilisation de l&rsquo;espace de tests de l&rsquo;ANS</a></li>
-      </ul>
-    </li>
-    <li><a href="#validation-automatique">Validation automatique</a>
-      <ul>
         <li><a href="#utilisation-des-outils-mis-à-disposition-par-lans">Utilisation des outils mis à disposition par l&rsquo;ANS</a></li>
-        <li><a href="#commentaire-sur-lintégration-des-outils-de-lans-dans-la-devbox-santé">Commentaire sur l&rsquo;intégration des outils de l&rsquo;ANS dans la DevBox-Santé</a></li>
+        <li><a href="#utilisation-de-lespace-de-tests-de-lans">Utilisation de l&rsquo;espace de tests de l&rsquo;ANS</a></li>
       </ul>
     </li>
   </ul>
@@ -336,26 +332,11 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<h2 id="validation-manuelle">Validation manuelle</h2>
-<h3 id="utilisation-de-lespace-de-tests-de-lans">Utilisation de l&rsquo;espace de tests de l&rsquo;ANS</h3>
-<p>Sur le site <a href="https://interop.esante.gouv.fr">interop.esante.gouv.fr</a> ou plus exactement <a href="https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;extension=ASIP">https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;extension=ASIP</a></p>
-<p>Une fois sur le site :</p>
-<ul>
-<li>Il vous faut télécharger votre fichier CDA</li>
-<li>Choisir le schematron à valider : &ldquo;Structuration minimale des documents de santé&rdquo; par exemple
-<img src="External_Validation_Service_Front-end_1.png" alt="External Validation Service Front-end_1"></li>
-<li>Cliquer sur valider
-<img src="External_Validation_Service_Front-end_2.png" alt="External Validation Service Front-end_1"></li>
-</ul>
-<h2 id="validation-automatique">Validation automatique</h2>
-<h3 id="utilisation-des-outils-mis-à-disposition-par-lans">Utilisation des outils mis à disposition par l&rsquo;ANS</h3>
-<p>Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit par l&rsquo;ANS. Ils sont dorénavant héberger sur Github : <a href="https://github.com/ansforge/TestContenuCDA">https://github.com/ansforge/TestContenuCDA</a></p>
-<p>La documentation se trouve ici : <a href="https://github.com/ansforge/TestContenuCDA/wiki">https://github.com/ansforge/TestContenuCDA/wiki</a></p>
-<h3 id="commentaire-sur-lintégration-des-outils-de-lans-dans-la-devbox-santé">Commentaire sur l&rsquo;intégration des outils de l&rsquo;ANS dans la DevBox-Santé</h3>
+	<h2 id="validation-automatique">Validation automatique</h2>
 <p>La DevBox-santé santé intègre les différents composants du projet github de l&rsquo;ANS, et propose la validation SCHEMATRON automatique par l&rsquo;utilisation des feuilles de style <code>xslt</code> fournies dans le projet <a href="https://github.com/ansforge/TestContenuCDA">https://github.com/ansforge/TestContenuCDA</a> .</p>
 <p>Or ces dernières ne sont plus disponibles dans le projet et ne fait plus l&rsquo;objet de livraison. Pour plus d&rsquo;informations sur ce sujet : <a href="https://github.com/ansforge/TestContenuCDA/issues/4">https://github.com/ansforge/TestContenuCDA/issues/4</a> . Les feuilles de style xslt sont donc générés au moment du build de la DevBox-Santé.</p>
 <p>Pour apporter les preuves schematrons nécessaires pour les tests d&rsquo;alimentation, vous pouvez retrouver les traces d&rsquo;exécution de cette validation dans les logs.</p>
-<p>Exemple de validation pour un document CDAR2 Niveau 1 (structuration minimale) :</p>
+<p><strong>Exemple de validation pour un document CDAR2 Niveau 1 (structuration minimale) :</strong></p>
 <pre tabindex="0"><code>
 ANS_CDA_ToolsManager   : load tools from : testContenuCDA-2.40.zip
 ANS_CDA_ToolsManager   : directory created : C:\Users\lfo\AppData\Local\Temp\dmpc-api8808336379869609192
@@ -373,7 +354,7 @@ DMPCCdaValidator       :
     &lt;svrl:active-pattern id=&#34;variablesSM&#34;/&gt;
 &lt;/svrl:schematron-output&gt;
 ---------
-</code></pre><p>Il vous suffira d&rsquo;extraire le fichier xml de bonne exécution du schematron.</p>
+</code></pre><p><strong>Pour apporter la preuve, il vous suffira d&rsquo;extraire le fichier xml de bonne exécution du schematron.</strong></p>
 <p>Pour une NoteVaccination, une deuxième validation est effectuée avec le schematron dédié à ce type de document CDA R2 de Niveau 3 (document structuré) :</p>
 <pre tabindex="0"><code>DMPCCdaValidator       : validate with schematron : C:\Users\lfo\AppData\Local\Temp\devbox-sante-dmp4342499872869358088\testContenuCDA_20220310_V2.40\schematrons\CI-SIS_VAC-NOTE_2021.01.xsl
 DMPCCdaValidator       : 
@@ -393,7 +374,21 @@ DMPCCdaValidator       :
     &lt;svrl:fired-rule context=&#34;cda:ClinicalDocument&#34;/&gt;
 &lt;/svrl:schematron-output&gt;
 ----------
-</code></pre>
+</code></pre><h2 id="validation-manuelle">Validation manuelle</h2>
+<h3 id="utilisation-des-outils-mis-à-disposition-par-lans">Utilisation des outils mis à disposition par l&rsquo;ANS</h3>
+<p>Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit par l&rsquo;ANS. Ils sont dorénavant héberger sur Github : <a href="https://github.com/ansforge/TestContenuCDA">https://github.com/ansforge/TestContenuCDA</a></p>
+<p>La documentation se trouve ici : <a href="https://github.com/ansforge/TestContenuCDA/wiki">https://github.com/ansforge/TestContenuCDA/wiki</a></p>
+<h3 id="utilisation-de-lespace-de-tests-de-lans">Utilisation de l&rsquo;espace de tests de l&rsquo;ANS</h3>
+<p>Sur le site <a href="https://interop.esante.gouv.fr">interop.esante.gouv.fr</a> ou plus exactement <a href="https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;extension=ASIP">https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;extension=ASIP</a></p>
+<p>Une fois sur le site :</p>
+<ul>
+<li>Il vous faut télécharger votre fichier CDA</li>
+<li>Choisir le schematron à valider : &ldquo;Structuration minimale des documents de santé&rdquo; par exemple
+<img src="External_Validation_Service_Front-end_1.png" alt="External Validation Service Front-end_1"></li>
+<li>Cliquer sur valider
+<img src="External_Validation_Service_Front-end_2.png" alt="External Validation Service Front-end_1"></li>
+</ul>
+
         <div class="section-index">
     
     

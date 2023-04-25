@@ -20,19 +20,19 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Integrateurs checklist | DevBox-Santé</title>
+<title>Intégrateurs checklist | DevBox-Santé</title>
 <meta name="description" content="Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.
 ">
-<meta property="og:title" content="Integrateurs checklist" />
+<meta property="og:title" content="Intégrateurs checklist" />
 <meta property="og:description" content="Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/dmp/howtos/integrateurchecklist/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Integrateurs checklist">
+<meta itemprop="name" content="Intégrateurs checklist">
 <meta itemprop="description" content="Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Integrateurs checklist"/>
+<meta name="twitter:title" content="Intégrateurs checklist"/>
 <meta name="twitter:description" content="Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.
 "/>
 
@@ -181,7 +181,42 @@ if (!doNotTrack) {
   <label for="m-dmphowtos-check"><a href="/dmp/howtos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtos"><span class="">Howtos</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmphowtosmigrations-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-dmphowtosintegrateurchecklist-li">
+  <input type="checkbox" id="m-dmphowtosintegrateurchecklist-check" checked/>
+  <label for="m-dmphowtosintegrateurchecklist-check"><a href="/dmp/howtos/integrateurchecklist/" title="Intégrateurs checklist" class="align-left pl-0  active td-sidebar-link td-sidebar-link__section" id="m-dmphowtosintegrateurchecklist"><span class="td-sidebar-nav-active-item">Intégrateurs Checklist</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactions-li">
+  <input type="checkbox" id="m-dmphowtostransactions-check"/>
+  <label for="m-dmphowtostransactions-check"><a href="/dmp/howtos/transactions/" title="Transactions supportées" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dmphowtostransactions"><span class="">Toutes les transactions</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmphowtoshomologation-li">
+  <input type="checkbox" id="m-dmphowtoshomologation-check"/>
+  <label for="m-dmphowtoshomologation-check"><a href="/dmp/howtos/homologation/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtoshomologation"><span class="">Homologation</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtoshomologationphase_1-li">
+  <input type="checkbox" id="m-dmphowtoshomologationphase_1-check"/>
+  <label for="m-dmphowtoshomologationphase_1-check"><a href="/dmp/howtos/homologation/phase_1/" title="Homologation Phase 1 Prérequis" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtoshomologationphase_1"><span class="">Phase 1</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtoshomologationdeprecated-li">
+  <input type="checkbox" id="m-dmphowtoshomologationdeprecated-check"/>
+  <label for="m-dmphowtoshomologationdeprecated-check"><a href="/dmp/howtos/homologation/deprecated/" title="[Deprecated] Ancienne procédure" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtoshomologationdeprecated"><span class="">Ancienne procédure</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosgestioncertificat-li">
+  <input type="checkbox" id="m-dmphowtosgestioncertificat-check"/>
+  <label for="m-dmphowtosgestioncertificat-check"><a href="/dmp/howtos/gestioncertificat/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtosgestioncertificat"><span class="">Gestion des certificats</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosschematron-li">
+  <input type="checkbox" id="m-dmphowtosschematron-check"/>
+  <label for="m-dmphowtosschematron-check"><a href="/dmp/howtos/schematron/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtosschematron"><span class="">Schematron</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosenvironnements-li">
+  <input type="checkbox" id="m-dmphowtosenvironnements-check"/>
+  <label for="m-dmphowtosenvironnements-check"><a href="/dmp/howtos/environnements/" title="Différents environnements du DMP" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtosenvironnements"><span class="">Différents environnements</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmphowtosmigrations-li">
   <input type="checkbox" id="m-dmphowtosmigrations-check"/>
   <label for="m-dmphowtosmigrations-check"><a href="/dmp/howtos/migrations/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtosmigrations"><span class="">Migrations</span></a></label>
   
@@ -192,30 +227,6 @@ if (!doNotTrack) {
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactions-li">
-  <input type="checkbox" id="m-dmphowtostransactions-check"/>
-  <label for="m-dmphowtostransactions-check"><a href="/dmp/howtos/transactions/" title="Transactions supportées" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dmphowtostransactions"><span class="">Toutes les transactions</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosenvironnements-li">
-  <input type="checkbox" id="m-dmphowtosenvironnements-check"/>
-  <label for="m-dmphowtosenvironnements-check"><a href="/dmp/howtos/environnements/" title="Différents environnements du DMP" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtosenvironnements"><span class="">Différents environnements</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-dmphowtosintegrateurchecklist-li">
-  <input type="checkbox" id="m-dmphowtosintegrateurchecklist-check" checked/>
-  <label for="m-dmphowtosintegrateurchecklist-check"><a href="/dmp/howtos/integrateurchecklist/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__section" id="m-dmphowtosintegrateurchecklist"><span class="td-sidebar-nav-active-item">Integrateurs checklist</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtoshomologation-li">
-  <input type="checkbox" id="m-dmphowtoshomologation-check"/>
-  <label for="m-dmphowtoshomologation-check"><a href="/dmp/howtos/homologation/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtoshomologation"><span class="">Passage de l&#39;homologation</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosgestioncertificat-li">
-  <input type="checkbox" id="m-dmphowtosgestioncertificat-check"/>
-  <label for="m-dmphowtosgestioncertificat-check"><a href="/dmp/howtos/gestioncertificat/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtosgestioncertificat"><span class="">Gestion des certificats</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosschematron-li">
-  <input type="checkbox" id="m-dmphowtosschematron-check"/>
-  <label for="m-dmphowtosschematron-check"><a href="/dmp/howtos/schematron/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtosschematron"><span class="">Schematron</span></a></label>
-  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosdemo-stellair-li">
   <input type="checkbox" id="m-dmphowtosdemo-stellair-check"/>
   <label for="m-dmphowtosdemo-stellair-check"><a href="/dmp/howtos/demo-stellair/" title="Démo Stellair" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtosdemo-stellair"><span class="">Authent. Olaqin TAAS</span></a></label>
@@ -310,13 +321,13 @@ if (!doNotTrack) {
     <a href="/dmp/howtos/">Howtos</a>
   </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="/dmp/howtos/integrateurchecklist/" aria-disabled="true" class="btn-link disabled">Integrateurs checklist</a>
+    <a href="/dmp/howtos/integrateurchecklist/" aria-disabled="true" class="btn-link disabled">Intégrateurs Checklist</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Integrateurs checklist</h1>
+	<h1>Intégrateurs checklist</h1>
   <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.</div>
 	<header class="article-meta">
 		
@@ -374,20 +385,29 @@ if (!doNotTrack) {
 <h2 id="nouvelle-procédure-dhomologation">Nouvelle procédure d&rsquo;homologation</h2>
 <p>Une nouvelle procédure d&rsquo;homologation a été mise en place le 23 mars 2023. Cette procédure est décrite dans l&rsquo;article 6 des conditions particulières.</p>
 <ol start="7">
-<li>Récupérer les condition particulières DMP sur le site du <strong><a href="https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/">CNDA</a></strong></li>
-<li>Remplir et signer une attestation sur l&rsquo;honneur vous déclarant détenir d&rsquo;un contrat de licence de la DevBox-santé (Article 4 conditions particulières)</li>
-<li>Remplir et signer les conditions et leurs annexes avec le(s) mode(s) d&rsquo;authentification et profil(s) choisi(s) (support <strong>DEVCOOP</strong> possible)</li>
-<li>Faire parvenir au CNDA les conditions particulières ainsi que l&rsquo;attestation</li>
-<li>Récupérer les autorisations d&rsquo;accés aux différents environnements et en tester les accès</li>
-<li>Faire Valider la Phase 1 par <strong>DEVCOOP</strong>
-<ul>
-<li>Récupérer le <a href="CDT_DMP_20230320_v2.7.0.xlsm">cahier de test</a> à jour</li>
-<li>Filtrer l&rsquo;onglet Phase 1 sur les trois premières colonnes : Profil DMP-C, Authentification, Transaction en fonction de vos annexes remplies des conditions particulières.</li>
-<li>Fournir à <strong>DEVCOOP</strong> pour chaque code de test un répertoire contenant la trame d&rsquo;exécution ainsi que si besoin une ou deux impressions écrans pour illustration.</li>
-</ul>
+<li>
+<p>Récupérer les condition particulières DMP sur le site du <strong><a href="https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/">CNDA</a></strong></p>
 </li>
-<li>Remplir, signer et envoyer au <strong>CNDA</strong> le fichier <code>ATTESTATION_Realisation_Prerequis_DMPC_V1.pdf</code> disponible avec les conditions particulières téléchargées, en cohérence avec la réalisation des tests de la phase 1.</li>
-<li>Début de l&rsquo;examen par le <strong>CNDA</strong>
+<li>
+<p>Remplir et signer une attestation sur l&rsquo;honneur vous déclarant détenir d&rsquo;un contrat de licence de la DevBox-santé (Article 4 conditions particulières)</p>
+</li>
+<li>
+<p>Remplir et signer les conditions et leurs annexes avec le(s) mode(s) d&rsquo;authentification et profil(s) choisi(s) (support <strong>DEVCOOP</strong> possible)</p>
+</li>
+<li>
+<p>Faire parvenir au CNDA les conditions particulières ainsi que l&rsquo;attestation</p>
+</li>
+<li>
+<p>Récupérer les autorisations d&rsquo;accés aux différents environnements et en tester les accès</p>
+</li>
+<li>
+<p>Faire Valider la Phase 1 par <strong>DEVCOOP</strong></p>
+</li>
+<li>
+<p>Remplir, signer et envoyer au <strong>CNDA</strong> le fichier <code>ATTESTATION_Realisation_Prerequis_DMPC_V1.pdf</code> disponible avec les conditions particulières téléchargées, en cohérence avec la réalisation des tests de la phase 1.</p>
+</li>
+<li>
+<p>Début de l&rsquo;examen par le <strong>CNDA</strong></p>
 <ul>
 <li>Phase 2 : Pré-Examen (<strong>VALIDATION_CNDA</strong>)</li>
 <li>Phase 3 : Examen de conformité (<strong>VALIDATION_CNDA</strong>)</li>

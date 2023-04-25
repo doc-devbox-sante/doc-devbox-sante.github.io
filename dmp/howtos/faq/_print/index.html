@@ -142,15 +142,15 @@ Version imprimable multipages.
 
 
 <div class="content">
-      <blockquote>
-<p>Le champ <strong>Resource_id</strong> est incorrect : 2770763220829^^^&amp;1.2.250.1.213.1.4.10&amp;ISO^NH</p>
-</blockquote>
+      <h4 id="le-champ-__resource_id__-est-incorrect--27707632208291225012131410isonh">Le champ <strong>Resource_id</strong> est incorrect : 2770763220829^^^&amp;1.2.250.1.213.1.4.10&amp;ISO^NH</h4>
 <p>Vérifier la taille de l’INS, il manque généralement la clé. La bonne valeur de cet INS pour les transactions DMP est : <code>277076322082910</code></p>
-<blockquote>
-<p>Quel statut d’INS pour l’alimentation DMP ?</p>
-</blockquote>
+<h4 id="quel-statut-dins-pour-lalimentation-dmp-">Quel statut d’INS pour l’alimentation DMP ?</h4>
 <p>Une INS qualifiée sera nécessaire pour l’alimentation du DMP. A défaut, le DMP ne pourra pas être alimenté.</p>
 <p><em><strong>Source : <code>INS_Guide implementation_V2_0.pdf</code></strong></em></p>
+<h4 id="aucun-authorinstitution-ne-correspond-à-lutilisateur-du-vihf-authentification-indirecte">Aucun AuthorInstitution ne correspond à l&rsquo;utilisateur du VIHF [Authentification Indirecte]</h4>
+<p>En authentification indirecte, La DevBox-Santé DMP récupère les informations de la structure dans le certificat P12 et surcharge avec ces informations la structure du contexte DMP de la requête.</p>
+<p>Cette surcharge permet de respecter l&rsquo;exigence de respecter le format du champ <code>/Assertion/Issuer</code> du VIHF défini dans &ldquo;Volet Transport Synchrone pour Client Lourd&rdquo; du CI-SIS de l&rsquo;ANS, mais aussi, de respecter le champ <code>Identifiant_Structure</code> du VIHF défini dans le guide d&rsquo;intégration du DMP (SEL-MP-037).</p>
+<p>La structure du LegalAuthenticator du document doit correspondre à la structure du contexte qui est déduite du certificat P12. Il est donc conseillé de ne pas renseigner le legalAuthenticator pour un document afin de le récupérer automatiquement du contexte.</p>
 
 </div>
 </div>

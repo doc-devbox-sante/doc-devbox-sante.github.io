@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Passage de l&#39;homologation | DevBox-Santé</title>
-<meta name="description" content="Les différents points à connaître pour homologuer votre solution
+<title>Homologation | DevBox-Santé</title>
+<meta name="description" content="Tout savoir sur le passage d&#39;homologation
 ">
-<meta property="og:title" content="Passage de l&#39;homologation" />
-<meta property="og:description" content="Les différents points à connaître pour homologuer votre solution
+<meta property="og:title" content="Homologation" />
+<meta property="og:description" content="Tout savoir sur le passage d&#39;homologation
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/dmp/howtos/homologation/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Passage de l&#39;homologation">
-<meta itemprop="description" content="Les différents points à connaître pour homologuer votre solution
+<meta itemprop="name" content="Homologation">
+<meta itemprop="description" content="Tout savoir sur le passage d&#39;homologation
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Passage de l&#39;homologation"/>
-<meta name="twitter:description" content="Les différents points à connaître pour homologuer votre solution
+<meta name="twitter:title" content="Homologation"/>
+<meta name="twitter:description" content="Tout savoir sur le passage d&#39;homologation
 "/>
 
 
@@ -123,8 +123,8 @@ Version imprimable multipages.
 
 
 
-<h1 class="title">Passage de l&#39;homologation</h1>
-<div class="lead">Les différents points à connaître pour homologuer votre solution</div>
+<h1 class="title">Homologation</h1>
+<div class="lead">Tout savoir sur le passage d&rsquo;homologation</div>
 
 
 
@@ -137,12 +137,140 @@ Version imprimable multipages.
   
 
   
+    
+    
+	
+<li>1: <a href="#pg-8d66d4db099ec2061721ef2f86e22b52">Homologation Phase 1 Prérequis</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-c9eddcbf292e24a9853f3cd7e99ad4de">[Deprecated] Ancienne procédure</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
 
     </ul>
 
 
 <div class="content">
       
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-8d66d4db099ec2061721ef2f86e22b52">1 - Homologation Phase 1 Prérequis</h1>
+    <div class="lead">Tout savoir sur la phase 1</div>
+	<h3 id="déroulement">Déroulement</h3>
+<ol>
+<li>Récupérer le <a href="/dmp/homologation/CDT_DMP_20230320_v2.7.0.xlsm">cahier de test</a> à jour et prendre connaissance de la NOTICE</li>
+<li>Filtrer l&rsquo;onglet Phase 1 sur les trois premières colonnes : Profil DMP-C, Authentification, Transaction en fonction de vos annexes remplies des conditions particulières.</li>
+<li>Fournir à <strong>DEVCOOP</strong> pour chaque code de test un répertoire contenant la trame d&rsquo;exécution ainsi que si besoin une ou deux impressions écrans pour illustration.</li>
+</ol>
+<h3 id="codes-de-test">Codes de Test</h3>
+<p>Indication concernant les différents tests prérequis.</p>
+<h4 id="pre_gen">PRE_GEN</h4>
+<blockquote>
+<p>L&rsquo;éditeur a pris connaissance du Guide d&rsquo;Intégration DMP et de la totalité des exigences qui concerne le périmètre de son LPS.</p>
+</blockquote>
+<p>Effectivement, suivre cette documentation ne vous dispense pas de lire attentivement le guide d&rsquo;intégration &ldquo;Service DMP intégré aux LPS&rdquo; (SEL-MP-037) dans la version du package cible.
+Ce document est disponible sur l&rsquo;espace industriel de Sesam-Vitale : <a href="https://industriels.sesam-vitale.fr/group/dmp-compatibilite">https://industriels.sesam-vitale.fr/group/dmp-compatibilite</a></p>
+<h4 id="pre_err">PRE_ERR</h4>
+<blockquote>
+<p>Le LPS affiche correctement les différents messages d&rsquo;erreurs et codeRetour (soapFault…) et adapte sa cinématique en fonction.</p>
+</blockquote>
+<p>Toute erreur provenant du serveur DMP, est interprété puis transformé en une Exception java typé en fonction de l’erreur remontée.</p>
+<p>Le message initial avec son code provenant du serveur DMP est toujours récupéré afin de fournir le bon message à l’intégrateur. Il faut veiller à remonter à l&rsquo;utilisateur cette information.</p>
+<h4 id="pre_tps">PRE_TPS</h4>
+<blockquote>
+<p>Le LPS se synchronise via un serveur de temps a minima toutes les 24h.</p>
+</blockquote>
+<p>Toutes les dates techniques (VIHF, dates de création si non renseignées) sont gérées par la DevBox-Santé, les autres dates doivent faire l&rsquo;objet d&rsquo;une synchronisation via NTP. Pour cela il est possible d&rsquo;utiliser le TimeManager de la DevBox-santé DMP.</p>
+<p>En java :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// injection du bean spring
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#5c35cc;font-weight:bold">@Autowired</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">TimeManager</span> <span style="color:#000">clock</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Usage dans le code
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">ZonedDateTime</span> <span style="color:#000">now</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">clock</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getLocal</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span></code></pre></div><p>En REST :</p>
+<pre tabindex="0"><code>curl -X &#39;GET&#39;   &#39;http://localhost:9999/dmp/time/iso&#39;
+</code></pre><h4 id="pre_mode_cnxsc">PRE_MODE_CNXSC</h4>
+<blockquote>
+<p>Des tests ont été faits en mode Connexion Secrète pour un patient mineur.</p>
+</blockquote>
+<p>Pour toute information sur la mise en place de la connexion secrète avec la DevBox-santé DMP : <a href="/dmp/howtos/transactions/#gestion-de-la-connexion-secr%C3%A8te">/dmp/howtos/transactions/#gestion-de-la-connexion-secrète</a></p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c9eddcbf292e24a9853f3cd7e99ad4de">2 - [Deprecated] Ancienne procédure</h1>
+    <div class="lead">Les différents points à connaître pour homologuer votre solution</div>
+	
 
 <div class="pageinfo pageinfo-primary">
 <p>Une nouvelle procédure d&rsquo;homologation est en cours de mise en place par le CNDA. Nous prenons en compte les nouvelles recommendations et nous mettrons à jour toute la documentation.</p>
@@ -293,9 +421,11 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&lt;/ds:X509Certificate&gt;&lt;/ds:X
 <p><img src="arborescence_plan_test.png" alt=""></p>
 
 </div>
-</div>
 
 
+
+    
+      
   
   
   
@@ -304,6 +434,10 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&lt;/ds:X509Certificate&gt;&lt;/ds:X
   
   
 
+  
+
+    
+	
   
 
 

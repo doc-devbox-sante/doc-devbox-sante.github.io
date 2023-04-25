@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DevBox-Santé – Passage de l&#39;homologation</title>
+    <title>DevBox-Santé – Homologation</title>
     <link>/dmp/howtos/homologation/</link>
-    <description>Recent content in Passage de l&#39;homologation on DevBox-Santé</description>
+    <description>Recent content in Homologation on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="/dmp/howtos/homologation/index.xml" rel="self" type="application/rss+xml" />
@@ -12,6 +12,219 @@
         
       
     
+    
+    <item>
+      <title>Dmp: Homologation Phase 1 Prérequis</title>
+      <link>/dmp/howtos/homologation/phase_1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/dmp/howtos/homologation/phase_1/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;déroulement&#34;&gt;Déroulement&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Récupérer le &lt;a href=&#34;/dmp/homologation/CDT_DMP_20230320_v2.7.0.xlsm&#34;&gt;cahier de test&lt;/a&gt; à jour et prendre connaissance de la NOTICE&lt;/li&gt;
+&lt;li&gt;Filtrer l&amp;rsquo;onglet Phase 1 sur les trois premières colonnes : Profil DMP-C, Authentification, Transaction en fonction de vos annexes remplies des conditions particulières.&lt;/li&gt;
+&lt;li&gt;Fournir à &lt;strong&gt;DEVCOOP&lt;/strong&gt; pour chaque code de test un répertoire contenant la trame d&amp;rsquo;exécution ainsi que si besoin une ou deux impressions écrans pour illustration.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;codes-de-test&#34;&gt;Codes de Test&lt;/h3&gt;
+&lt;p&gt;Indication concernant les différents tests prérequis.&lt;/p&gt;
+&lt;h4 id=&#34;pre_gen&#34;&gt;PRE_GEN&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;L&amp;rsquo;éditeur a pris connaissance du Guide d&amp;rsquo;Intégration DMP et de la totalité des exigences qui concerne le périmètre de son LPS.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Effectivement, suivre cette documentation ne vous dispense pas de lire attentivement le guide d&amp;rsquo;intégration &amp;ldquo;Service DMP intégré aux LPS&amp;rdquo; (SEL-MP-037) dans la version du package cible.
+Ce document est disponible sur l&amp;rsquo;espace industriel de Sesam-Vitale : &lt;a href=&#34;https://industriels.sesam-vitale.fr/group/dmp-compatibilite&#34;&gt;https://industriels.sesam-vitale.fr/group/dmp-compatibilite&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;pre_err&#34;&gt;PRE_ERR&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Le LPS affiche correctement les différents messages d&amp;rsquo;erreurs et codeRetour (soapFault…) et adapte sa cinématique en fonction.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Toute erreur provenant du serveur DMP, est interprété puis transformé en une Exception java typé en fonction de l’erreur remontée.&lt;/p&gt;
+&lt;p&gt;Le message initial avec son code provenant du serveur DMP est toujours récupéré afin de fournir le bon message à l’intégrateur. Il faut veiller à remonter à l&amp;rsquo;utilisateur cette information.&lt;/p&gt;
+&lt;h4 id=&#34;pre_tps&#34;&gt;PRE_TPS&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Le LPS se synchronise via un serveur de temps a minima toutes les 24h.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Toutes les dates techniques (VIHF, dates de création si non renseignées) sont gérées par la DevBox-Santé, les autres dates doivent faire l&amp;rsquo;objet d&amp;rsquo;une synchronisation via NTP. Pour cela il est possible d&amp;rsquo;utiliser le TimeManager de la DevBox-santé DMP.&lt;/p&gt;
+&lt;p&gt;En java :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// injection du bean spring
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Autowired&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;TimeManager&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;clock&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// Usage dans le code
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ZonedDateTime&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;now&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;clock&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getLocal&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En REST :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl -X &amp;#39;GET&amp;#39;   &amp;#39;http://localhost:9999/dmp/time/iso&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;pre_mode_cnxsc&#34;&gt;PRE_MODE_CNXSC&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Des tests ont été faits en mode Connexion Secrète pour un patient mineur.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Pour toute information sur la mise en place de la connexion secrète avec la DevBox-santé DMP : &lt;a href=&#34;/dmp/howtos/transactions/#gestion-de-la-connexion-secr%C3%A8te&#34;&gt;/dmp/howtos/transactions/#gestion-de-la-connexion-secrète&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Dmp: [Deprecated] Ancienne procédure</title>
+      <link>/dmp/howtos/homologation/deprecated/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/dmp/howtos/homologation/deprecated/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Une nouvelle procédure d&amp;rsquo;homologation est en cours de mise en place par le CNDA. Nous prenons en compte les nouvelles recommendations et nous mettrons à jour toute la documentation.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;plan-de-vérification&#34;&gt;Plan De Vérification&lt;/h2&gt;
+&lt;p&gt;Une fois que vous avez reçu votre PDV filtré par les équipes de DEVCOOP. Il vous faut :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;prendre connaissance de la Notice #EAI-int&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;générer l’arborescence&lt;/li&gt;
+&lt;li&gt;répondre aux exigences dans l’onglet &lt;code&gt;Déclarations&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;exécuter le plan de test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;onglet-arborescence&#34;&gt;Onglet Arborescence&lt;/h3&gt;
+&lt;p&gt;Une macro est disponible pour créer l’arborescence des répertoires de test (activer les macros excel) :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;creation_arborescence.png&#34; alt=&#34;creation_arborescence.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Qui vous permet d’obtenir ces répertoires :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;arborescence_cr%C3%A9%C3%A9.png&#34; alt=&#34;arborescence_créé&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;onglet-déclaration&#34;&gt;Onglet Déclaration&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;pdv_onglet_d%C3%A9clarations.png&#34; alt=&#34;pdv_onglet_déclarations.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pour vous aider nous avons partagé un projet reprenant l’ensemble des réponses possibles au différentes exigences.&lt;/p&gt;
+&lt;p&gt;Exemple : la réponse à&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;EX_GEN-1350_excel.png&#34; alt=&#34;EX_GEN-1350_excel.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;peut être trouvé dans &lt;a href=&#34;https://bitbucket.org/devbox-sante/homologation/issues/8/ex_gen-1350&#34;&gt;https://bitbucket.org/devbox-sante/homologation/issues/8/ex_gen-1350&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Une fois les exigences remplies et validées par DEVCOOP, DEVCOOP vous fournit l’attestation de conformité vous permettant de continuer vos démarches auprès du CNDA.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;onglet-plan-de-tests&#34;&gt;Onglet Plan de tests&lt;/h3&gt;
+&lt;p&gt;Pour chaque test suivre la consigne et fournir les éléments nécessaires, pour celà vous devez interpréter les logs de la DevBox-Santé DMP :&lt;/p&gt;
+&lt;h3 id=&#34;interpréter-les-logs&#34;&gt;Interpréter les logs&lt;/h3&gt;
+&lt;p&gt;Dans la totalité des tests il vous sera demandé de fournir &amp;ldquo;les requête/réponse de l&amp;rsquo;appel au service&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Pour celà, il faut s&amp;rsquo;assurer que la configuration &lt;code&gt;application.yml&lt;/code&gt; de votre installation (par exemple &lt;code&gt;C:\Program Files\DevBoxSante\application.yml&lt;/code&gt; dans le cas d’une installation poste client sous windows), ne contient pas les lignes suivantes : &lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;logging&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;level&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;org.apache.cxf&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;warn&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Remarque : cette configuration est à ajouter pour un accès en production.&lt;/p&gt;
+&lt;p&gt;Une fois lancé dans le fichier &lt;code&gt;output.log&lt;/code&gt; :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  ____             ____                                 _            
+ |  _ \  _____   _| __ )  _____  __     ___  __ _ _ __ | |_ ___ 
+ | | | |/ _ \ \ / /  _ \ / _ \ \/ /____/ __|/ _` | &amp;#39;_ \| __/ _ \
+ | |_| |  __/\ V /| |_) | (_) &amp;gt;  &amp;lt;_____\__ \ (_| | | | | ||  __/
+ |____/ \___| \_/ |____/ \___/_/\_\    |___/\__,_|_| |_|\__\___|
+                                                                
+
+2022-09-16 09:32:25.747  INFO 38652 --- [           main] f.devboxsante.clients.DevboxSanteServer  : Starting DevboxSanteServer v2.18.0 on lfo-xps15-2 with PID 38652 (C:\Program Files\DevBoxSante\repository\devboxsante.jar started by lfo in C:\Program Files\DevBoxSante)
+2022-09-16 09:32:25.750 DEBUG 38652 --- [           main] f.devboxsante.clients.DevboxSanteServer  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-09-16 09:32:25.750  INFO 38652 --- [           main] f.devboxsante.clients.DevboxSanteServer  : The following profiles are active: SWAGGER_INSTALLER,CNDA_WEB
+2022-09-16 09:32:29.231  INFO 38652 --- [           main] o.o.core.config.InitializationService    : Initializing OpenSAML using the Java Services API
+2022-09-16 09:32:29.763  INFO 38652 --- [           main] o.o.xmlsec.algorithm.AlgorithmRegistry   : Algorithm failed runtime support check, will not be usable: http://www.w3.org/2001/04/xmlenc#ripemd160
+2022-09-16 09:32:29.768  INFO 38652 --- [           main] o.o.xmlsec.algorithm.AlgorithmRegistry   : Algorithm failed runtime support check, will not be usable: http://www.w3.org/2001/04/xmldsig-more#hmac-ripemd160
+2022-09-16 09:32:29.776  INFO 38652 --- [           main] o.o.xmlsec.algorithm.AlgorithmRegistry   : Algorithm failed runtime support check, will not be usable: http://www.w3.org/2001/04/xmldsig-more#rsa-ripemd160
+2022-09-16 09:32:30.331  INFO 38652 --- [           main] f.d.c.c.AlternativePortsConfiguration    : Try to start on port 9999
+2022-09-16 09:32:30.712  INFO 38652 --- [           main] f.d.c.configuration.CookieConfiguration  : Cookie same-site: Lax
+2022-09-16 09:32:30.714  INFO 38652 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-09-16 09:32:30.723  INFO 38652 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-16 09:32:30.723  INFO 38652 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-09-16 09:32:30.783  INFO 38652 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-16 09:32:30.783  INFO 38652 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4968 ms
+2022-09-16 09:32:31.345  INFO 38652 --- [           main] f.d.c.configuration.LMConfiguration      : installer.token: 50587132-ac43-4f41-b1e0-1d82c61b1d34
+2022-09-16 09:32:31.346  INFO 38652 --- [           main] f.d.c.configuration.LMConfiguration      : installer.env: DEV
+2022-09-16 09:32:31.346  INFO 38652 --- [           main] f.d.c.configuration.LMConfiguration      : installer.client: devcoop
+2022-09-16 09:32:31.347  INFO 38652 --- [           main] f.d.c.configuration.LMConfiguration      : installer.backendUrl: https://clients.devbox-sante.fr
+2022-09-16 09:32:31.347  INFO 38652 --- [           main] f.d.c.configuration.LMConfiguration      : installer.version: 2.18.0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Vous pourrez trouver les requêtes sortantes en cherchant le mot &lt;strong&gt;REQ_OUT&lt;/strong&gt; : &lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;2022-09-16 14:21:42.982  INFO 33980 --- [           main] o.a.cxf.services.GDP_PortType.REQ_OUT    : REQ_OUT
+    Address: https://devh.lps2.dmp.gouv.fr/si-dmp-server/v2/services/patients
+    HttpMethod: POST
+    Content-Type: application/soap+xml; action=&amp;#34;urn:hl7-org:v3:PRPA_IN201307UV02&amp;#34;
+    ExchangeId: 37018935-b110-4782-a191-d6a5ffc84d94
+    ServiceName: GDPPortTypeService
+    PortName: GDP_PortTypePort
+    PortTypeName: GDP_PortType
+    Headers: {Accept=*/*}
+    Payload: &amp;lt;soap:Envelope xmlns:soap=&amp;#34;http://www.w3.org/2003/05/soap-envelope&amp;#34;&amp;gt;&amp;lt;soap:Header&amp;gt;&amp;lt;Action xmlns=&amp;#34;http://www.w3.org/2005/08/addressing&amp;#34;&amp;gt;urn:hl7-org:v3:PRPA_IN201307UV02&amp;lt;/Action&amp;gt;&amp;lt;MessageID xmlns=&amp;#34;http://www.w3.org/2005/08/addressing&amp;#34;&amp;gt;urn:uuid:c6de458d-4527-4959-a9c6-0e913af58247&amp;lt;/MessageID&amp;gt;&amp;lt;To xmlns=&amp;#34;http://www.w3.org/2005/08/addressing&amp;#34;&amp;gt;https://devh.lps2.dmp.gouv.fr/si-dmp-server/v2/services/patients&amp;lt;/To&amp;gt;&amp;lt;ReplyTo xmlns=&amp;#34;http://www.w3.org/2005/08/addressing&amp;#34;&amp;gt;&amp;lt;Address&amp;gt;http://www.w3.org/2005/08/addressing/anonymous&amp;lt;/Address&amp;gt;&amp;lt;/ReplyTo&amp;gt;&amp;lt;wsse:Security xmlns:wsse=&amp;#34;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&amp;#34;&amp;gt;&amp;lt;saml2:Assertion xmlns:saml2=&amp;#34;urn:oasis:names:tc:SAML:2.0:assertion&amp;#34; ID=&amp;#34;3dea0f38-739b-423f-9315-3777253e3d95&amp;#34; IssueInstant=&amp;#34;2022-09-16T12:21:41.838Z&amp;#34; Version=&amp;#34;2.0&amp;#34;&amp;gt;&amp;lt;saml2:Issuer Format=&amp;#34;urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName&amp;#34;&amp;gt;GIVENNAME=ANNE + CN=899700296140 + SURNAME=MED-CS RPPS0029614, T=Médecin, C=FR&amp;lt;/saml2:Issuer&amp;gt;&amp;lt;ds:Signature xmlns:ds=&amp;#34;http://www.w3.org/2000/09/xmldsig#&amp;#34;&amp;gt;
+&amp;lt;ds:SignedInfo&amp;gt;
+&amp;lt;ds:CanonicalizationMethod Algorithm=&amp;#34;http://www.w3.org/2001/10/xml-exc-c14n#&amp;#34;/&amp;gt;
+&amp;lt;ds:SignatureMethod Algorithm=&amp;#34;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&amp;#34;/&amp;gt;
+&amp;lt;ds:Reference URI=&amp;#34;#3dea0f38-739b-423f-9315-3777253e3d95&amp;#34;&amp;gt;
+&amp;lt;ds:Transforms&amp;gt;
+&amp;lt;ds:Transform Algorithm=&amp;#34;http://www.w3.org/2000/09/xmldsig#enveloped-signature&amp;#34;/&amp;gt;
+&amp;lt;ds:Transform Algorithm=&amp;#34;http://www.w3.org/2001/10/xml-exc-c14n#&amp;#34;/&amp;gt;
+&amp;lt;/ds:Transforms&amp;gt;
+&amp;lt;ds:DigestMethod Algorithm=&amp;#34;http://www.w3.org/2001/04/xmlenc#sha256&amp;#34;/&amp;gt;
+&amp;lt;ds:DigestValue&amp;gt;FgEbwW0Xzd+HGhjhxZfszDZm2IFwTXlU084oqJFbsfY=&amp;lt;/ds:DigestValue&amp;gt;
+&amp;lt;/ds:Reference&amp;gt;
+&amp;lt;/ds:SignedInfo&amp;gt;
+&amp;lt;ds:SignatureValue&amp;gt;
+cdb+3r9tpg4piUZ4reEJyAfq3EZeQwI7AvDRJAE447I7hjCjGEWPKBfPCdfwkIyU4bH8UadmxnjL&amp;amp;#xd;
+olMAZGEqgcUSs8+CW/wzsEbmRtGeAvKKhzlacm8Kl7U047hj+hjviwSDZhImSS9rZyeyjV4JcubR&amp;amp;#xd;
+0pbA+0wkvPQ1x1PT38tVEMXt965YV/ornj4TuGejcPx9WkX7VsrgjJFcH9r3oGVCIS10dC5l/PI1&amp;amp;#xd;
+8Cq1WEL1lx3ton4VgZCxkY7MAQAWGos08XzsV8pnc+GuA+H7+SBIqlBLfpt2z93Ru+HVoTu6ATMG&amp;amp;#xd;
+JjutwVGcJ3pnLGgofm26I6WvJSouimLUSCUwSA==
+&amp;lt;/ds:SignatureValue&amp;gt;
+&amp;lt;ds:KeyInfo&amp;gt;&amp;lt;ds:X509Data&amp;gt;&amp;lt;ds:X509Certificate&amp;gt;MIIIkjCCBnqgAwIBAgIQY9r/z8gDS9wvB2ErFSZ7ojANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQG
+EwJGUjETMBEGA1UECgwKQVNJUC1TQU5URTEXMBUGA1UECwwOMDAwMiAxODc1MTI3NTExFzAVBgNV
+BAsMDklHQy1TQU5URSBURVNUMSkwJwYDVQQDDCBURVNUIEFDIElHQy1TQU5URSBGT1JUIFBFUlNP
+Tk5FUzAeFw0yMDEyMTUxMzA4MzFaFw0yMzEyMTUxMzA4MzFaMF8xCzAJBgNVBAYTAkZSMREwDwYD
+VQQMDAhNw6lkZWNpbjE9MAsGA1UEKgwEQU5ORTATBgNVBAMMDDg5OTcwMDI5NjE0MDAZBgNVBAQM
+Ek1FRC1DUyBSUFBTMDAyOTYxNDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALI4qUzO
+XnPZTYXyNvNP0mHQyBxNAzT0vqHwduBDeEF+uvQZAHXn82bQMBD30dvVfsy8EY9LYIxgA11QKf9a
+0xd9GD7pgi8DtmGF4Lcd7ZEE0MWnW9NjCCeOO1STwT6+aarE3OHXApy3J/0AIFb3ZGyFNr0cGu15
+L3v56aB4TJ0m6Agn7h3KD9VjWoCGbsu7/BHDYqgF3/PG7fai4zF0hBX+5VeToa6EZUnUNOgRyaJF
+1rRI261fkyw09B7gNF2gHxpRxS9ryZ4n64WV5JU5q2UlHHkUgpXk8UdD0fKSE6Wu8k18/OHQd96t
+F6wrYtdmCxu6K7iWdOuGBMwwq/kie4kCAwEAAaOCBCgwggQkMAkGA1UdEwQCMAAwHQYDVR0OBBYE
+FFqE3AQVqvHlLHBxuclOPSJwlDleMB8GA1UdIwQYMBaAFDrx5/XO6+33jcnJsp/t1GUp3B/9MA4G
+A1UdDwEB/wQEAwIGQDBTBgNVHSAETDBKMEgGDSqBegGBVQEHAgEBAQEwNzA1BggrBgEFBQcCARYp
+aHR0cDovL2lnYy1zYW50ZS5lc2FudGUuZ291di5mci9QQyUyMFRFU1QwEwYDVR0lBAwwCgYIKwYB
+BQUHAwQwKwYDVR0QBCQwIoAPMjAyMDEyMTUxMzA4MzFagQ8yMDIzMTIxNTEzMDgzMVowggFABgNV
+HR8EggE3MIIBMzA8oDqgOIY2aHR0cDovL2lnYy1zYW50ZS5lc2FudGUuZ291di5mci9DUkwvQUNJ
+LUZPLVBQLVRFU1QuY3JsMIHyoIHvoIHshoHpbGRhcDovL2FubnVhaXJlLWlnYy5lc2FudGUuZ291
+di5mci9jbj1URVNUJTIwQUMlMjBJR0MtU0FOVEUlMjBGT1JUJTIwUEVSU09OTkVTLG91PVRFU1Ql
+MjBBQyUyMFJBQ0lORSUyMElHQy1TQU5URSUyMEZPUlQsb3U9SUdDLVNBTlRFJTIwVEVTVCxvdT0w
+MDAyJTIwMTg3NTEyNzUxLG89QVNJUC1TQU5URSxjPUZSP2NlcnRpZmljYXRlcmV2b2NhdGlvbmxp
+c3Q7YmluYXJ5P2Jhc2U/b2JqZWN0Q2xhc3M9cGtpQ0EwgfoGA1UdLgSB8jCB7zCB7KCB6aCB5oaB
+42xkYXA6Ly9hbm51YWlyZS1pZ2MuZXNhbnRlLmdvdXYuZnIvY249VEVTVCUyMEFDJTIwSUdDLVNB
+TlRFJTIwRk9SVCUyMFBFUlNPTk5FUyxvdT1URVNUJTIwQUMlMjBSQUNJTkUlMjBJR0MtU0FOVEUl
+MjBGT1JULG91PUlHQy1TQU5URSUyMFRFU1Qsb3U9MDAwMiUyMDE4NzUxMjc1MSxvPUFTSVAtU0FO
+VEUsYz1GUj9kZWx0YXJldm9jYXRpb25saXN0O2JpbmFyeT9iYXNlP29iamVjdENsYXNzPXBraUNB
+MIGABggrBgEFBQcBAQR0MHIwJgYIKwYBBQUHMAGGGmh0dHA6Ly9vY3NwLmVzYW50ZS5nb3V2LmZy
+MEgGCCsGAQUFBzAChjxodHRwOi8vaWdjLXNhbnRlLmVzYW50ZS5nb3V2LmZyL0FDJTIwVEVTVC9B
+Q0ktRk8tUFAtVEVTVC5jZXIwDwYIKoF6AUcBAgUEAwQBgDAPBggqgXoBRwECAgQDAgEAMCMGCCqB
+egFHAQIDBBcTFTgwMjUwMDAwMDEvMjgwMDgxMTExMjAPBggqgXoBRwECBwQDAgEKMBQGCCqBegFH
+BAIFBAgwBgwEU00yNjANBgkqhkiG9w0BAQsFAAOCAgEAjHlMgOOxa0WrBYYOu7QV1s73Cp+y2KYH
+elVvcZym8SM4qVFtbCuHljO3nFEYbEjMvs3aEtuTJ6vuEY4GkEg2fwcgbcIcwW4nXOV6YywyV0rB
+TBTW77GOsngHSpsMdtmBL41nr4WCtULCnQd0TGl3pEqRVuNpWt2WwReL6VGB+ZbCmRrTdkc3Ne/5
+TR7hC6//ddvjjNIc1QCX3MU22d10ZsNnc9d5O3ZF9fenYlnCd2QLbWpSHJ7TCvAhNIF2S/EmLcWx
+o7NXoCW/Di7iOEYCM57mr79FuTyCUbUI0DDLz3lxJ+aHvyUAp/Tnzwd6NwO6HLgt7PTt2S/hX8ZM
+bS5UlQK3AoAr5++5Sb9QGEmopnVTz+YhCtJoyWtNudHtYUiS+1RrERALWC5++CaZDusOdxmAFRX8
+84OQznWcxj5A1b1GOBF84yEXwxZgYKGBM9Iz8EmvpBHwVCj6VdjvVmeYJwiH+cjP1Q1N6aQlSEcR
+lHB6fvG7oSUZot3lcTldhHyxxhfR0+HEXYhG7/DYcsNymqwD4vDURUAwOvoOWzHPfs6r1fECw21T
+bP3Y2OtFuWfDXarPYW+3YMmMEJwboL+APfinsuS5tziDfoFKRMJf25o2SgNYOPNxnsTspW4P/x/2
+Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&amp;lt;/ds:X509Certificate&amp;gt;&amp;lt;/ds:X509Data&amp;gt;&amp;lt;/ds:KeyInfo&amp;gt;&amp;lt;/ds:Signature&amp;gt;&amp;lt;saml2:Subject&amp;gt;&amp;lt;saml2:NameID&amp;gt;899700296140&amp;lt;/saml2:NameID&amp;gt;&amp;lt;/saml2:Subject&amp;gt;&amp;lt;saml2:AuthnStatement AuthnInstant=&amp;#34;2022-09-16T12:21:41.864Z&amp;#34;&amp;gt;&amp;lt;saml2:AuthnContext&amp;gt;&amp;lt;saml2:AuthnContextClassRef&amp;gt;urn:oasis:names:tc:SAML:2.0:ac:classes:SmartcardPKI&amp;lt;/saml2:AuthnContextClassRef&amp;gt;&amp;lt;/saml2:AuthnContext&amp;gt;&amp;lt;/saml2:AuthnStatement&amp;gt;&amp;lt;saml2:AttributeStatement&amp;gt;&amp;lt;saml2:Attribute Name=&amp;#34;Identifiant_Structure&amp;#34;&amp;gt;&amp;lt;saml2:AttributeValue&amp;gt;10B0156832&amp;lt;/saml2:AttributeValue&amp;gt;&amp;lt;/saml2:Attribute&amp;gt;&amp;lt;saml2:Attribute Name=&amp;#34;Secteur_Activite&amp;#34;&amp;gt;&amp;lt;saml2:AttributeValue&amp;gt;SA05^1.2.250.1.71.4.2.4&amp;lt;/saml2:AttributeValue&amp;gt;&amp;lt;/saml2:Attribute&amp;gt;&amp;lt;saml2:Attribute Name=&amp;#34;urn:oasis:names:tc:xacml:2.0:subject:role&amp;#34;&amp;gt;&amp;lt;saml2:AttributeValue&amp;gt;&amp;lt;Role xmlns=&amp;#34;urn:hl7-org:v3&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; code=&amp;#34;10&amp;#34; codeSystem=&amp;#34;1.2.250.1.71.1.2.7&amp;#34; displayName=&amp;#34;Médecin&amp;#34; xsi:type=&amp;#34;CE&amp;#34;/&amp;gt;&amp;lt;/saml2:AttributeValue&amp;gt;&amp;lt;saml2:AttributeValue&amp;gt;&amp;lt;Role xmlns=&amp;#34;urn:hl7-org:v3&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; code=&amp;#34;SM26&amp;#34; codeSystem=&amp;#34;1.2.250.1.71.4.2.5&amp;#34; displayName=&amp;#34;Qualifié en Médecine Générale (SM)&amp;#34; xsi:type=&amp;#34;CE&amp;#34;/&amp;gt;&amp;lt;/saml2:AttributeValue&amp;gt;&amp;lt;/saml2:Attribute&amp;gt;&amp;lt;saml2:Attribute Name=&amp;#34;VIHF_Version&amp;#34;&amp;gt;&amp;lt;saml2:AttributeValue&amp;gt;3.0&amp;lt;/saml2:AttributeValue&amp;gt;&amp;lt;/saml2:Attribute&amp;gt;&amp;lt;saml2:Attribute Name=&amp;#34;Authentification_mode&amp;#34;&amp;gt;&amp;lt;saml2:AttributeValue&amp;gt;DIRECTE&amp;lt;/saml2:AttributeValue&amp;gt;&amp;lt;/saml2:Attribute&amp;gt;&amp;lt;saml2:Attribute Name=&amp;#34;urn:oasis:names:tc:xacml:2.0:resource:resource-id&amp;#34;&amp;gt;&amp;lt;saml2:AttributeValue&amp;gt;157069329642881^^^&amp;amp;amp;1.2.250.1.213.1.4.10&amp;amp;amp;ISO^NH&amp;lt;/saml2:AttributeValue&amp;gt;&amp;lt;/saml2:Attribute&amp;gt;&amp;lt;saml2:Attribute Name=&amp;#34;Ressource_URN&amp;#34;&amp;gt;&amp;lt;saml2:AttributeValue&amp;gt;urn:dmp&amp;lt;/saml2:AttributeValue&amp;gt;&amp;lt;/saml2:Attribute&amp;gt;&amp;lt;saml2:Attribute Name=&amp;#34;urn:oasis:names:tc:xspa:1.0:subject:purposeofuse&amp;#34;&amp;gt;&amp;lt;saml2:AttributeValue&amp;gt;&amp;lt;PurposeOfUse xmlns=&amp;#34;urn:hl7-org:v3&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; code=&amp;#34;normal&amp;#34; codeSystem=&amp;#34;1.2.250.1.213.1.1.4.248&amp;#34; displayName=&amp;#34;Accès normal&amp;#34; xsi:type=&amp;#34;CE&amp;#34;/&amp;gt;&amp;lt;/saml2:AttributeValue&amp;gt;&amp;lt;/saml2:Attribute&amp;gt;&amp;lt;saml2:Attribute Name=&amp;#34;LPS_ID&amp;#34;&amp;gt;&amp;lt;saml2:AttributeValue&amp;gt;1.2.250.1.287.1.1234567&amp;lt;/saml2:AttributeValue&amp;gt;&amp;lt;/saml2:Attribute&amp;gt;&amp;lt;saml2:Attribute Name=&amp;#34;LPS_Nom&amp;#34;&amp;gt;&amp;lt;saml2:AttributeValue&amp;gt;DEVBOX-SANTE DMP&amp;lt;/saml2:AttributeValue&amp;gt;&amp;lt;/saml2:Attribute&amp;gt;&amp;lt;saml2:Attribute Name=&amp;#34;LPS_Version&amp;#34;&amp;gt;&amp;lt;saml2:AttributeValue&amp;gt;5.0&amp;lt;/saml2:AttributeValue&amp;gt;&amp;lt;/saml2:Attribute&amp;gt;&amp;lt;saml2:Attribute Name=&amp;#34;LPS_ID_HOMOLOGATION_DMP&amp;#34;&amp;gt;&amp;lt;saml2:AttributeValue&amp;gt;DCP-537042-tmp8&amp;lt;/saml2:AttributeValue&amp;gt;&amp;lt;/saml2:Attribute&amp;gt;&amp;lt;/saml2:AttributeStatement&amp;gt;&amp;lt;/saml2:Assertion&amp;gt;&amp;lt;/wsse:Security&amp;gt;&amp;lt;/soap:Header&amp;gt;&amp;lt;soap:Body&amp;gt;&amp;lt;PRPA_IN201307UV02 xmlns=&amp;#34;urn:hl7-org:v3&amp;#34; xmlns:ns2=&amp;#34;asip:ci-sis:gdp:2010&amp;#34; ITSVersion=&amp;#34;XML_1.0&amp;#34;&amp;gt;&amp;lt;id extension=&amp;#34;11a12948-8a2d-478a-828a-46daea093cd5&amp;#34; root=&amp;#34;1.2.250.1.287.1.1234567.10&amp;#34;/&amp;gt;&amp;lt;creationTime value=&amp;#34;20220916122141&amp;#34;/&amp;gt;&amp;lt;interactionId extension=&amp;#34;PRPA_IN201307UV02&amp;#34; root=&amp;#34;2.16.840.1.113883.1.6&amp;#34;/&amp;gt;&amp;lt;processingCode code=&amp;#34;D&amp;#34;/&amp;gt;&amp;lt;processingModeCode code=&amp;#34;T&amp;#34;/&amp;gt;&amp;lt;acceptAckCode code=&amp;#34;AL&amp;#34;/&amp;gt;&amp;lt;receiver typeCode=&amp;#34;RCV&amp;#34;&amp;gt;&amp;lt;device classCode=&amp;#34;DEV&amp;#34; determinerCode=&amp;#34;INSTANCE&amp;#34;&amp;gt;&amp;lt;id root=&amp;#34;1.2.250.1.213.4.1.1.1&amp;#34;/&amp;gt;&amp;lt;softwareName&amp;gt;DMP&amp;lt;/softwareName&amp;gt;&amp;lt;/device&amp;gt;&amp;lt;/receiver&amp;gt;&amp;lt;sender typeCode=&amp;#34;SND&amp;#34;&amp;gt;&amp;lt;device classCode=&amp;#34;DEV&amp;#34; determinerCode=&amp;#34;INSTANCE&amp;#34;&amp;gt;&amp;lt;id root=&amp;#34;1.2.250.1.287.1.1234567&amp;#34;/&amp;gt;&amp;lt;softwareName&amp;gt;DEVBOX-SANTE DMP&amp;lt;/softwareName&amp;gt;&amp;lt;/device&amp;gt;&amp;lt;/sender&amp;gt;&amp;lt;controlActProcess classCode=&amp;#34;CACT&amp;#34; moodCode=&amp;#34;EVN&amp;#34;&amp;gt;&amp;lt;reasonCode code=&amp;#34;TEST_EXST&amp;#34; codeSystem=&amp;#34;1.2.250.1.213.1.1.4.11&amp;#34; displayName=&amp;#34;Test d&amp;#39;existence de dossier&amp;#34;/&amp;gt;&amp;lt;queryByParameter&amp;gt;&amp;lt;queryId extension=&amp;#34;2f2b5d56-2bf2-42f0-b186-60076dfc3602&amp;#34; root=&amp;#34;1.2.250.1.287.1.1234567.11&amp;#34;/&amp;gt;&amp;lt;statusCode code=&amp;#34;new&amp;#34;/&amp;gt;&amp;lt;parameterList&amp;gt;&amp;lt;patientIdentifier&amp;gt;&amp;lt;value extension=&amp;#34;157069329642881&amp;#34; root=&amp;#34;1.2.250.1.213.1.4.10&amp;#34;/&amp;gt;&amp;lt;semanticsText&amp;gt;Patient.id&amp;lt;/semanticsText&amp;gt;&amp;lt;/patientIdentifier&amp;gt;&amp;lt;/parameterList&amp;gt;&amp;lt;/queryByParameter&amp;gt;&amp;lt;/controlActProcess&amp;gt;&amp;lt;/PRPA_IN201307UV02&amp;gt;&amp;lt;/soap:Body&amp;gt;&amp;lt;/soap:Envelope&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ce qui intéresse le CNDA c’est le payload soap xml que l’on mettera dans &lt;code&gt;REQUETE_LPS.xml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Pour la réponse &lt;strong&gt;RESP_IN&lt;/strong&gt; : &lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;2022-09-16 14:21:43.124  INFO 33980 --- [           main] o.a.cxf.services.GDP_PortType.RESP_IN    : RESP_IN
+    Address: https://devh.lps2.dmp.gouv.fr/si-dmp-server/v2/services/patients
+    Content-Type: application/soap+xml;charset=UTF-8
+    ResponseCode: 200
+    ExchangeId: 37018935-b110-4782-a191-d6a5ffc84d94
+    ServiceName: GDPPortTypeService
+    PortName: GDP_PortTypePort
+    PortTypeName: GDP_PortType
+    Headers: {vary=Origin, content-type=application/soap+xml;charset=UTF-8, Content-Length=3604, Date=Fri, 16 Sep 2022 12:21:43 GMT}
+    Payload: &amp;lt;soap:Envelope xmlns:ns1=&amp;#34;urn:si-dmp-patients&amp;#34; xmlns:soap=&amp;#34;http://www.w3.org/2003/05/soap-envelope&amp;#34;&amp;gt;&amp;lt;soap:Header&amp;gt;&amp;lt;Action xmlns=&amp;#34;http://www.w3.org/2005/08/addressing&amp;#34;&amp;gt;urn:hl7-org:v3:PRPA_IN201308UV02&amp;lt;/Action&amp;gt;&amp;lt;MessageID xmlns=&amp;#34;http://www.w3.org/2005/08/addressing&amp;#34;&amp;gt;urn:uuid:388c97d8-280f-4c9e-b275-53026cd3256b&amp;lt;/MessageID&amp;gt;&amp;lt;To xmlns=&amp;#34;http://www.w3.org/2005/08/addressing&amp;#34;&amp;gt;http://www.w3.org/2005/08/addressing/anonymous&amp;lt;/To&amp;gt;&amp;lt;RelatesTo xmlns=&amp;#34;http://www.w3.org/2005/08/addressing&amp;#34;&amp;gt;urn:uuid:c6de458d-4527-4959-a9c6-0e913af58247&amp;lt;/RelatesTo&amp;gt;&amp;lt;/soap:Header&amp;gt;&amp;lt;soap:Body&amp;gt;&amp;lt;PRPA_IN201308UV02 xmlns=&amp;#34;urn:hl7-org:v3&amp;#34; xmlns:ns2=&amp;#34;asip:ci-sis:gdp:2010&amp;#34; ITSVersion=&amp;#34;XML_1.0&amp;#34;&amp;gt;&amp;lt;id root=&amp;#34;93e46b54-3076-4d33-981f-131af01e8597&amp;#34;/&amp;gt;&amp;lt;creationTime value=&amp;#34;20220916122143&amp;#34;/&amp;gt;&amp;lt;interactionId extension=&amp;#34;PRPA_IN201308UV02&amp;#34; root=&amp;#34;2.16.840.1.113883.1.6&amp;#34;/&amp;gt;&amp;lt;processingCode code=&amp;#34;P&amp;#34;/&amp;gt;&amp;lt;processingModeCode code=&amp;#34;T&amp;#34;/&amp;gt;&amp;lt;acceptAckCode code=&amp;#34;NE&amp;#34;/&amp;gt;&amp;lt;receiver typeCode=&amp;#34;RCV&amp;#34;&amp;gt;&amp;lt;device classCode=&amp;#34;DEV&amp;#34; determinerCode=&amp;#34;INSTANCE&amp;#34;&amp;gt;&amp;lt;id root=&amp;#34;1.2.250.1.287.1.1234567&amp;#34;/&amp;gt;&amp;lt;softwareName&amp;gt;DEVBOX-SANTE DMP&amp;lt;/softwareName&amp;gt;&amp;lt;/device&amp;gt;&amp;lt;/receiver&amp;gt;&amp;lt;sender typeCode=&amp;#34;SND&amp;#34;&amp;gt;&amp;lt;device classCode=&amp;#34;DEV&amp;#34; determinerCode=&amp;#34;INSTANCE&amp;#34;&amp;gt;&amp;lt;id root=&amp;#34;1.2.250.1.213.4.1.1.1&amp;#34;/&amp;gt;&amp;lt;softwareName&amp;gt;DMP&amp;lt;/softwareName&amp;gt;&amp;lt;/device&amp;gt;&amp;lt;/sender&amp;gt;&amp;lt;attentionLine&amp;gt;&amp;lt;keyWordText code=&amp;#34;AUTORISATION&amp;#34; codeSystem=&amp;#34;1.2.250.1.213.4.1.2.6.1&amp;#34;/&amp;gt;&amp;lt;value xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; code=&amp;#34;NON_EXISTE&amp;#34; codeSystem=&amp;#34;1.2.250.1.213.4.1.2.6.2&amp;#34; xsi:type=&amp;#34;CV&amp;#34;/&amp;gt;&amp;lt;/attentionLine&amp;gt;&amp;lt;attentionLine&amp;gt;&amp;lt;keyWordText code=&amp;#34;STATUT_MT&amp;#34; codeSystem=&amp;#34;1.2.250.1.213.4.1.2.6.3&amp;#34;/&amp;gt;&amp;lt;value xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; value=&amp;#34;false&amp;#34; xsi:type=&amp;#34;BL&amp;#34;/&amp;gt;&amp;lt;/attentionLine&amp;gt;&amp;lt;acknowledgement typeCode=&amp;#34;AA&amp;#34;&amp;gt;&amp;lt;targetMessage&amp;gt;&amp;lt;id extension=&amp;#34;11a12948-8a2d-478a-828a-46daea093cd5&amp;#34; root=&amp;#34;1.2.250.1.287.1.1234567.10&amp;#34;/&amp;gt;&amp;lt;/targetMessage&amp;gt;&amp;lt;/acknowledgement&amp;gt;&amp;lt;controlActProcess classCode=&amp;#34;CACT&amp;#34; moodCode=&amp;#34;EVN&amp;#34;&amp;gt;&amp;lt;reasonCode code=&amp;#34;TEST_EXST&amp;#34; codeSystem=&amp;#34;1.2.250.1.213.1.1.4.11&amp;#34; displayName=&amp;#34;Test d&amp;#39;existence de dossier&amp;#34;/&amp;gt;&amp;lt;subject contextConductionInd=&amp;#34;false&amp;#34; typeCode=&amp;#34;SUBJ&amp;#34;&amp;gt;&amp;lt;registrationEvent classCode=&amp;#34;REG&amp;#34; moodCode=&amp;#34;EVN&amp;#34;&amp;gt;&amp;lt;statusCode code=&amp;#34;completed&amp;#34;/&amp;gt;&amp;lt;subject1 typeCode=&amp;#34;SBJ&amp;#34;&amp;gt;&amp;lt;patient classCode=&amp;#34;PAT&amp;#34;&amp;gt;&amp;lt;id extension=&amp;#34;1418878867934420256667&amp;#34; root=&amp;#34;1.2.250.1.213.1.4.2&amp;#34;/&amp;gt;&amp;lt;id extension=&amp;#34;157069329642881&amp;#34; root=&amp;#34;1.2.250.1.213.1.4.10&amp;#34;/&amp;gt;&amp;lt;statusCode code=&amp;#34;active&amp;#34;/&amp;gt;&amp;lt;patientPerson classCode=&amp;#34;PSN&amp;#34; determinerCode=&amp;#34;INSTANCE&amp;#34;&amp;gt;&amp;lt;name&amp;gt;&amp;lt;prefix&amp;gt;Mme&amp;lt;/prefix&amp;gt;&amp;lt;given&amp;gt;IRENE&amp;lt;/given&amp;gt;&amp;lt;family qualifier=&amp;#34;BR&amp;#34;&amp;gt;DECHAINE&amp;lt;/family&amp;gt;&amp;lt;family qualifier=&amp;#34;SP&amp;#34;&amp;gt;ENCHAINE&amp;lt;/family&amp;gt;&amp;lt;/name&amp;gt;&amp;lt;administrativeGenderCode code=&amp;#34;F&amp;#34;/&amp;gt;&amp;lt;birthTime value=&amp;#34;19570628&amp;#34;/&amp;gt;&amp;lt;/patientPerson&amp;gt;&amp;lt;subjectOf typeCode=&amp;#34;SBJ&amp;#34;&amp;gt;&amp;lt;administrativeObservation classCode=&amp;#34;OBS&amp;#34; moodCode=&amp;#34;EVN&amp;#34;&amp;gt;&amp;lt;code code=&amp;#34;RATTACHEMENT_ENS&amp;#34; codeSystem=&amp;#34;1.2.250.1.213.4.1.2.3&amp;#34; displayName=&amp;#34;information de rattachement du DMP à un ENS&amp;#34;/&amp;gt;&amp;lt;value xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; value=&amp;#34;false&amp;#34; xsi:type=&amp;#34;BL&amp;#34;/&amp;gt;&amp;lt;/administrativeObservation&amp;gt;&amp;lt;/subjectOf&amp;gt;&amp;lt;subjectOf typeCode=&amp;#34;SBJ&amp;#34;&amp;gt;&amp;lt;administrativeObservation classCode=&amp;#34;OBS&amp;#34; moodCode=&amp;#34;EVN&amp;#34;&amp;gt;&amp;lt;code code=&amp;#34;COMPTE_INTERNET_OUVERT&amp;#34; codeSystem=&amp;#34;1.2.250.1.213.4.1.2.9&amp;#34;/&amp;gt;&amp;lt;value xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; value=&amp;#34;false&amp;#34; xsi:type=&amp;#34;BL&amp;#34;/&amp;gt;&amp;lt;/administrativeObservation&amp;gt;&amp;lt;/subjectOf&amp;gt;&amp;lt;/patient&amp;gt;&amp;lt;/subject1&amp;gt;&amp;lt;custodian typeCode=&amp;#34;CST&amp;#34;&amp;gt;&amp;lt;assignedEntity classCode=&amp;#34;ASSIGNED&amp;#34;&amp;gt;&amp;lt;id root=&amp;#34;1.2.250.1.213.4.1.1.1&amp;#34;/&amp;gt;&amp;lt;/assignedEntity&amp;gt;&amp;lt;/custodian&amp;gt;&amp;lt;/registrationEvent&amp;gt;&amp;lt;/subject&amp;gt;&amp;lt;queryAck&amp;gt;&amp;lt;queryId extension=&amp;#34;2f2b5d56-2bf2-42f0-b186-60076dfc3602&amp;#34; root=&amp;#34;1.2.250.1.287.1.1234567.11&amp;#34;/&amp;gt;&amp;lt;queryResponseCode code=&amp;#34;OK&amp;#34;/&amp;gt;&amp;lt;/queryAck&amp;gt;&amp;lt;/controlActProcess&amp;gt;&amp;lt;/PRPA_IN201308UV02&amp;gt;&amp;lt;/soap:Body&amp;gt;&amp;lt;/soap:Envelope&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Et bien sur ce qui nous intérresse c’est le payload xml, que l’on mettera dans &lt;code&gt;REPONSE_DMP.xml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Chaque trame se trouve dans l’arborescence :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;arborescence_plan_test.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
     
   </channel>
 </rss>

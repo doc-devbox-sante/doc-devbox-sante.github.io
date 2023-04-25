@@ -136,7 +136,7 @@ Version imprimable multipages.
     
     
 	
-<li>1: <a href="#pg-9b74348bb827fc0660b4ba571dc86437">Migrations</a></li>
+<li>1: <a href="#pg-033bf88f4975aceb23c710c946fdf868">Intégrateurs checklist</a></li>
 
 
     
@@ -147,25 +147,6 @@ Version imprimable multipages.
   
   
 
-  
-    
-    
-	
-<li>1.1: <a href="#pg-6710e3281519b88ee2aa5944e262c072">Migration 4.7 vers la 5.0</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
   
 
     </ul>
@@ -182,7 +163,22 @@ Version imprimable multipages.
     
     
 	
-<li>3: <a href="#pg-5f5395f9ebb771d835f469de1c78beaa">Différents environnements du DMP</a></li>
+<li>3: <a href="#pg-8b8e215b0b4cbdb8f1420baec42100c4">Homologation</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>3.1: <a href="#pg-8d66d4db099ec2061721ef2f86e22b52">Homologation Phase 1 Prérequis</a></li>
 
 
     
@@ -201,7 +197,30 @@ Version imprimable multipages.
     
     
 	
-<li>4: <a href="#pg-033bf88f4975aceb23c710c946fdf868">Integrateurs checklist</a></li>
+<li>3.2: <a href="#pg-c9eddcbf292e24a9853f3cd7e99ad4de">[Deprecated] Ancienne procédure</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-0f6a8b8e81b29a55c0237a0114578bf4">Gestion des certificats</a></li>
 
 
     
@@ -220,7 +239,7 @@ Version imprimable multipages.
     
     
 	
-<li>5: <a href="#pg-8b8e215b0b4cbdb8f1420baec42100c4">Passage de l&#39;homologation</a></li>
+<li>5: <a href="#pg-de03b1ff0ff2188a68d5d13f0a8489ec">Schematron</a></li>
 
 
     
@@ -239,7 +258,7 @@ Version imprimable multipages.
     
     
 	
-<li>6: <a href="#pg-0f6a8b8e81b29a55c0237a0114578bf4">Gestion des certificats</a></li>
+<li>6: <a href="#pg-5f5395f9ebb771d835f469de1c78beaa">Différents environnements du DMP</a></li>
 
 
     
@@ -258,7 +277,7 @@ Version imprimable multipages.
     
     
 	
-<li>7: <a href="#pg-de03b1ff0ff2188a68d5d13f0a8489ec">Schematron</a></li>
+<li>7: <a href="#pg-9b74348bb827fc0660b4ba571dc86437">Migrations</a></li>
 
 
     
@@ -269,6 +288,25 @@ Version imprimable multipages.
   
   
 
+  
+    
+    
+	
+<li>7.1: <a href="#pg-6710e3281519b88ee2aa5944e262c072">Migration 4.7 vers la 5.0</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
   
 
     </ul>
@@ -354,99 +392,134 @@ Version imprimable multipages.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-9b74348bb827fc0660b4ba571dc86437">1 - Migrations</h1>
-    <div class="lead">Guide de migration vers les versions supérieures de la DevBox-Santé DMP</div>
-	
-</div>
+	<h1 id="pg-033bf88f4975aceb23c710c946fdf868">1 - Intégrateurs checklist</h1>
+    <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.</div>
+	<p>Pour plus d’information officielle &ldquo;Cas des intégrateurs EAI&rdquo; : <a href="https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/">https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/</a></p>
+<p>Sinon, voici un petit récapitulatif des démarches à suivre :</p>
+<h2 id="pré-requis">Pré-requis</h2>
+<ol>
+<li>Obtenir un NIE auprès du CNDA</li>
+<li>Remplir les conditions générales des TLSi AMO v3 (<a href="https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/">https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/</a>)</li>
+<li>Obtenir des cartes CPS et/ou certificats de test (médecin, CPE, autre) auprès de l&rsquo;ANS</li>
+</ol>
+<h2 id="choix-architecture">Choix Architecture</h2>
+<ol start="4">
+<li>
+<p>Choisir un mode d&rsquo;intégration/ authentification</p>
+<ul>
+<li>les moyens d&rsquo;authentification de l&rsquo;utilisateur doivent permettre l&rsquo;identification unique de l&rsquo;utilisateur</li>
+<li>le PS a-t-il accès à sa carte CPS ?</li>
+<li>Se rappeler que l&rsquo;éditeur agit pour le compte d&rsquo;un établissement de santé (RPPS)</li>
+<li>Un certificat serveur est lié au FINESS géographique/juridique de l&rsquo;établissement de santé.</li>
+</ul>
+</li>
+<li>
+<p>Choisir les profils d&rsquo;intégration :</p>
+<ul>
+<li>alimentation</li>
+<li>consultation</li>
+</ul>
+</li>
+</ol>
+<h2 id="développement--intégration">Développement / Intégration</h2>
+<ol start="6">
+<li>
+<p>Intégrer l&rsquo;ensemble des transactions choisies sur les profils choisis. La description de l&rsquo;ensemble des transactions se trouvent <a href="/dmp/howtos/transactions/">ici</a>.</p>
+<p>Deux modes d&rsquo;intégration :</p>
+<ul>
+<li><a href="/dmp/embedded">Java</a></li>
+<li><a href="/dmp/rest">REST</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="nouvelle-procédure-dhomologation">Nouvelle procédure d&rsquo;homologation</h2>
+<p>Une nouvelle procédure d&rsquo;homologation a été mise en place le 23 mars 2023. Cette procédure est décrite dans l&rsquo;article 6 des conditions particulières.</p>
+<ol start="7">
+<li>
+<p>Récupérer les condition particulières DMP sur le site du <strong><a href="https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/">CNDA</a></strong></p>
+</li>
+<li>
+<p>Remplir et signer une attestation sur l&rsquo;honneur vous déclarant détenir d&rsquo;un contrat de licence de la DevBox-santé (Article 4 conditions particulières)</p>
+</li>
+<li>
+<p>Remplir et signer les conditions et leurs annexes avec le(s) mode(s) d&rsquo;authentification et profil(s) choisi(s) (support <strong>DEVCOOP</strong> possible)</p>
+</li>
+<li>
+<p>Faire parvenir au CNDA les conditions particulières ainsi que l&rsquo;attestation</p>
+</li>
+<li>
+<p>Récupérer les autorisations d&rsquo;accés aux différents environnements et en tester les accès</p>
+</li>
+<li>
+<p>Faire Valider la Phase 1 par <strong>DEVCOOP</strong></p>
+</li>
+<li>
+<p>Remplir, signer et envoyer au <strong>CNDA</strong> le fichier <code>ATTESTATION_Realisation_Prerequis_DMPC_V1.pdf</code> disponible avec les conditions particulières téléchargées, en cohérence avec la réalisation des tests de la phase 1.</p>
+</li>
+<li>
+<p>Début de l&rsquo;examen par le <strong>CNDA</strong></p>
+<ul>
+<li>Phase 2 : Pré-Examen (<strong>VALIDATION_CNDA</strong>)</li>
+<li>Phase 3 : Examen de conformité (<strong>VALIDATION_CNDA</strong>)</li>
+</ul>
+</li>
+</ol>
+<h3 id="deprecated-conditions-particulières-et-validation-devcoop">[DEPRECATED] Conditions Particulières et validation DEVCOOP</h3>
+<!---
+Procédure temporaire :
 
+ - Intégrateur : dépot des « prérequis » (ancien pdv avec déclarations) + contrat (les nouvelles CP) + l’attestation de conformité fournie par DEVCOOP au CNDA ;
 
+ - CNDA rapatrie les déclarations sur le nouveau plan de test filtré (avec ou sans demande de précisons) ;
 
-    
-      
-  
-  
-  
-  
+ - CNDA fournit le nouveau plan de test et l’accès à l’environnement dédié (mais aussi à DV1 pour faire des tests en parallèle) ;
 
-  
-  
+ - Intégrateur réalise les tests de la phase 2 + terminent les déclarations du nouveau plan de test;
 
-  
-    
-    
-	
-    
-
-<div class="td-content" style="">
-    
-	<h1 id="pg-6710e3281519b88ee2aa5944e262c072">1.1 - Migration 4.7 vers la 5.0</h1>
-    <div class="lead">Guide de migration vers la nouvelle version 5.0</div>
-	<p>La version 5.0 apporte son lot de nouveautés, et tend vers une intégration la plus souple avec le DMP mais aussi les autres téléservices de santé.</p>
-<p>Cette version supporte encore les anciennes requêtes mais déprecient certaines notions.</p>
-<p>Une nouvelle collection postman est disponible dans l’espace public Postman : <a href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview">https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples</a></p>
-<h2 id="note-et-historique-de-vaccination">Note et Historique de vaccination</h2>
-<p>Tout d’abord, nous avons ajouté le support de la note et historique de vaccinations, pour plus d’information consulter la documentation à ce sujet : <a href="/dmp/cda/vaccination">/dmp/cda/vaccination</a></p>
-<h2 id="gestion-de-linsaméliorée">Gestion de l’INS améliorée</h2>
-<p>Pour être en conformité avec l’INSi et simplifier l’intégration entre les deux composants DMP et INSi, dans tous les objets faisant référence à un INS, le couple identifiant/autorité est dorénavant utilisé au lieu de spécifier cette autorité dans le contexte de la requête.</p>
-<p>Par exemple, une requête (td0.2 test d’existence) en version 4.7 :</p>
-<p><img src="td0.2_4.7.png" alt="td0.2_4.7.png"></p>
-<p>devient en 5.0 :</p>
-<p><img src="td0.2_5.0.png" alt="td0.2_5.0.png"></p>
-<p>Bien sur, l’ancienne forme est encore supporté sur cette version mais il est fortement conseillé d’adopter la nouvelle forme.</p>
-<p>Le même exemple en java, un test d’existence en 4.7 :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setInsNirAutorite</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCContext</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">DMPCInsNirAutorite</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">TEST</span><span style="color:#ce5c00;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">TD02Response</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;277076322082910&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
-</span></span></code></pre></div><p>devient en 5.0</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">var</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span>  
-</span></span><span style="display:flex;"><span>                    <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">builder</span><span style="color:#ce5c00;font-weight:bold">()</span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">matriculeINS</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Identifiant</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">builder</span><span style="color:#ce5c00;font-weight:bold">()</span>
-</span></span><span style="display:flex;"><span>                            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">valeur</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;277076322082910&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
-</span></span><span style="display:flex;"><span>                            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">identifiantSysteme</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Oids</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ANS_1_2_250_1_213</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">_1_4_10_INS_NIR_TEST</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">val</span><span style="color:#ce5c00;font-weight:bold">())</span>
-</span></span><span style="display:flex;"><span>                            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">())</span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">()</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#ce5c00;font-weight:bold">);</span>
-</span></span></code></pre></div><h2 id="validation">Validation</h2>
-<p>Les messages de validation ont été améliorés en contextualisant la plupart des validations (en soumission, en récupération). Mais aussi plus finement, comme par exemple, la vérification qu’un code d’un document est bien dans son jeu de valeurs spécifique.</p>
-<p>Quelques exemples de validations effectuées sur un <a href="https://bitbucket.org/devbox-sante/dmpc-api/src/master/src/main/java/fr/devboxsante/dmp/model/DMPCDocument.java"><code>DMPCDocument</code></a> :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">DMPCDocument</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">...</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@CodeValid</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">jeuValeurs</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">JeuxValeursDMP</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">FORMAT_CODE</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">groups</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#000">OnSubmit</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">})</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">DMPCCode</span> <span style="color:#000">formatCode</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">...</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@NotNull</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">groups</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#000">BinaryRequired</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">})</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">byte</span><span style="color:#ce5c00;font-weight:bold">[]</span> <span style="color:#000">content</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@NotNull</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">groups</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#000">OnRetrieve</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">})</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">String</span> <span style="color:#000">entryUuid</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span></code></pre></div><p>Exemple de message obtenu dorénavant pour un classCode erronné dans le document :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span> <span style="color:#4e9a06">&#34;message&#34;</span><span style="color:#a40000">:</span> <span style="color:#4e9a06">&#34;Code 55 inexistant dans la nomenclature JDV_J57-ClassCode-DMP.tabs&#34;</span>
-</span></span></code></pre></div><p>Par conséquent, certains contrôles sont plus sévères, et donc certains cas passant peuvent ne plus l’être. Par exemple, il n’est plus possible d’identifier un Personnel de santé avec un <code>internalId</code> sans préciser son identifiant de structure. Ou encore, une vérification du format des RPPS est effectué dans les documents envoyés.</p>
-<p>Consulter, les sources pour visualiser les contrôles possibles : <a href="https://bitbucket.org/devbox-sante/dmpc-api/src/master/">https://bitbucket.org/devbox-sante/dmpc-api/src/master/</a></p>
-<h2 id="ajout-de-la-td04">Ajout de la TD0.4</h2>
-<p>La documentation sur cette nouvelle transaction est <a href="/dmp/howtos/transactions/#td04--lister-les-dmp-autoris%C3%A9s-depuis-version-50">ici</a></p>
-<h2 id="autres-évolutions">Autres évolutions</h2>
+ - Intégrateur passage en « salle » (demo live).
+  -->
 <ul>
 <li>
-<p>Suppression de la TD0.0</p>
+<p>Récupérer et remplir les Conditions Particulières DMP intégrateurs sur le site du CNDA (Une fois l&rsquo;architecture et les profils choisis)</p>
 </li>
 <li>
-<p>Meilleur gestion des cartes CPF (en formation)</p>
+<p>Fournir les Conditions Particulières à DEVCOOP</p>
 </li>
 <li>
-<p>Gestion multicertificats</p>
+<p>Récupérer le PDV (Plan de vérification) filtré par DEVCOOP</p>
 </li>
 <li>
-<p>Suppression de la transaction TD1.5</p>
+<p>Remplir l&rsquo;onglet &ldquo;Déclarations&rdquo; du PDV contenant l&rsquo;ensemble des exigences</p>
 </li>
 <li>
-<p>Suppression du statut Médecint Traitant (TD0.3)</p>
+<p>Réaliser un test par transaction de l&rsquo;onglet &ldquo;Plan de tests&rdquo; du PDV</p>
 </li>
 <li>
-<p>Contrôle des formats d’identifiant (RPPS, FINESS &hellip;)</p>
+<p>Fournir à DEVCOOP le PDV rempli de ces &ldquo;Déclarations&rdquo; ainsi que les logs des tests réalisés</p>
+<p>==&gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP</p>
+</li>
+</ul>
+<h4 id="deprecated-processus-dhomologation-cnda">[DEPRECATED] Processus d&rsquo;homologation CNDA</h4>
+<ul>
+<li>
+<p>Pour initier le passage d’homologation auprès du CNDA, fournir :</p>
+<ul>
+<li>les conditions particulières signées</li>
+<li>l’attestation de conformité de DEVCOOP</li>
+<li>le PDV entièrement filtré (tests/déclarations par l’EAI) et complété conjointement sur les déclarations.</li>
+</ul>
 </li>
 <li>
-<p>&hellip; et d’autres encore cf. <a href="/dmp/versions">le release note</a></p>
+<p>Obtention d&rsquo;un environnement dédié pour le passage d&rsquo;homologation et date de passage</p>
+</li>
+<li>
+<p>Obtention des cartes vitales de test DMP</p>
+</li>
+<li>
+<p>Passer les tests :  <a href="/dmp/howtos/homologation">/dmp/howtos/homologation</a></p>
+</li>
+<li>
+<p>Déposer les résultats sur <a href="https://cnda.ameli.fr/PortailNie/?page_id=153">l’espace personnel du CNDA</a></p>
 </li>
 </ul>
 
@@ -464,10 +537,6 @@ Version imprimable multipages.
   
   
 
-  
-
-    
-	
   
 
     
@@ -1007,59 +1076,9 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-5f5395f9ebb771d835f469de1c78beaa">3 - Différents environnements du DMP</h1>
-    <div class="lead">Les différents environnements pour accéder au DMP</div>
-	<p>Pour le DMP, Ils existent quatre types d&rsquo;environnements : </p>
-<ul>
-<li>développement</li>
-<li>homologation</li>
-<li>formation</li>
-<li>production</li>
-</ul>
-<h2 id="environnement-dhomologation">Environnement d&rsquo;Homologation</h2>
-<p>C&rsquo;est un environnement spécifique à l&rsquo;éditeur qui passe son homologation. Le CNDA donne les informations pour y accéder lors de la phase d&rsquo;homologation de l&rsquo;éditeur</p>
-<h2 id="environnements-de-formation">Environnements de Formation</h2>
-<p>Dans la fiche d&rsquo;information <code>PDT-INF-506v5</code> en date du 14 janvier 2022, il est fait mention de 4 environnements de formation avec des rétentions de données différentes :</p>
-<h3 id="formation-1---jeu-de-données-jamais-réinitialisé">Formation 1 - Jeu de données jamais réinitialisé</h3>
-<ul>
-<li>LPS V2 : <a href="https://formation1.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://formation1.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
-<li>WebPS : <a href="https://formation1.ps.dmp.gouv.fr/ps/acces-web">https://formation1.ps.dmp.gouv.fr/ps/acces-web</a></li>
-<li>Web Patient : <a href="https://formation1.patient.dmp.gouv.fr">https://formation1.patient.dmp.gouv.fr</a></li>
-</ul>
-<h3 id="formation-3---jeu-de-données-réinitialisé-tous-les-jours">Formation 3 - Jeu de données réinitialisé tous les jours</h3>
-<ul>
-<li>LPS V2 : <a href="https://formation3.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://formation3.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
-<li>WebPS : <a href="https://formation3.ps.dmp.gouv.fr/ps/acces-web">https://formation3.ps.dmp.gouv.fr/ps/acces-web</a></li>
-<li>Web Patient : <a href="https://formation3.patient.dmp.gouv.fr">https://formation3.patient.dmp.gouv.fr</a></li>
-</ul>
-<h3 id="formation-4---jeu-de-données-réinitialisé-tous-les-15-jours">Formation 4 - Jeu de données réinitialisé tous les 15 jours</h3>
-<ul>
-<li>LPS V2 : <a href="https://formation4.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://formation4.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
-<li>WebPS : <a href="https://formation4.ps.dmp.gouv.fr/ps/acces-web">https://formation4.ps.dmp.gouv.fr/ps/acces-web</a></li>
-<li>Web Patient : <a href="https://formation4.patient.dmp.gouv.fr">https://formation4.patient.dmp.gouv.fr</a></li>
-</ul>
-<h3 id="formation-5---jeu-de-données-réinitialisé-tous-les-mois">Formation 5 - Jeu de données réinitialisé tous les mois</h3>
-<ul>
-<li>LPS V2 : <a href="https://formation5.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://formation5.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
-<li>WebPS : <a href="https://formation5.ps.dmp.gouv.fr/ps/acces-web">https://formation5.ps.dmp.gouv.fr/ps/acces-web</a></li>
-<li>Web Patient : <a href="https://formation5.patient.dmp.gouv.fr">https://formation5.patient.dmp.gouv.fr</a></li>
-</ul>
-<h2 id="environnements-de-production">Environnements de Production</h2>
-<p>Dans la fiche d&rsquo;information <code>PDT-INF-547 v3</code> en date du 23 juillet 2019 :</p>
-<ul>
-<li>LPS v2 : <a href="https://lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
-<li>Web PS : <a href="https://www.dmp.fr/ps/acces-web/">https://www.dmp.fr/ps/acces-web/</a></li>
-</ul>
-<h1 id="environnement-de-développement">Environnement de Développement</h1>
-<ul>
-<li>Accessible à tous les utilisateurs l&rsquo;url LPS v2 : <a href="https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
-<li>Environnement Web PS et Patient : <a href="https://dev1.ps.dmp.gouv.fr/ps/acces-web">https://dev1.ps.dmp.gouv.fr/ps/acces-web</a></li>
-</ul>
-<p>Cet environnement est remis à jour toutes les semaines.</p>
-<h3 id="vaccination">Vaccination</h3>
-<p>Les différentes vaccinations possibles de valider pour le patient <strong>Jean BON</strong> :</p>
-<p><img src="validation_vaccination.png" alt="Validation Vaccination Jean Bon"></p>
-
+	<h1 id="pg-8b8e215b0b4cbdb8f1420baec42100c4">3 - Homologation</h1>
+    <div class="lead">Tout savoir sur le passage d&rsquo;homologation</div>
+	
 </div>
 
 
@@ -1075,138 +1094,53 @@ Les modalités de mise en oeuvre : détermination de l&rsquo;âge (cf. exigence 
   
 
   
-
-    
-	
-  
     
     
 	
     
 
-<div class="td-content" style="page-break-before: always">
+<div class="td-content" style="">
     
-	<h1 id="pg-033bf88f4975aceb23c710c946fdf868">4 - Integrateurs checklist</h1>
-    <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé DMP et faciliter son homologation.</div>
-	<p>Pour plus d’information officielle &ldquo;Cas des intégrateurs EAI&rdquo; : <a href="https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/">https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/</a></p>
-<p>Sinon, voici un petit récapitulatif des démarches à suivre :</p>
-<h2 id="pré-requis">Pré-requis</h2>
+	<h1 id="pg-8d66d4db099ec2061721ef2f86e22b52">3.1 - Homologation Phase 1 Prérequis</h1>
+    <div class="lead">Tout savoir sur la phase 1</div>
+	<h3 id="déroulement">Déroulement</h3>
 <ol>
-<li>Obtenir un NIE auprès du CNDA</li>
-<li>Remplir les conditions générales des TLSi AMO v3 (<a href="https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/">https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/</a>)</li>
-<li>Obtenir des cartes CPS et/ou certificats de test (médecin, CPE, autre) auprès de l&rsquo;ANS</li>
-</ol>
-<h2 id="choix-architecture">Choix Architecture</h2>
-<ol start="4">
-<li>
-<p>Choisir un mode d&rsquo;intégration/ authentification</p>
-<ul>
-<li>les moyens d&rsquo;authentification de l&rsquo;utilisateur doivent permettre l&rsquo;identification unique de l&rsquo;utilisateur</li>
-<li>le PS a-t-il accès à sa carte CPS ?</li>
-<li>Se rappeler que l&rsquo;éditeur agit pour le compte d&rsquo;un établissement de santé (RPPS)</li>
-<li>Un certificat serveur est lié au FINESS géographique/juridique de l&rsquo;établissement de santé.</li>
-</ul>
-</li>
-<li>
-<p>Choisir les profils d&rsquo;intégration :</p>
-<ul>
-<li>alimentation</li>
-<li>consultation</li>
-</ul>
-</li>
-</ol>
-<h2 id="développement--intégration">Développement / Intégration</h2>
-<ol start="6">
-<li>
-<p>Intégrer l&rsquo;ensemble des transactions choisies sur les profils choisis. La description de l&rsquo;ensemble des transactions se trouvent <a href="/dmp/howtos/transactions/">ici</a>.</p>
-<p>Deux modes d&rsquo;intégration :</p>
-<ul>
-<li><a href="/dmp/embedded">Java</a></li>
-<li><a href="/dmp/rest">REST</a></li>
-</ul>
-</li>
-</ol>
-<h2 id="nouvelle-procédure-dhomologation">Nouvelle procédure d&rsquo;homologation</h2>
-<p>Une nouvelle procédure d&rsquo;homologation a été mise en place le 23 mars 2023. Cette procédure est décrite dans l&rsquo;article 6 des conditions particulières.</p>
-<ol start="7">
-<li>Récupérer les condition particulières DMP sur le site du <strong><a href="https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/">CNDA</a></strong></li>
-<li>Remplir et signer une attestation sur l&rsquo;honneur vous déclarant détenir d&rsquo;un contrat de licence de la DevBox-santé (Article 4 conditions particulières)</li>
-<li>Remplir et signer les conditions et leurs annexes avec le(s) mode(s) d&rsquo;authentification et profil(s) choisi(s) (support <strong>DEVCOOP</strong> possible)</li>
-<li>Faire parvenir au CNDA les conditions particulières ainsi que l&rsquo;attestation</li>
-<li>Récupérer les autorisations d&rsquo;accés aux différents environnements et en tester les accès</li>
-<li>Faire Valider la Phase 1 par <strong>DEVCOOP</strong>
-<ul>
-<li>Récupérer le <a href="CDT_DMP_20230320_v2.7.0.xlsm">cahier de test</a> à jour</li>
+<li>Récupérer le <a href="/dmp/homologation/CDT_DMP_20230320_v2.7.0.xlsm">cahier de test</a> à jour et prendre connaissance de la NOTICE</li>
 <li>Filtrer l&rsquo;onglet Phase 1 sur les trois premières colonnes : Profil DMP-C, Authentification, Transaction en fonction de vos annexes remplies des conditions particulières.</li>
 <li>Fournir à <strong>DEVCOOP</strong> pour chaque code de test un répertoire contenant la trame d&rsquo;exécution ainsi que si besoin une ou deux impressions écrans pour illustration.</li>
-</ul>
-</li>
-<li>Remplir, signer et envoyer au <strong>CNDA</strong> le fichier <code>ATTESTATION_Realisation_Prerequis_DMPC_V1.pdf</code> disponible avec les conditions particulières téléchargées, en cohérence avec la réalisation des tests de la phase 1.</li>
-<li>Début de l&rsquo;examen par le <strong>CNDA</strong>
-<ul>
-<li>Phase 2 : Pré-Examen (<strong>VALIDATION_CNDA</strong>)</li>
-<li>Phase 3 : Examen de conformité (<strong>VALIDATION_CNDA</strong>)</li>
-</ul>
-</li>
 </ol>
-<h3 id="deprecated-conditions-particulières-et-validation-devcoop">[DEPRECATED] Conditions Particulières et validation DEVCOOP</h3>
-<!---
-Procédure temporaire :
-
- - Intégrateur : dépot des « prérequis » (ancien pdv avec déclarations) + contrat (les nouvelles CP) + l’attestation de conformité fournie par DEVCOOP au CNDA ;
-
- - CNDA rapatrie les déclarations sur le nouveau plan de test filtré (avec ou sans demande de précisons) ;
-
- - CNDA fournit le nouveau plan de test et l’accès à l’environnement dédié (mais aussi à DV1 pour faire des tests en parallèle) ;
-
- - Intégrateur réalise les tests de la phase 2 + terminent les déclarations du nouveau plan de test;
-
- - Intégrateur passage en « salle » (demo live).
-  -->
-<ul>
-<li>
-<p>Récupérer et remplir les Conditions Particulières DMP intégrateurs sur le site du CNDA (Une fois l&rsquo;architecture et les profils choisis)</p>
-</li>
-<li>
-<p>Fournir les Conditions Particulières à DEVCOOP</p>
-</li>
-<li>
-<p>Récupérer le PDV (Plan de vérification) filtré par DEVCOOP</p>
-</li>
-<li>
-<p>Remplir l&rsquo;onglet &ldquo;Déclarations&rdquo; du PDV contenant l&rsquo;ensemble des exigences</p>
-</li>
-<li>
-<p>Réaliser un test par transaction de l&rsquo;onglet &ldquo;Plan de tests&rdquo; du PDV</p>
-</li>
-<li>
-<p>Fournir à DEVCOOP le PDV rempli de ces &ldquo;Déclarations&rdquo; ainsi que les logs des tests réalisés</p>
-<p>==&gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP</p>
-</li>
-</ul>
-<h4 id="deprecated-processus-dhomologation-cnda">[DEPRECATED] Processus d&rsquo;homologation CNDA</h4>
-<ul>
-<li>
-<p>Pour initier le passage d’homologation auprès du CNDA, fournir :</p>
-<ul>
-<li>les conditions particulières signées</li>
-<li>l’attestation de conformité de DEVCOOP</li>
-<li>le PDV entièrement filtré (tests/déclarations par l’EAI) et complété conjointement sur les déclarations.</li>
-</ul>
-</li>
-<li>
-<p>Obtention d&rsquo;un environnement dédié pour le passage d&rsquo;homologation et date de passage</p>
-</li>
-<li>
-<p>Obtention des cartes vitales de test DMP</p>
-</li>
-<li>
-<p>Passer les tests :  <a href="/dmp/howtos/homologation">/dmp/howtos/homologation</a></p>
-</li>
-<li>
-<p>Déposer les résultats sur <a href="https://cnda.ameli.fr/PortailNie/?page_id=153">l’espace personnel du CNDA</a></p>
-</li>
-</ul>
+<h3 id="codes-de-test">Codes de Test</h3>
+<p>Indication concernant les différents tests prérequis.</p>
+<h4 id="pre_gen">PRE_GEN</h4>
+<blockquote>
+<p>L&rsquo;éditeur a pris connaissance du Guide d&rsquo;Intégration DMP et de la totalité des exigences qui concerne le périmètre de son LPS.</p>
+</blockquote>
+<p>Effectivement, suivre cette documentation ne vous dispense pas de lire attentivement le guide d&rsquo;intégration &ldquo;Service DMP intégré aux LPS&rdquo; (SEL-MP-037) dans la version du package cible.
+Ce document est disponible sur l&rsquo;espace industriel de Sesam-Vitale : <a href="https://industriels.sesam-vitale.fr/group/dmp-compatibilite">https://industriels.sesam-vitale.fr/group/dmp-compatibilite</a></p>
+<h4 id="pre_err">PRE_ERR</h4>
+<blockquote>
+<p>Le LPS affiche correctement les différents messages d&rsquo;erreurs et codeRetour (soapFault…) et adapte sa cinématique en fonction.</p>
+</blockquote>
+<p>Toute erreur provenant du serveur DMP, est interprété puis transformé en une Exception java typé en fonction de l’erreur remontée.</p>
+<p>Le message initial avec son code provenant du serveur DMP est toujours récupéré afin de fournir le bon message à l’intégrateur. Il faut veiller à remonter à l&rsquo;utilisateur cette information.</p>
+<h4 id="pre_tps">PRE_TPS</h4>
+<blockquote>
+<p>Le LPS se synchronise via un serveur de temps a minima toutes les 24h.</p>
+</blockquote>
+<p>Toutes les dates techniques (VIHF, dates de création si non renseignées) sont gérées par la DevBox-Santé, les autres dates doivent faire l&rsquo;objet d&rsquo;une synchronisation via NTP. Pour cela il est possible d&rsquo;utiliser le TimeManager de la DevBox-santé DMP.</p>
+<p>En java :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// injection du bean spring
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#5c35cc;font-weight:bold">@Autowired</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">TimeManager</span> <span style="color:#000">clock</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Usage dans le code
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">ZonedDateTime</span> <span style="color:#000">now</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">clock</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getLocal</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span></code></pre></div><p>En REST :</p>
+<pre tabindex="0"><code>curl -X &#39;GET&#39;   &#39;http://localhost:9999/dmp/time/iso&#39;
+</code></pre><h4 id="pre_mode_cnxsc">PRE_MODE_CNXSC</h4>
+<blockquote>
+<p>Des tests ont été faits en mode Connexion Secrète pour un patient mineur.</p>
+</blockquote>
+<p>Pour toute information sur la mise en place de la connexion secrète avec la DevBox-santé DMP : <a href="/dmp/howtos/transactions/#gestion-de-la-connexion-secr%C3%A8te">/dmp/howtos/transactions/#gestion-de-la-connexion-secrète</a></p>
 
 </div>
 
@@ -1234,7 +1168,7 @@ Procédure temporaire :
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-8b8e215b0b4cbdb8f1420baec42100c4">5 - Passage de l&#39;homologation</h1>
+	<h1 id="pg-c9eddcbf292e24a9853f3cd7e99ad4de">3.2 - [Deprecated] Ancienne procédure</h1>
     <div class="lead">Les différents points à connaître pour homologuer votre solution</div>
 	
 
@@ -1405,6 +1339,10 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&lt;/ds:X509Certificate&gt;&lt;/ds:X
     
 	
   
+
+    
+	
+  
     
     
 	
@@ -1412,7 +1350,7 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&lt;/ds:X509Certificate&gt;&lt;/ds:X
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-0f6a8b8e81b29a55c0237a0114578bf4">6 - Gestion des certificats</h1>
+	<h1 id="pg-0f6a8b8e81b29a55c0237a0114578bf4">4 - Gestion des certificats</h1>
     <div class="lead">Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification indirecte</div>
 	<p>Afin d&rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité.
 Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande à partir d&rsquo;un téléservice dont la procédure est décrite ici.</p>
@@ -1553,7 +1491,7 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-de03b1ff0ff2188a68d5d13f0a8489ec">7 - Schematron</h1>
+	<h1 id="pg-de03b1ff0ff2188a68d5d13f0a8489ec">5 - Schematron</h1>
     <div class="lead">Validation des CDA générés par la DevBox-Santé DMP lors de l&rsquo;homologation</div>
 	<h2 id="validation-automatique">Validation automatique</h2>
 <p>La DevBox-santé santé intègre les différents composants du projet github de l&rsquo;ANS, et propose la validation SCHEMATRON automatique par l&rsquo;utilisation des feuilles de style <code>xslt</code> fournies dans le projet <a href="https://github.com/ansforge/TestContenuCDA">https://github.com/ansforge/TestContenuCDA</a> .</p>
@@ -1626,6 +1564,211 @@ DMPCCdaValidator       :
   
   
 
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-5f5395f9ebb771d835f469de1c78beaa">6 - Différents environnements du DMP</h1>
+    <div class="lead">Les différents environnements pour accéder au DMP</div>
+	<p>Pour le DMP, Ils existent quatre types d&rsquo;environnements : </p>
+<ul>
+<li>développement</li>
+<li>homologation</li>
+<li>formation</li>
+<li>production</li>
+</ul>
+<h2 id="environnement-dhomologation">Environnement d&rsquo;Homologation</h2>
+<p>C&rsquo;est un environnement spécifique à l&rsquo;éditeur qui passe son homologation. Le CNDA donne les informations pour y accéder lors de la phase d&rsquo;homologation de l&rsquo;éditeur</p>
+<h2 id="environnements-de-formation">Environnements de Formation</h2>
+<p>Dans la fiche d&rsquo;information <code>PDT-INF-506v5</code> en date du 14 janvier 2022, il est fait mention de 4 environnements de formation avec des rétentions de données différentes :</p>
+<h3 id="formation-1---jeu-de-données-jamais-réinitialisé">Formation 1 - Jeu de données jamais réinitialisé</h3>
+<ul>
+<li>LPS V2 : <a href="https://formation1.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://formation1.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
+<li>WebPS : <a href="https://formation1.ps.dmp.gouv.fr/ps/acces-web">https://formation1.ps.dmp.gouv.fr/ps/acces-web</a></li>
+<li>Web Patient : <a href="https://formation1.patient.dmp.gouv.fr">https://formation1.patient.dmp.gouv.fr</a></li>
+</ul>
+<h3 id="formation-3---jeu-de-données-réinitialisé-tous-les-jours">Formation 3 - Jeu de données réinitialisé tous les jours</h3>
+<ul>
+<li>LPS V2 : <a href="https://formation3.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://formation3.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
+<li>WebPS : <a href="https://formation3.ps.dmp.gouv.fr/ps/acces-web">https://formation3.ps.dmp.gouv.fr/ps/acces-web</a></li>
+<li>Web Patient : <a href="https://formation3.patient.dmp.gouv.fr">https://formation3.patient.dmp.gouv.fr</a></li>
+</ul>
+<h3 id="formation-4---jeu-de-données-réinitialisé-tous-les-15-jours">Formation 4 - Jeu de données réinitialisé tous les 15 jours</h3>
+<ul>
+<li>LPS V2 : <a href="https://formation4.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://formation4.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
+<li>WebPS : <a href="https://formation4.ps.dmp.gouv.fr/ps/acces-web">https://formation4.ps.dmp.gouv.fr/ps/acces-web</a></li>
+<li>Web Patient : <a href="https://formation4.patient.dmp.gouv.fr">https://formation4.patient.dmp.gouv.fr</a></li>
+</ul>
+<h3 id="formation-5---jeu-de-données-réinitialisé-tous-les-mois">Formation 5 - Jeu de données réinitialisé tous les mois</h3>
+<ul>
+<li>LPS V2 : <a href="https://formation5.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://formation5.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
+<li>WebPS : <a href="https://formation5.ps.dmp.gouv.fr/ps/acces-web">https://formation5.ps.dmp.gouv.fr/ps/acces-web</a></li>
+<li>Web Patient : <a href="https://formation5.patient.dmp.gouv.fr">https://formation5.patient.dmp.gouv.fr</a></li>
+</ul>
+<h2 id="environnements-de-production">Environnements de Production</h2>
+<p>Dans la fiche d&rsquo;information <code>PDT-INF-547 v3</code> en date du 23 juillet 2019 :</p>
+<ul>
+<li>LPS v2 : <a href="https://lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
+<li>Web PS : <a href="https://www.dmp.fr/ps/acces-web/">https://www.dmp.fr/ps/acces-web/</a></li>
+</ul>
+<h1 id="environnement-de-développement">Environnement de Développement</h1>
+<ul>
+<li>Accessible à tous les utilisateurs l&rsquo;url LPS v2 : <a href="https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://dev1.lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
+<li>Environnement Web PS et Patient : <a href="https://dev1.ps.dmp.gouv.fr/ps/acces-web">https://dev1.ps.dmp.gouv.fr/ps/acces-web</a></li>
+</ul>
+<p>Cet environnement est remis à jour toutes les semaines.</p>
+<h3 id="vaccination">Vaccination</h3>
+<p>Les différentes vaccinations possibles de valider pour le patient <strong>Jean BON</strong> :</p>
+<p><img src="validation_vaccination.png" alt="Validation Vaccination Jean Bon"></p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-9b74348bb827fc0660b4ba571dc86437">7 - Migrations</h1>
+    <div class="lead">Guide de migration vers les versions supérieures de la DevBox-Santé DMP</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-6710e3281519b88ee2aa5944e262c072">7.1 - Migration 4.7 vers la 5.0</h1>
+    <div class="lead">Guide de migration vers la nouvelle version 5.0</div>
+	<p>La version 5.0 apporte son lot de nouveautés, et tend vers une intégration la plus souple avec le DMP mais aussi les autres téléservices de santé.</p>
+<p>Cette version supporte encore les anciennes requêtes mais déprecient certaines notions.</p>
+<p>Une nouvelle collection postman est disponible dans l’espace public Postman : <a href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview">https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples</a></p>
+<h2 id="note-et-historique-de-vaccination">Note et Historique de vaccination</h2>
+<p>Tout d’abord, nous avons ajouté le support de la note et historique de vaccinations, pour plus d’information consulter la documentation à ce sujet : <a href="/dmp/cda/vaccination">/dmp/cda/vaccination</a></p>
+<h2 id="gestion-de-linsaméliorée">Gestion de l’INS améliorée</h2>
+<p>Pour être en conformité avec l’INSi et simplifier l’intégration entre les deux composants DMP et INSi, dans tous les objets faisant référence à un INS, le couple identifiant/autorité est dorénavant utilisé au lieu de spécifier cette autorité dans le contexte de la requête.</p>
+<p>Par exemple, une requête (td0.2 test d’existence) en version 4.7 :</p>
+<p><img src="td0.2_4.7.png" alt="td0.2_4.7.png"></p>
+<p>devient en 5.0 :</p>
+<p><img src="td0.2_5.0.png" alt="td0.2_5.0.png"></p>
+<p>Bien sur, l’ancienne forme est encore supporté sur cette version mais il est fortement conseillé d’adopter la nouvelle forme.</p>
+<p>Le même exemple en java, un test d’existence en 4.7 :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setInsNirAutorite</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">DMPCContext</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">DMPCInsNirAutorite</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">TEST</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">TD02Response</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;277076322082910&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span></code></pre></div><p>devient en 5.0</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">var</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td02Exist</span><span style="color:#ce5c00;font-weight:bold">(</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span>  
+</span></span><span style="display:flex;"><span>                    <span style="color:#000">TD02Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">builder</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">matriculeINS</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Identifiant</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">builder</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">valeur</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;277076322082910&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">identifiantSysteme</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Oids</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">ANS_1_2_250_1_213</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">_1_4_10_INS_NIR_TEST</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">val</span><span style="color:#ce5c00;font-weight:bold">())</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">())</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><h2 id="validation">Validation</h2>
+<p>Les messages de validation ont été améliorés en contextualisant la plupart des validations (en soumission, en récupération). Mais aussi plus finement, comme par exemple, la vérification qu’un code d’un document est bien dans son jeu de valeurs spécifique.</p>
+<p>Quelques exemples de validations effectuées sur un <a href="https://bitbucket.org/devbox-sante/dmpc-api/src/master/src/main/java/fr/devboxsante/dmp/model/DMPCDocument.java"><code>DMPCDocument</code></a> :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">DMPCDocument</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@CodeValid</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">jeuValeurs</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">DMPCCode</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">JeuxValeursDMP</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">FORMAT_CODE</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">groups</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#000">OnSubmit</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">})</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">DMPCCode</span> <span style="color:#000">formatCode</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@NotNull</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">groups</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#000">BinaryRequired</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">})</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">byte</span><span style="color:#ce5c00;font-weight:bold">[]</span> <span style="color:#000">content</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#5c35cc;font-weight:bold">@NotNull</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">groups</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#000">OnRetrieve</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">})</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#000">String</span> <span style="color:#000">entryUuid</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span></code></pre></div><p>Exemple de message obtenu dorénavant pour un classCode erronné dans le document :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span> <span style="color:#4e9a06">&#34;message&#34;</span><span style="color:#a40000">:</span> <span style="color:#4e9a06">&#34;Code 55 inexistant dans la nomenclature JDV_J57-ClassCode-DMP.tabs&#34;</span>
+</span></span></code></pre></div><p>Par conséquent, certains contrôles sont plus sévères, et donc certains cas passant peuvent ne plus l’être. Par exemple, il n’est plus possible d’identifier un Personnel de santé avec un <code>internalId</code> sans préciser son identifiant de structure. Ou encore, une vérification du format des RPPS est effectué dans les documents envoyés.</p>
+<p>Consulter, les sources pour visualiser les contrôles possibles : <a href="https://bitbucket.org/devbox-sante/dmpc-api/src/master/">https://bitbucket.org/devbox-sante/dmpc-api/src/master/</a></p>
+<h2 id="ajout-de-la-td04">Ajout de la TD0.4</h2>
+<p>La documentation sur cette nouvelle transaction est <a href="/dmp/howtos/transactions/#td04--lister-les-dmp-autoris%C3%A9s-depuis-version-50">ici</a></p>
+<h2 id="autres-évolutions">Autres évolutions</h2>
+<ul>
+<li>
+<p>Suppression de la TD0.0</p>
+</li>
+<li>
+<p>Meilleur gestion des cartes CPF (en formation)</p>
+</li>
+<li>
+<p>Gestion multicertificats</p>
+</li>
+<li>
+<p>Suppression de la transaction TD1.5</p>
+</li>
+<li>
+<p>Suppression du statut Médecint Traitant (TD0.3)</p>
+</li>
+<li>
+<p>Contrôle des formats d’identifiant (RPPS, FINESS &hellip;)</p>
+</li>
+<li>
+<p>&hellip; et d’autres encore cf. <a href="/dmp/versions">le release note</a></p>
+</li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
   
 
     
@@ -1855,15 +1998,15 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
     
 	<h1 id="pg-6b9c62d7feaf9fcc9d33c8f6b0be34a8">11 - FAQ</h1>
     <div class="lead">Foire aux questions intégrations DMP</div>
-	<blockquote>
-<p>Le champ <strong>Resource_id</strong> est incorrect : 2770763220829^^^&amp;1.2.250.1.213.1.4.10&amp;ISO^NH</p>
-</blockquote>
+	<h4 id="le-champ-__resource_id__-est-incorrect--27707632208291225012131410isonh">Le champ <strong>Resource_id</strong> est incorrect : 2770763220829^^^&amp;1.2.250.1.213.1.4.10&amp;ISO^NH</h4>
 <p>Vérifier la taille de l’INS, il manque généralement la clé. La bonne valeur de cet INS pour les transactions DMP est : <code>277076322082910</code></p>
-<blockquote>
-<p>Quel statut d’INS pour l’alimentation DMP ?</p>
-</blockquote>
+<h4 id="quel-statut-dins-pour-lalimentation-dmp-">Quel statut d’INS pour l’alimentation DMP ?</h4>
 <p>Une INS qualifiée sera nécessaire pour l’alimentation du DMP. A défaut, le DMP ne pourra pas être alimenté.</p>
 <p><em><strong>Source : <code>INS_Guide implementation_V2_0.pdf</code></strong></em></p>
+<h4 id="aucun-authorinstitution-ne-correspond-à-lutilisateur-du-vihf-authentification-indirecte">Aucun AuthorInstitution ne correspond à l&rsquo;utilisateur du VIHF [Authentification Indirecte]</h4>
+<p>En authentification indirecte, La DevBox-Santé DMP récupère les informations de la structure dans le certificat P12 et surcharge avec ces informations la structure du contexte DMP de la requête.</p>
+<p>Cette surcharge permet de respecter l&rsquo;exigence de respecter le format du champ <code>/Assertion/Issuer</code> du VIHF défini dans &ldquo;Volet Transport Synchrone pour Client Lourd&rdquo; du CI-SIS de l&rsquo;ANS, mais aussi, de respecter le champ <code>Identifiant_Structure</code> du VIHF défini dans le guide d&rsquo;intégration du DMP (SEL-MP-037).</p>
+<p>La structure du LegalAuthenticator du document doit correspondre à la structure du contexte qui est déduite du certificat P12. Il est donc conseillé de ne pas renseigner le legalAuthenticator pour un document afin de le récupérer automatiquement du contexte.</p>
 
 </div>
 

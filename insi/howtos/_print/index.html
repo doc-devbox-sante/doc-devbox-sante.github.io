@@ -209,9 +209,20 @@ Version imprimable multipages.
     
     
 	
-<li>6: <a href="#pg-d298870dfc5976d147b75c9cb223ad52">Foire aux questions INSi</a></li>
+<li>6: <a href="#pg-331c095d82641a15dc0961c57e0b63e8">Foire aux questions INSi</a></li>
 
 
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
     
   
 
@@ -316,6 +327,8 @@ Le service effectue une première recherche vers le RFI :</p>
 Dans la configuration actuelle de l&rsquo;environnement de tests, il n&rsquo;est pas possible d&rsquo;obtenir un CR01, c&rsquo;est pour cela (et pour tester les cinématiques attendues dans le Guide d&rsquo;intégration) que dans le package de tests sont fournis des fichiers xml à injecter dans le LPS, pour simuler les réponses du service que l&rsquo;on ne peut obtenir dans notre environnement. En environnement de production, lorsqu’un INS ne sera pas trouvé c’est bien un CR01 qui sera restitué.</li>
 </ul>
 </blockquote>
+<h2 id="déclaration-à-apporter-lors-de-vos-tests">Déclaration à apporter lors de vos Tests</h2>
+<p>Dans certains cas de tests de conformités, certaines déclarations peuvent être nécessaires. Elles sont reprises <a href="https://bitbucket.org/devbox-sante/homologation/issues?q=insi+test">ici</a></p>
 <h1 id="exemples-json">Exemples json</h1>
 <p>Voici quelques exemples json repris des tests :</p>
 <h2 id="ws_ins1">WS_INS1</h2>
@@ -567,23 +580,31 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-d298870dfc5976d147b75c9cb223ad52">6 - Foire aux questions INSi</h1>
+	<h1 id="pg-331c095d82641a15dc0961c57e0b63e8">6 - Foire aux questions INSi</h1>
     <div class="lead">Compilation des questions au sujet de l&rsquo;intégration INSi</div>
-	<h2 id="intégration-technique-du-composant">Intégration technique du composant</h2>
-<h4 id="desir_620-le-certificat-de-la-carte-ps-est-erroné-">&ldquo;(desir_620, Le certificat de la carte PS est erroné. )&rdquo;</h4>
+	<h3 id="desir_620-le-certificat-de-la-carte-ps-est-erroné-">&ldquo;(desir_620, Le certificat de la carte PS est erroné. )&rdquo;</h3>
 <blockquote>
 <p>Vérifier que vous êtes sur le bon environnement (deux environnements distincts entre les cps et p12 ainsi que pour les environnements de qualification et de production)</p>
 </blockquote>
-<h4 id="des-erreurs-insi_101-et-insi_102-apparaissent-sur-les-environnement-de-qualification">Des erreurs insi_101 et insi_102 apparaissent sur les environnement de qualification</h4>
+<h3 id="des-erreurs-insi_101-et-insi_102-apparaissent-sur-les-environnement-de-qualification">Des erreurs insi_101 et insi_102 apparaissent sur les environnement de qualification</h3>
 <blockquote>
 <p>Les environnements de qualification ne gèrent pas correctement les recherches sans résultat. Plus d’information : <a href="/insi/howtos/testCNDA">/insi/howtos/testCNDA</a></p>
 </blockquote>
-<h4 id="àquoi-correspond-lidentifiant-de-facturation-obligatoire-dans-le-contexte-des-requêtes-">À quoi correspond l’identifiant de facturation, obligatoire dans le contexte des requêtes ?</h4>
+<h3 id="àquoi-correspond-lidentifiant-de-facturation-obligatoire-dans-le-contexte-des-requêtes-">À quoi correspond l’identifiant de facturation, obligatoire dans le contexte des requêtes ?</h3>
 <p>Il s’agit du numero FINESS géographique de la structure ou son SIRET, information que l’on ne peut déduire de la carte CPS</p>
 <p><img src="/insi/howtos/insi_id_facturation_pour_assertion.png" alt=""></p>
-<h4 id="quels-sont-les-différents-statuts-didentité-">Quels sont les différents statuts d’identité ?</h4>
-<p><img src="/insi/howtos/differentsStatutsINS.png" alt="differentsStatutsINS.png"></p>
+<h3 id="quels-sont-les-différents-statuts-didentité-">Quels sont les différents statuts d’identité ?</h3>
+<p><img src="differentsStatutsINS.png" alt="differentsStatutsINS.png"></p>
 <p><em><strong>Source : <code>INS_Guide implementation_V2_0.pdf</code></strong></em></p>
+<h3 id="différencier-un-ins_nir-dun-ins_nia">Différencier un INS_NIR d&rsquo;un INS_NIA</h3>
+<p>Pour distinguer un INS NIA des autres, il suffit de s&rsquo;intéresser à l&rsquo;identifiant système du MatriculeINS  remonté par le Téléservice INS :</p>
+<p><img src="INS_Autorites.png" alt="INS_Autorites.png"></p>
+<p>Cet identifiantSysteme peut prendre toutes ces valeurs : <a href="https://bitbucket.org/devbox-sante/insi-api/src/master/src/main/java/fr/devboxsante/insi/model/INSAutorite.java">https://bitbucket.org/devbox-sante/insi-api/src/master/src/main/java/fr/devboxsante/insi/model/INSAutorite.java</a></p>
+<p>Pour des explications fonctionnelles de l&rsquo;ANS :</p>
+<ul>
+<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf</a></li>
+<li>ou encore <a href="https://mos.esante.gouv.fr/8.html#_e59c299a-907b-448a-873b-4ac4e23ef24c">https://mos.esante.gouv.fr/8.html#_e59c299a-907b-448a-873b-4ac4e23ef24c</a></li>
+</ul>
 <h2 id="webinaire-authentification-par-certificat-logiciel-du-16novembre-2021">Webinaire Authentification par certificat logiciel du 16 novembre 2021</h2>
 <p>Reprises des questions réponses du webinaire <strong>&ldquo;Développer l’authentification TLS mutuelle par certificat logiciel pour INSi&rdquo; - mardi 16 novembre 2021 - 14h30</strong> :</p>
 <ul>
@@ -627,6 +648,18 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
 </div>
 
 
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
 
     
 	

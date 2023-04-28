@@ -153,7 +153,7 @@ if (!doNotTrack) {
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtosfaq-li">
   <input type="checkbox" id="m-insihowtosfaq-check"/>
-  <label for="m-insihowtosfaq-check"><a href="/insi/howtos/faq/" title="Foire aux questions INSi" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-insihowtosfaq"><span class="">FAQ</span></a></label>
+  <label for="m-insihowtosfaq-check"><a href="/insi/howtos/faq/" title="Foire aux questions INSi" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-insihowtosfaq"><span class="">FAQ</span></a></label>
   
 </li>
   </ul>
@@ -186,6 +186,10 @@ if (!doNotTrack) {
 
             <div class="td-toc">
         <nav id="TableOfContents">
+  <ul>
+    <li><a href="#déclaration-à-apporter-lors-de-vos-tests">Déclaration à apporter lors de vos Tests</a></li>
+  </ul>
+
   <ul>
     <li><a href="#ws_ins1">WS_INS1</a></li>
     <li><a href="#ws_ins2">WS_INS2</a></li>
@@ -272,6 +276,8 @@ Le service effectue une première recherche vers le RFI :</p>
 Dans la configuration actuelle de l&rsquo;environnement de tests, il n&rsquo;est pas possible d&rsquo;obtenir un CR01, c&rsquo;est pour cela (et pour tester les cinématiques attendues dans le Guide d&rsquo;intégration) que dans le package de tests sont fournis des fichiers xml à injecter dans le LPS, pour simuler les réponses du service que l&rsquo;on ne peut obtenir dans notre environnement. En environnement de production, lorsqu’un INS ne sera pas trouvé c’est bien un CR01 qui sera restitué.</li>
 </ul>
 </blockquote>
+<h2 id="déclaration-à-apporter-lors-de-vos-tests">Déclaration à apporter lors de vos Tests</h2>
+<p>Dans certains cas de tests de conformités, certaines déclarations peuvent être nécessaires. Elles sont reprises <a href="https://bitbucket.org/devbox-sante/homologation/issues?q=insi+test">ici</a></p>
 <h1 id="exemples-json">Exemples json</h1>
 <p>Voici quelques exemples json repris des tests :</p>
 <h2 id="ws_ins1">WS_INS1</h2>

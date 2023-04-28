@@ -4,6 +4,8 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.104.2" />
+<link rel="alternate" type="text/html" href="/insi/howtos/faq/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="/insi/howtos/faq/index.xml">
 <meta name="robots" content="index, follow">
 
 
@@ -24,17 +26,12 @@
 <meta property="og:title" content="Foire aux questions INSi" />
 <meta property="og:description" content="Compilation des questions au sujet de l&#39;intégration INSi 
 " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/insi/howtos/faq/" /><meta property="article:section" content="insi" />
-
-<meta property="article:modified_time" content="2023-04-24T10:50:49+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/insi/howtos/faq/" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Foire aux questions INSi">
 <meta itemprop="description" content="Compilation des questions au sujet de l&#39;intégration INSi 
-">
-<meta itemprop="dateModified" content="2023-04-24T10:50:49+02:00" />
-<meta itemprop="wordCount" content="432">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Foire aux questions INSi"/>
 <meta name="twitter:description" content="Compilation des questions au sujet de l&#39;intégration INSi 
 "/>
@@ -63,7 +60,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
   </head>
-  <body class="td-page">
+  <body class="td-section">
     <header>
       <nav
   class="js-navbar-scroll navbar navbar-expand navbar-dark  flex-column flex-md-row td-navbar">
@@ -156,7 +153,7 @@ if (!doNotTrack) {
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-insihowtosfaq-li">
   <input type="checkbox" id="m-insihowtosfaq-check" checked/>
-  <label for="m-insihowtosfaq-check"><a href="/insi/howtos/faq/" title="Foire aux questions INSi" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-insihowtosfaq"><span class="td-sidebar-nav-active-item">FAQ</span></a></label>
+  <label for="m-insihowtosfaq-check"><a href="/insi/howtos/faq/" title="Foire aux questions INSi" class="align-left pl-0  active td-sidebar-link td-sidebar-link__section" id="m-insihowtosfaq"><span class="td-sidebar-nav-active-item">FAQ</span></a></label>
   
 </li>
   </ul>
@@ -183,16 +180,20 @@ if (!doNotTrack) {
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a id="print" href="/insi/howtos/_print/"><i class="fa-solid fa-print fa-fw"></i> Imprimer la section entière</a>
+<a id="print" href="/insi/howtos/faq/_print/"><i class="fa-solid fa-print fa-fw"></i> Imprimer la section entière</a>
 
 </div>
 
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#intégration-technique-du-composant">Intégration technique du composant</a>
+    <li>
       <ul>
-        <li></li>
+        <li><a href="#desir_620-le-certificat-de-la-carte-ps-est-erroné-">&ldquo;(desir_620, Le certificat de la carte PS est erroné. )&rdquo;</a></li>
+        <li><a href="#des-erreurs-insi_101-et-insi_102-apparaissent-sur-les-environnement-de-qualification">Des erreurs insi_101 et insi_102 apparaissent sur les environnement de qualification</a></li>
+        <li><a href="#àquoi-correspond-lidentifiant-de-facturation-obligatoire-dans-le-contexte-des-requêtes-">À quoi correspond l’identifiant de facturation, obligatoire dans le contexte des requêtes ?</a></li>
+        <li><a href="#quels-sont-les-différents-statuts-didentité-">Quels sont les différents statuts d’identité ?</a></li>
+        <li><a href="#différencier-un-ins_nir-dun-ins_nia">Différencier un INS_NIR d&rsquo;un INS_NIA</a></li>
       </ul>
     </li>
     <li><a href="#webinaire-authentification-par-certificat-logiciel-du-16novembre-2021">Webinaire Authentification par certificat logiciel du 16 novembre 2021</a></li>
@@ -241,37 +242,45 @@ if (!doNotTrack) {
             
 <div class="td-content">
 	<h1>Foire aux questions INSi</h1>
-	<div class="lead">Compilation des questions au sujet de l&rsquo;intégration INSi</div>
+  <div class="lead">Compilation des questions au sujet de l&rsquo;intégration INSi</div>
 	<header class="article-meta">
 		
-
-  
-    
-
-
-  
-    
-
-
-  
-
 		
-	</header>    
-	<h2 id="intégration-technique-du-composant">Intégration technique du composant</h2>
-<h4 id="desir_620-le-certificat-de-la-carte-ps-est-erroné-">&ldquo;(desir_620, Le certificat de la carte PS est erroné. )&rdquo;</h4>
+			
+				
+
+
+			
+				
+
+
+			
+		
+		
+	</header>
+	<h3 id="desir_620-le-certificat-de-la-carte-ps-est-erroné-">&ldquo;(desir_620, Le certificat de la carte PS est erroné. )&rdquo;</h3>
 <blockquote>
 <p>Vérifier que vous êtes sur le bon environnement (deux environnements distincts entre les cps et p12 ainsi que pour les environnements de qualification et de production)</p>
 </blockquote>
-<h4 id="des-erreurs-insi_101-et-insi_102-apparaissent-sur-les-environnement-de-qualification">Des erreurs insi_101 et insi_102 apparaissent sur les environnement de qualification</h4>
+<h3 id="des-erreurs-insi_101-et-insi_102-apparaissent-sur-les-environnement-de-qualification">Des erreurs insi_101 et insi_102 apparaissent sur les environnement de qualification</h3>
 <blockquote>
 <p>Les environnements de qualification ne gèrent pas correctement les recherches sans résultat. Plus d’information : <a href="/insi/howtos/testCNDA">/insi/howtos/testCNDA</a></p>
 </blockquote>
-<h4 id="àquoi-correspond-lidentifiant-de-facturation-obligatoire-dans-le-contexte-des-requêtes-">À quoi correspond l’identifiant de facturation, obligatoire dans le contexte des requêtes ?</h4>
+<h3 id="àquoi-correspond-lidentifiant-de-facturation-obligatoire-dans-le-contexte-des-requêtes-">À quoi correspond l’identifiant de facturation, obligatoire dans le contexte des requêtes ?</h3>
 <p>Il s’agit du numero FINESS géographique de la structure ou son SIRET, information que l’on ne peut déduire de la carte CPS</p>
 <p><img src="/insi/howtos/insi_id_facturation_pour_assertion.png" alt=""></p>
-<h4 id="quels-sont-les-différents-statuts-didentité-">Quels sont les différents statuts d’identité ?</h4>
-<p><img src="/insi/howtos/differentsStatutsINS.png" alt="differentsStatutsINS.png"></p>
+<h3 id="quels-sont-les-différents-statuts-didentité-">Quels sont les différents statuts d’identité ?</h3>
+<p><img src="differentsStatutsINS.png" alt="differentsStatutsINS.png"></p>
 <p><em><strong>Source : <code>INS_Guide implementation_V2_0.pdf</code></strong></em></p>
+<h3 id="différencier-un-ins_nir-dun-ins_nia">Différencier un INS_NIR d&rsquo;un INS_NIA</h3>
+<p>Pour distinguer un INS NIA des autres, il suffit de s&rsquo;intéresser à l&rsquo;identifiant système du MatriculeINS  remonté par le Téléservice INS :</p>
+<p><img src="INS_Autorites.png" alt="INS_Autorites.png"></p>
+<p>Cet identifiantSysteme peut prendre toutes ces valeurs : <a href="https://bitbucket.org/devbox-sante/insi-api/src/master/src/main/java/fr/devboxsante/insi/model/INSAutorite.java">https://bitbucket.org/devbox-sante/insi-api/src/master/src/main/java/fr/devboxsante/insi/model/INSAutorite.java</a></p>
+<p>Pour des explications fonctionnelles de l&rsquo;ANS :</p>
+<ul>
+<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf</a></li>
+<li>ou encore <a href="https://mos.esante.gouv.fr/8.html#_e59c299a-907b-448a-873b-4ac4e23ef24c">https://mos.esante.gouv.fr/8.html#_e59c299a-907b-448a-873b-4ac4e23ef24c</a></li>
+</ul>
 <h2 id="webinaire-authentification-par-certificat-logiciel-du-16novembre-2021">Webinaire Authentification par certificat logiciel du 16 novembre 2021</h2>
 <p>Reprises des questions réponses du webinaire <strong>&ldquo;Développer l’authentification TLS mutuelle par certificat logiciel pour INSi&rdquo; - mardi 16 novembre 2021 - 14h30</strong> :</p>
 <ul>
@@ -312,11 +321,22 @@ if (!doNotTrack) {
 <p>Le formulaire de déclaration des administrateurs techniques autorisés à commander des certificats logiciels - F413 est disponible à cette adresse : <a href="https://esante.gouv.fr/documents/413">https://esante.gouv.fr/documents/413</a></p>
 </blockquote>
 
+        <div class="section-index">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
 	
 	
 	
 </div>
-
 
           </main>
         </div>

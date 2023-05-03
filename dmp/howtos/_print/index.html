@@ -1996,15 +1996,24 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
     
 	<h1 id="pg-6b9c62d7feaf9fcc9d33c8f6b0be34a8">11 - FAQ</h1>
     <div class="lead">Foire aux questions intégrations DMP</div>
-	<h4 id="le-champ-__resource_id__-est-incorrect--27707632208291225012131410isonh">Le champ <strong>Resource_id</strong> est incorrect : 2770763220829^^^&amp;1.2.250.1.213.1.4.10&amp;ISO^NH</h4>
+	<h3 id="le-champ-__resource_id__-est-incorrect--27707632208291225012131410isonh">Le champ <strong>Resource_id</strong> est incorrect : 2770763220829^^^&amp;1.2.250.1.213.1.4.10&amp;ISO^NH</h3>
 <p>Vérifier la taille de l’INS, il manque généralement la clé. La bonne valeur de cet INS pour les transactions DMP est : <code>277076322082910</code></p>
-<h4 id="quel-statut-dins-pour-lalimentation-dmp-">Quel statut d’INS pour l’alimentation DMP ?</h4>
+<h3 id="quel-statut-dins-pour-lalimentation-dmp-">Quel statut d’INS pour l’alimentation DMP ?</h3>
 <p>Une INS qualifiée sera nécessaire pour l’alimentation du DMP. A défaut, le DMP ne pourra pas être alimenté.</p>
 <p><em><strong>Source : <code>INS_Guide implementation_V2_0.pdf</code></strong></em></p>
-<h4 id="aucun-authorinstitution-ne-correspond-à-lutilisateur-du-vihf-authentification-indirecte">Aucun AuthorInstitution ne correspond à l&rsquo;utilisateur du VIHF [Authentification Indirecte]</h4>
+<h3 id="aucun-authorinstitution-ne-correspond-à-lutilisateur-du-vihf-authentification-indirecte">Aucun AuthorInstitution ne correspond à l&rsquo;utilisateur du VIHF [Authentification Indirecte]</h3>
 <p>En authentification indirecte, La DevBox-Santé DMP récupère les informations de la structure dans le certificat P12 et surcharge avec ces informations la structure du contexte DMP de la requête.</p>
 <p>Cette surcharge permet de respecter l&rsquo;exigence de respecter le format du champ <code>/Assertion/Issuer</code> du VIHF défini dans &ldquo;Volet Transport Synchrone pour Client Lourd&rdquo; du CI-SIS de l&rsquo;ANS, mais aussi, de respecter le champ <code>Identifiant_Structure</code> du VIHF défini dans le guide d&rsquo;intégration du DMP (SEL-MP-037).</p>
 <p>La structure du LegalAuthenticator du document doit correspondre à la structure du contexte qui est déduite du certificat P12. Il est donc conseillé de ne pas renseigner le legalAuthenticator pour un document afin de le récupérer automatiquement du contexte.</p>
+<h3 id="remplacement-note-de-vaccination---la-date-et-le-code-cis-de-cette-vaccination-sont-deja-presents-dans-le-cva-complet-errorcodedmpfragmentcvaerror-">Remplacement note de vaccination : « La date et le code CIS de cette vaccination sont deja presents dans le CVA complet&quot; errorCode=&ldquo;DMPFragmentCVAError&rdquo; »,</h3>
+<p>Le DMP n’accepte pas 2 vaccins identiques à la même date (code CIS + date doivent être unique dans le carnet de vaccination).</p>
+<p>Lorsque vous souhaitez remplacer une note de vaccination, le vaccin doit avoir le même identifiant pour qu’il puisse être mis à jour dans le carnet de vaccination.</p>
+<p>Pour changer le numéro de lot ou la date de vaccination : la vaccination (pas la note de vaccination) doit avoir le même identifiant unique, ceci est indiqué dans l’exigence EX_2.1-2030.</p>
+<blockquote>
+<p><strong>EX_2.1-2030</strong></p>
+<p>Les identifiants des vaccinations (i.e. identifiant des entry/substanceAdministration) dans les notes de vaccination doivent être générés de manière « mondialement unique », via un UUID (voir <a href="https://fr.wikipedia.org/wiki/Universally_unique_identifier">https://fr.wikipedia.org/wiki/Universally_unique_identifier</a>) dans l’attribut id/@root seulement.</p>
+<p>Cet identifiant sert ensuite à retrouver la vaccination dans l’historique de vaccinations lors de sa mise à jour par le SI DMP. Il ne doit donc jamais rentrer en conflit avec l’identifiant d’une autre vaccination.</p>
+</blockquote>
 
 </div>
 

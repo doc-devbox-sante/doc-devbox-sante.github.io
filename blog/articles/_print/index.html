@@ -137,6 +137,16 @@ Version imprimable multipages.
     
 	
 
+    <li><a href="#pg-9412779eb92975b245d97d136b34c343">Les identifiants nationaux expliqués</a></li>
+
+
+
+    
+  
+    
+    
+	
+
     <li><a href="#pg-a39e056eb44a3a13be81a9edc262d0fe">INSi : Datamatrix dans Docker</a></li>
 
 
@@ -148,16 +158,6 @@ Version imprimable multipages.
 	
 
     <li><a href="#pg-b8aed82ac63ffbbc9521a73c3dcab002">DMP : Homologation 2.6.1</a></li>
-
-
-
-    
-  
-    
-    
-	
-
-    <li><a href="#pg-48929fa5d0ca4b4f7a93839187889ff9">Les identifiants nationaux expliqués</a></li>
 
 
 
@@ -311,6 +311,49 @@ Version imprimable multipages.
   
 
 <div class="td-content" style="">
+    <h1 id="pg-9412779eb92975b245d97d136b34c343">Les identifiants nationaux expliqués</h1>
+	<div class="lead">Une tentative d&rsquo;explication des structures des différents identifiants IdNatPs et IdNatStruct</div>
+	<div class="td-byline mb-4">
+		Par <b>Laurent Forêt</b> |
+        
+		<time datetime="2023-05-09" class="text-muted">Tuesday, May 09, 2023</time>
+        
+	</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p><strong>Work  In Progress.</strong>
+La structure des différents Identifiants nationaux sont décrits dans le MOS.</p>
+
+</div>
+
+<p>Le Cadre d&rsquo;Intéropérabilité des Systèmes d&rsquo;Information de Santé a dédié une documentation pour définir toutes les méta données des structures et personnel de santé : <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures</a></p>
+<p>Concernant l&rsquo;IdNat_PS cette documentation fait dorénavant référence au MOS : <a href="https://mos.esante.gouv.fr/2.html#_b1a86104-5f11-47d6-bd74-cab5b25a6e16">https://mos.esante.gouv.fr/2.html#_b1a86104-5f11-47d6-bd74-cab5b25a6e16</a></p>
+<p>Dont voici l&rsquo;impression écrant à la rédaction de cet article :</p>
+<p><img src="IdNat_PS_printscreen.png" alt="Mos id nat PS"></p>
+<p>Ce qui donne le mapping suivant dans la DevBox-santé DMP dans le cas d&rsquo;un internal Id du professionnel d&rsquo;une structure :</p>
+<p><img src="idnat_screen.png" alt="Génération des Id dans CDA"></p>
+<p>Ou plus simplement depuis la DevBox-santé DMP 5.0.8 l&rsquo;usage du RPPS :</p>
+<p><img src="rpps_screen.png" alt="rpps_screen"></p>
+
+</div>
+
+
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+
+  
+
+<div class="td-content" style="page-break-before: always">
     <h1 id="pg-a39e056eb44a3a13be81a9edc262d0fe">INSi : Datamatrix dans Docker</h1>
 	<div class="lead">Une image permettant la génération des INS_DATAMATRIX</div>
 	<div class="td-byline mb-4">
@@ -368,42 +411,6 @@ En effet, un appel au <code>ins datamatrix controller</code> :</p>
 <li>Les volets de <a href="/dmp/cda/crBiologie">CR-BIO</a></li>
 <li>Les volets de <a href="/dmp/cda/vaccination">Note de vaccination</a></li>
 </ul>
-
-</div>
-
-
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-
-  
-
-<div class="td-content" style="page-break-before: always">
-    <h1 id="pg-48929fa5d0ca4b4f7a93839187889ff9">Les identifiants nationaux expliqués</h1>
-	<div class="lead">Une tentative d&rsquo;explication des structures des différents identifiants IdNatPs et IdNatStruct</div>
-	<div class="td-byline mb-4">
-		Par <b>Laurent Forêt</b> |
-        
-		<time datetime="2022-11-23" class="text-muted">Wednesday, November 23, 2022</time>
-        
-	</div>
-	
-
-<div class="pageinfo pageinfo-primary">
-<p><strong>Work  In Progress.</strong>
-La structure des différents Identifiants nationaux sont décrits dans le MOS.</p>
-
-</div>
-
-<p><img src="idnat_screen.png" alt="Génération des Id dans CDA"></p>
 
 </div>
 

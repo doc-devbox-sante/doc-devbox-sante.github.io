@@ -89,11 +89,9 @@ Elle est rattachée dans l’annuaire santé à une personne morale.&lt;/dd&gt;
 &lt;dd&gt;Direction Générale de l’Offre de Soins&lt;/dd&gt;
 &lt;dt&gt;DGS&lt;/dt&gt;
 &lt;dd&gt;Direction Générale de Santé&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;p&gt;DSR
-: Dossier des Spécifications de Référencement
-(publié par l’ANS)&lt;/p&gt;
-&lt;dl&gt;
+&lt;dt&gt;DSR&lt;/dt&gt;
+&lt;dd&gt;Dossier des Spécifications de Référencement
+(publié par l’ANS)&lt;/dd&gt;
 &lt;dt&gt;DMP&lt;/dt&gt;
 &lt;dd&gt;Dossier Médical Partagé (&lt;a href=&#34;https://www.dmp.fr/&#34;&gt;https://www.dmp.fr/&lt;/a&gt;)&lt;/dd&gt;
 &lt;dt&gt;DN&lt;/dt&gt;
@@ -210,10 +208,8 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;dd&gt;Multipurpose Internet Mail Extensions&lt;/dd&gt;
 &lt;dt&gt;MDN&lt;/dt&gt;
 &lt;dd&gt;Message Disposition Notification&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;p&gt;Mon Espace Santé
-: (&lt;a href=&#34;https://editeurs.monespacesante.fr/&#34;&gt;https://editeurs.monespacesante.fr/&lt;/a&gt;)&lt;/p&gt;
-&lt;dl&gt;
+&lt;dt&gt;Mon Espace Santé&lt;/dt&gt;
+&lt;dd&gt;(&lt;a href=&#34;https://editeurs.monespacesante.fr/&#34;&gt;https://editeurs.monespacesante.fr/&lt;/a&gt;)&lt;/dd&gt;
 &lt;dt&gt;MSSanté&lt;/dt&gt;
 &lt;dd&gt;Messagerie Sécurisée de Santé&lt;/dd&gt;
 &lt;dt&gt;MTA&lt;/dt&gt;
@@ -270,19 +266,17 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;dd&gt;Référentiel d’Exigences Minimales (désigne les fichiers tableurs contenant l’ensemble des exigences à respecter pour chaque couloir)&lt;/dd&gt;
 &lt;dt&gt;REST&lt;/dt&gt;
 &lt;dd&gt;Representational State Transfer&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;p&gt;RFC
-: Request For Comments (série numérotée de documents officiels publiés par l’IETF)&lt;/p&gt;
-&lt;dl&gt;
+&lt;dt&gt;RFC&lt;/dt&gt;
+&lt;dd&gt;Request For Comments (série numérotée de documents officiels publiés par l’IETF)&lt;/dd&gt;
 &lt;dt&gt;RGPD&lt;/dt&gt;
 &lt;dd&gt;Règlement Général sur la Protection des Données&lt;/dd&gt;
 &lt;dt&gt;RNIPP&lt;/dt&gt;
 &lt;dd&gt;Répertoire National d’Identification des Personnes Physiques&lt;/dd&gt;
 &lt;dt&gt;RNIV&lt;/dt&gt;
 &lt;dd&gt;Référentiel National d’IdentitoVigilance&lt;/dd&gt;
+&lt;dt&gt;RPPS&lt;/dt&gt;
+&lt;dd&gt;Répertoire Partagé des Professionnels de Santé&lt;/dd&gt;
 &lt;/dl&gt;
-&lt;p&gt;RPPS
-: Répertoire Partagé des Professionnels de Santé&lt;/p&gt;
 &lt;h2 id=&#34;s&#34;&gt;S&lt;/h2&gt;
 &lt;dl&gt;
 &lt;dt&gt;Ségur du numérique en santé&lt;/dt&gt;
@@ -297,10 +291,8 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;dd&gt;Système National de Gestion des Identités&lt;/dd&gt;
 &lt;dt&gt;SSI&lt;/dt&gt;
 &lt;dd&gt;Sécurité du Système d’Information&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;p&gt;SMTP
-: Simple Mail Transport Protocol&lt;/p&gt;
-&lt;dl&gt;
+&lt;dt&gt;SMTP&lt;/dt&gt;
+&lt;dd&gt;Simple Mail Transport Protocol&lt;/dd&gt;
 &lt;dt&gt;SOAP&lt;/dt&gt;
 &lt;dd&gt;Simple Object Access Protocol&lt;/dd&gt;
 &lt;dt&gt;SONS&lt;/dt&gt;
@@ -355,7 +347,7 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;/div&gt;
 
 &lt;p&gt;Le Cadre d&amp;rsquo;Intéropérabilité des Systèmes d&amp;rsquo;Information de Santé a dédié une documentation pour définir toutes les méta données des structures et personnel de santé : &lt;a href=&#34;https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures&#34;&gt;https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Concernant l&amp;rsquo;IdNat_PS et l&amp;rsquo;IdNat_Struct, cette documentation fait dorénavant référence au MOS :&lt;/p&gt;
+&lt;p&gt;Concernant l&amp;rsquo;IdNat_PS et l&amp;rsquo;IdNat_Struct, cette documentation fait dorénavant référence au MOS :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;IdNat_Struct : &lt;a href=&#34;https://mos.esante.gouv.fr/4.html#_88711c28-b4b0-41d6-abd5-bf4e3e9b2e6d&#34;&gt;https://mos.esante.gouv.fr/4.html#_88711c28-b4b0-41d6-abd5-bf4e3e9b2e6d&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;IdNat_PS : &lt;a href=&#34;https://mos.esante.gouv.fr/2.html#_b1a86104-5f11-47d6-bd74-cab5b25a6e16&#34;&gt;https://mos.esante.gouv.fr/2.html#_b1a86104-5f11-47d6-bd74-cab5b25a6e16&lt;/a&gt;&lt;/li&gt;
@@ -367,9 +359,13 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;p&gt;Dont voici l&amp;rsquo;impression écran à la rédaction de cet article :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;IdNat_PS_printscreen.png&#34; alt=&#34;Mos id nat PS&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;dans-la-devbox-santé&#34;&gt;Dans la DevBox-santé&lt;/h3&gt;
-&lt;p&gt;Ce qui donne le mapping suivant dans la DevBox-santé DMP dans le cas d&amp;rsquo;un internal Id du professionnel d&amp;rsquo;une structure :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dans la DevBox-santé DMP, l&amp;rsquo;identifiantNational de &lt;strong&gt;structure&lt;/strong&gt; contient le type de son identifiant en &lt;strong&gt;préfixe&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Par contre, l&amp;rsquo;identifiant national du &lt;strong&gt;PS&lt;/strong&gt; est déjà typé par le nom de l&amp;rsquo;identifiant (&lt;code&gt;rpps&lt;/code&gt;, &lt;code&gt;internalId&lt;/code&gt;), il n&amp;rsquo;est donc &lt;strong&gt;pas préfixé&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ce qui donne pour ces identifiants le mapping suivant dans la DevBox-santé DMP dans le cas d&amp;rsquo;un internal Id du professionnel d&amp;rsquo;une structure :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;idnat_screen.png&#34; alt=&#34;Génération des Id dans CDA&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Ou plus simplement depuis la DevBox-santé DMP 5.0.8 l&amp;rsquo;usage du RPPS :&lt;/p&gt;
+&lt;p&gt;Ou plus simplement l&amp;rsquo;usage du RPPS (disponible depuis la DevBox-santé DMP 5.0.8 en authentification indirecte) :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;rpps_screen.png&#34; alt=&#34;rpps_screen&#34;&gt;&lt;/p&gt;
 
       </description>

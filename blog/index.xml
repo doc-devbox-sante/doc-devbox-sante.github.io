@@ -351,15 +351,23 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Work  In Progress.&lt;/strong&gt;
-La structure des différents Identifiants nationaux sont décrits dans le MOS.&lt;/p&gt;
+&lt;p&gt;La structure des différents Identifiants nationaux sont décrits dans le &lt;a href=&#34;https://mos.esante.gouv.fr/&#34;&gt;MOS&lt;/a&gt;.&lt;/p&gt;
 
 &lt;/div&gt;
 
 &lt;p&gt;Le Cadre d&amp;rsquo;Intéropérabilité des Systèmes d&amp;rsquo;Information de Santé a dédié une documentation pour définir toutes les méta données des structures et personnel de santé : &lt;a href=&#34;https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures&#34;&gt;https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Concernant l&amp;rsquo;IdNat_PS cette documentation fait dorénavant référence au MOS : &lt;a href=&#34;https://mos.esante.gouv.fr/2.html#_b1a86104-5f11-47d6-bd74-cab5b25a6e16&#34;&gt;https://mos.esante.gouv.fr/2.html#_b1a86104-5f11-47d6-bd74-cab5b25a6e16&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Dont voici l&amp;rsquo;impression écrant à la rédaction de cet article :&lt;/p&gt;
+&lt;p&gt;Concernant l&amp;rsquo;IdNat_PS et l&amp;rsquo;IdNat_Struct, cette documentation fait dorénavant référence au MOS :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IdNat_Struct : &lt;a href=&#34;https://mos.esante.gouv.fr/4.html#_88711c28-b4b0-41d6-abd5-bf4e3e9b2e6d&#34;&gt;https://mos.esante.gouv.fr/4.html#_88711c28-b4b0-41d6-abd5-bf4e3e9b2e6d&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;IdNat_PS : &lt;a href=&#34;https://mos.esante.gouv.fr/2.html#_b1a86104-5f11-47d6-bd74-cab5b25a6e16&#34;&gt;https://mos.esante.gouv.fr/2.html#_b1a86104-5f11-47d6-bd74-cab5b25a6e16&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;idnat_struct&#34;&gt;IdNat_Struct&lt;/h3&gt;
+&lt;p&gt;Dont voici l&amp;rsquo;impression écran à la rédaction de cet article :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;IdNat_Struct_printscreen.png&#34; alt=&#34;Mos id nat struct&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;idnat_ps&#34;&gt;IdNat_PS&lt;/h3&gt;
+&lt;p&gt;Dont voici l&amp;rsquo;impression écran à la rédaction de cet article :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;IdNat_PS_printscreen.png&#34; alt=&#34;Mos id nat PS&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;dans-la-devbox-santé&#34;&gt;Dans la DevBox-santé&lt;/h3&gt;
 &lt;p&gt;Ce qui donne le mapping suivant dans la DevBox-santé DMP dans le cas d&amp;rsquo;un internal Id du professionnel d&amp;rsquo;une structure :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;idnat_screen.png&#34; alt=&#34;Génération des Id dans CDA&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Ou plus simplement depuis la DevBox-santé DMP 5.0.8 l&amp;rsquo;usage du RPPS :&lt;/p&gt;

@@ -44,7 +44,7 @@
 &lt;h3 id=&#34;dans-la-devbox-santé&#34;&gt;Dans la DevBox-santé&lt;/h3&gt;
 &lt;p&gt;Ce qui donne pour ces identifiants le mapping suivant dans la DevBox-santé DMP dans le cas d&amp;rsquo;un internal Id du professionnel d&amp;rsquo;une structure :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;idnat_screen.png&#34; alt=&#34;Génération des Id dans CDA&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Ou plus simplement l&amp;rsquo;usage du RPPS (disponible depuis la DevBox-santé DMP 5.0.8 en authentification indirecte) :&lt;/p&gt;
+&lt;p&gt;Ou plus simplement l&amp;rsquo;usage du RPPS obtenu par la lecture de la carte CPS en authontification directe (en authentification indirecte, disponible depuis la DevBox-santé DMP 5.0.8) :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;rpps_screen.png&#34; alt=&#34;rpps_screen&#34;&gt;&lt;/p&gt;
 
       </description>

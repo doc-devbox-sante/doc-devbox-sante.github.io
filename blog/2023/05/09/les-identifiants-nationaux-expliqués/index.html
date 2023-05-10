@@ -27,13 +27,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/2023/05/09/les-identifiants-nationaux-expliqu%C3%A9s/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2023-05-09T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-05-10T10:56:26+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2023-05-10T11:45:28+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Les identifiants nationaux expliqués">
 <meta itemprop="description" content="Une tentative d&#39;explication des structures des différents identifiants IdNatPs et IdNatStruct et leur interprétation dans la DevBox-Santé DMP
 "><meta itemprop="datePublished" content="2023-05-09T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2023-05-10T10:56:26+02:00" />
-<meta itemprop="wordCount" content="133">
+<meta itemprop="dateModified" content="2023-05-10T11:45:28+02:00" />
+<meta itemprop="wordCount" content="171">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Les identifiants nationaux expliqués"/>
 <meta name="twitter:description" content="Une tentative d&#39;explication des structures des différents identifiants IdNatPs et IdNatStruct et leur interprétation dans la DevBox-Santé DMP
@@ -285,6 +285,10 @@ if (!doNotTrack) {
 <p>Dont voici l&rsquo;impression écran à la rédaction de cet article :</p>
 <p><img src="IdNat_PS_printscreen.png" alt="Mos id nat PS"></p>
 <h3 id="dans-la-devbox-santé">Dans la DevBox-santé</h3>
+<blockquote>
+<p>Dans la DevBox-santé DMP, l&rsquo;identifiantNational de <strong>structure</strong> doit contenir le type de son identifiant en <strong>préfixe</strong>.</p>
+<p>À contrario, l&rsquo;identifiant national du <strong>PS</strong> étant déjà typé par le nom de l&rsquo;identifiant (<code>rpps</code>, <code>adeli</code>), il n&rsquo;est donc pas obligatoirement préfixé.</p>
+</blockquote>
 <p>Ce qui donne pour ces identifiants le mapping suivant dans la DevBox-santé DMP dans le cas d&rsquo;un internal Id du professionnel d&rsquo;une structure :</p>
 <p><img src="idnat_screen.png" alt="Génération des Id dans CDA"></p>
 <p>Ou plus simplement l&rsquo;usage du RPPS obtenu par la lecture de la carte CPS en authontification directe (en authentification indirecte, disponible depuis la DevBox-santé DMP 5.0.8) :</p>

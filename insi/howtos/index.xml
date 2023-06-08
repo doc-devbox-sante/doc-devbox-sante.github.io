@@ -307,6 +307,9 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
 &lt;h3 id=&#34;àquoi-correspond-lidentifiant-de-facturation-obligatoire-dans-le-contexte-des-requêtes-&#34;&gt;À quoi correspond l’identifiant de facturation, obligatoire dans le contexte des requêtes ?&lt;/h3&gt;
 &lt;p&gt;Il s’agit du numero FINESS géographique de la structure ou son SIRET, information que l’on ne peut déduire de la carte CPS&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/insi/howtos/insi_id_facturation_pour_assertion.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;L&amp;rsquo;identifiant de facturation est donc pour les établissements le numéro FINESS géographique si connu sinon numéro SIRET. Pour les autres cet identifiant est le numéro AM (Assurance Maladie) de facturation. Ainsi un médecin employé dans un hôpital se référencera le numéro de son établissement.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;quels-sont-les-différents-statuts-didentité-&#34;&gt;Quels sont les différents statuts d’identité ?&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;differentsStatutsINS.png&#34; alt=&#34;differentsStatutsINS.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Source : &lt;code&gt;INS_Guide implementation_V2_0.pdf&lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;

@@ -1168,7 +1168,14 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
 &lt;p&gt;En authentification indirecte, La DevBox-Santé DMP récupère les informations de la structure dans le certificat P12 et surcharge avec ces informations la structure du contexte DMP de la requête.&lt;/p&gt;
 &lt;p&gt;Cette surcharge permet de respecter l&amp;rsquo;exigence de respecter le format du champ &lt;code&gt;/Assertion/Issuer&lt;/code&gt; du VIHF défini dans &amp;ldquo;Volet Transport Synchrone pour Client Lourd&amp;rdquo; du CI-SIS de l&amp;rsquo;ANS, mais aussi, de respecter le champ &lt;code&gt;Identifiant_Structure&lt;/code&gt; du VIHF défini dans le guide d&amp;rsquo;intégration du DMP (SEL-MP-037).&lt;/p&gt;
 &lt;p&gt;La structure du LegalAuthenticator du document doit correspondre à la structure du contexte qui est déduite du certificat P12. Il est donc conseillé de ne pas renseigner le legalAuthenticator pour un document afin de le récupérer automatiquement du contexte.&lt;/p&gt;
-&lt;h3 id=&#34;remplacement-note-de-vaccination---la-date-et-le-code-cis-de-cette-vaccination-sont-deja-presents-dans-le-cva-complet-errorcodedmpfragmentcvaerror-&#34;&gt;Remplacement note de vaccination : « La date et le code CIS de cette vaccination sont deja presents dans le CVA complet&amp;quot; errorCode=&amp;ldquo;DMPFragmentCVAError&amp;rdquo; »,&lt;/h3&gt;
+&lt;h3 id=&#34;cas-des-cpf--que-signifie-le-message-la-carte-utilisée-est-une-carte-de-professionnel-en-formation-cpf-une-erreur-a-été-détectée---&#34;&gt;Cas des CPF : que signifie le message &amp;ldquo;La carte utilisée est une carte de professionnel en formation (CPF), une erreur a été détectée  &amp;quot; ?&lt;/h3&gt;
+&lt;p&gt;Les professionnels en formation ne possède pas d&amp;rsquo;informations sur leur carte CPF concernant leur situation d&amp;rsquo;exercice. Il faut donc surcharger des informations dans le contexte:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;author.structureSante.idNational&lt;/code&gt; (ex. &amp;ldquo;10B0156832&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;author.specialite&lt;/code&gt; (ex. &amp;ldquo;G15_10/SM26&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;author.secteurActivity&lt;/code&gt; (ex. &amp;ldquo;SA05&amp;rdquo;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;remplacement-note-de-vaccination---la-date-et-le-code-cis-de-cette-vaccination-sont-deja-presents-dans-le-cva-complet-errorcodedmpfragmentcvaerror-&#34;&gt;Remplacement note de vaccination : « La date et le code CIS de cette vaccination sont deja presents dans le CVA complet&amp;rdquo; errorCode=&amp;ldquo;DMPFragmentCVAError&amp;rdquo; »,&lt;/h3&gt;
 &lt;p&gt;Le DMP n’accepte pas 2 vaccins identiques à la même date (code CIS + date doivent être unique dans le carnet de vaccination).&lt;/p&gt;
 &lt;p&gt;Lorsque vous souhaitez remplacer une note de vaccination, le vaccin doit avoir le même identifiant pour qu’il puisse être mis à jour dans le carnet de vaccination.&lt;/p&gt;
 &lt;p&gt;Pour changer le numéro de lot ou la date de vaccination : la vaccination (pas la note de vaccination) doit avoir le même identifiant unique, ceci est indiqué dans l’exigence EX_2.1-2030.&lt;/p&gt;

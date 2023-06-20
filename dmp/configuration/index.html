@@ -508,7 +508,7 @@ Ils peuvent être mis en œuvre de manière différente.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">autre_auth.p12</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">autre_authPassword</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span></code></pre></div><p>Pour charger dynamiquement les certificats, ssl et smime il suffit de rajouter les noms des certificats (<code>dmpAuthenticationP12.name</code>, <code>dmpSignatureP12.name</code>) dans le header de la requête HTTP :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET <span style="color:#4e9a06">&#34;http://hostname:port/dmp/td...&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;amoP12.name: ÀPréciser&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET <span style="color:#4e9a06">&#34;http://hostname:port/dmp/td...&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;dmpAuthenticationP12.name: ÀPréciser&#34;</span> -H <span style="color:#4e9a06">&#34;dmpAuthenticationP12.name: ÀPréciser&#34;</span>
 </span></span></code></pre></div><h4 id="authentification-indirecte--p12-in-header-http">Authentification indirecte : P12 in Header HTTP</h4>
 <p>Le mode <code>p12InHeader</code> permet de faire passer les deux certificats p12 dans l&rsquo;entête HTTP de la requête, cela permet à l&rsquo;appelant de conserver et décider des certificats utilisés lors de l&rsquo;appel du proxy.</p>
 <p>Le header étant plus lourd il faudra veiller à ce que la configuration spring prenne en compte la taille du header d&rsquo;au moins 40Kb.</p>
@@ -521,20 +521,20 @@ Ils peuvent être mis en œuvre de manière différente.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification indirecte avec certificats dans le header HTTP</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">p12InHeader</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span></code></pre></div><p>Et la requête doit contenir les informations dans le header.</p>
-<pre tabindex="0"><code>curl --location --request POST &#39;http://localhost:8080/dmp/td21SubmitDocuments&#39; \
---header &#39;Content-Type: application/json&#39; \
---header &#39;dmpAuthentification.p12: MIIcdAIBAzCCHDo...AA==&#39; \
---header &#39;dmpAuthentification.password: PASSWORD&#39; \
---header &#39;dmpSignature.p12: MIIcoQIBAzCCH...IAA==&#39; \
---header &#39;dmpSignature.password: PASSWORD&#39; \
---data-raw &#39;{
-    &#34;context&#34;: {
-    },
-    &#34;request&#34;: {
-        ...
-    }
-}&#39;
-</code></pre><h3 id="authentificatino-directe-stellair">Authentificatino directe Stellair</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --location --request POST <span style="color:#4e9a06">&#39;http://localhost:8080/dmp/td21SubmitDocuments&#39;</span> <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;Content-Type: application/json&#39;</span> <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;dmpAuthentification.p12: MIIcdAIBAzCCHDo...AA==&#39;</span> <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;dmpAuthentification.password: PASSWORD&#39;</span> <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;dmpSignature.p12: MIIcoQIBAzCCH...IAA==&#39;</span> <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;dmpSignature.password: PASSWORD&#39;</span> <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--data-raw <span style="color:#4e9a06">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">    &#34;context&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">    },
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">    &#34;request&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">        ...
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">}&#39;</span>
+</span></span></code></pre></div><h3 id="authentificatino-directe-stellair">Authentificatino directe Stellair</h3>
 <p>Une page de documentation spécifique se trouve ici : <a href="/dmp/howtos/demo-stellair">/dmp/howtos/demo-stellair</a></p>
 
         <div class="section-index">

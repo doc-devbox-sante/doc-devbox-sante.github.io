@@ -31,6 +31,9 @@
 &lt;p&gt;&lt;img src=&#34;Repertoire_installation_windows.png&#34; alt=&#34;Repertoire_installation_windows.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;macos&#34;&gt;MacOS&lt;/h2&gt;
 &lt;p&gt;TODO&lt;/p&gt;
+&lt;h3 id=&#34;vérifier-une-mise-à-jour&#34;&gt;Vérifier une mise à jour&lt;/h3&gt;
+&lt;p&gt;Dans le menu contextuel de la barre des tâches, il est possible d&amp;rsquo;accéder à la vérification de la mise à jour automatique :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;check_update.png&#34; alt=&#34;check_update&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;logs&#34;&gt;Logs&lt;/h3&gt;
 &lt;p&gt;Il est possible de récupérer dans les répertoires de log, et plus précisément &lt;code&gt;output.log&lt;/code&gt; les traces d&amp;rsquo;exécution.
 Dans une installation de développement les trames de message SOAP avec l&amp;rsquo;ensemble des téléservices sont récupérables, comme dans cet exemple de log pour un appel INSi :&lt;/p&gt;

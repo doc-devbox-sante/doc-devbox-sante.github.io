@@ -1048,6 +1048,22 @@ backend -&amp;gt; frontend : ok
     </item>
     
     <item>
+      <title>Dmp: Authentification ProSantéConnect</title>
+      <link>/dmp/authentifications/prosant%C3%A9connect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/dmp/authentifications/prosant%C3%A9connect/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;TODO&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Dmp: UniqueIdGenerator</title>
       <link>/dmp/howtos/uniqueidgenerator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

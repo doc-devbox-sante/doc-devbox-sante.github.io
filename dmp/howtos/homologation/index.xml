@@ -24,7 +24,7 @@
         
         &lt;h3 id=&#34;déroulement&#34;&gt;Déroulement&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;Récupérer le &lt;a href=&#34;/dmp/howtos/homologation/CDT_DMP_20230502_v2.8.0b.xlsm&#34;&gt;cahier de test&lt;/a&gt; à jour et prendre connaissance de la NOTICE&lt;/li&gt;
+&lt;li&gt;Récupérer le &lt;a href=&#34;/dmp/howtos/homologation/CDT_DMP_20230502_v2.9.0.xlsm&#34;&gt;cahier de test&lt;/a&gt; à jour et prendre connaissance de la NOTICE&lt;/li&gt;
 &lt;li&gt;Filtrer l&amp;rsquo;onglet Phase 1 sur les trois premières colonnes : Profil DMP-C, Authentification, Transaction en fonction de vos annexes remplies des conditions particulières.&lt;/li&gt;
 &lt;li&gt;Fournir à &lt;strong&gt;DEVCOOP&lt;/strong&gt; pour chaque code de test un répertoire contenant la trame d&amp;rsquo;exécution ainsi que si besoin une ou deux impressions écrans pour illustration.&lt;/li&gt;
 &lt;/ol&gt;

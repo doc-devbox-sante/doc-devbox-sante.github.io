@@ -31,14 +31,14 @@ Changement de lecteur PC/SC -&gt; Galss Le lecteur carte vitale, enregistre dans
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/vitale/howtos/issues/" /><meta property="article:section" content="vitale" />
 
-<meta property="article:modified_time" content="2023-05-03T15:26:42+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2023-05-09T17:48:48+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Problèmes connus">
 <meta itemprop="description" content="Erreur logicielle module origine de l&rsquo;erreur logicielle (Erreur : 1))
 c’est lié à un appel sans carte vitale avec une session CPS en cours, il faut changer par une lecture avec CPS .
 PC/SC ou galss ? Le galss n&rsquo;est officiellement plus supporté au 31 décembre 2021, donc il faut configurer les lecteurs en PC/SC
 Changement de lecteur PC/SC -&gt; Galss Le lecteur carte vitale, enregistre dans le fchier %Program_FILES%/DevBoxSante-%client%/santesocial/api_lec/api_lec.ini les lecteurs PC/SC utilisés, une fois enregistré si l&rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté car les api sesam vitale ne recherche les lecteurs galss que si il n&rsquo;y a pas de lecteurs PS/SC d&rsquo;enregistrés.">
-<meta itemprop="dateModified" content="2023-05-03T15:26:42+02:00" />
+<meta itemprop="dateModified" content="2023-05-09T17:48:48+02:00" />
 <meta itemprop="wordCount" content="144">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Problèmes connus"/>

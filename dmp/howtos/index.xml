@@ -870,7 +870,7 @@ DMPCCdaValidator       :
 &lt;p&gt;Afin de valider manuellement les CDA générés par la DevBox-Santé DMP il faut utiliser les outils de vérification fournit par l&amp;rsquo;ANS. Ils sont dorénavant héberger sur Github : &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA&#34;&gt;https://github.com/ansforge/TestContenuCDA&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;La documentation se trouve ici : &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA/wiki&#34;&gt;https://github.com/ansforge/TestContenuCDA/wiki&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;utilisation-de-lespace-de-tests-de-lans&#34;&gt;Utilisation de l&amp;rsquo;espace de tests de l&amp;rsquo;ANS&lt;/h3&gt;
-&lt;p&gt;Sur le site &lt;a href=&#34;https://interop.esante.gouv.fr&#34;&gt;interop.esante.gouv.fr&lt;/a&gt; ou plus exactement &lt;a href=&#34;https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;amp;extension=ASIP&#34;&gt;https://interop.esante.gouv.fr/EVSClient/cda/validator.seam?standard=CDA-ASIP&amp;amp;extension=ASIP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sur le site &lt;a href=&#34;https://interop.esante.gouv.fr&#34;&gt;interop.esante.gouv.fr&lt;/a&gt; ou plus exactement &lt;a href=&#34;https://interop.esante.gouv.fr/evs/home.seam&#34;&gt;https://interop.esante.gouv.fr/evs/home.seam&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Une fois sur le site :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Il vous faut télécharger votre fichier CDA&lt;/li&gt;

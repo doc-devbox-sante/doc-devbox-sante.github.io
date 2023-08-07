@@ -18,25 +18,25 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>DMP : Homologation 2.6.1 | DevBox-Santé</title>
-<meta name="description" content="Fier d&#39;avoir coché toutes les cases
+<title>Migration TLSv1.3 dans les différents téléservices | DevBox-Santé</title>
+<meta name="description" content="Validation du protocole TLSv1.3 dans la DevBox-Santé INSi et ApCV
 ">
-<meta property="og:title" content="DMP : Homologation 2.6.1" />
-<meta property="og:description" content="Fier d&#39;avoir coché toutes les cases
+<meta property="og:title" content="Migration TLSv1.3 dans les différents téléservices" />
+<meta property="og:description" content="Validation du protocole TLSv1.3 dans la DevBox-Santé INSi et ApCV
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/2022/11/30/dmp-homologation-2.6.1/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2022-11-30T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-05-10T10:54:12+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="/blog/2023/08/07/migration-tlsv1.3-dans-les-diff%C3%A9rents-t%C3%A9l%C3%A9services/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-08-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-07T17:25:48+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="DMP : Homologation 2.6.1">
-<meta itemprop="description" content="Fier d&#39;avoir coché toutes les cases
-"><meta itemprop="datePublished" content="2022-11-30T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2023-05-10T10:54:12+02:00" />
-<meta itemprop="wordCount" content="40">
+<meta itemprop="name" content="Migration TLSv1.3 dans les différents téléservices">
+<meta itemprop="description" content="Validation du protocole TLSv1.3 dans la DevBox-Santé INSi et ApCV
+"><meta itemprop="datePublished" content="2023-08-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-08-07T17:25:48+02:00" />
+<meta itemprop="wordCount" content="96">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="DMP : Homologation 2.6.1"/>
-<meta name="twitter:description" content="Fier d&#39;avoir coché toutes les cases
+<meta name="twitter:title" content="Migration TLSv1.3 dans les différents téléservices"/>
+<meta name="twitter:description" content="Validation du protocole TLSv1.3 dans la DevBox-Santé INSi et ApCV
 "/>
 
 
@@ -122,9 +122,9 @@ if (!doNotTrack) {
   <label for="m-blogarticles-check"><a href="/blog/articles/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-blogarticles"><span class="">Articles</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20230807migration-tlsv13-dans-les-diffc3a9rents-tc3a9lc3a9services-li">
-  <input type="checkbox" id="m-blog20230807migration-tlsv13-dans-les-diffc3a9rents-tc3a9lc3a9services-check"/>
-  <label for="m-blog20230807migration-tlsv13-dans-les-diffc3a9rents-tc3a9lc3a9services-check"><a href="/blog/2023/08/07/migration-tlsv1.3-dans-les-diff%C3%A9rents-t%C3%A9l%C3%A9services/" title="Migration TLSv1.3 dans les différents téléservices" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20230807migration-tlsv13-dans-les-diffc3a9rents-tc3a9lc3a9services"><span class="">Teleservices TLSv1.3</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-blog20230807migration-tlsv13-dans-les-diffc3a9rents-tc3a9lc3a9services-li">
+  <input type="checkbox" id="m-blog20230807migration-tlsv13-dans-les-diffc3a9rents-tc3a9lc3a9services-check" checked/>
+  <label for="m-blog20230807migration-tlsv13-dans-les-diffc3a9rents-tc3a9lc3a9services-check"><a href="/blog/2023/08/07/migration-tlsv1.3-dans-les-diff%C3%A9rents-t%C3%A9l%C3%A9services/" title="Migration TLSv1.3 dans les différents téléservices" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-blog20230807migration-tlsv13-dans-les-diffc3a9rents-tc3a9lc3a9services"><span class="td-sidebar-nav-active-item">Teleservices TLSv1.3</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20230509les-identifiants-nationaux-expliquc3a9s-li">
   <input type="checkbox" id="m-blog20230509les-identifiants-nationaux-expliquc3a9s-check"/>
@@ -134,9 +134,9 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-blog20230301insi-datamatrix-dans-docker-check"/>
   <label for="m-blog20230301insi-datamatrix-dans-docker-check"><a href="/blog/2023/03/01/insi-datamatrix-dans-docker/" title="INSi : Datamatrix dans Docker" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20230301insi-datamatrix-dans-docker"><span class="">Une image permettant la génération des datamatrix</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-blog20221130dmp-homologation-261-li">
-  <input type="checkbox" id="m-blog20221130dmp-homologation-261-check" checked/>
-  <label for="m-blog20221130dmp-homologation-261-check"><a href="/blog/2022/11/30/dmp-homologation-2.6.1/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-blog20221130dmp-homologation-261"><span class="td-sidebar-nav-active-item">DMP : Homologation 2.6.1</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20221130dmp-homologation-261-li">
+  <input type="checkbox" id="m-blog20221130dmp-homologation-261-check"/>
+  <label for="m-blog20221130dmp-homologation-261-check"><a href="/blog/2022/11/30/dmp-homologation-2.6.1/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20221130dmp-homologation-261"><span class="">DMP : Homologation 2.6.1</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20220609segur-la-devbox-santc3a9-dans-le-rc3a9fc3a9rentiel-dexigences-hopital-li">
   <input type="checkbox" id="m-blog20220609segur-la-devbox-santc3a9-dans-le-rc3a9fc3a9rentiel-dexigences-hopital-check"/>
@@ -235,11 +235,11 @@ if (!doNotTrack) {
             </a>
             
 <div class="td-content">
-	<h1>DMP : Homologation 2.6.1</h1>
-	<div class="lead">Fier d&rsquo;avoir coché toutes les cases</div>
+	<h1>Migration TLSv1.3 dans les différents téléservices</h1>
+	<div class="lead">Validation du protocole TLSv1.3 dans la DevBox-Santé INSi et ApCV</div>
 	<div class="td-byline mb-4">
 		Par <b>Laurent Forêt</b> |
-		<time datetime="2022-11-30" class="text-muted">Wednesday, November 30, 2022</time>
+		<time datetime="2023-08-07" class="text-muted">Monday, August 07, 2023</time>
 	</div>
 	<header class="article-meta">
 		
@@ -256,22 +256,25 @@ if (!doNotTrack) {
 
 		
 	</header>
-	<p>Lors de notre dernier passage d’homologation, nous avons été fiers de cocher toutes les cases.</p>
-<p><img src="PDV_toutes_les_cases.png" alt="Homologation_PDV_toutes_les_cases"></p>
-<p>Mais ce n’est pas fini, nous apportons désormais une API permettant de générer facilement :</p>
+	<p>L&rsquo;accès aux différents TLSi exige désormais la version TLSv1.3, et impose des nouvelles suites cryptographiques acceptées pour le TLSv1.3 :</p>
 <ul>
-<li>Les volets de <a href="/dmp/cda/crBiologie">CR-BIO</a></li>
-<li>Les volets de <a href="/dmp/cda/vaccination">Note de vaccination</a></li>
+<li>TLS13-AES128-GCM-SHA256</li>
+<li>TLS13-AES256-GCM-SHA384</li>
+<li>TLS13-CHACHA20-POLY1305-SHA256</li>
 </ul>
+<p>La configuration de l&rsquo;environnement java de la Devbox-santé va suivre ces nouvelles prérogatives dans les futures versions des tools IGC santé 1.3.0.</p>
+<p>Néanmoins, la DevBox-santé est configurée par défaut pour utiliser le protocole TLSv1.2 mais utilise une JRE (Java Runtime Environnement) supportant le TLSv1.3.</p>
+<p>Des tests forçant l&rsquo;usage du protocole TLSv1.3 pour le composant INSi sur l&rsquo;environnement de qualification ont été réalisés avec succès.</p>
+<p>Nous pouvons donc être confiant pour la migration TLSv1.3.</p>
 
 	
 
 	<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
   <li>
-    <a href="/blog/2022/06/09/segur-la-devbox-sant%C3%A9-dans-le-r%C3%A9f%C3%A9rentiel-dexigences-hopital/" aria-label="Précédent - SEGUR : la DevBox-Santé dans le référentiel d’exigences Hopital" class="btn btn-primary"><span class="mr-1">←</span>Précédent</a>
+    <a href="/blog/2023/05/09/les-identifiants-nationaux-expliqu%C3%A9s/" aria-label="Précédent - Les identifiants nationaux expliqués" class="btn btn-primary"><span class="mr-1">←</span>Précédent</a>
   </li>
   <li>
-    <a href="/blog/2023/03/01/insi-datamatrix-dans-docker/" aria-label="Suivant - INSi : Datamatrix dans Docker" class="btn btn-primary">Suivant<span class="ml-1">→</span></a>
+    <a class="btn btn-primary disabled">Suivant<span class="ml-1">→</span></a>
   </li>
 </ul>
 

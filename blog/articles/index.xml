@@ -14,6 +14,29 @@
     
     
     <item>
+      <title>Blog: Migration TLS_1.3 dans les différents téléservices</title>
+      <link>/blog/articles/20230807_teleservices_tls_1_3/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/articles/20230807_teleservices_tls_1_3/</guid>
+      <description>
+        
+        
+        &lt;p&gt;L&amp;rsquo;accès aux différents TLSi exige désormais la version TLSv1.3, et impose des nouvelles suites cryptographiques acceptées pour le TLSv1.3 :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TLS13-AES128-GCM-SHA256&lt;/li&gt;
+&lt;li&gt;TLS13-AES256-GCM-SHA384&lt;/li&gt;
+&lt;li&gt;TLS13-CHACHA20-POLY1305-SHA256&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La configuration de l&amp;rsquo;environnement java de la Devbox-santé va suivre ces nouvelles prérogatives dans les futures versions des tools IGC santé 1.3.0.&lt;/p&gt;
+&lt;p&gt;Néanmoins, la DevBox-santé est configurée par défaut pour utiliser le protocole TLSv1.2 mais utilise une JRE (Java Runtime Environnement) supportant le TLSv1.3.&lt;/p&gt;
+&lt;p&gt;Des tests forçant l&amp;rsquo;usage du protocole TLSv1.3 pour le composant INSi sur l&amp;rsquo;environnement de qualification ont été réalisés avec succès.&lt;/p&gt;
+&lt;p&gt;Nous pouvons donc être confiant pour la migration TLSv1.3.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Les identifiants nationaux expliqués</title>
       <link>/blog/2023/05/09/les-identifiants-nationaux-expliqu%C3%A9s/</link>
       <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>

@@ -681,7 +681,7 @@ préférez dans la mesure du possible des lecteurs configurés en PC/SC.&lt;/p&g
 &lt;p&gt;Pour aider au diagnostic du problème, Sesam-Vitale met à disposition un outil de diagnostic diagAM.&lt;/p&gt;
 &lt;p&gt;Pour l&amp;rsquo;utiliser, il faut suivre la procédure suivante :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Télécharger le programme d&amp;rsquo;installation du  composant ATSAM : &lt;a href=&#34;&#34;&gt;https://www.dmp.fr/ps/composants-poste-etape-deux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Télécharger le programme d&amp;rsquo;installation du  composant ATSAM : &lt;a href=&#34;https://www.dmp.fr/ps/composants-poste-etape-deux&#34;&gt;https://www.dmp.fr/ps/composants-poste-etape-deux&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Lancer l&amp;rsquo;installation et sélectionner dans un premier temps que l&amp;rsquo;outil de diagnostic :&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;DiagAM_install_1.png&#34; alt=&#34;DiagAM_install_1.png&#34;&gt;&lt;/p&gt;

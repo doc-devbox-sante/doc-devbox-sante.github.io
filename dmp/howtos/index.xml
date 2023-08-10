@@ -22,12 +22,11 @@
       <description>
         
         
-        &lt;p&gt;Pour plus d’information officielle &amp;ldquo;Cas des intégrateurs EAI&amp;rdquo; : &lt;a href=&#34;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/&#34;&gt;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/dmp/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Sinon, voici un petit récapitulatif des démarches à suivre :&lt;/p&gt;
-&lt;h2 id=&#34;pré-requis&#34;&gt;Pré-requis&lt;/h2&gt;
+        &lt;h2 id=&#34;pré-requis&#34;&gt;Pré-requis&lt;/h2&gt;
+&lt;p&gt;Information officielle disponible ici : &lt;a href=&#34;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/&#34;&gt;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/&lt;/a&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Obtenir un NIE auprès du CNDA&lt;/li&gt;
-&lt;li&gt;Remplir les conditions générales des TLSi AMO v3 (&lt;a href=&#34;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&#34;&gt;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Inscrire votre société auprès du CNDA : &lt;a href=&#34;https://sicnda.ameli.fr/#/login/subscribe&#34;&gt;https://sicnda.ameli.fr/#/login/subscribe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Créer un logiciel dans la plateforme ainsi qu&amp;rsquo;un dossier d&amp;rsquo;homologation&lt;/li&gt;
 &lt;li&gt;Obtenir des cartes CPS et/ou certificats de test (médecin, CPE, autre) auprès de l&amp;rsquo;ANS&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;choix-architecture&#34;&gt;Choix Architecture&lt;/h2&gt;
@@ -61,19 +60,19 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;nouvelle-procédure-dhomologation&#34;&gt;Nouvelle procédure d&amp;rsquo;homologation&lt;/h2&gt;
-&lt;p&gt;Une nouvelle procédure d&amp;rsquo;homologation a été mise en place le 23 mars 2023. Cette procédure est décrite dans l&amp;rsquo;article 6 des conditions particulières.&lt;/p&gt;
+&lt;p&gt;Une nouvelle procédure d&amp;rsquo;homologation a été mise en place le 23 mars 2023. Cette procédure est décrite dans l&amp;rsquo;article 6 des conditions contractuelles.&lt;/p&gt;
 &lt;ol start=&#34;7&#34;&gt;
 &lt;li&gt;
-&lt;p&gt;Récupérer les condition particulières DMP sur le site du &lt;strong&gt;&lt;a href=&#34;https://cnda.ameli.fr/editeurs/telecharger-les-protocoles/&#34;&gt;CNDA&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Récupérer les condition contractuelles DMP la plateforme du CNDA : &lt;a href=&#34;https://sicnda.ameli.fr/#/documentation/ccc&#34;&gt;https://sicnda.ameli.fr/#/documentation/ccc&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Remplir et signer une attestation sur l&amp;rsquo;honneur vous déclarant détenir d&amp;rsquo;un contrat de licence de la DevBox-santé (Article 4 conditions particulières)&lt;/p&gt;
+&lt;p&gt;Demander une attestation à DEVCOOP de possession d&amp;rsquo;un contrat de licence de la DevBox-santé puis la transmettre via la plateforme.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Remplir et signer les conditions et leurs annexes avec le(s) mode(s) d&amp;rsquo;authentification et profil(s) choisi(s) (support &lt;strong&gt;DEVCOOP&lt;/strong&gt; possible)&lt;/p&gt;
+&lt;p&gt;Valider les conditions et leurs annexes avec le(s) mode(s) d&amp;rsquo;authentification et profil(s) choisi(s) (support &lt;strong&gt;DEVCOOP&lt;/strong&gt; possible) depuis la nouvelle plateforme.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Faire parvenir au CNDA les conditions particulières ainsi que l&amp;rsquo;attestation&lt;/p&gt;
+&lt;p&gt;Suivre le dossier dans la nouvelle plateforme.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Récupérer les autorisations d&amp;rsquo;accés aux différents environnements et en tester les accès&lt;/p&gt;
@@ -82,7 +81,7 @@
 &lt;p&gt;Faire Valider la Phase 1 par &lt;strong&gt;DEVCOOP&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Remplir, signer et envoyer au &lt;strong&gt;CNDA&lt;/strong&gt; le fichier &lt;code&gt;ATTESTATION_Realisation_Prerequis_DMPC_V1.pdf&lt;/code&gt; disponible avec les conditions particulières téléchargées, en cohérence avec la réalisation des tests de la phase 1.&lt;/p&gt;
+&lt;p&gt;Remplir, signer et envoyer au &lt;strong&gt;CNDA&lt;/strong&gt; le fichier &lt;code&gt;ATTESTATION_Realisation_Prerequis_DMPC_V1.pdf&lt;/code&gt; disponible avec les conditions contractuelles téléchargées, en cohérence avec la réalisation des tests de la phase 1.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Début de l&amp;rsquo;examen par le &lt;strong&gt;CNDA&lt;/strong&gt;&lt;/p&gt;
@@ -92,64 +91,6 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;deprecated-conditions-particulières-et-validation-devcoop&#34;&gt;[DEPRECATED] Conditions Particulières et validation DEVCOOP&lt;/h3&gt;
-&lt;!---
-Procédure temporaire :
-
- - Intégrateur : dépot des « prérequis » (ancien pdv avec déclarations) + contrat (les nouvelles CP) + l’attestation de conformité fournie par DEVCOOP au CNDA ;
-
- - CNDA rapatrie les déclarations sur le nouveau plan de test filtré (avec ou sans demande de précisons) ;
-
- - CNDA fournit le nouveau plan de test et l’accès à l’environnement dédié (mais aussi à DV1 pour faire des tests en parallèle) ;
-
- - Intégrateur réalise les tests de la phase 2 + terminent les déclarations du nouveau plan de test;
-
- - Intégrateur passage en « salle » (demo live).
-  --&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Récupérer et remplir les Conditions Particulières DMP intégrateurs sur le site du CNDA (Une fois l&amp;rsquo;architecture et les profils choisis)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Fournir les Conditions Particulières à DEVCOOP&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Récupérer le PDV (Plan de vérification) filtré par DEVCOOP&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Remplir l&amp;rsquo;onglet &amp;ldquo;Déclarations&amp;rdquo; du PDV contenant l&amp;rsquo;ensemble des exigences&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Réaliser un test par transaction de l&amp;rsquo;onglet &amp;ldquo;Plan de tests&amp;rdquo; du PDV&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Fournir à DEVCOOP le PDV rempli de ces &amp;ldquo;Déclarations&amp;rdquo; ainsi que les logs des tests réalisés&lt;/p&gt;
-&lt;p&gt;==&amp;gt; Génération attestation de conformité de la part de l’EAI par DEVCOOP&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;deprecated-processus-dhomologation-cnda&#34;&gt;[DEPRECATED] Processus d&amp;rsquo;homologation CNDA&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Pour initier le passage d’homologation auprès du CNDA, fournir :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;les conditions particulières signées&lt;/li&gt;
-&lt;li&gt;l’attestation de conformité de DEVCOOP&lt;/li&gt;
-&lt;li&gt;le PDV entièrement filtré (tests/déclarations par l’EAI) et complété conjointement sur les déclarations.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Obtention d&amp;rsquo;un environnement dédié pour le passage d&amp;rsquo;homologation et date de passage&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Obtention des cartes vitales de test DMP&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Passer les tests :  &lt;a href=&#34;/dmp/howtos/homologation&#34;&gt;/dmp/howtos/homologation&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Déposer les résultats sur &lt;a href=&#34;https://cnda.ameli.fr/PortailNie/?page_id=153&#34;&gt;l’espace personnel du CNDA&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 
       </description>
     </item>

@@ -202,12 +202,12 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-dmphowtoshomologationphase_1-check" checked/>
   <label for="m-dmphowtoshomologationphase_1-check"><a href="/dmp/howtos/homologation/phase_1/" title="Homologation Phase 1 Prérequis" class="align-left pl-0  active td-sidebar-link td-sidebar-link__section" id="m-dmphowtoshomologationphase_1"><span class="td-sidebar-nav-active-item">Phase 1</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtoshomologationdeprecated-li">
-  <input type="checkbox" id="m-dmphowtoshomologationdeprecated-check"/>
-  <label for="m-dmphowtoshomologationdeprecated-check"><a href="/dmp/howtos/homologation/deprecated/" title="[Deprecated] Ancienne procédure" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtoshomologationdeprecated"><span class="">Ancienne procédure</span></a></label>
-  
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtoslogs-li">
+  <input type="checkbox" id="m-dmphowtoslogs-check"/>
+  <label for="m-dmphowtoslogs-check"><a href="/dmp/howtos/logs/" title="Interpreter les logs" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtoslogs"><span class="">Logs</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtosgestioncertificat-li">
   <input type="checkbox" id="m-dmphowtosgestioncertificat-check"/>
   <label for="m-dmphowtosgestioncertificat-check"><a href="/dmp/howtos/gestioncertificat/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtosgestioncertificat"><span class="">Gestion des certificats</span></a></label>
@@ -282,7 +282,11 @@ if (!doNotTrack) {
     <li>
       <ul>
         <li><a href="#déroulement">Déroulement</a></li>
-        <li><a href="#codes-de-test">Codes de Test</a></li>
+        <li><a href="#code-prérequis-pour-tous">Code prérequis pour Tous</a></li>
+        <li><a href="#authentification-directe">Authentification directe</a></li>
+        <li><a href="#authentification-indirecte">Authentification indirecte</a></li>
+        <li><a href="#profil-alimentation">Profil Alimentation</a></li>
+        <li><a href="#profil-consultation">Profil Consultation</a></li>
       </ul>
     </li>
   </ul>
@@ -355,7 +359,7 @@ if (!doNotTrack) {
 <li>Filtrer l&rsquo;onglet Phase 1 sur les trois premières colonnes : Profil DMP-C, Authentification, Transaction en fonction de vos annexes remplies des conditions particulières.</li>
 <li>Fournir à <strong>DEVCOOP</strong> pour chaque code de test un répertoire contenant la trame d&rsquo;exécution ainsi que si besoin une ou deux impressions écrans pour illustration.</li>
 </ol>
-<h3 id="codes-de-test">Codes de Test</h3>
+<h3 id="code-prérequis-pour-tous">Code prérequis pour Tous</h3>
 <p>Indication concernant les différents tests prérequis.</p>
 <h4 id="pre_gen">PRE_GEN</h4>
 <blockquote>
@@ -387,6 +391,57 @@ Ce document est disponible sur l&rsquo;espace industriel de Sesam-Vitale : <a hr
 <p>Des tests ont été faits en mode Connexion Secrète pour un patient mineur.</p>
 </blockquote>
 <p>Pour toute information sur la mise en place de la connexion secrète avec la DevBox-santé DMP : <a href="/dmp/howtos/transactions/#gestion-de-la-connexion-secr%C3%A8te">/dmp/howtos/transactions/#gestion-de-la-connexion-secrète</a></p>
+<h3 id="authentification-directe">Authentification directe</h3>
+<p>TODO</p>
+<h3 id="authentification-indirecte">Authentification indirecte</h3>
+<h4 id="pre_ind">PRE_IND</h4>
+<blockquote>
+<p>Des tests ont été faits en en Authentification INDIRECTE.</p>
+</blockquote>
+<p>Il faut valider une connexion en spécifiant les différents certificats utilisés. Plus d&rsquo;information, sur la configuration des certificats : <a href="/dmp/configuration/#authentification-indirecte">/dmp/configuration/#authentification-indirecte</a></p>
+<p>Ces certificats auront été obtenus préalablement auprès de l&rsquo;ANS. Pour plus d&rsquo;informations, sur l&rsquo;obtention des certificats : <a href="/dmp/howtos/gestioncertificat/">/dmp/howtos/gestioncertificat/</a></p>
+<p>Pour une preuve : Fournir une trame soap d&rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :<a href="/dmp/howtos/logs/">/dmp/howtos/logs/</a></p>
+<h3 id="profil-alimentation">Profil Alimentation</h3>
+<h4 id="pre_alim_niv1">PRE_ALIM_NIV1</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé le dépôt d&rsquo; un document CDA-R2 de niveau 1 sur le DMP d&rsquo;un patient.</p>
+</blockquote>
+<p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/#td21--alimenter-le-dmp-dun-patient-avec-des-documents-depuis-version-10">/dmp/howtos/transactions/#td21&ndash;alimenter-le-dmp-dun-patient-avec-des-documents-depuis-version-10</a></p>
+<p>Pour une preuve : Fournir les trames soaps d&rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :<a href="/dmp/howtos/logs/">/dmp/howtos/logs/</a></p>
+<h4 id="pre_alim_rech">PRE_ALIM_RECH</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé la recherche de l&rsquo;identifiant technique d&rsquo;un document à partir de son identifiant local (fonctionnalité TD 3.1b) afin de remplacer ou dépublier un document.</p>
+</blockquote>
+<p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/#td31b--rechercher-lidentifiant-technique-dun-document-depuis-version-30">/dmp/howtos/transactions/#td31b&ndash;rechercher-lidentifiant-technique-dun-document-depuis-version-30</a></p>
+<p>Pour une preuve : Fournir les trames soaps d&rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :<a href="/dmp/howtos/logs/">/dmp/howtos/logs/</a></p>
+<h4 id="pre_alim_rplc">PRE_ALIM_RPLC</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé le remplacement d&rsquo;un document déjà présent sur le DMP d&rsquo;un patient (TD 2.1b).</p>
+</blockquote>
+<p>Il faut mettre en œuvre la transaction d&rsquo;alimentation avec les informations des identifiants des documents remplacés. Plus d&rsquo;informations : <a href="/dmp/howtos/transactions/#remplacement">/dmp/howtos/transactions/#remplacement</a></p>
+<p>Pour une preuve : Fournir les trames soaps d&rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :<a href="/dmp/howtos/logs/">/dmp/howtos/logs/</a></p>
+<h4 id="pre_alim_suppr">PRE_ALIM_SUPPR</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé la dépublication (suppression) d&rsquo;un Document (Statut Deleted) à partir de la fonctionnalité TD 3.3c.</p>
+</blockquote>
+<p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/#td33c--supprimer-un-document-depuis-version-10">/dmp/howtos/transactions/#td33c&ndash;supprimer-un-document-depuis-version-10</a></p>
+<p>Pour une preuve : Fournir les trames soaps d&rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :<a href="/dmp/howtos/logs/">/dmp/howtos/logs/</a></p>
+<h4 id="pre_alim_vac">PRE_ALIM_VAC</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé le dépôt, la modification, la validation et la suppression d&rsquo;un document Note de Vaccination (NOTE-VAC).</p>
+</blockquote>
+<p>Les conditions du support de la vaccination dépend des professions pris en charge par le LPS intégrateur.</p>
+<p>Il faut mettre en œuvre la transaction d&rsquo;alimentation mais d&rsquo;un document <code>NoteVaccination</code>, plus d&rsquo;informations : <a href="/dmp/cda/vaccination/">/dmp/cda/vaccination/</a></p>
+<p>Pour une preuve : Fournir les trames soaps d&rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :<a href="/dmp/howtos/logs/">/dmp/howtos/logs/</a></p>
+<h4 id="pre_alim_niv3">PRE_ALIM_NIV3</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé le dépôt d&rsquo;un document CDA-R2 de niveau 3 sur le DMP d&rsquo;un patient.</p>
+</blockquote>
+<p>Si vous supportez la note de vaccination, vous remplissez les conditions du support d&rsquo;un dépôt de document de CDA-R2 de niveau 3. Mais également si vous prenez en charge un autre volet du CI-SIS.</p>
+<p>Plus d&rsquo;informations sur les différents volets spécifiés par l&rsquo;ANS : <a href="https://esante.gouv.fr/offres-services/ci-sis/espace-publication">https://esante.gouv.fr/offres-services/ci-sis/espace-publication</a></p>
+<p>Plus d&rsquo;informations sur les différents volets (documents CDA-R2 N3 supportés) par la DevBox-santé, nativement : <a href="/dmp/cda">/dmp/cda</a></p>
+<h3 id="profil-consultation">Profil Consultation</h3>
+<p>TODO</p>
 
         <div class="section-index">
     

@@ -99,7 +99,11 @@ Ce document est disponible sur l&amp;rsquo;espace industriel de Sesam-Vitale : &
 &lt;blockquote&gt;
 &lt;p&gt;L&amp;rsquo;éditeur a testé le dépôt, la modification, la validation et la suppression d&amp;rsquo;un document Note de Vaccination (NOTE-VAC).&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Les conditions du support de la vaccination dépend des professions pris en charge par le LPS intégrateur.&lt;/p&gt;
+&lt;p&gt;Les conditions du support de la vaccination dépend des professions pris en charge par le LPS intégrateur :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;EX_2.1-2000&lt;/strong&gt;
+La prise en charge de cette évolution est obligatoire pour les LPS destinés aux médecins (médecine générale et pédiatrie), aux pharmaciens, aux sages-femmes, aux infirmiers ou aux infirmiers psychiatriques (code profession 10, 21, 50, 60 ou 69) en secteur libéral (y compris centres de santé) .&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Il faut mettre en œuvre la transaction d&amp;rsquo;alimentation mais d&amp;rsquo;un document &lt;code&gt;NoteVaccination&lt;/code&gt;, plus d&amp;rsquo;informations : &lt;a href=&#34;/dmp/cda/vaccination/&#34;&gt;/dmp/cda/vaccination/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Pour une preuve : Fournir les trames soaps d&amp;rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :&lt;a href=&#34;/dmp/howtos/logs/&#34;&gt;/dmp/howtos/logs/&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&#34;pre_alim_niv3&#34;&gt;PRE_ALIM_NIV3&lt;/h4&gt;

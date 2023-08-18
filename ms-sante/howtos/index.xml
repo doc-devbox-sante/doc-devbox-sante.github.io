@@ -340,5 +340,18 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
       </description>
     </item>
     
+    <item>
+      <title>Ms-Sante: Migrations</title>
+      <link>/ms-sante/howtos/migrations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/ms-sante/howtos/migrations/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
   </channel>
 </rss>

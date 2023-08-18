@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.104.2" />
-<link rel="alternate" type="text/html" href="/ms-sante/howtos/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="/ms-sante/howtos/index.xml">
-<meta name="robots" content="index, follow">
+<link rel="canonical" type="text/html" href="/ms-sante/howtos/migrations/">
+<link rel="alternate" type="application/rss&#43;xml" href="/ms-sante/howtos/migrations/index.xml">
+<meta name="robots" content="noindex, nofollow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -20,17 +20,21 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Howtos | DevBox-Santé</title>
-<meta name="description" content="La Documentation">
-<meta property="og:title" content="Howtos" />
-<meta property="og:description" content="La Documentation" />
+<title>Migrations | DevBox-Santé</title>
+<meta name="description" content="Guide de migration vers les versions supérieures de la DevBox-Santé DMP
+">
+<meta property="og:title" content="Migrations" />
+<meta property="og:description" content="Guide de migration vers les versions supérieures de la DevBox-Santé DMP
+" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/ms-sante/howtos/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="/ms-sante/howtos/migrations/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Howtos">
-<meta itemprop="description" content="La Documentation"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Howtos"/>
-<meta name="twitter:description" content="La Documentation"/>
+<meta itemprop="name" content="Migrations">
+<meta itemprop="description" content="Guide de migration vers les versions supérieures de la DevBox-Santé DMP
+"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Migrations"/>
+<meta name="twitter:description" content="Guide de migration vers les versions supérieures de la DevBox-Santé DMP
+"/>
 
 
 
@@ -97,147 +101,63 @@ if (!doNotTrack) {
     <div class="container-fluid td-outer">
       <div class="td-main">
         <div class="row flex-xl-nowrap">
-          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
-            
-<div id="td-sidebar-menu" class="td-sidebar__inner">
-  <form class="td-sidebar__search d-flex align-items-center">
-    
-    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
-    </button>
-  </form>
-  <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
-    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
-      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ms-sante-li">
-  <a href="/ms-sante/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-ms-sante"><span class="">MSS</span></a>
-  <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ms-santehowtos-li">
-  <input type="checkbox" id="m-ms-santehowtos-check" checked/>
-  <label for="m-ms-santehowtos-check"><a href="/ms-sante/howtos/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtos"><span class="td-sidebar-nav-active-item">Howtos</span></a></label>
-  
-  <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtospreuve_segur-li">
-  <input type="checkbox" id="m-ms-santehowtospreuve_segur-check"/>
-  <label for="m-ms-santehowtospreuve_segur-check"><a href="/ms-sante/howtos/preuve_segur/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtospreuve_segur"><span class="">Preuves Segur</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosmigrations-li">
-  <input type="checkbox" id="m-ms-santehowtosmigrations-check"/>
-  <label for="m-ms-santehowtosmigrations-check"><a href="/ms-sante/howtos/migrations/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosmigrations"><span class="">Migrations</span></a></label>
-  
-</li>
-  </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santearchitecture-li">
-  <input type="checkbox" id="m-ms-santearchitecture-check"/>
-  <label for="m-ms-santearchitecture-check"><a href="/ms-sante/architecture/" title="Architecture interne des différents composants" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santearchitecture"><span class="">Architecture interne</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santeversions-li">
-  <input type="checkbox" id="m-ms-santeversions-check"/>
-  <label for="m-ms-santeversions-check"><a href="/ms-sante/versions/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santeversions"><span class="">Versions</span></a></label>
-  
-</li>
-  </ul>
-</li>
-    </ul>
-  </nav>
-</div>
-
-          </aside>
-          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
-            
-<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a id="print" href="/ms-sante/howtos/_print/"><i class="fa-solid fa-print fa-fw"></i> Imprimer la section entière</a>
-
-</div>
-
-            
-            
-
-	
-		
-
-
-
-  
-  
-
-	
-		
-
-
-
-  
-  
-
-	
-
-          </aside>
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+          </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
-  
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs">
-  <ol class="breadcrumb">
-  <li class="breadcrumb-item">
-    <a href="/ms-sante/">MSS</a>
-  </li>
-  <li class="breadcrumb-item active" aria-current="page">
-    <a href="/ms-sante/howtos/" aria-disabled="true" class="btn-link disabled">Howtos</a>
-  </li>
-  </ol>
-</nav>
-            
+
+
+
 <div class="td-content">
-	<h1>Howtos</h1>
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+Version imprimable multipages.
+<a href="#" onclick="print();return false;">Cliquer ici pour imprimer</a>.
+</p><p>
+<a href="/ms-sante/howtos/migrations/">Retour à la version par défaut</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Migrations</h1>
+<div class="lead">Guide de migration vers les versions supérieures de la DevBox-Santé DMP</div>
+
+
+
+
+    <ul>
+    
   
-	<header class="article-meta">
-		
-		
-			
-				
+  
+  
+  
+
+  
+
+    </ul>
 
 
-			
-				
-
-
-			
-		
-		
-	</header>
-	
-        <div class="section-index">
-    
-    
-    
-    
-    
-    
-    
-    
-    <hr class="panel-line">
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/ms-sante/howtos/preuve_segur/">Preuves Segur</a>
-                </h5>
-                <p>Comment configurer la DevBox-sante MSS pour apporter les preuves SEGUR</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/ms-sante/howtos/migrations/">Migrations</a>
-                </h5>
-                <p>Guide de migration vers les versions supérieures de la DevBox-Santé DMP</p>
-            </div>
-        
-    
+<div class="content">
+      
+</div>
 </div>
 
-	
-	
-	
-</div>
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
 
           </main>
         </div>

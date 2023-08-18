@@ -60,36 +60,8 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;nouvelle-procédure-dhomologation&#34;&gt;Nouvelle procédure d&amp;rsquo;homologation&lt;/h2&gt;
-&lt;p&gt;Une nouvelle procédure d&amp;rsquo;homologation a été mise en place le 23 mars 2023. Cette procédure est décrite dans l&amp;rsquo;article 6 des conditions contractuelles.&lt;/p&gt;
 &lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;Récupérer les condition contractuelles DMP la plateforme du CNDA : &lt;a href=&#34;https://sicnda.ameli.fr/#/documentation/ccc&#34;&gt;https://sicnda.ameli.fr/#/documentation/ccc&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Demander une attestation à DEVCOOP de possession d&amp;rsquo;un contrat de licence de la DevBox-santé puis la transmettre via la plateforme.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Valider les conditions et leurs annexes avec le(s) mode(s) d&amp;rsquo;authentification et profil(s) choisi(s) (support &lt;strong&gt;DEVCOOP&lt;/strong&gt; possible) depuis la nouvelle plateforme.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Suivre le dossier dans la nouvelle plateforme.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Récupérer les autorisations d&amp;rsquo;accés aux différents environnements et en tester les accès&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Faire Valider la Phase 1 par &lt;strong&gt;DEVCOOP&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Remplir, signer et envoyer au &lt;strong&gt;CNDA&lt;/strong&gt; le fichier &lt;code&gt;ATTESTATION_Realisation_Prerequis_DMPC_V1.pdf&lt;/code&gt; disponible avec les conditions contractuelles téléchargées, en cohérence avec la réalisation des tests de la phase 1.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Début de l&amp;rsquo;examen par le &lt;strong&gt;CNDA&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Phase 2 : Pré-Examen (&lt;strong&gt;VALIDATION_CNDA&lt;/strong&gt;)&lt;/li&gt;
-&lt;li&gt;Phase 3 : Examen de conformité (&lt;strong&gt;VALIDATION_CNDA&lt;/strong&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/dmp/howtos/homologation&#34;&gt;Lancer la procédure d&amp;rsquo;homologation&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
       </description>
@@ -617,7 +589,7 @@ Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exige
     </item>
     
     <item>
-      <title>Dmp: Homologation</title>
+      <title>Dmp: Homologation / Référencement</title>
       <link>/dmp/howtos/homologation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -625,9 +597,25 @@ Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exige
       <description>
         
         
-        &lt;p&gt;L&amp;rsquo;homologation de votre intégration DMP se fait auprès du CNDA : &lt;a href=&#34;https://cnda.ameli.fr/&#34;&gt;https://cnda.ameli.fr/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Elle se passe en trois phases, la première phase, [/dmp/howtos/homologation/phase_1/] est soumis à validation par DEVCOOP.&lt;/p&gt;
-&lt;p&gt;Les deux autres se passent auprès du CNDA. Pour plus d&amp;rsquo;informations, sur les étapes à suivre : &lt;a href=&#34;/dmp/howtos/integrateurchecklist/&#34;&gt;/dmp/howtos/integrateurchecklist/&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;Le référencement de votre intégration DMP se fait auprès du CNDA : &lt;a href=&#34;https://cnda.ameli.fr/&#34;&gt;https://cnda.ameli.fr/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Une nouvelle procédure d&amp;rsquo;homologation (désormais référencement) a été mise en place le 23 mars 2023. Cette procédure est décrite dans l&amp;rsquo;article 6 des conditions contractuelles disponible sur la nouvelle plateforme qui elle est accessible depuis juillet 2023&lt;/p&gt;
+&lt;p&gt;Elle se passe en trois phases, &lt;a href=&#34;/dmp/howtos/homologation/phase_1/&#34;&gt;la première phase&lt;/a&gt; est soumis à validation par DEVCOOP.&lt;/p&gt;
+&lt;p&gt;Voici en résumé la procédure :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Récupérer les condition contractuelles DMP la plateforme du CNDA : &lt;a href=&#34;https://sicnda.ameli.fr/#/documentation/ccc&#34;&gt;https://sicnda.ameli.fr/#/documentation/ccc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Demander une attestation à DEVCOOP de possession d&amp;rsquo;un contrat de licence de la DevBox-santé puis la transmettre via la plateforme.&lt;/li&gt;
+&lt;li&gt;Valider les conditions et leurs annexes avec le(s) mode(s) d&amp;rsquo;authentification et profil(s) choisi(s) (support &lt;strong&gt;DEVCOOP&lt;/strong&gt; possible) depuis la nouvelle plateforme.&lt;/li&gt;
+&lt;li&gt;Suivre le dossier dans la nouvelle plateforme.&lt;/li&gt;
+&lt;li&gt;Récupérer les autorisations d&amp;rsquo;accés aux différents environnements et en tester les accès&lt;/li&gt;
+&lt;li&gt;Faire Valider la Phase 1 par &lt;strong&gt;DEVCOOP&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Remplir, signer et envoyer au &lt;strong&gt;CNDA&lt;/strong&gt; le fichier &lt;code&gt;ATTESTATION_Realisation_Prerequis_DMPC_V1.pdf&lt;/code&gt; disponible avec les conditions contractuelles téléchargées, en cohérence avec la réalisation des tests de la phase 1.&lt;/li&gt;
+&lt;li&gt;Début de l&amp;rsquo;examen par le &lt;strong&gt;CNDA&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Phase 2 : Pré-Examen (&lt;strong&gt;VALIDATION_CNDA&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;Phase 3 : Examen de conformité (&lt;strong&gt;VALIDATION_CNDA&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 
       </description>
     </item>

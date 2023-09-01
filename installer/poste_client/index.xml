@@ -14,29 +14,41 @@
     
     
     <item>
-      <title>Installer: Contenu de l&#39;installation</title>
-      <link>/installer/poste_client/contenu/</link>
+      <title>Installer: Premier Pas</title>
+      <link>/installer/poste_client/premier_pas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/installer/poste_client/contenu/</guid>
+      <guid>/installer/poste_client/premier_pas/</guid>
       <description>
         
         
-        &lt;h2 id=&#34;windows&#34;&gt;Windows&lt;/h2&gt;
-&lt;p&gt;Une fois le programme d&amp;rsquo;installation lancé et exécuté jusqu&amp;rsquo;au bout, la DevBox-santé est lancé automatiquement sur un port pré-défini. Elle est accessible dans la barre de tâches :&lt;/p&gt;
+        &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;Une fois que vous avez téléchargez le binaire sur l&amp;rsquo;url qui vous a été fournis :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;installers_download_page.png&#34; alt=&#34;installers&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Suivez les différentes étapes du programme d&amp;rsquo;installation et cliquez sur terminé. La DevBox-santé est lancé automatiquement sur un port pré-défini.&lt;/p&gt;
+&lt;h3 id=&#34;sous-windows&#34;&gt;Sous Windows&lt;/h3&gt;
+&lt;p&gt;La DevBox-santé est accessible dans la barre de tâches :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;Demon_DevBox_sante_windows.png&#34; alt=&#34;Demon_DevBox_sante_windows.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Un menu contextuel sur l’icône s’affiche sur un clic droit, permettant d’afficher des informations d’installation notamment le numéro de port :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;Demon_DevBox_sante_apropos_windows.png&#34; alt=&#34;Demon_DevBox_sante_apropos_windows.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Le répertoire d&amp;rsquo;installation se présente comme celà :&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;Repertoire_installation_windows.png&#34; alt=&#34;Repertoire_installation_windows.png&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;macos&#34;&gt;MacOS&lt;/h2&gt;
+&lt;h3 id=&#34;sous-macos&#34;&gt;Sous MacOS&lt;/h3&gt;
 &lt;p&gt;TODO&lt;/p&gt;
+&lt;h3 id=&#34;exécution-sur-lenvironnement-de-démonstration&#34;&gt;Exécution sur l&amp;rsquo;environnement de démonstration&lt;/h3&gt;
+&lt;p&gt;Une fois le numéro de port obtenu depuis la boîte de dialogue &amp;ldquo;À propos&amp;rdquo;, vous pouvez accéder à l&amp;rsquo;environnement de démonstration (pour une version de développement seulement) depuis votre navigateur : http://localhost:PORT&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;browser_demo.png&#34; alt=&#34;Environnement de démonstration&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ce qui vous permet de tester l&amp;rsquo;installation et d&amp;rsquo;observer les différentes requêtes possibles pour les différents composants.&lt;/p&gt;
+&lt;p&gt;Vous pouvez également vous jeter sur les différents documentation swagger à vos dispositions : http://localhost:PORT/swagger-ui/index.html&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;browser_swagger.png&#34; alt=&#34;Accès swagger Devbox-santé&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;après-linstallation&#34;&gt;Après l&amp;rsquo;installation&lt;/h2&gt;
 &lt;h3 id=&#34;vérifier-une-mise-à-jour&#34;&gt;Vérifier une mise à jour&lt;/h3&gt;
 &lt;p&gt;Dans le menu contextuel de la barre des tâches, il est possible d&amp;rsquo;accéder à la vérification de la mise à jour automatique :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;check_update.png&#34; alt=&#34;check_update&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;logs&#34;&gt;Logs&lt;/h3&gt;
-&lt;p&gt;Il est possible de récupérer dans les répertoires de log, et plus précisément &lt;code&gt;output.log&lt;/code&gt; les traces d&amp;rsquo;exécution.
-Dans une installation de développement les trames de message SOAP avec l&amp;rsquo;ensemble des téléservices sont récupérables, comme dans cet exemple de log pour un appel INSi :&lt;/p&gt;
+&lt;h3 id=&#34;obtenir-les-logs&#34;&gt;Obtenir les Logs&lt;/h3&gt;
+&lt;p&gt;Le répertoire d&amp;rsquo;installation se présente comme celà :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Repertoire_installation_windows.png&#34; alt=&#34;Repertoire_installation_windows.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Il est possible de récupérer dans le répertoire de log, et plus précisément &lt;code&gt;output.log&lt;/code&gt; les traces d&amp;rsquo;exécution. Ce sont ces traces qui sont utiles pour diagnostiquer les éventuels problèmes d&amp;rsquo;intégration.&lt;/p&gt;
+&lt;p&gt;Mais aussi, dans une installation de développement les trames de message SOAP avec l&amp;rsquo;ensemble des téléservices sont récupérables. Ce sont ces dernières qui sont demandées pour preuve par le CNDA.&lt;/p&gt;
+&lt;p&gt;Comme dans cet exemple de log pour un appel INSi :&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;2022-02-08 10:17:17.371  INFO 32672 --- [nio-9999-exec-1] o.a.cxf.services.ICIRService.REQ_OUT     : REQ_OUT
     Address: https://qualiflps.services-ps.ameli.fr/lps
     HttpMethod: POST
@@ -83,8 +95,7 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&amp;lt;/ds:X509Certificate&amp;gt;&
     Headers: {X-ORACLE-DMS-ECID=1360e356-5091-4ec5-8d19-dce653f132d7-00004557, content-type=application/soap+xml; charset=utf-8, Content-Length=940, Date=Tue, 08 Feb 2022 09:17:17 GMT}
     Payload: &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;
 &amp;lt;soap:Envelope xmlns:soap=&amp;#34;http://www.w3.org/2003/05/soap-envelope&amp;#34;&amp;gt;&amp;lt;env:Body xmlns:S=&amp;#34;http://www.w3.org/2003/05/soap-envelope&amp;#34; xmlns:env=&amp;#34;http://www.w3.org/2003/05/soap-envelope&amp;#34;&amp;gt;&amp;lt;ns2:RESULTAT xmlns:ns3=&amp;#34;http://www.cnamts.fr/INSiRecVit&amp;#34; xmlns:ns2=&amp;#34;http://www.cnamts.fr/INSiResultat&amp;#34; xmlns=&amp;#34;http://www.cnamts.fr/INSiRecSans&amp;#34;&amp;gt;&amp;lt;ns2:CR&amp;gt;&amp;lt;ns2:CodeCR&amp;gt;00&amp;lt;/ns2:CodeCR&amp;gt;&amp;lt;ns2:LibelleCR&amp;gt;OK&amp;lt;/ns2:LibelleCR&amp;gt;&amp;lt;/ns2:CR&amp;gt;&amp;lt;ns2:INDIVIDU&amp;gt;&amp;lt;ns2:INSACTIF&amp;gt;&amp;lt;ns2:IdIndividu&amp;gt;&amp;lt;ns2:NumIdentifiant&amp;gt;2770763220829&amp;lt;/ns2:NumIdentifiant&amp;gt;&amp;lt;ns2:Cle&amp;gt;10&amp;lt;/ns2:Cle&amp;gt;&amp;lt;/ns2:IdIndividu&amp;gt;&amp;lt;ns2:OID&amp;gt;1.2.250.1.213.1.4.8&amp;lt;/ns2:OID&amp;gt;&amp;lt;/ns2:INSACTIF&amp;gt;&amp;lt;ns2:TIQ&amp;gt;&amp;lt;ns2:NomNaissance&amp;gt;NESSI&amp;lt;/ns2:NomNaissance&amp;gt;&amp;lt;ns2:Prenom&amp;gt;RUTH&amp;lt;/ns2:Prenom&amp;gt;&amp;lt;ns2:ListePrenom&amp;gt;RUTH ISABELLE&amp;lt;/ns2:ListePrenom&amp;gt;&amp;lt;ns2:Sexe&amp;gt;F&amp;lt;/ns2:Sexe&amp;gt;&amp;lt;ns2:DateNaissance&amp;gt;1977-07-14&amp;lt;/ns2:DateNaissance&amp;gt;&amp;lt;ns2:LieuNaissance&amp;gt;63220&amp;lt;/ns2:LieuNaissance&amp;gt;&amp;lt;/ns2:TIQ&amp;gt;&amp;lt;/ns2:INDIVIDU&amp;gt;&amp;lt;/ns2:RESULTAT&amp;gt;&amp;lt;/env:Body&amp;gt;&amp;lt;/soap:Envelope&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ce sont ces trames SOAP qui sont utiles pour les tests de validation CNDA.&lt;/p&gt;
-&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
 &lt;p&gt;La DevBox-santé est paramétré par défaut lors de l&amp;rsquo;installation, mais elle est personnalisable en modifiant le fichier &lt;code&gt;application.yml&lt;/code&gt;. Les modifications possibles de cette configuration est décrite pour chacun des composants dans leur espace de documentation :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;pour le DMP : &lt;a href=&#34;/dmp/configuration&#34;&gt;/dmp/configuration&lt;/a&gt;&lt;/li&gt;
@@ -327,19 +338,6 @@ end
 &lt;h3 id=&#34;environnements-de-test-et-formation&#34;&gt;Environnements de test et formation&lt;/h3&gt;
 &lt;p&gt;Les urls changent sur ces environnements, cf. les &lt;a href=&#34;/dmp/howtos/environnements&#34;&gt;environnements du DMP&lt;/a&gt; par exemple.&lt;/p&gt;
 
-      </description>
-    </item>
-    
-    <item>
-      <title>Installer: Versions de l&#39;installer</title>
-      <link>/installer/poste_client/versions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/installer/poste_client/versions/</guid>
-      <description>
-        
-        
-        
       </description>
     </item>
     

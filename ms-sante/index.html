@@ -20,19 +20,19 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>MSS | DevBox-Santé</title>
+<title>DevBox-Santé MSS | DevBox-Santé</title>
 <meta name="description" content="Intégrer les différentes Messageries Sécurisées de Santé
 ">
-<meta property="og:title" content="MSS" />
+<meta property="og:title" content="DevBox-Santé MSS" />
 <meta property="og:description" content="Intégrer les différentes Messageries Sécurisées de Santé
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/ms-sante/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="MSS">
+<meta itemprop="name" content="DevBox-Santé MSS">
 <meta itemprop="description" content="Intégrer les différentes Messageries Sécurisées de Santé
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MSS"/>
+<meta name="twitter:title" content="DevBox-Santé MSS"/>
 <meta name="twitter:description" content="Intégrer les différentes Messageries Sécurisées de Santé
 "/>
 
@@ -112,7 +112,7 @@ if (!doNotTrack) {
   <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ms-sante-li">
-  <a href="/ms-sante/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-ms-sante"><span class="td-sidebar-nav-active-item">MSS</span></a>
+  <a href="/ms-sante/" title="DevBox-Santé MSS" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-ms-sante"><span class="td-sidebar-nav-active-item">MSS</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ms-santehowtos-li">
   <input type="checkbox" id="m-ms-santehowtos-check"/>
@@ -155,7 +155,7 @@ if (!doNotTrack) {
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#ms-sante-api">MS-SANTE-API</a>
+    <li>
       <ul>
         <li><a href="#lapi-public">L&rsquo;API public</a></li>
         <li><a href="#utilisation">Utilisation</a></li>
@@ -204,7 +204,7 @@ if (!doNotTrack) {
 </nav>
             
 <div class="td-content">
-	<h1>MSS</h1>
+	<h1>DevBox-Santé MSS</h1>
   <div class="lead">Intégrer les différentes Messageries Sécurisées de Santé</div>
 	<header class="article-meta">
 		
@@ -221,8 +221,24 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<h2 id="ms-sante-api">MS-SANTE-API</h2>
-<h3 id="lapi-public">L&rsquo;API public</h3>
+	<p>La Devbox-Santé MSS est une API Java ou une facade REST permettant d&rsquo;accéder et de respecter les différents référentiels MSSanté de manière transparente.</p>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
+
+[Application Intégrateur] as integrateur
+
+package &#34;DevBox-Santé Proxy REST&#34; as devbox DEVBOX_COLOR {
+        [DevBox-sante MSSanté] as mss MSS_COLOR
+}
+
+cloud &#34;**Opérateur MSSanté Nouveau Reférentiel **&#34; as operateur
+cloud &#34;**Mailiz**&#34; as mailiz
+cloud &#34;Apicrypt v2&#34; as apicrypt
+
+integrateur -d-&gt; mss : HTTP REST
+mss .d.&gt;  operateur : SMTP / IMAP
+mss -d-&gt; mailiz : HTTP / SOAP
+mss -d-&gt; apicrypt : socket
+</code></pre><h3 id="lapi-public">L&rsquo;API public</h3>
 <p>l&rsquo;API est hébergée sur bitbucket : <a href="https://bitbucket.com/devbox-sante/ms-sante-api">https://bitbucket.com/devbox-sante/ms-sante-api</a></p>
 <p>Cette API définie les services disponibles et le modèle d&rsquo;objet.</p>
 <h3 id="utilisation">Utilisation</h3>

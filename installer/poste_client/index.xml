@@ -25,7 +25,7 @@
         &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 &lt;p&gt;Une fois que vous avez téléchargez le binaire sur l&amp;rsquo;url qui vous a été fournis :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;installers_download_page.png&#34; alt=&#34;installers&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Suivez les différentes étapes du programme d&amp;rsquo;installation et cliquez sur terminé. La DevBox-santé est lancé automatiquement sur un port pré-défini.&lt;/p&gt;
+&lt;p&gt;Suivez les différentes étapes du programme d&amp;rsquo;installation et cliquez sur terminé. La DevBox-santé est lancée automatiquement sur un port pré-défini.&lt;/p&gt;
 &lt;h3 id=&#34;sous-windows&#34;&gt;Sous Windows&lt;/h3&gt;
 &lt;p&gt;La DevBox-santé est accessible dans la barre de tâches :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;Demon_DevBox_sante_windows.png&#34; alt=&#34;Demon_DevBox_sante_windows.png&#34;&gt;&lt;/p&gt;
@@ -95,16 +95,6 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&amp;lt;/ds:X509Certificate&amp;gt;&
     Headers: {X-ORACLE-DMS-ECID=1360e356-5091-4ec5-8d19-dce653f132d7-00004557, content-type=application/soap+xml; charset=utf-8, Content-Length=940, Date=Tue, 08 Feb 2022 09:17:17 GMT}
     Payload: &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;
 &amp;lt;soap:Envelope xmlns:soap=&amp;#34;http://www.w3.org/2003/05/soap-envelope&amp;#34;&amp;gt;&amp;lt;env:Body xmlns:S=&amp;#34;http://www.w3.org/2003/05/soap-envelope&amp;#34; xmlns:env=&amp;#34;http://www.w3.org/2003/05/soap-envelope&amp;#34;&amp;gt;&amp;lt;ns2:RESULTAT xmlns:ns3=&amp;#34;http://www.cnamts.fr/INSiRecVit&amp;#34; xmlns:ns2=&amp;#34;http://www.cnamts.fr/INSiResultat&amp;#34; xmlns=&amp;#34;http://www.cnamts.fr/INSiRecSans&amp;#34;&amp;gt;&amp;lt;ns2:CR&amp;gt;&amp;lt;ns2:CodeCR&amp;gt;00&amp;lt;/ns2:CodeCR&amp;gt;&amp;lt;ns2:LibelleCR&amp;gt;OK&amp;lt;/ns2:LibelleCR&amp;gt;&amp;lt;/ns2:CR&amp;gt;&amp;lt;ns2:INDIVIDU&amp;gt;&amp;lt;ns2:INSACTIF&amp;gt;&amp;lt;ns2:IdIndividu&amp;gt;&amp;lt;ns2:NumIdentifiant&amp;gt;2770763220829&amp;lt;/ns2:NumIdentifiant&amp;gt;&amp;lt;ns2:Cle&amp;gt;10&amp;lt;/ns2:Cle&amp;gt;&amp;lt;/ns2:IdIndividu&amp;gt;&amp;lt;ns2:OID&amp;gt;1.2.250.1.213.1.4.8&amp;lt;/ns2:OID&amp;gt;&amp;lt;/ns2:INSACTIF&amp;gt;&amp;lt;ns2:TIQ&amp;gt;&amp;lt;ns2:NomNaissance&amp;gt;NESSI&amp;lt;/ns2:NomNaissance&amp;gt;&amp;lt;ns2:Prenom&amp;gt;RUTH&amp;lt;/ns2:Prenom&amp;gt;&amp;lt;ns2:ListePrenom&amp;gt;RUTH ISABELLE&amp;lt;/ns2:ListePrenom&amp;gt;&amp;lt;ns2:Sexe&amp;gt;F&amp;lt;/ns2:Sexe&amp;gt;&amp;lt;ns2:DateNaissance&amp;gt;1977-07-14&amp;lt;/ns2:DateNaissance&amp;gt;&amp;lt;ns2:LieuNaissance&amp;gt;63220&amp;lt;/ns2:LieuNaissance&amp;gt;&amp;lt;/ns2:TIQ&amp;gt;&amp;lt;/ns2:INDIVIDU&amp;gt;&amp;lt;/ns2:RESULTAT&amp;gt;&amp;lt;/env:Body&amp;gt;&amp;lt;/soap:Envelope&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
-&lt;p&gt;La DevBox-santé est paramétré par défaut lors de l&amp;rsquo;installation, mais elle est personnalisable en modifiant le fichier &lt;code&gt;application.yml&lt;/code&gt;. Les modifications possibles de cette configuration est décrite pour chacun des composants dans leur espace de documentation :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;pour le DMP : &lt;a href=&#34;/dmp/configuration&#34;&gt;/dmp/configuration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;pour l&amp;rsquo;INSi : &lt;a href=&#34;/insi/configuration&#34;&gt;/insi/configuration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;lancer-la-devbox-santé-en-ssl-debug&#34;&gt;Lancer la devbox-santé en ssl debug&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd C:\Program Files\DevBoxSante-client\
-C:\Program Files\DevBoxSante-client&amp;gt;jre\bin\java.exe -Dspring.config.location=.\application.yml -Djavax.net.debug=all -jar repository\devboxsante.jar &amp;gt; output.log
 &lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
@@ -337,6 +327,35 @@ end
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;environnements-de-test-et-formation&#34;&gt;Environnements de test et formation&lt;/h3&gt;
 &lt;p&gt;Les urls changent sur ces environnements, cf. les &lt;a href=&#34;/dmp/howtos/environnements&#34;&gt;environnements du DMP&lt;/a&gt; par exemple.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Installer: Howtos</title>
+      <link>/installer/poste_client/howtos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/installer/poste_client/howtos/</guid>
+      <description>
+        
+        
+        &lt;h4 id=&#34;surcharge-dune-propriété-lors-du-démarrage-de-lexécutable&#34;&gt;Surcharge d&amp;rsquo;une propriété lors du démarrage de l&amp;rsquo;exécutable&lt;/h4&gt;
+&lt;p&gt;Il est possible de surcharger une propriété de la configuration &lt;code&gt;application.yml&lt;/code&gt; lors du démarrage de la DevBox-Santé.
+Par exemple, pour démarrer la DevBox-Santé sur le port 10002: &lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;C:\Program Files\DevBoxSante\DevBoxSante.exe&amp;#34;&lt;/span&gt; --server.port&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10002&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;lancer-la-devbox-santé-en-ssl-debug&#34;&gt;Lancer la devbox-santé en ssl debug&lt;/h3&gt;
+&lt;p&gt;En cas de besoin, il est possible de lancer la DevBox-santé en ligne de commande java, et de configurer la JVM (Java Virtual Machine) en debug pour les connexions SSL.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;C:\Program Files\DevBoxSante-client\&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;jre\bin\java.exe -Dspring.config.location=.\application.yml -Djavax.net.debug=all -jar repository\devboxsante.jar &amp;gt; output.log
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;changer-la-configuration-de-la-devbox-santé-fournie&#34;&gt;Changer la configuration de la devbox-santé fournie&lt;/h3&gt;
+&lt;p&gt;La DevBox-santé est paramétrée par défaut lors de l&amp;rsquo;installation, mais elle est personnalisable en modifiant le fichier de configuration &lt;code&gt;application.yml&lt;/code&gt;.
+Les modifications possibles de cette configuration sont décrites pour chacun des composants dans leur espace de documentation :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pour le DMP : &lt;a href=&#34;/dmp/configuration&#34;&gt;/dmp/configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;pour l&amp;rsquo;INSi : &lt;a href=&#34;/insi/configuration&#34;&gt;/insi/configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>

@@ -131,6 +131,10 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-installerposte_clientflux-check"/>
   <label for="m-installerposte_clientflux-check"><a href="/installer/poste_client/flux/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-installerposte_clientflux"><span class="">Matrice des Flux</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-installerposte_clienthowtos-li">
+  <input type="checkbox" id="m-installerposte_clienthowtos-check"/>
+  <label for="m-installerposte_clienthowtos-check"><a href="/installer/poste_client/howtos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-installerposte_clienthowtos"><span class="">Howtos</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-installerdocker-li">
@@ -253,8 +257,6 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#vérifier-une-mise-à-jour">Vérifier une mise à jour</a></li>
         <li><a href="#obtenir-les-logs">Obtenir les Logs</a></li>
-        <li><a href="#configuration">Configuration</a></li>
-        <li><a href="#lancer-la-devbox-santé-en-ssl-debug">Lancer la devbox-santé en ssl debug</a></li>
       </ul>
     </li>
   </ul>
@@ -308,7 +310,7 @@ if (!doNotTrack) {
 	<h2 id="installation">Installation</h2>
 <p>Une fois que vous avez téléchargez le binaire sur l&rsquo;url qui vous a été fournis :</p>
 <p><img src="installers_download_page.png" alt="installers"></p>
-<p>Suivez les différentes étapes du programme d&rsquo;installation et cliquez sur terminé. La DevBox-santé est lancé automatiquement sur un port pré-défini.</p>
+<p>Suivez les différentes étapes du programme d&rsquo;installation et cliquez sur terminé. La DevBox-santé est lancée automatiquement sur un port pré-défini.</p>
 <h3 id="sous-windows">Sous Windows</h3>
 <p>La DevBox-santé est accessible dans la barre de tâches :</p>
 <p><img src="Demon_DevBox_sante_windows.png" alt="Demon_DevBox_sante_windows.png"></p>
@@ -378,16 +380,6 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&lt;/ds:X509Certificate&gt;&lt;/ds:X
     Headers: {X-ORACLE-DMS-ECID=1360e356-5091-4ec5-8d19-dce653f132d7-00004557, content-type=application/soap+xml; charset=utf-8, Content-Length=940, Date=Tue, 08 Feb 2022 09:17:17 GMT}
     Payload: &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;
 &lt;soap:Envelope xmlns:soap=&#34;http://www.w3.org/2003/05/soap-envelope&#34;&gt;&lt;env:Body xmlns:S=&#34;http://www.w3.org/2003/05/soap-envelope&#34; xmlns:env=&#34;http://www.w3.org/2003/05/soap-envelope&#34;&gt;&lt;ns2:RESULTAT xmlns:ns3=&#34;http://www.cnamts.fr/INSiRecVit&#34; xmlns:ns2=&#34;http://www.cnamts.fr/INSiResultat&#34; xmlns=&#34;http://www.cnamts.fr/INSiRecSans&#34;&gt;&lt;ns2:CR&gt;&lt;ns2:CodeCR&gt;00&lt;/ns2:CodeCR&gt;&lt;ns2:LibelleCR&gt;OK&lt;/ns2:LibelleCR&gt;&lt;/ns2:CR&gt;&lt;ns2:INDIVIDU&gt;&lt;ns2:INSACTIF&gt;&lt;ns2:IdIndividu&gt;&lt;ns2:NumIdentifiant&gt;2770763220829&lt;/ns2:NumIdentifiant&gt;&lt;ns2:Cle&gt;10&lt;/ns2:Cle&gt;&lt;/ns2:IdIndividu&gt;&lt;ns2:OID&gt;1.2.250.1.213.1.4.8&lt;/ns2:OID&gt;&lt;/ns2:INSACTIF&gt;&lt;ns2:TIQ&gt;&lt;ns2:NomNaissance&gt;NESSI&lt;/ns2:NomNaissance&gt;&lt;ns2:Prenom&gt;RUTH&lt;/ns2:Prenom&gt;&lt;ns2:ListePrenom&gt;RUTH ISABELLE&lt;/ns2:ListePrenom&gt;&lt;ns2:Sexe&gt;F&lt;/ns2:Sexe&gt;&lt;ns2:DateNaissance&gt;1977-07-14&lt;/ns2:DateNaissance&gt;&lt;ns2:LieuNaissance&gt;63220&lt;/ns2:LieuNaissance&gt;&lt;/ns2:TIQ&gt;&lt;/ns2:INDIVIDU&gt;&lt;/ns2:RESULTAT&gt;&lt;/env:Body&gt;&lt;/soap:Envelope&gt;
-</code></pre><h3 id="configuration">Configuration</h3>
-<p>La DevBox-santé est paramétré par défaut lors de l&rsquo;installation, mais elle est personnalisable en modifiant le fichier <code>application.yml</code>. Les modifications possibles de cette configuration est décrite pour chacun des composants dans leur espace de documentation :</p>
-<ul>
-<li>pour le DMP : <a href="/dmp/configuration">/dmp/configuration</a></li>
-<li>pour l&rsquo;INSi : <a href="/insi/configuration">/insi/configuration</a></li>
-<li>…</li>
-</ul>
-<h3 id="lancer-la-devbox-santé-en-ssl-debug">Lancer la devbox-santé en ssl debug</h3>
-<pre tabindex="0"><code>cd C:\Program Files\DevBoxSante-client\
-C:\Program Files\DevBoxSante-client&gt;jre\bin\java.exe -Dspring.config.location=.\application.yml -Djavax.net.debug=all -jar repository\devboxsante.jar &gt; output.log
 </code></pre>
         <div class="section-index">
     

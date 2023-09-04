@@ -119,5 +119,29 @@ La prise en charge de cette évolution est obligatoire pour les LPS destinés au
       </description>
     </item>
     
+    <item>
+      <title>Dmp: Référencement Phase 2</title>
+      <link>/dmp/howtos/homologation/phase_2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/dmp/howtos/homologation/phase_2/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;déroulement&#34;&gt;Déroulement&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Récupérer le plan de test depuis la plateforme du &lt;strong&gt;CNDA&lt;/strong&gt; (Cahier de tests filtré par eux selon les profils déclarés précédemment)&lt;/li&gt;
+&lt;li&gt;Remplir l&amp;rsquo;onglet &amp;ldquo;Phase 2 Déclarations&amp;rdquo; et &amp;ldquo;Phase 2 Tests&amp;rdquo; avec l&amp;rsquo;Arborescence_PDT remplis des trames et impressions écrans.&lt;/li&gt;
+&lt;li&gt;Fournir au &lt;strong&gt;CNDA&lt;/strong&gt; ce plan de tests pour vérification&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;onglet-déclarations&#34;&gt;Onglet Déclarations&lt;/h4&gt;
+&lt;p&gt;Cet onglet demande de répondre à un ensemble d&amp;rsquo;exigences. Certaines sont couvertes par la DevBox-santé, certaines sont déléguées à l&amp;rsquo;intégrateur.&lt;/p&gt;
+&lt;p&gt;Pour vérifier les différents statuts des exigences une simple recherche dans le gestionnaire de demandes de ce projet vous permet d&amp;rsquo;en récupérer l&amp;rsquo;état : &lt;a href=&#34;https://bitbucket.org/devbox-sante/homologation/issues&#34;&gt;https://bitbucket.org/devbox-sante/homologation/issues&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;onglet-tests&#34;&gt;Onglet tests&lt;/h4&gt;
+&lt;p&gt;Au préalable vous pouvez utilisez la macro de l&amp;rsquo;onglet &amp;ldquo;Arborescence&amp;rdquo; pour générer les répertoires de tests et déclarations. Pour chacun des test vous devez fournir des captures d&amp;rsquo;écran et/ou les trames SOAP (cf. &lt;a href=&#34;/dmp/howtos/logs&#34;&gt;/dmp/howto/logs&lt;/a&gt;)&lt;/p&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

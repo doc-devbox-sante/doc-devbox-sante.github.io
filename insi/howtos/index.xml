@@ -121,6 +121,13 @@ Si une session pkcs11 est ouverte, cette dernière est utilisée pour générer 
 &lt;p&gt;Dans le cas où plusieurs structures d&amp;rsquo;activité sont trouvées, il est demandé à l’intégrateur de fournir son identifiant National et une vérification de son existence sur la carte CPS est réalisée.
 L&amp;rsquo;attribut identifiantFacturation est demandé pour chaque requête de l’intégrateur&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Test2_07&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Cas 1 : Uniquement après le premier appel, injection du fichier (simulant une réponse du service) : &lt;strong&gt;REP_CR01.xml&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ce cas n&amp;rsquo;est pas réalisable avec l&amp;rsquo;&lt;a href=&#34;/insi/configuration#jeu-de-test-cnda&#34;&gt;injecteur CNDA&lt;/a&gt; développé. En effet, l&amp;rsquo;injecteur injecte pour l&amp;rsquo;ensemble des requêtes effectuées la réponse injectée. C&amp;rsquo;est cette dernière qui est retournée par le service à l&amp;rsquo;intégrateur. Jusqu&amp;rsquo;à présent, il suffit de reprendre les 2 premières trames envoyées et reçues par la DevBox-Santé pour preuve.&lt;/p&gt;
 &lt;h2 id=&#34;ws_ins3&#34;&gt;WS_INS3&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;

@@ -770,7 +770,7 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 &lt;p&gt;Le formulaire de commande de cartes et certificats de test est le F414 : &lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/F414.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/F414.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Il est possible de faire la démarche en ligne : &lt;a href=&#34;https://www.demarches-simplifiees.fr/commencer/f414&#34;&gt;https://www.demarches-simplifiees.fr/commencer/f414&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;en-production&#34;&gt;En production&lt;/h3&gt;
-&lt;p&gt;Pour obtenir, les certificats et clés nécessaires pour la connexion au DMP en authentification indirecte, il faut que votre établissement soit enregistré au FINESS (Fichier National des Établissements Sanitaires es Sociaux) : &lt;a href=&#34;http://finess.sante.gouv.fr/fininter/jsp/index.jsp&#34;&gt;http://finess.sante.gouv.fr/fininter/jsp/index.jsp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pour obtenir, les certificats et clés nécessaires pour la connexion au DMP en authentification indirecte, il faut que votre établissement soit enregistré au FINESS (Fichier National des Établissements Sanitaires es Sociaux) : &lt;a href=&#34;https://finess.esante.gouv.fr/&#34;&gt;https://finess.esante.gouv.fr/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Depuis le SEGUR santé, les guides de commandes de certificats sont spécifiques à chaque couloir :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-medico-social-guide-certificats.pdf&#34;&gt;Médico-social&lt;/a&gt;&lt;/li&gt;

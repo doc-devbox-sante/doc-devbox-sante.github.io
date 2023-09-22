@@ -111,8 +111,15 @@ if (!doNotTrack) {
   </form>
   <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
-      <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-annuaire-li">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-annuaire-li">
   <a href="/annuaire/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-annuaire"><span class="td-sidebar-nav-active-item">Annuaire</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-annuaireversions-li">
+  <input type="checkbox" id="m-annuaireversions-check"/>
+  <label for="m-annuaireversions-check"><a href="/annuaire/versions/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-annuaireversions"><span class="">Versions</span></a></label>
+  
+</li>
+  </ul>
 </li>
     </ul>
   </nav>
@@ -202,8 +209,11 @@ if (!doNotTrack) {
 <li>Annuaire MSSanté: <a href="https://service.annuaire.sante.fr">https://service.annuaire.sante.fr</a></li>
 <li>Nomenclature NOS: <a href="https://esante.gouv.fr">https://esante.gouv.fr</a></li>
 <li>Nomenclature CCAM: <a href="https://www.ameli.fr">https://www.ameli.fr</a></li>
-<li>Nomenclature CIM10: <a href="http://www.departement-information-medicale.com">http://www.departement-information-medicale.com</a></li>
-<li>Bien d&rsquo;autres nomenclatures CIM11, CIS, CIP, ATC &hellip;</li>
+<li>Nomenclature CIM10: <a href="https://smt.esante.gouv.fr">https://smt.esante.gouv.fr</a></li>
+<li>Nomenclature CIM11: <a href="https://smt.esante.gouv.fr">https://smt.esante.gouv.fr</a></li>
+<li>Nomenclature CIS: <a href="https://base-donnees-publique.medicaments.gouv.fr">https://base-donnees-publique.medicaments.gouv.fr</a></li>
+<li>Nomenclature CIP: <a href="https://base-donnees-publique.medicaments.gouv.fr">https://base-donnees-publique.medicaments.gouv.fr</a></li>
+<li>Bien d&rsquo;autres nomenclatures ATC &hellip;</li>
 </ul>
 <p>avec géolocalisation des adresses</p>
 
@@ -300,6 +310,16 @@ Par exemple pour le chargement des professionnels:</p>
     
     
     
+    <hr class="panel-line">
+        
+            
+            <div class="entry">
+                <h5>
+                    <a href="/annuaire/versions/">Versions</a>
+                </h5>
+                <p>Note sur les différentes versions de l&rsquo;annuaire DevBox-Santé</p>
+            </div>
+        
     
 </div>
 

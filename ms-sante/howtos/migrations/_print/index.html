@@ -137,6 +137,25 @@ Version imprimable multipages.
   
 
   
+    
+    
+	
+<li>1: <a href="#pg-fdbfb588e3beb583f45227b16fa6167f">Migration 12 vers la 2.0</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
 
     </ul>
 
@@ -155,6 +174,59 @@ Version imprimable multipages.
   
   
 
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-fdbfb588e3beb583f45227b16fa6167f">1 - Migration 12 vers la 2.0</h1>
+    <div class="lead">Guide de migration vers la nouvelle version 2.0</div>
+	<p>La version 2.0 de la DevBox-santé MSS apporte le support du nouveau référentiel v2 conforme au ségur vague 2</p>
+<p>Quelques changements ont été apportés.</p>
+<h3 id="folderid"><code>Folder.id</code></h3>
+<p>Les FolderId sont devenus des chaînes de caractères au lieu des entiers pour le support de la version Mailiz.</p>
+<p><img src="Folder_dans_swagger.png" alt="Folder_dans_swagger.png"></p>
+<p><img src="FolderId_dans_swagger.png" alt="FolderId dans les routes"></p>
+<h3 id="messageflags-dépréciés">Message.Flags dépréciés</h3>
+<p>Voici la liste des flags dépréciés et non utilisés dans le nouveau référentiel.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ATTACHMENT</span><span style="color:#ce5c00;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">LOW_PRIORITY</span><span style="color:#ce5c00;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">NONE</span><span style="color:#ce5c00;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">PRIORITY</span><span style="color:#ce5c00;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">REPLIED</span><span style="color:#ce5c00;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">SENT_BY_ME</span><span style="color:#ce5c00;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">UNREAD</span><span style="color:#ce5c00;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">URGENT</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
   
 
 

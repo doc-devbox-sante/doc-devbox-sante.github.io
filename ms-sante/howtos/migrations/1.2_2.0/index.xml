@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – Migration 12 vers la 2.0</title>
+    <link>/ms-sante/howtos/migrations/1.2_2.0/</link>
+    <description>Recent content in Migration 12 vers la 2.0 on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 18 Aug 2023 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="/ms-sante/howtos/migrations/1.2_2.0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

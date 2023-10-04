@@ -14,6 +14,36 @@
     
     
     <item>
+      <title>Dmp: Migration 5.0 vers la 5.1</title>
+      <link>/dmp/howtos/migrations/5.0_5.1/</link>
+      <pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/dmp/howtos/migrations/5.0_5.1/</guid>
+      <description>
+        
+        
+        &lt;p&gt;La version 5.1 apporte son lot de nouveautés, et est totalement compatible avec la 5.0.&lt;/p&gt;
+&lt;p&gt;Elle supporte néanmoins les évolutions définis dans les différents guides d&amp;rsquo;intégration 2.7, 2.8 et 2.9, mais également le support du volet CNAM-HR Historique de Remboursement (pour plus de renseignements rendez-vous &lt;a href=&#34;/dmp/cda/cnam-hr&#34;&gt;sur la page dédiée&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&#34;27-support-de-la-recherche-finddocumentbyreferenceid-nécessaire-à-la-recherche-de-documents-dimagerie&#34;&gt;[2.7] Support de la recherche FindDocumentByReferenceId nécessaire à la recherche de documents d&amp;rsquo;imagerie&lt;/h3&gt;
+&lt;p&gt;Une nouvelle requête est disponible également pour la recherche &lt;code&gt;FindDocumentByReferenceId&lt;/code&gt; permettant la recherche de documents DICOM :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;28-prise-en-charge-du-mode-ejeg-en-authentification-indirecte&#34;&gt;[2.8] Prise en charge du mode EJ/EG en authentification indirecte&lt;/h3&gt;
+&lt;p&gt;En fonction du déploiement, nous pouvons vouloir authentifier la structure Juridique de l&amp;rsquo;établissement pour un établissement géographique ou encore déployer que des certificats liés au FINESS Géographique. Le tableau ci-dessous reprend l&amp;rsquo;ensemble des exigences du GIE Sesam-Vitale en la matière&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;EJ_EG.png&#34; alt=&#34;EJ_EG récapitulatif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pour vous cet intégration sera toute simple,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mode EG&lt;/strong&gt; : Vous utilisez un certificat EG (Établissement Géographique) pour vous connecter, toutes les informations de l&amp;rsquo;établissement (&lt;code&gt;DMPCStructureSante&lt;/code&gt;) pour l&amp;rsquo;alimentation du DMP et l&amp;rsquo;authentification (VIHF) seront déduites du certificat.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mode EJ/EG (assouplissement)&lt;/strong&gt;: Vous utilisez un certificat EJ (Établissement Juridique) pour vous connecter et vous précisez dans le contexte d&amp;rsquo;appel, l&amp;rsquo;identifiant Finess Géographique de la structure du professionnel. Alors les différents identifiants (celui de l&amp;rsquo;EJ dans le certificat, et celui de l&amp;rsquo;EG donné dans le contexte) seront utilisés à bon escient dans les différents champs des transactions (VIHF, Soumission XDS, Document XDS, Document CDA, Document de signature XADES).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mode EJ (déconseillé)&lt;/strong&gt;: Vous utilisez un certificat EJ (Établissement Juridique) pour vous connecter, si vous ne précisez rien dans le contexte d&amp;rsquo;appel (&lt;code&gt;DMPCContext&lt;/code&gt;) ce sont les informations de ce certificat qui seront utilisées. Attention, toutefois ce mode EJ est fortement déconseillé dorénavant.&lt;/p&gt;
+&lt;h3 id=&#34;29-gestion-des-notes-de-vaccination-en-version-20231&#34;&gt;[2.9] Gestion des notes de vaccination en version 2023.1&lt;/h3&gt;
+&lt;p&gt;Il s&amp;rsquo;agit ici d&amp;rsquo;une mise en conformité avec le Cadre d&amp;rsquo;intéropérabilité SIS. Ces modifications sont transparentes pour vous, vous soummettrez les mêmes notes de vaccination et retrouver les mêmes historiques de vaccination avec nos apis : &lt;a href=&#34;/dmp/cda/vaccination&#34;&gt;/dmp/cda/vaccination&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;29-gestion-de-la-td04-pour-les-cpe&#34;&gt;[2.9] Gestion de la TD0.4 pour les CPE&lt;/h3&gt;
+&lt;p&gt;La TD0.4 peut dorénavant être appelé via une CPE pour le compte d&amp;rsquo;un professionnel, dans ce cas le RPPS du professionnel de santé doit être passé dans la requête&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://bitbucket.org/devbox-sante/dmpc-api/src/master/src/main/java/fr/devboxsante/dmp/TD04Request.java&#34;&gt;https://bitbucket.org/devbox-sante/dmpc-api/src/master/src/main/java/fr/devboxsante/dmp/TD04Request.java&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pour la liste de toutes les autres demandes : &lt;a href=&#34;&#34;&gt;Release note de la version 5.1&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Dmp: Migration 4.7 vers la 5.0</title>
       <link>/dmp/howtos/migrations/4.7_5.0/</link>
       <pubDate>Fri, 18 Nov 2022 00:00:00 +0000</pubDate>

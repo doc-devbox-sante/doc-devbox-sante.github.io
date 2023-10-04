@@ -1196,6 +1196,15 @@ La réponse étant :&lt;/li&gt;
 &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
 &lt;p&gt;La DevBox-Santé DMP est un connecteur EAI homologué V2 par le CNDA qui s’interface avec le DMP.
 Elle prend en charge la complexité de l’intégration et facilite ainsi aux éditeurs de logiciel de santé l’intéropérabilité avec le DMP en vous fournissant une API simple à utiliser.&lt;/p&gt;
+&lt;h3 id=&#34;homologation-du-25092023&#34;&gt;Homologation du 25/09/2023&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Nom du logiciel : &lt;strong&gt;DEVBOX-SANTE DMP&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Version : &lt;strong&gt;5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;NIL : &lt;strong&gt;DEV935997&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Type Fonctionnel : &lt;strong&gt;Connecteur, Passerelle avec gestion fonctionnalité PFI&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Homologation package GIE SV : &lt;strong&gt;02.09.00&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Évolutions incluses : EG - EG/EJ&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;homologation-du-15122022&#34;&gt;Homologation du 15/12/2022&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Nom du logiciel : &lt;strong&gt;DEVBOX-SANTE DMP&lt;/strong&gt;&lt;/li&gt;

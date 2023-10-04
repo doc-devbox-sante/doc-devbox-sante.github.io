@@ -311,7 +311,26 @@ Version imprimable multipages.
     
     
 	
-<li>8.1: <a href="#pg-6710e3281519b88ee2aa5944e262c072">Migration 4.7 vers la 5.0</a></li>
+<li>8.1: <a href="#pg-1711c93edc9bf92bd427d7dae7bd6ae0">Migration 5.0 vers la 5.1</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>8.2: <a href="#pg-6710e3281519b88ee2aa5944e262c072">Migration 4.7 vers la 5.0</a></li>
 
 
     
@@ -1696,7 +1715,53 @@ DMPCCdaValidator       :
 
 <div class="td-content" style="">
     
-	<h1 id="pg-6710e3281519b88ee2aa5944e262c072">8.1 - Migration 4.7 vers la 5.0</h1>
+	<h1 id="pg-1711c93edc9bf92bd427d7dae7bd6ae0">8.1 - Migration 5.0 vers la 5.1</h1>
+    <div class="lead">Guide de migration vers la nouvelle version 5.1</div>
+	<p>La version 5.1 apporte son lot de nouveautés, et est totalement compatible avec la 5.0.</p>
+<p>Elle supporte néanmoins les évolutions définis dans les différents guides d&rsquo;intégration 2.7, 2.8 et 2.9, mais également le support du volet CNAM-HR Historique de Remboursement (pour plus de renseignements rendez-vous <a href="/dmp/cda/cnam-hr">sur la page dédiée</a>)</p>
+<h3 id="27-support-de-la-recherche-finddocumentbyreferenceid-nécessaire-à-la-recherche-de-documents-dimagerie">[2.7] Support de la recherche FindDocumentByReferenceId nécessaire à la recherche de documents d&rsquo;imagerie</h3>
+<p>Une nouvelle requête est disponible également pour la recherche <code>FindDocumentByReferenceId</code> permettant la recherche de documents DICOM :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"></code></pre></div><h3 id="28-prise-en-charge-du-mode-ejeg-en-authentification-indirecte">[2.8] Prise en charge du mode EJ/EG en authentification indirecte</h3>
+<p>En fonction du déploiement, nous pouvons vouloir authentifier la structure Juridique de l&rsquo;établissement pour un établissement géographique ou encore déployer que des certificats liés au FINESS Géographique. Le tableau ci-dessous reprend l&rsquo;ensemble des exigences du GIE Sesam-Vitale en la matière</p>
+<p><img src="EJ_EG.png" alt="EJ_EG récapitulatif"></p>
+<p>Pour vous cet intégration sera toute simple,</p>
+<p><strong>Mode EG</strong> : Vous utilisez un certificat EG (Établissement Géographique) pour vous connecter, toutes les informations de l&rsquo;établissement (<code>DMPCStructureSante</code>) pour l&rsquo;alimentation du DMP et l&rsquo;authentification (VIHF) seront déduites du certificat.</p>
+<p><strong>Mode EJ/EG (assouplissement)</strong>: Vous utilisez un certificat EJ (Établissement Juridique) pour vous connecter et vous précisez dans le contexte d&rsquo;appel, l&rsquo;identifiant Finess Géographique de la structure du professionnel. Alors les différents identifiants (celui de l&rsquo;EJ dans le certificat, et celui de l&rsquo;EG donné dans le contexte) seront utilisés à bon escient dans les différents champs des transactions (VIHF, Soumission XDS, Document XDS, Document CDA, Document de signature XADES).</p>
+<p><strong>Mode EJ (déconseillé)</strong>: Vous utilisez un certificat EJ (Établissement Juridique) pour vous connecter, si vous ne précisez rien dans le contexte d&rsquo;appel (<code>DMPCContext</code>) ce sont les informations de ce certificat qui seront utilisées. Attention, toutefois ce mode EJ est fortement déconseillé dorénavant.</p>
+<h3 id="29-gestion-des-notes-de-vaccination-en-version-20231">[2.9] Gestion des notes de vaccination en version 2023.1</h3>
+<p>Il s&rsquo;agit ici d&rsquo;une mise en conformité avec le Cadre d&rsquo;intéropérabilité SIS. Ces modifications sont transparentes pour vous, vous soummettrez les mêmes notes de vaccination et retrouver les mêmes historiques de vaccination avec nos apis : <a href="/dmp/cda/vaccination">/dmp/cda/vaccination</a>.</p>
+<h3 id="29-gestion-de-la-td04-pour-les-cpe">[2.9] Gestion de la TD0.4 pour les CPE</h3>
+<p>La TD0.4 peut dorénavant être appelé via une CPE pour le compte d&rsquo;un professionnel, dans ce cas le RPPS du professionnel de santé doit être passé dans la requête</p>
+<p><a href="https://bitbucket.org/devbox-sante/dmpc-api/src/master/src/main/java/fr/devboxsante/dmp/TD04Request.java">https://bitbucket.org/devbox-sante/dmpc-api/src/master/src/main/java/fr/devboxsante/dmp/TD04Request.java</a></p>
+<p><strong>Pour la liste de toutes les autres demandes : <a href="">Release note de la version 5.1</a></strong></p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6710e3281519b88ee2aa5944e262c072">8.2 - Migration 4.7 vers la 5.0</h1>
     <div class="lead">Guide de migration vers la nouvelle version 5.0</div>
 	<p>La version 5.0 apporte son lot de nouveautés, et tend vers une intégration la plus souple avec le DMP mais aussi les autres téléservices de santé.</p>
 <p>Cette version supporte encore les anciennes requêtes mais déprecient certaines notions.</p>
@@ -1982,6 +2047,15 @@ La réponse étant :</li>
 <h3 id="description">Description</h3>
 <p>La DevBox-Santé DMP est un connecteur EAI homologué V2 par le CNDA qui s’interface avec le DMP.
 Elle prend en charge la complexité de l’intégration et facilite ainsi aux éditeurs de logiciel de santé l’intéropérabilité avec le DMP en vous fournissant une API simple à utiliser.</p>
+<h3 id="homologation-du-25092023">Homologation du 25/09/2023</h3>
+<ul>
+<li>Nom du logiciel : <strong>DEVBOX-SANTE DMP</strong></li>
+<li>Version : <strong>5.1</strong></li>
+<li>NIL : <strong>DEV935997</strong></li>
+<li>Type Fonctionnel : <strong>Connecteur, Passerelle avec gestion fonctionnalité PFI</strong></li>
+<li>Homologation package GIE SV : <strong>02.09.00</strong></li>
+<li>Évolutions incluses : EG - EG/EJ</li>
+</ul>
 <h3 id="homologation-du-15122022">Homologation du 15/12/2022</h3>
 <ul>
 <li>Nom du logiciel : <strong>DEVBOX-SANTE DMP</strong></li>

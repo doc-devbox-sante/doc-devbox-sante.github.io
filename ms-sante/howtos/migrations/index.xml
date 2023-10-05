@@ -14,7 +14,7 @@
     
     
     <item>
-      <title>Ms-Sante: Migration 12 vers la 2.0</title>
+      <title>Ms-Sante: Migration 1.2 vers la 2.0</title>
       <link>/ms-sante/howtos/migrations/1.2_2.0/</link>
       <pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate>
       
@@ -24,29 +24,64 @@
         
         &lt;p&gt;La version 2.0 de la DevBox-santé MSS apporte le support du nouveau référentiel v2 conforme au ségur vague 2&lt;/p&gt;
 &lt;p&gt;Quelques changements ont été apportés.&lt;/p&gt;
-&lt;h3 id=&#34;folderid&#34;&gt;&lt;code&gt;Folder.id&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;Les FolderId sont devenus des chaînes de caractères au lieu des entiers pour le support de la version Mailiz.&lt;/p&gt;
+&lt;p&gt;La principale modification est le fait qu&amp;rsquo;il n&amp;rsquo;y a plus de dossiers Trash, Draft, Sent.
+Ce sont maintenant des flags sur les messages pour les 2ers et une date d&amp;rsquo;envoi pour le dernier.&lt;/p&gt;
+&lt;p&gt;Ainsi par exemple pour avoir les messages du dossier draft, il faut rechercher les messages en précisant draft=true dans la query et sans préciser de folderId.
+Cependant pour garder une compatibilité avec la V1, il est possible de rechercher avec un folderId = DRAFT,SENT ou TRASH, dans ce cas l&amp;rsquo;API fait le travail nécessaire de conversion.&lt;/p&gt;
+&lt;p&gt;Autre point important, un message sauvegardé en brouillon change d&amp;rsquo;id à chaque nouvelle sauvegarde.
+Le contenu des pièces jointes n&amp;rsquo;est pas renvoyé avec le message, il faut appeler un service spécifique pour avoir le contenu.
+Lors de l&amp;rsquo;enregistrement d&amp;rsquo;un brouillon, la première fois que la pièce jointe est ajouté il faut passer son contenu, les fois suivantes le contenu n&amp;rsquo;est pas obligatoire (et même conseillé à null)&lt;/p&gt;
+&lt;h2 id=&#34;authentification&#34;&gt;Authentification&lt;/h2&gt;
+&lt;p&gt;2 modes d&amp;rsquo;authentification sont disponibles:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pro Santé Connect&lt;/li&gt;
+&lt;li&gt;Certificat p12 (cas d&amp;rsquo;une bal applicative)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La connexion par carte cps est supprimée et la connexion par login/mdp/otp est à priori supprimée (à voir selon l&amp;rsquo;opérateur)&lt;/p&gt;
+&lt;h2 id=&#34;modèle&#34;&gt;Modèle&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Modification du type des identifiants (id, folderId, messageId) integer =&amp;gt; string&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;Folder_dans_swagger.png&#34; alt=&#34;Folder_dans_swagger.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;FolderId_dans_swagger.png&#34; alt=&#34;FolderId dans les routes&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;messageflags-dépréciés&#34;&gt;Message.Flags dépréciés&lt;/h3&gt;
-&lt;p&gt;Voici la liste des flags dépréciés et non utilisés dans le nouveau référentiel.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Deprecated&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;ATTACHMENT&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Deprecated&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;LOW_PRIORITY&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Deprecated&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;NONE&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Deprecated&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;PRIORITY&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Deprecated&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;REPLIED&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Deprecated&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;SENT_BY_ME&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Deprecated&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;UNREAD&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Deprecated&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;URGENT&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Modification des Flags:
+&lt;ul&gt;
+&lt;li&gt;REPLIED =&amp;gt; ANSWERED&lt;/li&gt;
+&lt;li&gt;UNREAD =&amp;gt; SEEN&lt;/li&gt;
+&lt;li&gt;ATTACHMENT, LOW_PRIORITY, NONE, PRIORITY, SENT_BY_ME, URGENT =&amp;gt; Deprecated&lt;/li&gt;
+&lt;li&gt;Nouveaux flags: RECENT, ANSWERED, SEEN&lt;/li&gt;
+&lt;li&gt;Liste complète en V2: ANSWERED, DELETED, DRAFT, FLAGGED, FORWARDED, SEEN, RECENT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Modification d&amp;rsquo;un message (MessageStatus):
+&lt;ul&gt;
+&lt;li&gt;DELETE =&amp;gt; DELETED&lt;/li&gt;
+&lt;li&gt;DELETE, SPAM, TRASH, UNSPAM =&amp;gt; Deprecated&lt;/li&gt;
+&lt;li&gt;DELETED, READ, FLAGGED, UNFLAGGED, UNREAD, UNDELETED&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;MessageQuery
+&lt;ul&gt;
+&lt;li&gt;isSent =&amp;gt; sent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rest-api&#34;&gt;Rest API&lt;/h2&gt;
+&lt;p&gt;Les APIs v2 sont disponible sur l&amp;rsquo;url /mssante/v2/xxxx, elles ont les mêmes signatures que la V1 à quelques exceptions près:&lt;/p&gt;
+&lt;h3 id=&#34;endpoints-supprimés&#34;&gt;Endpoints supprimés&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Authentification : GET /authentication/cps, POST /authentication/otp, GET /authentication/otp/{otp}&lt;/li&gt;
+&lt;li&gt;POST /messages/attachment Ajout de pièce jointe =&amp;gt; Faire un save du message brouillon avec la PJ&lt;/li&gt;
+&lt;li&gt;DELETE /messages/{id}/attachment/{part} Suppression d&amp;rsquo;une pièce jointe =&amp;gt; Faire un save du message brouillon sans la PJ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;nouveaux-endpoints&#34;&gt;Nouveaux endpoints&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Vider la corbeille: DELETE /folders/trash/clean (=&amp;gt; suppression des messages ayant le flag DELETED)&lt;/li&gt;
+&lt;li&gt;POST /folders/{parentId}/create/type/{type}: Lors de la création d&amp;rsquo;un dossier ce dernier est &amp;ldquo;typé&amp;rdquo; comme contenant des messages ou des dossiers. Si le endpoint ne permet pas de préciser le type alors le dossier est par défaut contenant des messages.&lt;/li&gt;
+&lt;li&gt;POST /folders/{id}/rename&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     

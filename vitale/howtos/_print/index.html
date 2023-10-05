@@ -136,7 +136,7 @@ Version imprimable multipages.
     
     
 	
-<li>1: <a href="#pg-a043b85f206f1239f835b6d08a9b3276">Problèmes connus</a></li>
+<li>1: <a href="#pg-44e91ecb266a5f21049e92c56191eee2">Codes d&#39;erreurs</a></li>
 
 
     
@@ -144,7 +144,15 @@ Version imprimable multipages.
     
     
 	
-<li>2: <a href="#pg-85e098b3ee95ade01ec5c133f476c6f0">CNDA : Fiche d&#39;identité du composant Vitale</a></li>
+<li>2: <a href="#pg-a043b85f206f1239f835b6d08a9b3276">Problèmes connus</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-85e098b3ee95ade01ec5c133f476c6f0">CNDA : Fiche d&#39;identité du composant Vitale</a></li>
 
 
     
@@ -175,7 +183,303 @@ Version imprimable multipages.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-a043b85f206f1239f835b6d08a9b3276">1 - Problèmes connus</h1>
+	<h1 id="pg-44e91ecb266a5f21049e92c56191eee2">1 - Codes d&#39;erreurs</h1>
+    
+	<h3 id="liste-des-codes-derreurs">Liste des codes d&rsquo;erreurs</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Constante</th>
+<th>Interprétation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>ERR_INCONNUE</td>
+<td>Erreur inconnue</td>
+</tr>
+<tr>
+<td>11</td>
+<td>ERR_CARTE_ABSENTE</td>
+<td>La carte n&rsquo;est pas dans la fente prévue pour elle.</td>
+</tr>
+<tr>
+<td>12</td>
+<td>ERR_CARTE</td>
+<td>-&gt; Voir Codes d’erreurs carte</td>
+</tr>
+<tr>
+<td>13</td>
+<td>ERR_LECTEUR</td>
+<td>Le lecteur de cartes ne répond pas.</td>
+</tr>
+<tr>
+<td>15</td>
+<td>ERR_CARTE_INCONNUE</td>
+<td>La carte n&rsquo;est pas celle</td>
+</tr>
+<tr>
+<td>17</td>
+<td>ERR_CARTE_HORS_TENSION</td>
+<td>La carte est hors tension.</td>
+</tr>
+<tr>
+<td>18</td>
+<td>ERR_LOGICIEL</td>
+<td>Erreur logiciel</td>
+</tr>
+<tr>
+<td>20</td>
+<td>ERR_GEST_RESSOURCE</td>
+<td>Erreur ressource</td>
+</tr>
+<tr>
+<td>21</td>
+<td>ERR_SESSION_OUVERTE</td>
+<td>Une telle session est déjà ouverte (pour une instance de la même application)</td>
+</tr>
+<tr>
+<td>23</td>
+<td>ERR_EXCLUSIVITE</td>
+<td>Une application accède déjà à la carte.</td>
+</tr>
+<tr>
+<td>25</td>
+<td>ERR_TIMEOUT</td>
+<td>Le temps d&rsquo;attente passé en paramètre est écoulé.</td>
+</tr>
+<tr>
+<td>26</td>
+<td>ERR_SESSION_INCONNUE</td>
+<td>La session indiquée en paramètre est inconnue (0 = session Vitale / 1 = session CPS)</td>
+</tr>
+<tr>
+<td>30</td>
+<td>ERR_CPS_RETIREE</td>
+<td>La CPS n&rsquo;est plus en ligne (mode CPS en ligne).</td>
+</tr>
+<tr>
+<td>31</td>
+<td>ERR_INIT_RESSOURCE_VIT</td>
+<td>La valeur de la clé «Ressource_Vitale» est absente du fichier api_lec.ini</td>
+</tr>
+<tr>
+<td>32</td>
+<td>ERR_INIT_FICHIER</td>
+<td>Le fichier api_lec.ini est introuvé.</td>
+</tr>
+<tr>
+<td>33</td>
+<td>ERR_INIT_MODE</td>
+<td>Le fichier api_lec.ini indique un mode de fonctionnement incorrect.</td>
+</tr>
+<tr>
+<td>34</td>
+<td>ERR_INIT_TIMER</td>
+<td>Le fichier api_lec.ini indique une valeur incorrecte pour initialiser l’un des compteurs</td>
+</tr>
+<tr>
+<td>35</td>
+<td>ERR_INIT_RESSOURCE_CPS</td>
+<td>La valeur de la clé «Ressource_CPS» est absente du fichier api_lec.ini</td>
+</tr>
+<tr>
+<td>36</td>
+<td>ERR_VALIDITE_CPS</td>
+<td>L’état de la CPS (CPA, hors validité, incorrect) ne permet pas la lecture de la carte Vitale.</td>
+</tr>
+<tr>
+<td>37</td>
+<td>ERR_CARTE_INCORRECTE</td>
+<td>Les données inscrites en carte sont inexploitables ou la carte n’est pas authentique.</td>
+</tr>
+<tr>
+<td>38</td>
+<td>ERR_CARTE_INVALIDE</td>
+<td>La carte est incorrectement actualisée ; elle est inutilisable.</td>
+</tr>
+<tr>
+<td>39</td>
+<td>ERR_CARTE_BLOQUEE</td>
+<td>La carte CPS est bloquée et ne peut être utilisée pour lire la carte Vitale. 3 codes erronés ont été présentés à la carte, désormais inutilisable jusqu&rsquo;à son déblocage.</td>
+</tr>
+<tr>
+<td>40</td>
+<td>ERR_CARTE_SATUREE</td>
+<td>La carte n&rsquo;a plus de place disponible sur sa puce.</td>
+</tr>
+<tr>
+<td>41</td>
+<td>ERR_PINCODE_INACTIF</td>
+<td>Le code porteur de la CPS n&rsquo;a pas été présenté ou est erroné</td>
+</tr>
+<tr>
+<td>42</td>
+<td>ERR_CARTE_TEST</td>
+<td>Le type de la carte Vitale ne concorde pas avec celui de la CPS.</td>
+</tr>
+<tr>
+<td>43</td>
+<td>ERR_INIT_CSV</td>
+<td>Le fichier pdt_cdc-011.csv n&rsquo;est pas trouvé.</td>
+</tr>
+<tr>
+<td>44</td>
+<td>ERR_STRUCTURE_TABLE</td>
+<td>Le fichier tablebin.lec présente une structure inadaptée.</td>
+</tr>
+<tr>
+<td>45</td>
+<td>ERR_VERSION_TABLE</td>
+<td>La version de la table binaire est incompatible avec celle des API (0 = libellés / 1 = habilitations)</td>
+</tr>
+<tr>
+<td>47</td>
+<td>ERR_INIT_TABLE</td>
+<td>Le fichier tablebin.lec reste introuvé.</td>
+</tr>
+<tr>
+<td>48</td>
+<td>ERR_STRUCTURE_CSV</td>
+<td>Le fichier pdt_cdc-011.csv présente une structure inadaptée.</td>
+</tr>
+<tr>
+<td>50</td>
+<td>ERR_CRYPTO</td>
+<td>Erreur des API de la librairie cryptographique de l’ASIP Santé</td>
+</tr>
+<tr>
+<td>51</td>
+<td>ERR_CRYPTO_NON_CHARGEE</td>
+<td>La fonction est indisponible car la librairie cryptographique de l’ASIP Santé n’a pas été chargée</td>
+</tr>
+<tr>
+<td>52</td>
+<td>ERR_PARAM_NULL</td>
+<td>Un paramètre est renseigné à tort par la valeur NULL</td>
+</tr>
+<tr>
+<td>53</td>
+<td>ERR_PARAM_ADRESSE</td>
+<td>L&rsquo;adresse mémoire d’un paramètre est inadaptée</td>
+</tr>
+<tr>
+<td>54</td>
+<td>ERR_PARAM_VALEUR</td>
+<td>La valeur de renseignement d’un paramètre est inadaptée</td>
+</tr>
+<tr>
+<td>55</td>
+<td>ERR_PARAM_TAILLE</td>
+<td>La taille d’un paramètre est inadaptée</td>
+</tr>
+<tr>
+<td>56</td>
+<td>ERR_INIT_HAB</td>
+<td>Le fichier tablebin.hab est introuvé.</td>
+</tr>
+<tr>
+<td>57</td>
+<td>ERR_VERSION_HAB</td>
+<td>La version de table d’habilitation est incompatible avec les API.</td>
+</tr>
+<tr>
+<td>58</td>
+<td>ERR_STRUCTURE_HAB</td>
+<td>Le fichier tablebin.hab présente une structure inadaptée.</td>
+</tr>
+<tr>
+<td>60</td>
+<td>ERR_TIMER_CTRL</td>
+<td>Le compteur de contrôle (CPS) est écoulé.</td>
+</tr>
+<tr>
+<td>61</td>
+<td>ERR_TIMER_INAC</td>
+<td>Le compteur d’inactivité (Vitale) est écoulé.</td>
+</tr>
+<tr>
+<td>70</td>
+<td>ERR_DETECT_AUTO</td>
+<td>Erreur lors de la détection automatique des cartes dans les lecteurs PC/SC</td>
+</tr>
+<tr>
+<td>72</td>
+<td>ERR_DETECT_CRYPTO</td>
+<td>Erreur de détection de la ressource par la librairie cryptographique de l’ASIP Santé</td>
+</tr>
+</tbody>
+</table>
+<h3 id="liste-des-codes-derreurs-carte">Liste des codes d&rsquo;erreurs carte</h3>
+<table>
+<thead>
+<tr>
+<th>Erreur</th>
+<th>Constante</th>
+<th>Interprétation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERR_CARTE</td>
+<td>ERR_CARTE_ME1_ME2</td>
+<td>Etat de la carte incorrect pour l&rsquo;ordre demandé.</td>
+</tr>
+<tr>
+<td>ERR_CARTE</td>
+<td>ERR_CARTE_VIERGE</td>
+<td>La carte n&rsquo;a pas été personnalisée.</td>
+</tr>
+<tr>
+<td>ERR_CARTE</td>
+<td>ERR_CARTE_PLEINE</td>
+<td>La carte n&rsquo;a plus de place disponible</td>
+</tr>
+<tr>
+<td>ERR_CARTE</td>
+<td>ERR_CARTE_COMPAC</td>
+<td>Erreur de &ldquo;décompactage&rdquo; des données en carte.</td>
+</tr>
+<tr>
+<td>ERR_CARTE</td>
+<td>ERR_CARTE_INEXISTANTE</td>
+<td>La carte n&rsquo;est pas reconnue.</td>
+</tr>
+<tr>
+<td>ERR_DETECT_AUTO</td>
+<td>ERR_LEC_NON_DETECT</td>
+<td>Aucun lecteur PC/SC détecté</td>
+</tr>
+<tr>
+<td>ERR_DETECT_AUTO</td>
+<td>ERR_LEC_DETECT_CARTE</td>
+<td>Trop de cartes du même type détectées</td>
+</tr>
+<tr>
+<td>ERR_DETECT_AUTO</td>
+<td>ERR_LEC_CARTE_ABS</td>
+<td>Carte demandée (Vitale ou CPS) absente</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a043b85f206f1239f835b6d08a9b3276">2 - Problèmes connus</h1>
     
 	<h3 id="erreur-logicielle">Erreur logicielle</h3>
 <blockquote>
@@ -185,7 +489,7 @@ Version imprimable multipages.
 <h3 id="pcsc-ou-galss-">PC/SC ou galss ?</h3>
 <p>Le galss n&rsquo;est officiellement plus supporté au 31 décembre 2021, donc il faut configurer les lecteurs en PC/SC</p>
 <h3 id="changement-de-lecteur-pcsc---galss">Changement de lecteur PC/SC -&gt; Galss</h3>
-<p>Le lecteur carte vitale, enregistre dans le fchier %Program_FILES%/DevBoxSante-%client%/santesocial/api_lec/api_lec.ini les lecteurs PC/SC utilisés,
+<p>Le lecteur carte vitale, enregistre dans le fichier %Program_FILES%/DevBoxSante-%client%/santesocial/api_lec/api_lec.ini les lecteurs PC/SC utilisés,
 une fois enregistré si l&rsquo;utilisateur change de lecteur pour un lecteur bi-fente utilisant le galss, le lecteur ne sera pas détecté par la DevBoxSanté
 car les api sesam vitale ne recherche les lecteurs galss que si il n&rsquo;y a pas de lecteurs PS/SC d&rsquo;enregistrés.</p>
 <p>Solution: supprimer dans le fichier api_lec.ini les lecteurs enregistrés.</p>
@@ -210,7 +514,7 @@ Ressource_CPS=
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-85e098b3ee95ade01ec5c133f476c6f0">2 - CNDA : Fiche d&#39;identité du composant Vitale</h1>
+	<h1 id="pg-85e098b3ee95ade01ec5c133f476c6f0">3 - CNDA : Fiche d&#39;identité du composant Vitale</h1>
     
 	<p>NIE DEVCOOP : DEV331918</p>
 <h3 id="homologation-du-14082020">Homologation du 14/08/2020</h3>

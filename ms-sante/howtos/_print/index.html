@@ -170,7 +170,7 @@ Version imprimable multipages.
     
     
 	
-<li>2.1: <a href="#pg-fdbfb588e3beb583f45227b16fa6167f">Migration 12 vers la 2.0</a></li>
+<li>2.1: <a href="#pg-fdbfb588e3beb583f45227b16fa6167f">Migration 1.2 vers la 2.0</a></li>
 
 
     
@@ -584,33 +584,68 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
 
 <div class="td-content" style="">
     
-	<h1 id="pg-fdbfb588e3beb583f45227b16fa6167f">2.1 - Migration 12 vers la 2.0</h1>
+	<h1 id="pg-fdbfb588e3beb583f45227b16fa6167f">2.1 - Migration 1.2 vers la 2.0</h1>
     <div class="lead">Guide de migration vers la nouvelle version 2.0</div>
 	<p>La version 2.0 de la DevBox-santé MSS apporte le support du nouveau référentiel v2 conforme au ségur vague 2</p>
 <p>Quelques changements ont été apportés.</p>
-<h3 id="folderid"><code>Folder.id</code></h3>
-<p>Les FolderId sont devenus des chaînes de caractères au lieu des entiers pour le support de la version Mailiz.</p>
+<p>La principale modification est le fait qu&rsquo;il n&rsquo;y a plus de dossiers Trash, Draft, Sent.
+Ce sont maintenant des flags sur les messages pour les 2ers et une date d&rsquo;envoi pour le dernier.</p>
+<p>Ainsi par exemple pour avoir les messages du dossier draft, il faut rechercher les messages en précisant draft=true dans la query et sans préciser de folderId.
+Cependant pour garder une compatibilité avec la V1, il est possible de rechercher avec un folderId = DRAFT,SENT ou TRASH, dans ce cas l&rsquo;API fait le travail nécessaire de conversion.</p>
+<p>Autre point important, un message sauvegardé en brouillon change d&rsquo;id à chaque nouvelle sauvegarde.
+Le contenu des pièces jointes n&rsquo;est pas renvoyé avec le message, il faut appeler un service spécifique pour avoir le contenu.
+Lors de l&rsquo;enregistrement d&rsquo;un brouillon, la première fois que la pièce jointe est ajouté il faut passer son contenu, les fois suivantes le contenu n&rsquo;est pas obligatoire (et même conseillé à null)</p>
+<h2 id="authentification">Authentification</h2>
+<p>2 modes d&rsquo;authentification sont disponibles:</p>
+<ul>
+<li>Pro Santé Connect</li>
+<li>Certificat p12 (cas d&rsquo;une bal applicative)</li>
+</ul>
+<p>La connexion par carte cps est supprimée et la connexion par login/mdp/otp est à priori supprimée (à voir selon l&rsquo;opérateur)</p>
+<h2 id="modèle">Modèle</h2>
+<ul>
+<li>Modification du type des identifiants (id, folderId, messageId) integer =&gt; string</li>
+</ul>
 <p><img src="Folder_dans_swagger.png" alt="Folder_dans_swagger.png"></p>
 <p><img src="FolderId_dans_swagger.png" alt="FolderId dans les routes"></p>
-<h3 id="messageflags-dépréciés">Message.Flags dépréciés</h3>
-<p>Voici la liste des flags dépréciés et non utilisés dans le nouveau référentiel.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">ATTACHMENT</span><span style="color:#ce5c00;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">LOW_PRIORITY</span><span style="color:#ce5c00;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">NONE</span><span style="color:#ce5c00;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">PRIORITY</span><span style="color:#ce5c00;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">REPLIED</span><span style="color:#ce5c00;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">SENT_BY_ME</span><span style="color:#ce5c00;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">UNREAD</span><span style="color:#ce5c00;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Deprecated</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">URGENT</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span></code></pre></div>
+<ul>
+<li>Modification des Flags:
+<ul>
+<li>REPLIED =&gt; ANSWERED</li>
+<li>UNREAD =&gt; SEEN</li>
+<li>ATTACHMENT, LOW_PRIORITY, NONE, PRIORITY, SENT_BY_ME, URGENT =&gt; Deprecated</li>
+<li>Nouveaux flags: RECENT, ANSWERED, SEEN</li>
+<li>Liste complète en V2: ANSWERED, DELETED, DRAFT, FLAGGED, FORWARDED, SEEN, RECENT</li>
+</ul>
+</li>
+<li>Modification d&rsquo;un message (MessageStatus):
+<ul>
+<li>DELETE =&gt; DELETED</li>
+<li>DELETE, SPAM, TRASH, UNSPAM =&gt; Deprecated</li>
+<li>DELETED, READ, FLAGGED, UNFLAGGED, UNREAD, UNDELETED</li>
+</ul>
+</li>
+<li>MessageQuery
+<ul>
+<li>isSent =&gt; sent</li>
+</ul>
+</li>
+</ul>
+<h2 id="rest-api">Rest API</h2>
+<p>Les APIs v2 sont disponible sur l&rsquo;url /mssante/v2/xxxx, elles ont les mêmes signatures que la V1 à quelques exceptions près:</p>
+<h3 id="endpoints-supprimés">Endpoints supprimés</h3>
+<ul>
+<li>Authentification : GET /authentication/cps, POST /authentication/otp, GET /authentication/otp/{otp}</li>
+<li>POST /messages/attachment Ajout de pièce jointe =&gt; Faire un save du message brouillon avec la PJ</li>
+<li>DELETE /messages/{id}/attachment/{part} Suppression d&rsquo;une pièce jointe =&gt; Faire un save du message brouillon sans la PJ</li>
+</ul>
+<h3 id="nouveaux-endpoints">Nouveaux endpoints</h3>
+<ul>
+<li>Vider la corbeille: DELETE /folders/trash/clean (=&gt; suppression des messages ayant le flag DELETED)</li>
+<li>POST /folders/{parentId}/create/type/{type}: Lors de la création d&rsquo;un dossier ce dernier est &ldquo;typé&rdquo; comme contenant des messages ou des dossiers. Si le endpoint ne permet pas de préciser le type alors le dossier est par défaut contenant des messages.</li>
+<li>POST /folders/{id}/rename</li>
+</ul>
+
 </div>
 
 

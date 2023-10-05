@@ -314,6 +314,11 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;dt&gt;TLS&lt;/dt&gt;
 &lt;dd&gt;Transport Layer Security - Norme de sécurisation par chiffrement du transport de l&amp;rsquo;information au sein des réseaux (anciennement SSL)&lt;/dd&gt;
 &lt;/dl&gt;
+&lt;h2 id=&#34;v&#34;&gt;V&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;VIHF&lt;/dt&gt;
+&lt;dd&gt;Vecteur d&amp;rsquo;Identification et d&amp;rsquo;Habilitations Formelles (&lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_transport_volet-synchrone_v1.9.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_transport_volet-synchrone_v1.9.pdf&lt;/a&gt;)&lt;/dd&gt;
+&lt;/dl&gt;
 &lt;h2 id=&#34;w&#34;&gt;W&lt;/h2&gt;
 &lt;dl&gt;
 &lt;dt&gt;WS&lt;/dt&gt;

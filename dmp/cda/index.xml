@@ -22,7 +22,8 @@
       <description>
         
         
-        &lt;h2 id=&#34;volet-cdade-structuration-minimale&#34;&gt;Volet CDA de Structuration minimale&lt;/h2&gt;
+        &lt;p&gt;&lt;strong&gt;@Since DMP-1.0&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;volet-cdade-structuration-minimale&#34;&gt;Volet CDA de Structuration minimale&lt;/h2&gt;
 &lt;p&gt;La DevBox-Santé DMP prend en charge la soumission de document à structuration minimale.
 Il s&amp;rsquo;agit du format par défaut exigé par le Guide d&amp;rsquo;intégration , il contient les métadonnées de
 base permettant la création d&amp;rsquo;un DMPCDocument ainsi que son contenu binaire.&lt;/p&gt;
@@ -183,7 +184,8 @@ base permettant la création d&amp;rsquo;un DMPCDocument ainsi que son contenu b
       <description>
         
         
-        &lt;p&gt;La DevBox-Santé DMP prend également en charge la soumission de document structure comme le CR d&amp;rsquo;examens biologie.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;@Since DMP-3.0&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;La DevBox-Santé DMP prend également en charge la soumission de document structure comme le CR d&amp;rsquo;examens biologie.&lt;/p&gt;
 &lt;p&gt;Ce format de document est spécifié par l&amp;rsquo;ANS : &lt;a href=&#34;https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale&#34;&gt;https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Un exemple de création de document conforme à la spécification est :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;createCRBiologie&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;DMPCStructureSante&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;structureSante&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;

@@ -1803,7 +1803,14 @@ DMPCCdaValidator       :
 </span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;p12&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
-</span></span></code></pre></div><p><strong>Pour la liste de toutes les autres demandes : <a href="/dmp/versions/#version---510-04102023">Release note de la version 5.1</a></strong></p>
+</span></span></code></pre></div><h3 id="gestion-des-logs">Gestion des logs</h3>
+<p>Les logs CXF sont tracés en mode debug au lieu de info :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">logging.level</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">org.apache.cxf.services</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">debug</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># pour tracer les messages soaps</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h3 id="validation-cda-par-schematron">Validation cda par schematron</h3>
+<p>La validation se fait par les outils du projet <a href="https://github.com/ansforge/TestContenuCDA-3-0">https://github.com/ansforge/TestContenuCDA-3-0</a> au lieu de l&rsquo;ancien projet <a href="https://github.com/ansforge/TestContenuCDA">https://github.com/ansforge/TestContenuCDA</a></p>
+<p><strong>Pour la liste de toutes les autres demandes : <a href="/dmp/versions/#version---510-04102023">Release note de la version 5.1</a></strong></p>
 
 </div>
 

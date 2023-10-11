@@ -14,6 +14,46 @@
     
     
     <item>
+      <title>Installer: Version 4.2</title>
+      <link>/installer/versions/4.2/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/installer/versions/4.2/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.3.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.2.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.2.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Installer: Version 4.1</title>
       <link>/installer/versions/4.1/</link>
       <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>

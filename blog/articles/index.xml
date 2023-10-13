@@ -14,6 +14,35 @@
     
     
     <item>
+      <title>Blog: Installer l&#39;IGC santé dans Acrobat reader</title>
+      <link>/blog/2023/10/13/installer-ligc-sant%C3%A9-dans-acrobat-reader/</link>
+      <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2023/10/13/installer-ligc-sant%C3%A9-dans-acrobat-reader/</guid>
+      <description>
+        
+        
+        &lt;p&gt;La DevBox-santé CPS permet la signature de document PDF en utilisant les clés fournies dans les cartes. Par contre, par défaut Acrobat Reader d&amp;rsquo;Adobe ne reconnaît pas l&amp;rsquo;IGC Santé comme étant une autorité de certification valide. De plus, l&amp;rsquo;installation de la cryptolib CPS, rajoute bien ces autorités dans les magasins systèmes telles que ceux de windows, ou Firefox, par exemple :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Certificats_firefox.png&#34; alt=&#34;Certificats Firefox&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Mais rien dans les magasins d&amp;rsquo;Acrobat Reader. Il faut donc l&amp;rsquo;ajouter manuellement.&lt;/p&gt;
+&lt;p&gt;Pour cela, il suffit de suivre la documentation d&amp;rsquo;Adobe : &lt;a href=&#34;https://helpx.adobe.com/fr/acrobat/using/trusted-identities.html&#34;&gt;https://helpx.adobe.com/fr/acrobat/using/trusted-identities.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Et installer, les certificats d&amp;rsquo;autorités de l&amp;rsquo;IGC Santé : &lt;a href=&#34;http://igc-sante.esante.gouv.fr/PC/&#34;&gt;http://igc-sante.esante.gouv.fr/PC/&lt;/a&gt; et plus particulièrement ces certificats :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://igc-sante.esante.gouv.fr/AC/ACI-FO-PP.cer&#34;&gt;http://igc-sante.esante.gouv.fr/AC/ACI-FO-PP.cer&lt;/a&gt; (pour les cartes de productions)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-FO-PP-TEST.cer&#34;&gt;http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-FO-PP-TEST.cer&lt;/a&gt; (pour les cartes de test)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pour vous aider quelques impressions écrans vous décrivant le déroulement de l&amp;rsquo;import.&lt;/p&gt;
+&lt;h2 id=&#34;import-certificat&#34;&gt;Import certificat&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;Import_certificats.png&#34; alt=&#34;import certificat&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;approuver-le-certificat-pour-signature-de-document&#34;&gt;Approuver le certificat pour signature de document&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;Approuver_certificat.png&#34; alt=&#34;approuver certificat&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;signature-approuvé&#34;&gt;Signature approuvé&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;Signature_approuve.png&#34; alt=&#34;Signature approuvé&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Migration TLSv1.3 dans les différents téléservices</title>
       <link>/blog/2023/08/07/migration-tlsv1.3-dans-les-diff%C3%A9rents-t%C3%A9l%C3%A9services/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>

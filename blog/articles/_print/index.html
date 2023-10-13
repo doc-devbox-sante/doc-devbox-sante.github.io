@@ -137,6 +137,16 @@ Version imprimable multipages.
     
 	
 
+    <li><a href="#pg-fd8f7195ee4edcccabfe17b658041e0a">Installer l&#39;IGC santé dans Acrobat reader</a></li>
+
+
+
+    
+  
+    
+    
+	
+
     <li><a href="#pg-ba62f850a65f9e9403fe25026c9ef1fc">Migration TLSv1.3 dans les différents téléservices</a></li>
 
 
@@ -321,6 +331,49 @@ Version imprimable multipages.
   
 
 <div class="td-content" style="">
+    <h1 id="pg-fd8f7195ee4edcccabfe17b658041e0a">Installer l&#39;IGC santé dans Acrobat reader</h1>
+	<div class="lead">Comment installer les différent autorités de certificats de l&rsquo;IGC Santé de l&rsquo;ANS</div>
+	<div class="td-byline mb-4">
+		Par <b>Laurent Forêt</b> |
+        
+		<time datetime="2023-10-13" class="text-muted">Friday, October 13, 2023</time>
+        
+	</div>
+	<p>La DevBox-santé CPS permet la signature de document PDF en utilisant les clés fournies dans les cartes. Par contre, par défaut Acrobat Reader d&rsquo;Adobe ne reconnaît pas l&rsquo;IGC Santé comme étant une autorité de certification valide. De plus, l&rsquo;installation de la cryptolib CPS, rajoute bien ces autorités dans les magasins systèmes telles que ceux de windows, ou Firefox, par exemple :</p>
+<p><img src="Certificats_firefox.png" alt="Certificats Firefox"></p>
+<p>Mais rien dans les magasins d&rsquo;Acrobat Reader. Il faut donc l&rsquo;ajouter manuellement.</p>
+<p>Pour cela, il suffit de suivre la documentation d&rsquo;Adobe : <a href="https://helpx.adobe.com/fr/acrobat/using/trusted-identities.html">https://helpx.adobe.com/fr/acrobat/using/trusted-identities.html</a></p>
+<p>Et installer, les certificats d&rsquo;autorités de l&rsquo;IGC Santé : <a href="http://igc-sante.esante.gouv.fr/PC/">http://igc-sante.esante.gouv.fr/PC/</a> et plus particulièrement ces certificats :</p>
+<ul>
+<li><a href="http://igc-sante.esante.gouv.fr/AC/ACI-FO-PP.cer">http://igc-sante.esante.gouv.fr/AC/ACI-FO-PP.cer</a> (pour les cartes de productions)</li>
+<li><a href="http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-FO-PP-TEST.cer">http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-FO-PP-TEST.cer</a> (pour les cartes de test)</li>
+</ul>
+<p>Pour vous aider quelques impressions écrans vous décrivant le déroulement de l&rsquo;import.</p>
+<h2 id="import-certificat">Import certificat</h2>
+<p><img src="Import_certificats.png" alt="import certificat"></p>
+<h2 id="approuver-le-certificat-pour-signature-de-document">Approuver le certificat pour signature de document</h2>
+<p><img src="Approuver_certificat.png" alt="approuver certificat"></p>
+<h2 id="signature-approuvé">Signature approuvé</h2>
+<p><img src="Signature_approuve.png" alt="Signature approuvé"></p>
+
+</div>
+
+
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+
+  
+
+<div class="td-content" style="page-break-before: always">
     <h1 id="pg-ba62f850a65f9e9403fe25026c9ef1fc">Migration TLSv1.3 dans les différents téléservices</h1>
 	<div class="lead">Validation du protocole TLSv1.3 dans la DevBox-Santé INSi et ApCV</div>
 	<div class="td-byline mb-4">

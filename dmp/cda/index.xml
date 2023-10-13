@@ -967,7 +967,8 @@ Pour information, dans l&amp;rsquo;&lt;a href=&#34;https://annuaire-demo.devbox-
       <description>
         
         
-        &lt;p&gt;La Devbox-santé DMP retourne ce type de document CDA sous trois formes :&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;@Since DMP-5.0&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;La Devbox-santé DMP retourne ce type de document CDA sous trois formes :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;f28f10a2-d288-11ec-8cbb-0050569e46a0-binary.xml&#34;&gt;binaire&lt;/a&gt; , c’est à dire, le document xml contenant le cda et sa feuille de style&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;f28f10a2-d288-11ec-8cbb-0050569e46a0-cda.xml&#34;&gt;cda&lt;/a&gt;&lt;/li&gt;

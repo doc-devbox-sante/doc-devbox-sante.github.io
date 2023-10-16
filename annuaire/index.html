@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Annuaire | DevBox-Santé</title>
-<meta name="description" content="Intégrer l&#39;annuaire des professionnels de santé géolocalisé
+<title>Annuaire et nomenclature de santé | DevBox-Santé</title>
+<meta name="description" content="Annuaire géolocalisé des professionnels de santé et des établissements de soin, ainsi que les nomenclatures du NOS, ATC, CIM11, CIP, ... 
 ">
-<meta property="og:title" content="Annuaire" />
-<meta property="og:description" content="Intégrer l&#39;annuaire des professionnels de santé géolocalisé
+<meta property="og:title" content="Annuaire et nomenclature de santé" />
+<meta property="og:description" content="Annuaire géolocalisé des professionnels de santé et des établissements de soin, ainsi que les nomenclatures du NOS, ATC, CIM11, CIP, ... 
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/annuaire/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Annuaire">
-<meta itemprop="description" content="Intégrer l&#39;annuaire des professionnels de santé géolocalisé
+<meta itemprop="name" content="Annuaire et nomenclature de santé">
+<meta itemprop="description" content="Annuaire géolocalisé des professionnels de santé et des établissements de soin, ainsi que les nomenclatures du NOS, ATC, CIM11, CIP, ... 
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Annuaire"/>
-<meta name="twitter:description" content="Intégrer l&#39;annuaire des professionnels de santé géolocalisé
+<meta name="twitter:title" content="Annuaire et nomenclature de santé"/>
+<meta name="twitter:description" content="Annuaire géolocalisé des professionnels de santé et des établissements de soin, ainsi que les nomenclatures du NOS, ATC, CIM11, CIP, ... 
 "/>
 
 
@@ -112,9 +112,52 @@ if (!doNotTrack) {
   <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-annuaire-li">
-  <a href="/annuaire/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-annuaire"><span class="td-sidebar-nav-active-item">Annuaire</span></a>
+  <a href="/annuaire/" title="Annuaire et nomenclature de santé" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-annuaire"><span class="td-sidebar-nav-active-item">Annuaire</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-annuaireversions-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-annuaireprofessionnel-li">
+  <input type="checkbox" id="m-annuaireprofessionnel-check"/>
+  <label for="m-annuaireprofessionnel-check"><a href="/annuaire/professionnel/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-annuaireprofessionnel"><span class="">Professionnels</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-annuairefiness-li">
+  <input type="checkbox" id="m-annuairefiness-check"/>
+  <label for="m-annuairefiness-check"><a href="/annuaire/finess/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-annuairefiness"><span class="">Etablissements</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-annuairenomenclature-li">
+  <input type="checkbox" id="m-annuairenomenclature-check"/>
+  <label for="m-annuairenomenclature-check"><a href="/annuaire/nomenclature/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-annuairenomenclature"><span class="">Nomenclatures</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-annuairenomenclatureatc-li">
+  <input type="checkbox" id="m-annuairenomenclatureatc-check"/>
+  <label for="m-annuairenomenclatureatc-check"><a href="/annuaire/nomenclature/atc/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-annuairenomenclatureatc"><span class="">ATC</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-annuairenomenclaturecim10-li">
+  <input type="checkbox" id="m-annuairenomenclaturecim10-check"/>
+  <label for="m-annuairenomenclaturecim10-check"><a href="/annuaire/nomenclature/cim10/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-annuairenomenclaturecim10"><span class="">CIM10</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-annuairenomenclaturecip-li">
+  <input type="checkbox" id="m-annuairenomenclaturecip-check"/>
+  <label for="m-annuairenomenclaturecip-check"><a href="/annuaire/nomenclature/cip/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-annuairenomenclaturecip"><span class="">CIP</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-annuairenomenclaturecis-li">
+  <input type="checkbox" id="m-annuairenomenclaturecis-check"/>
+  <label for="m-annuairenomenclaturecis-check"><a href="/annuaire/nomenclature/cis/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-annuairenomenclaturecis"><span class="">CIS</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-annuairenomenclaturenos-li">
+  <input type="checkbox" id="m-annuairenomenclaturenos-check"/>
+  <label for="m-annuairenomenclaturenos-check"><a href="/annuaire/nomenclature/nos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-annuairenomenclaturenos"><span class="">NOS</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-annuairemos-li">
+  <input type="checkbox" id="m-annuairemos-check"/>
+  <label for="m-annuairemos-check"><a href="/annuaire/mos/" title="Modèle des objets de santé" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-annuairemos"><span class="">MOS</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-annuairesegur-li">
+  <input type="checkbox" id="m-annuairesegur-check"/>
+  <label for="m-annuairesegur-check"><a href="/annuaire/segur/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-annuairesegur"><span class="">Segur</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-annuaireversions-li">
   <input type="checkbox" id="m-annuaireversions-check"/>
   <label for="m-annuaireversions-check"><a href="/annuaire/versions/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-annuaireversions"><span class="">Versions</span></a></label>
   
@@ -136,14 +179,13 @@ if (!doNotTrack) {
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#saas">SAAS</a>
+    <li><a href="#mode-saas">Mode SAAS</a>
       <ul>
         <li><a href="#accès-aux-différents-environnements">Accès aux différents environnements</a></li>
-        <li><a href="#mise-à-jour-des-données">Mise à jour des données</a></li>
         <li><a href="#statistiques-dusage">Statistiques d’usage</a></li>
       </ul>
     </li>
-    <li><a href="#on-premise">On premise</a></li>
+    <li><a href="#mode-hébergé-sur-vos-serveur">Mode hébergé sur vos serveur</a></li>
   </ul>
 </nav>
       </div>
@@ -182,8 +224,8 @@ if (!doNotTrack) {
 </nav>
             
 <div class="td-content">
-	<h1>Annuaire</h1>
-  <div class="lead">Intégrer l&rsquo;annuaire des professionnels de santé géolocalisé</div>
+	<h1>Annuaire et nomenclature de santé</h1>
+  <div class="lead">Annuaire géolocalisé des professionnels de santé et des établissements de soin, ainsi que les nomenclatures du NOS, ATC, CIM11, CIP, &hellip;</div>
 	<header class="article-meta">
 		
 		
@@ -199,7 +241,9 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	
+	<p><b>L&rsquo;intégration de cet annuaire dans votre application, vous premettra de répondre aux exigences SEGUR
+pour notamment les annuaires professionnels et l&rsquo;utilisation des codes DCI pour la prescriptions</b></p>
+
 
 <div class="pageinfo pageinfo-primary">
 <p>Cette annuaire est le fruit de l&rsquo;intégration de plusieurs bases de données:</p>
@@ -219,7 +263,7 @@ if (!doNotTrack) {
 
 </div>
 
-<h2 id="saas">SAAS</h2>
+<h2 id="mode-saas">Mode SAAS</h2>
 <p>Accéder à l&rsquo;annuaire en REST depuis nos environnements : <a href="https://annuaire-demo.devbox-sante.fr/swagger-ui.html">https://annuaire-demo.devbox-sante.fr/swagger-ui.html</a></p>
 <h3 id="accès-aux-différents-environnements">Accès aux différents environnements</h3>
 <ul>
@@ -232,44 +276,6 @@ if (!doNotTrack) {
 </ul>
 <p>Les applications front servent de démonstrateur des possibilités de l&rsquo;annuaire mais leurs fonctionnalités ne sont pas exaustives.</p>
 <p><a href="mailto:devbox-sante@devcoop.fr">Contactez-nous</a></p>
-<h3 id="mise-à-jour-des-données">Mise à jour des données</h3>
-<p>Les données sont chargées chaque semaine via un cron paramétrable dans le fichier de configuration de l&rsquo;annuaire.
-Par exemple pour le chargement des professionnels:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">professionel</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">host</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://service.annuaire.sante.fr/annuaire-sante-webservices/V300/services/extraction/PS_LibreAcces</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">file</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">PS_LibreAcces_Personne_activite</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">cron</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">${PROFESSIONEL_CRON:0 0 2 * * 1}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>Chaque mise à jour de données envoi aux administrateurs un rapport par mail:
-<img src="annuaire_mail.png" alt="Mail"></p>
-<p>Les utilisateurs de l&rsquo;annuaire dispose du service suivant /api/lastUpdated afin de connaitre la dernière mise à jour des données:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET <span style="color:#4e9a06">&#34;https://annuaire-demo.devbox-sante.fr/api/lastUpdated&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Finess&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-04-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Nomenclature&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-04-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Professionnels&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-04-20&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
-</span></span></code></pre></div><p>Ces fonctionnalités respectent les exigences suivantes du SEGUR:</p>
-<table>
-<thead>
-<tr>
-<th>Description</th>
-<th>Exigence</th>
-<th style="text-align:right">Scénario</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Le système DOIT être en capacité d’intégrer automatiquement l’extraction publique « PS_LibreAcces_Personne_activite » de l’annuaire santé.fr, conformément au Dossier des Spécifications Fonctionnelles et Techniques Fichiers d&rsquo;extraction des données en libre accès [ANN1].</td>
-<td>ANN 1.1</td>
-<td style="text-align:right">L&rsquo;éditeur DOIT exécuter le scénario de conformité suivant : 1 Charger les données en libre acès sur le site <a href="https://annuaire.sante.fr">https://annuaire.sante.fr</a></td>
-</tr>
-<tr>
-<td>Le Système DOIT permettre de paramétrer la fréquence d’intégration automatique de l’annuaire santé.</td>
-<td>ANN 4.1</td>
-<td style="text-align:right">L&rsquo;éditeur DOIT exécuter le scénario de conformité suivant : 1. Paramétrer la fréquence d&rsquo;intégration automatique de l&rsquo;annuaire santé.</td>
-</tr>
-</tbody>
-</table>
 <h3 id="statistiques-dusage">Statistiques d’usage</h3>
 <p>Un service de statistique est disponible permettant de connaître le nombre de requêtes lancés dans le mois :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET <span style="color:#4e9a06">&#34;https://annuaire-demo.devbox-sante.fr/statistiques/activities&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
@@ -297,7 +303,7 @@ Par exemple pour le chargement des professionnels:</p>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
 </span></span></code></pre></div><p>Les autres points d’entrée :</p>
 <p><img src="statistiques_swagger.png" alt="statistiques_swagger.png"></p>
-<h2 id="on-premise">On premise</h2>
+<h2 id="mode-hébergé-sur-vos-serveur">Mode hébergé sur vos serveur</h2>
 <p>Installation dans votre propre environnement</p>
 <p><a href="mailto:devbox-sante@devcoop.fr">Contactez-nous</a></p>
 
@@ -311,6 +317,46 @@ Par exemple pour le chargement des professionnels:</p>
     
     
     <hr class="panel-line">
+        
+            
+            <div class="entry">
+                <h5>
+                    <a href="/annuaire/professionnel/">Professionnels</a>
+                </h5>
+                <p>Annuaire des Professionnels (RPPS)</p>
+            </div>
+        
+            
+            <div class="entry">
+                <h5>
+                    <a href="/annuaire/finess/">Etablissements</a>
+                </h5>
+                <p>Annuaire des établissement (FINESS)</p>
+            </div>
+        
+            
+            <div class="entry">
+                <h5>
+                    <a href="/annuaire/nomenclature/">Nomenclatures</a>
+                </h5>
+                <p>Liste des nomenclatures</p>
+            </div>
+        
+            
+            <div class="entry">
+                <h5>
+                    <a href="/annuaire/mos/">Modèle des objets de santé</a>
+                </h5>
+                <p>Modèle des objets de santé</p>
+            </div>
+        
+            
+            <div class="entry">
+                <h5>
+                    <a href="/annuaire/segur/">Segur</a>
+                </h5>
+                <p>Preuves Ségur</p>
+            </div>
         
             
             <div class="entry">

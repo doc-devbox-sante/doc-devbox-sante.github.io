@@ -27,6 +27,15 @@
 &lt;li&gt;Récupérer le &lt;a href=&#34;/dmp/howtos/homologation/CDT_DMP_20230720_v2.9.0.xlsm&#34;&gt;cahier de test&lt;/a&gt; à jour et prendre connaissance de la NOTICE&lt;/li&gt;
 &lt;li&gt;Filtrer l&amp;rsquo;onglet Phase 1 sur les trois premières colonnes : Profil DMP-C, Authentification, Transaction en fonction de vos annexes remplies des conditions particulières.&lt;/li&gt;
 &lt;li&gt;Fournir à &lt;strong&gt;DEVCOOP&lt;/strong&gt; pour chaque code de test un répertoire contenant la trame d&amp;rsquo;exécution ainsi que si besoin une ou deux impressions écrans pour illustration.&lt;/li&gt;
+&lt;li&gt;Une fois les trames validées par &lt;strong&gt;DEVCOOP&lt;/strong&gt;, fournir les informations suivantes concernant votre logiciel
+&lt;ul&gt;
+&lt;li&gt;NIL&lt;/li&gt;
+&lt;li&gt;Nom&lt;/li&gt;
+&lt;li&gt;Version&lt;/li&gt;
+&lt;li&gt;Système d&amp;rsquo;exploitation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DEVCOOP&lt;/strong&gt; fournit &lt;a href=&#34;ATTESTATION_Realisation_Prerequis_DMPC_V1.pdf&#34;&gt;l&amp;rsquo;attestation de réalisation des prérequis&lt;/a&gt; signé.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;code-prérequis-pour-tous&#34;&gt;Code prérequis pour Tous&lt;/h3&gt;
 &lt;p&gt;Indication concernant les différents tests prérequis.&lt;/p&gt;

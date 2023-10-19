@@ -889,8 +889,7 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
         
         
         &lt;h2 id=&#34;validation-automatique&#34;&gt;Validation automatique&lt;/h2&gt;
-&lt;p&gt;La DevBox-santé santé intègre les différents composants du projet github de l&amp;rsquo;ANS, et propose la validation SCHEMATRON automatique par l&amp;rsquo;utilisation des feuilles de style &lt;code&gt;xslt&lt;/code&gt; fournies dans le projet &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA&#34;&gt;https://github.com/ansforge/TestContenuCDA&lt;/a&gt; .&lt;/p&gt;
-&lt;p&gt;Or ces dernières ne sont plus disponibles dans le projet et ne fait plus l&amp;rsquo;objet de livraison. Pour plus d&amp;rsquo;informations sur ce sujet : &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA/issues/4&#34;&gt;https://github.com/ansforge/TestContenuCDA/issues/4&lt;/a&gt; . Les feuilles de style xslt sont donc générés au moment du build de la DevBox-Santé.&lt;/p&gt;
+&lt;p&gt;La DevBox-santé santé intègre les différents composants du projet github de l&amp;rsquo;ANS, et propose la validation SCHEMATRON automatique par l&amp;rsquo;utilisation des feuilles de style &lt;code&gt;xslt&lt;/code&gt; fournies dans le projet &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA-3-0&#34;&gt;https://github.com/ansforge/TestContenuCDA-3-0&lt;/a&gt; (anciennement &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA&#34;&gt;https://github.com/ansforge/TestContenuCDA&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Pour apporter les preuves schematrons nécessaires pour les tests d&amp;rsquo;alimentation, vous pouvez retrouver les traces d&amp;rsquo;exécution de cette validation dans les logs.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Exemple de validation pour un document CDAR2 Niveau 1 (structuration minimale) :&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;

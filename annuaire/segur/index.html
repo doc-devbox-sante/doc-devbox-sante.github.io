@@ -179,9 +179,10 @@ if (!doNotTrack) {
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#exigences-ségur">Exigences Ségur</a>
       <ul>
-        <li><a href="#mise-à-jour-des-données">Mise à jour des données</a></li>
+        <li><a href="#ann-11-et-ann-41-mise-à-jour-des-données">ANN 1.1 et ANN 4.1 Mise à jour des données</a></li>
+        <li><a href="#ann-51">ANN 5.1</a></li>
       </ul>
     </li>
   </ul>
@@ -242,23 +243,8 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<h3 id="mise-à-jour-des-données">Mise à jour des données</h3>
-<p>Les données sont chargées chaque semaine via un cron paramétrable dans le fichier de configuration de l&rsquo;annuaire.
-Par exemple pour le chargement des professionnels:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">professionel</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">host</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://service.annuaire.sante.fr/annuaire-sante-webservices/V300/services/extraction/PS_LibreAcces</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">file</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">PS_LibreAcces_Personne_activite</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">cron</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">${PROFESSIONEL_CRON:0 0 2 * * 1}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>Chaque mise à jour de données envoi aux administrateurs un rapport par mail:
-<img src="annuaire_mail.png" alt="Mail"></p>
-<p>Les utilisateurs de l&rsquo;annuaire dispose du service suivant /api/lastUpdated afin de connaitre la dernière mise à jour des données:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET <span style="color:#4e9a06">&#34;https://annuaire-demo.devbox-sante.fr/api/lastUpdated&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Finess&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-04-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Nomenclature&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-04-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Professionnels&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-04-20&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
-</span></span></code></pre></div><p>Ces fonctionnalités respectent les exigences suivantes du SEGUR:</p>
+	<h2 id="exigences-ségur">Exigences Ségur</h2>
+<p>Afin d&rsquo;apporter les preuves segur suivantes :</p>
 <table>
 <thead>
 <tr>
@@ -278,8 +264,46 @@ Par exemple pour le chargement des professionnels:</p>
 <td>ANN 4.1</td>
 <td style="text-align:right">L&rsquo;éditeur DOIT exécuter le scénario de conformité suivant : 1. Paramétrer la fréquence d&rsquo;intégration automatique de l&rsquo;annuaire santé.</td>
 </tr>
+<tr>
+<td>Le Système DOIT être en capacité de rechercher une adresse MSSanté d’un correspondant dans l’annuaire Santé, avec l’une des méthodes extraites du référentiel socle MSSanté #2 (Clients de Messageries Sécurisées de Santé) [MSS1].</td>
+<td>ANN 5.1</td>
+<td style="text-align:right">&ldquo;L&rsquo;éditeur DOIT exécuter le scénario de conformité suivant : 1. Rechercher une adresse MSSanté d&rsquo;un correspondant récupérée de l&rsquo;annuaire Santé</td>
+</tr>
 </tbody>
 </table>
+<h3 id="ann-11-et-ann-41-mise-à-jour-des-données">ANN 1.1 et ANN 4.1 Mise à jour des données</h3>
+<p>Les données sont chargées chaque semaine via un cron paramétrable dans le fichier de configuration de l&rsquo;annuaire.
+Par exemple pour le chargement des professionnels:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">professionel</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">host</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://service.annuaire.sante.fr/annuaire-sante-webservices/V300/services/extraction/PS_LibreAcces</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">file</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">PS_LibreAcces_Personne_activite</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">cron</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">${PROFESSIONEL_CRON:0 0 2 * * 1}</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>Chaque mise à jour de données envoi aux administrateurs un rapport par mail:
+<img src="annuaire_mail.png" alt="Mail"></p>
+<p>Les utilisateurs de l&rsquo;annuaire dispose du service suivant /api/lastUpdated afin de connaitre la dernière mise à jour des données:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET <span style="color:#4e9a06">&#34;https://annuaire-demo.devbox-sante.fr/api/lastUpdated&#34;</span> -H <span style="color:#4e9a06">&#34;accept: */*&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Finess&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-04-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Nomenclature&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-04-20&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Professionnels&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-04-20&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="ann-51">ANN 5.1</h3>
+<p>Dans le référentiel socle (ANS_MSS_Ref2_Clients_de_messageries_MSSanté_v1.0_20230131.pdf) on peut lire :</p>
+<blockquote>
+<p>Les clients de messageries disposent de 3 méthodes pour rechercher une adresse MSSanté dans l’Annuaire santé :</p>
+<ol>
+<li>Interface LDAP afin d’effectuer en interactif des recherches de BAL, voir [AS-LDAP-MSS].</li>
+<li>Extraction publique des données de l’annuaire afin de constituer un annuaire local synchronisé avec l’annuaire national, voir [AS-EXTRAC-LIBRE],</li>
+<li>Interface FIHR, nouveau service permettant d’exposer des données des référentiels Personnes physiques/Personnes morales au format JSON, structurées selon le standard d’interopérabilité FHIR, voir [AS-API-FIHR].</li>
+</ol>
+</blockquote>
+<p>L&rsquo;offre annuaire de la DevBox-santé utilise la méthode numéro 2 pour obtenir l&rsquo;adresse MSS, car cette extraction publique fait partie de l&rsquo;intégration de cette offre.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">mssante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">host</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://service.annuaire.sante.fr/annuaire-sante-webservices/V300/services/extraction/Extraction_Correspondance_MSSante</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">file</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Extraction_</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">isZip</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">forceDownload</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>Pour compléter cette methode la DevBox-Santé MSSanté permet d&rsquo;utiliser la méthode numéro 1 en proposant une intégration de l&rsquo;annuaire LDAP MSSanté. Il s&rsquo;agit du service : <a href="https://mss-demo.devbox-sante.fr/swagger-ui/index.html#/mss-proxy/findUsers">https://mss-demo.devbox-sante.fr/swagger-ui/index.html#/mss-proxy/findUsers</a></p>
 
         <div class="section-index">
     

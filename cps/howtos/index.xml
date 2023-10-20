@@ -28,6 +28,7 @@
 &lt;li&gt;
 &lt;p&gt;Lancer le gestionnaire de carte :
 &lt;img src=&#34;cps_gestionnaire_launch.png&#34; alt=&#34;cps_gestionnaire_launch.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Si vous n&amp;rsquo;avez pas accès au gestionnaire de carte depuis votre poste c&amp;rsquo;est que vous n&amp;rsquo;avez probablement pas installé la cryptolib CPS. Plus d&amp;rsquo;informations ici : &lt;a href=&#34;https://esante.gouv.fr/services/espace-cps/telechargements-libres/cryptolib-cps-windows&#34;&gt;https://esante.gouv.fr/services/espace-cps/telechargements-libres/cryptolib-cps-windows&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Aller dans le menu &amp;ldquo;Déblocage de carte&amp;rdquo; :

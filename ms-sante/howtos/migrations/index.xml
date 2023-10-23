@@ -24,10 +24,14 @@
         
         &lt;p&gt;La version 2.0 de la DevBox-santé MSS apporte le support du nouveau référentiel v2 conforme au ségur vague 2&lt;/p&gt;
 &lt;p&gt;Quelques changements ont été apportés.&lt;/p&gt;
-&lt;p&gt;La principale modification est le fait qu&amp;rsquo;il n&amp;rsquo;y a plus de dossiers Trash, Draft, Sent.
+&lt;p&gt;La principale modification est le fait qu&amp;rsquo;il n&amp;rsquo;y a plus forcement de dossiers Trash, Draft, Sent par défaut. Cela dépend de l&amp;rsquo;opérateur.
 Ce sont maintenant des flags sur les messages pour les 2ers et une date d&amp;rsquo;envoi pour le dernier.&lt;/p&gt;
-&lt;p&gt;Ainsi par exemple pour avoir les messages du dossier draft, il faut rechercher les messages en précisant draft=true dans la query et sans préciser de folderId.
-Cependant pour garder une compatibilité avec la V1, il est possible de rechercher avec un folderId = DRAFT,SENT ou TRASH, dans ce cas l&amp;rsquo;API fait le travail nécessaire de conversion.&lt;/p&gt;
+&lt;p&gt;Pour palier à ce problème, 2 modes de fonctionnement ont été mis en place:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Managed: Le connecteur palie à ce problème et crée automatiquement ces dossiers au moment de l&amp;rsquo;envoi, la suppression ou l&amp;rsquo;enregistrement de brouillon et déplace le message dans le bon dossier.&lt;/li&gt;
+&lt;li&gt;No Managed: Le connecteur ne fait aucun traitement particulier et utilise le workflow de gestion des messages de l&amp;rsquo;opérateur. Ce dernier peut décider de tout laisser dans inbox et ne mettre que des flags pour distinguer les messages ou utiliser les dossiers comme dans le cas &amp;ldquo;Managed&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ainsi par exemple dans le cas &amp;ldquo;No managed&amp;rdquo; avec un opérateur qui laisse tous les messages dans INBOX, pour avoir les messages du dossier draft, il faut rechercher les messages en précisant draft=true dans la query et sans préciser de folderId.&lt;/p&gt;
 &lt;p&gt;Autre point important, un message sauvegardé en brouillon change d&amp;rsquo;id à chaque nouvelle sauvegarde.
 Le contenu des pièces jointes n&amp;rsquo;est pas renvoyé avec le message, il faut appeler un service spécifique pour avoir le contenu.
 Lors de l&amp;rsquo;enregistrement d&amp;rsquo;un brouillon, la première fois que la pièce jointe est ajouté il faut passer son contenu, les fois suivantes le contenu n&amp;rsquo;est pas obligatoire (et même conseillé à null)&lt;/p&gt;
@@ -80,6 +84,7 @@ Lors de l&amp;rsquo;enregistrement d&amp;rsquo;un brouillon, la première fois q
 &lt;li&gt;Vider la corbeille: DELETE /folders/trash/clean (=&amp;gt; suppression des messages ayant le flag DELETED)&lt;/li&gt;
 &lt;li&gt;POST /folders/{parentId}/create/type/{type}: Lors de la création d&amp;rsquo;un dossier ce dernier est &amp;ldquo;typé&amp;rdquo; comme contenant des messages ou des dossiers. Si le endpoint ne permet pas de préciser le type alors le dossier est par défaut contenant des messages.&lt;/li&gt;
 &lt;li&gt;POST /folders/{id}/rename&lt;/li&gt;
+&lt;li&gt;GET /messages/{folderId}/ByPage: recherche paginée&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

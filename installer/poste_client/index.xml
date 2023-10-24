@@ -294,6 +294,13 @@ end
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;DMP&lt;/td&gt;
+&lt;td&gt;https&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;mos.esante.gouv.fr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;accès à la mise à jour des nomenclatures&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DMP&lt;/td&gt;
 &lt;td&gt;ntp&lt;/td&gt;
 &lt;td&gt;123&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;fr.pool.ntp.org&lt;/code&gt;&lt;/td&gt;

@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – Howtos</title>
-    <link>/ms-sante/howtos/</link>
+    <link>https://doc.devbox-sante.fr/ms-sante/howtos/</link>
     <description>Recent content in Howtos on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/ms-sante/howtos/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/ms-sante/howtos/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Ms-Sante: Preuves Segur</title>
-      <link>/ms-sante/howtos/preuve_segur/</link>
+      <link>https://doc.devbox-sante.fr/ms-sante/howtos/preuve_segur/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/ms-sante/howtos/preuve_segur/</guid>
+      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/preuve_segur/</guid>
       <description>
         
         
@@ -391,10 +391,10 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
     
     <item>
       <title>Ms-Sante: Migrations</title>
-      <link>/ms-sante/howtos/migrations/</link>
+      <link>https://doc.devbox-sante.fr/ms-sante/howtos/migrations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/ms-sante/howtos/migrations/</guid>
+      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/migrations/</guid>
       <description>
         
         

@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – INSi</title>
-    <link>/insi/</link>
+    <link>https://doc.devbox-sante.fr/insi/</link>
     <description>Recent content in INSi on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/insi/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/insi/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Insi: Integrateurs checklist</title>
-      <link>/insi/howtos/integrateurchecklist/</link>
+      <link>https://doc.devbox-sante.fr/insi/howtos/integrateurchecklist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/insi/howtos/integrateurchecklist/</guid>
+      <guid>https://doc.devbox-sante.fr/insi/howtos/integrateurchecklist/</guid>
       <description>
         
         
@@ -46,7 +46,7 @@
 &lt;li&gt;Signer les &lt;a href=&#34;https://cnda.ameli.fr/?dl_name=Convention_Generale_teleservices_V3.0.pdf&#34;&gt;conditions générales&lt;/a&gt;* depuis le même espace .&lt;/li&gt;
 &lt;li&gt;Signer les &lt;a href=&#34;https://cnda.ameli.fr/?dl_name=Conditions_INSi-V4.0.pdf&#34;&gt;conditions particulières INSi&lt;/a&gt;* depuis le même espace. Les annexes nécessitent certaines informations liées à la DevBox-Santé. Nous contacter pour les informations à jour.&lt;/li&gt;
 &lt;li&gt;Obtention des cartes vitales de test . Suite à la signature des conditions particulières et l’envoi d’un chéque de caution, le CNDA vous envoie les cartes vitales de tests comme précisé dans l&amp;rsquo;article 5 des conditions particulières.&lt;/li&gt;
-&lt;li&gt;Renseigner la fiche d&amp;rsquo;engagement de conformité avec les informations des &lt;a href=&#34;/insi/howtos/identifiantcomposant/&#34;&gt;versions des composants intégrés&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Renseigner la fiche d&amp;rsquo;engagement de conformité avec les informations des &lt;a href=&#34;https://doc.devbox-sante.fr/insi/howtos/identifiantcomposant/&#34;&gt;versions des composants intégrés&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;* si les liens ne fonctionnent plus, c’est que les versions des différents protocoles ont changé. Il faut se référer au site du CNDA.&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ans---commande-des-cartes-cpset-certificats-serveurs-de-test&#34;&gt;ANS - Commande des Cartes CPS et Certificats serveurs de Test&lt;/h2&gt;
@@ -56,7 +56,7 @@
 &lt;p&gt;L&amp;rsquo;article 6 des conditions particulières décrit la «Procédure d&amp;rsquo;autorisation».&lt;/p&gt;
 &lt;p&gt;En résumé :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Vous effectuez les tests dans votre environnement le jeu de test et envoyer le résultat au CNDA. Plus d&amp;rsquo;info sur l&amp;rsquo;exécution du jeu de tests : &lt;a href=&#34;/insi/howtos/testcnda/&#34;&gt;/insi/howtos/testcnda/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vous effectuez les tests dans votre environnement le jeu de test et envoyer le résultat au CNDA. Plus d&amp;rsquo;info sur l&amp;rsquo;exécution du jeu de tests : &lt;a href=&#34;https://doc.devbox-sante.fr/insi/howtos/testcnda/&#34;&gt;/insi/howtos/testcnda/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Après vérification du CNDA, prise de rendez-vous pour un rejeu en condition réelle.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -65,10 +65,10 @@
     
     <item>
       <title>Insi: CNDA : Fiche d&#39;identité du composant INSi</title>
-      <link>/insi/howtos/identifiantcomposant/</link>
+      <link>https://doc.devbox-sante.fr/insi/howtos/identifiantcomposant/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/insi/howtos/identifiantcomposant/</guid>
+      <guid>https://doc.devbox-sante.fr/insi/howtos/identifiantcomposant/</guid>
       <description>
         
         
@@ -94,10 +94,10 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
     
     <item>
       <title>Insi: </title>
-      <link>/insi/gestion_certificat/</link>
+      <link>https://doc.devbox-sante.fr/insi/gestion_certificat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/insi/gestion_certificat/</guid>
+      <guid>https://doc.devbox-sante.fr/insi/gestion_certificat/</guid>
       <description>
         
         

@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – Vitale</title>
-    <link>/vitale/</link>
+    <link>https://doc.devbox-sante.fr/vitale/</link>
     <description>Recent content in Vitale on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/vitale/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/vitale/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Vitale: Codes d&#39;erreurs</title>
-      <link>/vitale/howtos/codeerreurs/</link>
+      <link>https://doc.devbox-sante.fr/vitale/howtos/codeerreurs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/vitale/howtos/codeerreurs/</guid>
+      <guid>https://doc.devbox-sante.fr/vitale/howtos/codeerreurs/</guid>
       <description>
         
         
@@ -307,10 +307,10 @@
     
     <item>
       <title>Vitale: Problèmes connus</title>
-      <link>/vitale/howtos/issues/</link>
+      <link>https://doc.devbox-sante.fr/vitale/howtos/issues/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/vitale/howtos/issues/</guid>
+      <guid>https://doc.devbox-sante.fr/vitale/howtos/issues/</guid>
       <description>
         
         
@@ -338,10 +338,10 @@ Ressource_CPS=
     
     <item>
       <title>Vitale: CNDA : Fiche d&#39;identité du composant Vitale</title>
-      <link>/vitale/howtos/identifiantcomposant/</link>
+      <link>https://doc.devbox-sante.fr/vitale/howtos/identifiantcomposant/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/vitale/howtos/identifiantcomposant/</guid>
+      <guid>https://doc.devbox-sante.fr/vitale/howtos/identifiantcomposant/</guid>
       <description>
         
         

@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – Migrations</title>
-    <link>/ms-sante/howtos/migrations/</link>
+    <link>https://doc.devbox-sante.fr/ms-sante/howtos/migrations/</link>
     <description>Recent content in Migrations on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/ms-sante/howtos/migrations/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/ms-sante/howtos/migrations/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Ms-Sante: Migration 1.2 vers la 2.0</title>
-      <link>/ms-sante/howtos/migrations/1.2_2.0/</link>
+      <link>https://doc.devbox-sante.fr/ms-sante/howtos/migrations/1.2_2.0/</link>
       <pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>/ms-sante/howtos/migrations/1.2_2.0/</guid>
+      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/migrations/1.2_2.0/</guid>
       <description>
         
         

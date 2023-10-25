@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – Nomenclatures</title>
-    <link>/annuaire/nomenclature/</link>
+    <link>https://doc.devbox-sante.fr/annuaire/nomenclature/</link>
     <description>Recent content in Nomenclatures on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate>
     
-	  <atom:link href="/annuaire/nomenclature/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/annuaire/nomenclature/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Annuaire: ATC</title>
-      <link>/annuaire/nomenclature/atc/</link>
+      <link>https://doc.devbox-sante.fr/annuaire/nomenclature/atc/</link>
       <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>/annuaire/nomenclature/atc/</guid>
+      <guid>https://doc.devbox-sante.fr/annuaire/nomenclature/atc/</guid>
       <description>
         
         
@@ -77,10 +77,10 @@
     
     <item>
       <title>Annuaire: CIM10</title>
-      <link>/annuaire/nomenclature/cim10/</link>
+      <link>https://doc.devbox-sante.fr/annuaire/nomenclature/cim10/</link>
       <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>/annuaire/nomenclature/cim10/</guid>
+      <guid>https://doc.devbox-sante.fr/annuaire/nomenclature/cim10/</guid>
       <description>
         
         
@@ -144,10 +144,10 @@
     
     <item>
       <title>Annuaire: CIP</title>
-      <link>/annuaire/nomenclature/cip/</link>
+      <link>https://doc.devbox-sante.fr/annuaire/nomenclature/cip/</link>
       <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>/annuaire/nomenclature/cip/</guid>
+      <guid>https://doc.devbox-sante.fr/annuaire/nomenclature/cip/</guid>
       <description>
         
         
@@ -249,10 +249,10 @@
     
     <item>
       <title>Annuaire: CIS</title>
-      <link>/annuaire/nomenclature/cis/</link>
+      <link>https://doc.devbox-sante.fr/annuaire/nomenclature/cis/</link>
       <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>/annuaire/nomenclature/cis/</guid>
+      <guid>https://doc.devbox-sante.fr/annuaire/nomenclature/cis/</guid>
       <description>
         
         
@@ -402,10 +402,10 @@
     
     <item>
       <title>Annuaire: NOS</title>
-      <link>/annuaire/nomenclature/nos/</link>
+      <link>https://doc.devbox-sante.fr/annuaire/nomenclature/nos/</link>
       <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>/annuaire/nomenclature/nos/</guid>
+      <guid>https://doc.devbox-sante.fr/annuaire/nomenclature/nos/</guid>
       <description>
         
         

@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – DevBox-Santé Blog</title>
-    <link>/blog/</link>
+    <link>https://doc.devbox-sante.fr/blog/</link>
     <description>Recent content in DevBox-Santé Blog on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Blog: Glossaire</title>
-      <link>/blog/2022/09/23/glossaire/</link>
+      <link>https://doc.devbox-sante.fr/blog/2022/09/23/glossaire/</link>
       <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2022/09/23/glossaire/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2022/09/23/glossaire/</guid>
       <description>
         
         
@@ -338,10 +338,10 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
     
     <item>
       <title>Blog: Installer l&#39;IGC santé dans Acrobat reader</title>
-      <link>/blog/2023/10/13/installer-ligc-sant%C3%A9-dans-acrobat-reader/</link>
+      <link>https://doc.devbox-sante.fr/blog/2023/10/13/installer-ligc-sant%C3%A9-dans-acrobat-reader/</link>
       <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2023/10/13/installer-ligc-sant%C3%A9-dans-acrobat-reader/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2023/10/13/installer-ligc-sant%C3%A9-dans-acrobat-reader/</guid>
       <description>
         
         
@@ -367,10 +367,10 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
     
     <item>
       <title>Blog: Migration TLSv1.3 dans les différents téléservices</title>
-      <link>/blog/2023/08/07/migration-tlsv1.3-dans-les-diff%C3%A9rents-t%C3%A9l%C3%A9services/</link>
+      <link>https://doc.devbox-sante.fr/blog/2023/08/07/migration-tlsv1.3-dans-les-diff%C3%A9rents-t%C3%A9l%C3%A9services/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2023/08/07/migration-tlsv1.3-dans-les-diff%C3%A9rents-t%C3%A9l%C3%A9services/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2023/08/07/migration-tlsv1.3-dans-les-diff%C3%A9rents-t%C3%A9l%C3%A9services/</guid>
       <description>
         
         
@@ -390,10 +390,10 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
     
     <item>
       <title>Blog: Les identifiants nationaux expliqués</title>
-      <link>/blog/2023/05/09/les-identifiants-nationaux-expliqu%C3%A9s/</link>
+      <link>https://doc.devbox-sante.fr/blog/2023/05/09/les-identifiants-nationaux-expliqu%C3%A9s/</link>
       <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2023/05/09/les-identifiants-nationaux-expliqu%C3%A9s/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2023/05/09/les-identifiants-nationaux-expliqu%C3%A9s/</guid>
       <description>
         
         
@@ -431,10 +431,10 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
     
     <item>
       <title>Blog: INSi : Datamatrix dans Docker</title>
-      <link>/blog/2023/03/01/insi-datamatrix-dans-docker/</link>
+      <link>https://doc.devbox-sante.fr/blog/2023/03/01/insi-datamatrix-dans-docker/</link>
       <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2023/03/01/insi-datamatrix-dans-docker/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2023/03/01/insi-datamatrix-dans-docker/</guid>
       <description>
         
         
@@ -459,10 +459,10 @@ En effet, un appel au &lt;code&gt;ins datamatrix controller&lt;/code&gt; :&lt;/p
     
     <item>
       <title>Blog: DMP : Homologation 2.6.1</title>
-      <link>/blog/2022/11/30/dmp-homologation-2.6.1/</link>
+      <link>https://doc.devbox-sante.fr/blog/2022/11/30/dmp-homologation-2.6.1/</link>
       <pubDate>Wed, 30 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2022/11/30/dmp-homologation-2.6.1/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2022/11/30/dmp-homologation-2.6.1/</guid>
       <description>
         
         
@@ -470,8 +470,8 @@ En effet, un appel au &lt;code&gt;ins datamatrix controller&lt;/code&gt; :&lt;/p
 &lt;p&gt;&lt;img src=&#34;PDV_toutes_les_cases.png&#34; alt=&#34;Homologation_PDV_toutes_les_cases&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Mais ce n’est pas fini, nous apportons désormais une API permettant de générer facilement :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Les volets de &lt;a href=&#34;/dmp/cda/crBiologie&#34;&gt;CR-BIO&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Les volets de &lt;a href=&#34;/dmp/cda/vaccination&#34;&gt;Note de vaccination&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Les volets de &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/cda/crBiologie&#34;&gt;CR-BIO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Les volets de &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/cda/vaccination&#34;&gt;Note de vaccination&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -479,10 +479,10 @@ En effet, un appel au &lt;code&gt;ins datamatrix controller&lt;/code&gt; :&lt;/p
     
     <item>
       <title>Blog: SEGUR : la DevBox-Santé dans le référentiel d’exigences Hopital</title>
-      <link>/blog/2022/06/09/segur-la-devbox-sant%C3%A9-dans-le-r%C3%A9f%C3%A9rentiel-dexigences-hopital/</link>
+      <link>https://doc.devbox-sante.fr/blog/2022/06/09/segur-la-devbox-sant%C3%A9-dans-le-r%C3%A9f%C3%A9rentiel-dexigences-hopital/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2022/06/09/segur-la-devbox-sant%C3%A9-dans-le-r%C3%A9f%C3%A9rentiel-dexigences-hopital/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2022/06/09/segur-la-devbox-sant%C3%A9-dans-le-r%C3%A9f%C3%A9rentiel-dexigences-hopital/</guid>
       <description>
         
         
@@ -578,28 +578,28 @@ En effet, un appel au &lt;code&gt;ins datamatrix controller&lt;/code&gt; :&lt;/p
 &lt;/blockquote&gt;
 &lt;p&gt;Pour cela, la DevBox-Santé peut vous aider également pour la génération des PDF/A :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;PDF-A_tooling_swagger.png&#34; alt=&#34;PDF-A_tooling_swagger.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Mais aussi pour les datamatrix INS : &lt;a href=&#34;/insi/howtos/datamatrix/&#34;&gt;/insi/howtos/datamatrix/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Mais aussi pour les datamatrix INS : &lt;a href=&#34;https://doc.devbox-sante.fr/insi/howtos/datamatrix/&#34;&gt;/insi/howtos/datamatrix/&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;outils-annuaire&#34;&gt;Outils Annuaire&lt;/h2&gt;
 &lt;p&gt;L’annuaire de la devbox-santé peut également répondre aux exigences concernant l’annuaire, comme par exemple &lt;strong&gt;ANN1&lt;/strong&gt; :&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Le système DOIT être en capacité d’intégrer automatiquement l’extraction publique « PS_LibreAcces_Personne_activite »  de l’annuaire santé.fr, conformément au Dossier des Spécifications Fonctionnelles et Techniques Fichiers d&amp;rsquo;extraction des données en libre accès [ANN1].&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Une présentation de l’annuaire est disponible &lt;a href=&#34;/annuaire&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Une présentation de l’annuaire est disponible &lt;a href=&#34;https://doc.devbox-sante.fr/annuaire&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Blog: Intégration de l’annexe CI-SIS INS dans la DevBox-santé DMP</title>
-      <link>/blog/2022/05/20/int%C3%A9gration-de-lannexe-ci-sis-ins-dans-la-devbox-sant%C3%A9-dmp/</link>
+      <link>https://doc.devbox-sante.fr/blog/2022/05/20/int%C3%A9gration-de-lannexe-ci-sis-ins-dans-la-devbox-sant%C3%A9-dmp/</link>
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2022/05/20/int%C3%A9gration-de-lannexe-ci-sis-ins-dans-la-devbox-sant%C3%A9-dmp/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2022/05/20/int%C3%A9gration-de-lannexe-ci-sis-ins-dans-la-devbox-sant%C3%A9-dmp/</guid>
       <description>
         
         
         &lt;p&gt;La prise en charge de l’identifiant national de santé (INS) dans les standards d’interopérabilité et les volets du CI-SIS défini dans
-&lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_cisis-tec_annexe-ins_1.3.pdf&#34;&gt;l’annexe CISIS de l’ANS&lt;/a&gt; a impliqué quelques changements dans la DevBox-Santé DMP (&lt;a href=&#34;/dmp/versions&#34;&gt;version 4.7.7&lt;/a&gt;).&lt;/p&gt;
+&lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_cisis-tec_annexe-ins_1.3.pdf&#34;&gt;l’annexe CISIS de l’ANS&lt;/a&gt; a impliqué quelques changements dans la DevBox-Santé DMP (&lt;a href=&#34;https://doc.devbox-sante.fr/dmp/versions&#34;&gt;version 4.7.7&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Voici l’interprétation que nous avons faîtes de la gestion des noms et prénoms de l’annexe INS vers la génération CDA et XDS :&lt;/p&gt;
 &lt;p&gt;Supposons les informations du patient suivantes :&lt;/p&gt;
 &lt;ul&gt;
@@ -685,10 +685,10 @@ En effet, un appel au &lt;code&gt;ins datamatrix controller&lt;/code&gt; :&lt;/p
     
     <item>
       <title>Blog: Vérification d’une signature CPS avec OpenSSL</title>
-      <link>/blog/2022/04/07/v%C3%A9rification-dune-signature-cps-avec-openssl/</link>
+      <link>https://doc.devbox-sante.fr/blog/2022/04/07/v%C3%A9rification-dune-signature-cps-avec-openssl/</link>
       <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2022/04/07/v%C3%A9rification-dune-signature-cps-avec-openssl/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2022/04/07/v%C3%A9rification-dune-signature-cps-avec-openssl/</guid>
       <description>
         
         
@@ -730,10 +730,10 @@ Verified OK
     
     <item>
       <title>Blog: Discordance INS et pièce d&#39;identité</title>
-      <link>/blog/2022/01/17/discordance-ins-et-pi%C3%A8ce-didentit%C3%A9/</link>
+      <link>https://doc.devbox-sante.fr/blog/2022/01/17/discordance-ins-et-pi%C3%A8ce-didentit%C3%A9/</link>
       <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2022/01/17/discordance-ins-et-pi%C3%A8ce-didentit%C3%A9/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2022/01/17/discordance-ins-et-pi%C3%A8ce-didentit%C3%A9/</guid>
       <description>
         
         
@@ -752,10 +752,10 @@ Elle informe sur l&amp;rsquo;origine des différentes discordances, leurs fréqu
     
     <item>
       <title>Blog: DevBox-santé dans un environnement RDP/Citrix</title>
-      <link>/blog/2021/09/20/devbox-sant%C3%A9-dans-un-environnement-rdp/citrix/</link>
+      <link>https://doc.devbox-sante.fr/blog/2021/09/20/devbox-sant%C3%A9-dans-un-environnement-rdp/citrix/</link>
       <pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2021/09/20/devbox-sant%C3%A9-dans-un-environnement-rdp/citrix/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2021/09/20/devbox-sant%C3%A9-dans-un-environnement-rdp/citrix/</guid>
       <description>
         
         
@@ -797,10 +797,10 @@ devbox2 -- usb2 : mapping port USB
     
     <item>
       <title>Blog: Les métadonnées des documents du DMP</title>
-      <link>/blog/2021/06/10/les-m%C3%A9tadonn%C3%A9es-des-documents-du-dmp/</link>
+      <link>https://doc.devbox-sante.fr/blog/2021/06/10/les-m%C3%A9tadonn%C3%A9es-des-documents-du-dmp/</link>
       <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2021/06/10/les-m%C3%A9tadonn%C3%A9es-des-documents-du-dmp/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2021/06/10/les-m%C3%A9tadonn%C3%A9es-des-documents-du-dmp/</guid>
       <description>
         
         
@@ -868,10 +868,10 @@ devbox2 -- usb2 : mapping port USB
     
     <item>
       <title>Blog: eCPS &gt; Intégration de ProSantéConnect</title>
-      <link>/blog/2021/06/01/ecps-int%C3%A9gration-de-prosant%C3%A9connect/</link>
+      <link>https://doc.devbox-sante.fr/blog/2021/06/01/ecps-int%C3%A9gration-de-prosant%C3%A9connect/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2021/06/01/ecps-int%C3%A9gration-de-prosant%C3%A9connect/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2021/06/01/ecps-int%C3%A9gration-de-prosant%C3%A9connect/</guid>
       <description>
         
         
@@ -884,10 +884,10 @@ En effet, ProSantéConnect fournit une bonne alternative à nos outils SSO basé
     
     <item>
       <title>Blog: Installation d&#39;un lecteur PC/SC sous linux ubuntu</title>
-      <link>/blog/2021/06/01/installation-dun-lecteur-pc/sc-sous-linux-ubuntu/</link>
+      <link>https://doc.devbox-sante.fr/blog/2021/06/01/installation-dun-lecteur-pc/sc-sous-linux-ubuntu/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2021/06/01/installation-dun-lecteur-pc/sc-sous-linux-ubuntu/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2021/06/01/installation-dun-lecteur-pc/sc-sous-linux-ubuntu/</guid>
       <description>
         
         
@@ -918,10 +918,10 @@ En effet, ProSantéConnect fournit une bonne alternative à nos outils SSO basé
     
     <item>
       <title>Blog: Installer &gt; lancer la DevBox-Santé depuis un navigateur</title>
-      <link>/blog/2021/05/27/installer-lancer-la-devbox-sant%C3%A9-depuis-un-navigateur/</link>
+      <link>https://doc.devbox-sante.fr/blog/2021/05/27/installer-lancer-la-devbox-sant%C3%A9-depuis-un-navigateur/</link>
       <pubDate>Thu, 27 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2021/05/27/installer-lancer-la-devbox-sant%C3%A9-depuis-un-navigateur/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2021/05/27/installer-lancer-la-devbox-sant%C3%A9-depuis-un-navigateur/</guid>
       <description>
         
         
@@ -943,10 +943,10 @@ Par exemple, le numéro de port :&lt;/p&gt;
     
     <item>
       <title>Blog: DMP &gt; matrice habilitation</title>
-      <link>/blog/2021/05/20/dmp-matrice-habilitation/</link>
+      <link>https://doc.devbox-sante.fr/blog/2021/05/20/dmp-matrice-habilitation/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2021/05/20/dmp-matrice-habilitation/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2021/05/20/dmp-matrice-habilitation/</guid>
       <description>
         
         
@@ -1003,10 +1003,10 @@ En retour le SI DMP confirme la mise à jour du document.&lt;br&gt;
     
     <item>
       <title>Blog: Diagnostiquer des problèmes d&#39;accès aux lecteurs</title>
-      <link>/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/</link>
+      <link>https://doc.devbox-sante.fr/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/</link>
       <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/</guid>
       <description>
         
         
@@ -1060,10 +1060,10 @@ mode PSS :&lt;/p&gt;
     
     <item>
       <title>Blog: Génération de la documentation de la DevBox-Santé</title>
-      <link>/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/</link>
+      <link>https://doc.devbox-sante.fr/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/</link>
       <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/</guid>
+      <guid>https://doc.devbox-sante.fr/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/</guid>
       <description>
         
         

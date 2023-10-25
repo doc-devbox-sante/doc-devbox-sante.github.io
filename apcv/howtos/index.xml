@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – Howtos</title>
-    <link>/apcv/howtos/</link>
+    <link>https://doc.devbox-sante.fr/apcv/howtos/</link>
     <description>Recent content in Howtos on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/apcv/howtos/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/apcv/howtos/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Apcv: Conformité CNDA</title>
-      <link>/apcv/howtos/testcnda/</link>
+      <link>https://doc.devbox-sante.fr/apcv/howtos/testcnda/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/apcv/howtos/testcnda/</guid>
+      <guid>https://doc.devbox-sante.fr/apcv/howtos/testcnda/</guid>
       <description>
         
         
@@ -48,7 +48,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sourceMedia&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;QR_CODE_WEBCAM&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;récupérer-les-trames-soap&#34;&gt;Récupérer les trames SOAP&lt;/h2&gt;
-&lt;p&gt;Dans le fichier de traces d&amp;rsquo;exécution dans &lt;a href=&#34;/installer/poste_client/contenu&#34;&gt;le répertoire d&amp;rsquo;installation&lt;/a&gt; dans le cas de l&amp;rsquo;installer, directement dans la console dans le cas d&amp;rsquo;une image Docker, vous pourrez trouver les requêtes sortantes en cherchant le mot &lt;strong&gt;REQ_OUT&lt;/strong&gt; : &lt;/p&gt;
+&lt;p&gt;Dans le fichier de traces d&amp;rsquo;exécution dans &lt;a href=&#34;https://doc.devbox-sante.fr/installer/poste_client/contenu&#34;&gt;le répertoire d&amp;rsquo;installation&lt;/a&gt; dans le cas de l&amp;rsquo;installer, directement dans la console dans le cas d&amp;rsquo;une image Docker, vous pourrez trouver les requêtes sortantes en cherchant le mot &lt;strong&gt;REQ_OUT&lt;/strong&gt; : &lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2023-05-03 11:37:32.107  INFO 31360 --- [nio-8080-exec-8] o.a.cxf.services.ServiceAUTH.REQ_OUT     : REQ_OUT
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Address: https://qualiflps.ecv-xp.sesam-vitale.fr/wssoap/apcv/auth/1/0
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    HttpMethod: POST
@@ -114,10 +114,10 @@
     
     <item>
       <title>Apcv: CNDA : Fiche d&#39;identité du composant Mobilite ApCV</title>
-      <link>/apcv/howtos/identifiantcomposant/</link>
+      <link>https://doc.devbox-sante.fr/apcv/howtos/identifiantcomposant/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/apcv/howtos/identifiantcomposant/</guid>
+      <guid>https://doc.devbox-sante.fr/apcv/howtos/identifiantcomposant/</guid>
       <description>
         
         
@@ -139,10 +139,10 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
     
     <item>
       <title>Apcv: Foire aux questions Application Carte Vitale</title>
-      <link>/apcv/howtos/faq/</link>
+      <link>https://doc.devbox-sante.fr/apcv/howtos/faq/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/apcv/howtos/faq/</guid>
+      <guid>https://doc.devbox-sante.fr/apcv/howtos/faq/</guid>
       <description>
         
         

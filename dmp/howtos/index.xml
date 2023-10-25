@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – Howtos</title>
-    <link>/dmp/howtos/</link>
+    <link>https://doc.devbox-sante.fr/dmp/howtos/</link>
     <description>Recent content in Howtos on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/dmp/howtos/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/dmp/howtos/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Dmp: Intégrateurs checklist</title>
-      <link>/dmp/howtos/integrateurchecklist/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/integrateurchecklist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/integrateurchecklist/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/integrateurchecklist/</guid>
       <description>
         
         
@@ -51,17 +51,17 @@
 &lt;h2 id=&#34;développement--intégration&#34;&gt;Développement / Intégration&lt;/h2&gt;
 &lt;ol start=&#34;6&#34;&gt;
 &lt;li&gt;
-&lt;p&gt;Intégrer l&amp;rsquo;ensemble des transactions choisies sur les profils choisis. La description de l&amp;rsquo;ensemble des transactions se trouvent &lt;a href=&#34;/dmp/howtos/transactions/&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Intégrer l&amp;rsquo;ensemble des transactions choisies sur les profils choisis. La description de l&amp;rsquo;ensemble des transactions se trouvent &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howtos/transactions/&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Deux modes d&amp;rsquo;intégration :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/dmp/embedded&#34;&gt;Java&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/dmp/rest&#34;&gt;REST&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/dmp/embedded&#34;&gt;Java&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/dmp/rest&#34;&gt;REST&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;nouvelle-procédure-dhomologation&#34;&gt;Nouvelle procédure d&amp;rsquo;homologation&lt;/h2&gt;
 &lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;&lt;a href=&#34;/dmp/howtos/homologation&#34;&gt;Lancer la procédure d&amp;rsquo;homologation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howtos/homologation&#34;&gt;Lancer la procédure d&amp;rsquo;homologation&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
       </description>
@@ -69,10 +69,10 @@
     
     <item>
       <title>Dmp: Transactions supportées</title>
-      <link>/dmp/howtos/transactions/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/transactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/transactions/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/transactions/</guid>
       <description>
         
         
@@ -590,16 +590,16 @@ Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exige
     
     <item>
       <title>Dmp: Homologation / Référencement</title>
-      <link>/dmp/howtos/homologation/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/homologation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/homologation/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/homologation/</guid>
       <description>
         
         
         &lt;p&gt;Le référencement de votre intégration DMP se fait auprès du CNDA : &lt;a href=&#34;https://cnda.ameli.fr/&#34;&gt;https://cnda.ameli.fr/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Une nouvelle procédure d&amp;rsquo;homologation (désormais référencement) a été mise en place le 23 mars 2023. Cette procédure est décrite dans l&amp;rsquo;article 6 des conditions contractuelles disponible sur la nouvelle plateforme qui elle est accessible depuis juillet 2023&lt;/p&gt;
-&lt;p&gt;Elle se passe en trois phases, &lt;a href=&#34;/dmp/howtos/homologation/phase_1/&#34;&gt;la première phase&lt;/a&gt; est soumis à validation par DEVCOOP.&lt;/p&gt;
+&lt;p&gt;Elle se passe en trois phases, &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howtos/homologation/phase_1/&#34;&gt;la première phase&lt;/a&gt; est soumis à validation par DEVCOOP.&lt;/p&gt;
 &lt;p&gt;Voici en résumé la procédure :&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Récupérer les condition contractuelles DMP la plateforme du CNDA : &lt;a href=&#34;https://sicnda.ameli.fr/#/documentation/ccc&#34;&gt;https://sicnda.ameli.fr/#/documentation/ccc&lt;/a&gt;&lt;/li&gt;
@@ -622,10 +622,10 @@ Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exige
     
     <item>
       <title>Dmp: Interpreter les logs</title>
-      <link>/dmp/howtos/logs/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/logs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/logs/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/logs/</guid>
       <description>
         
         
@@ -636,7 +636,7 @@ Les modalités de mise en oeuvre : détermination de l&amp;rsquo;âge (cf. exige
 &lt;li&gt;soit à un niveau &lt;strong&gt;info&lt;/strong&gt; dans les versions jusqu&amp;rsquo;à 5.0&lt;/li&gt;
 &lt;li&gt;soit à un niveau &lt;strong&gt;debug&lt;/strong&gt; dans les versions postérieures (à partir de la 5.1)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Pour forcer un niveau de log : &lt;a href=&#34;/dmp/configuration/#logging&#34;&gt;/dmp/configuration/#logging&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pour forcer un niveau de log : &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/configuration/#logging&#34;&gt;/dmp/configuration/#logging&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;interpréter-les-logs&#34;&gt;Interpréter les logs&lt;/h3&gt;
 &lt;p&gt;Dans la totalité des tests il vous sera demandé de fournir &amp;ldquo;les requête/réponse de l&amp;rsquo;appel au service&lt;/p&gt;
 &lt;p&gt;Une fois lancée dans le fichier &lt;code&gt;output.log&lt;/code&gt; ou dans la console de l&amp;rsquo;instance docker:&lt;/p&gt;
@@ -755,10 +755,10 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&amp;lt;/ds:X509Certificate&amp;gt;&
     
     <item>
       <title>Dmp: Gestion des certificats</title>
-      <link>/dmp/howtos/gestioncertificat/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/gestioncertificat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/gestioncertificat/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/gestioncertificat/</guid>
       <description>
         
         
@@ -881,10 +881,10 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
     
     <item>
       <title>Dmp: Schematron</title>
-      <link>/dmp/howtos/schematron/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/schematron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/schematron/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/schematron/</guid>
       <description>
         
         
@@ -949,10 +949,10 @@ DMPCCdaValidator       :
     
     <item>
       <title>Dmp: Différents environnements du DMP</title>
-      <link>/dmp/howtos/environnements/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/environnements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/environnements/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/environnements/</guid>
       <description>
         
         
@@ -1012,10 +1012,10 @@ DMPCCdaValidator       :
     
     <item>
       <title>Dmp: Migrations</title>
-      <link>/dmp/howtos/migrations/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/migrations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/migrations/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/migrations/</guid>
       <description>
         
         
@@ -1025,10 +1025,10 @@ DMPCCdaValidator       :
     
     <item>
       <title>Dmp: Démo Stellair</title>
-      <link>/dmp/howtos/demo-stellair/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/demo-stellair/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/demo-stellair/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/demo-stellair/</guid>
       <description>
         
         
@@ -1100,7 +1100,7 @@ La réponse étant :&lt;/li&gt;
 &lt;li&gt;L’accès au certificat d’authentification de la carte CPS&lt;/li&gt;
 &lt;li&gt;L’accès au mécanisme de signature du lecteur combiné à la carte CPS&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Pour plus d’informations, sur les transactions du DMP : &lt;a href=&#34;/dmp/howtos/transactions&#34;&gt;/dmp/howtos/transactions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pour plus d’informations, sur les transactions du DMP : &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howtos/transactions&#34;&gt;/dmp/howtos/transactions&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Il est également possible d’accéder à la lecture de la Carte Vitale et au téléservice INSi&lt;/p&gt;
 
       </description>
@@ -1108,10 +1108,10 @@ La réponse étant :&lt;/li&gt;
     
     <item>
       <title>Dmp: UniqueIdGenerator</title>
-      <link>/dmp/howtos/uniqueidgenerator/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/uniqueidgenerator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/uniqueidgenerator/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/uniqueidgenerator/</guid>
       <description>
         
         
@@ -1184,10 +1184,10 @@ La réponse étant :&lt;/li&gt;
     
     <item>
       <title>Dmp: CNDA : Fiche d&#39;identité du composant DMP</title>
-      <link>/dmp/howtos/identifiantcomposant/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/identifiantcomposant/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/identifiantcomposant/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/identifiantcomposant/</guid>
       <description>
         
         
@@ -1226,10 +1226,10 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
     
     <item>
       <title>Dmp: FAQ</title>
-      <link>/dmp/howtos/faq/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/faq/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/faq/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/faq/</guid>
       <description>
         
         

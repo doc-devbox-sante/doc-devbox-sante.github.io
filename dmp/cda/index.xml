@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – Structuration des documents</title>
-    <link>/dmp/cda/</link>
+    <link>https://doc.devbox-sante.fr/dmp/cda/</link>
     <description>Recent content in Structuration des documents on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/dmp/cda/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/dmp/cda/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Dmp: Volet CDA structuration minimale</title>
-      <link>/dmp/cda/structurationminimale/</link>
+      <link>https://doc.devbox-sante.fr/dmp/cda/structurationminimale/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/cda/structurationminimale/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/cda/structurationminimale/</guid>
       <description>
         
         
@@ -94,7 +94,7 @@ base permettant la création d&amp;rsquo;un DMPCDocument ainsi que son contenu b
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;11488-4&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;alimenter-le-dmp&#34;&gt;Alimenter le DMP&lt;/h2&gt;
-&lt;p&gt;C&amp;rsquo;est ce &lt;code&gt;DMPCDocument&lt;/code&gt; qui permet l&amp;rsquo;alimentation du DMP au travers de &lt;a href=&#34;/dmp/howtos/transactions//#alimentation&#34;&gt;la transaction d&amp;rsquo;alimentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;C&amp;rsquo;est ce &lt;code&gt;DMPCDocument&lt;/code&gt; qui permet l&amp;rsquo;alimentation du DMP au travers de &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howtos/transactions//#alimentation&#34;&gt;la transaction d&amp;rsquo;alimentation&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;générer-un-cda&#34;&gt;Générer un CDA&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;@Since DMP-4.7.0&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Il est également possible de transformer ce &lt;code&gt;DMPCDocument&lt;/code&gt; en un CDA en vue de le partager avec un autre Système d&amp;rsquo;information comme la MSS par exemple.&lt;/p&gt;
@@ -177,10 +177,10 @@ base permettant la création d&amp;rsquo;un DMPCDocument ainsi que son contenu b
     
     <item>
       <title>Dmp: Volet Compte rendu d&#39;examens de biologie</title>
-      <link>/dmp/cda/crbiologie/</link>
+      <link>https://doc.devbox-sante.fr/dmp/cda/crbiologie/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/cda/crbiologie/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/cda/crbiologie/</guid>
       <description>
         
         
@@ -472,10 +472,10 @@ base permettant la création d&amp;rsquo;un DMPCDocument ainsi que son contenu b
     
     <item>
       <title>Dmp: Vaccinations : Note et Historiques</title>
-      <link>/dmp/cda/vaccination/</link>
+      <link>https://doc.devbox-sante.fr/dmp/cda/vaccination/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/cda/vaccination/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/cda/vaccination/</guid>
       <description>
         
         
@@ -809,7 +809,7 @@ Les spécifications de ce volet vaccination sont disponibles sur le site de l’
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;remplacement-dune-note-de-vaccination&#34;&gt;Remplacement d&amp;rsquo;une note de vaccination&lt;/h5&gt;
-&lt;p&gt;Le remplacement d&amp;rsquo;une note de vaccination est identique au &lt;a href=&#34;/dmp/howtos/transactions/#remplacement&#34;&gt;remplacement d&amp;rsquo;un document&lt;/a&gt; à l&amp;rsquo;exception près qu&amp;rsquo;il faut préciser la même &lt;code&gt;idVaccination&lt;/code&gt; dans la vaccination. remplaçante.&lt;/p&gt;
+&lt;p&gt;Le remplacement d&amp;rsquo;une note de vaccination est identique au &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howtos/transactions/#remplacement&#34;&gt;remplacement d&amp;rsquo;un document&lt;/a&gt; à l&amp;rsquo;exception près qu&amp;rsquo;il faut préciser la même &lt;code&gt;idVaccination&lt;/code&gt; dans la vaccination. remplaçante.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;EX_2.1-2030&lt;/strong&gt; : Les identifiants des vaccinations (i.e. identifiant des entry/substanceAdministration) dans les notes de vaccination doivent être générés de manière « mondialement unique », via un UUID (voir &lt;a href=&#34;https://fr.wikipedia.org/wiki/Universally_unique_identifier&#34;&gt;https://fr.wikipedia.org/wiki/Universally_unique_identifier&lt;/a&gt;) dans l’attribut id/@root seulement.
 Cet identifiant sert ensuite à retrouver la vaccination dans l’historique de vaccinations lors de sa mise à jour par le SI DMP. Il ne doit donc jamais rentrer en conflit avec l’identifiant d’une autre vaccination.&lt;/p&gt;
@@ -847,10 +847,10 @@ Pour information, dans l&amp;rsquo;&lt;a href=&#34;https://annuaire-demo.devbox-
     
     <item>
       <title>Dmp: CDA CNAM-HR : Historique de remboursements</title>
-      <link>/dmp/cda/cnam-hr/</link>
+      <link>https://doc.devbox-sante.fr/dmp/cda/cnam-hr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/cda/cnam-hr/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/cda/cnam-hr/</guid>
       <description>
         
         
@@ -887,16 +887,16 @@ Pour information, dans l&amp;rsquo;&lt;a href=&#34;https://annuaire-demo.devbox-
     
     <item>
       <title>Dmp: Votre volet CDA</title>
-      <link>/dmp/cda/wrapped/</link>
+      <link>https://doc.devbox-sante.fr/dmp/cda/wrapped/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/cda/wrapped/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/cda/wrapped/</guid>
       <description>
         
         
         &lt;p&gt;&lt;strong&gt;@Since DMP-4.7.0&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Il est possible que vous souhaitiez maîtriser la génération du document CDA, et que vous souhaitiez seulement déléguer l&amp;rsquo;envoi au DMP de ce dernier.&lt;/p&gt;
-&lt;p&gt;Il vous suffit de générer un document CDA conforme au &lt;a href=&#34;/dmp/howtos/schematron&#34;&gt;schematron&lt;/a&gt; et de l&amp;rsquo;envoyer dans une enveloppe de soummission au travers d&amp;rsquo;une transaction &lt;code&gt;TD21submitDocuments&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Il vous suffit de générer un document CDA conforme au &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howtos/schematron&#34;&gt;schematron&lt;/a&gt; et de l&amp;rsquo;envoyer dans une enveloppe de soummission au travers d&amp;rsquo;une transaction &lt;code&gt;TD21submitDocuments&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;En java, Cela consiste à créer un document enveloppe (Wrapper) &lt;code&gt;DMPCDocumentCDAWrapped&lt;/code&gt; avec les quelques metadata non déductibles du CDA et le cda sous forme d&amp;rsquo;un tableau de byte:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;byte&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[]&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;documentCDA&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;integrateur&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;genereUnCDA&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -960,10 +960,10 @@ Pour information, dans l&amp;rsquo;&lt;a href=&#34;https://annuaire-demo.devbox-
     
     <item>
       <title>Dmp: CDA autoprésentable</title>
-      <link>/dmp/cda/autopresentable/</link>
+      <link>https://doc.devbox-sante.fr/dmp/cda/autopresentable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/cda/autopresentable/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/cda/autopresentable/</guid>
       <description>
         
         

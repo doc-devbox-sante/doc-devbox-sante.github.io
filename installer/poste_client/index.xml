@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – Installer sur le poste de travail</title>
-    <link>/installer/poste_client/</link>
+    <link>https://doc.devbox-sante.fr/installer/poste_client/</link>
     <description>Recent content in Installer sur le poste de travail on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/installer/poste_client/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/installer/poste_client/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Installer: Premier Pas</title>
-      <link>/installer/poste_client/premier_pas/</link>
+      <link>https://doc.devbox-sante.fr/installer/poste_client/premier_pas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/installer/poste_client/premier_pas/</guid>
+      <guid>https://doc.devbox-sante.fr/installer/poste_client/premier_pas/</guid>
       <description>
         
         
@@ -101,16 +101,16 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&amp;lt;/ds:X509Certificate&amp;gt;&
     
     <item>
       <title>Installer: Eureka</title>
-      <link>/installer/poste_client/eureka/</link>
+      <link>https://doc.devbox-sante.fr/installer/poste_client/eureka/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/installer/poste_client/eureka/</guid>
+      <guid>https://doc.devbox-sante.fr/installer/poste_client/eureka/</guid>
       <description>
         
         
         &lt;p&gt;Afin de gérer les déploiements de la DevBox-Santé dans des environnements type Windows RDP (Remote Desktop Protocol) / Citrix, nous avons créé le projet &lt;strong&gt;Eureka&lt;/strong&gt;.
 Eureka est l&amp;rsquo;annuaire des devbox-santé branchés sur les différents lecteurs de carte PC/SC:&lt;/p&gt;
-&lt;p&gt;Dans &lt;a href=&#34;/blog/2021/09/20/devbox-sant%C3%A9-dans-un-environnement-rdp/citrix/&#34;&gt;notre post du 20 septembre 2021&lt;/a&gt;, nous expliquions qu&amp;rsquo;il était difficile de faire le lien entre un partage de port USB (spécifique à chaque session utilisateur RDP) et un partage de port HTTP.&lt;/p&gt;
+&lt;p&gt;Dans &lt;a href=&#34;https://doc.devbox-sante.fr/blog/2021/09/20/devbox-sant%C3%A9-dans-un-environnement-rdp/citrix/&#34;&gt;notre post du 20 septembre 2021&lt;/a&gt;, nous expliquions qu&amp;rsquo;il était difficile de faire le lien entre un partage de port USB (spécifique à chaque session utilisateur RDP) et un partage de port HTTP.&lt;/p&gt;
 &lt;p&gt;Chaque session utilisateur devait être associé à une DevBox-Santé sur un port http spécifique.&lt;/p&gt;
 &lt;h2 id=&#34;eureka-service&#34;&gt;Eureka service&lt;/h2&gt;
 &lt;p&gt;C&amp;rsquo;est pourquoi un service dédié, nommé Eureka peut être lancé sur le serveur RDP. Ce service Eureka joue le rôle d&amp;rsquo;annuaire des différentes sessions utilisateurs devbox-santé :&lt;/p&gt;
@@ -236,10 +236,10 @@ end
     
     <item>
       <title>Installer: Matrice des Flux</title>
-      <link>/installer/poste_client/flux/</link>
+      <link>https://doc.devbox-sante.fr/installer/poste_client/flux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/installer/poste_client/flux/</guid>
+      <guid>https://doc.devbox-sante.fr/installer/poste_client/flux/</guid>
       <description>
         
         
@@ -333,17 +333,17 @@ end
 &lt;p&gt;Remarque : Votre installation ne comporte pas forcément tous les composants.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;environnements-de-test-et-formation&#34;&gt;Environnements de test et formation&lt;/h3&gt;
-&lt;p&gt;Les urls changent sur ces environnements, cf. les &lt;a href=&#34;/dmp/howtos/environnements&#34;&gt;environnements du DMP&lt;/a&gt; par exemple.&lt;/p&gt;
+&lt;p&gt;Les urls changent sur ces environnements, cf. les &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howtos/environnements&#34;&gt;environnements du DMP&lt;/a&gt; par exemple.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Installer: Howtos</title>
-      <link>/installer/poste_client/howtos/</link>
+      <link>https://doc.devbox-sante.fr/installer/poste_client/howtos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/installer/poste_client/howtos/</guid>
+      <guid>https://doc.devbox-sante.fr/installer/poste_client/howtos/</guid>
       <description>
         
         
@@ -359,8 +359,8 @@ Par exemple, pour démarrer la DevBox-Santé sur le port 10002: &lt;/p&gt;
 &lt;p&gt;La DevBox-santé est paramétrée par défaut lors de l&amp;rsquo;installation, mais elle est personnalisable en modifiant le fichier de configuration &lt;code&gt;application.yml&lt;/code&gt;.
 Les modifications possibles de cette configuration sont décrites pour chacun des composants dans leur espace de documentation :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;pour le DMP : &lt;a href=&#34;/dmp/configuration&#34;&gt;/dmp/configuration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;pour l&amp;rsquo;INSi : &lt;a href=&#34;/insi/configuration&#34;&gt;/insi/configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;pour le DMP : &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/configuration&#34;&gt;/dmp/configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;pour l&amp;rsquo;INSi : &lt;a href=&#34;https://doc.devbox-sante.fr/insi/configuration&#34;&gt;/insi/configuration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
 

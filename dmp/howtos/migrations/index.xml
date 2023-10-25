@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – Migrations</title>
-    <link>/dmp/howtos/migrations/</link>
+    <link>https://doc.devbox-sante.fr/dmp/howtos/migrations/</link>
     <description>Recent content in Migrations on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/dmp/howtos/migrations/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/dmp/howtos/migrations/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,15 +15,15 @@
     
     <item>
       <title>Dmp: Migration 5.0 vers la 5.1</title>
-      <link>/dmp/howtos/migrations/5.0_5.1/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/migrations/5.0_5.1/</link>
       <pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/migrations/5.0_5.1/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/migrations/5.0_5.1/</guid>
       <description>
         
         
         &lt;p&gt;La version 5.1 apporte son lot de nouveautés, et est totalement compatible avec la 5.0.&lt;/p&gt;
-&lt;p&gt;Elle supporte néanmoins les évolutions définis dans les différents guides d&amp;rsquo;intégration 2.7, 2.8 et 2.9, mais également le support du volet CNAM-HR Historique de Remboursement (pour plus de renseignements rendez-vous &lt;a href=&#34;/dmp/cda/cnam-hr&#34;&gt;sur la page dédiée&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Elle supporte néanmoins les évolutions définis dans les différents guides d&amp;rsquo;intégration 2.7, 2.8 et 2.9, mais également le support du volet CNAM-HR Historique de Remboursement (pour plus de renseignements rendez-vous &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/cda/cnam-hr&#34;&gt;sur la page dédiée&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;27-support-de-la-recherche-finddocumentbyreferenceid-nécessaire-à-la-recherche-de-documents-dimagerie&#34;&gt;[2.7] Support de la recherche FindDocumentByReferenceId nécessaire à la recherche de documents d&amp;rsquo;imagerie&lt;/h3&gt;
 &lt;p&gt;Une nouvelle requête est disponible également pour la recherche &lt;code&gt;FindDocumentByReferenceId&lt;/code&gt; permettant la recherche de documents DICOM :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;28-prise-en-charge-du-mode-ejeg-en-authentification-indirecte&#34;&gt;[2.8] Prise en charge du mode EJ/EG en authentification indirecte&lt;/h3&gt;
@@ -44,7 +44,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Mode EJ (déconseillé)&lt;/strong&gt;: Vous utilisez un certificat EJ (Établissement Juridique) pour vous connecter, si vous ne précisez rien dans le contexte d&amp;rsquo;appel (&lt;code&gt;DMPCContext&lt;/code&gt;) ce sont les informations de ce certificat qui seront utilisées. Attention, toutefois ce mode EJ est fortement déconseillé dorénavant.&lt;/p&gt;
 &lt;h3 id=&#34;29-gestion-des-notes-de-vaccination-en-version-20231&#34;&gt;[2.9] Gestion des notes de vaccination en version 2023.1&lt;/h3&gt;
-&lt;p&gt;Il s&amp;rsquo;agit ici d&amp;rsquo;une mise en conformité avec le Cadre d&amp;rsquo;intéropérabilité SIS. Ces modifications sont transparentes pour vous, vous soummettrez les mêmes notes de vaccination et retrouver les mêmes historiques de vaccination avec nos apis : &lt;a href=&#34;/dmp/cda/vaccination&#34;&gt;/dmp/cda/vaccination&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Il s&amp;rsquo;agit ici d&amp;rsquo;une mise en conformité avec le Cadre d&amp;rsquo;intéropérabilité SIS. Ces modifications sont transparentes pour vous, vous soummettrez les mêmes notes de vaccination et retrouver les mêmes historiques de vaccination avec nos apis : &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/cda/vaccination&#34;&gt;/dmp/cda/vaccination&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;29-gestion-de-la-td04-pour-les-cpe&#34;&gt;[2.9] Gestion de la TD0.4 pour les CPE&lt;/h3&gt;
 &lt;p&gt;La TD0.4 peut dorénavant être appelé via une CPE pour le compte d&amp;rsquo;un professionnel, dans ce cas le RPPS du professionnel de santé doit être passé dans la requête&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://bitbucket.org/devbox-sante/dmpc-api/src/master/src/main/java/fr/devboxsante/dmp/TD04Request.java&#34;&gt;https://bitbucket.org/devbox-sante/dmpc-api/src/master/src/main/java/fr/devboxsante/dmp/TD04Request.java&lt;/a&gt;&lt;/p&gt;
@@ -116,17 +116,17 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;org.apache.cxf.services&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;debug&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# pour tracer les messages soaps&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;validation-cda-par-schematron&#34;&gt;Validation cda par schematron&lt;/h3&gt;
 &lt;p&gt;La validation se fait par les outils du projet &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA-3-0&#34;&gt;https://github.com/ansforge/TestContenuCDA-3-0&lt;/a&gt; au lieu de l&amp;rsquo;ancien projet &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA&#34;&gt;https://github.com/ansforge/TestContenuCDA&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Pour la liste de toutes les autres demandes : &lt;a href=&#34;/dmp/versions/#version---510-04102023&#34;&gt;Release note de la version 5.1&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pour la liste de toutes les autres demandes : &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/versions/#version---510-04102023&#34;&gt;Release note de la version 5.1&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Dmp: Migration 4.7 vers la 5.0</title>
-      <link>/dmp/howtos/migrations/4.7_5.0/</link>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/migrations/4.7_5.0/</link>
       <pubDate>Fri, 18 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/howtos/migrations/4.7_5.0/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/migrations/4.7_5.0/</guid>
       <description>
         
         
@@ -134,7 +134,7 @@
 &lt;p&gt;Cette version supporte encore les anciennes requêtes mais déprecient certaines notions.&lt;/p&gt;
 &lt;p&gt;Une nouvelle collection postman est disponible dans l’espace public Postman : &lt;a href=&#34;https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview&#34;&gt;https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;note-et-historique-de-vaccination&#34;&gt;Note et Historique de vaccination&lt;/h2&gt;
-&lt;p&gt;Tout d’abord, nous avons ajouté le support de la note et historique de vaccinations, pour plus d’information consulter la documentation à ce sujet : &lt;a href=&#34;/dmp/cda/vaccination&#34;&gt;/dmp/cda/vaccination&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Tout d’abord, nous avons ajouté le support de la note et historique de vaccinations, pour plus d’information consulter la documentation à ce sujet : &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/cda/vaccination&#34;&gt;/dmp/cda/vaccination&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;gestion-de-linsaméliorée&#34;&gt;Gestion de l’INS améliorée&lt;/h2&gt;
 &lt;p&gt;Pour être en conformité avec l’INSi et simplifier l’intégration entre les deux composants DMP et INSi, dans tous les objets faisant référence à un INS, le couple identifiant/autorité est dorénavant utilisé au lieu de spécifier cette autorité dans le contexte de la requête.&lt;/p&gt;
 &lt;p&gt;Par exemple, une requête (td0.2 test d’existence) en version 4.7 :&lt;/p&gt;
@@ -173,7 +173,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Par conséquent, certains contrôles sont plus sévères, et donc certains cas passant peuvent ne plus l’être. Par exemple, il n’est plus possible d’identifier un Personnel de santé avec un &lt;code&gt;internalId&lt;/code&gt; sans préciser son identifiant de structure. Ou encore, une vérification du format des RPPS est effectué dans les documents envoyés.&lt;/p&gt;
 &lt;p&gt;Consulter, les sources pour visualiser les contrôles possibles : &lt;a href=&#34;https://bitbucket.org/devbox-sante/dmpc-api/src/master/&#34;&gt;https://bitbucket.org/devbox-sante/dmpc-api/src/master/&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ajout-de-la-td04&#34;&gt;Ajout de la TD0.4&lt;/h2&gt;
-&lt;p&gt;La documentation sur cette nouvelle transaction est &lt;a href=&#34;/dmp/howtos/transactions/#td04--lister-les-dmp-autoris%C3%A9s-depuis-version-50&#34;&gt;ici&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;La documentation sur cette nouvelle transaction est &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howtos/transactions/#td04--lister-les-dmp-autoris%C3%A9s-depuis-version-50&#34;&gt;ici&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;autres-évolutions&#34;&gt;Autres évolutions&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -195,7 +195,7 @@
 &lt;p&gt;Contrôle des formats d’identifiant (RPPS, FINESS &amp;hellip;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&amp;hellip; et d’autres encore cf. &lt;a href=&#34;/dmp/versions&#34;&gt;le release note&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;hellip; et d’autres encore cf. &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/versions&#34;&gt;le release note&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 

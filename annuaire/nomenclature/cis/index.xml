@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – CIS</title>
-    <link>/annuaire/nomenclature/cis/</link>
+    <link>https://doc.devbox-sante.fr/annuaire/nomenclature/cis/</link>
     <description>Recent content in CIS on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate>
     
-	  <atom:link href="/annuaire/nomenclature/cis/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/annuaire/nomenclature/cis/index.xml" rel="self" type="application/rss+xml" />
     
     
       

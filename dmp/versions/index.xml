@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – Versions</title>
-    <link>/dmp/versions/</link>
+    <link>https://doc.devbox-sante.fr/dmp/versions/</link>
     <description>Recent content in Versions on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/dmp/versions/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/dmp/versions/index.xml" rel="self" type="application/rss+xml" />
     
     
       

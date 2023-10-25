@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevBox-Santé – Authentifications</title>
-    <link>/dmp/authentifications/</link>
+    <link>https://doc.devbox-sante.fr/dmp/authentifications/</link>
     <description>Recent content in Authentifications on DevBox-Santé</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/dmp/authentifications/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://doc.devbox-sante.fr/dmp/authentifications/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,16 +15,16 @@
     
     <item>
       <title>Dmp: Authentification Indirecte (via certificat serveur)</title>
-      <link>/dmp/authentifications/indirecte/</link>
+      <link>https://doc.devbox-sante.fr/dmp/authentifications/indirecte/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/authentifications/indirecte/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/authentifications/indirecte/</guid>
       <description>
         
         
         &lt;p&gt;Il s&amp;rsquo;agit de l&amp;rsquo;authentification par certificat serveur provenant de l&amp;rsquo;IGC Santé (Infrastructure de gestion de clés) qui est délivré aux différents établissements de santé.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Une documentation pour obtenir des certificats serveurs se trouve &lt;a href=&#34;/dmp/howtos/gestioncertificat/&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Une documentation pour obtenir des certificats serveurs se trouve &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howtos/gestioncertificat/&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Ce mode d&amp;rsquo;authentification ne permet que l&amp;rsquo;alimentation de documents dans le DMP et pas la consultation.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Description scénario&lt;/strong&gt; : L&amp;rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&amp;rsquo;intégre comme une passerelle vers le DMP.&lt;/p&gt;
@@ -71,10 +71,10 @@ DMPC_API -d-&amp;gt; DMP : SOAP XDS / CDA
     
     <item>
       <title>Dmp: Authentification Directe (via carte CPx)</title>
-      <link>/dmp/authentifications/directe/</link>
+      <link>https://doc.devbox-sante.fr/dmp/authentifications/directe/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/authentifications/directe/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/authentifications/directe/</guid>
       <description>
         
         
@@ -156,10 +156,10 @@ dbxdmp -&amp;gt; frontend : ok
     
     <item>
       <title>Dmp: Authentification Directe via le CPS Agent</title>
-      <link>/dmp/authentifications/cps_agent/</link>
+      <link>https://doc.devbox-sante.fr/dmp/authentifications/cps_agent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/authentifications/cps_agent/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/authentifications/cps_agent/</guid>
       <description>
         
         
@@ -234,10 +234,10 @@ backend -&amp;gt; frontend : ok
     
     <item>
       <title>Dmp: Authentification Directe via OLAQIN TAAS (Terminal As A Service)</title>
-      <link>/dmp/authentifications/olaqin_taas/</link>
+      <link>https://doc.devbox-sante.fr/dmp/authentifications/olaqin_taas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/dmp/authentifications/olaqin_taas/</guid>
+      <guid>https://doc.devbox-sante.fr/dmp/authentifications/olaqin_taas/</guid>
       <description>
         
         

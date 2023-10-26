@@ -14,6 +14,46 @@
     
     
     <item>
+      <title>Installer: Version 4.3</title>
+      <link>https://doc.devbox-sante.fr/installer/versions/4.3/</link>
+      <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/installer/versions/4.3/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.3.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.2.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.2.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Installer: Version 4.2</title>
       <link>https://doc.devbox-sante.fr/installer/versions/4.2/</link>
       <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
@@ -1625,31 +1665,6 @@
 &lt;li&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt; : &lt;strong&gt;2.5&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt; : &lt;strong&gt;1.4&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;installer&lt;/code&gt; : &lt;strong&gt;1.8&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;lm&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Installer: [07/07/2021] 1.7</title>
-      <link>https://doc.devbox-sante.fr/installer/poste_client/versions/_archives/20210707_versions_courantes/</link>
-      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://doc.devbox-sante.fr/installer/poste_client/versions/_archives/20210707_versions_courantes/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Les versions actuelles de nos composants sont :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt; : &lt;strong&gt;4.0.2&lt;/strong&gt;
-&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/DMP-146&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;DMP-146&lt;/a&gt; [TD31Find] erreur lors d&#39;un retour vide :  [XDSStoredQueryMissingParam] parameterName=$uuid&lt;/p&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt; : &lt;strong&gt;1.3.1&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt; : &lt;strong&gt;1.0&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt; : &lt;strong&gt;2.5&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt; : &lt;strong&gt;1.4&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;installer&lt;/code&gt; : &lt;strong&gt;1.7&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;lm&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 

@@ -754,7 +754,7 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&amp;lt;/ds:X509Certificate&amp;gt;&
     </item>
     
     <item>
-      <title>Dmp: Gestion des certificats</title>
+      <title>Dmp: Gestion des certificats et carte CPS</title>
       <link>https://doc.devbox-sante.fr/dmp/howtos/gestioncertificat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -765,7 +765,7 @@ Fdxj9tnROlPZfBxXLraunS7zw6uqjJS6iPHS80hoFHQ=&amp;lt;/ds:X509Certificate&amp;gt;&
         &lt;p&gt;Afin d&amp;rsquo;utiliser le connecteur DevBox-Santé DMP en mode authentification indirecte, il vous faut obtenir des certificats serveurs provenant de cette autorité.
 Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande à partir d&amp;rsquo;un téléservice dont la procédure est décrite ici.&lt;/p&gt;
 &lt;h2 id=&#34;procédure-administrative&#34;&gt;Procédure Administrative&lt;/h2&gt;
-&lt;h3 id=&#34;industriel-pour-les-tests&#34;&gt;Industriel pour les tests&lt;/h3&gt;
+&lt;h3 id=&#34;industriel-pour-les-certificats-et-cartes-de--tests&#34;&gt;Industriel pour les certificats et cartes de  tests&lt;/h3&gt;
 &lt;p&gt;Pour l&amp;rsquo;industriel la liste des formulaires de gestion des certificats sont ici : &lt;a href=&#34;https://esante.gouv.fr/index-des-formulaires#23241&#34;&gt;https://esante.gouv.fr/index-des-formulaires#23241&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Le formulaire de commande de cartes et certificats de test est le F414 : &lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/F414.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/F414.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Il est possible de faire la démarche en ligne : &lt;a href=&#34;https://www.demarches-simplifiees.fr/commencer/f414&#34;&gt;https://www.demarches-simplifiees.fr/commencer/f414&lt;/a&gt;&lt;/p&gt;

@@ -146,7 +146,7 @@ Version imprimable multipages.
 <ol>
 <li>Récupérer le <a href="/dmp/howtos/homologation/CDT_DMP_20230720_v2.9.0.xlsm">cahier de test</a> à jour et prendre connaissance de la NOTICE</li>
 <li>Filtrer l&rsquo;onglet Phase 1 sur les trois premières colonnes : Profil DMP-C, Authentification, Transaction en fonction de vos annexes remplies des conditions particulières.</li>
-<li>Fournir à <strong>DEVCOOP</strong> pour chaque code de test un répertoire contenant la trame d&rsquo;exécution ainsi que si besoin une ou deux impressions écrans pour illustration.</li>
+<li>Fournir à <strong>DEVCOOP</strong> pour chaque code de test un répertoire contenant la trame d&rsquo;exécution ainsi que si besoin une ou deux impressions écrans pour illustration. Pour une preuve : Fournir une trame soap d&rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :<a href="/dmp/howtos/logs/">/dmp/howtos/logs/</a></li>
 <li>Une fois les trames validées par <strong>DEVCOOP</strong>, fournir les informations suivantes concernant votre logiciel
 <ul>
 <li>NIL</li>
@@ -190,7 +190,35 @@ Ce document est disponible sur l&rsquo;espace industriel de Sesam-Vitale : <a hr
 </blockquote>
 <p>Pour toute information sur la mise en place de la connexion secrète avec la DevBox-santé DMP : <a href="/dmp/howtos/transactions/#gestion-de-la-connexion-secr%C3%A8te">/dmp/howtos/transactions/#gestion-de-la-connexion-secrète</a></p>
 <h3 id="authentification-directe">Authentification directe</h3>
-<p>TODO</p>
+<h4 id="pre_dir_med-pre_dir_aux-pre_dir_pha-pre_dir_spe-pre_dir_cpe">PRE_DIR_MED, PRE_DIR_AUX, PRE_DIR_PHA, PRE_DIR_SPE, PRE_DIR_CPE</h4>
+<blockquote>
+<p>Des tests ont été faits en Authentification DIRECTE avec une carte :</p>
+<ul>
+<li>MEDECIN</li>
+<li>PHARMACIEN</li>
+<li>SPECIALISTE</li>
+<li>AUXILIAIRE</li>
+<li>CPE</li>
+</ul>
+</blockquote>
+<p>Il faut valider une connexion en spécifiant les différents certificats utilisés. Plus d&rsquo;information, sur la configuration des certificats : <a href="/dmp/configuration/#authentification-directe">/dmp/configuration/#authentification-directe</a></p>
+<p>Il faut réaliser un test par type de cartes CPx.</p>
+<p>Pour obtenir les différents types cartes CPx de test  : <a href="/dmp/howtos/gestioncertificat/#proc%C3%A9dure-administrative">/dmp/howtos/gestioncertificat/#proc%C3%A9dure-administrative</a></p>
+<h4 id="pre_td03">PRE_TD03</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé la modification de l&rsquo;autorisation du PS sur un DMP.</p>
+</blockquote>
+<p>Tout sur la transaction TD0.3 <a href="/dmp/howtos/transactions/#td03--modifier-lautorisation-dacc%C3%A8s-etou-le-statut-m%C3%A9decin-traitant-dmp-ou-passer-en-mode-dacc%C3%A8s--bris-de-glace--depuis-version-20">/dmp/howtos/transactions/#td03&ndash;modifier-lautorisation-dacc%C3%A8s-etou-le-statut-m%C3%A9decin-traitant-dmp-ou-passer-en-mode-dacc%C3%A8s&ndash;bris-de-glace&ndash;depuis-version-20</a></p>
+<h4 id="pre_td03_bdg">PRE_TD03_BDG</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé un accès BDG en cas d&rsquo;urgence.</p>
+</blockquote>
+<p>Mise en œuvre du bris de glace dans la DevBox-santé : <a href="/dmp/howtos/transactions/#gestion-du-bris-de-glace">/dmp/howtos/transactions/#gestion-du-bris-de-glace</a></p>
+<h4 id="pre_td04">PRE_TD04</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé l&rsquo;affichage de la liste des patients ayant une autorisation pour l&rsquo;acteur authentifié.</p>
+</blockquote>
+<p>Mise en œuvre de la td0.4 : <a href="http://localhost:1313/dmp/howtos/transactions/#td04--lister-les-dmp-autoris%C3%A9s-depuis-version-50">http://localhost:1313/dmp/howtos/transactions/#td04&ndash;lister-les-dmp-autoris%C3%A9s-depuis-version-50</a></p>
 <h3 id="authentification-indirecte">Authentification indirecte</h3>
 <h4 id="pre_ind">PRE_IND</h4>
 <blockquote>
@@ -198,32 +226,27 @@ Ce document est disponible sur l&rsquo;espace industriel de Sesam-Vitale : <a hr
 </blockquote>
 <p>Il faut valider une connexion en spécifiant les différents certificats utilisés. Plus d&rsquo;information, sur la configuration des certificats : <a href="/dmp/configuration/#authentification-indirecte">/dmp/configuration/#authentification-indirecte</a></p>
 <p>Ces certificats auront été obtenus préalablement auprès de l&rsquo;ANS. Pour plus d&rsquo;informations, sur l&rsquo;obtention des certificats : <a href="/dmp/howtos/gestioncertificat/">/dmp/howtos/gestioncertificat/</a></p>
-<p>Pour une preuve : Fournir une trame soap d&rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :<a href="/dmp/howtos/logs/">/dmp/howtos/logs/</a></p>
 <h3 id="profil-alimentation">Profil Alimentation</h3>
 <h4 id="pre_alim_niv1">PRE_ALIM_NIV1</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé le dépôt d&rsquo; un document CDA-R2 de niveau 1 sur le DMP d&rsquo;un patient.</p>
 </blockquote>
 <p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/#td21--alimenter-le-dmp-dun-patient-avec-des-documents-depuis-version-10">/dmp/howtos/transactions/#td21&ndash;alimenter-le-dmp-dun-patient-avec-des-documents-depuis-version-10</a></p>
-<p>Pour une preuve : Fournir les trames soaps d&rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :<a href="/dmp/howtos/logs/">/dmp/howtos/logs/</a></p>
 <h4 id="pre_alim_rech">PRE_ALIM_RECH</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé la recherche de l&rsquo;identifiant technique d&rsquo;un document à partir de son identifiant local (fonctionnalité TD 3.1b) afin de remplacer ou dépublier un document.</p>
 </blockquote>
 <p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/#td31b--rechercher-lidentifiant-technique-dun-document-depuis-version-30">/dmp/howtos/transactions/#td31b&ndash;rechercher-lidentifiant-technique-dun-document-depuis-version-30</a></p>
-<p>Pour une preuve : Fournir les trames soaps d&rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :<a href="/dmp/howtos/logs/">/dmp/howtos/logs/</a></p>
 <h4 id="pre_alim_rplc">PRE_ALIM_RPLC</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé le remplacement d&rsquo;un document déjà présent sur le DMP d&rsquo;un patient (TD 2.1b).</p>
 </blockquote>
 <p>Il faut mettre en œuvre la transaction d&rsquo;alimentation avec les informations des identifiants des documents remplacés. Plus d&rsquo;informations : <a href="/dmp/howtos/transactions/#remplacement">/dmp/howtos/transactions/#remplacement</a></p>
-<p>Pour une preuve : Fournir les trames soaps d&rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :<a href="/dmp/howtos/logs/">/dmp/howtos/logs/</a></p>
 <h4 id="pre_alim_suppr">PRE_ALIM_SUPPR</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé la dépublication (suppression) d&rsquo;un Document (Statut Deleted) à partir de la fonctionnalité TD 3.3c.</p>
 </blockquote>
 <p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/#td33c--supprimer-un-document-depuis-version-10">/dmp/howtos/transactions/#td33c&ndash;supprimer-un-document-depuis-version-10</a></p>
-<p>Pour une preuve : Fournir les trames soaps d&rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :<a href="/dmp/howtos/logs/">/dmp/howtos/logs/</a></p>
 <h4 id="pre_alim_vac">PRE_ALIM_VAC</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé le dépôt, la modification, la validation et la suppression d&rsquo;un document Note de Vaccination (NOTE-VAC).</p>
@@ -234,7 +257,6 @@ Ce document est disponible sur l&rsquo;espace industriel de Sesam-Vitale : <a hr
 La prise en charge de cette évolution est obligatoire pour les LPS destinés aux médecins (médecine générale et pédiatrie), aux pharmaciens, aux sages-femmes, aux infirmiers ou aux infirmiers psychiatriques (code profession 10, 21, 50, 60 ou 69) en secteur libéral (y compris centres de santé) .</p>
 </blockquote>
 <p>Il faut mettre en œuvre la transaction d&rsquo;alimentation mais d&rsquo;un document <code>NoteVaccination</code>, plus d&rsquo;informations : <a href="/dmp/cda/vaccination/">/dmp/cda/vaccination/</a></p>
-<p>Pour une preuve : Fournir les trames soaps d&rsquo;envoi depuis les logs, plus de renseignements pour récupérer les trames :<a href="/dmp/howtos/logs/">/dmp/howtos/logs/</a></p>
 <h4 id="pre_alim_niv3">PRE_ALIM_NIV3</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé le dépôt d&rsquo;un document CDA-R2 de niveau 3 sur le DMP d&rsquo;un patient.</p>
@@ -243,7 +265,32 @@ La prise en charge de cette évolution est obligatoire pour les LPS destinés au
 <p>Plus d&rsquo;informations sur les différents volets spécifiés par l&rsquo;ANS : <a href="https://esante.gouv.fr/offres-services/ci-sis/espace-publication">https://esante.gouv.fr/offres-services/ci-sis/espace-publication</a></p>
 <p>Plus d&rsquo;informations sur les différents volets (documents CDA-R2 N3 supportés) par la DevBox-santé, nativement : <a href="/dmp/cda">/dmp/cda</a></p>
 <h3 id="profil-consultation">Profil Consultation</h3>
-<p>TODO</p>
+<h4 id="pre_cons_rech">PRE_CONS_RECH</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé la recherche d&rsquo;un document dans le DMP d&rsquo;un patient avec les critères AvailabilityStatus et/ou TypeCode.</p>
+</blockquote>
+<p>Il faut réaliser cette recherche en utilisant la transaction de recherche : <a href="/dmp/howtos/transactions/#td31--depuis-version-32">/dmp/howtos/transactions/#td31&ndash;depuis-version-32</a></p>
+<h4 id="pre_cons_sub">PRE_CONS_SUB</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé la recherche d&rsquo;un document dans le DMP d&rsquo;un patient avec comme critère la date de soumission.</p>
+</blockquote>
+<p>Il faut réaliser cette recherche en utilisant la transaction de recherche : <a href="/dmp/howtos/transactions/#td31--depuis-version-32">/dmp/howtos/transactions/#td31&ndash;depuis-version-32</a></p>
+<h4 id="pre_cons_cons">PRE_CONS_CONS</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé la consultation d&rsquo;un document présent dans le DMP d&rsquo;un patient et l&rsquo;affichage des métadonnées d&rsquo;entête CDA.</p>
+</blockquote>
+<h4 id="pre_cons_msqps">PRE_CONS_MSQPS</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé le masquage/démasquage d&rsquo;un Document aux PS (confidentialityCode) à partir de la fonctionnalité TD 3.3a.</p>
+</blockquote>
+<h4 id="pre_cons_inv">PRE_CONS_INV</h4>
+<blockquote>
+<p>L&rsquo;éditeur a rendu visible un Document au patient/représentant légaux (confidentialityCode) à partir de la fonctionnalité TD 3.3b.</p>
+</blockquote>
+<h4 id="pre_cons_arch">PRE_CONS_ARCH</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé l&rsquo;archivage/désarchivage d&rsquo;un document à partir de la fonctionnalité TD 3.3d.</p>
+</blockquote>
 
 </div>
 </div>

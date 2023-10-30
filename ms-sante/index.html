@@ -162,14 +162,16 @@ if (!doNotTrack) {
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#lapi-public">L&rsquo;API public</a></li>
+    <li><a href="#utilisation">Utilisation</a></li>
+    <li><a href="#pré-requis">Pré-requis</a></li>
+    <li><a href="#authentification">Authentification</a>
       <ul>
-        <li><a href="#lapi-public">L&rsquo;API public</a></li>
-        <li><a href="#utilisation">Utilisation</a></li>
-        <li><a href="#pré-requis">Pré-requis</a></li>
-        <li><a href="#authentification">Authentification</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#documentation">Documentation</a></li>
+        <li><a href="#opérateur-compatible-référentiel-mssante-2">Opérateur compatible référentiel MSSante #2</a></li>
+        <li><a href="#mailiz">Mailiz</a></li>
+        <li><a href="#apicrypt">Apicrypt</a></li>
+        <li><a href="#exécution">Exécution</a></li>
+        <li><a href="#documentation-officielle">Documentation officielle</a></li>
         <li><a href="#tests">Tests</a></li>
       </ul>
     </li>
@@ -245,23 +247,45 @@ integrateur -d-&gt; mss : HTTP REST
 mss .d.&gt;  operateur : SMTP / IMAP
 mss -d-&gt; mailiz : HTTP / SOAP
 mss -d-&gt; apicrypt : socket
-</code></pre><h3 id="lapi-public">L&rsquo;API public</h3>
+</code></pre><h2 id="lapi-public">L&rsquo;API public</h2>
 <p>l&rsquo;API est hébergée sur bitbucket : <a href="https://bitbucket.com/devbox-sante/ms-sante-api">https://bitbucket.com/devbox-sante/ms-sante-api</a></p>
 <p>Cette API définie les services disponibles et le modèle d&rsquo;objet.</p>
-<h3 id="utilisation">Utilisation</h3>
+<h2 id="utilisation">Utilisation</h2>
 <p>Deux modes d&rsquo;intégration sont proposées :</p>
 <ul>
 <li>Embarqué : Intégration directe de l&rsquo;API avec son implémentation dans un projet java 11 spring-boot.</li>
 <li>REST : Déploiement d&rsquo;une application spring-boot (jar exécutable intégrant un serveur Tomcat) offrant ces mêmes services en REST.</li>
 </ul>
-<h3 id="pré-requis">Pré-requis</h3>
+<h2 id="pré-requis">Pré-requis</h2>
 <p>Pour pouvoir utiliser le connecteur MS-Santé, il faut au préalable créer un compte selon l&rsquo;opérateur choisi:</p>
 <ul>
-<li>mailiz:  <a href="https://mailiz.mssante.fr/">https://mailiz.mssante.fr/</a></li>
+<li>Opérateur compatible avec le nouveau <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">référentiel socle MSSanté #2</a></li>
+<li>Mailiz avec les API V1 soap :  <a href="https://mailiz.mssante.fr/">https://mailiz.mssante.fr/</a></li>
 <li>Apicrypt (en cours de développement): <a href="https://www.apicrypt.org/inscription">https://www.apicrypt.org/inscription</a></li>
 </ul>
-<h3 id="authentification">Authentification</h3>
-<h4 id="mailiz">Mailiz</h4>
+<h2 id="authentification">Authentification</h2>
+<h3 id="opérateur-compatible-référentiel-mssante-2">Opérateur compatible référentiel MSSante #2</h3>
+<h4 id="bal-organisationnelle-via-certificat">BAL organisationnelle via certificat</h4>
+<p>Il faut configurer la devboxsante de telle manière :</p>
+<ul>
+<li>à fournir un certificat p12 provenant de l&rsquo;IGC Santé</li>
+<li>à configurer un serveur SMTP</li>
+<li>à configurer un serveur IMAP</li>
+</ul>
+<p>Exemple pour authentification espace de test medimail du MIPIH :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">p12</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">tls.p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">asip-p12-EL-TEST-ORG-AUTH_CLI-20230717-152710.p12</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">MOT_DE_PASSE</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">smtp</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">host</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">authcli.medimail-lps.mipih.fr</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">587</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">imap</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">host</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">authcli.medimail-lps.mipih.fr</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">143</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h3 id="mailiz">Mailiz</h3>
 <p>2 modes d&rsquo;authentification sont disponibles:</p>
 <ul>
 <li>par carte CPS (nécéssite l&rsquo;installation du module cps de DevBox-Santé) :</li>
@@ -282,75 +306,16 @@ mss -d-&gt; apicrypt : socket
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">authentificationWithOtpStep2</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">otp</span><span style="color:#000;font-weight:bold">)</span> 
 </span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&#39;utilisateur
-</span></span></span></code></pre></div><h4 id="apicrypt">Apicrypt</h4>
+</span></span></span></code></pre></div><h3 id="apicrypt">Apicrypt</h3>
 <p>un mode d&rsquo;authentification avec le compagnon :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#000">authentificationWithApiCrypt</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">username</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">password</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">)</span>
-</span></span></code></pre></div><h3 id="services">Services</h3>
-<p>Les services suivants sont disponibles en mode embarqué,
-ils ont tous leur équivalent en REST avec l&rsquo;email passé en paramètre.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl  GET https://mss-demo.devbox-sante.fr/mssante/folders?email<span style="color:#ce5c00;font-weight:bold">=</span>xxxxxx@medecin.formation.mssante.fr
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Récupères les adresses mail du PS
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">String</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">getEmails</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Récupération des dossiers (en cours, brouillon, ...)
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">Folder</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">getFolders</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">parentFolderId</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Création d&#39;un dossier
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">Folder</span> <span style="color:#000">createFolder</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">String</span> <span style="color:#000">folderName</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">parentFolderId</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Renommage d&#39;un dossier
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">renameFolder</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">folderId</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">String</span> <span style="color:#000">newName</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Déplacement d&#39;un dossier
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">moveFolder</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">folderId</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">destinationFolderId</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Suppression d&#39;un dossier
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">deleteFolder</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">folderId</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Mise en corbeille d&#39;un dossier
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">moveFolderToTrash</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">folderId</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Suppression des messages d&#39;un dossier
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">cleanFolder</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">folderId</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Récupération des messages
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">Message</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">searchMessages</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">MessageSearchCriteria</span> <span style="color:#000">criteria</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Récupération des messages
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">Message</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">searchFullTextMessages</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">MessageSearchCriteriaFullText</span> <span style="color:#000">criteria</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Récupération d&#39;une pièce jointe
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">byte</span><span style="color:#ce5c00;font-weight:bold">[]</span> <span style="color:#000">getAttachment</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">messageId</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">part</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Récupération d&#39;une pièce jointe
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">String</span> <span style="color:#000">uploadAttachment</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">String</span> <span style="color:#000">mimeType</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">String</span> <span style="color:#000">filename</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">byte</span><span style="color:#ce5c00;font-weight:bold">[]</span> <span style="color:#000">file</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Récupération d&#39;une pièce jointe
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">MessageInfo</span> <span style="color:#000">saveDraft</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Message</span> <span style="color:#000">message</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Suppression d&#39;un message
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">deleteMessage</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">messageId</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Envoi d&#39;un message
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">MessageInfo</span> <span style="color:#000">sendMessage</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Message</span> <span style="color:#000">message</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Suppression d&#39;une pièce jointe
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">removeAttachment</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">messageId</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">part</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Mise à jour du statut de message
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">updateMessagesStatus</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">Integer</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">messageIds</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">MessageStatus</span> <span style="color:#000">status</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Déplacement de message
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">moveMessages</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">Integer</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">messageIds</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">Integer</span> <span style="color:#000">folderId</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Recherche d&#39;un professionnel
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">User</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">findUsers</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">UserCriteria</span> <span style="color:#000">criteria</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// Liste des codes d&#39;une nomenclature
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">Code</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">getNomenclature</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Nomenclatures</span> <span style="color:#000">nomenclature</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">throws</span> <span style="color:#000">MssException</span><span style="color:#ce5c00;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span></code></pre></div><h3 id="documentation">Documentation</h3>
+</span></span></code></pre></div><h3 id="exécution">Exécution</h3>
+<p>Vous pouvez essayer l&rsquo;API V2 avec une collection postman disponible ici :</p>
+<p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
+<h3 id="documentation-officielle">Documentation officielle</h3>
+<h4 id="nouveau-référentiel-socle-ms-sante-2">Nouveau référentiel socle MS-Sante #2</h4>
+<p>La nouvelle version v2 respecte le nouveau référentiel : <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2</a></p>
+<h4 id="ancien-référentiel-compatible-avec-mailiz">Ancien référentiel compatible avec Mailiz</h4>
 <p>La documentation officielle est disponible sur <a href="https://mailiz.mssante.fr/is/doc-technique">https://mailiz.mssante.fr/is/doc-technique</a></p>
 <p>Il est recommandé pour les logiciels souhaitant envoyer des pièces jointes de lire les document suivants:</p>
 <ul>

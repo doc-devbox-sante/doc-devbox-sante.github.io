@@ -81,7 +81,6 @@ Ce document est disponible sur l&amp;rsquo;espace industriel de Sesam-Vitale : &
 &lt;li&gt;CPE&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Il faut valider une connexion en spécifiant les différents certificats utilisés. Plus d&amp;rsquo;information, sur la configuration des certificats : &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/configuration/#authentification-directe&#34;&gt;/dmp/configuration/#authentification-directe&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Il faut réaliser un test par type de cartes CPx.&lt;/p&gt;
 &lt;p&gt;Pour obtenir les différents types cartes CPx de test  : &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howtos/gestioncertificat/#proc%C3%A9dure-administrative&#34;&gt;/dmp/howtos/gestioncertificat/#proc%C3%A9dure-administrative&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&#34;pre_td03&#34;&gt;PRE_TD03&lt;/h4&gt;

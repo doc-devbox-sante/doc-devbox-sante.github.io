@@ -32,10 +32,11 @@
 &lt;p&gt;&lt;img src=&#34;PDF_sign%C3%A9.png&#34; alt=&#34;PDF_signé&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Explications :&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Ici nous voyons que le document PDF a été signé par un professionnel de santé ayant pour RPPS &lt;code&gt;8997002296140&lt;/code&gt;, et qu&amp;rsquo;il a été émis par l&amp;rsquo;IGC-SANTE pour une authentification forte des personnes (de Test dans ce cas).&lt;/p&gt;
-&lt;p&gt;Ce sont ces mêmes mécanisme de signature qui sont mis en place dans le DMP. En effet, le DMP, comme tous les autres téléservices du Sesam-Vitale s&amp;rsquo;appuient sur cette même IGC-Santé pour réaliser les authentifications et les signatures des différents appels.&lt;/p&gt;
+&lt;p&gt;Ce sont ces mêmes mécanismes de signature qui sont mis en place dans le DMP. En effet, le DMP, comme tous les autres téléservices du Sesam-Vitale s&amp;rsquo;appuient sur cette même IGC-Santé pour réaliser les authentifications et les signatures des différents appels.&lt;/p&gt;
 &lt;p&gt;Pour générer, cette signature un seul appel rest du composant est nécessaire :&lt;/p&gt;
+&lt;h3 id=&#34;8ans-swagger&#34;&gt;8ans swagger&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;cps_signPDF_endpoint_swagger.png&#34; alt=&#34;Swagger&#34;&gt;&lt;/p&gt;
-&lt;p&gt;ou encore en CURL :&lt;/p&gt;
+&lt;h3 id=&#34;avec-curl-&#34;&gt;Avec curl :&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl -X &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;POST&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;http://localhost:9999/cps/signPdf&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  -H &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;accept: application/pdf&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
@@ -43,16 +44,33 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  -F &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;file=@1.pdf;type=application/pdf&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  -F &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;location=Bordeaux&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  -F &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;reason=Parce que&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ou encore en java :&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ou-encore-en-java-&#34;&gt;Ou encore en java :&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;PdfSignatureInfo&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;pdfSignatureInfo&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;PdfSignatureInfo&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;pdfSignatureInfo&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setLocation&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Léognan, FRANCE&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;pdfSignatureInfo&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setReason&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Parceque&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;PdfSigner&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;cps&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;sign&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;FileOutputStream&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;exemple.pdf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;),&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;pdfSignatureInfo&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;FileOutputStream&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;exemple-signe.pdf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)));&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;finalement-avec-loutil-de-démonstration&#34;&gt;Finalement avec l&amp;rsquo;outil de démonstration&lt;/h3&gt;
+&lt;p&gt;Sur l&amp;rsquo;environnement de démonstration vous pouvez tester le composant en situation :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Récupération du fichier PDF à signer :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;select_pdf.png&#34; alt=&#34;select pdf&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Saisie du code pin si aucune session CPS n&amp;rsquo;est ouverte (durée de la session 1 heure)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;cps_pin_asked.png&#34; alt=&#34;cps pin asked&#34;&gt;&lt;/p&gt;
+
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;À savoir, l&amp;rsquo;IGC-santé n&amp;rsquo;est pas reconnu par défaut dans &lt;a href=&#34;https://helpx.adobe.com/fr/acrobat/kb/approved-trust-list1.html&#34;&gt;les logiciels d&amp;rsquo;ADOBE&lt;/a&gt;, il faut donc la rajouter dans le magasin d&amp;rsquo;Acrobat. Pour plus, de renseignements vous pouvez consulter &lt;a href=&#34;https://doc.devbox-sante.fr/blog/2023/10/13/installer-ligc-sant%C3%A9-dans-acrobat-reader/&#34;&gt;l&amp;rsquo;article suivant&lt;/a&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;À savoir également, les visionneuses des navigateurs telles que celles de chrome ou firefox ne possèdent pas de panneau de signature. La signature n&amp;rsquo;est donc pas détectée dans ces visionneuses. Il faut utiliser Acrobat Reader.&lt;/p&gt;
 
 &lt;/div&gt;
 

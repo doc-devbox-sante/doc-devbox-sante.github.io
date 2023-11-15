@@ -151,7 +151,14 @@ if (!doNotTrack) {
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#comment-signer-un-fichier-pdf">Comment signer un fichier PDF</a></li>
+    <li><a href="#comment-signer-un-fichier-pdf">Comment signer un fichier PDF</a>
+      <ul>
+        <li><a href="#8ans-swagger">8ans swagger</a></li>
+        <li><a href="#avec-curl-">Avec curl :</a></li>
+        <li><a href="#ou-encore-en-java-">Ou encore en java :</a></li>
+        <li><a href="#finalement-avec-loutil-de-démonstration">Finalement avec l&rsquo;outil de démonstration</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -223,10 +230,11 @@ if (!doNotTrack) {
 <p><img src="PDF_sign%C3%A9.png" alt="PDF_signé"></p>
 <p><strong>Explications :</strong></p>
 <p>Ici nous voyons que le document PDF a été signé par un professionnel de santé ayant pour RPPS <code>8997002296140</code>, et qu&rsquo;il a été émis par l&rsquo;IGC-SANTE pour une authentification forte des personnes (de Test dans ce cas).</p>
-<p>Ce sont ces mêmes mécanisme de signature qui sont mis en place dans le DMP. En effet, le DMP, comme tous les autres téléservices du Sesam-Vitale s&rsquo;appuient sur cette même IGC-Santé pour réaliser les authentifications et les signatures des différents appels.</p>
+<p>Ce sont ces mêmes mécanismes de signature qui sont mis en place dans le DMP. En effet, le DMP, comme tous les autres téléservices du Sesam-Vitale s&rsquo;appuient sur cette même IGC-Santé pour réaliser les authentifications et les signatures des différents appels.</p>
 <p>Pour générer, cette signature un seul appel rest du composant est nécessaire :</p>
+<h3 id="8ans-swagger">8ans swagger</h3>
 <p><img src="cps_signPDF_endpoint_swagger.png" alt="Swagger"></p>
-<p>ou encore en CURL :</p>
+<h3 id="avec-curl-">Avec curl :</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X <span style="color:#4e9a06">&#39;POST&#39;</span> <span style="color:#4e9a06">\
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>  <span style="color:#4e9a06">&#39;http://localhost:9999/cps/signPdf&#39;</span> <span style="color:#4e9a06">\
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>  -H <span style="color:#4e9a06">&#39;accept: application/pdf&#39;</span> <span style="color:#4e9a06">\
@@ -234,16 +242,33 @@ if (!doNotTrack) {
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>  -F <span style="color:#4e9a06">&#39;file=@1.pdf;type=application/pdf&#39;</span> <span style="color:#4e9a06">\
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>  -F <span style="color:#4e9a06">&#39;location=Bordeaux&#39;</span> <span style="color:#4e9a06">\
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>  -F <span style="color:#4e9a06">&#39;reason=Parce que&#39;</span>
-</span></span></code></pre></div><p>Ou encore en java :</p>
+</span></span></code></pre></div><h3 id="ou-encore-en-java-">Ou encore en java :</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">PdfSignatureInfo</span> <span style="color:#000">pdfSignatureInfo</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">PdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">();</span>
 </span></span><span style="display:flex;"><span><span style="color:#000">pdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setLocation</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Léognan, FRANCE&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 </span></span><span style="display:flex;"><span><span style="color:#000">pdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setReason</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Parceque&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">PdfSigner</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">cps</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">sign</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">FileOutputStream</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;exemple.pdf&#34;</span><span style="color:#ce5c00;font-weight:bold">),</span> <span style="color:#000">pdfSignatureInfo</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">FileOutputStream</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;exemple-signe.pdf&#34;</span><span style="color:#ce5c00;font-weight:bold">)));</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><h3 id="finalement-avec-loutil-de-démonstration">Finalement avec l&rsquo;outil de démonstration</h3>
+<p>Sur l&rsquo;environnement de démonstration vous pouvez tester le composant en situation :</p>
+<ul>
+<li>Récupération du fichier PDF à signer :</li>
+</ul>
+<p><img src="select_pdf.png" alt="select pdf"></p>
+<ul>
+<li>Saisie du code pin si aucune session CPS n&rsquo;est ouverte (durée de la session 1 heure)</li>
+</ul>
+<p><img src="cps_pin_asked.png" alt="cps pin asked"></p>
+
 
 <div class="pageinfo pageinfo-primary">
 <p>À savoir, l&rsquo;IGC-santé n&rsquo;est pas reconnu par défaut dans <a href="https://helpx.adobe.com/fr/acrobat/kb/approved-trust-list1.html">les logiciels d&rsquo;ADOBE</a>, il faut donc la rajouter dans le magasin d&rsquo;Acrobat. Pour plus, de renseignements vous pouvez consulter <a href="/blog/2023/10/13/installer-ligc-sant%C3%A9-dans-acrobat-reader/">l&rsquo;article suivant</a></p>
+
+</div>
+
+
+
+<div class="pageinfo pageinfo-primary">
+<p>À savoir également, les visionneuses des navigateurs telles que celles de chrome ou firefox ne possèdent pas de panneau de signature. La signature n&rsquo;est donc pas détectée dans ces visionneuses. Il faut utiliser Acrobat Reader.</p>
 
 </div>
 

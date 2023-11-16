@@ -169,7 +169,9 @@ int1 --&gt; eureka
 devbox1 -- usb1 : mapping port USB
 int2 --&gt; eureka 
 devbox2 -- usb2 : mapping port USB
-</code></pre><p>Ainsi, il suffit à l&rsquo;application intégrateur de faire un appel à eureka pour connaître le numéro de port http d&rsquo;écoute qui lui est spécifique.</p>
+</code></pre><p>Ce service Windows est lancé au démarrage de serveur RDP et attend que les devbox-santé à leur démarrage s&rsquo;enregistrent auprès de lui:</p>
+<p><img src="eureka-service.png" alt="eureka service"></p>
+<p>Ainsi, il suffit à l&rsquo;application intégrateur de faire un appel à eureka pour connaître le numéro de port http d&rsquo;écoute qui lui est spécifique.</p>
 <h2 id="diagrammes-de-séquence">Diagrammes de séquence</h2>
 <p>Du point de vue de l&rsquo;intégrateur</p>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml

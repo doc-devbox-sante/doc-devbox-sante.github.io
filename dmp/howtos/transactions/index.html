@@ -27,13 +27,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://doc.devbox-sante.fr/dmp/howtos/transactions/" /><meta property="article:section" content="dmp" />
 
-<meta property="article:modified_time" content="2023-10-04T16:34:55+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2023-11-17T13:50:48+01:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Transactions supportées">
 <meta itemprop="description" content="Contient un exemple d&#39;utilisation de l&#39;API java et curl des différentes transactions supportées.
 ">
-<meta itemprop="dateModified" content="2023-10-04T16:34:55+02:00" />
-<meta itemprop="wordCount" content="2247">
+<meta itemprop="dateModified" content="2023-11-17T13:50:48+01:00" />
+<meta itemprop="wordCount" content="2250">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Transactions supportées"/>
 <meta name="twitter:description" content="Contient un exemple d&#39;utilisation de l&#39;API java et curl des différentes transactions supportées.
@@ -797,6 +797,7 @@ Le LPS peut ensuite supprimer (DMP_3.3c), archiver (DMP_3.3d) ou remplacer un do
 </span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// ajout des informations de remplacement dans le document qui remplace
 </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">documentRemplace</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setReplacementOf</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">td31bresponse</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getDocumentUuid</span><span style="color:#ce5c00;font-weight:bold">());</span>
 </span></span><span style="display:flex;"><span><span style="color:#000">documentRemplace</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setReplacementOfUniqueId</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">documentE</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getUniqueId</span><span style="color:#ce5c00;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">documentRemplace</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setVersionNumber</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">documentE</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getVersionNumber</span><span style="color:#ce5c00;font-weight:bold">()+</span><span style="color:#000">1</span><span style="color:#ce5c00;font-weight:bold">);</span>
 </span></span><span style="display:flex;"><span><span style="color:#000">submissionRemplace</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setTitle</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;remplacement du document E&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
 </span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// envoie de la soummission
 </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td21SubmitDocuments</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD21Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">submissionRemplaceE</span><span style="color:#ce5c00;font-weight:bold">));</span>
@@ -813,6 +814,7 @@ Le LPS peut ensuite supprimer (DMP_3.3c), archiver (DMP_3.3d) ou remplacer un do
 </span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;documents&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#a40000">...</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#204a87;font-weight:bold">&#34;versionNumber&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#204a87;font-weight:bold">&#34;replacementOf&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ff38b3da-3ded-4b90-b30e-744a4dc907d8&#34;</span><span style="color:#000;font-weight:bold">,</span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#204a87;font-weight:bold">&#34;replacementOfUniqueId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.287.1.1669713300686.1.16709290066422&#34;</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#000;font-weight:bold">}</span>

@@ -63,7 +63,7 @@ devbox1 -- cps
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;service.url&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;http://192.168.1.26:9998&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;run&#34;&gt;Run&lt;/h3&gt;
 &lt;p&gt;Prerequisite, the eureka service is running on the EurekaServer machine.&lt;/p&gt;
-&lt;p&gt;##ddd## Case1 : launch the DevBox-Sante with windows user login&lt;/p&gt;
+&lt;h4 id=&#34;case1--launch-the-devbox-sante-with-windows-user-login&#34;&gt;Case1 : launch the DevBox-Sante with windows user login&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;If there is any DevBoxSante running before stop it
 &lt;img src=&#34;StopDevBoxSante.png&#34; alt=&#34;Stop devbox&#34;&gt;&lt;/li&gt;

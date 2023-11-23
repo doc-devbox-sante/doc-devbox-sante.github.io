@@ -127,7 +127,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-d1c499395de66a0d7bda72933f51aaae">Workstation installation</a></li>
+<li>1: <a href="#pg-514e33686270f651fe023cf8df08be26">Howtos</a></li>
 
 
     
@@ -142,7 +142,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1.1: <a href="#pg-2115c7eebf8ebd2c41656f4afe87a5a9">Eureka Demo</a></li>
+<li>1.1: <a href="#pg-42868eb4e012baad108f7ae91289fe77">Eureka Demo</a></li>
 
 
     
@@ -193,8 +193,8 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-d1c499395de66a0d7bda72933f51aaae">1 - Workstation installation</h1>
-    <div class="lead">The &ldquo;Installer&rdquo; : multi-OS installation wizard</div>
+	<h1 id="pg-514e33686270f651fe023cf8df08be26">1 - Howtos</h1>
+    <div class="lead">Different howtos about the installation process</div>
 	
 </div>
 
@@ -218,7 +218,7 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-2115c7eebf8ebd2c41656f4afe87a5a9">1.1 - Eureka Demo</h1>
+	<h1 id="pg-42868eb4e012baad108f7ae91289fe77">1.1 - Eureka Demo</h1>
     <div class="lead">Use the eureka service to register the devbox-sante launched by users</div>
 	<h2 id="with-two-workstations">With two workstations</h2>
 <p>A first use case eurekaservice as a directory server for workstations</p>
@@ -237,8 +237,8 @@ devbox1 -l-&gt; eureka : register
 devbox1 -- cps
 </code></pre><h3 id="install-eurekaserver">Install EurekaServer</h3>
 <ul>
-<li>install the eureka servsice on a server : <a href="https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe">https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe</a></li>
-<li>during the installation pick a port number for Eureak : 9998 for example</li>
+<li>install the eureka servsice on a machine : <a href="https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe">https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe</a></li>
+<li>during the installation pick a port number for Eurekas : 9998 for example</li>
 <li>after the installation stop all devbox-sante running (except the eureka service)</li>
 <li>check that eureka is running on localhost with the installation port: <a href="http://localhost:9998/users">http://localhost:9998/users</a> and no process is running</li>
 <li>get its ip and check access from another workstation : <a href="http://192.168.1.26:9998/users">http://192.168.1.26:9998/users</a></li>
@@ -250,17 +250,18 @@ devbox1 -- cps
 <img src="disableEureka.png" alt="disable eureka"></li>
 <li>configure the devbox-sante with the following entries (make sure that the devbox-sante point to the eureka service) :</li>
 </ul>
-<pre tabindex="0"><code>spring:
-  profiles.active:
-  ...
-  - &#34;EUREKA&#34;
-
-devbox-sante:
-...
-  eureka:
-    service.url: &#34;http://192.168.1.26:9998&#34;
-</code></pre><h3 id="run">Run</h3>
-<h4 id="case1--launch-the-devbox-sante-with-windows-user-login">Case1 : launch the DevBox-Sante with windows user login</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">spring</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">profiles.active</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">...</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#4e9a06">&#34;EUREKA&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">...</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">eureka</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">service.url</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;http://192.168.1.26:9998&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h3 id="run">Run</h3>
+<p>Prerequisite, the eureka service is running on the EurekaServer machine.</p>
+<p>##ddd## Case1 : launch the DevBox-Sante with windows user login</p>
 <ul>
 <li>If there is any DevBoxSante running before stop it
 <img src="StopDevBoxSante.png" alt="Stop devbox"></li>
@@ -280,9 +281,27 @@ devbox-sante:
 <li>from the browser launch the devbox-sante with providing that url : <code>devboxsante-client-dev://config?server.port=10101&amp;sessionID=webUser1</code></li>
 </ul>
 <p><img src="eureka-webusers.png" alt="eureka web users"></p>
-<p>Then, in every workstation a DevBox-Sante should be launched with a different user sessionID.</p>
+<p>Then, in every workstation a DevBox-Sante should be launched with a different user sessionID. Then you can do the following mapping :</p>
+<p>One user sessionId = One IP:PORT = one CPS card reader</p>
 <h2 id="on-citrix-or-rdp-server">On Citrix or RDP Server</h2>
 <p>On Citrix or RDP Server everything is launched on the same host, so everything is available on localhost, but with different http ports.</p>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
+
+node &#34;Serveur RDP&#34; {
+    [EurekaService:9998] as eureka
+  [DevBox-Santé1:10001] as devbox1 DEVBOX_COLOR
+  [DevBox-Santé2:10002] as devbox2 DEVBOX_COLOR
+}
+
+node &#34;Workstation user 1&#34; {
+   [USB ports of CPS card reader 1] as usb1
+}
+node &#34;Workstation user 2&#34; {
+   [USB port of CPS card reader 2] as usb2
+}
+devbox1 -- usb1 : map USB pors ts
+devbox2 -- usb2 : map USB ports
+</code></pre><p>To share usb ports on rdp : <a href="https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop">https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop</a></p>
 
 </div>
 

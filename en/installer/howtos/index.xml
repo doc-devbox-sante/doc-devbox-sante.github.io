@@ -39,7 +39,7 @@ devbox1 -l-&amp;gt; eureka : register
 devbox1 -- cps
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;install-eurekaserver&#34;&gt;Install EurekaServer&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;install the eureka servsice on a machine : &lt;a href=&#34;https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe&#34;&gt;https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;install the eureka service on a machine : &lt;a href=&#34;https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe&#34;&gt;https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;during the installation pick a port number for Eurekas : 9998 for example&lt;/li&gt;
 &lt;li&gt;after the installation stop all devbox-sante running (except the eureka service)&lt;/li&gt;
 &lt;li&gt;check that eureka is running on localhost with the installation port: &lt;a href=&#34;http://localhost:9998/users&#34;&gt;http://localhost:9998/users&lt;/a&gt; and no process is running&lt;/li&gt;
@@ -48,7 +48,7 @@ devbox1 -- cps
 &lt;p&gt;&lt;img src=&#34;eureka-users.png&#34; alt=&#34;eureka users&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;install-workstation-with-cps&#34;&gt;Install Workstation with CPS&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;install on the workstation with the CPS card reader, the devbox-sante with one of the installer. If you use the installer with Eureka disable the service :
+&lt;li&gt;install on the workstation with the CPS card reader, the devbox-sante with one of the installer, preferably the one without eureka. If you use the installer with Eureka disable the service :
 &lt;img src=&#34;disableEureka.png&#34; alt=&#34;disable eureka&#34;&gt;&lt;/li&gt;
 &lt;li&gt;configure the devbox-sante with the following entries (make sure that the devbox-sante point to the eureka service) :&lt;/li&gt;
 &lt;/ul&gt;

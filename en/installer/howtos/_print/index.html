@@ -188,7 +188,7 @@ devbox1 -l-&gt; eureka : register
 devbox1 -- cps
 </code></pre><h3 id="install-eurekaserver">Install EurekaServer</h3>
 <ul>
-<li>install the eureka servsice on a machine : <a href="https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe">https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe</a></li>
+<li>install the eureka service on a machine : <a href="https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe">https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe</a></li>
 <li>during the installation pick a port number for Eurekas : 9998 for example</li>
 <li>after the installation stop all devbox-sante running (except the eureka service)</li>
 <li>check that eureka is running on localhost with the installation port: <a href="http://localhost:9998/users">http://localhost:9998/users</a> and no process is running</li>
@@ -197,7 +197,7 @@ devbox1 -- cps
 <p><img src="eureka-users.png" alt="eureka users"></p>
 <h3 id="install-workstation-with-cps">Install Workstation with CPS</h3>
 <ul>
-<li>install on the workstation with the CPS card reader, the devbox-sante with one of the installer. If you use the installer with Eureka disable the service :
+<li>install on the workstation with the CPS card reader, the devbox-sante with one of the installer, preferably the one without eureka. If you use the installer with Eureka disable the service :
 <img src="disableEureka.png" alt="disable eureka"></li>
 <li>configure the devbox-sante with the following entries (make sure that the devbox-sante point to the eureka service) :</li>
 </ul>

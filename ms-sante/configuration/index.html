@@ -4,8 +4,8 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.104.2" />
-<link rel="alternate" type="text/html" href="https://doc.devbox-sante.fr/ms-sante/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://doc.devbox-sante.fr/ms-sante/index.xml">
+<link rel="alternate" type="text/html" href="https://doc.devbox-sante.fr/ms-sante/configuration/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://doc.devbox-sante.fr/ms-sante/configuration/index.xml">
 <meta name="robots" content="index, follow">
 
 
@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>DevBox-Santé MSS | DevBox-Santé</title>
-<meta name="description" content="Intégrer les différentes Messageries Sécurisées de Santé
+<title>Configuration selon les opérateurs | DevBox-Santé</title>
+<meta name="description" content="Configuration selon les opérateurs
 ">
-<meta property="og:title" content="DevBox-Santé MSS" />
-<meta property="og:description" content="Intégrer les différentes Messageries Sécurisées de Santé
+<meta property="og:title" content="Configuration selon les opérateurs" />
+<meta property="og:description" content="Configuration selon les opérateurs
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://doc.devbox-sante.fr/ms-sante/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="https://doc.devbox-sante.fr/ms-sante/configuration/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="DevBox-Santé MSS">
-<meta itemprop="description" content="Intégrer les différentes Messageries Sécurisées de Santé
+<meta itemprop="name" content="Configuration selon les opérateurs">
+<meta itemprop="description" content="Configuration selon les opérateurs
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="DevBox-Santé MSS"/>
-<meta name="twitter:description" content="Intégrer les différentes Messageries Sécurisées de Santé
+<meta name="twitter:title" content="Configuration selon les opérateurs"/>
+<meta name="twitter:description" content="Configuration selon les opérateurs
 "/>
 
 
@@ -135,11 +135,11 @@ if (!doNotTrack) {
     </div>
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ms-sante-li">
-  <a href="/ms-sante/" title="DevBox-Santé MSS" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-ms-sante"><span class="td-sidebar-nav-active-item">MSS</span></a>
+  <a href="/ms-sante/" title="DevBox-Santé MSS" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-ms-sante"><span class="">MSS</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ms-santeconfiguration-li">
-  <input type="checkbox" id="m-ms-santeconfiguration-check"/>
-  <label for="m-ms-santeconfiguration-check"><a href="/ms-sante/configuration/" title="Configuration selon les opérateurs" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santeconfiguration"><span class="">Configuration</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ms-santeconfiguration-li">
+  <input type="checkbox" id="m-ms-santeconfiguration-check" checked/>
+  <label for="m-ms-santeconfiguration-check"><a href="/ms-sante/configuration/" title="Configuration selon les opérateurs" class="align-left pl-0  active td-sidebar-link td-sidebar-link__section" id="m-ms-santeconfiguration"><span class="td-sidebar-nav-active-item">Configuration</span></a></label>
   
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santeconfigurationreferentiel2-li">
@@ -197,20 +197,16 @@ if (!doNotTrack) {
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a id="print" href="https://doc.devbox-sante.fr/ms-sante/_print/"><i class="fa-solid fa-print fa-fw"></i> Imprimer la section entière</a>
+<a id="print" href="https://doc.devbox-sante.fr/ms-sante/configuration/_print/"><i class="fa-solid fa-print fa-fw"></i> Imprimer la section entière</a>
 
 </div>
 
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#lapi-public">L&rsquo;API public</a></li>
-    <li><a href="#utilisation">Utilisation</a></li>
-    <li><a href="#pré-requis">Pré-requis</a>
+    <li><a href="#configuration-commune">configuration commune</a>
       <ul>
-        <li><a href="#exécution">Exécution</a></li>
-        <li><a href="#documentation-officielle">Documentation officielle</a></li>
-        <li><a href="#tests">Tests</a></li>
+        <li><a href="#annuaire">Annuaire</a></li>
       </ul>
     </li>
   </ul>
@@ -242,17 +238,20 @@ if (!doNotTrack) {
             
   
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs td-breadcrumbs__single">
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="https://doc.devbox-sante.fr/ms-sante/">MSS</a>
+  </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="https://doc.devbox-sante.fr/ms-sante/" aria-disabled="true" class="btn-link disabled">MSS</a>
+    <a href="https://doc.devbox-sante.fr/ms-sante/configuration/" aria-disabled="true" class="btn-link disabled">Configuration</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>DevBox-Santé MSS</h1>
-  <div class="lead">Intégrer les différentes Messageries Sécurisées de Santé</div>
+	<h1>Configuration selon les opérateurs</h1>
+  <div class="lead">Configuration selon les opérateurs</div>
 	<header class="article-meta">
 		
 		
@@ -268,59 +267,21 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<p>La Devbox-Santé MSS est une API Java ou une facade REST permettant d&rsquo;accéder et de respecter les différents référentiels MSSanté de manière transparente.</p>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
-
-[Application Intégrateur] as integrateur
-
-package &#34;DevBox-Santé Proxy REST&#34; as devbox DEVBOX_COLOR {
-        [DevBox-sante MSSanté] as mss MSS_COLOR
-}
-
-cloud &#34;**Opérateur MSSanté Nouveau Reférentiel **&#34; as operateur
-cloud &#34;**Mailiz**&#34; as mailiz
-cloud &#34;Apicrypt v2&#34; as apicrypt
-
-integrateur -d-&gt; mss : HTTP REST
-mss .d.&gt;  operateur : SMTP / IMAP
-mss -d-&gt; mailiz : HTTP / SOAP
-mss -d-&gt; apicrypt : socket
-</code></pre><h2 id="lapi-public">L&rsquo;API public</h2>
-<p>l&rsquo;API est hébergée sur bitbucket : <a href="https://bitbucket.com/devbox-sante/ms-sante-api">https://bitbucket.com/devbox-sante/ms-sante-api</a></p>
-<p>Cette API définie les services disponibles et le modèle d&rsquo;objet.</p>
-<h2 id="utilisation">Utilisation</h2>
-<p>Deux modes d&rsquo;intégration sont proposées :</p>
-<ul>
-<li>Embarqué : Intégration directe de l&rsquo;API avec son implémentation dans un projet java 11 spring-boot.</li>
-<li>REST : Déploiement d&rsquo;une application spring-boot (jar exécutable intégrant un serveur Tomcat) offrant ces mêmes services en REST.</li>
-</ul>
-<h2 id="pré-requis">Pré-requis</h2>
-<p>Pour pouvoir utiliser le connecteur MS-Santé, il faut au préalable créer un compte selon l&rsquo;opérateur choisi:</p>
-<ul>
-<li>Opérateur compatible avec le nouveau <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">référentiel socle MSSanté #2</a></li>
-<li>Mailiz avec les <a href="https://mailiz.mssante.fr/documents/16106/0/DST_interfaces_clients_V1.3_28012022.zip/02eca41b-d55f-4c03-a49a-d87f8a2f3b6f">API V1.3 soap</a> :  <a href="https://mailiz.mssante.fr/">https://mailiz.mssante.fr/</a></li>
-<li>Apicrypt (en cours de développement): <a href="https://www.apicrypt.org/inscription">https://www.apicrypt.org/inscription</a></li>
-</ul>
-<h3 id="exécution">Exécution</h3>
-<p>Vous pouvez essayer l&rsquo;API V2 avec une collection postman disponible ici :</p>
-<p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
-<h3 id="documentation-officielle">Documentation officielle</h3>
-<h4 id="nouveau-référentiel-socle-ms-sante-2">Nouveau référentiel socle MS-Sante #2</h4>
-<p>La nouvelle version v2 respecte le nouveau référentiel : <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2</a></p>
-<h4 id="ancien-référentiel-compatible-avec-mailiz">Ancien référentiel compatible avec Mailiz</h4>
-<p>La documentation officielle est disponible sur <a href="https://mailiz.mssante.fr/is/doc-technique">https://mailiz.mssante.fr/is/doc-technique</a></p>
-<p>Il est recommandé pour les logiciels souhaitant envoyer des pièces jointes de lire les document suivants:</p>
-<ul>
-<li>Echange de documents de santé via MSSanté :  guide de normalisation à destination des éditeurs de clients de messagerie MSSanté (V1.2 - 21/12/2018)</li>
-<li>Guide éditeur de mise en oeuvre de la MSSanté et de l&rsquo;alimentation du DMP dans un logiciel de professionnel de santé (V1.0.0 - mars 2016)</li>
-<li>Echange de compte rendu d&rsquo;examens de biologie via MSSanté : guide de transition vers le format XDM (V1.0.0 - 27 /04/2017)</li>
-</ul>
-<h3 id="tests">Tests</h3>
-<p>une environnement de démo est disponible pour les tests. Sur cet environnement, seul l&rsquo;authentification otp fonctionne.</p>
-<p>Au préalable il faut se crééer un compte sur mailiz formation : <a href="https://mailiz.formation.mssante.fr/">https://mailiz.formation.mssante.fr/</a></p>
-<p>Puis accéder à l&rsquo;environnement de démonstration :  <a href="https://mss-demo.devbox-sante.fr">https://mss-demo.devbox-sante.fr</a></p>
-<p>Dont la documentation est accessible : <a href="https://mss-demo.devbox-sante.fr/swagger-ui.html">https://mss-demo.devbox-sante.fr/swagger-ui.html</a></p>
-
+	<h2 id="configuration-commune">configuration commune</h2>
+<h3 id="annuaire">Annuaire</h3>
+<h4 id="mailiz-formation">Mailiz formation</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">annuaire</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">ldapHost</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">partenaires.annuaire.sante.fr</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">ldapPort</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">389</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h4 id="tous-opérateurs-production">Tous opérateurs production</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">annuaire</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">ldapHost</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">annuaire.sante.fr</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">ldapPort</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">389</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div>
         <div class="section-index">
     
     
@@ -335,15 +296,15 @@ mss -d-&gt; apicrypt : socket
             
             <div class="entry">
                 <h5>
-                    <a href="/ms-sante/configuration/">Configuration selon les opérateurs</a>
+                    <a href="/ms-sante/configuration/referentiel2/">Conforme au référentiel MSSante &#39;#2</a>
                 </h5>
-                <p>Configuration selon les opérateurs</p>
+                <p>Référentiel MSSante #2</p>
             </div>
         
             
             <div class="entry">
                 <h5>
-                    <a href="/ms-sante/howtos/">Howtos</a>
+                    <a href="/ms-sante/configuration/mailiz/">Mailiz</a>
                 </h5>
                 <p></p>
             </div>
@@ -351,17 +312,9 @@ mss -d-&gt; apicrypt : socket
             
             <div class="entry">
                 <h5>
-                    <a href="/ms-sante/architecture/">Architecture interne des différents composants</a>
+                    <a href="/ms-sante/configuration/apicrypt/">ApiCryptV2</a>
                 </h5>
-                <p>Pour les intéressés, l&rsquo;architecture interne des différents composants</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/ms-sante/versions/">Versions</a>
-                </h5>
-                <p>Les différentes versions de la DevBox-Santé MS-Santé</p>
+                <p></p>
             </div>
         
     

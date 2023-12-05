@@ -137,7 +137,26 @@ if (!doNotTrack) {
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ms-sante-li">
   <a href="/ms-sante/" title="DevBox-Santé MSS" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-ms-sante"><span class="">MSS</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ms-santehowtos-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ms-santeconfiguration-li">
+  <input type="checkbox" id="m-ms-santeconfiguration-check"/>
+  <label for="m-ms-santeconfiguration-check"><a href="/ms-sante/configuration/" title="Configuration selon les opérateurs" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santeconfiguration"><span class="">Configuration</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santeconfigurationreferentiel2-li">
+  <input type="checkbox" id="m-ms-santeconfigurationreferentiel2-check"/>
+  <label for="m-ms-santeconfigurationreferentiel2-check"><a href="/ms-sante/configuration/referentiel2/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-ms-santeconfigurationreferentiel2"><span class="">Conforme au référentiel MSSante &#39;#2</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santeconfigurationmailiz-li">
+  <input type="checkbox" id="m-ms-santeconfigurationmailiz-check"/>
+  <label for="m-ms-santeconfigurationmailiz-check"><a href="/ms-sante/configuration/mailiz/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-ms-santeconfigurationmailiz"><span class="">Mailiz</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santeconfigurationapicrypt-li">
+  <input type="checkbox" id="m-ms-santeconfigurationapicrypt-check"/>
+  <label for="m-ms-santeconfigurationapicrypt-check"><a href="/ms-sante/configuration/apicrypt/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-ms-santeconfigurationapicrypt"><span class="">ApiCryptV2</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ms-santehowtos-li">
   <input type="checkbox" id="m-ms-santehowtos-check" checked/>
   <label for="m-ms-santehowtos-check"><a href="/ms-sante/howtos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtos"><span class="">Howtos</span></a></label>
   
@@ -185,6 +204,12 @@ if (!doNotTrack) {
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
+    <li>
+      <ul>
+        <li><a href="#exécution">Exécution</a></li>
+      </ul>
+    </li>
+    <li><a href="#managed-mode">Managed Mode</a></li>
     <li><a href="#authentification">Authentification</a></li>
     <li><a href="#modèle">Modèle</a></li>
     <li><a href="#rest-api">Rest API</a>
@@ -259,6 +284,10 @@ if (!doNotTrack) {
 	</header>
 	<p>La version 2.0 de la DevBox-santé MSS apporte le support du nouveau référentiel v2 conforme au ségur vague 2</p>
 <p>Quelques changements ont été apportés.</p>
+<h3 id="exécution">Exécution</h3>
+<p>Vous pouvez essayer l&rsquo;API V2 avec une collection postman disponible ici :</p>
+<p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
+<h2 id="managed-mode">Managed Mode</h2>
 <p>La principale modification est le fait qu&rsquo;il n&rsquo;y a plus forcement de dossiers Trash, Draft, Sent par défaut. Cela dépend de l&rsquo;opérateur.
 Ce sont maintenant des flags sur les messages pour les 2ers et une date d&rsquo;envoi pour le dernier.</p>
 <p>Pour palier à ce problème, 2 modes de fonctionnement ont été mis en place:</p>

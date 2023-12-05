@@ -24,6 +24,10 @@
         
         &lt;p&gt;La version 2.0 de la DevBox-santé MSS apporte le support du nouveau référentiel v2 conforme au ségur vague 2&lt;/p&gt;
 &lt;p&gt;Quelques changements ont été apportés.&lt;/p&gt;
+&lt;h3 id=&#34;exécution&#34;&gt;Exécution&lt;/h3&gt;
+&lt;p&gt;Vous pouvez essayer l&amp;rsquo;API V2 avec une collection postman disponible ici :&lt;/p&gt;
+&lt;p&gt;&lt;a target=&#34;_blank&#34; href=&#34;https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview&#34;&gt;&lt;img alt=&#34;Run In postman&#34; src=&#34;https://run.pstmn.io/button.svg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;managed-mode&#34;&gt;Managed Mode&lt;/h2&gt;
 &lt;p&gt;La principale modification est le fait qu&amp;rsquo;il n&amp;rsquo;y a plus forcement de dossiers Trash, Draft, Sent par défaut. Cela dépend de l&amp;rsquo;opérateur.
 Ce sont maintenant des flags sur les messages pour les 2ers et une date d&amp;rsquo;envoi pour le dernier.&lt;/p&gt;
 &lt;p&gt;Pour palier à ce problème, 2 modes de fonctionnement ont été mis en place:&lt;/p&gt;

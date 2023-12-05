@@ -151,7 +151,7 @@ Version imprimable multipages.
     
     
 	
-<li>1: <a href="#pg-bc101cabb606e03a532ab98e7c662dd2">Howtos</a></li>
+<li>1: <a href="#pg-da2fabe5a7269d99d43adf6da2c9f12e">Configuration selon les opérateurs</a></li>
 
 
     
@@ -166,7 +166,35 @@ Version imprimable multipages.
     
     
 	
-<li>1.1: <a href="#pg-4d669ea2758d08186a649d09451a5b67">Preuves Segur</a></li>
+<li>1.1: <a href="#pg-252b66e73bdc22a4a4490bc6809851da">Conforme au référentiel MSSante &#39;#2</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.2: <a href="#pg-fa95e29614cd4d5f6e4fa9fd43066bb3">Mailiz</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.3: <a href="#pg-1cb71f8b9dd680797f22aa7c7be4279d">ApiCryptV2</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-bc101cabb606e03a532ab98e7c662dd2">Howtos</a></li>
 
 
     
@@ -178,56 +206,10 @@ Version imprimable multipages.
   
 
   
-
-    </ul>
-    
-  
     
     
 	
-<li>1.2: <a href="#pg-3aa3b6fbd974023d38a168e486f7a418">Migrations</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-    
-    
-	
-<li>1.2.1: <a href="#pg-fdbfb588e3beb583f45227b16fa6167f">Migration 1.2 vers la 2.0</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
-  
-
-    </ul>
-    
-  
-
-    </ul>
-    
-  
-    
-    
-	
-<li>2: <a href="#pg-543a805332bd0423b3101618b1d938a5">Architecture interne des différents composants</a></li>
+<li>2.1: <a href="#pg-4d669ea2758d08186a649d09451a5b67">Preuves Segur</a></li>
 
 
     
@@ -246,7 +228,68 @@ Version imprimable multipages.
     
     
 	
-<li>3: <a href="#pg-31a3d0d8a67de401d0d1edbc704a0012">Versions</a></li>
+<li>2.2: <a href="#pg-3aa3b6fbd974023d38a168e486f7a418">Migrations</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>2.2.1: <a href="#pg-fdbfb588e3beb583f45227b16fa6167f">Migration 1.2 vers la 2.0</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-543a805332bd0423b3101618b1d938a5">Architecture interne des différents composants</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-31a3d0d8a67de401d0d1edbc704a0012">Versions</a></li>
 
 
     
@@ -300,53 +343,7 @@ mss -d-&gt; apicrypt : socket
 <li>Mailiz avec les <a href="https://mailiz.mssante.fr/documents/16106/0/DST_interfaces_clients_V1.3_28012022.zip/02eca41b-d55f-4c03-a49a-d87f8a2f3b6f">API V1.3 soap</a> :  <a href="https://mailiz.mssante.fr/">https://mailiz.mssante.fr/</a></li>
 <li>Apicrypt (en cours de développement): <a href="https://www.apicrypt.org/inscription">https://www.apicrypt.org/inscription</a></li>
 </ul>
-<h2 id="authentification">Authentification</h2>
-<h3 id="opérateur-compatible-référentiel-mssante-2">Opérateur compatible référentiel MSSante #2</h3>
-<h4 id="bal-organisationnelle-via-certificat">BAL organisationnelle via certificat</h4>
-<p>Il faut configurer la devboxsante de telle manière :</p>
-<ul>
-<li>à fournir un certificat p12 provenant de l&rsquo;IGC Santé</li>
-<li>à configurer un serveur SMTP</li>
-<li>à configurer un serveur IMAP</li>
-</ul>
-<p>Exemple pour authentification espace de test medimail du MIPIH :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">p12</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">tls.p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">asip-p12-EL-TEST-ORG-AUTH_CLI-20230717-152710.p12</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">MOT_DE_PASSE</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">smtp</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">host</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">authcli.medimail-lps.mipih.fr</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">587</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">imap</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">host</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">authcli.medimail-lps.mipih.fr</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">143</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><h3 id="mailiz">Mailiz</h3>
-<p>2 modes d&rsquo;authentification sont disponibles:</p>
-<ul>
-<li>par carte CPS (nécéssite l&rsquo;installation du module cps de DevBox-Santé) :</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#000">authentificationWithCps</span><span style="color:#000;font-weight:bold">()</span> 
-</span></span></code></pre></div><ul>
-<li>login/motdepasse OTP, cette authentification s&rsquo;effectue en 2 étapes :</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">otpParameters</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#000">otpCanalType</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">SMS</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#000">Mail</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#8f5902;font-style:italic">// canal pour recevoir l&#39;otp
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#000">otpCanalPwd</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">password</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#000">otpIdNat</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">idNat</span> <span style="color:#8f5902;font-style:italic">//(0+adeli ou 8+rpps)
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">AuthorizationContext</span> <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">authentificationWithOtpStep1</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">otpParameters</span><span style="color:#000;font-weight:bold">);</span> 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">authentificationWithOtpStep2</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">otp</span><span style="color:#000;font-weight:bold">)</span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&#39;utilisateur
-</span></span></span></code></pre></div><h3 id="apicrypt">Apicrypt</h3>
-<p>un mode d&rsquo;authentification avec le compagnon :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#000">authentificationWithApiCrypt</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">username</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">password</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">)</span>
-</span></span></code></pre></div><h3 id="exécution">Exécution</h3>
+<h3 id="exécution">Exécution</h3>
 <p>Vous pouvez essayer l&rsquo;API V2 avec une collection postman disponible ici :</p>
 <p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
 <h3 id="documentation-officielle">Documentation officielle</h3>
@@ -386,7 +383,177 @@ mss -d-&gt; apicrypt : socket
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-bc101cabb606e03a532ab98e7c662dd2">1 - Howtos</h1>
+	<h1 id="pg-da2fabe5a7269d99d43adf6da2c9f12e">1 - Configuration selon les opérateurs</h1>
+    <div class="lead">Configuration selon les opérateurs</div>
+	<h2 id="configuration-commune">configuration commune</h2>
+<h3 id="annuaire">Annuaire</h3>
+<h4 id="mailiz-formation">Mailiz formation</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">annuaire</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">ldapHost</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">partenaires.annuaire.sante.fr</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">ldapPort</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">389</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h4 id="tous-opérateurs-production">Tous opérateurs production</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">annuaire</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">ldapHost</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">annuaire.sante.fr</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">ldapPort</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">389</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-252b66e73bdc22a4a4490bc6809851da">1.1 - Conforme au référentiel MSSante &#39;#2</h1>
+    <div class="lead">Référentiel MSSante #2</div>
+	<h2 id="bal-organisationnelle">BAL organisationnelle</h2>
+<h3 id="configuration-des-points-daccès-aux-opérateurs">Configuration des points d&rsquo;accès aux opérateurs</h3>
+<p>Il faut configurer la devboxsante de telle manière à se connecter sur les serveurs SMTP et IMAP de l&rsquo;opérateur</p>
+<p>Exemple pour authentification espace de test medimail du MIPIH :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">smtp</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">host</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">authcli.medimail-lps.mipih.fr</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">587</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">imap</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">host</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">authcli.medimail-lps.mipih.fr</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">143</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h3 id="configuration-p12">Configuration P12</h3>
+<p>Il faut configurer la devboxsante de telle manière à fournir un certificat p12 provenant de l&rsquo;IGC Santé</p>
+<p>Exemple pour authentification espace de test medimail du MIPIH :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">p12</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">tls.p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">asip-p12-EL-TEST-ORG-AUTH_CLI-20230717-152710.p12</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">MOT_DE_PASSE</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h3 id="configuration-p12inheader">Configuration p12InHeader</h3>
+<p>Le mode <code>p12InHeader</code> permet de faire passer le certificat p12 dans l&rsquo;entête HTTP de la requête, cela permet à l&rsquo;appelant de conserver et décider des certificats utilisés lors de l&rsquo;appel du proxy.</p>
+<p>Le header étant plus lourd il faudra veiller à ce que la configuration spring prenne en compte la taille du header d&rsquo;au moins 40Kb.</p>
+<p>La configuration <code>application.yml</code> est :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">server</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">max-http-header-size</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">50KB</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">mss: </span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification avec certificats dans le header HTTP</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">p12InHeader</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>Et la requête doit contenir les informations dans le header. Le `userName&rsquo; est utilisé pour initialiser la session SMTP/IMAP</p>
+<pre tabindex="0"><code class="language-bruno" data-lang="bruno">
+headers {
+  mssAuthentication.password: password
+  mssAuthentication.p12: MIIcbAIBA...Bv4sVwVpAICCAA=
+  mssAuthentication.userName: xxx-applicatif-test@medimail.mssante.fr
+}
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-fa95e29614cd4d5f6e4fa9fd43066bb3">1.2 - Mailiz</h1>
+    
+	<h2 id="environnements-mailiz">Environnements Mailiz</h2>
+<p>Il faut configurer les points d&rsquo;accès aux différents environnements de Mailiz.</p>
+<h3 id="formation">Formation</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">mailiz</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">servicesUrl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">authenticationServiceUrl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://mss-idp-igcsante.formation.mssante.fr/openam/SSOSoap/metaAlias/asip/idp</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h3 id="production">Production</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">mailiz</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">servicesUrl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://mss-msg-igcsante.mssante.fr/mss-msg-services/services</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">authenticationServiceUrl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://mss-idp-igcsante.mssante.fr/openam/SSOSoap/metaAlias/asip/idp</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h2 id="authentification">Authentification</h2>
+<p>2 modes d&rsquo;authentification sont disponibles:</p>
+<ul>
+<li>par carte CPS (nécéssite l&rsquo;installation du module cps de DevBox-Santé) :</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#000">authentificationWithCps</span><span style="color:#000;font-weight:bold">()</span> 
+</span></span></code></pre></div><ul>
+<li>login/motdepasse OTP, cette authentification s&rsquo;effectue en 2 étapes :</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">otpParameters</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">otpCanalType</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">SMS</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#000">Mail</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#8f5902;font-style:italic">// canal pour recevoir l&#39;otp
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#000">otpCanalPwd</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">password</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">otpIdNat</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">idNat</span> <span style="color:#8f5902;font-style:italic">//(0+adeli ou 8+rpps)
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">AuthorizationContext</span> <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">authentificationWithOtpStep1</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">otpParameters</span><span style="color:#000;font-weight:bold">);</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">authentificationWithOtpStep2</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">otp</span><span style="color:#000;font-weight:bold">)</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&#39;utilisateur
+</span></span></span></code></pre></div>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-1cb71f8b9dd680797f22aa7c7be4279d">1.3 - ApiCryptV2</h1>
+    
+	<p>un mode d&rsquo;authentification avec le compagnon :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#000">authentificationWithApiCrypt</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">username</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">password</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">)</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-bc101cabb606e03a532ab98e7c662dd2">2 - Howtos</h1>
     
 	
 </div>
@@ -411,7 +578,7 @@ mss -d-&gt; apicrypt : socket
 
 <div class="td-content" style="">
     
-	<h1 id="pg-4d669ea2758d08186a649d09451a5b67">1.1 - Preuves Segur</h1>
+	<h1 id="pg-4d669ea2758d08186a649d09451a5b67">2.1 - Preuves Segur</h1>
     <div class="lead">Comment configurer la DevBox-sante MSS pour apporter les preuves SEGUR</div>
 	<h2 id="génération-de-preuves">Génération de preuves</h2>
 <p>Pour générer une preuve, il faut :</p>
@@ -806,7 +973,7 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-3aa3b6fbd974023d38a168e486f7a418">1.2 - Migrations</h1>
+	<h1 id="pg-3aa3b6fbd974023d38a168e486f7a418">2.2 - Migrations</h1>
     <div class="lead">Guide de migration vers les versions supérieures de la DevBox-Santé MSSanté</div>
 	
 </div>
@@ -831,10 +998,14 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
 
 <div class="td-content" style="">
     
-	<h1 id="pg-fdbfb588e3beb583f45227b16fa6167f">1.2.1 - Migration 1.2 vers la 2.0</h1>
+	<h1 id="pg-fdbfb588e3beb583f45227b16fa6167f">2.2.1 - Migration 1.2 vers la 2.0</h1>
     <div class="lead">Guide de migration vers la nouvelle version 2.0</div>
 	<p>La version 2.0 de la DevBox-santé MSS apporte le support du nouveau référentiel v2 conforme au ségur vague 2</p>
 <p>Quelques changements ont été apportés.</p>
+<h3 id="exécution">Exécution</h3>
+<p>Vous pouvez essayer l&rsquo;API V2 avec une collection postman disponible ici :</p>
+<p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
+<h2 id="managed-mode">Managed Mode</h2>
 <p>La principale modification est le fait qu&rsquo;il n&rsquo;y a plus forcement de dossiers Trash, Draft, Sent par défaut. Cela dépend de l&rsquo;opérateur.
 Ce sont maintenant des flags sur les messages pour les 2ers et une date d&rsquo;envoi pour le dernier.</p>
 <p>Pour palier à ce problème, 2 modes de fonctionnement ont été mis en place:</p>
@@ -932,7 +1103,7 @@ Lors de l&rsquo;enregistrement d&rsquo;un brouillon, la première fois que la pi
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-543a805332bd0423b3101618b1d938a5">2 - Architecture interne des différents composants</h1>
+	<h1 id="pg-543a805332bd0423b3101618b1d938a5">3 - Architecture interne des différents composants</h1>
     <div class="lead">Pour les intéressés, l&rsquo;architecture interne des différents composants</div>
 	<h2 id="diagramme-de-flux">Diagramme de flux</h2>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
@@ -970,7 +1141,7 @@ DevBoxSanteMSS --&gt; LDAP  : ldap
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-31a3d0d8a67de401d0d1edbc704a0012">3 - Versions</h1>
+	<h1 id="pg-31a3d0d8a67de401d0d1edbc704a0012">4 - Versions</h1>
     <div class="lead">Les différentes versions de la DevBox-Santé MS-Santé</div>
 	<h2 id="version---125-04072023">Version - 1.2.5 (04/07/2023)</h2>
 <h3 id="story">Story</h3>

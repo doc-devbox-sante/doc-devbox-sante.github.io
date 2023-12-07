@@ -98,6 +98,13 @@ Ce document est disponible sur l&amp;rsquo;espace industriel de Sesam-Vitale : &
 &lt;p&gt;L&amp;rsquo;éditeur a testé l&amp;rsquo;affichage de la liste des patients ayant une autorisation pour l&amp;rsquo;acteur authentifié.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Mise en œuvre de la td0.4 : &lt;a href=&#34;http://localhost:1313/dmp/howtos/transactions/#td04--lister-les-dmp-autoris%C3%A9s-depuis-version-50&#34;&gt;http://localhost:1313/dmp/howtos/transactions/#td04&amp;ndash;lister-les-dmp-autoris%C3%A9s-depuis-version-50&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;pre_td09&#34;&gt;PRE_TD09&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;L&amp;rsquo;éditeur a testé l&amp;rsquo;appel au WebPS.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Il faut pouvoir accéder au webDMP des PS, comme par exemple :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;AccesWebDMP.png&#34; alt=&#34;Acces web DMP&#34;&gt;&lt;/p&gt;
+&lt;p&gt;La DevBox-santé DMP permet de générer les urls d&amp;rsquo;acccès.&lt;/p&gt;
 &lt;h3 id=&#34;authentification-indirecte&#34;&gt;Authentification indirecte&lt;/h3&gt;
 &lt;h4 id=&#34;pre_ind&#34;&gt;PRE_IND&lt;/h4&gt;
 &lt;blockquote&gt;

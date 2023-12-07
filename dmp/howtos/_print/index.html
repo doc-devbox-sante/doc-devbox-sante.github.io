@@ -1160,6 +1160,13 @@ Ce document est disponible sur l&rsquo;espace industriel de Sesam-Vitale : <a hr
 <p>L&rsquo;éditeur a testé l&rsquo;affichage de la liste des patients ayant une autorisation pour l&rsquo;acteur authentifié.</p>
 </blockquote>
 <p>Mise en œuvre de la td0.4 : <a href="http://localhost:1313/dmp/howtos/transactions/#td04--lister-les-dmp-autoris%C3%A9s-depuis-version-50">http://localhost:1313/dmp/howtos/transactions/#td04&ndash;lister-les-dmp-autoris%C3%A9s-depuis-version-50</a></p>
+<h4 id="pre_td09">PRE_TD09</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé l&rsquo;appel au WebPS.</p>
+</blockquote>
+<p>Il faut pouvoir accéder au webDMP des PS, comme par exemple :</p>
+<p><img src="AccesWebDMP.png" alt="Acces web DMP"></p>
+<p>La DevBox-santé DMP permet de générer les urls d&rsquo;acccès.</p>
 <h3 id="authentification-indirecte">Authentification indirecte</h3>
 <h4 id="pre_ind">PRE_IND</h4>
 <blockquote>
@@ -2241,7 +2248,12 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
     
 	<h1 id="pg-6b9c62d7feaf9fcc9d33c8f6b0be34a8">12 - FAQ</h1>
     <div class="lead">Foire aux questions intégrations DMP</div>
-	<h3 id="le-champ-__resource_id__-est-incorrect--27707632208291225012131410isonh">Le champ <strong>Resource_id</strong> est incorrect : 2770763220829^^^&amp;1.2.250.1.213.1.4.10&amp;ISO^NH</h3>
+	<h3 id="cpe-de-test-retourne-un-message-derreur-ps-non_elligible-carte-commandé-en-2023">CPE de test retourne un message d&rsquo;erreur PS NON_ELLIGIBLE (carte commandé en 2023)</h3>
+<blockquote>
+<p>Effectivement c&rsquo;est un problème connu du CNDA. Le sujet est en cours côté ANS.
+Il est pour le moment inutile de recommander des CPE qui auront le même problème (une date de fin d&rsquo;activité caduque en base de données).</p>
+</blockquote>
+<h3 id="le-champ-__resource_id__-est-incorrect--27707632208291225012131410isonh">Le champ <strong>Resource_id</strong> est incorrect : 2770763220829^^^&amp;1.2.250.1.213.1.4.10&amp;ISO^NH</h3>
 <p>Vérifier la taille de l’INS, il manque généralement la clé. La bonne valeur de cet INS pour les transactions DMP est : <code>277076322082910</code></p>
 <h3 id="quel-statut-dins-pour-lalimentation-dmp-">Quel statut d’INS pour l’alimentation DMP ?</h3>
 <p>Une INS qualifiée sera nécessaire pour l’alimentation du DMP. A défaut, le DMP ne pourra pas être alimenté.</p>

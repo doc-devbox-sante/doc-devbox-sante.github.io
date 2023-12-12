@@ -4464,7 +4464,20 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
     
 	<h1 id="pg-6b9c62d7feaf9fcc9d33c8f6b0be34a8">6.12 - FAQ</h1>
     <div class="lead">Foire aux questions intégrations DMP</div>
-	<h3 id="cpe-de-test-retourne-un-message-derreur-ps-non_elligible-carte-commandé-en-2023">CPE de test retourne un message d&rsquo;erreur PS NON_ELLIGIBLE (carte commandé en 2023)</h3>
+	<h3 id="indirecte-erreur-dauthentification-de-la-personne-morale">[Indirecte] Erreur d&rsquo;authentification de la personne morale</h3>
+<p>Cette erreur arrive quand l&rsquo;identifiant de structure utilisée dans le contexte d&rsquo;appel est incohérent avec celui du certificat :</p>
+<p><img src="identifiantStructureIncoherent.png" alt="identifiantStructure contexte"></p>
+<p>Pour connaître l&rsquo;identifiant du certificat P12 utilisé, vous pouvez utiliser l&rsquo;endpoint <code>/dmp/authenticationContext</code> avec un body vide :</p>
+<p><img src="IdentifiantStructureDuCertificat.png" alt="identifiant structure certificat"></p>
+<p>À l&rsquo;aide de ces deux impressions écrans on voit bien que les deux identifiants structures sont différents. Comme ces deux identifiants sont deux identifiants Finess, la DevBox-sante ne peut pas ignorer l&rsquo;identifiant passé dans le contexte au profit de celui du certificat p12 car cela perment de prendre en charge le <a href="dmp/howtos/migrations/5.0_5.1/#28-prise-en-charge-du-mode-ejeg-en-authentification-indirecte">mode EJ/EG</a></p>
+<p>Les logs de la devbox-santé peuvent aider à diagnostiquer votre problème :</p>
+<pre tabindex="0"><code>P12AuthenticationContextHandler : La structure (1.2.250.1.71.4.2.2.10B0156832) du contexte de Type FINESS est un possible FINESS_EG
+P12AuthenticationContextHandler : Extraction du certificat les infos de structure sante pour id 10B0130811 de type FINESS
+P12AuthenticationContextHandler : Extraction du certificat le nom de la structure : CENTRE DE SANTE RPPS13081 
+P12AuthenticationContextHandler : Structure du contexte (1.2.250.1.71.4.2.2.10B0156832) est diff?rente de la structure du certificat (1.2.250.1.71.4.2.2.10B0130811)
+P12AuthenticationContextHandler : mode EJ/EG (10B0130811/10B0156832)
+P12AuthenticationContextHandler : La structure (1.2.250.1.71.4.2.2.10B0130811) du certificat de type (FINESS) est un possible FINESS_EJ, mise ? jour des type et ajout de la structure du certificat dans la liste.
+</code></pre><h3 id="cpe-de-test-retourne-un-message-derreur-ps-non_elligible-carte-commandé-en-2023">CPE de test retourne un message d&rsquo;erreur PS NON_ELLIGIBLE (carte commandé en 2023)</h3>
 <blockquote>
 <p>Effectivement c&rsquo;est un problème connu du CNDA. Le sujet est en cours côté ANS.
 Il est pour le moment inutile de recommander des CPE qui auront le même problème (une date de fin d&rsquo;activité caduque en base de données).</p>

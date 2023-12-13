@@ -22,7 +22,8 @@
       <description>
         
         
-        &lt;h2 id=&#34;bal-organisationnelle&#34;&gt;BAL organisationnelle&lt;/h2&gt;
+        &lt;p&gt;Voici la liste des opérateurs référencés par le SEGUR &lt;a href=&#34;https://esante.gouv.fr/segur/solutions-referencees?search_api_fulltext=&amp;amp;field_categorie=853&amp;amp;field_type_logiciel=All&#34;&gt;https://esante.gouv.fr/segur/solutions-referencees?search_api_fulltext=&amp;amp;field_categorie=853&amp;amp;field_type_logiciel=All&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bal-organisationnelle&#34;&gt;BAL organisationnelle&lt;/h2&gt;
 &lt;h3 id=&#34;configuration-des-points-daccès-aux-opérateurs&#34;&gt;Configuration des points d&amp;rsquo;accès aux opérateurs&lt;/h3&gt;
 &lt;p&gt;Il faut configurer la devboxsante de telle manière à se connecter sur les serveurs SMTP et IMAP de l&amp;rsquo;opérateur&lt;/p&gt;
 &lt;p&gt;Exemple pour authentification espace de test medimail du MIPIH :&lt;/p&gt;

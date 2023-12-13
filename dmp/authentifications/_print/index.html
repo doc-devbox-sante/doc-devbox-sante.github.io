@@ -187,6 +187,44 @@ Version imprimable multipages.
   
 
   
+    
+    
+	
+<li>4.1: <a href="#pg-e72d60d679cce861234d26b2fbbf45a5">Démonstration Stellair</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4.2: <a href="#pg-7e7f80daca9546254e4b6118527ac7d8">Configuration Stellair</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
 
     </ul>
     
@@ -549,6 +587,195 @@ backend -&gt; frontend : ok
   
   
 
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e72d60d679cce861234d26b2fbbf45a5">4.1 - Démonstration Stellair</h1>
+    <div class="lead">Tester les mécanismes Olaqin TAAS (Terminal As A Service) sur l’environnement de démonstration.</div>
+	<p>Vous avez accès à l’environnement de démonstration de Stellair d’Olaqin : <a href="https://demo.stellair.fr">https://demo.stellair.fr</a> :</p>
+<p><img src="Stellair-accueil-demo.png" alt="Stellair-accueil-demo.png"></p>
+<p>Vous pouvez également accéder avec vos terminaux Olaqin compatible aux APIs REST de la DevBox-Santé.</p>
+<p>Pour celà, un environnement de démonstration a été mis à votre disposition : <a href="https://demo-stellair.devbox-sante.fr">https://demo-stellair.devbox-sante.fr</a></p>
+<h2 id="authentification-et-accès-à-swagger">Authentification et Accès à Swagger</h2>
+<p>Depuis l’environnement de démonstration , vous pouvez obtenir un jeton d’identification :</p>
+<ol>
+<li>
+<p><strong>Sur la page d’accueil, accéder à la connexion Stellair :</strong>
+<img src="1-devbox-sante-demo-stellair-home.png" alt="1-devbox-sante-demo-stellair-home.png"></p>
+</li>
+<li>
+<p><strong>Après redirection vers le SSO Stellair, connectez-vous avec vos identifiants</strong>
+<img src="2-stellair-redirection.png" alt="2-stellair-redirection.png"></p>
+</li>
+<li>
+<p><strong>Une fois authentifié, vous pouvez accéder aux APIs rest via SWAGGER :</strong>
+<img src="3-lien-swagger.png" alt="3-lien-swagger.png"></p>
+</li>
+</ol>
+<h2 id="test-dexistence-sur-le-dmp">Test d’existence sur le DMP</h2>
+<ol start="4">
+<li><strong>POST de la requete http pour un test d’existence DMP :</strong>
+<img src="4-POST-td02.png" alt="4-POST-td02.png"></li>
+</ol>
+<p>En curl :</p>
+<pre tabindex="0"><code>curl -X POST &#34;https://demo-stellair.devbox-sante.fr/dmp/td02Exist&#34; -H &#34;accept: */*&#34; -H &#34;Content-Type: application/json&#34; -d &#34;{ \&#34;context\&#34;: { \&#34;author\&#34;: {}, \&#34;insNirAutorite\&#34;: \&#34;TEST\&#34;, \&#34;modeAcces\&#34;: { \&#34;acces\&#34;: \&#34;NORMAL\&#34; } }, \&#34;request\&#34;: { \&#34;ins\&#34;: \&#34;277076322082910\&#34; }}&#34;
+</code></pre><p>Où le corps de la requête est :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;author&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;insNirAutorite&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;TEST&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;modeAcces&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;acces&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;NORMAL&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ins&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;277076322082910&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><ol start="5">
+<li><strong>Et récupérer la réponse :</strong> 
+<img src="5-reponse-POST-td02.png" alt="5-reponse-POST-td02.png">
+La réponse étant :</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;patient&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ins&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;277076322082910&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;insAutorite&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.213.1.4.10&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;nomPatronymique&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;NESSI&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;prenom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;RUTH&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;dateDeNaissance&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;19770714&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ordreDeNaissance&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sexe&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;F&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;role&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;STANDARD&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ACTIF&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;autorisation&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;NON_EXISTE&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;compteInternetOuvert&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Ce workflow permet de mettre en évidence l’accès au différentes fonctionnalités de Terminal As A Service d’Olaqin pour accéder au DMP, c’est à dire :</p>
+<ul>
+<li>La lecture des informationss de la carte CPS</li>
+<li>L’accès au certificat d’authentification de la carte CPS</li>
+<li>L’accès au mécanisme de signature du lecteur combiné à la carte CPS</li>
+</ul>
+<p>Pour plus d’informations, sur les transactions du DMP : <a href="/dmp/howtos/transactions">/dmp/howtos/transactions</a></p>
+<p>Il est également possible d’accéder à la lecture de la Carte Vitale et au téléservice INSi</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-7e7f80daca9546254e4b6118527ac7d8">4.2 - Configuration Stellair</h1>
+    <div class="lead">Intégration de Stellair dans la DevBox-Santé</div>
+	<h2 id="authentification-avec-le-sso-de-stellair">Authentification avec le SSO de Stellair</h2>
+<p>L&rsquo;utilisateur s&rsquo;authentifie sur le SSO de stellair et utilise la devbox-sante sur le même serveur.</p>
+<p>Configuration yaml :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">stellair</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">           </span><span style="color:#204a87;font-weight:bold">mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">oauth2</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">           </span><span style="color:#204a87;font-weight:bold">baseUrl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://api.demo.stellair.fr/v1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">spring</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">security</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">oauth2</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">client</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#204a87;font-weight:bold">registration</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                    </span><span style="color:#204a87;font-weight:bold">stellair</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                        </span><span style="color:#204a87;font-weight:bold">client-id</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">48h0u0s28a1qag2csove0ptjik</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                        </span><span style="color:#204a87;font-weight:bold">client-secret</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">secret</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                        </span><span style="color:#204a87;font-weight:bold">redirectUri</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">http://localhost:8080/login/oauth2/code/stellair</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                        </span><span style="color:#204a87;font-weight:bold">authorizationGrantType</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">authorization_code</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                        </span><span style="color:#204a87;font-weight:bold">scope</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">openid</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#204a87;font-weight:bold">provider</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                    </span><span style="color:#204a87;font-weight:bold">stellair</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                        </span><span style="color:#204a87;font-weight:bold">authorization-uri</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://auth.demo.stellair.fr/oauth2/authorize</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                        </span><span style="color:#204a87;font-weight:bold">token-uri</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://auth.demo.stellair.fr/oauth2/token</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                        </span><span style="color:#204a87;font-weight:bold">user-info-uri</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://auth.demo.stellair.fr/oauth2/userInfo</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                        </span><span style="color:#204a87;font-weight:bold">issuer</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://cognito-idp.eu-central-1.amazonaws.com/eu-central-1_Rfyw81gLt</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                        </span><span style="color:#204a87;font-weight:bold">jwk-set-uri</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://cognito-idp.eu-central-1.amazonaws.com/eu-central-1_Rfyw81gLt/.well-known/jwks.json</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>Un projet d&rsquo;exemple se trouve <a href="https://bitbucket.org/devbox-sante/stellair/src/master/exemples/stellair-oauth2-client/">https://bitbucket.org/devbox-sante/stellair/src/master/exemples/stellair-oauth2-client/</a></p>
+<h2 id="authentification-avec-sso-et-propagation-du-token-vers-la-devbox-sante">Authentification avec SSO et propagation du token vers la DevBox-Sante</h2>
+<p>L&rsquo;utilisateur s&rsquo;authentifie avec un SSO partenaire de stellair, récupère le jwt token d&rsquo;authorization et le propage.</p>
+<h3 id="diagramme-de-séquence">Diagramme de séquence</h3>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
+box &#34;Environnement utilisateur&#34;
+    participant &#34;Poste client&#34; as frontend
+end box
+
+box &#34;Environnement intégrateur&#34; #white
+participant backend
+participant sso_integrateur
+participant &#34;DevBox-Santé DMP&#34; as dbxdmp DMP_COLOR
+end box
+participant &#34;**Stellair**&#34; as stellair
+
+
+frontend -&gt; backend : login
+backend -&gt; frontend : 302 redirect sso_integrateur
+sso_integrateur -&gt; frontend : Authorization token
+...
+frontend -&gt; backend : Authorization token
+backend -&gt; dbxdmp: /dmp/... Authorization token
+dbxdmp -&gt; stellair: /stellair/... Authorization token
+</code></pre><h3 id="configuration-devbox-sante-">Configuration DevBox-Sante :</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">security</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">stellair</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">           </span><span style="color:#204a87;font-weight:bold">mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">filter</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">           </span><span style="color:#204a87;font-weight:bold">baseUrl</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">https://api.demo.stellair.fr/v1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h3 id="exemple-dappel-de-la-devbox-santé-avec-la-propagation-du-token-dauthorization">Exemple d&rsquo;appel de la devbox-santé avec la propagation du token d&rsquo;authorization</h3>
+<ul>
+<li><a href="https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx-dmp-5.x/stellair/TD0.2.bru">https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx-dmp-5.x/stellair/TD0.2.bru</a></li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
   
 
     

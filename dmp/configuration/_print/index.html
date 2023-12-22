@@ -326,8 +326,8 @@ Ils peuvent être mis en œuvre de manière différente.</p>
 </span></span></span></code></pre></div><p>Et la requête doit contenir les informations dans le header.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --location --request POST <span style="color:#4e9a06">&#39;http://localhost:8080/dmp/td21SubmitDocuments&#39;</span> <span style="color:#4e9a06">\
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;Content-Type: application/json&#39;</span> <span style="color:#4e9a06">\
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;dmpAuthentification.p12: MIIcdAIBAzCCHDo...AA==&#39;</span> <span style="color:#4e9a06">\
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;dmpAuthentification.password: PASSWORD&#39;</span> <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;dmpAuthentication.p12: MIIcdAIBAzCCHDo...AA==&#39;</span> <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;dmpAuthentication.password: PASSWORD&#39;</span> <span style="color:#4e9a06">\
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;dmpSignature.p12: MIIcoQIBAzCCH...IAA==&#39;</span> <span style="color:#4e9a06">\
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--header <span style="color:#4e9a06">&#39;dmpSignature.password: PASSWORD&#39;</span> <span style="color:#4e9a06">\
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>--data-raw <span style="color:#4e9a06">&#39;{

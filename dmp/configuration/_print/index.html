@@ -313,7 +313,7 @@ Ils peuvent être mis en œuvre de manière différente.</p>
 </span></span></span></code></pre></div><p>Pour charger dynamiquement les certificats, ssl et smime il suffit de rajouter les noms des certificats (<code>dmpAuthenticationP12.name</code>, <code>dmpSignatureP12.name</code>) dans le header de la requête HTTP :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET <span style="color:#4e9a06">&#34;http://hostname:port/dmp/td...&#34;</span> -H <span style="color:#4e9a06">&#34;accept: application/json&#34;</span> -H <span style="color:#4e9a06">&#34;dmpAuthenticationP12.name: ÀPréciser&#34;</span> -H <span style="color:#4e9a06">&#34;dmpAuthenticationP12.name: ÀPréciser&#34;</span>
 </span></span></code></pre></div><h4 id="authentification-indirecte--p12-in-header-http">Authentification indirecte : P12 in Header HTTP</h4>
-<p>Le mode <code>p12InHeader</code> permet de faire passer les deux certificats p12 dans l&rsquo;entête HTTP de la requête, cela permet à l&rsquo;appelant de conserver et décider des certificats utilisés lors de l&rsquo;appel du proxy.</p>
+<p>Le mode <code>p12InHeader</code> permet de faire passer les deux certificats p12 dans l&rsquo;entête HTTP de la requête, cela permet à l&rsquo;appelant de conserver et décider des certificats utilisés lors de l&rsquo;appel du proxy.</p>
 <p>Le header étant plus lourd il faudra veiller à ce que la configuration spring prenne en compte la taille du header d&rsquo;au moins 40Kb.</p>
 <p>La configuration <code>application.yml</code> est :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">server</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -337,6 +337,15 @@ Ils peuvent être mis en œuvre de manière différente.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">        ...
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">    }
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">}&#39;</span>
+</span></span></code></pre></div><p>Le certificat p12 doit être passé en base64.</p>
+<p>Windows Powershell:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#000">$cert</span> <span style="color:#ce5c00;font-weight:bold">=</span> get-content <span style="color:#4e9a06">&#39;certificate.p12&#39;</span> -Encoding Byte
+</span></span><span style="display:flex;"><span><span style="color:#000">$base64</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">[</span>System.Convert<span style="color:#ce5c00;font-weight:bold">]</span>::ToBase64String<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$cert</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$base64</span>
+</span></span></code></pre></div><p>Linux:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>base64 certificate.p12 &gt; outputfile
+</span></span></code></pre></div><p>Mac OS:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>base64 -i certificate.p12 -o outputfile
 </span></span></code></pre></div><h3 id="authentificatino-directe-stellair">Authentificatino directe Stellair</h3>
 <p>Une page de documentation spécifique se trouve ici : <a href="/dmp/howtos/demo-stellair">/dmp/howtos/demo-stellair</a></p>
 

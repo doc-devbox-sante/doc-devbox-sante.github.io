@@ -473,7 +473,16 @@ headers {
   mssAuthentication.p12: MIIcbAIBA...Bv4sVwVpAICCAA=
   mssAuthentication.userName: xxx-applicatif-test@medimail.mssante.fr
 }
-</code></pre>
+</code></pre><p>Le certificat p12 doit être passé en base64.</p>
+<p>Windows Powershell:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#000">$cert</span> <span style="color:#ce5c00;font-weight:bold">=</span> get-content <span style="color:#4e9a06">&#39;certificate.p12&#39;</span> -Encoding Byte
+</span></span><span style="display:flex;"><span><span style="color:#000">$base64</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">[</span>System.Convert<span style="color:#ce5c00;font-weight:bold">]</span>::ToBase64String<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$cert</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$base64</span>
+</span></span></code></pre></div><p>Linux:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>base64 certificate.p12 &gt; outputfile
+</span></span></code></pre></div><p>Mac OS:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>base64 -i certificate.p12 -o outputfile
+</span></span></code></pre></div>
 </div>
 
 

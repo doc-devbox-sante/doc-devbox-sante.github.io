@@ -148,6 +148,16 @@ Version imprimable multipages.
     
 	
 
+    <li><a href="#pg-0679c59074e82a2a8fa06a7ee23423e7">Intégrer la DevBox-Santé DMP-UI</a></li>
+
+
+
+    
+  
+    
+    
+	
+
     <li><a href="#pg-fd8f7195ee4edcccabfe17b658041e0a">Installer l&#39;IGC santé dans Acrobat reader</a></li>
 
 
@@ -342,6 +352,52 @@ Version imprimable multipages.
   
 
 <div class="td-content" style="">
+    <h1 id="pg-0679c59074e82a2a8fa06a7ee23423e7">Intégrer la DevBox-Santé DMP-UI</h1>
+	<div class="lead">Intégration de la DevBox-santé DMP-UI dans une iframe et passage de contexte.</div>
+	<div class="td-byline mb-4">
+		Par <b>Laurent Forêt</b> |
+        
+		<time datetime="2024-01-15" class="text-muted">15/01/2024</time>
+        
+	</div>
+	<p>Afin de transiter les documents entre le LPS intégrateur et la DMP_UI, on profite de la DevBox-Santé qui tourne pour ajouter des controllers.</p>
+<h2 id="authentification-passage-de-contexte">Authentification passage de contexte</h2>
+<p>Échange de contexte PS / Patient entre le LPS intégrateur appelant et la DevBox-Santé DMP-UI</p>
+<h3 id="diagramme-de-séquences">Diagramme de séquences</h3>
+<p><img src="transfert_context.png" alt=""></p>
+<h3 id="exemple">Exemple</h3>
+<p><img src="context_example.png" alt=""></p>
+<h2 id="envoi-vers-le-dmp-via-la-dmp_ui">Envoi vers le DMP via la DMP_UI</h2>
+<h3 id="diagramme-de-séquences-1">Diagramme de séquences</h3>
+<p><img src="toDMPUI.png" alt=""></p>
+<h3 id="exemple-1">Exemple</h3>
+<p>lors de l&rsquo;envoi d&rsquo;une soumission de document au travers de la websocket par le LPS intégrateur une notification apparait dans la DMP-UI :</p>
+<p><img src="todmpui_example.png" alt="todmpui_example"></p>
+<h2 id="import-vers-le-lps">Import vers le LPS</h2>
+<h3 id="diagramme-de-séquences-2">Diagramme de séquences</h3>
+<p><img src="toLPS.png" alt=""></p>
+<h3 id="exemple-2">Exemple</h3>
+<p>Lors de l&rsquo;action &ldquo;Intégrer dans le  LPS&rdquo; le document est envoyé au LPS intégrateur par la websocket.</p>
+<p><img src="tolps_example.png" alt="tolps_example"></p>
+
+</div>
+
+
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+
+  
+
+<div class="td-content" style="page-break-before: always">
     <h1 id="pg-fd8f7195ee4edcccabfe17b658041e0a">Installer l&#39;IGC santé dans Acrobat reader</h1>
 	<div class="lead">Comment installer les différent autorités de certificats de l&rsquo;IGC Santé de l&rsquo;ANS</div>
 	<div class="td-byline mb-4">

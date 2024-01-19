@@ -119,7 +119,13 @@ headers {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;authentificationWithOtpStep2&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;otp&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&amp;#39;utilisateur
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;test-sur-environnement-de-formation-mailiz&#34;&gt;Test sur environnement de formation Mailiz&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Créer un compte sur mailiz formation : &lt;a href=&#34;https://mailiz.formation.mssante.fr/&#34;&gt;https://mailiz.formation.mssante.fr/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Test accès messagerie &lt;a href=&#34;https://webmail.formation.mssante.fr/#1&#34;&gt;https://webmail.formation.mssante.fr/#1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;puis accès sur l&amp;rsquo;environnement de démo de la devbox-santé déployée sur le poste http://localhost:$PORT/ms-sante-front/login&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     

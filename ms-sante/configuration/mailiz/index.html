@@ -21,27 +21,27 @@
 <title>Mailiz | DevBox-Santé</title>
 <meta name="description" content="Environnements Mailiz Il faut configurer les points d&amp;rsquo;accès aux différents environnements de Mailiz.
 Formation devbox-sante: ms-sante: mailiz: servicesUrl: https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services authenticationServiceUrl: https://mss-idp-igcsante.formation.mssante.fr/openam/SSOSoap/metaAlias/asip/idp Production devbox-sante: ms-sante: mailiz: servicesUrl: https://mss-msg-igcsante.mssante.fr/mss-msg-services/services authenticationServiceUrl: https://mss-idp-igcsante.mssante.fr/openam/SSOSoap/metaAlias/asip/idp Authentification 2 modes d&amp;rsquo;authentification sont disponibles:
-par carte CPS (nécéssite l&amp;rsquo;installation du module cps de DevBox-Santé) : authentificationWithCps() login/motdepasse OTP, cette authentification s&amp;rsquo;effectue en 2 étapes : otpParameters = { otpCanalType: SMS | Mail, // canal pour recevoir l&amp;#39;otp otpCanalPwd: password, otpIdNat: idNat //(0&#43;adeli ou 8&#43;rpps) } AuthorizationContext context = authentificationWithOtpStep1(otpParameters); context = authentificationWithOtpStep2(context, otp) // dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&amp;#39;utilisateur ">
+par carte CPS (nécéssite l&amp;rsquo;installation du module cps de DevBox-Santé) : authentificationWithCps() login/motdepasse OTP, cette authentification s&amp;rsquo;effectue en 2 étapes : otpParameters = { otpCanalType: SMS | Mail, // canal pour recevoir l&amp;#39;otp otpCanalPwd: password, otpIdNat: idNat //(0&#43;adeli ou 8&#43;rpps) } AuthorizationContext context = authentificationWithOtpStep1(otpParameters); context = authentificationWithOtpStep2(context, otp) // dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&amp;#39;utilisateur Test sur environnement de formation Mailiz Créer un compte sur mailiz formation : https://mailiz.">
 <meta property="og:title" content="Mailiz" />
 <meta property="og:description" content="Environnements Mailiz Il faut configurer les points d&rsquo;accès aux différents environnements de Mailiz.
 Formation devbox-sante: ms-sante: mailiz: servicesUrl: https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services authenticationServiceUrl: https://mss-idp-igcsante.formation.mssante.fr/openam/SSOSoap/metaAlias/asip/idp Production devbox-sante: ms-sante: mailiz: servicesUrl: https://mss-msg-igcsante.mssante.fr/mss-msg-services/services authenticationServiceUrl: https://mss-idp-igcsante.mssante.fr/openam/SSOSoap/metaAlias/asip/idp Authentification 2 modes d&rsquo;authentification sont disponibles:
-par carte CPS (nécéssite l&rsquo;installation du module cps de DevBox-Santé) : authentificationWithCps() login/motdepasse OTP, cette authentification s&rsquo;effectue en 2 étapes : otpParameters = { otpCanalType: SMS | Mail, // canal pour recevoir l&#39;otp otpCanalPwd: password, otpIdNat: idNat //(0&#43;adeli ou 8&#43;rpps) } AuthorizationContext context = authentificationWithOtpStep1(otpParameters); context = authentificationWithOtpStep2(context, otp) // dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&#39;utilisateur " />
+par carte CPS (nécéssite l&rsquo;installation du module cps de DevBox-Santé) : authentificationWithCps() login/motdepasse OTP, cette authentification s&rsquo;effectue en 2 étapes : otpParameters = { otpCanalType: SMS | Mail, // canal pour recevoir l&#39;otp otpCanalPwd: password, otpIdNat: idNat //(0&#43;adeli ou 8&#43;rpps) } AuthorizationContext context = authentificationWithOtpStep1(otpParameters); context = authentificationWithOtpStep2(context, otp) // dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&#39;utilisateur Test sur environnement de formation Mailiz Créer un compte sur mailiz formation : https://mailiz." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://doc.devbox-sante.fr/ms-sante/configuration/mailiz/" /><meta property="article:section" content="ms-sante" />
 
-<meta property="article:modified_time" content="2023-12-05T10:17:54+01:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2024-01-19T16:27:57+01:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Mailiz">
 <meta itemprop="description" content="Environnements Mailiz Il faut configurer les points d&rsquo;accès aux différents environnements de Mailiz.
 Formation devbox-sante: ms-sante: mailiz: servicesUrl: https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services authenticationServiceUrl: https://mss-idp-igcsante.formation.mssante.fr/openam/SSOSoap/metaAlias/asip/idp Production devbox-sante: ms-sante: mailiz: servicesUrl: https://mss-msg-igcsante.mssante.fr/mss-msg-services/services authenticationServiceUrl: https://mss-idp-igcsante.mssante.fr/openam/SSOSoap/metaAlias/asip/idp Authentification 2 modes d&rsquo;authentification sont disponibles:
-par carte CPS (nécéssite l&rsquo;installation du module cps de DevBox-Santé) : authentificationWithCps() login/motdepasse OTP, cette authentification s&rsquo;effectue en 2 étapes : otpParameters = { otpCanalType: SMS | Mail, // canal pour recevoir l&#39;otp otpCanalPwd: password, otpIdNat: idNat //(0&#43;adeli ou 8&#43;rpps) } AuthorizationContext context = authentificationWithOtpStep1(otpParameters); context = authentificationWithOtpStep2(context, otp) // dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&#39;utilisateur ">
-<meta itemprop="dateModified" content="2023-12-05T10:17:54+01:00" />
-<meta itemprop="wordCount" content="109">
+par carte CPS (nécéssite l&rsquo;installation du module cps de DevBox-Santé) : authentificationWithCps() login/motdepasse OTP, cette authentification s&rsquo;effectue en 2 étapes : otpParameters = { otpCanalType: SMS | Mail, // canal pour recevoir l&#39;otp otpCanalPwd: password, otpIdNat: idNat //(0&#43;adeli ou 8&#43;rpps) } AuthorizationContext context = authentificationWithOtpStep1(otpParameters); context = authentificationWithOtpStep2(context, otp) // dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&#39;utilisateur Test sur environnement de formation Mailiz Créer un compte sur mailiz formation : https://mailiz.">
+<meta itemprop="dateModified" content="2024-01-19T16:27:57+01:00" />
+<meta itemprop="wordCount" content="141">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mailiz"/>
 <meta name="twitter:description" content="Environnements Mailiz Il faut configurer les points d&rsquo;accès aux différents environnements de Mailiz.
 Formation devbox-sante: ms-sante: mailiz: servicesUrl: https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services authenticationServiceUrl: https://mss-idp-igcsante.formation.mssante.fr/openam/SSOSoap/metaAlias/asip/idp Production devbox-sante: ms-sante: mailiz: servicesUrl: https://mss-msg-igcsante.mssante.fr/mss-msg-services/services authenticationServiceUrl: https://mss-idp-igcsante.mssante.fr/openam/SSOSoap/metaAlias/asip/idp Authentification 2 modes d&rsquo;authentification sont disponibles:
-par carte CPS (nécéssite l&rsquo;installation du module cps de DevBox-Santé) : authentificationWithCps() login/motdepasse OTP, cette authentification s&rsquo;effectue en 2 étapes : otpParameters = { otpCanalType: SMS | Mail, // canal pour recevoir l&#39;otp otpCanalPwd: password, otpIdNat: idNat //(0&#43;adeli ou 8&#43;rpps) } AuthorizationContext context = authentificationWithOtpStep1(otpParameters); context = authentificationWithOtpStep2(context, otp) // dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&#39;utilisateur "/>
+par carte CPS (nécéssite l&rsquo;installation du module cps de DevBox-Santé) : authentificationWithCps() login/motdepasse OTP, cette authentification s&rsquo;effectue en 2 étapes : otpParameters = { otpCanalType: SMS | Mail, // canal pour recevoir l&#39;otp otpCanalPwd: password, otpIdNat: idNat //(0&#43;adeli ou 8&#43;rpps) } AuthorizationContext context = authentificationWithOtpStep1(otpParameters); context = authentificationWithOtpStep2(context, otp) // dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&#39;utilisateur Test sur environnement de formation Mailiz Créer un compte sur mailiz formation : https://mailiz."/>
 
 
 
@@ -218,6 +218,7 @@ if (!doNotTrack) {
       </ul>
     </li>
     <li><a href="#authentification">Authentification</a></li>
+    <li><a href="#test-sur-environnement-de-formation-mailiz">Test sur environnement de formation Mailiz</a></li>
   </ul>
 </nav>
       </div>
@@ -314,7 +315,13 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">authentificationWithOtpStep2</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">otp</span><span style="color:#000;font-weight:bold">)</span> 
 </span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">// dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&#39;utilisateur
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><h2 id="test-sur-environnement-de-formation-mailiz">Test sur environnement de formation Mailiz</h2>
+<ul>
+<li>Créer un compte sur mailiz formation : <a href="https://mailiz.formation.mssante.fr/">https://mailiz.formation.mssante.fr/</a></li>
+<li>Test accès messagerie <a href="https://webmail.formation.mssante.fr/#1">https://webmail.formation.mssante.fr/#1</a></li>
+<li>puis accès sur l&rsquo;environnement de démo de la devbox-santé déployée sur le poste http://localhost:$PORT/ms-sante-front/login</li>
+</ul>
+
 	
 	
 	

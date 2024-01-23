@@ -1006,7 +1006,7 @@ DMPCCdaValidator       :
 &lt;ul&gt;
 &lt;li&gt;Accessible à tous les utilisateurs l&amp;rsquo;url LPS : &lt;a href=&#34;https://lps.dev1.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://lps.dev1.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Environnement Web PS accès CPS : &lt;a href=&#34;https://wps-cps.dev1.dmp.gouv.fr/ps/acces-web&#34;&gt;https://wps-cps.dev1.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Environnement Web PS accès PSC : &lt;a href=&#34;https://wps-cps.dev1.dmp.gouv.fr/ps/acces-web&#34;&gt;https://wps-cps.dev1.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Environnement Web PS accès PSC : &lt;a href=&#34;https://wps-psc.dev1.dmp.gouv.fr/ps/acces-web&#34;&gt;https://wps-psc.dev1.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Cet environnement est remis à jour toutes les semaines.&lt;/p&gt;
 &lt;h2 id=&#34;environnement-dhomologation&#34;&gt;Environnement d&amp;rsquo;Homologation&lt;/h2&gt;
@@ -1014,7 +1014,7 @@ DMPCCdaValidator       :
 &lt;ul&gt;
 &lt;li&gt;Accessible à tous les utilisateurs l&amp;rsquo;url LPS : https://lps.[devx].dmp.gouv.fr/si-dmp-server/v2/services&lt;/li&gt;
 &lt;li&gt;Environnement Web PS accès CPS : https://wps-cps.[devx].dmp.gouv.fr/ps/acces-web&lt;/li&gt;
-&lt;li&gt;Environnement Web PS accès PSC : https://wps-cps.[devx].dmp.gouv.fr/ps/acces-web&lt;/li&gt;
+&lt;li&gt;Environnement Web PS accès PSC : https://wps-psc.[devx].dmp.gouv.fr/ps/acces-web&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;vaccination&#34;&gt;Vaccination&lt;/h3&gt;
 &lt;p&gt;Les différentes vaccinations possibles de valider pour le patient &lt;strong&gt;Jean BON&lt;/strong&gt; :&lt;/p&gt;

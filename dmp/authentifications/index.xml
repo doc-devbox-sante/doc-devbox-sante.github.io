@@ -212,7 +212,8 @@ dbxdmp -&amp;gt; frontend : ok
         &lt;h2 id=&#34;authentification-directe-avec-cpsagent&#34;&gt;Authentification Directe avec CPS Agent&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Scenario possible&lt;/strong&gt; : Le frontend de l&amp;rsquo;intégrateur, passe le contexte d&amp;rsquo;authentification de la DevBox-Santé CPS agent se trouvant sur le poste client au backend. Le backend initie une session TLS/SSL avec le serveur DMP grâce au CpsAgentClient.&lt;/p&gt;
 &lt;h4 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h4&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;
+!theme aws-orange
 !define DEVBOX_COLOR #278ef5
 !define DMP_COLOR #35D9C0
 !define MSS_COLOR #DE5D80

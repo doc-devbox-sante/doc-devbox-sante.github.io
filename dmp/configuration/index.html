@@ -158,10 +158,17 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-dmpauthentificationsdirecte-check"/>
   <label for="m-dmpauthentificationsdirecte-check"><a href="/dmp/authentifications/directe/" title="Authentification Directe (via carte CPx)" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dmpauthentificationsdirecte"><span class="">Directe</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpauthentificationscps_agent-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmpauthentificationscps_agent-li">
   <input type="checkbox" id="m-dmpauthentificationscps_agent-check"/>
-  <label for="m-dmpauthentificationscps_agent-check"><a href="/dmp/authentifications/cps_agent/" title="Authentification Directe via le CPS Agent" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dmpauthentificationscps_agent"><span class="">Directe via CPS Agent</span></a></label>
+  <label for="m-dmpauthentificationscps_agent-check"><a href="/dmp/authentifications/cps_agent/" title="Authentification Directe via le CPS Agent" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmpauthentificationscps_agent"><span class="">Directe via CPS Agent</span></a></label>
   
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpauthentificationscps_agentagent_cookbook-li">
+  <input type="checkbox" id="m-dmpauthentificationscps_agentagent_cookbook-check"/>
+  <label for="m-dmpauthentificationscps_agentagent_cookbook-check"><a href="/dmp/authentifications/cps_agent/agent_cookbook/" title="CPS Agent Livre de cuisine" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmpauthentificationscps_agentagent_cookbook"><span class="">Cookbook</span></a></label>
+  
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmpauthentificationsolaqin_taas-li">
   <input type="checkbox" id="m-dmpauthentificationsolaqin_taas-check"/>
   <label for="m-dmpauthentificationsolaqin_taas-check"><a href="/dmp/authentifications/olaqin_taas/" title="Authentification Directe via OLAQIN TAAS (Terminal As A Service)" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmpauthentificationsolaqin_taas"><span class="">Directe via OLAQIN TAAS</span></a></label>
@@ -580,7 +587,7 @@ Ils peuvent être mis en œuvre de manière différente.</p>
 </span></span><span style="display:flex;"><span><span style="color:#000">$base64</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">[</span>System.Convert<span style="color:#ce5c00;font-weight:bold">]</span>::ToBase64String<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$cert</span><span style="color:#ce5c00;font-weight:bold">)</span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$base64</span>
 </span></span></code></pre></div><p>Linux:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>base64 certificate.p12 &gt; outputfile
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>base64 -w <span style="color:#0000cf;font-weight:bold">0</span> certificate.p12 &gt; outputfile
 </span></span></code></pre></div><p>Mac OS:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>base64 -i certificate.p12 -o outputfile
 </span></span></code></pre></div><h3 id="authentificatino-directe-stellair">Authentificatino directe Stellair</h3>

@@ -33,7 +33,7 @@ private void createCRBiologie(DMPCStructureSante structureSante) { final String 
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://doc.devbox-sante.fr/dmp/cda/crbiologie/" /><meta property="article:section" content="dmp" />
 
-<meta property="article:modified_time" content="2023-10-30T12:11:13+01:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2023-10-30T16:37:22+01:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Volet Compte rendu d&#39;examens de biologie">
 <meta itemprop="description" content="@Since DMP-3.0
@@ -41,7 +41,7 @@ La DevBox-Santé DMP prend également en charge la soumission de document struct
 Ce format de document est spécifié par l&rsquo;ANS : https://esante.gouv.fr/volet-cr-bio-compte-rendu-dexamens-de-biologie-medicale
 Un exemple de création de document conforme à la spécification est :
 private void createCRBiologie(DMPCStructureSante structureSante) { final String creationTime = &#34;20111020194600&#34;; final String startTime = &#34;20140520174600&#34;; final String stopTime = &#34;20140520184600&#34;; DMPCDocumentCRBiologie template = new DMPCDocumentCRBiologie(); template.setClassCode(&#34;10&#34;); template.addConfidentiality(&#34;N&#34;); template.setComments(&#34;Commentaire du document&#34;); template.">
-<meta itemprop="dateModified" content="2023-10-30T12:11:13+01:00" />
+<meta itemprop="dateModified" content="2023-10-30T16:37:22+01:00" />
 <meta itemprop="wordCount" content="608">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Volet Compte rendu d&#39;examens de biologie"/>
@@ -173,10 +173,17 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-dmpauthentificationsdirecte-check"/>
   <label for="m-dmpauthentificationsdirecte-check"><a href="/dmp/authentifications/directe/" title="Authentification Directe (via carte CPx)" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dmpauthentificationsdirecte"><span class="">Directe</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpauthentificationscps_agent-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmpauthentificationscps_agent-li">
   <input type="checkbox" id="m-dmpauthentificationscps_agent-check"/>
-  <label for="m-dmpauthentificationscps_agent-check"><a href="/dmp/authentifications/cps_agent/" title="Authentification Directe via le CPS Agent" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dmpauthentificationscps_agent"><span class="">Directe via CPS Agent</span></a></label>
+  <label for="m-dmpauthentificationscps_agent-check"><a href="/dmp/authentifications/cps_agent/" title="Authentification Directe via le CPS Agent" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmpauthentificationscps_agent"><span class="">Directe via CPS Agent</span></a></label>
   
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpauthentificationscps_agentagent_cookbook-li">
+  <input type="checkbox" id="m-dmpauthentificationscps_agentagent_cookbook-check"/>
+  <label for="m-dmpauthentificationscps_agentagent_cookbook-check"><a href="/dmp/authentifications/cps_agent/agent_cookbook/" title="CPS Agent Livre de cuisine" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmpauthentificationscps_agentagent_cookbook"><span class="">Cookbook</span></a></label>
+  
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmpauthentificationsolaqin_taas-li">
   <input type="checkbox" id="m-dmpauthentificationsolaqin_taas-check"/>
   <label for="m-dmpauthentificationsolaqin_taas-check"><a href="/dmp/authentifications/olaqin_taas/" title="Authentification Directe via OLAQIN TAAS (Terminal As A Service)" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmpauthentificationsolaqin_taas"><span class="">Directe via OLAQIN TAAS</span></a></label>

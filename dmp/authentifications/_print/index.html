@@ -615,7 +615,7 @@ backend -&gt; frontend : ok
 </span></span></span></code></pre></div><p>Pour lancer l&rsquo;image docker :</p>
 <pre tabindex="0"><code>docker run --name devbox-sante-cps-agent -p 8080:8080 -d devboxsante/CLIENT:VERSION
 </code></pre><p><img src="devboxsante-docker.png" alt="DevBox-Santé backend"></p>
-<p>Nous avons déployé pour l&rsquo;instance cela :</p>
+<p>Nous avons déployé pour l&rsquo;instant cela :</p>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!theme aws-orange
 !define DEVBOX_COLOR #278ef5
 !define DMP_COLOR #35D9C0
@@ -674,7 +674,7 @@ node &#34;Environnement back&#34; {
 </code></pre><h3 id="3-obtenir-le-mot-de-passe-de-la-devbox-santé-cpsagent-sur-le-poste-client">3. Obtenir le mot de passe de la DevBox-santé CPS agent sur le poste client.</h3>
 <p>Pour obtenir le mot de passe d&rsquo;accès, il faut depuis un processus local au poste client faire l&rsquo;appel à la route <code>/cps/password</code></p>
 <p><img src="get-password.png" alt="Get password"></p>
-<p>Ce mot de passe est connu de l&rsquo;application front, et peut être passé au backend.</p>
+<p>Ce mot de passe est dorénavant connu de l&rsquo;application front, et peut être passé au backend.</p>
 <h3 id="4-appeler-la-devbox-santé-dmp-avec-les-informations-du-cps-agent">4. Appeler la DevBox-Santé DMP avec les informations du CPS Agent</h3>
 <p>Le frontend fait passer au backend les informations du poste client CPS Agent suivantes :</p>
 <ul>

@@ -1431,7 +1431,16 @@ node &#34;Environnement back&#34; {
         }
     }
 }
-</code></pre><h3 id="3-obtenir-le-mot-de-passe-de-la-devbox-santé-cpsagent-sur-le-poste-client">3. Obtenir le mot de passe de la DevBox-santé CPS agent sur le poste client.</h3>
+</code></pre>
+
+<div class="alert alert-info" role="alert">
+<h4 class="alert-heading">À noter</h4>
+
+    Le cps-agent est lancé en ssl pour chiffrer les connexions entre le cps agent et sont client. Néanmoins, comme le cps-agent tourne sur un poste qui n&rsquo;a pas de nom de domaine, le certificat utilisé est auto-signé.
+
+</div>
+
+<h3 id="3-obtenir-le-mot-de-passe-de-la-devbox-santé-cpsagent-sur-le-poste-client">3. Obtenir le mot de passe de la DevBox-santé CPS agent sur le poste client.</h3>
 <p>Pour obtenir le mot de passe d&rsquo;accès, il faut depuis un processus local au poste client faire l&rsquo;appel à la route <code>/cps/password</code></p>
 <p><img src="get-password.png" alt="Get password"></p>
 <p>Ce mot de passe est dorénavant connu de l&rsquo;application front, et peut être passé au backend.</p>

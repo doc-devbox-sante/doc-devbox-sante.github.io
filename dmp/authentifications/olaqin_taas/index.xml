@@ -136,7 +136,17 @@ La réponse étant :&lt;/li&gt;
 &lt;h2 id=&#34;authentification-avec-sso-et-propagation-du-token-vers-la-devbox-sante&#34;&gt;Authentification avec SSO et propagation du token vers la DevBox-Sante&lt;/h2&gt;
 &lt;p&gt;L&amp;rsquo;utilisateur s&amp;rsquo;authentifie avec un SSO partenaire de stellair, récupère le jwt token d&amp;rsquo;authorization et le propage.&lt;/p&gt;
 &lt;h3 id=&#34;diagramme-de-séquence&#34;&gt;Diagramme de séquence&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
 box &amp;#34;Environnement utilisateur&amp;#34;
     participant &amp;#34;Poste client&amp;#34; as frontend
 end box

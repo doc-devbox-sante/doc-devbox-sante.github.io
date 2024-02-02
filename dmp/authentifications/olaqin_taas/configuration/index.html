@@ -420,7 +420,17 @@ if (!doNotTrack) {
 <h2 id="authentification-avec-sso-et-propagation-du-token-vers-la-devbox-sante">Authentification avec SSO et propagation du token vers la DevBox-Sante</h2>
 <p>L&rsquo;utilisateur s&rsquo;authentifie avec un SSO partenaire de stellair, récupère le jwt token d&rsquo;authorization et le propage.</p>
 <h3 id="diagramme-de-séquence">Diagramme de séquence</h3>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
 box &#34;Environnement utilisateur&#34;
     participant &#34;Poste client&#34; as frontend
 end box

@@ -326,6 +326,7 @@ if (!doNotTrack) {
         <li></li>
         <li><a href="#lancer-la-devbox-santé-en-ssl-debug">Lancer la devbox-santé en ssl debug</a></li>
         <li><a href="#changer-la-configuration-de-la-devbox-santé-fournie">Changer la configuration de la devbox-santé fournie</a></li>
+        <li><a href="#installer-en-mode-silencieux">Installer en mode silencieux</a></li>
       </ul>
     </li>
   </ul>
@@ -393,6 +394,21 @@ Les modifications possibles de cette configuration sont décrites pour chacun de
 <li>pour l&rsquo;INSi : <a href="/insi/configuration">/insi/configuration</a></li>
 <li>…</li>
 </ul>
+<h3 id="installer-en-mode-silencieux">Installer en mode silencieux</h3>
+<p>L&rsquo;installer de la DevBox-Santé s&rsquo;appuie sur install4j, il est donc possible de lancer une installation en mode silencieux avec l&rsquo;option <code>-q</code>. Pour cela :</p>
+<ul>
+<li>Installer la devbox-sante en mode GUI sur un poste afin de récupérer le fichier <code>.install4j/response.varfile</code> se trouvant dans le répertoire d&rsquo;installation. Il devrait ressembler à cela :</li>
+</ul>
+<pre tabindex="0"><code># install4j response file for DevBox Santé 4.7.0
+sys.adminRights$Boolean=true
+sys.component.178$Boolean=true
+sys.installationDir=C\:\\Program Files\\DevBoxSante
+sys.languageId=fr
+</code></pre><ul>
+<li>Lancer l&rsquo;installation en mode silencieux. Sous Windows depuis un terminal en tant qu&rsquo;administrateur :</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>.<span style="color:#4e9a06">\D</span>evBoxSante-windows-x64-4.7.0.exe -q -varfile response.varfile
+</span></span></code></pre></div><p>Plus d&rsquo;information : <a href="https://www.ej-technologies.com/resources/install4j/help/doc/installers/installerModes.html">https://www.ej-technologies.com/resources/install4j/help/doc/installers/installerModes.html</a></p>
 
         <div class="section-index">
     

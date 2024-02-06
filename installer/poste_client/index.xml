@@ -395,6 +395,21 @@ Les modifications possibles de cette configuration sont décrites pour chacun de
 &lt;li&gt;pour l&amp;rsquo;INSi : &lt;a href=&#34;https://doc.devbox-sante.fr/insi/configuration&#34;&gt;/insi/configuration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;installer-en-mode-silencieux&#34;&gt;Installer en mode silencieux&lt;/h3&gt;
+&lt;p&gt;L&amp;rsquo;installer de la DevBox-Santé s&amp;rsquo;appuie sur install4j, il est donc possible de lancer une installation en mode silencieux avec l&amp;rsquo;option &lt;code&gt;-q&lt;/code&gt;. Pour cela :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Installer la devbox-sante en mode GUI sur un poste afin de récupérer le fichier &lt;code&gt;.install4j/response.varfile&lt;/code&gt; se trouvant dans le répertoire d&amp;rsquo;installation. Il devrait ressembler à cela :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# install4j response file for DevBox Santé 4.7.0
+sys.adminRights$Boolean=true
+sys.component.178$Boolean=true
+sys.installationDir=C\:\\Program Files\\DevBoxSante
+sys.languageId=fr
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Lancer l&amp;rsquo;installation en mode silencieux. Sous Windows depuis un terminal en tant qu&amp;rsquo;administrateur :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#4e9a06&#34;&gt;\D&lt;/span&gt;evBoxSante-windows-x64-4.7.0.exe -q -varfile response.varfile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Plus d&amp;rsquo;information : &lt;a href=&#34;https://www.ej-technologies.com/resources/install4j/help/doc/installers/installerModes.html&#34;&gt;https://www.ej-technologies.com/resources/install4j/help/doc/installers/installerModes.html&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>

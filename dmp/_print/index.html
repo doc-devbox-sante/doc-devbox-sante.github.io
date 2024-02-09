@@ -1366,7 +1366,7 @@ backend -&gt; frontend : ok
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-5503356f8ade4497cf0cf29afededbf5">3.3.1 - CPS Agent Livre de cuisine</h1>
-    <div class="lead">Comment mettre en œuvre lest différentes DevBox-santé pour une authentification DMP en mode CPS-Agent</div>
+    <div class="lead">Comment mettre en œuvre les différentes DevBox-santé pour une authentification DMP en mode CPS-Agent</div>
 	<h3 id="1-démarrer-la-devbox-santé-dmp-côté-backend">1. Démarrer la Devbox-Santé DMP côté backend</h3>
 <p>Il s&rsquo;agit d&rsquo;une image docker avec la configuration suivante :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
@@ -1519,7 +1519,7 @@ frontend -d-&gt; backend : 2 POST {ip, port , password}
 backend -d-&gt; dmpFacade  : 3 POST /dmp/td02Exist , headers {cps.agent.client.url, cps.agent.client.passaord}
 CpsAgentClient &lt;-&gt; cpsAgent : 4 /cps/ opérations
 cps &lt;-down-&gt; cryptolibCPS : 5 appels natifs
-dmpFacade -down-&gt; DMP : 5 POST SOAP / XDS 
+dmpFacade -down-&gt; DMP : 6 POST SOAP / XDS 
 </code></pre>
 </div>
 
@@ -3211,9 +3211,17 @@ Ils peuvent être mis en œuvre de manière différente.</p>
 	<h2 id="pré-requis">Pré-requis</h2>
 <p>Information officielle disponible ici : <a href="https://cnda.ameli.fr/editeurs/referencer-un-logiciel/">https://cnda.ameli.fr/editeurs/referencer-un-logiciel/</a></p>
 <ol>
-<li>Inscrire votre société auprès du CNDA : <a href="https://sicnda.ameli.fr/#/login/subscribe">https://sicnda.ameli.fr/#/login/subscribe</a></li>
-<li>Créer un logiciel dans la plateforme ainsi qu&rsquo;un dossier d&rsquo;homologation</li>
-<li>Obtenir des cartes CPS et/ou certificats de test (médecin, CPE, autre) auprès de l&rsquo;ANS</li>
+<li>Inscrire votre société auprès du CNDA : <a href="https://sicnda.ameli.fr/#/login/subscribe">https://sicnda.ameli.fr/#/login/subscribe</a>
+<ul>
+<li>Créer un logiciel dans la plateforme</li>
+<li>Récupérer/lire dans l&rsquo;onglet documentation les conditions contractuelles pour le DMP</li>
+<li>Récupérer/étudier la documentation à jour sur les packages de test</li>
+<li>Remplir un nouveau dossier d&rsquo;homologation (support possible DEVCOOP)</li>
+</ul>
+</li>
+<li>Depuis un compte industriel sécurisé, récupérer le package documentaire à jour sur <a href="https://industriels.sesam-vitale.fr/group/dmp-compatibilite">https://industriels.sesam-vitale.fr/group/dmp-compatibilite</a></li>
+<li>Obtenir des cartes CPS et/ou certificats de test (médecin, CPE, autre) auprès de l&rsquo;ANS
+Plus de renseignements : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf</a></li>
 </ol>
 <h2 id="choix-architecture">Choix Architecture</h2>
 <ol start="4">

@@ -281,7 +281,7 @@ backend -&gt; frontend : ok
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-5503356f8ade4497cf0cf29afededbf5">1 - CPS Agent Livre de cuisine</h1>
-    <div class="lead">Comment mettre en œuvre lest différentes DevBox-santé pour une authentification DMP en mode CPS-Agent</div>
+    <div class="lead">Comment mettre en œuvre les différentes DevBox-santé pour une authentification DMP en mode CPS-Agent</div>
 	<h3 id="1-démarrer-la-devbox-santé-dmp-côté-backend">1. Démarrer la Devbox-Santé DMP côté backend</h3>
 <p>Il s&rsquo;agit d&rsquo;une image docker avec la configuration suivante :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
@@ -434,7 +434,7 @@ frontend -d-&gt; backend : 2 POST {ip, port , password}
 backend -d-&gt; dmpFacade  : 3 POST /dmp/td02Exist , headers {cps.agent.client.url, cps.agent.client.passaord}
 CpsAgentClient &lt;-&gt; cpsAgent : 4 /cps/ opérations
 cps &lt;-down-&gt; cryptolibCPS : 5 appels natifs
-dmpFacade -down-&gt; DMP : 5 POST SOAP / XDS 
+dmpFacade -down-&gt; DMP : 6 POST SOAP / XDS 
 </code></pre>
 </div>
 

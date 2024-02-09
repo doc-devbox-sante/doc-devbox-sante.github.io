@@ -174,7 +174,7 @@ frontend -d-&amp;gt; backend : 2 POST {ip, port , password}
 backend -d-&amp;gt; dmpFacade  : 3 POST /dmp/td02Exist , headers {cps.agent.client.url, cps.agent.client.passaord}
 CpsAgentClient &amp;lt;-&amp;gt; cpsAgent : 4 /cps/ opérations
 cps &amp;lt;-down-&amp;gt; cryptolibCPS : 5 appels natifs
-dmpFacade -down-&amp;gt; DMP : 5 POST SOAP / XDS 
+dmpFacade -down-&amp;gt; DMP : 6 POST SOAP / XDS 
 &lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>

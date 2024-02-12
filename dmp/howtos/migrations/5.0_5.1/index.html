@@ -428,8 +428,8 @@ if (!doNotTrack) {
 <h3 id="tools--récupérer-les-informations-du-contexte-dappel">Tools : récupérer les informations du contexte d&rsquo;appel.</h3>
 <p>Un nouvel endpoint a été rajouté, afin d&rsquo;aider et comprendre les informations récupérées du certificat P12 ou de la carte CPS et insérées à la volée dans les appels vers le DMP.</p>
 <p>Dans le cas d&rsquo;une POST vide en mode securité P12 sur le endpoint <code>/dmp/authenticationContext</code> :</p>
-<pre tabindex="0"><code class="language-curl" data-lang="curl">curl --location &#39;http://localhost:9999/dmp/authenticationContext&#39; --data &#39;{}&#39;
-</code></pre><p>la réponse est :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --location <span style="color:#4e9a06">&#39;http://localhost:9999/dmp/authenticationContext&#39;</span> --data <span style="color:#4e9a06">&#39;{}&#39;</span>
+</span></span></code></pre></div><p>la réponse est :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>   <span style="color:#204a87;font-weight:bold">&#34;authorInfo&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>       <span style="color:#204a87;font-weight:bold">&#34;internalId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;UNKNOWN&#34;</span><span style="color:#000;font-weight:bold">,</span>

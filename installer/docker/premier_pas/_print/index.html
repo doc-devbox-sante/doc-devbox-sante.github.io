@@ -4,8 +4,8 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.104.2" />
-<link rel="canonical" type="text/html" href="https://doc.devbox-sante.fr/installer/docker/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://doc.devbox-sante.fr/installer/docker/index.xml">
+<link rel="canonical" type="text/html" href="https://doc.devbox-sante.fr/installer/docker/premier_pas/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://doc.devbox-sante.fr/installer/docker/premier_pas/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Un container docker | DevBox-Santé</title>
-<meta name="description" content="Un container docker pour tous les composants de la DevBox-santé dans votre environnement HDS.
+<title>Premier Pas | DevBox-Santé</title>
+<meta name="description" content="Howtos pour bien démarrer
 ">
-<meta property="og:title" content="Un container docker" />
-<meta property="og:description" content="Un container docker pour tous les composants de la DevBox-santé dans votre environnement HDS.
+<meta property="og:title" content="Premier Pas" />
+<meta property="og:description" content="Howtos pour bien démarrer
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://doc.devbox-sante.fr/installer/docker/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="https://doc.devbox-sante.fr/installer/docker/premier_pas/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Un container docker">
-<meta itemprop="description" content="Un container docker pour tous les composants de la DevBox-santé dans votre environnement HDS.
+<meta itemprop="name" content="Premier Pas">
+<meta itemprop="description" content="Howtos pour bien démarrer
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Un container docker"/>
-<meta name="twitter:description" content="Un container docker pour tous les composants de la DevBox-santé dans votre environnement HDS.
+<meta name="twitter:title" content="Premier Pas"/>
+<meta name="twitter:description" content="Howtos pour bien démarrer
 "/>
 
 
@@ -128,14 +128,14 @@ if (!doNotTrack) {
 Version imprimable multipages.
 <a href="#" onclick="print();return false;">Cliquer ici pour imprimer</a>.
 </p><p>
-<a href="/installer/docker/">Retour à la version par défaut</a>.
+<a href="/installer/docker/premier_pas/">Retour à la version par défaut</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">Un container docker</h1>
-<div class="lead">Un container docker pour tous les composants de la DevBox-santé dans votre environnement HDS.</div>
+<h1 class="title">Premier Pas</h1>
+<div class="lead">Howtos pour bien démarrer</div>
 
 
 
@@ -147,85 +147,13 @@ Version imprimable multipages.
   
   
 
-  
-    
-    
-	
-<li>1: <a href="#pg-e1769c1902a362b138015795133b56ac">Premier Pas</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
   
 
     </ul>
 
 
 <div class="content">
-      <p>Chacun de nos clients dispose d’une image Docker contenant les éléments de la DevBox-Santé adaptés à leur besoin directement sur le hub de Docker :</p>
-<p><img src="docker_image.png" alt="DevBox-santé docker image"></p>
-<p>Il vous suffit donc de &ldquo;PULLER&rdquo; l’image :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-docker" data-lang="docker"><span style="display:flex;"><span>docker pull devboxsante/clientname:tagname<span style="color:#a40000">
-</span></span></span></code></pre></div><h2 id="configuration-de-limage">Configuration de l’image</h2>
-<h3 id="variable-denvironnements">Variable d’environnements</h3>
-<p>Dans le fichier de configuration <code>application.yml</code> est disposée des variables d’environnements permettant de forcer une configuration spécifique. Comme par exemple en surchargeant l’url du DMP : </p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-docker" data-lang="docker"><span style="display:flex;"><span>docker run --name devbox-sante -p 8080:8080 -d <span style="color:#4e9a06">\ </span>-e <span style="color:#000">DEVBOX_DMP_URL</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;https://devh.lps2.dmp.gouv.fr/si-dmp-server/v2/services&#39;</span> devboxsante/clientname:latest <span style="color:#a40000">
-</span></span></span></code></pre></div><p>Vous pouvez même mettre toutes vos variables dans un fichier : </p>
-<pre tabindex="0"><code>docker run --name devbox-sante-clientname -d --env-file=clientname.env -p 8080:8080  devboxsante/clientname:tagname
-</code></pre><h3 id="recréer-une-image">Recréer une image</h3>
-<p>Vous pouvez même recréer une image en déposant votre configuration et autres certificats. Comme par exemple pour remplacer le fichier <code>application.yml</code> fourni par défaut :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">FROM</span><span style="color:#4e9a06"> devboxsante/devbox:version</span><span style="color:#a40000">
-</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">WORKDIR</span><span style="color:#4e9a06"> /workspace</span><span style="color:#a40000">
-</span></span></span><span style="display:flex;"><span><span style="color:#a40000">
-</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">EXPOSE</span><span style="color:#4e9a06"> 8080</span><span style="color:#a40000">
-</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">COPY</span> asip-p12-EL-TEST-ORG-SIGN.p12 /workspace/sign.p12<span style="color:#a40000">
-</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">COPY</span> asip-p12-EL-TEST-ORG-AUTH.p12 /workspace/auth.p12<span style="color:#a40000">
-</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">COPY</span> application-clientname.yml /workspace/BOOT-INF/classes/application.yml<span style="color:#a40000">
-</span></span></span></code></pre></div><h4 id="une-image-permettant-la-génération-des-ins_datamatrix">Une image permettant la génération des INS_DATAMATRIX</h4>
-<p>Les datamatrix générées par nos outils, ne permettent pas d&rsquo;accéder à l&rsquo;environnement graphique et génère une erreur de chargement de FONT.
-Cf. le stackoverflow sur ce sujet : <a href="https://stackoverflow.com/questions/69814102/spring-boot-in-docker-build-by-buildpack-cannot-load-font">https://stackoverflow.com/questions/69814102/spring-boot-in-docker-build-by-buildpack-cannot-load-font</a></p>
-<p>Donc en attendant que notre issue <a href="https://devbox-sante.atlassian.net/browse/INSI-64">https://devbox-sante.atlassian.net/browse/INSI-64</a> soit réglée  et que les Datamatrix puissent être générés dans un environnement docker depuis l&rsquo;image livrée, vous pouvez générer une nouvelle image en installant la <code>fontconfig</code> nécessaire.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">FROM</span><span style="color:#4e9a06"> devboxsante/devbox:version</span><span style="color:#a40000">
-</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">USER</span><span style="color:#4e9a06"> root </span><span style="color:#a40000">
-</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">RUN</span> apt-get update <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#4e9a06">\
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    apt-get install --assume-yes fontconfig <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#4e9a06">\
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    rm -rf /var/lib/apt/lists/* /var/cache/debconf/*<span style="color:#a40000">
-</span></span></span><span style="display:flex;"><span><span style="color:#a40000">
-</span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">EXPOSE</span><span style="color:#4e9a06"> 8080</span><span style="color:#a40000">
-</span></span></span></code></pre></div>
-</div>
-</div>
-
-
-  
-  
-  
-  
-
-  
-  
-
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-e1769c1902a362b138015795133b56ac">1 - Premier Pas</h1>
-    <div class="lead">Howtos pour bien démarrer</div>
-	<p>Voici la todo list pour commencer simplement</p>
+      <p>Voici la todo list pour commencer simplement</p>
 <ol>
 <li>Aller sur le hub de Docker avec le lien donné</li>
 <li>La dernière image à récupérer est configurée comme précisé dans le README.md . Vérifier que cela correspond à vos besoins.</li>
@@ -237,11 +165,9 @@ Cf. le stackoverflow sur ce sujet : <a href="https://stackoverflow.com/questions
 </ol>
 
 </div>
+</div>
 
 
-
-    
-      
   
   
   
@@ -250,10 +176,6 @@ Cf. le stackoverflow sur ce sujet : <a href="https://stackoverflow.com/questions
   
   
 
-  
-
-    
-	
   
 
 

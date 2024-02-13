@@ -174,7 +174,8 @@ dbxdmp -&amp;gt; stellair: /stellair/... Authorization token
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;           &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;baseUrl&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://api.demo.stellair.fr/v1&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;exemple-dappel-de-la-devbox-santé-avec-la-propagation-du-token-dauthorization&#34;&gt;Exemple d&amp;rsquo;appel de la devbox-santé avec la propagation du token d&amp;rsquo;authorization&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx-dmp-5.x/stellair/TD0.2.bru&#34;&gt;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx-dmp-5.x/stellair/TD0.2.bru&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx-dmp-5.x/authentification/stellair/&#34;&gt;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx-dmp-5.x/authentification/stellair/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx-insi-2.x/authentication/stellair/&#34;&gt;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx-insi-2.x/authentication/stellair/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

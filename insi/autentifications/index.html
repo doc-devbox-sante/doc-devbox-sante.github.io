@@ -4,8 +4,8 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.104.2" />
-<link rel="alternate" type="text/html" href="https://doc.devbox-sante.fr/insi/howtos/gestioncertificatinsi/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://doc.devbox-sante.fr/insi/howtos/gestioncertificatinsi/index.xml">
+<link rel="alternate" type="text/html" href="https://doc.devbox-sante.fr/insi/autentifications/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://doc.devbox-sante.fr/insi/autentifications/index.xml">
 <meta name="robots" content="index, follow">
 
 
@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Gestion des certificats | DevBox-Santé</title>
-<meta name="description" content="Gestion des certificats de l&#39;IGC santé pour l&#39;authentification par certificat pour l&#39;INSi
+<title>Authentifications | DevBox-Santé</title>
+<meta name="description" content="Les différentes mécanismes d&#39;authentifications et architectures possibles avec le DMP
 ">
-<meta property="og:title" content="Gestion des certificats" />
-<meta property="og:description" content="Gestion des certificats de l&#39;IGC santé pour l&#39;authentification par certificat pour l&#39;INSi
+<meta property="og:title" content="Authentifications" />
+<meta property="og:description" content="Les différentes mécanismes d&#39;authentifications et architectures possibles avec le DMP
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://doc.devbox-sante.fr/insi/howtos/gestioncertificatinsi/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="https://doc.devbox-sante.fr/insi/autentifications/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Gestion des certificats">
-<meta itemprop="description" content="Gestion des certificats de l&#39;IGC santé pour l&#39;authentification par certificat pour l&#39;INSi
+<meta itemprop="name" content="Authentifications">
+<meta itemprop="description" content="Les différentes mécanismes d&#39;authentifications et architectures possibles avec le DMP
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Gestion des certificats"/>
-<meta name="twitter:description" content="Gestion des certificats de l&#39;IGC santé pour l&#39;authentification par certificat pour l&#39;INSi
+<meta name="twitter:title" content="Authentifications"/>
+<meta name="twitter:description" content="Les différentes mécanismes d&#39;authentifications et architectures possibles avec le DMP
 "/>
 
 
@@ -145,16 +145,16 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-insirest-check"/>
   <label for="m-insirest-check"><a href="/insi/rest/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-insirest"><span class="">REST Proxy</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insiautentifications-li">
-  <input type="checkbox" id="m-insiautentifications-check"/>
-  <label for="m-insiautentifications-check"><a href="/insi/autentifications/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-insiautentifications"><span class="">Authentifications</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-insiautentifications-li">
+  <input type="checkbox" id="m-insiautentifications-check" checked/>
+  <label for="m-insiautentifications-check"><a href="/insi/autentifications/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__section" id="m-insiautentifications"><span class="td-sidebar-nav-active-item">Authentifications</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insiconfiguration-li">
   <input type="checkbox" id="m-insiconfiguration-check"/>
   <label for="m-insiconfiguration-check"><a href="/insi/configuration/" title="Configuration DevBox-santé INSi" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-insiconfiguration"><span class="">Configuration</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-insihowtos-li">
-  <input type="checkbox" id="m-insihowtos-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-insihowtos-li">
+  <input type="checkbox" id="m-insihowtos-check"/>
   <label for="m-insihowtos-check"><a href="/insi/howtos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-insihowtos"><span class="">Howtos</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -170,9 +170,9 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-insihowtosdatamatrix-check"/>
   <label for="m-insihowtosdatamatrix-check"><a href="/insi/howtos/datamatrix/" title="Datamatrix" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-insihowtosdatamatrix"><span class="">Générer un datamatrix</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-insihowtosgestioncertificatinsi-li">
-  <input type="checkbox" id="m-insihowtosgestioncertificatinsi-check" checked/>
-  <label for="m-insihowtosgestioncertificatinsi-check"><a href="/insi/howtos/gestioncertificatinsi/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__section" id="m-insihowtosgestioncertificatinsi"><span class="td-sidebar-nav-active-item">Gestion des certificats</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtosgestioncertificatinsi-li">
+  <input type="checkbox" id="m-insihowtosgestioncertificatinsi-check"/>
+  <label for="m-insihowtosgestioncertificatinsi-check"><a href="/insi/howtos/gestioncertificatinsi/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-insihowtosgestioncertificatinsi"><span class="">Gestion des certificats</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-insihowtosidentifiantcomposant-li">
   <input type="checkbox" id="m-insihowtosidentifiantcomposant-check"/>
@@ -207,11 +207,23 @@ if (!doNotTrack) {
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a id="print" href="https://doc.devbox-sante.fr/insi/howtos/gestioncertificatinsi/_print/"><i class="fa-solid fa-print fa-fw"></i> Imprimer la section entière</a>
+<a id="print" href="https://doc.devbox-sante.fr/insi/autentifications/_print/"><i class="fa-solid fa-print fa-fw"></i> Imprimer la section entière</a>
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#via-carte-cps-sur-le-poste-local">Via carte CPS sur le poste local</a></li>
+        <li><a href="#via-certificat-p12">Via certificat P12</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
             
 
 	
@@ -242,18 +254,15 @@ if (!doNotTrack) {
   <li class="breadcrumb-item">
     <a href="https://doc.devbox-sante.fr/insi/">INSi</a>
   </li>
-  <li class="breadcrumb-item">
-    <a href="https://doc.devbox-sante.fr/insi/howtos/">Howtos</a>
-  </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="https://doc.devbox-sante.fr/insi/howtos/gestioncertificatinsi/" aria-disabled="true" class="btn-link disabled">Gestion des certificats</a>
+    <a href="https://doc.devbox-sante.fr/insi/autentifications/" aria-disabled="true" class="btn-link disabled">Authentifications</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Gestion des certificats</h1>
-  <div class="lead">Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification par certificat pour l&rsquo;INSi</div>
+	<h1>Authentifications</h1>
+  <div class="lead">Les différentes mécanismes d&rsquo;authentifications et architectures possibles avec le DMP</div>
 	<header class="article-meta">
 		
 		
@@ -269,24 +278,75 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<p>Obtenir des certificats pour l&rsquo;INSi consiste à réaliser la même <a href="https://doc.devbox-sante.fr/dmp/howtos/gestioncertificat/">opération que pour le DMP</a>.
-et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package INSi 04.00.00.pdf</code>, une notice explicative est donnée</p>
-<p>Pour les certificats de test :</p>
-<ul>
-<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Fiche%20commande_CPx_et_certificats_de_test_VF.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Fiche%20commande_CPx_et_certificats_de_test_VF.pdf</a></li>
-</ul>
-<p>Pour les certificats de production :</p>
-<p><img src="ANS_certificats_segur.png" alt="ANS_certificats_segur.png"></p>
-<p>Depuis le SEGUR santé, les guides de commandes de certificats sont spécifiques à chaque couloir :</p>
-<ul>
-<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-medico-social-guide-certificats.pdf">Médico-social</a></li>
-<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-mdv-guide-certificats.pdf">Médecine de ville</a></li>
-<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-hopital-guide-certificats.pdf">Hôpital</a></li>
-<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-biologie-guide-certificats.pdf">Biologie</a></li>
-<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-radiologie-guide-certificats.pdf">Radiologie</a></li>
-<li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-officine-guide-certificats.pdf">Officine</a></li>
-</ul>
+	<h3 id="via-carte-cps-sur-le-poste-local">Via carte CPS sur le poste local</h3>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
 
+
+node &#34;Poste Client (Windows/Mac/Linux)&#34; {
+    [FrontEnd intégrateur] as frontend 
+
+    package &#34;DevBox-Santé&#34; DEVBOX_COLOR  {
+        component &#34;DevBoxSanté INSi&#34; as insFacade INS_COLOR {
+            [DevBoxSanté CPS] as cps CPS_COLOR
+            [DevBoxSanté Vitale] as vitale VITALE_COLOR
+        }
+
+    }
+    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+    [APILectureVitale (SesamVitale)] as apiLectureVitale 
+}
+
+cloud &#34;Téléservice **INSi** (SesamVitale)&#34; as insi
+
+[BackEnd intégrateur] as backend 
+
+
+
+frontend -u-&gt; backend : REST
+frontend -down-&gt; insFacade : HTTP GET /insi/rechercheAvecVitale
+cps &lt;-down-&gt; cryptolibCPS : appel natif
+vitale &lt;-down-&gt; apiLectureVitale : appel natif
+insFacade &lt;-d-&gt; insi : SOAP
+</code></pre><h3 id="via-certificat-p12">Via certificat P12</h3>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+
+node &#34;Environnement integrateur&#34; {
+    
+    [BackEnd intégrateur] as backend 
+
+    component &#34;DevBoxSanté INSi&#34; as insFacade INS_COLOR {
+            [P12Manager] as p12 INS_COLOR
+            [Pas de lecture vitale] as vitale VITALE_COLOR
+        }
+
+}
+
+cloud &#34;Téléservice **INSi** (SesamVitale)&#34; as insi
+
+backend --&gt; insFacade : HTTP GET /insi/rechercheSansVitale
+insFacade --&gt; insi : SOAP
+</code></pre>
         <div class="section-index">
     
     

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.104.2" />
-<link rel="canonical" type="text/html" href="https://doc.devbox-sante.fr/insi/rest/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://doc.devbox-sante.fr/insi/rest/index.xml">
+<link rel="canonical" type="text/html" href="https://doc.devbox-sante.fr/insi/autentifications/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://doc.devbox-sante.fr/insi/autentifications/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>REST Proxy | DevBox-Santé</title>
-<meta name="description" content="Une interface REST pour le Téléservice INSi 
+<title>Authentifications | DevBox-Santé</title>
+<meta name="description" content="Les différentes mécanismes d&#39;authentifications et architectures possibles avec le DMP
 ">
-<meta property="og:title" content="REST Proxy" />
-<meta property="og:description" content="Une interface REST pour le Téléservice INSi 
+<meta property="og:title" content="Authentifications" />
+<meta property="og:description" content="Les différentes mécanismes d&#39;authentifications et architectures possibles avec le DMP
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://doc.devbox-sante.fr/insi/rest/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="https://doc.devbox-sante.fr/insi/autentifications/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="REST Proxy">
-<meta itemprop="description" content="Une interface REST pour le Téléservice INSi 
+<meta itemprop="name" content="Authentifications">
+<meta itemprop="description" content="Les différentes mécanismes d&#39;authentifications et architectures possibles avec le DMP
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="REST Proxy"/>
-<meta name="twitter:description" content="Une interface REST pour le Téléservice INSi 
+<meta name="twitter:title" content="Authentifications"/>
+<meta name="twitter:description" content="Les différentes mécanismes d&#39;authentifications et architectures possibles avec le DMP
 "/>
 
 
@@ -128,14 +128,14 @@ if (!doNotTrack) {
 Version imprimable multipages.
 <a href="#" onclick="print();return false;">Cliquer ici pour imprimer</a>.
 </p><p>
-<a href="/insi/rest/">Retour à la version par défaut</a>.
+<a href="/insi/autentifications/">Retour à la version par défaut</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">REST Proxy</h1>
-<div class="lead">Une interface REST pour le Téléservice INSi</div>
+<h1 class="title">Authentifications</h1>
+<div class="lead">Les différentes mécanismes d&rsquo;authentifications et architectures possibles avec le DMP</div>
 
 
 
@@ -153,26 +153,7 @@ Version imprimable multipages.
 
 
 <div class="content">
-      <p>Le module insi-proxy, permet de fournit une facade REST à la facade <code>INSiClient</code> java.
-Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.</p>
-<h3 id="intégration-sur-un-environnement-de-démonstration">Intégration sur un environnement de démonstration</h3>
-<p>Vous pouvez commencer à intégrer la DevBox-Santé INSi depuis l&rsquo;environnement de démonstration.</p>
-<p>Pour cela vous pouvez :</p>
-<ul>
-<li>
-<p>consulter toute la documentation depuis l’environnement de démonstration <a href="https://demo-p12.devbox-sante.fr">REST de l&rsquo;API</a></p>
-</li>
-<li>
-<p>essayer avec une collection postman :</p>
-<p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
-</li>
-</ul>
-<blockquote>
-<p>Attention : Dans cet environnement de démonstratiion, l&rsquo;authentification supportée est celle par certificat. Il n&rsquo;est pas possible également de faire des recherches avec la carte vitale.</p>
-</blockquote>
-<h2 id="authentifications">Authentifications</h2>
-<p>L&rsquo;accès a l&rsquo;insi-proxy est donc indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
-<h3 id="via-carte-cps-sur-le-poste-local">Via carte CPS sur le poste local</h3>
+      <h3 id="via-carte-cps-sur-le-poste-local">Via carte CPS sur le poste local</h3>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!theme aws-orange
 !define DEVBOX_COLOR #278ef5
 !define DMP_COLOR #35D9C0
@@ -240,20 +221,7 @@ cloud &#34;Téléservice **INSi** (SesamVitale)&#34; as insi
 
 backend --&gt; insFacade : HTTP GET /insi/rechercheSansVitale
 insFacade --&gt; insi : SOAP
-</code></pre><h2 id="déploiement-avec-un-java-runtime-environment">Déploiement avec un Java Runtime Environment</h2>
-<p>Le livrable s&rsquo;agit d&rsquo;un jar exécutable, qui se lance de la manière suivante</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -jar insi-proxy-rest-*.jar
-</span></span></code></pre></div><p>Le composant est accessible depuis le poste local en HTTP sur l&rsquo;adresse ip 127.0.0.1</p>
-<p>Afin de valider le fonctionnement, ouvrir un navigateur à l&rsquo;adresse suivante : http://127.0.0.1:PORT</p>
-<p><img src="insi-browser.png" alt="insi-proxy browser"></p>
-<h3 id="intégration">Intégration</h3>
-<p>L&rsquo;ensemble des requêtes sont documentées via l&rsquo;interface swagger et sont accessibles sur l&rsquo;url suivante : http://127.0.0.1:PORT/swagger-ui.png</p>
-<p><img src="insi-swagger.png" alt="insi-proxy swagger"></p>
-<h3 id="intégration--dune-image-docker">Intégration  d&rsquo;une image docker</h3>
-<p>Une page de documentation dédié : <a href="/installer/docker">Docker</a></p>
-<h3 id="utilisation-de-linstaller-devbox-santé">Utilisation de l&rsquo;installer DevBox-Santé</h3>
-<p>Une page de documentation dédié : <a href="/installer/poste_client">poste_client</a></p>
-
+</code></pre>
 </div>
 </div>
 

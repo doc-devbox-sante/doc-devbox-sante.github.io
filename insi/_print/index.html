@@ -189,7 +189,7 @@ Version imprimable multipages.
     
     
 	
-<li>3: <a href="#pg-f3be3320f25bdc7df3195afeab9bdfd0">Configuration DevBox-santé INSi</a></li>
+<li>3: <a href="#pg-6b5b36d8625f29a5b098e64640eeb704">Authentifications</a></li>
 
 
     
@@ -208,30 +208,7 @@ Version imprimable multipages.
     
     
 	
-<li>4: <a href="#pg-158c7c95e6e497a951ef3db14cc40863">Howtos</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-    
-    
-	
-<li>4.1: <a href="#pg-5f0ce1be23dc2876d68369f145bce30e">Integrateurs checklist</a></li>
-
-
-    
-  
-    
-    
-	
-<li>4.2: <a href="#pg-e683af811ccc50a546ed6d81ebb8d2f2">Conformité CNDA</a></li>
+<li>4: <a href="#pg-f3be3320f25bdc7df3195afeab9bdfd0">Configuration DevBox-santé INSi</a></li>
 
 
     
@@ -250,7 +227,30 @@ Version imprimable multipages.
     
     
 	
-<li>4.3: <a href="#pg-cf9f436087bd6dae998d9bbec0c08356">Datamatrix</a></li>
+<li>5: <a href="#pg-158c7c95e6e497a951ef3db14cc40863">Howtos</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>5.1: <a href="#pg-5f0ce1be23dc2876d68369f145bce30e">Integrateurs checklist</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5.2: <a href="#pg-e683af811ccc50a546ed6d81ebb8d2f2">Conformité CNDA</a></li>
 
 
     
@@ -269,7 +269,7 @@ Version imprimable multipages.
     
     
 	
-<li>4.4: <a href="#pg-80e5e55089632da4faee2964e57f1da0">Gestion des certificats</a></li>
+<li>5.3: <a href="#pg-cf9f436087bd6dae998d9bbec0c08356">Datamatrix</a></li>
 
 
     
@@ -288,7 +288,26 @@ Version imprimable multipages.
     
     
 	
-<li>4.5: <a href="#pg-6038fea62438fa100cdead99cfa09e16">CNDA : Fiche d&#39;identité du composant INSi</a></li>
+<li>5.4: <a href="#pg-80e5e55089632da4faee2964e57f1da0">Gestion des certificats</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>5.5: <a href="#pg-6038fea62438fa100cdead99cfa09e16">CNDA : Fiche d&#39;identité du composant INSi</a></li>
 
 
     
@@ -296,7 +315,7 @@ Version imprimable multipages.
     
     
 	
-<li>4.6: <a href="#pg-331c095d82641a15dc0961c57e0b63e8">Foire aux questions INSi</a></li>
+<li>5.6: <a href="#pg-331c095d82641a15dc0961c57e0b63e8">Foire aux questions INSi</a></li>
 
 
     
@@ -319,7 +338,7 @@ Version imprimable multipages.
     
     
 	
-<li>5: <a href="#pg-2b1a1095ea386dd4af3b0bc3c2ac5b4e">Architecture interne des différents composants</a></li>
+<li>6: <a href="#pg-2b1a1095ea386dd4af3b0bc3c2ac5b4e">Architecture interne des différents composants</a></li>
 
 
     
@@ -338,7 +357,7 @@ Version imprimable multipages.
     
     
 	
-<li>6: <a href="#pg-e661aca952fdd42de0e410979c74bd44">Versions</a></li>
+<li>7: <a href="#pg-e661aca952fdd42de0e410979c74bd44">Versions</a></li>
 
 
     
@@ -357,7 +376,7 @@ Version imprimable multipages.
     
     
 	
-<li>7: <a href="#pg-2e645bfcd34d722959966b4fd136d1a3"></a></li>
+<li>8: <a href="#pg-2e645bfcd34d722959966b4fd136d1a3"></a></li>
 
 
     
@@ -468,7 +487,24 @@ Version imprimable multipages.
     <div class="lead">Une interface REST pour le Téléservice INSi</div>
 	<p>Le module insi-proxy, permet de fournit une facade REST à la facade <code>INSiClient</code> java.
 Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.</p>
+<h3 id="intégration-sur-un-environnement-de-démonstration">Intégration sur un environnement de démonstration</h3>
+<p>Vous pouvez commencer à intégrer la DevBox-Santé INSi depuis l&rsquo;environnement de démonstration.</p>
+<p>Pour cela vous pouvez :</p>
+<ul>
+<li>
+<p>consulter toute la documentation depuis l’environnement de démonstration <a href="https://demo-p12.devbox-sante.fr">REST de l&rsquo;API</a></p>
+</li>
+<li>
+<p>essayer avec une collection postman :</p>
+<p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
+</li>
+</ul>
+<blockquote>
+<p>Attention : Dans cet environnement de démonstratiion, l&rsquo;authentification supportée est celle par certificat. Il n&rsquo;est pas possible également de faire des recherches avec la carte vitale.</p>
+</blockquote>
+<h2 id="authentifications">Authentifications</h2>
 <p>L&rsquo;accès a l&rsquo;insi-proxy est donc indépendant de la technologie utilisée par l&rsquo;intégrateur. Exemple d&rsquo;intégration possible :</p>
+<h3 id="via-carte-cps-sur-le-poste-local">Via carte CPS sur le poste local</h3>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!theme aws-orange
 !define DEVBOX_COLOR #278ef5
 !define DMP_COLOR #35D9C0
@@ -507,32 +543,48 @@ frontend -down-&gt; insFacade : HTTP GET /insi/rechercheAvecVitale
 cps &lt;-down-&gt; cryptolibCPS : appel natif
 vitale &lt;-down-&gt; apiLectureVitale : appel natif
 insFacade &lt;-d-&gt; insi : SOAP
-</code></pre><h3 id="installation-du-proxy">Installation du Proxy</h3>
-<p>Procédure : </p>
-<ul>
-<li>Doit être installé environnement Java 11 ou supérieur</li>
-<li>Télécharger le proxy-rest mis à disposition</li>
-</ul>
-<h4 id="lancement">Lancement</h4>
+</code></pre><h3 id="via-certificat-p12">Via certificat P12</h3>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+
+node &#34;Environnement integrateur&#34; {
+    
+    [BackEnd intégrateur] as backend 
+
+    component &#34;DevBoxSanté INSi&#34; as insFacade INS_COLOR {
+            [P12Manager] as p12 INS_COLOR
+            [Pas de lecture vitale] as vitale VITALE_COLOR
+        }
+
+}
+
+cloud &#34;Téléservice **INSi** (SesamVitale)&#34; as insi
+
+backend --&gt; insFacade : HTTP GET /insi/rechercheSansVitale
+insFacade --&gt; insi : SOAP
+</code></pre><h2 id="déploiement-avec-un-java-runtime-environment">Déploiement avec un Java Runtime Environment</h2>
 <p>Le livrable s&rsquo;agit d&rsquo;un jar exécutable, qui se lance de la manière suivante</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -jar insi-proxy-rest-*.jar
-</span></span></code></pre></div><p>Le composant est accessible depuis le poste local en HTTP sur l&rsquo;adresse ip 127.0.0.1 avec un numéro de port configurer par défaut :</p>
-<ul>
-<li>mode de sécurité cps : 8484</li>
-<li>mode de sécurité p12 : 8485</li>
-<li>mode de sécurité p12s : 8486</li>
-</ul>
+</span></span></code></pre></div><p>Le composant est accessible depuis le poste local en HTTP sur l&rsquo;adresse ip 127.0.0.1</p>
 <p>Afin de valider le fonctionnement, ouvrir un navigateur à l&rsquo;adresse suivante : http://127.0.0.1:PORT</p>
 <p><img src="insi-browser.png" alt="insi-proxy browser"></p>
 <h3 id="intégration">Intégration</h3>
 <p>L&rsquo;ensemble des requêtes sont documentées via l&rsquo;interface swagger et sont accessibles sur l&rsquo;url suivante : http://127.0.0.1:PORT/swagger-ui.png</p>
 <p><img src="insi-swagger.png" alt="insi-proxy swagger"></p>
-<h3 id="configuration">Configuration</h3>
-<p>Les paramètres de configuration du composant DevBox-santé INSi se réalise dans le fichier <code>application.yml</code>.
-Outre les configurations liées à la sécurité et le port HTTP utilisé, la configuration est identique à celle du <a href="../configuration">mode embedded</a>.</p>
+<h3 id="intégration--dune-image-docker">Intégration  d&rsquo;une image docker</h3>
+<p>Une page de documentation dédié : <a href="/installer/docker">Docker</a></p>
 <h3 id="utilisation-de-linstaller-devbox-santé">Utilisation de l&rsquo;installer DevBox-Santé</h3>
-<p>La DevBox Santé propose des solutions de &ldquo;packaging&rdquo; des différents modules, pour Windows, MacOS et Linux.</p>
-<p>Pour tester ces solutions <a href="mailto:devbox-sante@devcoop.fr">Contactez-nous</a></p>
+<p>Une page de documentation dédié : <a href="/installer/poste_client">poste_client</a></p>
 
 </div>
 
@@ -560,7 +612,104 @@ Outre les configurations liées à la sécurité et le port HTTP utilisé, la co
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-f3be3320f25bdc7df3195afeab9bdfd0">3 - Configuration DevBox-santé INSi</h1>
+	<h1 id="pg-6b5b36d8625f29a5b098e64640eeb704">3 - Authentifications</h1>
+    <div class="lead">Les différentes mécanismes d&rsquo;authentifications et architectures possibles avec le DMP</div>
+	<h3 id="via-carte-cps-sur-le-poste-local">Via carte CPS sur le poste local</h3>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+
+node &#34;Poste Client (Windows/Mac/Linux)&#34; {
+    [FrontEnd intégrateur] as frontend 
+
+    package &#34;DevBox-Santé&#34; DEVBOX_COLOR  {
+        component &#34;DevBoxSanté INSi&#34; as insFacade INS_COLOR {
+            [DevBoxSanté CPS] as cps CPS_COLOR
+            [DevBoxSanté Vitale] as vitale VITALE_COLOR
+        }
+
+    }
+    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+    [APILectureVitale (SesamVitale)] as apiLectureVitale 
+}
+
+cloud &#34;Téléservice **INSi** (SesamVitale)&#34; as insi
+
+[BackEnd intégrateur] as backend 
+
+
+
+frontend -u-&gt; backend : REST
+frontend -down-&gt; insFacade : HTTP GET /insi/rechercheAvecVitale
+cps &lt;-down-&gt; cryptolibCPS : appel natif
+vitale &lt;-down-&gt; apiLectureVitale : appel natif
+insFacade &lt;-d-&gt; insi : SOAP
+</code></pre><h3 id="via-certificat-p12">Via certificat P12</h3>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+
+node &#34;Environnement integrateur&#34; {
+    
+    [BackEnd intégrateur] as backend 
+
+    component &#34;DevBoxSanté INSi&#34; as insFacade INS_COLOR {
+            [P12Manager] as p12 INS_COLOR
+            [Pas de lecture vitale] as vitale VITALE_COLOR
+        }
+
+}
+
+cloud &#34;Téléservice **INSi** (SesamVitale)&#34; as insi
+
+backend --&gt; insFacade : HTTP GET /insi/rechercheSansVitale
+insFacade --&gt; insi : SOAP
+</code></pre>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-f3be3320f25bdc7df3195afeab9bdfd0">4 - Configuration DevBox-santé INSi</h1>
     <div class="lead">Configuration de la DevBox-santé INSi</div>
 	<h2 id="configuration--applicationyml">Configuration  <code>application.yml</code></h2>
 <p>Pour configurer la DevBox-Santé INSi, il suffit de modifier les paramètres du fichier <code>application.yml</code> :</p>
@@ -751,7 +900,7 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-158c7c95e6e497a951ef3db14cc40863">4 - Howtos</h1>
+	<h1 id="pg-158c7c95e6e497a951ef3db14cc40863">5 - Howtos</h1>
     
 	
 </div>
@@ -776,7 +925,7 @@ Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation
 
 <div class="td-content" style="">
     
-	<h1 id="pg-5f0ce1be23dc2876d68369f145bce30e">4.1 - Integrateurs checklist</h1>
+	<h1 id="pg-5f0ce1be23dc2876d68369f145bce30e">5.1 - Integrateurs checklist</h1>
     <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé INSi et faciliter son homologation.</div>
 	<h1 id="démarches-administratives">Démarches Administratives</h1>
 <p>Information officielle disponible ici : <a href="https://cnda.ameli.fr/editeurs/referencer-un-logiciel/">https://cnda.ameli.fr/editeurs/referencer-un-logiciel/</a></p>
@@ -831,7 +980,7 @@ Plus de renseignements : <a href="https://esante.gouv.fr/sites/default/files/med
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-e683af811ccc50a546ed6d81ebb8d2f2">4.2 - Conformité CNDA</h1>
+	<h1 id="pg-e683af811ccc50a546ed6d81ebb8d2f2">5.2 - Conformité CNDA</h1>
     <div class="lead">Quelques exemples de requêtes JSON des tests de conformité du CNDA</div>
 	<p>Les tests sont décrits dans le document <code>SEL-GCONFORM_INSi_Vxx.xx.pdf</code>.</p>
 
@@ -939,7 +1088,7 @@ L&rsquo;attribut identifiantFacturation est demandé pour chaque requête de l�
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-cf9f436087bd6dae998d9bbec0c08356">4.3 - Datamatrix</h1>
+	<h1 id="pg-cf9f436087bd6dae998d9bbec0c08356">5.3 - Datamatrix</h1>
     <div class="lead">Générer un datamatrix INS avec la DevBox-Santé INSi et insérer un cartouche dans un PDF</div>
 	<p>Il est dorénavant possible (depuis la version 2.6) de <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans---datamatrix-ins-v2.pdf">générer un datamatrix conforme à la spécification de l&rsquo;ANS</a>.</p>
 <h2 id="interface">Interface</h2>
@@ -1035,7 +1184,7 @@ L&rsquo;attribut identifiantFacturation est demandé pour chaque requête de l�
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-80e5e55089632da4faee2964e57f1da0">4.4 - Gestion des certificats</h1>
+	<h1 id="pg-80e5e55089632da4faee2964e57f1da0">5.4 - Gestion des certificats</h1>
     <div class="lead">Gestion des certificats de l&rsquo;IGC santé pour l&rsquo;authentification par certificat pour l&rsquo;INSi</div>
 	<p>Obtenir des certificats pour l&rsquo;INSi consiste à réaliser la même <a href="https://doc.devbox-sante.fr/dmp/howtos/gestioncertificat/">opération que pour le DMP</a>.
 et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package INSi 04.00.00.pdf</code>, une notice explicative est donnée</p>
@@ -1081,7 +1230,7 @@ et dans les mêmes conditions. Néanmoins, comme dit <code>PDT-INF-736_Package I
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-6038fea62438fa100cdead99cfa09e16">4.5 - CNDA : Fiche d&#39;identité du composant INSi</h1>
+	<h1 id="pg-6038fea62438fa100cdead99cfa09e16">5.5 - CNDA : Fiche d&#39;identité du composant INSi</h1>
     
 	<p>NIE DEVCOOP : DEV331918</p>
 <h2 id="homologation-du-25082021">Homologation du 25/08/2021</h2>
@@ -1114,7 +1263,7 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-331c095d82641a15dc0961c57e0b63e8">4.6 - Foire aux questions INSi</h1>
+	<h1 id="pg-331c095d82641a15dc0961c57e0b63e8">5.6 - Foire aux questions INSi</h1>
     <div class="lead">Compilation des questions au sujet de l&rsquo;intégration INSi</div>
 	<h3 id="desir_620-le-certificat-de-la-carte-ps-est-erroné-">&ldquo;(desir_620, Le certificat de la carte PS est erroné. )&rdquo;</h3>
 <blockquote>
@@ -1212,7 +1361,7 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-2b1a1095ea386dd4af3b0bc3c2ac5b4e">5 - Architecture interne des différents composants</h1>
+	<h1 id="pg-2b1a1095ea386dd4af3b0bc3c2ac5b4e">6 - Architecture interne des différents composants</h1>
     <div class="lead">Pour les intéressés, l&rsquo;architecture interne des différents composants</div>
 	<h2 id="diagramme-de-flux">Diagramme de flux</h2>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!theme aws-orange
@@ -1258,7 +1407,7 @@ DevBoxSanteINSi --&gt; INSi  : https (TLS 1.2 / IGC Santé)
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-e661aca952fdd42de0e410979c74bd44">6 - Versions</h1>
+	<h1 id="pg-e661aca952fdd42de0e410979c74bd44">7 - Versions</h1>
     <div class="lead">Note sur les différentes versions de la DevBox-Santé INSi</div>
 	<h2 id="version-276-23082023">Version 2.7.6 (23/08/2023)</h2>
 <h3 id="story">Story</h3>
@@ -1352,7 +1501,7 @@ DevBoxSanteINSi --&gt; INSi  : https (TLS 1.2 / IGC Santé)
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-2e645bfcd34d722959966b4fd136d1a3">7 - </h1>
+	<h1 id="pg-2e645bfcd34d722959966b4fd136d1a3">8 - </h1>
     
 	<p>TODO : rFprendre procédure du DMP pour l&rsquo;INSI</p>
 <p><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_salariees_vf.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_salariees_vf.pdf</a></p>

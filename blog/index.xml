@@ -86,6 +86,8 @@ Elle est rattachée dans l’annuaire santé à une personne morale.&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;h2 id=&#34;d&#34;&gt;D&lt;/h2&gt;
 &lt;dl&gt;
+&lt;dt&gt;DAC&lt;/dt&gt;
+&lt;dd&gt;Dispositif d&amp;rsquo;Appui à la Coordination&lt;/dd&gt;
 &lt;dt&gt;DGOS&lt;/dt&gt;
 &lt;dd&gt;Direction Générale de l’Offre de Soins&lt;/dd&gt;
 &lt;dt&gt;DGS&lt;/dt&gt;
@@ -150,6 +152,8 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;/dl&gt;
 &lt;h2 id=&#34;i&#34;&gt;I&lt;/h2&gt;
 &lt;dl&gt;
+&lt;dt&gt;IDEC&lt;/dt&gt;
+&lt;dd&gt;Infirmier coordinateur&lt;/dd&gt;
 &lt;dt&gt;Identité homonyme&lt;/dt&gt;
 &lt;dd&gt;Attribut utilisé pour signaler un fort taux de ressemblance entre des identités numériques et alerter les professionnels lors de la prise en charge de ces usagers homonymes ou à identités approchantes.&lt;/dd&gt;
 &lt;dt&gt;Identité INS&lt;/dt&gt;
@@ -209,6 +213,8 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;dd&gt;Multipurpose Internet Mail Extensions&lt;/dd&gt;
 &lt;dt&gt;MDN&lt;/dt&gt;
 &lt;dd&gt;Message Disposition Notification&lt;/dd&gt;
+&lt;dt&gt;MDPH&lt;/dt&gt;
+&lt;dd&gt;Maison Départemantale pour les Personnes Handicapées&lt;/dd&gt;
 &lt;dt&gt;Mon Espace Santé&lt;/dt&gt;
 &lt;dd&gt;(&lt;a href=&#34;https://editeurs.monespacesante.fr/&#34;&gt;https://editeurs.monespacesante.fr/&lt;/a&gt;)&lt;/dd&gt;
 &lt;dt&gt;MSSanté&lt;/dt&gt;
@@ -290,8 +296,6 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;dd&gt;Système Inter-Régime&lt;/dd&gt;
 &lt;dt&gt;SNGI&lt;/dt&gt;
 &lt;dd&gt;Système National de Gestion des Identités&lt;/dd&gt;
-&lt;dt&gt;SSI&lt;/dt&gt;
-&lt;dd&gt;Sécurité du Système d’Information&lt;/dd&gt;
 &lt;dt&gt;SMTP&lt;/dt&gt;
 &lt;dd&gt;Simple Mail Transport Protocol&lt;/dd&gt;
 &lt;dt&gt;SOAP&lt;/dt&gt;
@@ -303,6 +307,10 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;p&gt;Le dispositif SONS (Système Ouvert et Non Sélectif) d’achat de l’Etat pour les comptes des acteurs de l’offre de soins : ce dispositif aide les établissements à acquérir et déployer des versions logicielles référencées Ségur, c’est-à-dire respectant l’ensemble des exigences Ségur édictées dans les Dossiers de Spécifications de Référencement (DSR)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;dl&gt;
+&lt;dt&gt;SSI&lt;/dt&gt;
+&lt;dd&gt;Sécurité du Système d’Information&lt;/dd&gt;
+&lt;dt&gt;SSIAD&lt;/dt&gt;
+&lt;dd&gt;Service de Soins Infirmiers À Domicile&lt;/dd&gt;
 &lt;dt&gt;SSL&lt;/dt&gt;
 &lt;dd&gt;Secure Sockets Layer&lt;/dd&gt;
 &lt;dt&gt;SUN-ES&lt;/dt&gt;

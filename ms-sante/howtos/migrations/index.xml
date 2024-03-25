@@ -27,18 +27,8 @@
 &lt;h3 id=&#34;exécution&#34;&gt;Exécution&lt;/h3&gt;
 &lt;p&gt;Vous pouvez essayer l&amp;rsquo;API V2 avec une collection postman disponible ici :&lt;/p&gt;
 &lt;p&gt;&lt;a target=&#34;_blank&#34; href=&#34;https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview&#34;&gt;&lt;img alt=&#34;Run In postman&#34; src=&#34;https://run.pstmn.io/button.svg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;managed-mode&#34;&gt;Managed Mode&lt;/h2&gt;
-&lt;p&gt;La principale modification est le fait qu&amp;rsquo;il n&amp;rsquo;y a plus forcément de dossiers Trash, Draft, Sent par défaut. Cela dépend de l&amp;rsquo;opérateur.
-Ce sont maintenant des flags sur les messages pour les 2ers et une date d&amp;rsquo;envoi pour le dernier.&lt;/p&gt;
-&lt;p&gt;Pour palier à ce problème, 2 modes de fonctionnement ont été mis en place:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Managed: Le connecteur palie à ce problème et crée automatiquement ces dossiers au moment de l&amp;rsquo;envoi, la suppression ou l&amp;rsquo;enregistrement de brouillon et déplace le message dans le bon dossier.&lt;/li&gt;
-&lt;li&gt;No Managed: Le connecteur ne fait aucun traitement particulier et utilise le workflow de gestion des messages de l&amp;rsquo;opérateur. Ce dernier peut décider de tout laisser dans inbox et ne mettre que des flags pour distinguer les messages ou utiliser les dossiers comme dans le cas &amp;ldquo;Managed&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Ainsi par exemple dans le cas &amp;ldquo;No managed&amp;rdquo; avec un opérateur qui laisse tous les messages dans INBOX, pour avoir les messages du dossier draft, il faut rechercher les messages en précisant draft=true dans la query et sans préciser de folderId.&lt;/p&gt;
-&lt;p&gt;Autre point important, un message sauvegardé en brouillon change d&amp;rsquo;id à chaque nouvelle sauvegarde.
-Le contenu des pièces jointes n&amp;rsquo;est pas renvoyé avec le message, il faut appeler un service spécifique pour avoir le contenu.
-Lors de l&amp;rsquo;enregistrement d&amp;rsquo;un brouillon, la première fois que la pièce jointe est ajouté il faut passer son contenu, les fois suivantes le contenu n&amp;rsquo;est pas obligatoire (et même conseillé à null)&lt;/p&gt;
+&lt;p&gt;ou le swagger :&lt;/p&gt;
+&lt;p&gt;&lt;a target=&#34;_blank&#34; href=&#34;https://msssante-demo.devbox-sante.fr/swagger-ui.html&#34;&gt;Swagger&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;authentification&#34;&gt;Authentification&lt;/h2&gt;
 &lt;p&gt;2 modes d&amp;rsquo;authentification sont disponibles:&lt;/p&gt;
 &lt;ul&gt;

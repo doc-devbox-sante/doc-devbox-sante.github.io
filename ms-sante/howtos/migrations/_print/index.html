@@ -200,18 +200,8 @@ Version imprimable multipages.
 <h3 id="exécution">Exécution</h3>
 <p>Vous pouvez essayer l&rsquo;API V2 avec une collection postman disponible ici :</p>
 <p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
-<h2 id="managed-mode">Managed Mode</h2>
-<p>La principale modification est le fait qu&rsquo;il n&rsquo;y a plus forcément de dossiers Trash, Draft, Sent par défaut. Cela dépend de l&rsquo;opérateur.
-Ce sont maintenant des flags sur les messages pour les 2ers et une date d&rsquo;envoi pour le dernier.</p>
-<p>Pour palier à ce problème, 2 modes de fonctionnement ont été mis en place:</p>
-<ul>
-<li>Managed: Le connecteur palie à ce problème et crée automatiquement ces dossiers au moment de l&rsquo;envoi, la suppression ou l&rsquo;enregistrement de brouillon et déplace le message dans le bon dossier.</li>
-<li>No Managed: Le connecteur ne fait aucun traitement particulier et utilise le workflow de gestion des messages de l&rsquo;opérateur. Ce dernier peut décider de tout laisser dans inbox et ne mettre que des flags pour distinguer les messages ou utiliser les dossiers comme dans le cas &ldquo;Managed&rdquo;</li>
-</ul>
-<p>Ainsi par exemple dans le cas &ldquo;No managed&rdquo; avec un opérateur qui laisse tous les messages dans INBOX, pour avoir les messages du dossier draft, il faut rechercher les messages en précisant draft=true dans la query et sans préciser de folderId.</p>
-<p>Autre point important, un message sauvegardé en brouillon change d&rsquo;id à chaque nouvelle sauvegarde.
-Le contenu des pièces jointes n&rsquo;est pas renvoyé avec le message, il faut appeler un service spécifique pour avoir le contenu.
-Lors de l&rsquo;enregistrement d&rsquo;un brouillon, la première fois que la pièce jointe est ajouté il faut passer son contenu, les fois suivantes le contenu n&rsquo;est pas obligatoire (et même conseillé à null)</p>
+<p>ou le swagger :</p>
+<p><a target="_blank" href="https://msssante-demo.devbox-sante.fr/swagger-ui.html">Swagger</a></p>
 <h2 id="authentification">Authentification</h2>
 <p>2 modes d&rsquo;authentification sont disponibles:</p>
 <ul>

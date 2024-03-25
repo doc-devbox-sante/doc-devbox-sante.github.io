@@ -166,7 +166,7 @@ Version imprimable multipages.
     
     
 	
-<li>1.1: <a href="#pg-252b66e73bdc22a4a4490bc6809851da">Conforme au référentiel MSSante &#39;#2</a></li>
+<li>1.1: <a href="#pg-252b66e73bdc22a4a4490bc6809851da">Multi-Opérateur v1 et v2</a></li>
 
 
     
@@ -228,7 +228,83 @@ Version imprimable multipages.
     
     
 	
-<li>2.2: <a href="#pg-3aa3b6fbd974023d38a168e486f7a418">Migrations</a></li>
+<li>2.2: <a href="#pg-1581e7ea70a15004987f730b46c1c8a3">Authentification</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2.3: <a href="#pg-82cd1c637ad325d856d89a54fe730976">Gestion multi-opérateurs</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2.4: <a href="#pg-8007ed27944d38ccf68d4d276c6e43d5">Message Manager</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2.5: <a href="#pg-92658f394344ac510b8f2afc02d413d3">Services REST</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2.6: <a href="#pg-3aa3b6fbd974023d38a168e486f7a418">Migrations</a></li>
 
 
     
@@ -243,7 +319,7 @@ Version imprimable multipages.
     
     
 	
-<li>2.2.1: <a href="#pg-fdbfb588e3beb583f45227b16fa6167f">Migration 1.2 vers la 2.0</a></li>
+<li>2.6.1: <a href="#pg-fdbfb588e3beb583f45227b16fa6167f">Migration 1.2 vers la 2.0</a></li>
 
 
     
@@ -439,23 +515,13 @@ mss -d-&gt; apicrypt : socket
 
 <div class="td-content" style="">
     
-	<h1 id="pg-252b66e73bdc22a4a4490bc6809851da">1.1 - Conforme au référentiel MSSante &#39;#2</h1>
+	<h1 id="pg-252b66e73bdc22a4a4490bc6809851da">1.1 - Multi-Opérateur v1 et v2</h1>
     <div class="lead">Référentiel MSSante #2</div>
 	<p>Voici la liste des opérateurs référencés par le SEGUR <a href="https://esante.gouv.fr/segur/solutions-referencees?search_api_fulltext=&amp;field_categorie=853&amp;field_type_logiciel=All">https://esante.gouv.fr/segur/solutions-referencees?search_api_fulltext=&amp;field_categorie=853&amp;field_type_logiciel=All</a></p>
-<h2 id="bal-organisationnelle">BAL organisationnelle</h2>
-<h3 id="configuration-des-points-daccès-aux-opérateurs">Configuration des points d&rsquo;accès aux opérateurs</h3>
-<p>Il faut configurer la devboxsante de telle manière à se connecter sur les serveurs SMTP et IMAP de l&rsquo;opérateur</p>
-<p>Exemple pour authentification espace de test medimail du MIPIH :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">smtp</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">host</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">authcli.medimail-lps.mipih.fr</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">587</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">imap</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">host</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">authcli.medimail-lps.mipih.fr</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">143</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><h3 id="configuration-p12">Configuration P12</h3>
-<p>Il faut configurer la devboxsante de telle manière à fournir un certificat p12 provenant de l&rsquo;IGC Santé</p>
+<p>Il existe 2 modes de configuration :</p>
+<h2 id="configuration-p12">Configuration P12</h2>
+<p>Dans ce mode, le connecteur possède les informations de connexion, à savoir un certificat p12 provenant de l&rsquo;IGC Santé.</p>
+<p>Ce mode est utile dans le cas du BAL applicative car il ne fonctionne qu&rsquo;avec une seule BAL.</p>
 <p>Exemple pour authentification espace de test medimail du MIPIH :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -463,34 +529,20 @@ mss -d-&gt; apicrypt : socket
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">tls.p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">asip-p12-EL-TEST-ORG-AUTH_CLI-20230717-152710.p12</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">MOT_DE_PASSE</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><h3 id="configuration-p12inheader">Configuration p12InHeader</h3>
-<p>Le mode <code>p12InHeader</code> permet de faire passer le certificat p12 dans l&rsquo;entête HTTP de la requête, cela permet à l&rsquo;appelant de conserver et décider des certificats utilisés lors de l&rsquo;appel du proxy.</p>
-<p>Le header étant plus lourd il faudra veiller à ce que la configuration spring prenne en compte la taille du header d&rsquo;au moins 40Kb.</p>
+</span></span></span></code></pre></div><h2 id="configuration-authinheader">Configuration authInHeader</h2>
+<p>Le mode <code>authInHeader</code> permet de faire passer les informations d&rsquo;authentification dans les headers des appels REST.</p>
+<p>Le connecteur dispose de 3 modes d&rsquo;authentification:</p>
+<ul>
+<li>Certificat p12 (BAL applicative) (V2)</li>
+<li>Jeton PSC (pro santé connect) (V2)</li>
+<li>Token de session après authentification avec Login / Mot de passe et OTP (V1 Mailiz)</li>
+</ul>
 <p>La configuration <code>application.yml</code> est :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">server</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">max-http-header-size</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">50KB</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">mss: </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># authentification avec certificats dans le header HTTP</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">p12InHeader</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>Et la requête doit contenir les informations dans le header. Le `userName&rsquo; est utilisé pour initialiser la session SMTP/IMAP</p>
-<pre tabindex="0"><code class="language-bruno" data-lang="bruno">
-headers {
-  mssAuthentication.password: password
-  mssAuthentication.p12: MIIcbAIBA...Bv4sVwVpAICCAA=
-  mssAuthentication.userName: xxx-applicatif-test@medimail.mssante.fr
-}
-</code></pre><p>Le certificat p12 doit être passé en base64.</p>
-<p>Windows Powershell:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#000">$cert</span> <span style="color:#ce5c00;font-weight:bold">=</span> get-content <span style="color:#4e9a06">&#39;certificate.p12&#39;</span> -Encoding Byte
-</span></span><span style="display:flex;"><span><span style="color:#000">$base64</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">[</span>System.Convert<span style="color:#ce5c00;font-weight:bold">]</span>::ToBase64String<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$cert</span><span style="color:#ce5c00;font-weight:bold">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$base64</span>
-</span></span></code></pre></div><p>Linux:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>base64 certificate.p12 &gt; outputfile
-</span></span></code></pre></div><p>Mac OS:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>base64 -i certificate.p12 -o outputfile
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">authInHeader</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>cf <a href="https://doc.devbox-sante.fr/ms-sante/howtos/" title="Authentification">Authentification</a></p>
+
 </div>
 
 
@@ -1006,7 +1058,277 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-3aa3b6fbd974023d38a168e486f7a418">2.2 - Migrations</h1>
+	<h1 id="pg-1581e7ea70a15004987f730b46c1c8a3">2.2 - Authentification</h1>
+    
+	<h2 id="authentification">Authentification</h2>
+<p>Dans le cas d&rsquo;authentification &ldquo;authInHeader&rdquo; (Le type d&rsquo;autentification est renseigné dans le fichier de configuration, cf: <a href="https://doc.devbox-sante.fr/ms-sante/configuration/referentiel2/" title="Configuration">Configuration V1 et v2</a>)</p>
+<p>Le connecteur dispose de 4 modes d&rsquo;authentification:</p>
+<ul>
+<li>Certificat p12 (BAL applicative) (V2)</li>
+<li>Jeton PSC (pro santé connect) (V2)</li>
+<li>Token de session après authentification avec Login / Mot de passe et OTP (Mailiz)</li>
+<li>Carte CPS (Mailiz)</li>
+</ul>
+<p>Et la requête doit contenir les informations dans le header. Le `userName&rsquo; est utilisé pour initialiser la session SMTP/IMAP et le &lsquo;operator&rsquo; pour connaitre l&rsquo;opérateur de la MSS</p>
+<h3 id="certificat-psc-pro-santé-connect">Certificat PSC (pro santé connect)</h3>
+<p>Cette authentification est disponible pour les bals personnelles ou organisationnelles.</p>
+<p>Le client doit au préalable récupérer un jeton PSC (access token) via son serveur d&rsquo;authentification enregistré auprès de l&rsquo;ANS et le passer aux requêtes dans un header.
+Ce token est généralement valable 4-5 minutes. Le client doit donc redemander régulièrement un nouveau jeton à son serveur d&rsquo;authentification.</p>
+<p><img src="demo-PSC.png" alt="PSC auth"></p>
+<p>Exemple:</p>
+<pre tabindex="0"><code class="language-bruno" data-lang="bruno">headers {
+  mssAuthentication.operator: mailiz
+  mssAuthentication.pscToken: MIIcbAIBA...Bv4sVwVpAICCAA=
+  mssAuthentication.userName: xxx-pers@mssante.fr
+}
+</code></pre><h3 id="certificat-p12-bal-applicative">Certificat p12 (bal applicative)</h3>
+<p>Cette authentification est disponible pour les bal applicatives.
+L&rsquo;application cliente se connecte à la mssanté via un certificat p12 et le mot de passe associé qui sont passé dans les headers lors de chaque appel au connecteur.</p>
+<p>Exemple:</p>
+<pre tabindex="0"><code class="language-bruno" data-lang="bruno">headers {
+  mssAuthentication.operator: medimail
+  mssAuthentication.password: password
+  mssAuthentication.p12: MIIcbAIBA...Bv4sVwVpAICCAA=
+  mssAuthentication.userName: xxx-applicatif-test@medimail.mssante.fr
+}
+</code></pre><p>Le certificat p12 doit être passé en base64.</p>
+<p>Windows Powershell:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#000">$cert</span> <span style="color:#ce5c00;font-weight:bold">=</span> get-content <span style="color:#4e9a06">&#39;certificate.p12&#39;</span> -Encoding Byte
+</span></span><span style="display:flex;"><span><span style="color:#000">$base64</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">[</span>System.Convert<span style="color:#ce5c00;font-weight:bold">]</span>::ToBase64String<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$cert</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$base64</span>
+</span></span></code></pre></div><p>Linux:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>base64 certificate.p12 &gt; outputfile
+</span></span></code></pre></div><p>Mac OS:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>base64 -i certificate.p12 -o outputfile
+</span></span></code></pre></div><h3 id="login-mot-de-passe-et-otp-mailiz-avec-les-api-v1">Login, mot de passe et OTP (mailiz avec les API v1)</h3>
+<p>Cette authentification est disponible pour mailiz mais avec les API v1.
+Le client s&rsquo;authentifie via des services de connexion REST et doit repasser le cookie correspondant à la session courante lors de chaque appel au connecteur.</p>
+<p>Exemple:</p>
+<pre tabindex="0"><code class="language-bruno" data-lang="bruno">headers {
+  mssAuthentication.operator: mailiz-v1
+  Cookie: JSESSIONID=1139181CDF6638784181753183EC32A5
+}
+</code></pre><h3 id="carte-cps-mailiz-avec-les-api-v1">Carte CPS (mailiz avec les API v1)</h3>
+<p>Cette authentification est disponible pour mailiz mais avec les API v1.
+Le client s&rsquo;authentifie l&rsquo;utilitaire CPS de la DevBox Santé puis doit repasser le cookie correspondant à la session courante lors de chaque appel au connecteur.</p>
+<p>Exemple:</p>
+<pre tabindex="0"><code class="language-bruno" data-lang="bruno">headers {
+  mssAuthentication.operator: mailiz-v1
+  Cookie: JSESSIONID=1139181CDF6638784181753183EC32A5
+}
+</code></pre>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-82cd1c637ad325d856d89a54fe730976">2.3 - Gestion multi-opérateurs</h1>
+    
+	<p>Le connecteur MS Santé de la DevBox est compatible avec plusieurs opérateurs.
+Cette liste contient par exemple mailiz et médimail (liste non exhaustive) et évolue sans cesse en fonctions des besoins des clients.</p>
+<p>Ainsi le connecteur permet au PS de se connecter à un large panel d&rsquo;opérateurs.</p>
+<h2 id="liste-des-opérateurs">Liste des opérateurs</h2>
+<p>Un service REST permet d&rsquo;avoir la liste des opérateurs ainsi que le nom des principaux dossiers (inbox, sent, draft et trash) qui peuvent varier en fonction des opérateurs.</p>
+<pre tabindex="0"><code>GET {url}/mssante/v2/operators
+</code></pre><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;medimail&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2,&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;INBOX&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;TRASH&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;DRAFT&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SENT&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;mailiz&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2,&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;INBOX&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Trash&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Drafts&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Sent&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;mailiz-v1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1,&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;6&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><ul>
+<li>name: nom de l&rsquo;opérateur à passer dans le header mssAuthentication.operator</li>
+<li>apiVersion: version de l&rsquo;api, url du type /mssante/messages pour la v1 et /mssante/v2/messages pour la v2</li>
+<li>messageManagerActive: cf <a href="https://doc.devbox-sante.fr/ms-sante/howtos/message-manager/">Message Manager</a></li>
+<li>withAllHeaders: Permet de récupérer tous les headers renvoyés par le service imap</li>
+<li>xxxFolderId: Nom des 4 principaux dossiers</li>
+</ul>
+<p>Ensuite il suffit de passer dans les headers le nom de l&rsquo;opérateur sur lequel le PS souhaite se connecter.</p>
+<p>Exemple:</p>
+<pre tabindex="0"><code class="language-bruno" data-lang="bruno">headers {
+  mssAuthentication.operator: mailiz
+  mssAuthentication.pscToken: MIIcbAIBA...Bv4sVwVpAICCAA=
+  mssAuthentication.userName: xxx-pers@mssante.fr
+}
+</code></pre>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-8007ed27944d38ccf68d4d276c6e43d5">2.4 - Message Manager</h1>
+    
+	<p>Les opérateurs ne prennent pas en charge via les API LPS certaines fonctionnalités &ldquo;standard&rdquo; de client de messagerie comme par exemple:</p>
+<ul>
+<li>sauvegarde du message envoyé dans le dossier &ldquo;sent&rdquo;</li>
+<li>déplacement du message supprimé dans le dossier &ldquo;trash&rdquo;</li>
+<li>sauvegarde du brouillon dans le dossier &ldquo;draft&rdquo;</li>
+<li>&hellip;</li>
+</ul>
+<p>Par défaut tout est géré par des flags dans le dossier INBOX (exception faite de la sauvegarde du message envoyé qui n&rsquo;est pas faite)</p>
+<p>Pour palier à ce problème, 2 modes de fonctionnement ont été mis en place:</p>
+<ul>
+<li>Managed: Le connecteur crée automatiquement ces dossiers au moment de l&rsquo;envoi, la suppression ou l&rsquo;enregistrement de brouillon et déplace/sauvegarde le message dans le bon dossier.</li>
+<li>No Managed: Le connecteur ne fait aucun traitement particulier et utilise le workflow de gestion des messages de l&rsquo;opérateur. Ce dernier peut décider de tout laisser dans inbox et ne mettre que des flags pour distinguer les messages ou utiliser les dossiers comme dans le cas &ldquo;Managed&rdquo;</li>
+</ul>
+<p>Ainsi par exemple dans le cas &ldquo;No managed&rdquo; avec un opérateur qui laisse tous les messages dans INBOX, pour avoir les messages du dossier draft, il faut rechercher les messages en précisant draft=true dans la query et sans préciser de folderId.</p>
+<p>Ce type de fonctionnement est précisé dans la configuration d el&rsquo;opérateur via le champ messageManagerActive:</p>
+<pre tabindex="0"><code>GET {url}/mssante/v2/operators
+</code></pre><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;medimail&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2,&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;INBOX&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;TRASH&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;DRAFT&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SENT&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;mailiz-v1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1,&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;6&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-92658f394344ac510b8f2afc02d413d3">2.5 - Services REST</h1>
+    
+	<p>Vous pouvez essayer l&rsquo;API V2 avec une collection postman disponible ici :</p>
+<p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
+<p>ou le swagger (v1 et v2) :</p>
+<p><a target="_blank" href="https://mss-demo.devbox-sante.fr/swagger-ui.html"><img alt="Swagger" style="width:140px" src="https://static1.smartbear.co/swagger/media/assets/images/swagger_logo.svg"></a></p>
+<p>ou l&rsquo;interface de démo (v1 et v2, toutes les fonctionnalités n&rsquo;ont pas été implémentées sur cette interface, c&rsquo;est juste un POC)</p>
+<p><a target="_blank" href="https://mss-demo.devbox-sante.fr"><img alt="Démo" style="width:40px" src="https://mss-demo.devbox-sante.fr/assets/images/icon-medium-mssante.svg">MS Santé Démo</a></p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3aa3b6fbd974023d38a168e486f7a418">2.6 - Migrations</h1>
     <div class="lead">Guide de migration vers les versions supérieures de la DevBox-Santé MSSanté</div>
 	
 </div>
@@ -1031,25 +1353,15 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
 
 <div class="td-content" style="">
     
-	<h1 id="pg-fdbfb588e3beb583f45227b16fa6167f">2.2.1 - Migration 1.2 vers la 2.0</h1>
+	<h1 id="pg-fdbfb588e3beb583f45227b16fa6167f">2.6.1 - Migration 1.2 vers la 2.0</h1>
     <div class="lead">Guide de migration vers la nouvelle version 2.0</div>
 	<p>La version 2.0 de la DevBox-santé MSS apporte le support du nouveau référentiel v2 conforme au ségur vague 2</p>
 <p>Quelques changements ont été apportés.</p>
 <h3 id="exécution">Exécution</h3>
 <p>Vous pouvez essayer l&rsquo;API V2 avec une collection postman disponible ici :</p>
 <p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
-<h2 id="managed-mode">Managed Mode</h2>
-<p>La principale modification est le fait qu&rsquo;il n&rsquo;y a plus forcément de dossiers Trash, Draft, Sent par défaut. Cela dépend de l&rsquo;opérateur.
-Ce sont maintenant des flags sur les messages pour les 2ers et une date d&rsquo;envoi pour le dernier.</p>
-<p>Pour palier à ce problème, 2 modes de fonctionnement ont été mis en place:</p>
-<ul>
-<li>Managed: Le connecteur palie à ce problème et crée automatiquement ces dossiers au moment de l&rsquo;envoi, la suppression ou l&rsquo;enregistrement de brouillon et déplace le message dans le bon dossier.</li>
-<li>No Managed: Le connecteur ne fait aucun traitement particulier et utilise le workflow de gestion des messages de l&rsquo;opérateur. Ce dernier peut décider de tout laisser dans inbox et ne mettre que des flags pour distinguer les messages ou utiliser les dossiers comme dans le cas &ldquo;Managed&rdquo;</li>
-</ul>
-<p>Ainsi par exemple dans le cas &ldquo;No managed&rdquo; avec un opérateur qui laisse tous les messages dans INBOX, pour avoir les messages du dossier draft, il faut rechercher les messages en précisant draft=true dans la query et sans préciser de folderId.</p>
-<p>Autre point important, un message sauvegardé en brouillon change d&rsquo;id à chaque nouvelle sauvegarde.
-Le contenu des pièces jointes n&rsquo;est pas renvoyé avec le message, il faut appeler un service spécifique pour avoir le contenu.
-Lors de l&rsquo;enregistrement d&rsquo;un brouillon, la première fois que la pièce jointe est ajouté il faut passer son contenu, les fois suivantes le contenu n&rsquo;est pas obligatoire (et même conseillé à null)</p>
+<p>ou le swagger :</p>
+<p><a target="_blank" href="https://msssante-demo.devbox-sante.fr/swagger-ui.html">Swagger</a></p>
 <h2 id="authentification">Authentification</h2>
 <p>2 modes d&rsquo;authentification sont disponibles:</p>
 <ul>

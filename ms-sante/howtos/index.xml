@@ -599,6 +599,67 @@ Cette liste contient par exemple mailiz et médimail (liste non exhaustive) et �
     </item>
     
     <item>
+      <title>Ms-Sante: Entête spécifiques X-MSS</title>
+      <link>https://doc.devbox-sante.fr/ms-sante/howtos/entete-x-mss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/entete-x-mss/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Pour répondre aux exigences listé ci-dessous, le connecteur ms-santé inclus la possibilité de passer des headers spécifiques:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;X-MSS-MES&lt;/li&gt;
+&lt;li&gt;X_MSS_INS&lt;/li&gt;
+&lt;li&gt;X_MSS_CODECDA&lt;/li&gt;
+&lt;li&gt;X_MSS_NIL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Exemple:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;{
+  &amp;#34;attachments&amp;#34;: [{
+      &amp;#34;contentType&amp;#34;: &amp;#34;application/xml&amp;#34;,
+      &amp;#34;file&amp;#34;: &amp;#34;XXXXX&amp;#34;,
+      &amp;#34;fileName&amp;#34;: &amp;#34;cda.xml&amp;#34;
+  }],
+  &amp;#34;addresses&amp;#34;: [
+    {
+      &amp;#34;email&amp;#34;: &amp;#34;{{emailPS}}&amp;#34;,
+      &amp;#34;name&amp;#34;: &amp;#34;PS&amp;#34;,
+      &amp;#34;type&amp;#34;: &amp;#34;TO&amp;#34;
+    }
+  ],
+  &amp;#34;headers&amp;#34;: {
+      &amp;#34;X-MSS-INS&amp;#34;: &amp;#34;O&amp;#34;,
+      &amp;#34;X-MSS-CODECDA&amp;#34;: &amp;#34;34112-3&amp;#34;,
+      &amp;#34;X-MSS-NIL&amp;#34;: &amp;#34;DEV935997&amp;#34;
+  },
+  &amp;#34;flags&amp;#34;: [],
+  &amp;#34;subject&amp;#34;: &amp;#34;Message test envoi avec header x-mss&amp;#34;,
+  &amp;#34;body&amp;#34;: &amp;#34;test &amp;lt;span style=\&amp;#34;color:#ff0000\&amp;#34;&amp;gt;message &amp;lt;/span&amp;gt;&amp;lt;b&amp;gt;html&amp;lt;/b&amp;gt;&amp;#34;,
+  &amp;#34;priority&amp;#34;: &amp;#34;NORMAL&amp;#34;,
+  &amp;#34;isHtml&amp;#34;: true
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Le connecteur ne fait pas de contrôle de cohérence entre la valeur des entêtes et les documents envoyés en pièces jointes.&lt;/p&gt;
+&lt;h3 id=&#34;exigence-mss20&#34;&gt;Exigence MSS20&lt;/h3&gt;
+&lt;p&gt;&amp;ldquo;Le Système DOIT positionner l&amp;rsquo;entête SMTP &amp;ldquo;&amp;ldquo;X-MSS-INS&amp;rdquo;&amp;rdquo; dans un message envoyé qui comporte en PJ un document de santé CDA encapsulé dans une archive IHE_XDM. La valeur de cet entete DOIT être :&lt;/p&gt;
+&lt;p&gt;&amp;lsquo;O&amp;rsquo; (Oui) en cas de présence d&amp;rsquo;une Identité Nationale de Santé (INS qualifiée&amp;rdquo;&amp;quot;*) dans l&amp;rsquo;archive IHE_XDM ;&lt;/p&gt;
+&lt;p&gt;&amp;lsquo;N&amp;rsquo; (Non) en cas d&amp;rsquo;absence d&amp;rsquo;une Identité Nationale de Santé (INS qualifiée&amp;quot;&amp;quot;*) dans l&amp;rsquo;archive IHE_XDM.&lt;/p&gt;
+&lt;p&gt;En cas d&amp;rsquo;absence en PJ d&amp;rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&amp;rsquo;entête ne DOIT pas être positionnée.&lt;/p&gt;
+&lt;p&gt;INS qualifié au sens du §5.3.3 du Référentiel Identifiant National de Santé v2.0. La présence d&amp;rsquo;un INS qualifié est caractérisé par la présence de l&amp;rsquo;INS (matricule, OID) et des 4 traits d&amp;rsquo;identité suivants dans l&amp;rsquo;entete CDA : nom de naissance, 1er prenom, date de naissance et sexe&amp;quot;&lt;/p&gt;
+&lt;h3 id=&#34;exigence-mss21&#34;&gt;Exigence MSS21&lt;/h3&gt;
+&lt;p&gt;&amp;ldquo;Le Système DOIT positionner un entête SMTP &amp;ldquo;&amp;ldquo;X-MSS-CODECDA&amp;rdquo;&amp;rdquo; dans un message envoyé qui comporte en PJ un ou plusieurs documents CDA encapsulés dans une archive IHE_XDM. La valeur de cet entete DOIT être égale à celle du champ code* présent dans l&amp;rsquo;entête du document CDA.&lt;/p&gt;
+&lt;p&gt;En cas de présence de plusieurs documents CDA, l&amp;rsquo;entête sera multi-valué. En cas d&amp;rsquo;absence en PJ d&amp;rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&amp;rsquo;entête ne DOIT pas être positionné.&lt;/p&gt;
+&lt;p&gt;code défini dans le &amp;ldquo;&amp;ldquo;Volet Structuration Minimale de Documents de Santé – CI-SIS Juin 2021, §3.5.5.5&amp;quot;&amp;rdquo;&amp;rdquo;&lt;/p&gt;
+&lt;h3 id=&#34;exigence-mss22&#34;&gt;Exigence MSS22&lt;/h3&gt;
+&lt;p&gt;&amp;ldquo;Le Système DOIT positionner l&amp;rsquo;entête SMTP &amp;ldquo;&amp;ldquo;X-MSS-NIL&amp;rdquo;&amp;rdquo; dans tous les courriels envoyés. Elle sera renseignée du numéro &amp;ldquo;&amp;ldquo;référence produit&amp;rdquo;&amp;rdquo; attribué lors de la déclaration du produit sur la plateforme convergence.esante.gouv.fr.&lt;/p&gt;
+&lt;p&gt;Le numéro &amp;ldquo;&amp;ldquo;référence produit&amp;rdquo;&amp;rdquo; à renseigner est celui du logiciel qui a produit le message SMTP.&amp;rdquo;&lt;/p&gt;
+&lt;h3 id=&#34;exigence-mss26&#34;&gt;Exigence MSS26&lt;/h3&gt;
+&lt;p&gt;Le Système DOIT pouvoir positionner un entête SMTP &amp;ldquo;X-MSS-MES&amp;rdquo;, dans les messages envoyés vers un usager (Mon espace santé), avec la valeur &amp;ldquo;FIN&amp;rdquo; (3 caractères en majuscules), lorsque le professionnel émetteur ne souhaite pas que le patient puisse lui répondre en retour.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Ms-Sante: Migrations</title>
       <link>https://doc.devbox-sante.fr/ms-sante/howtos/migrations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -242,7 +242,26 @@ Version imprimable multipages.
     
     
 	
-<li>6: <a href="#pg-3aa3b6fbd974023d38a168e486f7a418">Migrations</a></li>
+<li>6: <a href="#pg-315ac22e529e343de790ce61673ed222">Entête spécifiques X-MSS</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>7: <a href="#pg-3aa3b6fbd974023d38a168e486f7a418">Migrations</a></li>
 
 
     
@@ -257,7 +276,7 @@ Version imprimable multipages.
     
     
 	
-<li>6.1: <a href="#pg-fdbfb588e3beb583f45227b16fa6167f">Migration 1.2 vers la 2.0</a></li>
+<li>7.1: <a href="#pg-fdbfb588e3beb583f45227b16fa6167f">Migration 1.2 vers la 2.0</a></li>
 
 
     
@@ -968,7 +987,84 @@ Cette liste contient par exemple mailiz et médimail (liste non exhaustive) et �
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-3aa3b6fbd974023d38a168e486f7a418">6 - Migrations</h1>
+	<h1 id="pg-315ac22e529e343de790ce61673ed222">6 - Entête spécifiques X-MSS</h1>
+    
+	<p>Pour répondre aux exigences listé ci-dessous, le connecteur ms-santé inclus la possibilité de passer des headers spécifiques:</p>
+<ul>
+<li>X-MSS-MES</li>
+<li>X_MSS_INS</li>
+<li>X_MSS_CODECDA</li>
+<li>X_MSS_NIL</li>
+</ul>
+<p>Exemple:</p>
+<pre tabindex="0"><code class="language-bruno" data-lang="bruno">{
+  &#34;attachments&#34;: [{
+      &#34;contentType&#34;: &#34;application/xml&#34;,
+      &#34;file&#34;: &#34;XXXXX&#34;,
+      &#34;fileName&#34;: &#34;cda.xml&#34;
+  }],
+  &#34;addresses&#34;: [
+    {
+      &#34;email&#34;: &#34;{{emailPS}}&#34;,
+      &#34;name&#34;: &#34;PS&#34;,
+      &#34;type&#34;: &#34;TO&#34;
+    }
+  ],
+  &#34;headers&#34;: {
+      &#34;X-MSS-INS&#34;: &#34;O&#34;,
+      &#34;X-MSS-CODECDA&#34;: &#34;34112-3&#34;,
+      &#34;X-MSS-NIL&#34;: &#34;DEV935997&#34;
+  },
+  &#34;flags&#34;: [],
+  &#34;subject&#34;: &#34;Message test envoi avec header x-mss&#34;,
+  &#34;body&#34;: &#34;test &lt;span style=\&#34;color:#ff0000\&#34;&gt;message &lt;/span&gt;&lt;b&gt;html&lt;/b&gt;&#34;,
+  &#34;priority&#34;: &#34;NORMAL&#34;,
+  &#34;isHtml&#34;: true
+}
+</code></pre><p>Le connecteur ne fait pas de contrôle de cohérence entre la valeur des entêtes et les documents envoyés en pièces jointes.</p>
+<h3 id="exigence-mss20">Exigence MSS20</h3>
+<p>&ldquo;Le Système DOIT positionner l&rsquo;entête SMTP &ldquo;&ldquo;X-MSS-INS&rdquo;&rdquo; dans un message envoyé qui comporte en PJ un document de santé CDA encapsulé dans une archive IHE_XDM. La valeur de cet entete DOIT être :</p>
+<p>&lsquo;O&rsquo; (Oui) en cas de présence d&rsquo;une Identité Nationale de Santé (INS qualifiée&rdquo;&quot;*) dans l&rsquo;archive IHE_XDM ;</p>
+<p>&lsquo;N&rsquo; (Non) en cas d&rsquo;absence d&rsquo;une Identité Nationale de Santé (INS qualifiée&quot;&quot;*) dans l&rsquo;archive IHE_XDM.</p>
+<p>En cas d&rsquo;absence en PJ d&rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&rsquo;entête ne DOIT pas être positionnée.</p>
+<p>INS qualifié au sens du §5.3.3 du Référentiel Identifiant National de Santé v2.0. La présence d&rsquo;un INS qualifié est caractérisé par la présence de l&rsquo;INS (matricule, OID) et des 4 traits d&rsquo;identité suivants dans l&rsquo;entete CDA : nom de naissance, 1er prenom, date de naissance et sexe&quot;</p>
+<h3 id="exigence-mss21">Exigence MSS21</h3>
+<p>&ldquo;Le Système DOIT positionner un entête SMTP &ldquo;&ldquo;X-MSS-CODECDA&rdquo;&rdquo; dans un message envoyé qui comporte en PJ un ou plusieurs documents CDA encapsulés dans une archive IHE_XDM. La valeur de cet entete DOIT être égale à celle du champ code* présent dans l&rsquo;entête du document CDA.</p>
+<p>En cas de présence de plusieurs documents CDA, l&rsquo;entête sera multi-valué. En cas d&rsquo;absence en PJ d&rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&rsquo;entête ne DOIT pas être positionné.</p>
+<p>code défini dans le &ldquo;&ldquo;Volet Structuration Minimale de Documents de Santé – CI-SIS Juin 2021, §3.5.5.5&quot;&rdquo;&rdquo;</p>
+<h3 id="exigence-mss22">Exigence MSS22</h3>
+<p>&ldquo;Le Système DOIT positionner l&rsquo;entête SMTP &ldquo;&ldquo;X-MSS-NIL&rdquo;&rdquo; dans tous les courriels envoyés. Elle sera renseignée du numéro &ldquo;&ldquo;référence produit&rdquo;&rdquo; attribué lors de la déclaration du produit sur la plateforme convergence.esante.gouv.fr.</p>
+<p>Le numéro &ldquo;&ldquo;référence produit&rdquo;&rdquo; à renseigner est celui du logiciel qui a produit le message SMTP.&rdquo;</p>
+<h3 id="exigence-mss26">Exigence MSS26</h3>
+<p>Le Système DOIT pouvoir positionner un entête SMTP &ldquo;X-MSS-MES&rdquo;, dans les messages envoyés vers un usager (Mon espace santé), avec la valeur &ldquo;FIN&rdquo; (3 caractères en majuscules), lorsque le professionnel émetteur ne souhaite pas que le patient puisse lui répondre en retour.</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3aa3b6fbd974023d38a168e486f7a418">7 - Migrations</h1>
     <div class="lead">Guide de migration vers les versions supérieures de la DevBox-Santé MSSanté</div>
 	
 </div>
@@ -993,7 +1089,7 @@ Cette liste contient par exemple mailiz et médimail (liste non exhaustive) et �
 
 <div class="td-content" style="">
     
-	<h1 id="pg-fdbfb588e3beb583f45227b16fa6167f">6.1 - Migration 1.2 vers la 2.0</h1>
+	<h1 id="pg-fdbfb588e3beb583f45227b16fa6167f">7.1 - Migration 1.2 vers la 2.0</h1>
     <div class="lead">Guide de migration vers la nouvelle version 2.0</div>
 	<p>La version 2.0 de la DevBox-santé MSS apporte le support du nouveau référentiel v2 conforme au ségur vague 2</p>
 <p>Quelques changements ont été apportés.</p>

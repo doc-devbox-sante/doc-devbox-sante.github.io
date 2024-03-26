@@ -147,7 +147,7 @@ Version imprimable multipages.
     
     
 	
-<li>1: <a href="#pg-4d669ea2758d08186a649d09451a5b67">Preuves Segur</a></li>
+<li>1: <a href="#pg-82cd1c637ad325d856d89a54fe730976">Gestion multi-opérateurs</a></li>
 
 
     
@@ -166,7 +166,7 @@ Version imprimable multipages.
     
     
 	
-<li>2: <a href="#pg-1581e7ea70a15004987f730b46c1c8a3">Authentification</a></li>
+<li>2: <a href="#pg-8007ed27944d38ccf68d4d276c6e43d5">Message Manager</a></li>
 
 
     
@@ -185,7 +185,7 @@ Version imprimable multipages.
     
     
 	
-<li>3: <a href="#pg-82cd1c637ad325d856d89a54fe730976">Gestion multi-opérateurs</a></li>
+<li>3: <a href="#pg-315ac22e529e343de790ce61673ed222">Entête spécifiques X-MSS</a></li>
 
 
     
@@ -204,7 +204,45 @@ Version imprimable multipages.
     
     
 	
-<li>4: <a href="#pg-8007ed27944d38ccf68d4d276c6e43d5">Message Manager</a></li>
+<li>4: <a href="#pg-3aa3b6fbd974023d38a168e486f7a418">Migrations</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>4.1: <a href="#pg-fdbfb588e3beb583f45227b16fa6167f">Migration 1.2 vers la 2.0</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-4d669ea2758d08186a649d09451a5b67">Preuves Segur</a></li>
 
 
     
@@ -223,77 +261,9 @@ Version imprimable multipages.
     
     
 	
-<li>5: <a href="#pg-92658f394344ac510b8f2afc02d413d3">Services REST</a></li>
+<li>6: <a href="#pg-8cd8196ed202f0b93bb48becdd3afda2">Encoder en base64</a></li>
 
 
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
-  
-    
-    
-	
-<li>6: <a href="#pg-315ac22e529e343de790ce61673ed222">Entête spécifiques X-MSS</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
-  
-    
-    
-	
-<li>7: <a href="#pg-3aa3b6fbd974023d38a168e486f7a418">Migrations</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-    
-    
-	
-<li>7.1: <a href="#pg-fdbfb588e3beb583f45227b16fa6167f">Migration 1.2 vers la 2.0</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
-  
-
-    </ul>
     
   
 
@@ -322,7 +292,360 @@ Version imprimable multipages.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-4d669ea2758d08186a649d09451a5b67">1 - Preuves Segur</h1>
+	<h1 id="pg-82cd1c637ad325d856d89a54fe730976">1 - Gestion multi-opérateurs</h1>
+    
+	<p>Le connecteur MS Santé de la DevBox est compatible avec plusieurs opérateurs.
+Cette liste contient par exemple mailiz et médimail (liste non exhaustive) et évolue sans cesse en fonctions des besoins des clients.</p>
+<p>Ainsi le connecteur permet au PS de se connecter à un large panel d&rsquo;opérateurs.</p>
+<h2 id="liste-des-opérateurs">Liste des opérateurs</h2>
+<p>Un service REST permet d&rsquo;avoir la liste des opérateurs ainsi que le nom des principaux dossiers (inbox, sent, draft et trash) qui peuvent varier en fonction des opérateurs.</p>
+<pre tabindex="0"><code>GET {url}/mssante/v2/operators
+</code></pre><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;medimail&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2,&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;INBOX&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;TRASH&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;DRAFT&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SENT&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;mailiz&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2,&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;INBOX&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Trash&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Drafts&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Sent&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;mailiz-v1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1,&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;6&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><ul>
+<li>name: nom de l&rsquo;opérateur à passer dans le header mssAuthentication.operator</li>
+<li>apiVersion: version de l&rsquo;api, url du type /mssante/messages pour la v1 et /mssante/v2/messages pour la v2</li>
+<li>messageManagerActive: cf <a href="https://doc.devbox-sante.fr/ms-sante/howtos/message-manager/">Message Manager</a></li>
+<li>withAllHeaders: Permet de récupérer tous les headers renvoyés par le service imap</li>
+<li>xxxFolderId: Nom des 4 principaux dossiers</li>
+</ul>
+<p>Ensuite il suffit de passer dans les headers le nom de l&rsquo;opérateur sur lequel le PS souhaite se connecter.</p>
+<p>Exemple:</p>
+<pre tabindex="0"><code class="language-bruno" data-lang="bruno">headers {
+  mssAuthentication.operator: mailiz
+  mssAuthentication.pscToken: MIIcbAIBA...Bv4sVwVpAICCAA=
+  mssAuthentication.userName: xxx-pers@mssante.fr
+}
+</code></pre>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-8007ed27944d38ccf68d4d276c6e43d5">2 - Message Manager</h1>
+    
+	<p>Les opérateurs ne prennent pas en charge via les API LPS certaines fonctionnalités &ldquo;standard&rdquo; de client de messagerie comme par exemple:</p>
+<ul>
+<li>sauvegarde du message envoyé dans le dossier &ldquo;sent&rdquo;</li>
+<li>déplacement du message supprimé dans le dossier &ldquo;trash&rdquo;</li>
+<li>sauvegarde du brouillon dans le dossier &ldquo;draft&rdquo;</li>
+<li>&hellip;</li>
+</ul>
+<p>Par défaut tout est géré par des flags dans le dossier INBOX (exception faite de la sauvegarde du message envoyé qui n&rsquo;est pas faite)</p>
+<p>Pour palier à ce problème, 2 modes de fonctionnement ont été mis en place:</p>
+<ul>
+<li>Managed: Le connecteur crée automatiquement ces dossiers au moment de l&rsquo;envoi, la suppression ou l&rsquo;enregistrement de brouillon et déplace/sauvegarde le message dans le bon dossier.</li>
+<li>No Managed: Le connecteur ne fait aucun traitement particulier et utilise le workflow de gestion des messages de l&rsquo;opérateur. Ce dernier peut décider de tout laisser dans inbox et ne mettre que des flags pour distinguer les messages ou utiliser les dossiers comme dans le cas &ldquo;Managed&rdquo;</li>
+</ul>
+<p>Ainsi par exemple dans le cas &ldquo;No managed&rdquo; avec un opérateur qui laisse tous les messages dans INBOX, pour avoir les messages du dossier draft, il faut rechercher les messages en précisant draft=true dans la query et sans préciser de folderId.</p>
+<p>Ce type de fonctionnement est précisé dans la configuration d el&rsquo;opérateur via le champ messageManagerActive:</p>
+<pre tabindex="0"><code>GET {url}/mssante/v2/operators
+</code></pre><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;medimail&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2,&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;INBOX&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;TRASH&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;DRAFT&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SENT&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;mailiz-v1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1,&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;6&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-315ac22e529e343de790ce61673ed222">3 - Entête spécifiques X-MSS</h1>
+    
+	<p>Pour répondre aux exigences du <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">&ldquo;Référentiel socle MSSanté #2, Clients de Messageries Sécurisées de Santé&rdquo;</a>, le connecteur ms-santé inclus la possibilité de passer des headers spécifiques :</p>
+<ul>
+<li><code>X-MSS-MES</code></li>
+<li><code>X_MSS_INS</code></li>
+<li><code>X_MSS_CODECDA</code></li>
+<li><code>X_MSS_NIL</code></li>
+</ul>
+<p>Exemple:</p>
+<pre tabindex="0"><code class="language-bruno" data-lang="bruno">{
+  &#34;attachments&#34;: [{
+      &#34;contentType&#34;: &#34;application/xml&#34;,
+      &#34;file&#34;: &#34;XXXXX&#34;,
+      &#34;fileName&#34;: &#34;cda.xml&#34;
+  }],
+  &#34;addresses&#34;: [
+    {
+      &#34;email&#34;: &#34;{{emailPS}}&#34;,
+      &#34;name&#34;: &#34;PS&#34;,
+      &#34;type&#34;: &#34;TO&#34;
+    }
+  ],
+  &#34;headers&#34;: {
+      &#34;X-MSS-INS&#34;: &#34;O&#34;,
+      &#34;X-MSS-CODECDA&#34;: &#34;34112-3&#34;,
+      &#34;X-MSS-NIL&#34;: &#34;DEV935997&#34;
+  },
+  &#34;flags&#34;: [],
+  &#34;subject&#34;: &#34;Message test envoi avec header x-mss&#34;,
+  &#34;body&#34;: &#34;test &lt;span style=\&#34;color:#ff0000\&#34;&gt;message &lt;/span&gt;&lt;b&gt;html&lt;/b&gt;&#34;,
+  &#34;priority&#34;: &#34;NORMAL&#34;,
+  &#34;isHtml&#34;: true
+}
+</code></pre><p>Attention : il ne s&rsquo;agit pas ici de header HTTP, mais de header pour les messages SMTP/MIME. Le connecteur ne fait pas de contrôle de cohérence entre la valeur des entêtes et les documents envoyés en pièces jointes.</p>
+<h2 id="rappel-des-exigences">Rappel des exigences</h2>
+<p>Rappel concernant le <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">&ldquo;Référentiel socle MSSanté #2, Clients de Messageries Sécurisées de Santé&rdquo;</a></p>
+<h3 id="eco241">ECO.2.4.1</h3>
+<blockquote>
+<p>&ldquo;Le Système DOIT positionner un entête SMTP &ldquo;&ldquo;X-MSS-CODECDA&rdquo;&rdquo; dans un message envoyé qui comporte en PJ un ou plusieurs documents CDA encapsulés dans une archive IHE_XDM. La valeur de cet entete DOIT être égale à celle du champ code* présent dans l&rsquo;entête du document CDA.</p>
+<p>En cas de présence de plusieurs documents CDA, l&rsquo;entête sera multi-valué. En cas d&rsquo;absence en PJ d&rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&rsquo;entête ne DOIT pas être positionné.</p>
+<p>code défini dans le &ldquo;&ldquo;Volet Structuration Minimale de Documents de Santé – CI-SIS Juin 2021, §3.5.5.5&quot;&rdquo;&rdquo;</p>
+</blockquote>
+<h3 id="eco242">ECO.2.4.2</h3>
+<blockquote>
+<p>&ldquo;Le Système DOIT positionner l&rsquo;entête SMTP &ldquo;&ldquo;X-MSS-INS&rdquo;&rdquo; dans un message envoyé qui comporte en PJ un document de santé CDA encapsulé dans une archive IHE_XDM. La valeur de cet entete DOIT être :</p>
+<p>&lsquo;O&rsquo; (Oui) en cas de présence d&rsquo;une Identité Nationale de Santé (INS qualifiée&rdquo;&rdquo;*) dans l&rsquo;archive IHE_XDM ;</p>
+<p>&lsquo;N&rsquo; (Non) en cas d&rsquo;absence d&rsquo;une Identité Nationale de Santé (INS qualifiée&quot;&quot;*) dans l&rsquo;archive IHE_XDM.</p>
+<p>En cas d&rsquo;absence en PJ d&rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&rsquo;entête ne DOIT pas être positionnée.</p>
+<p>INS qualifié au sens du §5.3.3 du Référentiel Identifiant National de Santé v2.0. La présence d&rsquo;un INS qualifié est caractérisé par la présence de l&rsquo;INS (matricule, OID) et des 4 traits d&rsquo;identité suivants dans l&rsquo;entete CDA : nom de naissance, 1er prenom, date de naissance et sexe&quot;</p>
+</blockquote>
+<h3 id="eco243">ECO.2.4.3</h3>
+<blockquote>
+<p>&ldquo;Le Système DOIT positionner l&rsquo;entête SMTP &ldquo;&ldquo;X-MSS-NIL&rdquo;&rdquo; dans tous les courriels envoyés. Elle sera renseignée du numéro &ldquo;&ldquo;référence produit&rdquo;&rdquo; attribué lors de la déclaration du produit sur la plateforme convergence.esante.gouv.fr.</p>
+<p>Le numéro &ldquo;&ldquo;référence produit&rdquo;&rdquo; à renseigner est celui du logiciel qui a produit le message SMTP.&rdquo;</p>
+</blockquote>
+<h3 id="eco228">ECO.2.2.8</h3>
+<blockquote>
+<p>Le Système DOIT pouvoir positionner un entête SMTP &ldquo;X-MSS-MES&rdquo;, dans les messages envoyés vers un usager (Mon espace santé), avec la valeur &ldquo;FIN&rdquo; (3 caractères en majuscules), lorsque le professionnel émetteur ne souhaite pas que le patient puisse lui répondre en retour.</p>
+</blockquote>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3aa3b6fbd974023d38a168e486f7a418">4 - Migrations</h1>
+    <div class="lead">Guide de migration vers les versions supérieures de la DevBox-Santé MSSanté</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-fdbfb588e3beb583f45227b16fa6167f">4.1 - Migration 1.2 vers la 2.0</h1>
+    <div class="lead">Guide de migration vers la nouvelle version 2.0</div>
+	<p>La version 2.0 de la DevBox-santé MSS apporte le support du nouveau référentiel v2 conforme au ségur vague 2</p>
+<p>Quelques changements ont été apportés.</p>
+<h3 id="exécution">Exécution</h3>
+<p>Vous pouvez essayer l&rsquo;API V2 avec une collection postman disponible ici :</p>
+<p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
+<p>ou le swagger :</p>
+<p><a target="_blank" href="https://msssante-demo.devbox-sante.fr/swagger-ui.html">Swagger</a></p>
+<h2 id="authentification">Authentification</h2>
+<p>2 modes d&rsquo;authentification sont disponibles:</p>
+<ul>
+<li>Pro Santé Connect</li>
+<li>Certificat p12 (cas d&rsquo;une bal applicative)</li>
+</ul>
+<p>La connexion par carte cps est supprimée et la connexion par login/mdp/otp est à priori supprimée (à voir selon l&rsquo;opérateur)</p>
+<h2 id="modèle">Modèle</h2>
+<ul>
+<li>Modification du type des identifiants (id, folderId, messageId) integer =&gt; string</li>
+</ul>
+<p><img src="Folder_dans_swagger.png" alt="Folder_dans_swagger.png"></p>
+<p><img src="FolderId_dans_swagger.png" alt="FolderId dans les routes"></p>
+<ul>
+<li>Modification des Flags:
+<ul>
+<li>REPLIED =&gt; ANSWERED</li>
+<li>UNREAD =&gt; SEEN</li>
+<li>ATTACHMENT, LOW_PRIORITY, NONE, PRIORITY, SENT_BY_ME, URGENT =&gt; Deprecated</li>
+<li>Nouveaux flags: RECENT, ANSWERED, SEEN</li>
+<li>Liste complète en V2: ANSWERED, DELETED, DRAFT, FLAGGED, FORWARDED, SEEN, RECENT</li>
+</ul>
+</li>
+<li>Modification d&rsquo;un message (MessageStatus):
+<ul>
+<li>DELETE =&gt; DELETED</li>
+<li>DELETE, SPAM, TRASH, UNSPAM =&gt; Deprecated</li>
+<li>DELETED, READ, FLAGGED, UNFLAGGED, UNREAD, UNDELETED</li>
+</ul>
+</li>
+<li>MessageQuery
+<ul>
+<li>isSent =&gt; sent</li>
+</ul>
+</li>
+</ul>
+<h2 id="rest-api">Rest API</h2>
+<p>Les APIs v2 sont disponible sur l&rsquo;url /mssante/v2/xxxx, elles ont les mêmes signatures que la V1 à quelques exceptions près:</p>
+<h3 id="endpoints-supprimés">Endpoints supprimés</h3>
+<ul>
+<li>Authentification : GET /authentication/cps, POST /authentication/otp, GET /authentication/otp/{otp}</li>
+<li>POST /messages/attachment Ajout de pièce jointe =&gt; Faire un save du message brouillon avec la PJ</li>
+<li>DELETE /messages/{id}/attachment/{part} Suppression d&rsquo;une pièce jointe =&gt; Faire un save du message brouillon sans la PJ</li>
+</ul>
+<h3 id="nouveaux-endpoints">Nouveaux endpoints</h3>
+<ul>
+<li>Vider la corbeille: DELETE /folders/trash/clean (=&gt; suppression des messages ayant le flag DELETED)</li>
+<li>POST /folders/{parentId}/create/type/{type}: Lors de la création d&rsquo;un dossier ce dernier est &ldquo;typé&rdquo; comme contenant des messages ou des dossiers. Si le endpoint ne permet pas de préciser le type alors le dossier est par défaut contenant des messages.</li>
+<li>POST /folders/{id}/rename</li>
+<li>GET /messages/{folderId}/ByPage: recherche paginée</li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-4d669ea2758d08186a649d09451a5b67">5 - Preuves Segur</h1>
     <div class="lead">Comment configurer la DevBox-sante MSS pour apporter les preuves SEGUR</div>
 	<h2 id="génération-de-preuves">Génération de preuves</h2>
 <p>Pour générer une preuve, il faut :</p>
@@ -717,458 +1040,22 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-1581e7ea70a15004987f730b46c1c8a3">2 - Authentification</h1>
-    
-	<h2 id="authentification">Authentification</h2>
-<p>Dans le cas d&rsquo;authentification &ldquo;authInHeader&rdquo; (Le type d&rsquo;autentification est renseigné dans le fichier de configuration, cf: <a href="https://doc.devbox-sante.fr/ms-sante/configuration/referentiel2/" title="Configuration">Configuration V1 et v2</a>)</p>
-<p>Le connecteur dispose de 4 modes d&rsquo;authentification:</p>
-<ul>
-<li>Certificat p12 (BAL applicative) (V2)</li>
-<li>Jeton PSC (pro santé connect) (V2)</li>
-<li>Token de session après authentification avec Login / Mot de passe et OTP (Mailiz)</li>
-<li>Carte CPS (Mailiz)</li>
-</ul>
-<p>Et la requête doit contenir les informations dans le header. Le `userName&rsquo; est utilisé pour initialiser la session SMTP/IMAP et le &lsquo;operator&rsquo; pour connaitre l&rsquo;opérateur de la MSS</p>
-<h3 id="certificat-psc-pro-santé-connect">Certificat PSC (pro santé connect)</h3>
-<p>Cette authentification est disponible pour les bals personnelles ou organisationnelles.</p>
-<p>Le client doit au préalable récupérer un jeton PSC (access token) via son serveur d&rsquo;authentification enregistré auprès de l&rsquo;ANS et le passer aux requêtes dans un header.
-Ce token est généralement valable 4-5 minutes. Le client doit donc redemander régulièrement un nouveau jeton à son serveur d&rsquo;authentification.</p>
-<p><img src="demo-PSC.png" alt="PSC auth"></p>
-<p>Exemple:</p>
-<pre tabindex="0"><code class="language-bruno" data-lang="bruno">headers {
-  mssAuthentication.operator: mailiz
-  mssAuthentication.pscToken: MIIcbAIBA...Bv4sVwVpAICCAA=
-  mssAuthentication.userName: xxx-pers@mssante.fr
-}
-</code></pre><h3 id="certificat-p12-bal-applicative">Certificat p12 (bal applicative)</h3>
-<p>Cette authentification est disponible pour les bal applicatives.
-L&rsquo;application cliente se connecte à la mssanté via un certificat p12 et le mot de passe associé qui sont passé dans les headers lors de chaque appel au connecteur.</p>
-<p>Exemple:</p>
-<pre tabindex="0"><code class="language-bruno" data-lang="bruno">headers {
-  mssAuthentication.operator: medimail
-  mssAuthentication.password: password
-  mssAuthentication.p12: MIIcbAIBA...Bv4sVwVpAICCAA=
-  mssAuthentication.userName: xxx-applicatif-test@medimail.mssante.fr
-}
-</code></pre><p>Le certificat p12 doit être passé en base64.</p>
-<p>Windows Powershell:</p>
+	<h1 id="pg-8cd8196ed202f0b93bb48becdd3afda2">6 - Encoder en base64</h1>
+    <div class="lead">Petit guide utile pour encoder en base64 des contenus</div>
+	<p>Dans la DevBox-Santé, beaucoup de contenus doivent être encodé en base64 avant d&rsquo;être envoyé par une requête HTTP.</p>
+<p>L&rsquo;encodage en base64 d&rsquo;un byte[] json se fait de manière transparente mais dans les header HTTP, voici quelques méthodes pour encoder en base64 vos contenus :</p>
+<h3 id="windows-powershell">Windows Powershell:</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#000">$cert</span> <span style="color:#ce5c00;font-weight:bold">=</span> get-content <span style="color:#4e9a06">&#39;certificate.p12&#39;</span> -Encoding Byte
 </span></span><span style="display:flex;"><span><span style="color:#000">$base64</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">[</span>System.Convert<span style="color:#ce5c00;font-weight:bold">]</span>::ToBase64String<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$cert</span><span style="color:#ce5c00;font-weight:bold">)</span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$base64</span>
-</span></span></code></pre></div><p>Linux:</p>
+</span></span></code></pre></div><h3 id="linux">Linux:</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>base64 certificate.p12 &gt; outputfile
-</span></span></code></pre></div><p>Mac OS:</p>
+</span></span></code></pre></div><h3 id="mac-os">Mac OS:</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>base64 -i certificate.p12 -o outputfile
-</span></span></code></pre></div><h3 id="login-mot-de-passe-et-otp-mailiz-avec-les-api-v1">Login, mot de passe et OTP (mailiz avec les API v1)</h3>
-<p>Cette authentification est disponible pour mailiz mais avec les API v1.
-Le client s&rsquo;authentifie via des services de connexion REST et doit repasser le cookie correspondant à la session courante lors de chaque appel au connecteur.</p>
-<p>Exemple:</p>
-<pre tabindex="0"><code class="language-bruno" data-lang="bruno">headers {
-  mssAuthentication.operator: mailiz-v1
-  Cookie: JSESSIONID=1139181CDF6638784181753183EC32A5
-}
-</code></pre><h3 id="carte-cps-mailiz-avec-les-api-v1">Carte CPS (mailiz avec les API v1)</h3>
-<p>Cette authentification est disponible pour mailiz mais avec les API v1.
-Le client s&rsquo;authentifie l&rsquo;utilitaire CPS de la DevBox Santé puis doit repasser le cookie correspondant à la session courante lors de chaque appel au connecteur.</p>
-<p>Exemple:</p>
-<pre tabindex="0"><code class="language-bruno" data-lang="bruno">headers {
-  mssAuthentication.operator: mailiz-v1
-  Cookie: JSESSIONID=1139181CDF6638784181753183EC32A5
-}
-</code></pre>
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-82cd1c637ad325d856d89a54fe730976">3 - Gestion multi-opérateurs</h1>
-    
-	<p>Le connecteur MS Santé de la DevBox est compatible avec plusieurs opérateurs.
-Cette liste contient par exemple mailiz et médimail (liste non exhaustive) et évolue sans cesse en fonctions des besoins des clients.</p>
-<p>Ainsi le connecteur permet au PS de se connecter à un large panel d&rsquo;opérateurs.</p>
-<h2 id="liste-des-opérateurs">Liste des opérateurs</h2>
-<p>Un service REST permet d&rsquo;avoir la liste des opérateurs ainsi que le nom des principaux dossiers (inbox, sent, draft et trash) qui peuvent varier en fonction des opérateurs.</p>
-<pre tabindex="0"><code>GET {url}/mssante/v2/operators
-</code></pre><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;medimail&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2,&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;INBOX&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;TRASH&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;DRAFT&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SENT&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;mailiz&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2,&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;INBOX&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Trash&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Drafts&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Sent&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;mailiz-v1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1,&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;6&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a40000">...</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
-</span></span></code></pre></div><ul>
-<li>name: nom de l&rsquo;opérateur à passer dans le header mssAuthentication.operator</li>
-<li>apiVersion: version de l&rsquo;api, url du type /mssante/messages pour la v1 et /mssante/v2/messages pour la v2</li>
-<li>messageManagerActive: cf <a href="https://doc.devbox-sante.fr/ms-sante/howtos/message-manager/">Message Manager</a></li>
-<li>withAllHeaders: Permet de récupérer tous les headers renvoyés par le service imap</li>
-<li>xxxFolderId: Nom des 4 principaux dossiers</li>
-</ul>
-<p>Ensuite il suffit de passer dans les headers le nom de l&rsquo;opérateur sur lequel le PS souhaite se connecter.</p>
-<p>Exemple:</p>
-<pre tabindex="0"><code class="language-bruno" data-lang="bruno">headers {
-  mssAuthentication.operator: mailiz
-  mssAuthentication.pscToken: MIIcbAIBA...Bv4sVwVpAICCAA=
-  mssAuthentication.userName: xxx-pers@mssante.fr
-}
-</code></pre>
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-8007ed27944d38ccf68d4d276c6e43d5">4 - Message Manager</h1>
-    
-	<p>Les opérateurs ne prennent pas en charge via les API LPS certaines fonctionnalités &ldquo;standard&rdquo; de client de messagerie comme par exemple:</p>
-<ul>
-<li>sauvegarde du message envoyé dans le dossier &ldquo;sent&rdquo;</li>
-<li>déplacement du message supprimé dans le dossier &ldquo;trash&rdquo;</li>
-<li>sauvegarde du brouillon dans le dossier &ldquo;draft&rdquo;</li>
-<li>&hellip;</li>
-</ul>
-<p>Par défaut tout est géré par des flags dans le dossier INBOX (exception faite de la sauvegarde du message envoyé qui n&rsquo;est pas faite)</p>
-<p>Pour palier à ce problème, 2 modes de fonctionnement ont été mis en place:</p>
-<ul>
-<li>Managed: Le connecteur crée automatiquement ces dossiers au moment de l&rsquo;envoi, la suppression ou l&rsquo;enregistrement de brouillon et déplace/sauvegarde le message dans le bon dossier.</li>
-<li>No Managed: Le connecteur ne fait aucun traitement particulier et utilise le workflow de gestion des messages de l&rsquo;opérateur. Ce dernier peut décider de tout laisser dans inbox et ne mettre que des flags pour distinguer les messages ou utiliser les dossiers comme dans le cas &ldquo;Managed&rdquo;</li>
-</ul>
-<p>Ainsi par exemple dans le cas &ldquo;No managed&rdquo; avec un opérateur qui laisse tous les messages dans INBOX, pour avoir les messages du dossier draft, il faut rechercher les messages en précisant draft=true dans la query et sans préciser de folderId.</p>
-<p>Ce type de fonctionnement est précisé dans la configuration d el&rsquo;opérateur via le champ messageManagerActive:</p>
-<pre tabindex="0"><code>GET {url}/mssante/v2/operators
-</code></pre><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;medimail&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2,&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;INBOX&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;TRASH&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;DRAFT&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SENT&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;mailiz-v1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1,&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;6&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a40000">...</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
 </span></span></code></pre></div>
 </div>
 
 
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-92658f394344ac510b8f2afc02d413d3">5 - Services REST</h1>
-    
-	<p>Vous pouvez essayer l&rsquo;API V2 avec une collection postman disponible ici :</p>
-<p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
-<p>ou le swagger (v1 et v2) :</p>
-<p><a target="_blank" href="https://mss-demo.devbox-sante.fr/swagger-ui.html"><img alt="Swagger" style="width:140px" src="https://static1.smartbear.co/swagger/media/assets/images/swagger_logo.svg"></a></p>
-<p>ou l&rsquo;interface de démo (v1 et v2, toutes les fonctionnalités n&rsquo;ont pas été implémentées sur cette interface, c&rsquo;est juste un POC)</p>
-<p><a target="_blank" href="https://mss-demo.devbox-sante.fr"><img alt="Démo" style="width:40px" src="https://mss-demo.devbox-sante.fr/assets/images/icon-medium-mssante.svg">MS Santé Démo</a></p>
-
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-315ac22e529e343de790ce61673ed222">6 - Entête spécifiques X-MSS</h1>
-    
-	<p>Pour répondre aux exigences listé ci-dessous, le connecteur ms-santé inclus la possibilité de passer des headers spécifiques:</p>
-<ul>
-<li>X-MSS-MES</li>
-<li>X_MSS_INS</li>
-<li>X_MSS_CODECDA</li>
-<li>X_MSS_NIL</li>
-</ul>
-<p>Exemple:</p>
-<pre tabindex="0"><code class="language-bruno" data-lang="bruno">{
-  &#34;attachments&#34;: [{
-      &#34;contentType&#34;: &#34;application/xml&#34;,
-      &#34;file&#34;: &#34;XXXXX&#34;,
-      &#34;fileName&#34;: &#34;cda.xml&#34;
-  }],
-  &#34;addresses&#34;: [
-    {
-      &#34;email&#34;: &#34;{{emailPS}}&#34;,
-      &#34;name&#34;: &#34;PS&#34;,
-      &#34;type&#34;: &#34;TO&#34;
-    }
-  ],
-  &#34;headers&#34;: {
-      &#34;X-MSS-INS&#34;: &#34;O&#34;,
-      &#34;X-MSS-CODECDA&#34;: &#34;34112-3&#34;,
-      &#34;X-MSS-NIL&#34;: &#34;DEV935997&#34;
-  },
-  &#34;flags&#34;: [],
-  &#34;subject&#34;: &#34;Message test envoi avec header x-mss&#34;,
-  &#34;body&#34;: &#34;test &lt;span style=\&#34;color:#ff0000\&#34;&gt;message &lt;/span&gt;&lt;b&gt;html&lt;/b&gt;&#34;,
-  &#34;priority&#34;: &#34;NORMAL&#34;,
-  &#34;isHtml&#34;: true
-}
-</code></pre><p>Le connecteur ne fait pas de contrôle de cohérence entre la valeur des entêtes et les documents envoyés en pièces jointes.</p>
-<h3 id="exigence-mss20">Exigence MSS20</h3>
-<p>&ldquo;Le Système DOIT positionner l&rsquo;entête SMTP &ldquo;&ldquo;X-MSS-INS&rdquo;&rdquo; dans un message envoyé qui comporte en PJ un document de santé CDA encapsulé dans une archive IHE_XDM. La valeur de cet entete DOIT être :</p>
-<p>&lsquo;O&rsquo; (Oui) en cas de présence d&rsquo;une Identité Nationale de Santé (INS qualifiée&rdquo;&quot;*) dans l&rsquo;archive IHE_XDM ;</p>
-<p>&lsquo;N&rsquo; (Non) en cas d&rsquo;absence d&rsquo;une Identité Nationale de Santé (INS qualifiée&quot;&quot;*) dans l&rsquo;archive IHE_XDM.</p>
-<p>En cas d&rsquo;absence en PJ d&rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&rsquo;entête ne DOIT pas être positionnée.</p>
-<p>INS qualifié au sens du §5.3.3 du Référentiel Identifiant National de Santé v2.0. La présence d&rsquo;un INS qualifié est caractérisé par la présence de l&rsquo;INS (matricule, OID) et des 4 traits d&rsquo;identité suivants dans l&rsquo;entete CDA : nom de naissance, 1er prenom, date de naissance et sexe&quot;</p>
-<h3 id="exigence-mss21">Exigence MSS21</h3>
-<p>&ldquo;Le Système DOIT positionner un entête SMTP &ldquo;&ldquo;X-MSS-CODECDA&rdquo;&rdquo; dans un message envoyé qui comporte en PJ un ou plusieurs documents CDA encapsulés dans une archive IHE_XDM. La valeur de cet entete DOIT être égale à celle du champ code* présent dans l&rsquo;entête du document CDA.</p>
-<p>En cas de présence de plusieurs documents CDA, l&rsquo;entête sera multi-valué. En cas d&rsquo;absence en PJ d&rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&rsquo;entête ne DOIT pas être positionné.</p>
-<p>code défini dans le &ldquo;&ldquo;Volet Structuration Minimale de Documents de Santé – CI-SIS Juin 2021, §3.5.5.5&quot;&rdquo;&rdquo;</p>
-<h3 id="exigence-mss22">Exigence MSS22</h3>
-<p>&ldquo;Le Système DOIT positionner l&rsquo;entête SMTP &ldquo;&ldquo;X-MSS-NIL&rdquo;&rdquo; dans tous les courriels envoyés. Elle sera renseignée du numéro &ldquo;&ldquo;référence produit&rdquo;&rdquo; attribué lors de la déclaration du produit sur la plateforme convergence.esante.gouv.fr.</p>
-<p>Le numéro &ldquo;&ldquo;référence produit&rdquo;&rdquo; à renseigner est celui du logiciel qui a produit le message SMTP.&rdquo;</p>
-<h3 id="exigence-mss26">Exigence MSS26</h3>
-<p>Le Système DOIT pouvoir positionner un entête SMTP &ldquo;X-MSS-MES&rdquo;, dans les messages envoyés vers un usager (Mon espace santé), avec la valeur &ldquo;FIN&rdquo; (3 caractères en majuscules), lorsque le professionnel émetteur ne souhaite pas que le patient puisse lui répondre en retour.</p>
-
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-3aa3b6fbd974023d38a168e486f7a418">7 - Migrations</h1>
-    <div class="lead">Guide de migration vers les versions supérieures de la DevBox-Santé MSSanté</div>
-	
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-    
-    
-	
-    
-
-<div class="td-content" style="">
-    
-	<h1 id="pg-fdbfb588e3beb583f45227b16fa6167f">7.1 - Migration 1.2 vers la 2.0</h1>
-    <div class="lead">Guide de migration vers la nouvelle version 2.0</div>
-	<p>La version 2.0 de la DevBox-santé MSS apporte le support du nouveau référentiel v2 conforme au ségur vague 2</p>
-<p>Quelques changements ont été apportés.</p>
-<h3 id="exécution">Exécution</h3>
-<p>Vous pouvez essayer l&rsquo;API V2 avec une collection postman disponible ici :</p>
-<p><a target="_blank" href="https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview"><img alt="Run In postman" src="https://run.pstmn.io/button.svg"></a></p>
-<p>ou le swagger :</p>
-<p><a target="_blank" href="https://msssante-demo.devbox-sante.fr/swagger-ui.html">Swagger</a></p>
-<h2 id="authentification">Authentification</h2>
-<p>2 modes d&rsquo;authentification sont disponibles:</p>
-<ul>
-<li>Pro Santé Connect</li>
-<li>Certificat p12 (cas d&rsquo;une bal applicative)</li>
-</ul>
-<p>La connexion par carte cps est supprimée et la connexion par login/mdp/otp est à priori supprimée (à voir selon l&rsquo;opérateur)</p>
-<h2 id="modèle">Modèle</h2>
-<ul>
-<li>Modification du type des identifiants (id, folderId, messageId) integer =&gt; string</li>
-</ul>
-<p><img src="Folder_dans_swagger.png" alt="Folder_dans_swagger.png"></p>
-<p><img src="FolderId_dans_swagger.png" alt="FolderId dans les routes"></p>
-<ul>
-<li>Modification des Flags:
-<ul>
-<li>REPLIED =&gt; ANSWERED</li>
-<li>UNREAD =&gt; SEEN</li>
-<li>ATTACHMENT, LOW_PRIORITY, NONE, PRIORITY, SENT_BY_ME, URGENT =&gt; Deprecated</li>
-<li>Nouveaux flags: RECENT, ANSWERED, SEEN</li>
-<li>Liste complète en V2: ANSWERED, DELETED, DRAFT, FLAGGED, FORWARDED, SEEN, RECENT</li>
-</ul>
-</li>
-<li>Modification d&rsquo;un message (MessageStatus):
-<ul>
-<li>DELETE =&gt; DELETED</li>
-<li>DELETE, SPAM, TRASH, UNSPAM =&gt; Deprecated</li>
-<li>DELETED, READ, FLAGGED, UNFLAGGED, UNREAD, UNDELETED</li>
-</ul>
-</li>
-<li>MessageQuery
-<ul>
-<li>isSent =&gt; sent</li>
-</ul>
-</li>
-</ul>
-<h2 id="rest-api">Rest API</h2>
-<p>Les APIs v2 sont disponible sur l&rsquo;url /mssante/v2/xxxx, elles ont les mêmes signatures que la V1 à quelques exceptions près:</p>
-<h3 id="endpoints-supprimés">Endpoints supprimés</h3>
-<ul>
-<li>Authentification : GET /authentication/cps, POST /authentication/otp, GET /authentication/otp/{otp}</li>
-<li>POST /messages/attachment Ajout de pièce jointe =&gt; Faire un save du message brouillon avec la PJ</li>
-<li>DELETE /messages/{id}/attachment/{part} Suppression d&rsquo;une pièce jointe =&gt; Faire un save du message brouillon sans la PJ</li>
-</ul>
-<h3 id="nouveaux-endpoints">Nouveaux endpoints</h3>
-<ul>
-<li>Vider la corbeille: DELETE /folders/trash/clean (=&gt; suppression des messages ayant le flag DELETED)</li>
-<li>POST /folders/{parentId}/create/type/{type}: Lors de la création d&rsquo;un dossier ce dernier est &ldquo;typé&rdquo; comme contenant des messages ou des dossiers. Si le endpoint ne permet pas de préciser le type alors le dossier est par défaut contenant des messages.</li>
-<li>POST /folders/{id}/rename</li>
-<li>GET /messages/{folderId}/ByPage: recherche paginée</li>
-</ul>
-
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
 
     
 	

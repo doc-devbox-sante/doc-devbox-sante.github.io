@@ -137,7 +137,15 @@ if (!doNotTrack) {
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ms-sante-li">
   <a href="/ms-sante/" title="DevBox-Santé MSS" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-ms-sante"><span class="td-sidebar-nav-active-item">MSS</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ms-santeconfiguration-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santerest-li">
+  <input type="checkbox" id="m-ms-santerest-check"/>
+  <label for="m-ms-santerest-check"><a href="/ms-sante/rest/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santerest"><span class="">REST Proxy</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santeauthentifications-li">
+  <input type="checkbox" id="m-ms-santeauthentifications-check"/>
+  <label for="m-ms-santeauthentifications-check"><a href="/ms-sante/authentifications/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santeauthentifications"><span class="">Authentifications</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ms-santeconfiguration-li">
   <input type="checkbox" id="m-ms-santeconfiguration-check"/>
   <label for="m-ms-santeconfiguration-check"><a href="/ms-sante/configuration/" title="Configuration selon les opérateurs" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santeconfiguration"><span class="">Configuration</span></a></label>
   
@@ -161,25 +169,13 @@ if (!doNotTrack) {
   <label for="m-ms-santehowtos-check"><a href="/ms-sante/howtos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtos"><span class="">Howtos</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtospreuve_segur-li">
-  <input type="checkbox" id="m-ms-santehowtospreuve_segur-check"/>
-  <label for="m-ms-santehowtospreuve_segur-check"><a href="/ms-sante/howtos/preuve_segur/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtospreuve_segur"><span class="">Preuves Segur</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosauthentification-li">
-  <input type="checkbox" id="m-ms-santehowtosauthentification-check"/>
-  <label for="m-ms-santehowtosauthentification-check"><a href="/ms-sante/howtos/authentification/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosauthentification"><span class="">Authentification</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosoperators-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosoperators-li">
   <input type="checkbox" id="m-ms-santehowtosoperators-check"/>
   <label for="m-ms-santehowtosoperators-check"><a href="/ms-sante/howtos/operators/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosoperators"><span class="">Gestion multi-opérateurs</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosmessage-manager-li">
   <input type="checkbox" id="m-ms-santehowtosmessage-manager-check"/>
   <label for="m-ms-santehowtosmessage-manager-check"><a href="/ms-sante/howtos/message-manager/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosmessage-manager"><span class="">Message Manager</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosservices-li">
-  <input type="checkbox" id="m-ms-santehowtosservices-check"/>
-  <label for="m-ms-santehowtosservices-check"><a href="/ms-sante/howtos/services/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosservices"><span class="">Services REST</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosentete-x-mss-li">
   <input type="checkbox" id="m-ms-santehowtosentete-x-mss-check"/>
@@ -196,12 +192,16 @@ if (!doNotTrack) {
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtospreuve_segur-li">
+  <input type="checkbox" id="m-ms-santehowtospreuve_segur-check"/>
+  <label for="m-ms-santehowtospreuve_segur-check"><a href="/ms-sante/howtos/preuve_segur/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtospreuve_segur"><span class="">Preuves Segur</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosbase64-li">
+  <input type="checkbox" id="m-ms-santehowtosbase64-check"/>
+  <label for="m-ms-santehowtosbase64-check"><a href="/ms-sante/howtos/base64/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-ms-santehowtosbase64"><span class="">Encoder en base64</span></a></label>
+  
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santearchitecture-li">
-  <input type="checkbox" id="m-ms-santearchitecture-check"/>
-  <label for="m-ms-santearchitecture-check"><a href="/ms-sante/architecture/" title="Architecture interne des différents composants" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santearchitecture"><span class="">Architecture interne</span></a></label>
-  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santeversions-li">
   <input type="checkbox" id="m-ms-santeversions-check"/>
   <label for="m-ms-santeversions-check"><a href="/ms-sante/versions/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santeversions"><span class="">Versions</span></a></label>
@@ -227,13 +227,12 @@ if (!doNotTrack) {
     <li><a href="#lapi-public">L&rsquo;API public</a></li>
     <li><a href="#utilisation">Utilisation</a></li>
     <li><a href="#pré-requis">Pré-requis</a></li>
-    <li><a href="#documentation-officielle">Documentation officielle</a>
+    <li><a href="#référentiels">Référentiels</a>
       <ul>
         <li><a href="#nouveau-référentiel-socle-ms-sante-2">Nouveau référentiel socle MS-Sante #2</a></li>
         <li><a href="#ancien-référentiel-compatible-avec-mailiz">Ancien référentiel compatible avec Mailiz</a></li>
       </ul>
     </li>
-    <li><a href="#tests">Tests</a></li>
   </ul>
 </nav>
       </div>
@@ -290,33 +289,7 @@ if (!doNotTrack) {
 		
 	</header>
 	<p>La Devbox-Santé MSS est une API Java ou une facade REST permettant d&rsquo;accéder et de respecter les différents référentiels MSSanté de manière transparente.</p>
-<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">!theme aws-orange
-!define DEVBOX_COLOR #278ef5
-!define DMP_COLOR #35D9C0
-!define MSS_COLOR #DE5D80
-!define INS_COLOR #07A2CF
-!define CPS_COLOR #D34A3C
-!define VITALE_COLOR #5FD67A
-!define PSC_COLOR #ff7765
-!define APCV_COLOR #c6e66d
-!define ANNUAIRE_COLOR #7613e0
-!define DATA_COLOR #ffa800
-
-[Application Intégrateur] as integrateur
-
-package &#34;DevBox-Santé Proxy REST&#34; as devbox DEVBOX_COLOR {
-        [DevBox-sante MSSanté] as mss MSS_COLOR
-}
-
-cloud &#34;**Opérateur MSSanté Nouveau Reférentiel **&#34; as operateur
-cloud &#34;**Mailiz**&#34; as mailiz
-cloud &#34;Apicrypt v2&#34; as apicrypt
-
-integrateur -d-&gt; mss : HTTP REST
-mss .d.&gt;  operateur : SMTP / IMAP
-mss -d-&gt; mailiz : HTTP / SOAP
-mss -d-&gt; apicrypt : socket
-</code></pre><h2 id="lapi-public">L&rsquo;API public</h2>
+<h2 id="lapi-public">L&rsquo;API public</h2>
 <p>l&rsquo;API est hébergée sur bitbucket :https://bitbucket.org/devbox-sante/devbox-sante-apis/src/master/ ms-sante-api</p>
 <p>Cette API définie les services disponibles et le modèle d&rsquo;objet.</p>
 <h2 id="utilisation">Utilisation</h2>
@@ -332,7 +305,8 @@ mss -d-&gt; apicrypt : socket
 <li>Mailiz avec les <a href="https://mailiz.mssante.fr/documents/16106/0/DST_interfaces_clients_V1.3_28012022.zip/02eca41b-d55f-4c03-a49a-d87f8a2f3b6f">API V1.3 soap</a> :  <a href="https://mailiz.mssante.fr/">https://mailiz.mssante.fr/</a></li>
 <li>Apicrypt (en cours de développement): <a href="https://www.apicrypt.org/inscription">https://www.apicrypt.org/inscription</a></li>
 </ul>
-<h2 id="documentation-officielle">Documentation officielle</h2>
+<p>Voici la liste des opérateurs référencés par le SEGUR <a href="https://esante.gouv.fr/segur/solutions-referencees?search_api_fulltext=&amp;field_categorie=853&amp;field_type_logiciel=All">https://esante.gouv.fr/segur/solutions-referencees?search_api_fulltext=&amp;field_categorie=853&amp;field_type_logiciel=All</a></p>
+<h2 id="référentiels">Référentiels</h2>
 <h3 id="nouveau-référentiel-socle-ms-sante-2">Nouveau référentiel socle MS-Sante #2</h3>
 <p>La nouvelle version v2 respecte le nouveau référentiel : <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2</a>
 <img src="Apis_mssante.png" alt="Apis mssante"></p>
@@ -344,11 +318,6 @@ mss -d-&gt; apicrypt : socket
 <li>Guide éditeur de mise en oeuvre de la MSSanté et de l&rsquo;alimentation du DMP dans un logiciel de professionnel de santé (V1.0.0 - mars 2016)</li>
 <li>Echange de compte rendu d&rsquo;examens de biologie via MSSanté : guide de transition vers le format XDM (V1.0.0 - 27 /04/2017)</li>
 </ul>
-<h2 id="tests">Tests</h2>
-<p>Un environnement de démo est disponible pour les tests configuré sur Mailiz en authentification</p>
-<p>Au préalable il faut se crééer un compte sur mailiz formation : <a href="https://mailiz.formation.mssante.fr/">https://mailiz.formation.mssante.fr/</a></p>
-<p>Puis accéder à l&rsquo;environnement de démonstration :  <a href="https://mss-demo.devbox-sante.fr">https://mss-demo.devbox-sante.fr</a></p>
-<p>Dont la documentation est accessible : <a href="https://mss-demo.devbox-sante.fr/swagger-ui.html">https://mss-demo.devbox-sante.fr/swagger-ui.html</a></p>
 
         <div class="section-index">
     
@@ -364,6 +333,22 @@ mss -d-&gt; apicrypt : socket
             
             <div class="entry">
                 <h5>
+                    <a href="/ms-sante/rest/">REST Proxy</a>
+                </h5>
+                <p>Accés à la messagerie sécurisée de Santé au travers d&rsquo;une API Rest HTTP</p>
+            </div>
+        
+            
+            <div class="entry">
+                <h5>
+                    <a href="/ms-sante/authentifications/">Authentifications</a>
+                </h5>
+                <p>Différents modes d&rsquo;authentification</p>
+            </div>
+        
+            
+            <div class="entry">
+                <h5>
                     <a href="/ms-sante/configuration/">Configuration selon les opérateurs</a>
                 </h5>
                 <p>Configuration selon les opérateurs</p>
@@ -375,14 +360,6 @@ mss -d-&gt; apicrypt : socket
                     <a href="/ms-sante/howtos/">Howtos</a>
                 </h5>
                 <p></p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/ms-sante/architecture/">Architecture interne des différents composants</a>
-                </h5>
-                <p>Pour les intéressés, l&rsquo;architecture interne des différents composants</p>
             </div>
         
             

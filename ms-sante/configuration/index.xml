@@ -22,11 +22,14 @@
       <description>
         
         
-        &lt;p&gt;Voici la liste des opérateurs référencés par le SEGUR &lt;a href=&#34;https://esante.gouv.fr/segur/solutions-referencees?search_api_fulltext=&amp;amp;field_categorie=853&amp;amp;field_type_logiciel=All&#34;&gt;https://esante.gouv.fr/segur/solutions-referencees?search_api_fulltext=&amp;amp;field_categorie=853&amp;amp;field_type_logiciel=All&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Il existe 2 modes de configuration :&lt;/p&gt;
-&lt;h2 id=&#34;configuration-p12&#34;&gt;Configuration P12&lt;/h2&gt;
-&lt;p&gt;Dans ce mode, le connecteur possède les informations de connexion, à savoir un certificat p12 provenant de l&amp;rsquo;IGC Santé.&lt;/p&gt;
-&lt;p&gt;Ce mode est utile dans le cas du BAL applicative car il ne fonctionne qu&amp;rsquo;avec une seule BAL.&lt;/p&gt;
+        &lt;p&gt;Il existe 2 modes de sécurité :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Authentification p12 : &lt;code&gt;p12&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Authentification dans le header : &lt;code&gt;authInHeader&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;configuration-p12&#34;&gt;Configuration p12&lt;/h2&gt;
+&lt;p&gt;Dans ce mode de securité, le connecteur DevBox-Santé MSS possède les informations de connexion, à savoir un certificat p12 provenant de l&amp;rsquo;IGC Santé.&lt;/p&gt;
+&lt;p&gt;Ce mode est utile dans le cas où un seul certificat est utilisé pour se connecter à une (ou plusieurs) BALs applicatives.&lt;/p&gt;
 &lt;p&gt;Exemple pour authentification espace de test medimail du MIPIH :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ms-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
@@ -35,8 +38,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;asip-p12-EL-TEST-ORG-AUTH_CLI-20230717-152710.p12&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;MOT_DE_PASSE&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;configuration-authinheader&#34;&gt;Configuration authInHeader&lt;/h2&gt;
-&lt;p&gt;Le mode &lt;code&gt;authInHeader&lt;/code&gt; permet de faire passer les informations d&amp;rsquo;authentification dans les headers des appels REST.&lt;/p&gt;
-&lt;p&gt;Le connecteur dispose de 3 modes d&amp;rsquo;authentification:&lt;/p&gt;
+&lt;p&gt;Le mode &lt;code&gt;authInHeader&lt;/code&gt; permet de faire passer les informations d&amp;rsquo;authentification dans les headers HTTP des appels REST.&lt;/p&gt;
+&lt;p&gt;Avec ce mode, le client dispose de 3 moyens d&amp;rsquo;authentification:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Certificat p12 (BAL applicative) (V2)&lt;/li&gt;
 &lt;li&gt;Jeton PSC (pro santé connect) (V2)&lt;/li&gt;
@@ -46,7 +49,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;   &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ms-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;     &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;security.mode&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;authInHeader&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;cf &lt;a href=&#34;https://doc.devbox-sante.fr/ms-sante/howtos/&#34; title=&#34;Authentification&#34;&gt;Authentification&lt;/a&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pour la connexion d&amp;rsquo;un client dans ce mode de sécurité, consulter la page dédiée :  &lt;a href=&#34;../authentifications&#34;&gt;Authentifications&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>

@@ -133,7 +133,15 @@ if (!doNotTrack) {
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ms-sante-li">
   <a href="/ms-sante/" title="DevBox-Santé MSS" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-ms-sante"><span class="">MSS</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ms-santeconfiguration-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santerest-li">
+  <input type="checkbox" id="m-ms-santerest-check"/>
+  <label for="m-ms-santerest-check"><a href="/ms-sante/rest/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santerest"><span class="">REST Proxy</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santeauthentifications-li">
+  <input type="checkbox" id="m-ms-santeauthentifications-check"/>
+  <label for="m-ms-santeauthentifications-check"><a href="/ms-sante/authentifications/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santeauthentifications"><span class="">Authentifications</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ms-santeconfiguration-li">
   <input type="checkbox" id="m-ms-santeconfiguration-check"/>
   <label for="m-ms-santeconfiguration-check"><a href="/ms-sante/configuration/" title="Configuration selon les opérateurs" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santeconfiguration"><span class="">Configuration</span></a></label>
   
@@ -157,25 +165,13 @@ if (!doNotTrack) {
   <label for="m-ms-santehowtos-check"><a href="/ms-sante/howtos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtos"><span class="">Howtos</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtospreuve_segur-li">
-  <input type="checkbox" id="m-ms-santehowtospreuve_segur-check"/>
-  <label for="m-ms-santehowtospreuve_segur-check"><a href="/ms-sante/howtos/preuve_segur/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtospreuve_segur"><span class="">Preuves Segur</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosauthentification-li">
-  <input type="checkbox" id="m-ms-santehowtosauthentification-check"/>
-  <label for="m-ms-santehowtosauthentification-check"><a href="/ms-sante/howtos/authentification/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosauthentification"><span class="">Authentification</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosoperators-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosoperators-li">
   <input type="checkbox" id="m-ms-santehowtosoperators-check"/>
   <label for="m-ms-santehowtosoperators-check"><a href="/ms-sante/howtos/operators/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosoperators"><span class="">Gestion multi-opérateurs</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosmessage-manager-li">
   <input type="checkbox" id="m-ms-santehowtosmessage-manager-check"/>
   <label for="m-ms-santehowtosmessage-manager-check"><a href="/ms-sante/howtos/message-manager/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosmessage-manager"><span class="">Message Manager</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosservices-li">
-  <input type="checkbox" id="m-ms-santehowtosservices-check"/>
-  <label for="m-ms-santehowtosservices-check"><a href="/ms-sante/howtos/services/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosservices"><span class="">Services REST</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-ms-santehowtosentete-x-mss-li">
   <input type="checkbox" id="m-ms-santehowtosentete-x-mss-check" checked/>
@@ -192,12 +188,16 @@ if (!doNotTrack) {
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtospreuve_segur-li">
+  <input type="checkbox" id="m-ms-santehowtospreuve_segur-check"/>
+  <label for="m-ms-santehowtospreuve_segur-check"><a href="/ms-sante/howtos/preuve_segur/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtospreuve_segur"><span class="">Preuves Segur</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosbase64-li">
+  <input type="checkbox" id="m-ms-santehowtosbase64-check"/>
+  <label for="m-ms-santehowtosbase64-check"><a href="/ms-sante/howtos/base64/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-ms-santehowtosbase64"><span class="">Encoder en base64</span></a></label>
+  
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santearchitecture-li">
-  <input type="checkbox" id="m-ms-santearchitecture-check"/>
-  <label for="m-ms-santearchitecture-check"><a href="/ms-sante/architecture/" title="Architecture interne des différents composants" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santearchitecture"><span class="">Architecture interne</span></a></label>
-  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santeversions-li">
   <input type="checkbox" id="m-ms-santeversions-check"/>
   <label for="m-ms-santeversions-check"><a href="/ms-sante/versions/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santeversions"><span class="">Versions</span></a></label>
@@ -220,12 +220,12 @@ if (!doNotTrack) {
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#rappel-des-exigences">Rappel des exigences</a>
       <ul>
-        <li><a href="#exigence-mss20">Exigence MSS20</a></li>
-        <li><a href="#exigence-mss21">Exigence MSS21</a></li>
-        <li><a href="#exigence-mss22">Exigence MSS22</a></li>
-        <li><a href="#exigence-mss26">Exigence MSS26</a></li>
+        <li><a href="#eco241">ECO.2.4.1</a></li>
+        <li><a href="#eco242">ECO.2.4.2</a></li>
+        <li><a href="#eco243">ECO.2.4.3</a></li>
+        <li><a href="#eco228">ECO.2.2.8</a></li>
       </ul>
     </li>
   </ul>
@@ -289,12 +289,12 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<p>Pour répondre aux exigences listé ci-dessous, le connecteur ms-santé inclus la possibilité de passer des headers spécifiques:</p>
+	<p>Pour répondre aux exigences du <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">&ldquo;Référentiel socle MSSanté #2, Clients de Messageries Sécurisées de Santé&rdquo;</a>, le connecteur ms-santé inclus la possibilité de passer des headers spécifiques :</p>
 <ul>
-<li>X-MSS-MES</li>
-<li>X_MSS_INS</li>
-<li>X_MSS_CODECDA</li>
-<li>X_MSS_NIL</li>
+<li><code>X-MSS-MES</code></li>
+<li><code>X_MSS_INS</code></li>
+<li><code>X_MSS_CODECDA</code></li>
+<li><code>X_MSS_NIL</code></li>
 </ul>
 <p>Exemple:</p>
 <pre tabindex="0"><code class="language-bruno" data-lang="bruno">{
@@ -321,22 +321,32 @@ if (!doNotTrack) {
   &#34;priority&#34;: &#34;NORMAL&#34;,
   &#34;isHtml&#34;: true
 }
-</code></pre><p>Le connecteur ne fait pas de contrôle de cohérence entre la valeur des entêtes et les documents envoyés en pièces jointes.</p>
-<h3 id="exigence-mss20">Exigence MSS20</h3>
-<p>&ldquo;Le Système DOIT positionner l&rsquo;entête SMTP &ldquo;&ldquo;X-MSS-INS&rdquo;&rdquo; dans un message envoyé qui comporte en PJ un document de santé CDA encapsulé dans une archive IHE_XDM. La valeur de cet entete DOIT être :</p>
-<p>&lsquo;O&rsquo; (Oui) en cas de présence d&rsquo;une Identité Nationale de Santé (INS qualifiée&rdquo;&quot;*) dans l&rsquo;archive IHE_XDM ;</p>
-<p>&lsquo;N&rsquo; (Non) en cas d&rsquo;absence d&rsquo;une Identité Nationale de Santé (INS qualifiée&quot;&quot;*) dans l&rsquo;archive IHE_XDM.</p>
-<p>En cas d&rsquo;absence en PJ d&rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&rsquo;entête ne DOIT pas être positionnée.</p>
-<p>INS qualifié au sens du §5.3.3 du Référentiel Identifiant National de Santé v2.0. La présence d&rsquo;un INS qualifié est caractérisé par la présence de l&rsquo;INS (matricule, OID) et des 4 traits d&rsquo;identité suivants dans l&rsquo;entete CDA : nom de naissance, 1er prenom, date de naissance et sexe&quot;</p>
-<h3 id="exigence-mss21">Exigence MSS21</h3>
+</code></pre><p>Attention : il ne s&rsquo;agit pas ici de header HTTP, mais de header pour les messages SMTP/MIME. Le connecteur ne fait pas de contrôle de cohérence entre la valeur des entêtes et les documents envoyés en pièces jointes.</p>
+<h2 id="rappel-des-exigences">Rappel des exigences</h2>
+<p>Rappel concernant le <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">&ldquo;Référentiel socle MSSanté #2, Clients de Messageries Sécurisées de Santé&rdquo;</a></p>
+<h3 id="eco241">ECO.2.4.1</h3>
+<blockquote>
 <p>&ldquo;Le Système DOIT positionner un entête SMTP &ldquo;&ldquo;X-MSS-CODECDA&rdquo;&rdquo; dans un message envoyé qui comporte en PJ un ou plusieurs documents CDA encapsulés dans une archive IHE_XDM. La valeur de cet entete DOIT être égale à celle du champ code* présent dans l&rsquo;entête du document CDA.</p>
 <p>En cas de présence de plusieurs documents CDA, l&rsquo;entête sera multi-valué. En cas d&rsquo;absence en PJ d&rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&rsquo;entête ne DOIT pas être positionné.</p>
 <p>code défini dans le &ldquo;&ldquo;Volet Structuration Minimale de Documents de Santé – CI-SIS Juin 2021, §3.5.5.5&quot;&rdquo;&rdquo;</p>
-<h3 id="exigence-mss22">Exigence MSS22</h3>
+</blockquote>
+<h3 id="eco242">ECO.2.4.2</h3>
+<blockquote>
+<p>&ldquo;Le Système DOIT positionner l&rsquo;entête SMTP &ldquo;&ldquo;X-MSS-INS&rdquo;&rdquo; dans un message envoyé qui comporte en PJ un document de santé CDA encapsulé dans une archive IHE_XDM. La valeur de cet entete DOIT être :</p>
+<p>&lsquo;O&rsquo; (Oui) en cas de présence d&rsquo;une Identité Nationale de Santé (INS qualifiée&rdquo;&rdquo;*) dans l&rsquo;archive IHE_XDM ;</p>
+<p>&lsquo;N&rsquo; (Non) en cas d&rsquo;absence d&rsquo;une Identité Nationale de Santé (INS qualifiée&quot;&quot;*) dans l&rsquo;archive IHE_XDM.</p>
+<p>En cas d&rsquo;absence en PJ d&rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&rsquo;entête ne DOIT pas être positionnée.</p>
+<p>INS qualifié au sens du §5.3.3 du Référentiel Identifiant National de Santé v2.0. La présence d&rsquo;un INS qualifié est caractérisé par la présence de l&rsquo;INS (matricule, OID) et des 4 traits d&rsquo;identité suivants dans l&rsquo;entete CDA : nom de naissance, 1er prenom, date de naissance et sexe&quot;</p>
+</blockquote>
+<h3 id="eco243">ECO.2.4.3</h3>
+<blockquote>
 <p>&ldquo;Le Système DOIT positionner l&rsquo;entête SMTP &ldquo;&ldquo;X-MSS-NIL&rdquo;&rdquo; dans tous les courriels envoyés. Elle sera renseignée du numéro &ldquo;&ldquo;référence produit&rdquo;&rdquo; attribué lors de la déclaration du produit sur la plateforme convergence.esante.gouv.fr.</p>
 <p>Le numéro &ldquo;&ldquo;référence produit&rdquo;&rdquo; à renseigner est celui du logiciel qui a produit le message SMTP.&rdquo;</p>
-<h3 id="exigence-mss26">Exigence MSS26</h3>
+</blockquote>
+<h3 id="eco228">ECO.2.2.8</h3>
+<blockquote>
 <p>Le Système DOIT pouvoir positionner un entête SMTP &ldquo;X-MSS-MES&rdquo;, dans les messages envoyés vers un usager (Mon espace santé), avec la valeur &ldquo;FIN&rdquo; (3 caractères en majuscules), lorsque le professionnel émetteur ne souhaite pas que le patient puisse lui répondre en retour.</p>
+</blockquote>
 
         <div class="section-index">
     

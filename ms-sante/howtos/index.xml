@@ -14,6 +14,208 @@
     
     
     <item>
+      <title>Ms-Sante: Gestion multi-opérateurs</title>
+      <link>https://doc.devbox-sante.fr/ms-sante/howtos/operators/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/operators/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Le connecteur MS Santé de la DevBox est compatible avec plusieurs opérateurs.
+Cette liste contient par exemple mailiz et médimail (liste non exhaustive) et évolue sans cesse en fonctions des besoins des clients.&lt;/p&gt;
+&lt;p&gt;Ainsi le connecteur permet au PS de se connecter à un large panel d&amp;rsquo;opérateurs.&lt;/p&gt;
+&lt;h2 id=&#34;liste-des-opérateurs&#34;&gt;Liste des opérateurs&lt;/h2&gt;
+&lt;p&gt;Un service REST permet d&amp;rsquo;avoir la liste des opérateurs ainsi que le nom des principaux dossiers (inbox, sent, draft et trash) qui peuvent varier en fonction des opérateurs.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;GET {url}/mssante/v2/operators
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;medimail&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;apiVersion&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2,&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;messageManagerActive&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;inboxFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;INBOX&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trashFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;TRASH&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;draftFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;DRAFT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sentFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;SENT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;withAllHeaders&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;mailiz&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;apiVersion&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2,&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;messageManagerActive&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;inboxFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;INBOX&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trashFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Trash&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;draftFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Drafts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sentFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Sent&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;withAllHeaders&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;mailiz-v1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;apiVersion&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1,&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;messageManagerActive&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;inboxFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trashFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;draftFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;6&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sentFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;5&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;withAllHeaders&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;name: nom de l&amp;rsquo;opérateur à passer dans le header mssAuthentication.operator&lt;/li&gt;
+&lt;li&gt;apiVersion: version de l&amp;rsquo;api, url du type /mssante/messages pour la v1 et /mssante/v2/messages pour la v2&lt;/li&gt;
+&lt;li&gt;messageManagerActive: cf &lt;a href=&#34;https://doc.devbox-sante.fr/ms-sante/howtos/message-manager/&#34;&gt;Message Manager&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;withAllHeaders: Permet de récupérer tous les headers renvoyés par le service imap&lt;/li&gt;
+&lt;li&gt;xxxFolderId: Nom des 4 principaux dossiers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ensuite il suffit de passer dans les headers le nom de l&amp;rsquo;opérateur sur lequel le PS souhaite se connecter.&lt;/p&gt;
+&lt;p&gt;Exemple:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;headers {
+  mssAuthentication.operator: mailiz
+  mssAuthentication.pscToken: MIIcbAIBA...Bv4sVwVpAICCAA=
+  mssAuthentication.userName: xxx-pers@mssante.fr
+}
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Ms-Sante: Message Manager</title>
+      <link>https://doc.devbox-sante.fr/ms-sante/howtos/message-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/message-manager/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Les opérateurs ne prennent pas en charge via les API LPS certaines fonctionnalités &amp;ldquo;standard&amp;rdquo; de client de messagerie comme par exemple:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sauvegarde du message envoyé dans le dossier &amp;ldquo;sent&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;déplacement du message supprimé dans le dossier &amp;ldquo;trash&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;sauvegarde du brouillon dans le dossier &amp;ldquo;draft&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Par défaut tout est géré par des flags dans le dossier INBOX (exception faite de la sauvegarde du message envoyé qui n&amp;rsquo;est pas faite)&lt;/p&gt;
+&lt;p&gt;Pour palier à ce problème, 2 modes de fonctionnement ont été mis en place:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Managed: Le connecteur crée automatiquement ces dossiers au moment de l&amp;rsquo;envoi, la suppression ou l&amp;rsquo;enregistrement de brouillon et déplace/sauvegarde le message dans le bon dossier.&lt;/li&gt;
+&lt;li&gt;No Managed: Le connecteur ne fait aucun traitement particulier et utilise le workflow de gestion des messages de l&amp;rsquo;opérateur. Ce dernier peut décider de tout laisser dans inbox et ne mettre que des flags pour distinguer les messages ou utiliser les dossiers comme dans le cas &amp;ldquo;Managed&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ainsi par exemple dans le cas &amp;ldquo;No managed&amp;rdquo; avec un opérateur qui laisse tous les messages dans INBOX, pour avoir les messages du dossier draft, il faut rechercher les messages en précisant draft=true dans la query et sans préciser de folderId.&lt;/p&gt;
+&lt;p&gt;Ce type de fonctionnement est précisé dans la configuration d el&amp;rsquo;opérateur via le champ messageManagerActive:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;GET {url}/mssante/v2/operators
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;medimail&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;apiVersion&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2,&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;messageManagerActive&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;inboxFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;INBOX&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trashFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;TRASH&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;draftFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;DRAFT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sentFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;SENT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;withAllHeaders&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;mailiz-v1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;apiVersion&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1,&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;messageManagerActive&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;inboxFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trashFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;draftFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;6&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sentFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;5&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;withAllHeaders&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Ms-Sante: Entête spécifiques X-MSS</title>
+      <link>https://doc.devbox-sante.fr/ms-sante/howtos/entete-x-mss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/entete-x-mss/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Pour répondre aux exigences du &lt;a href=&#34;https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2&#34;&gt;&amp;ldquo;Référentiel socle MSSanté #2, Clients de Messageries Sécurisées de Santé&amp;rdquo;&lt;/a&gt;, le connecteur ms-santé inclus la possibilité de passer des headers spécifiques :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;X-MSS-MES&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;X_MSS_INS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;X_MSS_CODECDA&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;X_MSS_NIL&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Exemple:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;{
+  &amp;#34;attachments&amp;#34;: [{
+      &amp;#34;contentType&amp;#34;: &amp;#34;application/xml&amp;#34;,
+      &amp;#34;file&amp;#34;: &amp;#34;XXXXX&amp;#34;,
+      &amp;#34;fileName&amp;#34;: &amp;#34;cda.xml&amp;#34;
+  }],
+  &amp;#34;addresses&amp;#34;: [
+    {
+      &amp;#34;email&amp;#34;: &amp;#34;{{emailPS}}&amp;#34;,
+      &amp;#34;name&amp;#34;: &amp;#34;PS&amp;#34;,
+      &amp;#34;type&amp;#34;: &amp;#34;TO&amp;#34;
+    }
+  ],
+  &amp;#34;headers&amp;#34;: {
+      &amp;#34;X-MSS-INS&amp;#34;: &amp;#34;O&amp;#34;,
+      &amp;#34;X-MSS-CODECDA&amp;#34;: &amp;#34;34112-3&amp;#34;,
+      &amp;#34;X-MSS-NIL&amp;#34;: &amp;#34;DEV935997&amp;#34;
+  },
+  &amp;#34;flags&amp;#34;: [],
+  &amp;#34;subject&amp;#34;: &amp;#34;Message test envoi avec header x-mss&amp;#34;,
+  &amp;#34;body&amp;#34;: &amp;#34;test &amp;lt;span style=\&amp;#34;color:#ff0000\&amp;#34;&amp;gt;message &amp;lt;/span&amp;gt;&amp;lt;b&amp;gt;html&amp;lt;/b&amp;gt;&amp;#34;,
+  &amp;#34;priority&amp;#34;: &amp;#34;NORMAL&amp;#34;,
+  &amp;#34;isHtml&amp;#34;: true
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Attention : il ne s&amp;rsquo;agit pas ici de header HTTP, mais de header pour les messages SMTP/MIME. Le connecteur ne fait pas de contrôle de cohérence entre la valeur des entêtes et les documents envoyés en pièces jointes.&lt;/p&gt;
+&lt;h2 id=&#34;rappel-des-exigences&#34;&gt;Rappel des exigences&lt;/h2&gt;
+&lt;p&gt;Rappel concernant le &lt;a href=&#34;https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2&#34;&gt;&amp;ldquo;Référentiel socle MSSanté #2, Clients de Messageries Sécurisées de Santé&amp;rdquo;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;eco241&#34;&gt;ECO.2.4.1&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Le Système DOIT positionner un entête SMTP &amp;ldquo;&amp;ldquo;X-MSS-CODECDA&amp;rdquo;&amp;rdquo; dans un message envoyé qui comporte en PJ un ou plusieurs documents CDA encapsulés dans une archive IHE_XDM. La valeur de cet entete DOIT être égale à celle du champ code* présent dans l&amp;rsquo;entête du document CDA.&lt;/p&gt;
+&lt;p&gt;En cas de présence de plusieurs documents CDA, l&amp;rsquo;entête sera multi-valué. En cas d&amp;rsquo;absence en PJ d&amp;rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&amp;rsquo;entête ne DOIT pas être positionné.&lt;/p&gt;
+&lt;p&gt;code défini dans le &amp;ldquo;&amp;ldquo;Volet Structuration Minimale de Documents de Santé – CI-SIS Juin 2021, §3.5.5.5&amp;quot;&amp;rdquo;&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;eco242&#34;&gt;ECO.2.4.2&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Le Système DOIT positionner l&amp;rsquo;entête SMTP &amp;ldquo;&amp;ldquo;X-MSS-INS&amp;rdquo;&amp;rdquo; dans un message envoyé qui comporte en PJ un document de santé CDA encapsulé dans une archive IHE_XDM. La valeur de cet entete DOIT être :&lt;/p&gt;
+&lt;p&gt;&amp;lsquo;O&amp;rsquo; (Oui) en cas de présence d&amp;rsquo;une Identité Nationale de Santé (INS qualifiée&amp;rdquo;&amp;rdquo;*) dans l&amp;rsquo;archive IHE_XDM ;&lt;/p&gt;
+&lt;p&gt;&amp;lsquo;N&amp;rsquo; (Non) en cas d&amp;rsquo;absence d&amp;rsquo;une Identité Nationale de Santé (INS qualifiée&amp;quot;&amp;quot;*) dans l&amp;rsquo;archive IHE_XDM.&lt;/p&gt;
+&lt;p&gt;En cas d&amp;rsquo;absence en PJ d&amp;rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&amp;rsquo;entête ne DOIT pas être positionnée.&lt;/p&gt;
+&lt;p&gt;INS qualifié au sens du §5.3.3 du Référentiel Identifiant National de Santé v2.0. La présence d&amp;rsquo;un INS qualifié est caractérisé par la présence de l&amp;rsquo;INS (matricule, OID) et des 4 traits d&amp;rsquo;identité suivants dans l&amp;rsquo;entete CDA : nom de naissance, 1er prenom, date de naissance et sexe&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;eco243&#34;&gt;ECO.2.4.3&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Le Système DOIT positionner l&amp;rsquo;entête SMTP &amp;ldquo;&amp;ldquo;X-MSS-NIL&amp;rdquo;&amp;rdquo; dans tous les courriels envoyés. Elle sera renseignée du numéro &amp;ldquo;&amp;ldquo;référence produit&amp;rdquo;&amp;rdquo; attribué lors de la déclaration du produit sur la plateforme convergence.esante.gouv.fr.&lt;/p&gt;
+&lt;p&gt;Le numéro &amp;ldquo;&amp;ldquo;référence produit&amp;rdquo;&amp;rdquo; à renseigner est celui du logiciel qui a produit le message SMTP.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;eco228&#34;&gt;ECO.2.2.8&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Le Système DOIT pouvoir positionner un entête SMTP &amp;ldquo;X-MSS-MES&amp;rdquo;, dans les messages envoyés vers un usager (Mon espace santé), avec la valeur &amp;ldquo;FIN&amp;rdquo; (3 caractères en majuscules), lorsque le professionnel émetteur ne souhaite pas que le patient puisse lui répondre en retour.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Ms-Sante: Migrations</title>
+      <link>https://doc.devbox-sante.fr/ms-sante/howtos/migrations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/migrations/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
       <title>Ms-Sante: Preuves Segur</title>
       <link>https://doc.devbox-sante.fr/ms-sante/howtos/preuve_segur/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -393,282 +595,25 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
     </item>
     
     <item>
-      <title>Ms-Sante: Authentification</title>
-      <link>https://doc.devbox-sante.fr/ms-sante/howtos/authentification/</link>
+      <title>Ms-Sante: Encoder en base64</title>
+      <link>https://doc.devbox-sante.fr/ms-sante/howtos/base64/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/authentification/</guid>
+      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/base64/</guid>
       <description>
         
         
-        &lt;h2 id=&#34;authentification&#34;&gt;Authentification&lt;/h2&gt;
-&lt;p&gt;Dans le cas d&amp;rsquo;authentification &amp;ldquo;authInHeader&amp;rdquo; (Le type d&amp;rsquo;autentification est renseigné dans le fichier de configuration, cf: &lt;a href=&#34;https://doc.devbox-sante.fr/ms-sante/configuration/referentiel2/&#34; title=&#34;Configuration&#34;&gt;Configuration V1 et v2&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Le connecteur dispose de 4 modes d&amp;rsquo;authentification:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Certificat p12 (BAL applicative) (V2)&lt;/li&gt;
-&lt;li&gt;Jeton PSC (pro santé connect) (V2)&lt;/li&gt;
-&lt;li&gt;Token de session après authentification avec Login / Mot de passe et OTP (Mailiz)&lt;/li&gt;
-&lt;li&gt;Carte CPS (Mailiz)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Et la requête doit contenir les informations dans le header. Le `userName&amp;rsquo; est utilisé pour initialiser la session SMTP/IMAP et le &amp;lsquo;operator&amp;rsquo; pour connaitre l&amp;rsquo;opérateur de la MSS&lt;/p&gt;
-&lt;h3 id=&#34;certificat-psc-pro-santé-connect&#34;&gt;Certificat PSC (pro santé connect)&lt;/h3&gt;
-&lt;p&gt;Cette authentification est disponible pour les bals personnelles ou organisationnelles.&lt;/p&gt;
-&lt;p&gt;Le client doit au préalable récupérer un jeton PSC (access token) via son serveur d&amp;rsquo;authentification enregistré auprès de l&amp;rsquo;ANS et le passer aux requêtes dans un header.
-Ce token est généralement valable 4-5 minutes. Le client doit donc redemander régulièrement un nouveau jeton à son serveur d&amp;rsquo;authentification.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;demo-PSC.png&#34; alt=&#34;PSC auth&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Exemple:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;headers {
-  mssAuthentication.operator: mailiz
-  mssAuthentication.pscToken: MIIcbAIBA...Bv4sVwVpAICCAA=
-  mssAuthentication.userName: xxx-pers@mssante.fr
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;certificat-p12-bal-applicative&#34;&gt;Certificat p12 (bal applicative)&lt;/h3&gt;
-&lt;p&gt;Cette authentification est disponible pour les bal applicatives.
-L&amp;rsquo;application cliente se connecte à la mssanté via un certificat p12 et le mot de passe associé qui sont passé dans les headers lors de chaque appel au connecteur.&lt;/p&gt;
-&lt;p&gt;Exemple:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;headers {
-  mssAuthentication.operator: medimail
-  mssAuthentication.password: password
-  mssAuthentication.p12: MIIcbAIBA...Bv4sVwVpAICCAA=
-  mssAuthentication.userName: xxx-applicatif-test@medimail.mssante.fr
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Le certificat p12 doit être passé en base64.&lt;/p&gt;
-&lt;p&gt;Windows Powershell:&lt;/p&gt;
+        &lt;p&gt;Dans la DevBox-Santé, beaucoup de contenus doivent être encodé en base64 avant d&amp;rsquo;être envoyé par une requête HTTP.&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;encodage en base64 d&amp;rsquo;un byte[] json se fait de manière transparente mais dans les header HTTP, voici quelques méthodes pour encoder en base64 vos contenus :&lt;/p&gt;
+&lt;h3 id=&#34;windows-powershell&#34;&gt;Windows Powershell:&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;$cert&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; get-content &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;certificate.p12&amp;#39;&lt;/span&gt; -Encoding Byte
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;$base64&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;System.Convert&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;::ToBase64String&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$cert&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$base64&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Linux:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;linux&#34;&gt;Linux:&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;base64 certificate.p12 &amp;gt; outputfile
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Mac OS:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;mac-os&#34;&gt;Mac OS:&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;base64 -i certificate.p12 -o outputfile
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;login-mot-de-passe-et-otp-mailiz-avec-les-api-v1&#34;&gt;Login, mot de passe et OTP (mailiz avec les API v1)&lt;/h3&gt;
-&lt;p&gt;Cette authentification est disponible pour mailiz mais avec les API v1.
-Le client s&amp;rsquo;authentifie via des services de connexion REST et doit repasser le cookie correspondant à la session courante lors de chaque appel au connecteur.&lt;/p&gt;
-&lt;p&gt;Exemple:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;headers {
-  mssAuthentication.operator: mailiz-v1
-  Cookie: JSESSIONID=1139181CDF6638784181753183EC32A5
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;carte-cps-mailiz-avec-les-api-v1&#34;&gt;Carte CPS (mailiz avec les API v1)&lt;/h3&gt;
-&lt;p&gt;Cette authentification est disponible pour mailiz mais avec les API v1.
-Le client s&amp;rsquo;authentifie l&amp;rsquo;utilitaire CPS de la DevBox Santé puis doit repasser le cookie correspondant à la session courante lors de chaque appel au connecteur.&lt;/p&gt;
-&lt;p&gt;Exemple:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;headers {
-  mssAuthentication.operator: mailiz-v1
-  Cookie: JSESSIONID=1139181CDF6638784181753183EC32A5
-}
-&lt;/code&gt;&lt;/pre&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Ms-Sante: Gestion multi-opérateurs</title>
-      <link>https://doc.devbox-sante.fr/ms-sante/howtos/operators/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/operators/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Le connecteur MS Santé de la DevBox est compatible avec plusieurs opérateurs.
-Cette liste contient par exemple mailiz et médimail (liste non exhaustive) et évolue sans cesse en fonctions des besoins des clients.&lt;/p&gt;
-&lt;p&gt;Ainsi le connecteur permet au PS de se connecter à un large panel d&amp;rsquo;opérateurs.&lt;/p&gt;
-&lt;h2 id=&#34;liste-des-opérateurs&#34;&gt;Liste des opérateurs&lt;/h2&gt;
-&lt;p&gt;Un service REST permet d&amp;rsquo;avoir la liste des opérateurs ainsi que le nom des principaux dossiers (inbox, sent, draft et trash) qui peuvent varier en fonction des opérateurs.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;GET {url}/mssante/v2/operators
-&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;medimail&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;apiVersion&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2,&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;messageManagerActive&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;inboxFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;INBOX&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trashFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;TRASH&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;draftFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;DRAFT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sentFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;SENT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;withAllHeaders&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;mailiz&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;apiVersion&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2,&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;messageManagerActive&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;inboxFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;INBOX&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trashFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Trash&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;draftFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Drafts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sentFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Sent&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;withAllHeaders&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;mailiz-v1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;apiVersion&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1,&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;messageManagerActive&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;inboxFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trashFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;draftFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;6&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sentFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;5&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;withAllHeaders&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;name: nom de l&amp;rsquo;opérateur à passer dans le header mssAuthentication.operator&lt;/li&gt;
-&lt;li&gt;apiVersion: version de l&amp;rsquo;api, url du type /mssante/messages pour la v1 et /mssante/v2/messages pour la v2&lt;/li&gt;
-&lt;li&gt;messageManagerActive: cf &lt;a href=&#34;https://doc.devbox-sante.fr/ms-sante/howtos/message-manager/&#34;&gt;Message Manager&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;withAllHeaders: Permet de récupérer tous les headers renvoyés par le service imap&lt;/li&gt;
-&lt;li&gt;xxxFolderId: Nom des 4 principaux dossiers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Ensuite il suffit de passer dans les headers le nom de l&amp;rsquo;opérateur sur lequel le PS souhaite se connecter.&lt;/p&gt;
-&lt;p&gt;Exemple:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;headers {
-  mssAuthentication.operator: mailiz
-  mssAuthentication.pscToken: MIIcbAIBA...Bv4sVwVpAICCAA=
-  mssAuthentication.userName: xxx-pers@mssante.fr
-}
-&lt;/code&gt;&lt;/pre&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Ms-Sante: Message Manager</title>
-      <link>https://doc.devbox-sante.fr/ms-sante/howtos/message-manager/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/message-manager/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Les opérateurs ne prennent pas en charge via les API LPS certaines fonctionnalités &amp;ldquo;standard&amp;rdquo; de client de messagerie comme par exemple:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;sauvegarde du message envoyé dans le dossier &amp;ldquo;sent&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;déplacement du message supprimé dans le dossier &amp;ldquo;trash&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;sauvegarde du brouillon dans le dossier &amp;ldquo;draft&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Par défaut tout est géré par des flags dans le dossier INBOX (exception faite de la sauvegarde du message envoyé qui n&amp;rsquo;est pas faite)&lt;/p&gt;
-&lt;p&gt;Pour palier à ce problème, 2 modes de fonctionnement ont été mis en place:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Managed: Le connecteur crée automatiquement ces dossiers au moment de l&amp;rsquo;envoi, la suppression ou l&amp;rsquo;enregistrement de brouillon et déplace/sauvegarde le message dans le bon dossier.&lt;/li&gt;
-&lt;li&gt;No Managed: Le connecteur ne fait aucun traitement particulier et utilise le workflow de gestion des messages de l&amp;rsquo;opérateur. Ce dernier peut décider de tout laisser dans inbox et ne mettre que des flags pour distinguer les messages ou utiliser les dossiers comme dans le cas &amp;ldquo;Managed&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Ainsi par exemple dans le cas &amp;ldquo;No managed&amp;rdquo; avec un opérateur qui laisse tous les messages dans INBOX, pour avoir les messages du dossier draft, il faut rechercher les messages en précisant draft=true dans la query et sans préciser de folderId.&lt;/p&gt;
-&lt;p&gt;Ce type de fonctionnement est précisé dans la configuration d el&amp;rsquo;opérateur via le champ messageManagerActive:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;GET {url}/mssante/v2/operators
-&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;medimail&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;apiVersion&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2,&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;messageManagerActive&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;inboxFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;INBOX&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trashFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;TRASH&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;draftFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;DRAFT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sentFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;SENT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;withAllHeaders&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;mailiz-v1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;apiVersion&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1,&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;messageManagerActive&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;inboxFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trashFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;draftFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;6&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sentFolderId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;5&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;withAllHeaders&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Ms-Sante: Services REST</title>
-      <link>https://doc.devbox-sante.fr/ms-sante/howtos/services/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/services/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Vous pouvez essayer l&amp;rsquo;API V2 avec une collection postman disponible ici :&lt;/p&gt;
-&lt;p&gt;&lt;a target=&#34;_blank&#34; href=&#34;https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview&#34;&gt;&lt;img alt=&#34;Run In postman&#34; src=&#34;https://run.pstmn.io/button.svg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;ou le swagger (v1 et v2) :&lt;/p&gt;
-&lt;p&gt;&lt;a target=&#34;_blank&#34; href=&#34;https://mss-demo.devbox-sante.fr/swagger-ui.html&#34;&gt;&lt;img alt=&#34;Swagger&#34; style=&#34;width:140px&#34; src=&#34;https://static1.smartbear.co/swagger/media/assets/images/swagger_logo.svg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;ou l&amp;rsquo;interface de démo (v1 et v2, toutes les fonctionnalités n&amp;rsquo;ont pas été implémentées sur cette interface, c&amp;rsquo;est juste un POC)&lt;/p&gt;
-&lt;p&gt;&lt;a target=&#34;_blank&#34; href=&#34;https://mss-demo.devbox-sante.fr&#34;&gt;&lt;img alt=&#34;Démo&#34; style=&#34;width:40px&#34; src=&#34;https://mss-demo.devbox-sante.fr/assets/images/icon-medium-mssante.svg&#34;&gt;MS Santé Démo&lt;/a&gt;&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Ms-Sante: Entête spécifiques X-MSS</title>
-      <link>https://doc.devbox-sante.fr/ms-sante/howtos/entete-x-mss/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/entete-x-mss/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Pour répondre aux exigences listé ci-dessous, le connecteur ms-santé inclus la possibilité de passer des headers spécifiques:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;X-MSS-MES&lt;/li&gt;
-&lt;li&gt;X_MSS_INS&lt;/li&gt;
-&lt;li&gt;X_MSS_CODECDA&lt;/li&gt;
-&lt;li&gt;X_MSS_NIL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Exemple:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;{
-  &amp;#34;attachments&amp;#34;: [{
-      &amp;#34;contentType&amp;#34;: &amp;#34;application/xml&amp;#34;,
-      &amp;#34;file&amp;#34;: &amp;#34;XXXXX&amp;#34;,
-      &amp;#34;fileName&amp;#34;: &amp;#34;cda.xml&amp;#34;
-  }],
-  &amp;#34;addresses&amp;#34;: [
-    {
-      &amp;#34;email&amp;#34;: &amp;#34;{{emailPS}}&amp;#34;,
-      &amp;#34;name&amp;#34;: &amp;#34;PS&amp;#34;,
-      &amp;#34;type&amp;#34;: &amp;#34;TO&amp;#34;
-    }
-  ],
-  &amp;#34;headers&amp;#34;: {
-      &amp;#34;X-MSS-INS&amp;#34;: &amp;#34;O&amp;#34;,
-      &amp;#34;X-MSS-CODECDA&amp;#34;: &amp;#34;34112-3&amp;#34;,
-      &amp;#34;X-MSS-NIL&amp;#34;: &amp;#34;DEV935997&amp;#34;
-  },
-  &amp;#34;flags&amp;#34;: [],
-  &amp;#34;subject&amp;#34;: &amp;#34;Message test envoi avec header x-mss&amp;#34;,
-  &amp;#34;body&amp;#34;: &amp;#34;test &amp;lt;span style=\&amp;#34;color:#ff0000\&amp;#34;&amp;gt;message &amp;lt;/span&amp;gt;&amp;lt;b&amp;gt;html&amp;lt;/b&amp;gt;&amp;#34;,
-  &amp;#34;priority&amp;#34;: &amp;#34;NORMAL&amp;#34;,
-  &amp;#34;isHtml&amp;#34;: true
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Le connecteur ne fait pas de contrôle de cohérence entre la valeur des entêtes et les documents envoyés en pièces jointes.&lt;/p&gt;
-&lt;h3 id=&#34;exigence-mss20&#34;&gt;Exigence MSS20&lt;/h3&gt;
-&lt;p&gt;&amp;ldquo;Le Système DOIT positionner l&amp;rsquo;entête SMTP &amp;ldquo;&amp;ldquo;X-MSS-INS&amp;rdquo;&amp;rdquo; dans un message envoyé qui comporte en PJ un document de santé CDA encapsulé dans une archive IHE_XDM. La valeur de cet entete DOIT être :&lt;/p&gt;
-&lt;p&gt;&amp;lsquo;O&amp;rsquo; (Oui) en cas de présence d&amp;rsquo;une Identité Nationale de Santé (INS qualifiée&amp;rdquo;&amp;quot;*) dans l&amp;rsquo;archive IHE_XDM ;&lt;/p&gt;
-&lt;p&gt;&amp;lsquo;N&amp;rsquo; (Non) en cas d&amp;rsquo;absence d&amp;rsquo;une Identité Nationale de Santé (INS qualifiée&amp;quot;&amp;quot;*) dans l&amp;rsquo;archive IHE_XDM.&lt;/p&gt;
-&lt;p&gt;En cas d&amp;rsquo;absence en PJ d&amp;rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&amp;rsquo;entête ne DOIT pas être positionnée.&lt;/p&gt;
-&lt;p&gt;INS qualifié au sens du §5.3.3 du Référentiel Identifiant National de Santé v2.0. La présence d&amp;rsquo;un INS qualifié est caractérisé par la présence de l&amp;rsquo;INS (matricule, OID) et des 4 traits d&amp;rsquo;identité suivants dans l&amp;rsquo;entete CDA : nom de naissance, 1er prenom, date de naissance et sexe&amp;quot;&lt;/p&gt;
-&lt;h3 id=&#34;exigence-mss21&#34;&gt;Exigence MSS21&lt;/h3&gt;
-&lt;p&gt;&amp;ldquo;Le Système DOIT positionner un entête SMTP &amp;ldquo;&amp;ldquo;X-MSS-CODECDA&amp;rdquo;&amp;rdquo; dans un message envoyé qui comporte en PJ un ou plusieurs documents CDA encapsulés dans une archive IHE_XDM. La valeur de cet entete DOIT être égale à celle du champ code* présent dans l&amp;rsquo;entête du document CDA.&lt;/p&gt;
-&lt;p&gt;En cas de présence de plusieurs documents CDA, l&amp;rsquo;entête sera multi-valué. En cas d&amp;rsquo;absence en PJ d&amp;rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&amp;rsquo;entête ne DOIT pas être positionné.&lt;/p&gt;
-&lt;p&gt;code défini dans le &amp;ldquo;&amp;ldquo;Volet Structuration Minimale de Documents de Santé – CI-SIS Juin 2021, §3.5.5.5&amp;quot;&amp;rdquo;&amp;rdquo;&lt;/p&gt;
-&lt;h3 id=&#34;exigence-mss22&#34;&gt;Exigence MSS22&lt;/h3&gt;
-&lt;p&gt;&amp;ldquo;Le Système DOIT positionner l&amp;rsquo;entête SMTP &amp;ldquo;&amp;ldquo;X-MSS-NIL&amp;rdquo;&amp;rdquo; dans tous les courriels envoyés. Elle sera renseignée du numéro &amp;ldquo;&amp;ldquo;référence produit&amp;rdquo;&amp;rdquo; attribué lors de la déclaration du produit sur la plateforme convergence.esante.gouv.fr.&lt;/p&gt;
-&lt;p&gt;Le numéro &amp;ldquo;&amp;ldquo;référence produit&amp;rdquo;&amp;rdquo; à renseigner est celui du logiciel qui a produit le message SMTP.&amp;rdquo;&lt;/p&gt;
-&lt;h3 id=&#34;exigence-mss26&#34;&gt;Exigence MSS26&lt;/h3&gt;
-&lt;p&gt;Le Système DOIT pouvoir positionner un entête SMTP &amp;ldquo;X-MSS-MES&amp;rdquo;, dans les messages envoyés vers un usager (Mon espace santé), avec la valeur &amp;ldquo;FIN&amp;rdquo; (3 caractères en majuscules), lorsque le professionnel émetteur ne souhaite pas que le patient puisse lui répondre en retour.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Ms-Sante: Migrations</title>
-      <link>https://doc.devbox-sante.fr/ms-sante/howtos/migrations/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/migrations/</guid>
-      <description>
-        
-        
-        
       </description>
     </item>
     

@@ -222,12 +222,15 @@ Version imprimable multipages.
 <div class="td-content" style="">
     
 	<h1 id="pg-252b66e73bdc22a4a4490bc6809851da">1 - Multi-Opérateur v1 et v2</h1>
-    <div class="lead">Référentiel MSSante #2</div>
-	<p>Voici la liste des opérateurs référencés par le SEGUR <a href="https://esante.gouv.fr/segur/solutions-referencees?search_api_fulltext=&amp;field_categorie=853&amp;field_type_logiciel=All">https://esante.gouv.fr/segur/solutions-referencees?search_api_fulltext=&amp;field_categorie=853&amp;field_type_logiciel=All</a></p>
-<p>Il existe 2 modes de configuration :</p>
-<h2 id="configuration-p12">Configuration P12</h2>
-<p>Dans ce mode, le connecteur possède les informations de connexion, à savoir un certificat p12 provenant de l&rsquo;IGC Santé.</p>
-<p>Ce mode est utile dans le cas du BAL applicative car il ne fonctionne qu&rsquo;avec une seule BAL.</p>
+    <div class="lead">Référentiel MSSante #2 et Api Mailiz V1</div>
+	<p>Il existe 2 modes de sécurité :</p>
+<ul>
+<li>Authentification p12 : <code>p12</code></li>
+<li>Authentification dans le header : <code>authInHeader</code></li>
+</ul>
+<h2 id="configuration-p12">Configuration p12</h2>
+<p>Dans ce mode de securité, le connecteur DevBox-Santé MSS possède les informations de connexion, à savoir un certificat p12 provenant de l&rsquo;IGC Santé.</p>
+<p>Ce mode est utile dans le cas où un seul certificat est utilisé pour se connecter à une (ou plusieurs) BALs applicatives.</p>
 <p>Exemple pour authentification espace de test medimail du MIPIH :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -236,8 +239,8 @@ Version imprimable multipages.
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">asip-p12-EL-TEST-ORG-AUTH_CLI-20230717-152710.p12</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">MOT_DE_PASSE</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span></code></pre></div><h2 id="configuration-authinheader">Configuration authInHeader</h2>
-<p>Le mode <code>authInHeader</code> permet de faire passer les informations d&rsquo;authentification dans les headers des appels REST.</p>
-<p>Le connecteur dispose de 3 modes d&rsquo;authentification:</p>
+<p>Le mode <code>authInHeader</code> permet de faire passer les informations d&rsquo;authentification dans les headers HTTP des appels REST.</p>
+<p>Avec ce mode, le client dispose de 3 moyens d&rsquo;authentification:</p>
 <ul>
 <li>Certificat p12 (BAL applicative) (V2)</li>
 <li>Jeton PSC (pro santé connect) (V2)</li>
@@ -247,7 +250,7 @@ Version imprimable multipages.
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbox-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">ms-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">security.mode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">authInHeader</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>cf <a href="https://doc.devbox-sante.fr/ms-sante/howtos/" title="Authentification">Authentification</a></p>
+</span></span></span></code></pre></div><p>Pour la connexion d&rsquo;un client dans ce mode de sécurité, consulter la page dédiée :  <a href="../authentifications">Authentifications</a></p>
 
 </div>
 

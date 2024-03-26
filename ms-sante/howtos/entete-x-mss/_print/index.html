@@ -149,12 +149,12 @@ Version imprimable multipages.
 
 
 <div class="content">
-      <p>Pour répondre aux exigences listé ci-dessous, le connecteur ms-santé inclus la possibilité de passer des headers spécifiques:</p>
+      <p>Pour répondre aux exigences du <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">&ldquo;Référentiel socle MSSanté #2, Clients de Messageries Sécurisées de Santé&rdquo;</a>, le connecteur ms-santé inclus la possibilité de passer des headers spécifiques :</p>
 <ul>
-<li>X-MSS-MES</li>
-<li>X_MSS_INS</li>
-<li>X_MSS_CODECDA</li>
-<li>X_MSS_NIL</li>
+<li><code>X-MSS-MES</code></li>
+<li><code>X_MSS_INS</code></li>
+<li><code>X_MSS_CODECDA</code></li>
+<li><code>X_MSS_NIL</code></li>
 </ul>
 <p>Exemple:</p>
 <pre tabindex="0"><code class="language-bruno" data-lang="bruno">{
@@ -181,22 +181,32 @@ Version imprimable multipages.
   &#34;priority&#34;: &#34;NORMAL&#34;,
   &#34;isHtml&#34;: true
 }
-</code></pre><p>Le connecteur ne fait pas de contrôle de cohérence entre la valeur des entêtes et les documents envoyés en pièces jointes.</p>
-<h3 id="exigence-mss20">Exigence MSS20</h3>
-<p>&ldquo;Le Système DOIT positionner l&rsquo;entête SMTP &ldquo;&ldquo;X-MSS-INS&rdquo;&rdquo; dans un message envoyé qui comporte en PJ un document de santé CDA encapsulé dans une archive IHE_XDM. La valeur de cet entete DOIT être :</p>
-<p>&lsquo;O&rsquo; (Oui) en cas de présence d&rsquo;une Identité Nationale de Santé (INS qualifiée&rdquo;&quot;*) dans l&rsquo;archive IHE_XDM ;</p>
-<p>&lsquo;N&rsquo; (Non) en cas d&rsquo;absence d&rsquo;une Identité Nationale de Santé (INS qualifiée&quot;&quot;*) dans l&rsquo;archive IHE_XDM.</p>
-<p>En cas d&rsquo;absence en PJ d&rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&rsquo;entête ne DOIT pas être positionnée.</p>
-<p>INS qualifié au sens du §5.3.3 du Référentiel Identifiant National de Santé v2.0. La présence d&rsquo;un INS qualifié est caractérisé par la présence de l&rsquo;INS (matricule, OID) et des 4 traits d&rsquo;identité suivants dans l&rsquo;entete CDA : nom de naissance, 1er prenom, date de naissance et sexe&quot;</p>
-<h3 id="exigence-mss21">Exigence MSS21</h3>
+</code></pre><p>Attention : il ne s&rsquo;agit pas ici de header HTTP, mais de header pour les messages SMTP/MIME. Le connecteur ne fait pas de contrôle de cohérence entre la valeur des entêtes et les documents envoyés en pièces jointes.</p>
+<h2 id="rappel-des-exigences">Rappel des exigences</h2>
+<p>Rappel concernant le <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">&ldquo;Référentiel socle MSSanté #2, Clients de Messageries Sécurisées de Santé&rdquo;</a></p>
+<h3 id="eco241">ECO.2.4.1</h3>
+<blockquote>
 <p>&ldquo;Le Système DOIT positionner un entête SMTP &ldquo;&ldquo;X-MSS-CODECDA&rdquo;&rdquo; dans un message envoyé qui comporte en PJ un ou plusieurs documents CDA encapsulés dans une archive IHE_XDM. La valeur de cet entete DOIT être égale à celle du champ code* présent dans l&rsquo;entête du document CDA.</p>
 <p>En cas de présence de plusieurs documents CDA, l&rsquo;entête sera multi-valué. En cas d&rsquo;absence en PJ d&rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&rsquo;entête ne DOIT pas être positionné.</p>
 <p>code défini dans le &ldquo;&ldquo;Volet Structuration Minimale de Documents de Santé – CI-SIS Juin 2021, §3.5.5.5&quot;&rdquo;&rdquo;</p>
-<h3 id="exigence-mss22">Exigence MSS22</h3>
+</blockquote>
+<h3 id="eco242">ECO.2.4.2</h3>
+<blockquote>
+<p>&ldquo;Le Système DOIT positionner l&rsquo;entête SMTP &ldquo;&ldquo;X-MSS-INS&rdquo;&rdquo; dans un message envoyé qui comporte en PJ un document de santé CDA encapsulé dans une archive IHE_XDM. La valeur de cet entete DOIT être :</p>
+<p>&lsquo;O&rsquo; (Oui) en cas de présence d&rsquo;une Identité Nationale de Santé (INS qualifiée&rdquo;&rdquo;*) dans l&rsquo;archive IHE_XDM ;</p>
+<p>&lsquo;N&rsquo; (Non) en cas d&rsquo;absence d&rsquo;une Identité Nationale de Santé (INS qualifiée&quot;&quot;*) dans l&rsquo;archive IHE_XDM.</p>
+<p>En cas d&rsquo;absence en PJ d&rsquo;un document de santé CDA encapsulé dans une archive IHE_XDM, l&rsquo;entête ne DOIT pas être positionnée.</p>
+<p>INS qualifié au sens du §5.3.3 du Référentiel Identifiant National de Santé v2.0. La présence d&rsquo;un INS qualifié est caractérisé par la présence de l&rsquo;INS (matricule, OID) et des 4 traits d&rsquo;identité suivants dans l&rsquo;entete CDA : nom de naissance, 1er prenom, date de naissance et sexe&quot;</p>
+</blockquote>
+<h3 id="eco243">ECO.2.4.3</h3>
+<blockquote>
 <p>&ldquo;Le Système DOIT positionner l&rsquo;entête SMTP &ldquo;&ldquo;X-MSS-NIL&rdquo;&rdquo; dans tous les courriels envoyés. Elle sera renseignée du numéro &ldquo;&ldquo;référence produit&rdquo;&rdquo; attribué lors de la déclaration du produit sur la plateforme convergence.esante.gouv.fr.</p>
 <p>Le numéro &ldquo;&ldquo;référence produit&rdquo;&rdquo; à renseigner est celui du logiciel qui a produit le message SMTP.&rdquo;</p>
-<h3 id="exigence-mss26">Exigence MSS26</h3>
+</blockquote>
+<h3 id="eco228">ECO.2.2.8</h3>
+<blockquote>
 <p>Le Système DOIT pouvoir positionner un entête SMTP &ldquo;X-MSS-MES&rdquo;, dans les messages envoyés vers un usager (Mon espace santé), avec la valeur &ldquo;FIN&rdquo; (3 caractères en majuscules), lorsque le professionnel émetteur ne souhaite pas que le patient puisse lui répondre en retour.</p>
+</blockquote>
 
 </div>
 </div>

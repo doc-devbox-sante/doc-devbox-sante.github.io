@@ -517,7 +517,11 @@ Plusieurs approches permettent néanmoins de le faire, en combinant plusieurs re
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Combinaison de &lt;code&gt;FindSubmissionSet&lt;/code&gt;, de &lt;code&gt;GetAssociations&lt;/code&gt; et de &lt;code&gt;GetDocuments&lt;/code&gt; (soit 3 appels de fonctions).&lt;/p&gt;
-&lt;p&gt;a. Utilisation de la requête &lt;code&gt;FindSubmissionSets&lt;/code&gt; pour rechercher les lots de soumission en spécifiant un intervalle temporel de soumission (date de soumission dans le DMP, critère &lt;code&gt;°&lt;/code&gt;$XDSSubmissionSetSubmissionTimeFrom&lt;code&gt;et&lt;/code&gt;$XDSSubmissionSetSubmissionTimeTo&lt;code&gt;) : retourne les lots de soumission. b. Récupérer l’ensemble des entryUUID des lots retournés. c. Passer cette liste d’entryUUID à la fonction &lt;/code&gt;GetAssociations&lt;code&gt;. d. Filtrer les retours sur les Associations de type &lt;/code&gt;HasMember&lt;code&gt;, et récupérer la liste des &lt;/code&gt;targetObject&lt;code&gt;(documents du lot). e. Appel de&lt;/code&gt;GetDocuments` avec la liste des entryUUID des documents.&lt;/p&gt;
+&lt;p&gt;a. Utilisation de la requête &lt;code&gt;FindSubmissionSets&lt;/code&gt; pour rechercher les lots de soumission en spécifiant un intervalle temporel de soumission (date de soumission dans le DMP, critère &lt;code&gt;°&lt;/code&gt;$XDSSubmissionSetSubmissionTimeFrom&lt;code&gt;et&lt;/code&gt;$XDSSubmissionSetSubmissionTimeTo`) : retourne les lots de soumission.&lt;/p&gt;
+&lt;p&gt;b. Récupérer l’ensemble des entryUUID des lots retournés.&lt;/p&gt;
+&lt;p&gt;c. Passer cette liste d’entryUUID à la fonction &lt;code&gt;GetAssociations&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;d. Filtrer les retours sur les Associations de type &lt;code&gt;HasMember&lt;/code&gt;, et récupérer la liste des &lt;code&gt;targetObject&lt;/code&gt; (documents du lot).&lt;/p&gt;
+&lt;p&gt;e. Appel de &lt;code&gt;GetDocuments&lt;/code&gt; avec la liste des entryUUID des documents.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
@@ -545,6 +549,35 @@ Plusieurs approches permettent néanmoins de le faire, en combinant plusieurs re
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;APPROVED&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;submissionTimeFrom&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;20200925033000&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;findandretrievecontent-depuis-version-51&#34;&gt;FindAndRetrieveContent (depuis version 5.1)&lt;/h4&gt;
+&lt;p&gt;Cette recherche pour des documents spécifiques comme l&amp;rsquo;Historique de remboursement et l&amp;rsquo;historique de vaccinations permet de récupérer directement le contenu du document.&lt;/p&gt;
+&lt;p&gt;Exemple en Java :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;var request = TD31Request.FindHistoriqueVaccinations.builder().matriculeINS(patient.getMatriculeINS()).build();
+var historiqueVaccinations = (DMPCHistoriqueVaccinations) client.td31_32findAndRetrieve(context, request).getDocument();
+
+var request = TD31Request.FindHistoriqueRemboursements
+                .builder().matriculeINS(patient.getMatriculeINS())
+                .serviceStartTimeFrom(&amp;#34;20200801&amp;#34;)
+                .serviceStopTimeTo(&amp;#34;20210731&amp;#34;)
+                .build();
+var historiqueRemboursements = client.td31_32findAndRetrieve(context, request).getDocument();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;en Rest :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;curl&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;--location&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;http:&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;//localhost:9999/dmp/td31_32FindAndRetrieveContent&amp;#39; \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;--header&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;Content-Type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;--data&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;modeAcces&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;acces&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;NORMAL&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;query&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;FindHistoriqueVaccinations&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;matriculeINS&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;valeur&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;279035121518989&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;identifiantSysteme&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1.2.250.1.213.1.4.10&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;td31b--rechercher-lidentifiant-technique-dun-document-depuis-version-30&#34;&gt;TD3.1b : rechercher l&amp;rsquo;identifiant technique d&amp;rsquo;un document (depuis version 3.0)&lt;/h3&gt;

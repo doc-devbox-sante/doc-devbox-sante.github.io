@@ -935,7 +935,11 @@ Plusieurs approches permettent néanmoins de le faire, en combinant plusieurs re
 </li>
 <li>
 <p>Combinaison de <code>FindSubmissionSet</code>, de <code>GetAssociations</code> et de <code>GetDocuments</code> (soit 3 appels de fonctions).</p>
-<p>a. Utilisation de la requête <code>FindSubmissionSets</code> pour rechercher les lots de soumission en spécifiant un intervalle temporel de soumission (date de soumission dans le DMP, critère <code>°</code>$XDSSubmissionSetSubmissionTimeFrom<code>et</code>$XDSSubmissionSetSubmissionTimeTo<code>) : retourne les lots de soumission. b. Récupérer l’ensemble des entryUUID des lots retournés. c. Passer cette liste d’entryUUID à la fonction </code>GetAssociations<code>. d. Filtrer les retours sur les Associations de type </code>HasMember<code>, et récupérer la liste des </code>targetObject<code>(documents du lot). e. Appel de</code>GetDocuments` avec la liste des entryUUID des documents.</p>
+<p>a. Utilisation de la requête <code>FindSubmissionSets</code> pour rechercher les lots de soumission en spécifiant un intervalle temporel de soumission (date de soumission dans le DMP, critère <code>°</code>$XDSSubmissionSetSubmissionTimeFrom<code>et</code>$XDSSubmissionSetSubmissionTimeTo`) : retourne les lots de soumission.</p>
+<p>b. Récupérer l’ensemble des entryUUID des lots retournés.</p>
+<p>c. Passer cette liste d’entryUUID à la fonction <code>GetAssociations</code>.</p>
+<p>d. Filtrer les retours sur les Associations de type <code>HasMember</code>, et récupérer la liste des <code>targetObject</code> (documents du lot).</p>
+<p>e. Appel de <code>GetDocuments</code> avec la liste des entryUUID des documents.</p>
 </li>
 </ol>
 </blockquote>
@@ -963,6 +967,35 @@ Plusieurs approches permettent néanmoins de le faire, en combinant plusieurs re
 </span></span><span style="display:flex;"><span>            <span style="color:#4e9a06">&#34;APPROVED&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">],</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;submissionTimeFrom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;20200925033000&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
+</span></span></code></pre></div><h4 id="findandretrievecontent-depuis-version-51">FindAndRetrieveContent (depuis version 5.1)</h4>
+<p>Cette recherche pour des documents spécifiques comme l&rsquo;Historique de remboursement et l&rsquo;historique de vaccinations permet de récupérer directement le contenu du document.</p>
+<p>Exemple en Java :</p>
+<pre tabindex="0"><code>var request = TD31Request.FindHistoriqueVaccinations.builder().matriculeINS(patient.getMatriculeINS()).build();
+var historiqueVaccinations = (DMPCHistoriqueVaccinations) client.td31_32findAndRetrieve(context, request).getDocument();
+
+var request = TD31Request.FindHistoriqueRemboursements
+                .builder().matriculeINS(patient.getMatriculeINS())
+                .serviceStartTimeFrom(&#34;20200801&#34;)
+                .serviceStopTimeTo(&#34;20210731&#34;)
+                .build();
+var historiqueRemboursements = client.td31_32findAndRetrieve(context, request).getDocument();
+</code></pre><p>en Rest :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">--location</span> <span style="color:#a40000">&#39;http:</span><span style="color:#8f5902;font-style:italic">//localhost:9999/dmp/td31_32FindAndRetrieveContent&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#a40000">--header</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span><span style="color:#a40000">--data</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;modeAcces&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;acces&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;NORMAL&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;query&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FindHistoriqueVaccinations&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;matriculeINS&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;valeur&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;279035121518989&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;identifiantSysteme&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.213.1.4.10&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
 </span></span></code></pre></div><h3 id="td31b--rechercher-lidentifiant-technique-dun-document-depuis-version-30">TD3.1b : rechercher l&rsquo;identifiant technique d&rsquo;un document (depuis version 3.0)</h3>

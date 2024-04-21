@@ -1,0 +1,33 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – Communication</title>
+    <link>https://doc.devbox-sante.fr/communication/</link>
+    <description>Recent content in Communication on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/communication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Communication: [21/04/2024]Problème accès à dmp/param-lps</title>
+      <link>https://doc.devbox-sante.fr/communication/20240421_getparametresdmp/</link>
+      <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/communication/20240421_getparametresdmp/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Des problèmes sont survenus lors du chargement du fichier de paramètres DMP cette fin de semaine dernière. En effet, le chargement de l&amp;rsquo;url &lt;a href=&#34;https://www.dmp.fr/documents/d/dmp/param-lps&#34;&gt;https://www.dmp.fr/documents/d/dmp/param-lps&lt;/a&gt; retournait de manière aléatoire, et parfois très souvent :  &lt;code&gt;HTTP response code: 400&lt;/code&gt; .&lt;/p&gt;
+&lt;p&gt;Ce problème de chargement a un impact, sur la DevBox-santé DMP, notamment sur le chargement des paramètres (/dmp/parametres) ainsi que sur les requêtes de recherche (/dmp/td31&amp;hellip;) et cela sur tous les environnements.&lt;/p&gt;
+&lt;p&gt;Ce matin ce problème de chargement semble être résolu. Nous avons travaillé sur un contournement, nous le mettrons en place le cas échéant.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -25,7 +25,8 @@
         &lt;h2 id=&#34;pré-requis&#34;&gt;Pré-requis&lt;/h2&gt;
 &lt;p&gt;Information officielle disponible ici : &lt;a href=&#34;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/&#34;&gt;https://cnda.ameli.fr/editeurs/referencer-un-logiciel/&lt;/a&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Inscrire votre société auprès du CNDA : &lt;a href=&#34;https://sicnda.ameli.fr/#/login/subscribe&#34;&gt;https://sicnda.ameli.fr/#/login/subscribe&lt;/a&gt;
+&lt;li&gt;
+&lt;p&gt;Inscrire votre société auprès du CNDA : &lt;a href=&#34;https://sicnda.ameli.fr/#/login/subscribe&#34;&gt;https://sicnda.ameli.fr/#/login/subscribe&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Créer un logiciel dans la plateforme&lt;/li&gt;
 &lt;li&gt;Récupérer/lire dans l&amp;rsquo;onglet documentation les conditions contractuelles pour le DMP&lt;/li&gt;
@@ -33,9 +34,13 @@
 &lt;li&gt;Remplir un nouveau dossier d&amp;rsquo;homologation (support possible DEVCOOP)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Depuis un compte industriel sécurisé, récupérer le package documentaire à jour sur &lt;a href=&#34;https://industriels.sesam-vitale.fr/group/dmp-compatibilite&#34;&gt;https://industriels.sesam-vitale.fr/group/dmp-compatibilite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Obtenir des cartes CPS et/ou certificats de test (médecin, CPE, autre) auprès de l&amp;rsquo;ANS
-Plus de renseignements : &lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_fiche_commande_cpx_et_certificats_de_test_vf.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Depuis un compte industriel sécurisé, récupérer le package documentaire à jour sur &lt;a href=&#34;https://industriels.sesam-vitale.fr/group/dmp-compatibilite&#34;&gt;https://industriels.sesam-vitale.fr/group/dmp-compatibilite&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Obtenir des cartes CPS et/ou certificats de test (médecin, CPE, autre) auprès de l&amp;rsquo;ANS avec le formulaire F414 : &lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/F414.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/F414.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Plus de renseignements : &lt;a href=&#34;https://industriels.esante.gouv.fr/sites/default/files/media/document/ANS_Commande_de_cartes_Vf.pdf&#34;&gt;https://industriels.esante.gouv.fr/sites/default/files/media/document/ANS_Commande_de_cartes_Vf.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;choix-architecture&#34;&gt;Choix Architecture&lt;/h2&gt;
 &lt;ol start=&#34;4&#34;&gt;

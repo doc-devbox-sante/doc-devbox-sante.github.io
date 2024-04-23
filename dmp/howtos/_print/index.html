@@ -2278,7 +2278,8 @@ Elle prend en charge la complexité de l’intégration et facilite ainsi aux é
     
 	<h1 id="pg-6b9c62d7feaf9fcc9d33c8f6b0be34a8">11 - FAQ</h1>
     <div class="lead">Foire aux questions intégrations DMP</div>
-	<h3 id="indirecte-erreur-dauthentification-de-la-personne-morale">[Indirecte] Erreur d&rsquo;authentification de la personne morale</h3>
+	<h2 id="authentifications">Authentifications</h2>
+<h3 id="indirecte-erreur-dauthentification-de-la-personne-morale">[Indirecte] Erreur d&rsquo;authentification de la personne morale</h3>
 <p>Cette erreur arrive quand l&rsquo;identifiant de structure utilisée dans le contexte d&rsquo;appel est incohérent avec celui du certificat :</p>
 <p><img src="identifiantStructureIncoherent.png" alt="identifiantStructure contexte"></p>
 <p>Pour connaître l&rsquo;identifiant du certificat P12 utilisé, vous pouvez utiliser l&rsquo;endpoint <code>/dmp/authenticationContext</code> avec un body vide :</p>
@@ -2291,27 +2292,34 @@ P12AuthenticationContextHandler : Extraction du certificat le nom de la structur
 P12AuthenticationContextHandler : Structure du contexte (1.2.250.1.71.4.2.2.10B0156832) est diff?rente de la structure du certificat (1.2.250.1.71.4.2.2.10B0130811)
 P12AuthenticationContextHandler : mode EJ/EG (10B0130811/10B0156832)
 P12AuthenticationContextHandler : La structure (1.2.250.1.71.4.2.2.10B0130811) du certificat de type (FINESS) est un possible FINESS_EJ, mise ? jour des type et ajout de la structure du certificat dans la liste.
-</code></pre><h3 id="cpe-de-test-retourne-un-message-derreur-ps-non_elligible-carte-commandé-en-2023">CPE de test retourne un message d&rsquo;erreur PS NON_ELLIGIBLE (carte commandé en 2023)</h3>
-<blockquote>
-<p>Effectivement c&rsquo;est un problème connu du CNDA. Le sujet est en cours côté ANS.
-Il est pour le moment inutile de recommander des CPE qui auront le même problème (une date de fin d&rsquo;activité caduque en base de données).</p>
-</blockquote>
-<h3 id="le-champ-__resource_id__-est-incorrect--27707632208291225012131410isonh">Le champ <strong>Resource_id</strong> est incorrect : 2770763220829^^^&amp;1.2.250.1.213.1.4.10&amp;ISO^NH</h3>
-<p>Vérifier la taille de l’INS, il manque généralement la clé. La bonne valeur de cet INS pour les transactions DMP est : <code>277076322082910</code></p>
-<h3 id="quel-statut-dins-pour-lalimentation-dmp-">Quel statut d’INS pour l’alimentation DMP ?</h3>
-<p>Une INS qualifiée sera nécessaire pour l’alimentation du DMP. A défaut, le DMP ne pourra pas être alimenté.</p>
-<p><em><strong>Source : <code>INS_Guide implementation_V2_0.pdf</code></strong></em></p>
-<h3 id="aucun-authorinstitution-ne-correspond-à-lutilisateur-du-vihf-authentification-indirecte">Aucun AuthorInstitution ne correspond à l&rsquo;utilisateur du VIHF [Authentification Indirecte]</h3>
+</code></pre><h3 id="aucun-authorinstitution-ne-correspond-à-lutilisateur-du-vihf-authentification-indirecte">Aucun AuthorInstitution ne correspond à l&rsquo;utilisateur du VIHF [Authentification Indirecte]</h3>
 <p>En authentification indirecte, La DevBox-Santé DMP récupère les informations de la structure dans le certificat P12 et surcharge avec ces informations la structure du contexte DMP de la requête.</p>
 <p>Cette surcharge permet de respecter l&rsquo;exigence de respecter le format du champ <code>/Assertion/Issuer</code> du VIHF défini dans &ldquo;Volet Transport Synchrone pour Client Lourd&rdquo; du CI-SIS de l&rsquo;ANS, mais aussi, de respecter le champ <code>Identifiant_Structure</code> du VIHF défini dans le guide d&rsquo;intégration du DMP (SEL-MP-037).</p>
 <p>La structure du LegalAuthenticator du document doit correspondre à la structure du contexte qui est déduite du certificat P12. Il est donc conseillé de ne pas renseigner le legalAuthenticator pour un document afin de le récupérer automatiquement du contexte.</p>
-<h3 id="cas-des-cpf--que-signifie-le-message-la-carte-utilisée-est-une-carte-de-professionnel-en-formation-cpf-une-erreur-a-été-détectée---">Cas des CPF : que signifie le message &ldquo;La carte utilisée est une carte de professionnel en formation (CPF), une erreur a été détectée  &quot; ?</h3>
+<h3 id="la-carte-utilisée-est-une-carte-de-professionnel-en-formation-cpf-une-erreur-a-été-détectée--">&ldquo;La carte utilisée est une carte de professionnel en formation (CPF), une erreur a été détectée  &quot;</h3>
 <p>Les professionnels en formation ne possède pas d&rsquo;informations sur leur carte CPF concernant leur situation d&rsquo;exercice. Il faut donc surcharger des informations dans le contexte:</p>
 <ul>
 <li><code>author.structureSante.idNational</code> (ex. &ldquo;10B0156832&rdquo;)</li>
 <li><code>author.specialite</code> (ex. &ldquo;G15_10/SM26&rdquo;)</li>
 <li><code>author.secteurActivity</code> (ex. &ldquo;SA05&rdquo;)</li>
 </ul>
+<h3 id="cpe-de-test-retourne-un-message-derreur-ps-non_elligible-carte-commandé-en-2023">CPE de test retourne un message d&rsquo;erreur PS NON_ELLIGIBLE (carte commandé en 2023)</h3>
+<blockquote>
+<p>Effectivement c&rsquo;est un problème connu du CNDA. Le sujet est en cours côté ANS.
+Il est pour le moment inutile de recommander des CPE qui auront le même problème (une date de fin d&rsquo;activité caduque en base de données).</p>
+</blockquote>
+<h2 id="identifiant-patient">Identifiant Patient</h2>
+<h3 id="le-champ-__resource_id__-est-incorrect-">Le champ <strong>Resource_id</strong> est incorrect :</h3>
+<h4 id="cas-de-la-taille-du-matricule--27707632208291225012131410isonh">Cas de la taille du matricule : <code>2770763220829^^^&amp;1.2.250.1.213.1.4.10&amp;ISO^NH</code></h4>
+<p>Vérifier la taille de l’INS, il manque généralement la clé. La bonne valeur de cet INS pour les transactions DMP est : <code>277076322082910</code></p>
+<h4 id="cas-de-lidentifiantnomenclature--277076322082910122501213148isonh">Cas de l&rsquo;identifiantNomenclature : <code>277076322082910^^^&amp;1.2.250.1.213.1.4.8&amp;ISO^NH</code></h4>
+<p>Ici c&rsquo;est l&rsquo;OID de production (<em><code>1.2.250.1.213.1.4.8</code></em>) qui est utilisé pour un INS de test (Nessi Ruth). En effet, le téléservice INSi retourne à tort un OID de production pour les patients de l&rsquo;environnement de qualification.</p>
+<p>La bonne pratique est de conserver l&rsquo;identifiantNomenclature retourner par le téleservice INS, exception faite de ceux retournés par l&rsquo;environnement de qualification.</p>
+<p>Rem : Cas particuler de Nathalie Desmaux qui a un OID de démonstration :  &lsquo;1.2.250.1.213.1.4.11&rsquo;</p>
+<h3 id="quel-statut-dins-pour-lalimentation-dmp-">Quel statut d’INS pour l’alimentation DMP ?</h3>
+<p>Une INS qualifiée sera nécessaire pour l’alimentation du DMP. A défaut, le DMP ne pourra pas être alimenté.</p>
+<p><em><strong>Source : <code>INS_Guide implementation_V2_0.pdf</code></strong></em></p>
+<h2 id="alimentation">Alimentation</h2>
 <h3 id="remplacement-note-de-vaccination---la-date-et-le-code-cis-de-cette-vaccination-sont-deja-presents-dans-le-cva-complet-errorcodedmpfragmentcvaerror-">Remplacement note de vaccination : « La date et le code CIS de cette vaccination sont deja presents dans le CVA complet&rdquo; errorCode=&ldquo;DMPFragmentCVAError&rdquo; »,</h3>
 <p>Le DMP n’accepte pas 2 vaccins identiques à la même date (code CIS + date doivent être unique dans le carnet de vaccination).</p>
 <p>Lorsque vous souhaitez remplacer une note de vaccination, le vaccin doit avoir le même identifiant pour qu’il puisse être mis à jour dans le carnet de vaccination.</p>

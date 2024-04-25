@@ -481,16 +481,17 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 <h2 id="configuration-de-la-devbox-santé-dmp">Configuration de la DevBox-Santé DMP</h2>
 <p>Le paramètrage de ces certificats pour la DevBox-Santé DMP se trouve dans le <code>application.yml</code></p>
 <ul>
-<li><code>dmpc.url.prefix</code></li>
-<li><code>dmpc.smime.p12.path</code></li>
-<li><code>dmpc.smime.p12.password</code></li>
-<li><code>dmpc.ssl.p12.path</code></li>
-<li><code>dmpc.ssl.p12.password</code></li>
-<li><code>dmpc.ssl.trust.path</code></li>
+<li><code>devbox-sante.dmp.url.prefix</code></li>
+<li><code>devbox-sante.dmp.smime.p12.path</code></li>
+<li><code>devbox-sante.dmp.smime.p12.password</code></li>
+<li><code>devbox-sante.dmp.ssl.p12.path</code></li>
+<li><code>devbox-sante.dmp.ssl.p12.password</code></li>
+<li><code>devbox-sante.dmp.ssl.trust.path</code></li>
 </ul>
 <p>Exemple de configuration à fournir :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">dmpc</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#8f5902;font-style:italic"># informations relatives au certificat smime</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">devbx-sante</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">dmp</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic"># informations relatives au certificat smime</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">smime</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">p12</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">

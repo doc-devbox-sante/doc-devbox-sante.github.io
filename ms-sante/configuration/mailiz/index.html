@@ -29,13 +29,13 @@ par carte CPS (nécéssite l&rsquo;installation du module cps de DevBox-Santé) 
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://doc.devbox-sante.fr/ms-sante/configuration/mailiz/" /><meta property="article:section" content="ms-sante" />
 
-<meta property="article:modified_time" content="2024-02-02T17:52:28+01:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2024-02-02T18:04:07+01:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Mailiz">
 <meta itemprop="description" content="Environnements Mailiz Il faut configurer les points d&rsquo;accès aux différents environnements de Mailiz.
 Formation devbox-sante: ms-sante: mailiz: servicesUrl: https://mss-msg-igcsante.formation.mssante.fr/mss-msg-services/services authenticationServiceUrl: https://mss-idp-igcsante.formation.mssante.fr/openam/SSOSoap/metaAlias/asip/idp Production devbox-sante: ms-sante: mailiz: servicesUrl: https://mss-msg-igcsante.mssante.fr/mss-msg-services/services authenticationServiceUrl: https://mss-idp-igcsante.mssante.fr/openam/SSOSoap/metaAlias/asip/idp Authentification 2 modes d&rsquo;authentification sont disponibles:
 par carte CPS (nécéssite l&rsquo;installation du module cps de DevBox-Santé) : authentificationWithCps() login/motdepasse OTP, cette authentification s&rsquo;effectue en 2 étapes : otpParameters = { otpCanalType: SMS | Mail, // canal pour recevoir l&#39;otp otpCanalPwd: password, otpIdNat: idNat //(0&#43;adeli ou 8&#43;rpps) } AuthorizationContext context = authentificationWithOtpStep1(otpParameters); context = authentificationWithOtpStep2(context, otp) // dans le cas de service REST, le context est automatiquement géré dans la session, le service retourne alors la liste des emails de l&#39;utilisateur Test sur environnement de formation Mailiz Créer un compte sur mailiz formation : https://mailiz.">
-<meta itemprop="dateModified" content="2024-02-02T17:52:28+01:00" />
+<meta itemprop="dateModified" content="2024-02-02T18:04:07+01:00" />
 <meta itemprop="wordCount" content="141">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mailiz"/>

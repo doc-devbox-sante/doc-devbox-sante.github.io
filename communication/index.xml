@@ -14,6 +14,37 @@
     
     
     <item>
+      <title>Communication: [23/05/2024] Changement URL webPS DMP</title>
+      <link>https://doc.devbox-sante.fr/communication/20240523_changementurlwebdmp/</link>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/communication/20240523_changementurlwebdmp/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Attention&lt;/h4&gt;
+
+    Ces urls concernent la transaction TD0.9. Si vous utilisez le end-point &lt;strong&gt;&lt;code&gt;/dmp/td09TableauDeBordUrl&lt;/code&gt;&lt;/strong&gt; des APIs REST ou la méthode &lt;strong&gt;&lt;code&gt;DMPCClient#td09TableauDeBordUrl&lt;/code&gt;&lt;/strong&gt; des APIs Java et que vous êtes &lt;strong&gt;en production&lt;/strong&gt;, cette information vous concerne.
+
+&lt;/div&gt;
+
+&lt;p&gt;Dans la fiche d&amp;rsquo;information PDT-INF-547 nous pouvons lire :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;PDT-INF-547_changementUrl.png&#34; alt=&#34;Nouvelles urls webDMP&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pour configurer, la DevBox-Santé avec les nouvelles urls de Production, il faut modifier le paramètre du fichier &lt;code&gt;application.yml&lt;/code&gt; :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante.dmp.url.web.prefix&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://ledmp.dmp.gouv.fr&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La DevBox-Santé avait initialement prévu qu&amp;rsquo;une seule URL du web DMP, il faut donc faire un choix de l&amp;rsquo;url de redirection vers une authentification avec CPS :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante.dmp.url.web.prefix&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://wps-cps.dmp.monespacesante.fr/&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ou encore vers ProSantéConnect :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante.dmp.url.web.prefix&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://wps-psc.dmp.monespacesante.fr/&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Il existe dans certain environnement, une variable d&amp;rsquo;environnements, &lt;strong&gt;&lt;code&gt;DEVBOX_DMP_WEB_URL&lt;/code&gt;&lt;/strong&gt; vous pouvez donc l&amp;rsquo;utiliser pour changer la valeur de l&amp;rsquo;url.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Communication: [21/04/2024]Problème accès à dmp/param-lps</title>
       <link>https://doc.devbox-sante.fr/communication/20240421_getparametresdmp/</link>
       <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>

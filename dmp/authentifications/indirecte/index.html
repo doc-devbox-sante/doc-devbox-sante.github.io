@@ -27,12 +27,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://doc.devbox-sante.fr/dmp/authentifications/indirecte/" /><meta property="article:section" content="dmp" />
 
-<meta property="article:modified_time" content="2024-02-13T11:44:27+01:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2024-02-13T16:38:57+01:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Authentification Indirecte (via certificat serveur)">
 <meta itemprop="description" content="Accéder au DMP via un certification d&#39;établissement
 ">
-<meta itemprop="dateModified" content="2024-02-13T11:44:27+01:00" />
+<meta itemprop="dateModified" content="2024-02-13T16:38:57+01:00" />
 <meta itemprop="wordCount" content="245">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Authentification Indirecte (via certificat serveur)"/>
@@ -238,9 +238,57 @@ if (!doNotTrack) {
   <label for="m-dmphowtostransactions-check"><a href="/dmp/howtos/transactions/" title="Mettre en place les différentes transactions" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactions"><span class="">Toutes les transactions</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionstd31-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionscontexte-li">
+  <input type="checkbox" id="m-dmphowtostransactionscontexte-check"/>
+  <label for="m-dmphowtostransactionscontexte-check"><a href="/dmp/howtos/transactions/contexte/" title="Gestion du Contexte" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionscontexte"><span class="">Contexte</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionsparametres-li">
+  <input type="checkbox" id="m-dmphowtostransactionsparametres-check"/>
+  <label for="m-dmphowtostransactionsparametres-check"><a href="/dmp/howtos/transactions/parametres/" title="Fichier des Paramètres DMP" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionsparametres"><span class="">Paramètres</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionsjeux_de_valeurs-li">
+  <input type="checkbox" id="m-dmphowtostransactionsjeux_de_valeurs-check"/>
+  <label for="m-dmphowtostransactionsjeux_de_valeurs-check"><a href="/dmp/howtos/transactions/jeux_de_valeurs/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionsjeux_de_valeurs"><span class="">Jeux de Valeurs</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionstd02-li">
+  <input type="checkbox" id="m-dmphowtostransactionstd02-check"/>
+  <label for="m-dmphowtostransactionstd02-check"><a href="/dmp/howtos/transactions/td0.2/" title="TD0.2 (depuis version 1.0)" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionstd02"><span class="">TD0.2</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionstd03-li">
+  <input type="checkbox" id="m-dmphowtostransactionstd03-check"/>
+  <label for="m-dmphowtostransactionstd03-check"><a href="/dmp/howtos/transactions/td0.3/" title="TD0.3 (depuis version 2.0)" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionstd03"><span class="">TD0.3</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionstd04-li">
+  <input type="checkbox" id="m-dmphowtostransactionstd04-check"/>
+  <label for="m-dmphowtostransactionstd04-check"><a href="/dmp/howtos/transactions/td0.4/" title="TD0.4 (depuis version 5.0)" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionstd04"><span class="">TD0.4</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionstd21-li">
+  <input type="checkbox" id="m-dmphowtostransactionstd21-check"/>
+  <label for="m-dmphowtostransactionstd21-check"><a href="/dmp/howtos/transactions/td2.1/" title="TD2.1 Alimentation (depuis version 1.0)" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionstd21"><span class="">TD2.1 Alimentation</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionstd31-li">
   <input type="checkbox" id="m-dmphowtostransactionstd31-check"/>
-  <label for="m-dmphowtostransactionstd31-check"><a href="/dmp/howtos/transactions/td3.1/" title="TD3.1  (depuis version 3.2)" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionstd31"><span class="">TD3.1</span></a></label>
+  <label for="m-dmphowtostransactionstd31-check"><a href="/dmp/howtos/transactions/td3.1/" title="TD3.1  (depuis version 3.2)" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionstd31"><span class="">TD3.1 Recherche</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionstd31b-li">
+  <input type="checkbox" id="m-dmphowtostransactionstd31b-check"/>
+  <label for="m-dmphowtostransactionstd31b-check"><a href="/dmp/howtos/transactions/td3.1b/" title="TD3.1b (depuis version 3.0)" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionstd31b"><span class="">TD3.1b</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionstd32-li">
+  <input type="checkbox" id="m-dmphowtostransactionstd32-check"/>
+  <label for="m-dmphowtostransactionstd32-check"><a href="/dmp/howtos/transactions/td3.2/" title="TD3.2 consultation (depuis version 3.2)" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionstd32"><span class="">TD3.2 consultation</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionstd33-li">
+  <input type="checkbox" id="m-dmphowtostransactionstd33-check"/>
+  <label for="m-dmphowtostransactionstd33-check"><a href="/dmp/howtos/transactions/td3.3/" title="TD3.3 (depuis version 1.0)" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionstd33"><span class="">TD3.3</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionsbris_de_glace-li">
+  <input type="checkbox" id="m-dmphowtostransactionsbris_de_glace-check"/>
+  <label for="m-dmphowtostransactionsbris_de_glace-check"><a href="/dmp/howtos/transactions/bris_de_glace/" title="Gestion du Bris de Glace" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionsbris_de_glace"><span class="">Bris de Glace</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionsconnexion_secrete-li">
+  <input type="checkbox" id="m-dmphowtostransactionsconnexion_secrete-check"/>
+  <label for="m-dmphowtostransactionsconnexion_secrete-check"><a href="/dmp/howtos/transactions/connexion_secrete/" title="Gestion de la Connexion Secrète" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionsconnexion_secrete"><span class="">Connexion Secrète</span></a></label>
   
 </li>
   </ul>

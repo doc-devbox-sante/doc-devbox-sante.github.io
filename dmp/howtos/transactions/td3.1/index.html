@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.104.2" />
-<link rel="alternate" type="application/rss&#43;xml" href="https://doc.devbox-sante.fr/dmp/cda/wrapped/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" href="https://doc.devbox-sante.fr/dmp/howtos/transactions/td3.1/index.xml">
 <meta name="robots" content="index, follow">
 
 
@@ -19,20 +19,20 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Votre volet CDA | DevBox-Santé</title>
-<meta name="description" content="Ou encore un document CDA généré par l&#39;intégrateur
+<title>TD3.1  (depuis version 3.2) | DevBox-Santé</title>
+<meta name="description" content="Cette fonctionnalité permet de lister les documents du DMP d’un patient (cf. RG_3010) en indiquant des critères de recherche
 ">
-<meta property="og:title" content="Votre volet CDA" />
-<meta property="og:description" content="Ou encore un document CDA généré par l&#39;intégrateur
+<meta property="og:title" content="TD3.1  (depuis version 3.2)" />
+<meta property="og:description" content="Cette fonctionnalité permet de lister les documents du DMP d’un patient (cf. RG_3010) en indiquant des critères de recherche
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://doc.devbox-sante.fr/dmp/cda/wrapped/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="https://doc.devbox-sante.fr/dmp/howtos/transactions/td3.1/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Votre volet CDA">
-<meta itemprop="description" content="Ou encore un document CDA généré par l&#39;intégrateur
+<meta itemprop="name" content="TD3.1  (depuis version 3.2)">
+<meta itemprop="description" content="Cette fonctionnalité permet de lister les documents du DMP d’un patient (cf. RG_3010) en indiquant des critères de recherche
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Votre volet CDA"/>
-<meta name="twitter:description" content="Ou encore un document CDA généré par l&#39;intégrateur
+<meta name="twitter:title" content="TD3.1  (depuis version 3.2)"/>
+<meta name="twitter:description" content="Cette fonctionnalité permet de lister les documents du DMP d’un patient (cf. RG_3010) en indiquant des critères de recherche
 "/>
 
 
@@ -185,8 +185,8 @@ if (!doNotTrack) {
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-dmpcda-li">
-  <input type="checkbox" id="m-dmpcda-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmpcda-li">
+  <input type="checkbox" id="m-dmpcda-check"/>
   <label for="m-dmpcda-check"><a href="/dmp/cda/" title="Structuration des documents" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmpcda"><span class="">CDA</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -206,9 +206,9 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-dmpcdacnam-hr-check"/>
   <label for="m-dmpcdacnam-hr-check"><a href="/dmp/cda/cnam-hr/" title="CDA CNAM-HR : Historique de remboursements" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmpcdacnam-hr"><span class="">CDA-CNAM-HR</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-dmpcdawrapped-li">
-  <input type="checkbox" id="m-dmpcdawrapped-check" checked/>
-  <label for="m-dmpcdawrapped-check"><a href="/dmp/cda/wrapped/" title="Votre volet CDA" class="align-left pl-0  active td-sidebar-link td-sidebar-link__section" id="m-dmpcdawrapped"><span class="td-sidebar-nav-active-item">CDA-wrapped</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpcdawrapped-li">
+  <input type="checkbox" id="m-dmpcdawrapped-check"/>
+  <label for="m-dmpcdawrapped-check"><a href="/dmp/cda/wrapped/" title="Votre volet CDA" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmpcdawrapped"><span class="">CDA-wrapped</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmpcdaautopresentable-li">
   <input type="checkbox" id="m-dmpcdaautopresentable-check"/>
@@ -220,8 +220,8 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-dmpconfiguration-check"/>
   <label for="m-dmpconfiguration-check"><a href="/dmp/configuration/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmpconfiguration"><span class="">Configuration</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmphowtos-li">
-  <input type="checkbox" id="m-dmphowtos-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-dmphowtos-li">
+  <input type="checkbox" id="m-dmphowtos-check" checked/>
   <label for="m-dmphowtos-check"><a href="/dmp/howtos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtos"><span class="">Howtos</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -229,14 +229,14 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-dmphowtosintegrateurchecklist-check"/>
   <label for="m-dmphowtosintegrateurchecklist-check"><a href="/dmp/howtos/integrateurchecklist/" title="Intégrateurs checklist" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtosintegrateurchecklist"><span class="">Intégrateurs Checklist</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dmphowtostransactions-li">
-  <input type="checkbox" id="m-dmphowtostransactions-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-dmphowtostransactions-li">
+  <input type="checkbox" id="m-dmphowtostransactions-check" checked/>
   <label for="m-dmphowtostransactions-check"><a href="/dmp/howtos/transactions/" title="Mettre en place les différentes transactions" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactions"><span class="">Toutes les transactions</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dmphowtostransactionstd31-li">
-  <input type="checkbox" id="m-dmphowtostransactionstd31-check"/>
-  <label for="m-dmphowtostransactionstd31-check"><a href="/dmp/howtos/transactions/td3.1/" title="TD3.1  (depuis version 3.2)" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionstd31"><span class="">TD3.1</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-dmphowtostransactionstd31-li">
+  <input type="checkbox" id="m-dmphowtostransactionstd31-check" checked/>
+  <label for="m-dmphowtostransactionstd31-check"><a href="/dmp/howtos/transactions/td3.1/" title="TD3.1  (depuis version 3.2)" class="align-left pl-0  active td-sidebar-link td-sidebar-link__section" id="m-dmphowtostransactionstd31"><span class="td-sidebar-nav-active-item">TD3.1</span></a></label>
   
 </li>
   </ul>
@@ -330,7 +330,18 @@ if (!doNotTrack) {
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
             
 
 	
@@ -362,17 +373,20 @@ if (!doNotTrack) {
     <a href="https://doc.devbox-sante.fr/dmp/">DMP</a>
   </li>
   <li class="breadcrumb-item">
-    <a href="https://doc.devbox-sante.fr/dmp/cda/">CDA</a>
+    <a href="https://doc.devbox-sante.fr/dmp/howtos/">Howtos</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="https://doc.devbox-sante.fr/dmp/howtos/transactions/">Toutes les transactions</a>
   </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="https://doc.devbox-sante.fr/dmp/cda/wrapped/" aria-disabled="true" class="btn-link disabled">CDA-wrapped</a>
+    <a href="https://doc.devbox-sante.fr/dmp/howtos/transactions/td3.1/" aria-disabled="true" class="btn-link disabled">TD3.1</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Votre volet CDA</h1>
-  <div class="lead">Ou encore un document CDA généré par l&rsquo;intégrateur</div>
+	<h1>TD3.1  (depuis version 3.2)</h1>
+  <div class="lead">Cette fonctionnalité permet de lister les documents du DMP d’un patient (cf. RG_3010) en indiquant des critères de recherche</div>
 	<header class="article-meta">
 		
 		
@@ -388,66 +402,136 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<p><strong>@Since DMP-4.7.0</strong></p>
-<p>Il est possible que vous souhaitiez maîtriser la génération du document CDA, et que vous souhaitiez seulement déléguer l&rsquo;envoi au DMP de ce dernier.</p>
-<p>Il vous suffit de générer un document CDA conforme au <a href="/dmp/howtos/schematron">schematron</a> et de l&rsquo;envoyer dans une enveloppe de soummission au travers d&rsquo;une transaction <code>TD21submitDocuments</code></p>
-<p>En java, Cela consiste à créer un document enveloppe (Wrapper) <code>DMPCDocumentCDAWrapped</code> avec les quelques metadata non déductibles du CDA et le cda sous forme d&rsquo;un tableau de byte:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">byte</span><span style="color:#ce5c00;font-weight:bold">[]</span> <span style="color:#000">documentCDA</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">integrateur</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">genereUnCDA</span><span style="color:#ce5c00;font-weight:bold">();</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">DMPCDocumentCdaWrapped</span> <span style="color:#000">wrappedDocument</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">DMPCDocumentCdaWrapped</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">builder</span><span style="color:#ce5c00;font-weight:bold">()</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">format</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;urn:ihe:lab:xd-lab:2008&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">classCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;11&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">confidentialities</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">of</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;N&#34;</span><span style="color:#ce5c00;font-weight:bold">))</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">content</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">documentCda</span><span style="color:#ce5c00;font-weight:bold">)</span>  <span style="color:#8f5902;font-style:italic">// le contenu du CDA sera relu pour récupérer les métadonnées nécessaires à la soumission XDS du DMP.
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>                <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">();</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">DMPCSoumission</span> <span style="color:#000">dmpcSoumission</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DMPCSoumission</span><span style="color:#ce5c00;font-weight:bold">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">dmpcSoumission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">addDocument</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">wrappedDocument</span><span style="color:#ce5c00;font-weight:bold">);</span> <span style="color:#8f5902;font-style:italic">// ajout du document dans la soumission
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">dmpcSoumission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setTitle</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Exemple de soumission wrapped&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">dmpcSoumission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setPatient</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">);</span>  <span style="color:#8f5902;font-style:italic">// attention à la cohérence des identifiants patients.
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">dmpcSoumission</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setContentType</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;04&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td21SubmitDocuments</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD21Request</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">dmpcSoumission</span><span style="color:#ce5c00;font-weight:bold">));</span>
-</span></span></code></pre></div><p>En Rest, il faut préciser le type de document DMP soumis via <code>dmpcType: &quot;wrapped&quot;</code> et mettre le contenu encodé en Base64</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">--location</span> <span style="color:#a40000">--request</span> <span style="color:#a40000">POST</span> <span style="color:#a40000">&#39;http:</span><span style="color:#8f5902;font-style:italic">//127.0.0.1:8080/dmp/td21SubmitDocuments&#39; \
+	<p>Il est possible de faire des recherches de document ainsi que des recherches des documentation</p>
+<h4 id="getdocuments">GetDocuments</h4>
+<p>Permet la recherche par identifiant :</p>
+<p>Exemple de Requête en Java :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#000">TD31Response</span> <span style="color:#000">td31Response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td31Find</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">TD31Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">GetDocuments</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">builder</span><span style="color:#ce5c00;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">matriculeINS</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getMatriculeINS</span><span style="color:#ce5c00;font-weight:bold">())</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">documentEntryUniqueId</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">uniqueId</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">());</span>
+</span></span></code></pre></div><p>En Rest</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">--location</span> <span style="color:#a40000">&#39;http:</span><span style="color:#8f5902;font-style:italic">//localhost:9999/dmp/td31Find&#39; \
 </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#a40000">--header</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
-</span></span><span style="display:flex;"><span><span style="color:#a40000">--data-raw</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#a40000">--data</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a40000">...</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;submission&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;title&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;soumission d&#39;un document wrapped&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;contentType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;04&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;patient&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;ins&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;148115530271002&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;internalId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;67890&#34;</span>
-</span></span><span style="display:flex;"><span>                
-</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">},</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;documents&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#204a87;font-weight:bold">&#34;dmpcType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;wrapped&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#204a87;font-weight:bold">&#34;auteurs&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>                            <span style="color:#204a87;font-weight:bold">&#34;internalId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;123456&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>                            <span style="color:#204a87;font-weight:bold">&#34;nom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Durand&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>                            <span style="color:#204a87;font-weight:bold">&#34;prenom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Pierre&#34;</span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#000;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#000;font-weight:bold">],</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#204a87;font-weight:bold">&#34;classCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;11&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#204a87;font-weight:bold">&#34;comments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Document Wrapped soumis via Postman&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#204a87;font-weight:bold">&#34;confidentialities&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#4e9a06">&#34;N&#34;</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#000;font-weight:bold">],</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#204a87;font-weight:bold">&#34;format&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:ihe:lab:xd-lab:2008&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#204a87;font-weight:bold">&#34;content&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;PD94bWwgdmVyc2lvbj0iMS4wIi
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">                    ... Document CDA xml encodé en base64 ...
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">                    BlbmNvZGluZz0iVVRGLTgiP1bWVudCB4bWxucz0i+&#34;</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#000;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;query&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;GetDocuments&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;matriculeINS&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;valeur&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;279035121518989&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;identifiantSysteme&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.213.1.4.10&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;statuses&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#4e9a06">&#34;APPROVED&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;documentEntryUniqueId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2.25.120152820330539744963703480707082727589.2401081046.1.1.1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
+</span></span></code></pre></div><h4 id="finddocuments">FindDocuments</h4>
+<p>Permet la recherce de documents sur l&rsquo;ensemble des critères possibles en XDS, et ceux demandés par les différents test CNDA</p>
+<p>Exemple de Requête en Java :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">TD31Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">FindDocuments</span> <span style="color:#000">request</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD31Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">FindDocuments</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setMatriculeINS</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getMatriculeINS</span><span style="color:#ce5c00;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setConfidentialityCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Arrays</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">asList</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;N&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setTypeCode</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">of</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;11488-4&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;15507-7&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setStatuses</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Collections</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">singletonList</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">AvailabilityStatus</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">APPROVED</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">TD31Response</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td31Find</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>En Rest</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">--location</span> <span style="color:#a40000">&#39;http:</span><span style="color:#8f5902;font-style:italic">//localhost:9999/dmp/td31Find&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#a40000">--header</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span><span style="color:#a40000">--data</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;query&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FindDocuments&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;matriculeINS&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;valeur&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;279035121518989&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;identifiantSysteme&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.213.1.4.10&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;statuses&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#4e9a06">&#34;APPROVED&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;typeCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;11488-4&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;15507-7&#34;</span><span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
+</span></span></code></pre></div><h4 id="findsubmissionsetsandgetcontents">FindSubmissionSetsAndGetContents</h4>
+<p>Cette transaction permet de faire la recherche par date de soumission demandé dans le guide d&rsquo;intégration du DMP :</p>
+<blockquote>
+<p>Recherche de document soumis dans un intervalle temporel par rapport à une date de soumission
+Dans XDS, il n’existe pas de requête « Stored Query » pour rechercher les documents soumis au Repository du système DMP dans un intervalle temporel donné.
+Plusieurs approches permettent néanmoins de le faire, en combinant plusieurs requêtes.</p>
+<ol>
+<li>
+<p>Combinaison de <code>FindSubmissionSet</code> et de <code>GetSubmissionSetAndContents</code> (soit N+1 appels de fonctions, en fonction du nombre N de lots retournés).</p>
+<p>a. Utilisation de la requête <code>FindSubmissionSets</code> pour rechercher les lots de soumission en spécifiant un intervalle temporel de soumission (date de soumission dans le DMP, critères <code>$XDSSubmissionSetSubmissionTimeFrom</code> et <code>$XDSSubmissionSetSubmissionTimeTo</code>) : retourne les lots de soumission.</p>
+<p>b. Pour chaque lot retourné, faire un <code>GetSubmissionSetAndContents</code> qui retourne le lot et ses documents.</p>
+</li>
+<li>
+<p>Combinaison de <code>FindSubmissionSet</code>, de <code>GetAssociations</code> et de <code>GetDocuments</code> (soit 3 appels de fonctions).</p>
+<p>a. Utilisation de la requête <code>FindSubmissionSets</code> pour rechercher les lots de soumission en spécifiant un intervalle temporel de soumission (date de soumission dans le DMP, critère <code>°</code>$XDSSubmissionSetSubmissionTimeFrom<code>et</code>$XDSSubmissionSetSubmissionTimeTo`) : retourne les lots de soumission.</p>
+<p>b. Récupérer l’ensemble des entryUUID des lots retournés.</p>
+<p>c. Passer cette liste d’entryUUID à la fonction <code>GetAssociations</code>.</p>
+<p>d. Filtrer les retours sur les Associations de type <code>HasMember</code>, et récupérer la liste des <code>targetObject</code> (documents du lot).</p>
+<p>e. Appel de <code>GetDocuments</code> avec la liste des entryUUID des documents.</p>
+</li>
+</ol>
+</blockquote>
+<p>Rem : les deux implémentations ont été réalisées dans la DevBox-Santé. La deuxième est positionnée par défaut pour des raisons de performances.</p>
+<p>Exemple en Java :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">TD31Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">FindSubmissionSetsAndGetContents</span> <span style="color:#000">request</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TD31Request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">FindSubmissionSetsAndGetContents</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setMatriculeINS</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">patient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getMatriculeINS</span><span style="color:#ce5c00;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setSubmissionTimeFrom</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;20200925033000&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setStatuses</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">List</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">of</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">AvailabilityStatus</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">APPROVED</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">td31Find</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>Exemple en REST </p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">--location</span> <span style="color:#a40000">&#39;http:</span><span style="color:#8f5902;font-style:italic">//localhost:9999/dmp/td31Find&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#a40000">--header</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span><span style="color:#a40000">--data</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;query&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FindSubmissionSetsAndGetContents&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;matriculeINS&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;valeur&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;279035121518989&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;identifiantSysteme&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.213.1.4.10&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;statuses&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#4e9a06">&#34;APPROVED&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;submissionTimeFrom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;20200925033000&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
+</span></span></code></pre></div><h4 id="findandretrievecontent-depuis-version-51">FindAndRetrieveContent (depuis version 5.1)</h4>
+<p>Cette recherche pour des documents spécifiques comme l&rsquo;Historique de remboursement et l&rsquo;historique de vaccinations permet de récupérer directement le contenu du document.</p>
+<p>Exemple en Java :</p>
+<pre tabindex="0"><code>var request = TD31Request.FindHistoriqueVaccinations.builder().matriculeINS(patient.getMatriculeINS()).build();
+var historiqueVaccinations = (DMPCHistoriqueVaccinations) client.td31_32findAndRetrieve(context, request).getDocument();
+
+var request = TD31Request.FindHistoriqueRemboursements
+                .builder().matriculeINS(patient.getMatriculeINS())
+                .serviceStartTimeFrom(&#34;20200801&#34;)
+                .serviceStopTimeTo(&#34;20210731&#34;)
+                .build();
+var historiqueRemboursements = client.td31_32findAndRetrieve(context, request).getDocument();
+</code></pre><p>en Rest :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">--location</span> <span style="color:#a40000">&#39;http:</span><span style="color:#8f5902;font-style:italic">//localhost:9999/dmp/td31_32FindAndRetrieveContent&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#a40000">--header</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span><span style="color:#a40000">--data</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;modeAcces&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;acces&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;NORMAL&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;query&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FindHistoriqueVaccinations&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;matriculeINS&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;valeur&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;279035121518989&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;identifiantSysteme&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.2.250.1.213.1.4.10&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
 </span></span></code></pre></div>
         <div class="section-index">
     

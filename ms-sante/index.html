@@ -168,7 +168,11 @@ if (!doNotTrack) {
   <label for="m-ms-santehowtos-check"><a href="/ms-sante/howtos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtos"><span class="">Howtos</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosoperators-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosintegrateurschecklist-li">
+  <input type="checkbox" id="m-ms-santehowtosintegrateurschecklist-check"/>
+  <label for="m-ms-santehowtosintegrateurschecklist-check"><a href="/ms-sante/howtos/integrateurschecklist/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosintegrateurschecklist"><span class="">Intégrateurs checklist</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosoperators-li">
   <input type="checkbox" id="m-ms-santehowtosoperators-check"/>
   <label for="m-ms-santehowtosoperators-check"><a href="/ms-sante/howtos/operators/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosoperators"><span class="">Gestion multi-opérateurs</span></a></label>
   
@@ -199,6 +203,10 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-ms-santehowtosbase64-check"/>
   <label for="m-ms-santehowtosbase64-check"><a href="/ms-sante/howtos/base64/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-ms-santehowtosbase64"><span class="">Encoder en base64</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosfaq-li">
+  <input type="checkbox" id="m-ms-santehowtosfaq-check"/>
+  <label for="m-ms-santehowtosfaq-check"><a href="/ms-sante/howtos/faq/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosfaq"><span class="">Foire Aux Questions</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santeversions-li">
@@ -224,8 +232,7 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#lapi-public">L&rsquo;API public</a></li>
     <li><a href="#utilisation">Utilisation</a></li>
-    <li><a href="#pré-requis">Pré-requis</a></li>
-    <li><a href="#référentiels">Référentiels</a>
+    <li><a href="#différents-référentiels-intégrés">Différents référentiels intégrés</a>
       <ul>
         <li><a href="#nouveau-référentiel-socle-ms-sante-2">Nouveau référentiel socle MS-Sante #2</a></li>
         <li><a href="#ancien-référentiel-compatible-avec-mailiz">Ancien référentiel compatible avec Mailiz</a></li>
@@ -296,7 +303,7 @@ if (!doNotTrack) {
 <li>Embarqué : Intégration directe de l&rsquo;API avec son implémentation dans un projet java spring-boot.</li>
 <li>REST : Déploiement d&rsquo;une application spring-boot (jar exécutable intégrant un serveur Tomcat) offrant ces mêmes services en REST.</li>
 </ul>
-<h2 id="pré-requis">Pré-requis</h2>
+<h2 id="différents-référentiels-intégrés">Différents référentiels intégrés</h2>
 <p>Pour pouvoir utiliser le connecteur MS-Santé, il faut au préalable créer un compte selon l&rsquo;opérateur choisi:</p>
 <ul>
 <li>Opérateur compatible avec le nouveau <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">référentiel socle MSSanté #2</a></li>
@@ -304,18 +311,11 @@ if (!doNotTrack) {
 <li>Apicrypt (en cours de développement): <a href="https://www.apicrypt.org/inscription">https://www.apicrypt.org/inscription</a></li>
 </ul>
 <p>Voici la liste des opérateurs référencés par le SEGUR <a href="https://esante.gouv.fr/segur/solutions-referencees?search_api_fulltext=&amp;field_categorie=853&amp;field_type_logiciel=All">https://esante.gouv.fr/segur/solutions-referencees?search_api_fulltext=&amp;field_categorie=853&amp;field_type_logiciel=All</a></p>
-<h2 id="référentiels">Référentiels</h2>
 <h3 id="nouveau-référentiel-socle-ms-sante-2">Nouveau référentiel socle MS-Sante #2</h3>
 <p>La nouvelle version v2 respecte le nouveau référentiel : <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2</a>
 <img src="Apis_mssante.png" alt="Apis mssante"></p>
 <h3 id="ancien-référentiel-compatible-avec-mailiz">Ancien référentiel compatible avec Mailiz</h3>
 <p>La documentation officielle est disponible sur <a href="https://mailiz.mssante.fr/is/doc-technique">https://mailiz.mssante.fr/is/doc-technique</a></p>
-<p>Il est recommandé pour les logiciels souhaitant envoyer des pièces jointes de lire les document suivants:</p>
-<ul>
-<li>Echange de documents de santé via MSSanté :  guide de normalisation à destination des éditeurs de clients de messagerie MSSanté (V1.2 - 21/12/2018)</li>
-<li>Guide éditeur de mise en oeuvre de la MSSanté et de l&rsquo;alimentation du DMP dans un logiciel de professionnel de santé (V1.0.0 - mars 2016)</li>
-<li>Echange de compte rendu d&rsquo;examens de biologie via MSSanté : guide de transition vers le format XDM (V1.0.0 - 27 /04/2017)</li>
-</ul>
 
         <div class="section-index">
     

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.104.2" />
-<link rel="alternate" type="application/rss&#43;xml" href="https://doc.devbox-sante.fr/ms-sante/howtos/message-manager/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" href="https://doc.devbox-sante.fr/ms-sante/howtos/integrateurschecklist/index.xml">
 <meta name="robots" content="index, follow">
 
 
@@ -19,17 +19,21 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Message Manager | DevBox-Santé</title>
-<meta name="description" content="La Documentation">
-<meta property="og:title" content="Message Manager" />
-<meta property="og:description" content="La Documentation" />
+<title>Intégrateurs checklist | DevBox-Santé</title>
+<meta name="description" content="Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé MSS et faciliter sa mise en production
+">
+<meta property="og:title" content="Intégrateurs checklist" />
+<meta property="og:description" content="Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé MSS et faciliter sa mise en production
+" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://doc.devbox-sante.fr/ms-sante/howtos/message-manager/" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="https://doc.devbox-sante.fr/ms-sante/howtos/integrateurschecklist/" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Message Manager">
-<meta itemprop="description" content="La Documentation"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Message Manager"/>
-<meta name="twitter:description" content="La Documentation"/>
+<meta itemprop="name" content="Intégrateurs checklist">
+<meta itemprop="description" content="Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé MSS et faciliter sa mise en production
+"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Intégrateurs checklist"/>
+<meta name="twitter:description" content="Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé MSS et faciliter sa mise en production
+"/>
 
 
 
@@ -164,17 +168,17 @@ if (!doNotTrack) {
   <label for="m-ms-santehowtos-check"><a href="/ms-sante/howtos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtos"><span class="">Howtos</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosintegrateurschecklist-li">
-  <input type="checkbox" id="m-ms-santehowtosintegrateurschecklist-check"/>
-  <label for="m-ms-santehowtosintegrateurschecklist-check"><a href="/ms-sante/howtos/integrateurschecklist/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosintegrateurschecklist"><span class="">Intégrateurs checklist</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-ms-santehowtosintegrateurschecklist-li">
+  <input type="checkbox" id="m-ms-santehowtosintegrateurschecklist-check" checked/>
+  <label for="m-ms-santehowtosintegrateurschecklist-check"><a href="/ms-sante/howtos/integrateurschecklist/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosintegrateurschecklist"><span class="td-sidebar-nav-active-item">Intégrateurs checklist</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosoperators-li">
   <input type="checkbox" id="m-ms-santehowtosoperators-check"/>
   <label for="m-ms-santehowtosoperators-check"><a href="/ms-sante/howtos/operators/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosoperators"><span class="">Gestion multi-opérateurs</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-ms-santehowtosmessage-manager-li">
-  <input type="checkbox" id="m-ms-santehowtosmessage-manager-check" checked/>
-  <label for="m-ms-santehowtosmessage-manager-check"><a href="/ms-sante/howtos/message-manager/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosmessage-manager"><span class="td-sidebar-nav-active-item">Message Manager</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosmessage-manager-li">
+  <input type="checkbox" id="m-ms-santehowtosmessage-manager-check"/>
+  <label for="m-ms-santehowtosmessage-manager-check"><a href="/ms-sante/howtos/message-manager/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-ms-santehowtosmessage-manager"><span class="">Message Manager</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santehowtosentete-x-mss-li">
   <input type="checkbox" id="m-ms-santehowtosentete-x-mss-check"/>
@@ -223,7 +227,14 @@ if (!doNotTrack) {
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pré-requis">Pré-requis</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 
 	
@@ -258,14 +269,14 @@ if (!doNotTrack) {
     <a href="https://doc.devbox-sante.fr/ms-sante/howtos/">Howtos</a>
   </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="https://doc.devbox-sante.fr/ms-sante/howtos/message-manager/" aria-disabled="true" class="btn-link disabled">Message Manager</a>
+    <a href="https://doc.devbox-sante.fr/ms-sante/howtos/integrateurschecklist/" aria-disabled="true" class="btn-link disabled">Intégrateurs checklist</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Message Manager</h1>
-  
+	<h1>Intégrateurs checklist</h1>
+  <div class="lead">Liste des actions à réaliser pour mener à bien une intégration du composant DevBox-Santé MSS et faciliter sa mise en production</div>
 	<header class="article-meta">
 		
 		
@@ -281,46 +292,44 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<p>Les opérateurs ne prennent pas en charge via les API LPS certaines fonctionnalités &ldquo;standard&rdquo; de client de messagerie comme par exemple:</p>
+	
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">WIP</h4>
+
+    Cette page est en cours de construction.
+
+</div>
+
+<h2 id="pré-requis">Pré-requis</h2>
+<ol>
+<li>
+<p>Consulter le référentiel : <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2</a></p>
 <ul>
-<li>sauvegarde du message envoyé dans le dossier &ldquo;sent&rdquo;</li>
-<li>déplacement du message supprimé dans le dossier &ldquo;trash&rdquo;</li>
-<li>sauvegarde du brouillon dans le dossier &ldquo;draft&rdquo;</li>
+<li>Il est recommandé pour les logiciels souhaitant envoyer des pièces jointes de lire les document suivants:
+<ul>
+<li><strong>Echange de documents de santé via MSSanté</strong> :  guide de normalisation à destination des éditeurs de clients de messagerie MSSanté (V1.2 - 21/12/2018)</li>
+<li>Guide éditeur de mise en oeuvre de la MSSanté et de l&rsquo;alimentation du DMP dans un logiciel de professionnel de santé (V1.0.0 - mars 2016)</li>
+<li>Echange de compte rendu d&rsquo;examens de biologie via MSSanté : guide de transition vers le format XDM (V1.0.0 - 27 /04/2017)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Créer un compte sur un opérateur</p>
+<ul>
+<li>Mailiz : créer un compte sur l&rsquo;environnement de formation : <a href="https://mailiz.formation.mssante.fr/">https://mailiz.formation.mssante.fr/</a></li>
 <li>&hellip;</li>
 </ul>
-<p>Par défaut tout est géré par des flags dans le dossier INBOX (exception faite de la sauvegarde du message envoyé qui n&rsquo;est pas faite)</p>
-<p>Pour palier à ce problème, 2 modes de fonctionnement ont été mis en place:</p>
-<ul>
-<li>Managed: Le connecteur crée automatiquement ces dossiers au moment de l&rsquo;envoi, la suppression ou l&rsquo;enregistrement de brouillon et déplace/sauvegarde le message dans le bon dossier.</li>
-<li>No Managed: Le connecteur ne fait aucun traitement particulier et utilise le workflow de gestion des messages de l&rsquo;opérateur. Ce dernier peut décider de tout laisser dans inbox et ne mettre que des flags pour distinguer les messages ou utiliser les dossiers comme dans le cas &ldquo;Managed&rdquo;</li>
-</ul>
-<p>Ainsi par exemple dans le cas &ldquo;No managed&rdquo; avec un opérateur qui laisse tous les messages dans INBOX, pour avoir les messages du dossier draft, il faut rechercher les messages en précisant draft=true dans la query et sans préciser de folderId.</p>
-<p>Ce type de fonctionnement est précisé dans la configuration d el&rsquo;opérateur via le champ messageManagerActive:</p>
-<pre tabindex="0"><code>GET {url}/mssante/v2/operators
-</code></pre><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;medimail&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2,&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;INBOX&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;TRASH&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;DRAFT&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SENT&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;mailiz-v1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;apiVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1,&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;messageManagerActive&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;inboxFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;trashFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;draftFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;6&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sentFolderId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;withAllHeaders&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a40000">...</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
-</span></span></code></pre></div>
+</li>
+<li>
+<p><a href="/ms-sante/rest">Intégrer les APIs</a></p>
+</li>
+<li>
+<p>Valider vos développements à l&rsquo;aide de l&rsquo;outil de test MOTCO2</p>
+</li>
+</ol>
+
         <div class="section-index">
     
     

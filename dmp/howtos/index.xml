@@ -479,6 +479,21 @@ DMPCCdaValidator       :
         
         
         &lt;p&gt;Pour le DMP, Ils existent quatre types d&amp;rsquo;environnements&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Attention&lt;/h4&gt;
+
+    &lt;p&gt;Cette page est le fruit de l&amp;rsquo;interpération des fiches d&amp;rsquo;informations : &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PDT-INF-547 - Paramétrage des URL v5 (29/04/2024)&lt;/li&gt;
+&lt;li&gt;PDT-INF-506v6 - Mise à niveau des environnements de formation (25/01/2024)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nous essayons autant que se peut maintenir à jour ces informations. En cas de doute, vous pouvez trouver la dernière version de ces informations sur votre espace industriel : &lt;a href=&#34;https://industriels.sesam-vitale.fr&#34;&gt;https://industriels.sesam-vitale.fr&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;/div&gt;
+
 &lt;h2 id=&#34;environnements-de-production&#34;&gt;Environnements de Production&lt;/h2&gt;
 &lt;p&gt;Dans la fiche d&amp;rsquo;information &lt;code&gt;PDT-INF-547 v3&lt;/code&gt; en date du 23 juillet 2019 :&lt;/p&gt;
 &lt;ul&gt;

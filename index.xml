@@ -348,6 +348,40 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
     </item>
     
     <item>
+      <title>Blog: Pourquoi Bruno ? Mais c&#39;est qui ?</title>
+      <link>https://doc.devbox-sante.fr/blog/2024/06/04/pourquoi-bruno-mais-cest-qui/</link>
+      <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/blog/2024/06/04/pourquoi-bruno-mais-cest-qui/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Parceque, nous avons eu le même constat que les développeurs de Bruno : &lt;a href=&#34;https://www.usebruno.com/manifesto&#34;&gt;https://www.usebruno.com/manifesto&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Parceque, nous voulons partager simplement nos exemples d&amp;rsquo;utilisation de nos apis.&lt;/p&gt;
+&lt;p&gt;En effet, voici les choix qui nous étaient offerts jusqu&amp;rsquo;à présent :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Donner des exemples curl dans la documentation, c&amp;rsquo;est fastidieux et difficile à maintenir.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Partager des collections via Postman, choix convenable mais avec les contraintes suivantes :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;modifications multiples fastidieuses&lt;/li&gt;
+&lt;li&gt;nécessite un compte propriétaire&lt;/li&gt;
+&lt;li&gt;risque de partage de login/mot de passe accidentel important&lt;/li&gt;
+&lt;li&gt;non maitrise des modifications dans le temps&lt;/li&gt;
+&lt;li&gt;gestion des forks obscurs.&lt;/li&gt;
+&lt;li&gt;Les développeurs de Bruno l&amp;rsquo;explique mieux que moi : &lt;a href=&#34;https://www.usebruno.com/compare/bruno-vs-postman&#34;&gt;https://www.usebruno.com/compare/bruno-vs-postman&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;En clair, en tant que git addict nous devenons Bruno addict.&lt;/p&gt;
+&lt;p&gt;Ce n&amp;rsquo;est que le début et nous apprenons encore, mais voici le résultat en cours : &lt;a href=&#34;https://bitbucket.org/devbox-sante/dbx-examples-bruno&#34;&gt;https://bitbucket.org/devbox-sante/dbx-examples-bruno&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Intégrer la DevBox-Santé DMP-UI</title>
       <link>https://doc.devbox-sante.fr/blog/2024/01/15/int%C3%A9grer-la-devbox-sant%C3%A9-dmp-ui/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>

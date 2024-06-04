@@ -434,7 +434,9 @@ alt session dbxdmp et dmp ouverte
   navigateur -&amp;gt; dbxdmp : Requête HTTP + jsessionid&amp;#39;
   activate dbxdmp
   dbxdmp -&amp;gt; dmp : Requête HTTP + jsessionid
+  activate dmp
   dmp --&amp;gt; dbxdmp : Page HTML
+  deactivate dmp
   dbxdmp --&amp;gt; navigateur
   deactivate dbxdmp
   navigateur --&amp;gt; utilisateur

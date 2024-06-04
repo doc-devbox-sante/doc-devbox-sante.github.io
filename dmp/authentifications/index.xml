@@ -90,6 +90,82 @@ DMPC_API -d-&amp;gt; DMP : SOAP XDS / CDA
     </item>
     
     <item>
+      <title>Dmp: Authentification Indirecte Renforcee AIR</title>
+      <link>https://doc.devbox-sante.fr/dmp/authentifications/indirecte_renforce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/dmp/authentifications/indirecte_renforce/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Bientôt Disponible&lt;/h4&gt;
+
+    Travaux en cours.
+
+&lt;/div&gt;
+
+&lt;p&gt;Techniquement, il s&amp;rsquo;agit de la même authentification que l&amp;rsquo;authentification Indirecte. L&amp;rsquo;impact majeur se situe sur le jeton VIHF.&lt;/p&gt;
+&lt;p&gt;Il s&amp;rsquo;agit pour l&amp;rsquo;intégrateur/établissement de mettre en place une authentification forte de leurs utilisateurs. Une fois authentifiée, l&amp;rsquo;autorisation de l&amp;rsquo;utilisateur à solliciter le système DMP doit être vérifiée par la structure de soins. Une fois autorisée l&amp;rsquo;utilisateur se connecte sur le serveur DMP avec le certificat de l&amp;rsquo;établissement et un jeton VIHF spécifique :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+
+!define DARK_COLOR #0073bb
+hide footbox
+
+actor &amp;#34;Professionnel de Santé&amp;#34; as utilisateur DARK_COLOR
+participant &amp;#34;Navigateur&amp;#34; as navigateur DARK_COLOR
+participant &amp;#34;Modules métiers \n\nintégrateur&amp;#34; as backend
+participant &amp;#34;DevBox-Santé DMP&amp;#34; as dbxdmp DMP_COLOR
+participant &amp;#34;**DMP**&amp;#34; as dmp DARK_COLOR
+
+utilisateur -&amp;gt; navigateur : Connexion
+activate utilisateur
+activate navigateur
+navigateur -&amp;gt; backend : Connexion
+activate backend
+note over navigateur, backend: Authentification primaire forte de l&amp;#39;utilisateur 
+backend --&amp;gt; navigateur : utilisateur authentifié
+deactivate backend
+navigateur --&amp;gt; utilisateur
+deactivate navigateur
+
+utilisateur -&amp;gt; navigateur
+activate navigateur
+navigateur -&amp;gt; backend : accède à une foncion DMP
+activate backend
+backend -&amp;gt; dbxdmp : POST /dmp/xxx {context: {air : true, samlAuthnContext: ...}
+activate dbxdmp
+note over dbxdmp : Forge du jeton vihf , génération trace\n Génération requete XDS pour DMP
+dbxdmp -&amp;gt; dmp : POST SOAP IHE/XDS
+activate dmp
+dmp--&amp;gt; dbxdmp : response &amp;lt;SOAP&amp;gt;
+deactivate dmp
+dbxdmp -&amp;gt; backend : response {json}
+deactivate dbxdmp
+backend -&amp;gt; navigateur : response &amp;lt;html&amp;gt;
+deactivate backend
+navigateur --&amp;gt; utilisateur
+deactivate navigateur
+deactivate utilisateur
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;L’inscription dans ce mode est soumise à une auto-homologation de la part du directeur de l’établissement qui engage la responsabilité de sa structure sur le respect du référentiel d’exigences du DMP.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Celles-ci sont d’ordre organisationnel, technique et sécuritaire. Elles portent sur toute la chaîne d’authentification de l’utilisateur, depuis le processus d’enrôlement jusqu’au transport du jeton d’identification et d’habilitation (VIHF) pour l’accès au DMP. Cela passe par une authentification primaire forte de l’utilisateur.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Dmp: Authentification Directe (via carte CPx)</title>
       <link>https://doc.devbox-sante.fr/dmp/authentifications/directe/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

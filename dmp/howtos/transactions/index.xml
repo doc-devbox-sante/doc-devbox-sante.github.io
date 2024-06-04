@@ -299,6 +299,220 @@ NB : l’autorisation d’accès est facultative pour alimenter le DMP avec des 
     </item>
     
     <item>
+      <title>Dmp: TD0.10 (depuis version 6.0)</title>
+      <link>https://doc.devbox-sante.fr/dmp/howtos/transactions/td0.10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/dmp/howtos/transactions/td0.10/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Bientôt Disponible&lt;/h4&gt;
+
+    Travaux en cours.
+
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Cette transaction est spécifique à l’authentification indirecte renforcée et offre un accès au DMP par le canal Web-PS sans nécessiter de carte CPx.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Elle est décrite dans le &amp;ldquo;§5.5 TD0.10 Accès Web-PS Contextuel en mode AIR&amp;rdquo; du guide d&amp;rsquo;intégration.&lt;/p&gt;
+&lt;p&gt;Pour la mise en place de ce mode d&amp;rsquo;accès :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;l&amp;rsquo;authentification de l&amp;rsquo;utilisateur est laissé à l&amp;rsquo;intégrateur.&lt;/li&gt;
+&lt;li&gt;la génération du jeton VIHF est réalisée par la DevBox-Santé DMP&lt;/li&gt;
+&lt;li&gt;la génération de la trace est réalisée par la DevBox-Santé DMP&lt;/li&gt;
+&lt;li&gt;le stockage des traces ainsi que leurs extractions sont laissés à l&amp;rsquo;intégrateur&lt;/li&gt;
+&lt;li&gt;le proxy des requêtes vers le web DMP est réalisé par la DevBox-Santé DMP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;composants&#34;&gt;Composants&lt;/h3&gt;
+&lt;p&gt;Ainsi le diagramme de composants défini dans le guide d&amp;rsquo;integration est interprété comme cela dans la DevBox-Santé DMP :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+!define DARK_COLOR #0073bb
+package &amp;#34;SIH&amp;#34; {
+    [Navigateur] as navigateur DARK_COLOR
+      [Proxy\n\nDevBox-Santé DMP] as proxy DMP_COLOR
+      [Module de génération du VIHF\n\nDevBox-Santé-DMP] as vihf DMP_COLOR
+    [Module Métier\n\nIntégrateur] as integrateur
+    [Module d&amp;#39;authentification\n\nIntegrateur] as auth
+    database &amp;#34;Base des Traces\n\nIntegrateur&amp;#34; as dbTrace
+    [Module d&amp;#39;import/export des traces\n\nIntegrateur] as export
+    database &amp;#34;Référentiel de sécurité&amp;#34; as dbSec
+}
+
+node &amp;#34;Système DMP (Web-PS)&amp;#34; as DMP DARK_COLOR
+actor utilisateur DARK_COLOR
+
+utilisateur -right-&amp;gt; navigateur
+navigateur -right-&amp;gt; proxy
+navigateur -down-&amp;gt; integrateur
+integrateur -down-&amp;gt; auth
+auth -down-&amp;gt; dbSec
+integrateur -right-&amp;gt; vihf
+integrateur -&amp;gt; dbTrace
+export -up-&amp;gt; dbTrace
+proxy -&amp;gt; DMP
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;cinématique&#34;&gt;Cinématique&lt;/h3&gt;
+&lt;p&gt;La cinématique devient dans la DevBox-Santé&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+
+!define DARK_COLOR #0073bb
+hide footbox
+
+actor &amp;#34;Utilisateur&amp;#34; as utilisateur DARK_COLOR
+participant &amp;#34;Navigateur&amp;#34; as navigateur DARK_COLOR
+participant &amp;#34;Module métier \n\nintégrateur&amp;#34; as backend
+participant &amp;#34;Module d&amp;#39;authentification\n\n intégrateur&amp;#34; as auth
+participant &amp;#34;DevBox-Santé DMP&amp;#34; as dbxdmp DMP_COLOR
+participant &amp;#34;**DMP**&amp;#34; as dmp DARK_COLOR
+
+utilisateur -&amp;gt; navigateur : Connexion
+activate utilisateur
+activate navigateur
+navigateur -&amp;gt; backend : Connexion
+activate backend
+backend -&amp;gt; auth : Connexion
+activate auth
+note over navigateur, auth: Authentification primaire forte de l&amp;#39;utilisateur 
+auth --&amp;gt; backend
+deactivate auth
+backend --&amp;gt; navigateur : utilisateur authentifié
+deactivate backend
+navigateur --&amp;gt; utilisateur
+deactivate navigateur
+
+utilisateur -&amp;gt; navigateur
+activate navigateur
+navigateur -&amp;gt; backend : Demande d&amp;#39;accès au web-PS 
+activate backend
+backend -&amp;gt; dbxdmp : POST /dmp/td010JetonVihf
+activate dbxdmp
+note over dbxdmp : Forge du jeton vihf , génération trace
+dbxdmp --&amp;gt; backend : {trace: ..., vihf: ..., url: /AccesIndirecteRenforcee/TableauDeBord}
+deactivate dbxdmp
+backend --&amp;gt; navigateur : Formulaire XHTML autosoumis
+deactivate backend
+navigateur -&amp;gt; dbxdmp : Envoi formulaire (SAMLResponse)
+activate dbxdmp
+dbxdmp -&amp;gt; dmp : envoi formulaire (SAMLResponse)
+note over dbxdmp, dmp: Authentification mutuelle
+activate dmp
+dmp--&amp;gt; dbxdmp : html + jsessionid
+deactivate dmp
+dbxdmp -&amp;gt; navigateur : html + jsessionid&amp;#39;
+deactivate dbxdmp
+navigateur --&amp;gt; utilisateur
+deactivate navigateur
+deactivate utilisateur
+
+== Échanges suivants : la DevBox-Santé DMP joue le rôle de Proxy sur la session ouverte depuis le navigateur ==
+
+alt session dbxdmp et dmp ouverte
+  utilisateur -&amp;gt; navigateur 
+  activate utilisateur
+  activate navigateur 
+  navigateur -&amp;gt; dbxdmp : Requête HTTP + jsessionid&amp;#39;
+  activate dbxdmp
+  dbxdmp -&amp;gt; dmp : Requête HTTP + jsessionid
+  dmp --&amp;gt; dbxdmp : Page HTML
+  dbxdmp --&amp;gt; navigateur
+  deactivate dbxdmp
+  navigateur --&amp;gt; utilisateur
+  deactivate navigateur
+else session terminé
+note across: retour à la génération d&amp;#39;un jeton
+
+deactivate utilisateur
+end 
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;mise-en-œuvre&#34;&gt;Mise en œuvre&lt;/h3&gt;
+&lt;p&gt;Pour mettre en œuvre cette transaction en tant qu&amp;rsquo;intégrateur, comme le dit le diagramme de séquence cela se passe donc en trois temps:&lt;/p&gt;
+&lt;h4 id=&#34;1-authentification&#34;&gt;1 Authentification&lt;/h4&gt;
+&lt;p&gt;Le module métier intégrateur s&amp;rsquo;appuie sur une authentification primaire forte de l&amp;rsquo;utilisateur. La DevBox-santé DMP n&amp;rsquo;a aucun rôle dans cette séquence.&lt;/p&gt;
+&lt;h4 id=&#34;2-obtention-du-jeton-vihf&#34;&gt;2 Obtention du jeton VIHF&lt;/h4&gt;
+&lt;p&gt;Il s&amp;rsquo;agit d&amp;rsquo;une requête sur le proxy REST DMP :&lt;/p&gt;
+&lt;p&gt;Exemples Bruno (&lt;a href=&#34;https://usebruno.com&#34;&gt;https://usebruno.com&lt;/a&gt;) :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;post&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;url:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;{{baseUrl&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;}/dmp/td&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;010&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;JetonVihf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;body:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;json&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;auth:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;none&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;body:json&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;author&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;rpps&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;899700433156&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;nom&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;MEDECIN RPPS0043315&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;prenom&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;VIRGINIE&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;10&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;specialite&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;G15_10/SM26&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;secteurActivite&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;SA07&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;service&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;nom&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Service pédiatrie&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;authentificationIndirecteRenforcee&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;samlAuthnContext&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;urn:oasis:names:tc:SAML:2.0:ac:classes:Password&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;request&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;matriculeINS&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;valeur&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;133061764035249&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;identifiantSysteme&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1.2.250.1.213.1.4.10&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;L&amp;rsquo;exemple complet : &lt;a href=&#34;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx-dmp-6.x/authentification/p12/TD0.10%20-%20AIR%E2%80%AF-%20contexte%20WebPS.bru&#34;&gt;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx-dmp-6.x/authentification/p12/TD0.10%20-%20AIR%E2%80%AF-%20contexte%20WebPS.bru&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;La réponse va ressembler à cela :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trace&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;vihfId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;5f5bca57-49f1-429c-82c4-970b4097eddd&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;dateTime&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2024-06-04T08:04:57.98Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;idNatStruct&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;11B0062640&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;idNatPs&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;899700433156&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;statut&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;SUCCES&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;transactionId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;TD0.10&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;samlAuthContext&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;urn:oasis:names:tc:SAML:2.0:ac:classes:Password&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;vihf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;PHNhbWwycDpS....NlPg==&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;/AccesIndirectRenforce/TableauDeBord/133061764035249/1.2.250.1.213.1.4.10&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Vous obtenez l&amp;rsquo;information de trace pour la génération du jeton, pour stocker dans votre gestionnaire de traces fonctionnelles. Mais surtout l&amp;rsquo;url (relative) vers le proxy web Devbox-Santé DMP et enfin le vihf encodé en base64.&lt;/p&gt;
+&lt;h4 id=&#34;3-connexion-au-webdmp-via-le-proxy-devbox-santé-dmp&#34;&gt;3 Connexion au WebDMP via le proxy DevBox-Santé DMP&lt;/h4&gt;
+&lt;p&gt;Ce jeton VIHF encod peut être retourné dans un formulaire html comme décrit dans le guide d&amp;rsquo;intégration (§5.5.2.2) ayant pour code :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;body&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;onload&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;document.forms[0].submit()&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;form&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;method&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;post&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;action&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;/AccesIndirectRenforce/TableauDeBord/133061764035249/1.2.250.1.213.1.4.10&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;input&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;hidden&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;SAMLResponse&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;PHNhbWwycDpS....NlPg==&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;form&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;body&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Vous pouvez également tester depuis un navigateur avec le formulaire fourni &lt;code&gt;/td010Form.html&lt;/code&gt;. Il vous faudra copier/coller (rapidement) le jeton dans la textArea :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;td010Form.png&#34; alt=&#34;td010Form&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Dmp: TD2.1 Alimentation (depuis version 1.0)</title>
       <link>https://doc.devbox-sante.fr/dmp/howtos/transactions/td2.1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

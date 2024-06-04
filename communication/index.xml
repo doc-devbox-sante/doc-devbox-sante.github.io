@@ -14,7 +14,28 @@
     
     
     <item>
-      <title>Communication: annuaire.sesam-vitale.fr</title>
+      <title>Communication: [04/06/2024] DMP `patient#lieuNaissance` obligatoire</title>
+      <link>https://doc.devbox-sante.fr/communication/20240604_dmp_patientlieunaissance/</link>
+      <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/communication/20240604_dmp_patientlieunaissance/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Dans le cadre de la maintenance de la DevBox-Santé DMP, nous mettons à jour les schematrons de validation (&lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howtos/schematron/#validation-automatique)&#34;&gt;https://doc.devbox-sante.fr/dmp/howtos/schematron/#validation-automatique)&lt;/a&gt;. Or, pour la futur version &lt;strong&gt;5.1.16&lt;/strong&gt; de la DevBox-santé DMP , la mise à jour impose une modification d&amp;rsquo;information du patient du document CDA.
+Le lieuDeNaissance (COG) devient obligatoire car c&amp;rsquo;est une information connu du téléservice INS  
+Si vous ne renseignez pas le patient#lieuNaissance avec le code géographique vous obtiendrez cette erreur:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fr.devboxsante.dmp.cda.tools.DMPCCdaValidator$InvalidException: 
+Document non conforme au Schematron /schematrons/profils/structurationMinimale/ASIP-STRUCT-MIN-StrucMin.xsl : 
+/ClinicalDocument : (SMDS_CDAClinicalDocument): Erreur de conformité CI-SIS : 
+Dans le cadre de l&amp;#39;INS, les traits de l&amp;#39;INS (Nom de naissance, premier prénom de l&amp;#39;acte de naissance, prénoms de l’acte de naissance, date de naissance, lieu de naissance (COG) et sexe) sont obligatoires
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Cette information était non obligatoire jusqu&amp;rsquo;à présent.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Communication: [03/06/2024] annuaire.sesam-vitale.fr </title>
       <link>https://doc.devbox-sante.fr/communication/20240603_changementurlmsant%C3%A9/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
       

@@ -146,7 +146,7 @@ activate dbxdmp
 note over dbxdmp : Forge du jeton vihf , génération trace\n Génération requete XDS pour DMP
 dbxdmp -&amp;gt; dmp : POST SOAP IHE/XDS
 activate dmp
-dmp--&amp;gt; dbxdmp : response &amp;lt;SOAP&amp;gt;
+dmp--&amp;gt; dbxdmp : response &amp;lt;SOAP&amp;gt; 
 deactivate dmp
 dbxdmp -&amp;gt; backend : response {json}
 deactivate dbxdmp

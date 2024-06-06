@@ -27,12 +27,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://doc.devbox-sante.fr/dmp/authentifications/indirecte_renforce/" /><meta property="article:section" content="dmp" />
 
-<meta property="article:modified_time" content="2024-06-04T17:50:40+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2024-06-06T14:33:26+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Authentification Indirecte Renforcee AIR">
 <meta itemprop="description" content="Accéder au DMP en mode AIR
 ">
-<meta itemprop="dateModified" content="2024-06-04T17:50:40+02:00" />
+<meta itemprop="dateModified" content="2024-06-06T14:33:26+02:00" />
 <meta itemprop="wordCount" content="326">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Authentification Indirecte Renforcee AIR"/>
@@ -496,7 +496,7 @@ activate dbxdmp
 note over dbxdmp : Forge du jeton vihf , génération trace\n Génération requete XDS pour DMP
 dbxdmp -&gt; dmp : POST SOAP IHE/XDS
 activate dmp
-dmp--&gt; dbxdmp : response &lt;SOAP&gt;
+dmp--&gt; dbxdmp : response &lt;SOAP&gt; 
 deactivate dmp
 dbxdmp -&gt; backend : response {json}
 deactivate dbxdmp

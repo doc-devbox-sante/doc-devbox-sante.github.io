@@ -495,7 +495,6 @@ DMPCCdaValidator       :
 &lt;/div&gt;
 
 &lt;h2 id=&#34;environnements-de-production&#34;&gt;Environnements de Production&lt;/h2&gt;
-&lt;p&gt;Dans la fiche d&amp;rsquo;information &lt;code&gt;PDT-INF-547 v3&lt;/code&gt; en date du 23 juillet 2019 :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;LPS v2 : &lt;a href=&#34;https://lps2.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://lps2.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Web PS via CPS : &lt;a href=&#34;https://wps-cps.dmp.monespacesante.fr&#34;&gt;https://wps-cps.dmp.monespacesante.fr&lt;/a&gt;&lt;/li&gt;

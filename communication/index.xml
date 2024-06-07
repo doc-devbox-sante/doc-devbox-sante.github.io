@@ -22,7 +22,10 @@
       <description>
         
         
-        &lt;p&gt;&lt;img src=&#34;perturbationsIndisponibilit%C3%A9DMP.png&#34; alt=&#34;Annonce originale&#34;&gt;&lt;/p&gt;
+        &lt;blockquote&gt;
+&lt;p&gt;Nous vous informons que le service DMP de l’Assurance Maladie est à nouveau disponible en production et en test depuis le 07/06/2024 vers 11H.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;perturbationsIndisponibilit%C3%A9DMP.png&#34; alt=&#34;Annonce originale&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Plus d&amp;rsquo;info : &lt;a href=&#34;https://industriels.sesam-vitale.fr/group/maintenances-incidents&#34;&gt;https://industriels.sesam-vitale.fr/group/maintenances-incidents&lt;/a&gt;&lt;/p&gt;
 
       </description>

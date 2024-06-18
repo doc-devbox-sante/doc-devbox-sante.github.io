@@ -132,7 +132,7 @@ Cette liste contient par exemple mailiz et m√©dimail (liste non exhaustive) et √
 &lt;p&gt;Exemple:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;headers {
   mssAuthentication.operator: mailiz
-  mssAuthentication.pscToken: MIIcbAIBA...Bv4sVwVpAICCAA=
+  mssAuthentication.psc: MIIcbAIBA...Bv4sVwVpAICCAA=
   mssAuthentication.userName: xxx-pers@mssante.fr
 }
 &lt;/code&gt;&lt;/pre&gt;

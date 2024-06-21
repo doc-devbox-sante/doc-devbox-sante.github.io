@@ -369,6 +369,7 @@ if (!doNotTrack) {
     <li><a href="#configuration-de-limage">Configuration de l’image</a>
       <ul>
         <li><a href="#variable-denvironnements">Variable d’environnements</a></li>
+        <li><a href="#gérer-la-mémoire-de-limage">Gérer la mémoire de l&rsquo;image</a></li>
         <li><a href="#recréer-une-image">Recréer une image</a></li>
       </ul>
     </li>
@@ -431,7 +432,14 @@ if (!doNotTrack) {
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-docker" data-lang="docker"><span style="display:flex;"><span>docker run --name devbox-sante -p 8080:8080 -d <span style="color:#4e9a06">\ </span>-e <span style="color:#000">DEVBOX_DMP_URL</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;https://devh.lps2.dmp.gouv.fr/si-dmp-server/v2/services&#39;</span> devboxsante/clientname:latest <span style="color:#a40000">
 </span></span></span></code></pre></div><p>Vous pouvez même mettre toutes vos variables dans un fichier : </p>
 <pre tabindex="0"><code>docker run --name devbox-sante-clientname -d --env-file=clientname.env -p 8080:8080  devboxsante/clientname:tagname
-</code></pre><h3 id="recréer-une-image">Recréer une image</h3>
+</code></pre><h3 id="gérer-la-mémoire-de-limage">Gérer la mémoire de l&rsquo;image</h3>
+<p>La mémoire par défaut défini par docker pour un container peut ne pas être suffisante. Il suffit de demander à Docker un peu plus de ressource pour le container .</p>
+<p>Comme par exemple 1 giga de RAM :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -m1g  ...
+</span></span></code></pre></div><p>Plus d&rsquo;information sur la documentation Docker : <a href="https://docs.docker.com/config/containers/resource_constraints/">https://docs.docker.com/config/containers/resource_constraints/</a></p>
+<p>La mémoire en usage normal de la DevBox-Santé doit osciller entre 400 et 700 Mo.</p>
+<p><img src="docker-monitoring.png" alt="docker monitoring devbox-sante"></p>
+<h3 id="recréer-une-image">Recréer une image</h3>
 <p>Vous pouvez même recréer une image en déposant votre configuration et autres certificats. Comme par exemple pour remplacer le fichier <code>application.yml</code> fourni par défaut :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">FROM</span><span style="color:#4e9a06"> devboxsante/devbox:version</span><span style="color:#a40000">
 </span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">WORKDIR</span><span style="color:#4e9a06"> /workspace</span><span style="color:#a40000">

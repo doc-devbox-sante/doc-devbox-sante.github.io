@@ -18,25 +18,25 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Génération de la documentation de la DevBox-Santé | DevBox-Santé</title>
-<meta name="description" content="Utilisation de [Hugo](https://gohugo.io) pour la génération du site.
+<title>Rétention des messages SOAP en cas d&#39;incident de production DMP | DevBox-Santé</title>
+<meta name="description" content="Comment récupérer les trames SOAP pour analyse par le centre de service du sesam-vitale ?
 ">
-<meta property="og:title" content="Génération de la documentation de la DevBox-Santé" />
-<meta property="og:description" content="Utilisation de [Hugo](https://gohugo.io) pour la génération du site.
+<meta property="og:title" content="Rétention des messages SOAP en cas d&#39;incident de production DMP" />
+<meta property="og:description" content="Comment récupérer les trames SOAP pour analyse par le centre de service du sesam-vitale ?
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://doc.devbox-sante.fr/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-05-12T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-03-26T16:59:38+01:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="og:url" content="https://doc.devbox-sante.fr/blog/2024/06/21/r%C3%A9tention-des-messages-soap-en-cas-dincident-de-production-dmp/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-06-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-06-21T15:10:13+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
-<meta itemprop="name" content="Génération de la documentation de la DevBox-Santé">
-<meta itemprop="description" content="Utilisation de [Hugo](https://gohugo.io) pour la génération du site.
-"><meta itemprop="datePublished" content="2021-05-12T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2024-03-26T16:59:38+01:00" />
-<meta itemprop="wordCount" content="120">
+<meta itemprop="name" content="Rétention des messages SOAP en cas d&#39;incident de production DMP">
+<meta itemprop="description" content="Comment récupérer les trames SOAP pour analyse par le centre de service du sesam-vitale ?
+"><meta itemprop="datePublished" content="2024-06-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-06-21T15:10:13+02:00" />
+<meta itemprop="wordCount" content="181">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Génération de la documentation de la DevBox-Santé"/>
-<meta name="twitter:description" content="Utilisation de [Hugo](https://gohugo.io) pour la génération du site.
+<meta name="twitter:title" content="Rétention des messages SOAP en cas d&#39;incident de production DMP"/>
+<meta name="twitter:description" content="Comment récupérer les trames SOAP pour analyse par le centre de service du sesam-vitale ?
 "/>
 
 
@@ -145,9 +145,9 @@ if (!doNotTrack) {
   <label for="m-blogarticles-check"><a href="/blog/articles/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-blogarticles"><span class="">Articles</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20240621rc3a9tention-des-messages-soap-en-cas-dincident-de-production-dmp-li">
-  <input type="checkbox" id="m-blog20240621rc3a9tention-des-messages-soap-en-cas-dincident-de-production-dmp-check"/>
-  <label for="m-blog20240621rc3a9tention-des-messages-soap-en-cas-dincident-de-production-dmp-check"><a href="/blog/2024/06/21/r%C3%A9tention-des-messages-soap-en-cas-dincident-de-production-dmp/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20240621rc3a9tention-des-messages-soap-en-cas-dincident-de-production-dmp"><span class="">Rétention des messages SOAP en cas d&#39;incident de production DMP</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-blog20240621rc3a9tention-des-messages-soap-en-cas-dincident-de-production-dmp-li">
+  <input type="checkbox" id="m-blog20240621rc3a9tention-des-messages-soap-en-cas-dincident-de-production-dmp-check" checked/>
+  <label for="m-blog20240621rc3a9tention-des-messages-soap-en-cas-dincident-de-production-dmp-check"><a href="/blog/2024/06/21/r%C3%A9tention-des-messages-soap-en-cas-dincident-de-production-dmp/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-blog20240621rc3a9tention-des-messages-soap-en-cas-dincident-de-production-dmp"><span class="td-sidebar-nav-active-item">Rétention des messages SOAP en cas d&#39;incident de production DMP</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20240604pourquoi-bruno-mais-cest-qui-li">
   <input type="checkbox" id="m-blog20240604pourquoi-bruno-mais-cest-qui-check"/>
@@ -221,9 +221,9 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-blog20210514diagnostiquer-des-problc3a8mes-daccc3a8s-aux-lecteurs-check"/>
   <label for="m-blog20210514diagnostiquer-des-problc3a8mes-daccc3a8s-aux-lecteurs-check"><a href="/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/" title="Diagnostiquer des problèmes d&#39;accès aux lecteurs" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20210514diagnostiquer-des-problc3a8mes-daccc3a8s-aux-lecteurs"><span class="">Diagnostiquer vos lecteurs</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-blog20210512gc3a9nc3a9ration-de-la-documentation-de-la-devbox-santc3a9-li">
-  <input type="checkbox" id="m-blog20210512gc3a9nc3a9ration-de-la-documentation-de-la-devbox-santc3a9-check" checked/>
-  <label for="m-blog20210512gc3a9nc3a9ration-de-la-documentation-de-la-devbox-santc3a9-check"><a href="/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/" title="Génération de la documentation de la DevBox-Santé" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-blog20210512gc3a9nc3a9ration-de-la-documentation-de-la-devbox-santc3a9"><span class="td-sidebar-nav-active-item">GoDevBox-Santé avec Hugo</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20210512gc3a9nc3a9ration-de-la-documentation-de-la-devbox-santc3a9-li">
+  <input type="checkbox" id="m-blog20210512gc3a9nc3a9ration-de-la-documentation-de-la-devbox-santc3a9-check"/>
+  <label for="m-blog20210512gc3a9nc3a9ration-de-la-documentation-de-la-devbox-santc3a9-check"><a href="/blog/2021/05/12/g%C3%A9n%C3%A9ration-de-la-documentation-de-la-devbox-sant%C3%A9/" title="Génération de la documentation de la DevBox-Santé" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blog20210512gc3a9nc3a9ration-de-la-documentation-de-la-devbox-santc3a9"><span class="">GoDevBox-Santé avec Hugo</span></a></label>
   
 </li>
   </ul>
@@ -273,11 +273,11 @@ if (!doNotTrack) {
             </a>
             
 <div class="td-content">
-	<h1>Génération de la documentation de la DevBox-Santé</h1>
-	<div class="lead">Utilisation de <a href="https://gohugo.io">Hugo</a> pour la génération du site.</div>
+	<h1>Rétention des messages SOAP en cas d&#39;incident de production DMP</h1>
+	<div class="lead">Comment récupérer les trames SOAP pour analyse par le centre de service du sesam-vitale ?</div>
 	<div class="td-byline mb-4">
 		Par <b>Laurent Forêt</b> |
-		<time datetime="2021-05-12" class="text-muted">12/05/2021</time>
+		<time datetime="2024-06-21" class="text-muted">21/06/2024</time>
 	</div>
 	<header class="article-meta">
 		
@@ -294,26 +294,56 @@ if (!doNotTrack) {
 
 		
 	</header>
-	<p>Ça y est nous avons pris le temps de regrouper la documentation disponible de la DevBox-Santé en un seul endroit.
-Cela donne ce site de documentation, qui pourra s&rsquo;étoffer également d&rsquo;articles parlant de sujet d&rsquo;intégration de la DevBox-Santé d&rsquo;une part,
-et d&rsquo;intéropérabilité dans la santé d&rsquo;autre part.</p>
-<p>Les quelques sujets du moment (liste non exhaustive) :</p>
+	<p>Dorénavant depuis la prise en charge de la demande <a href="https://devbox-sante.atlassian.net/browse/DMP-440">DMP-440 : pouvoir remonter la conversation soap à l&rsquo;éditeur en réponse pour analyse</a>, il est possible de récupére l&rsquo;échange depuis deux nouveaux points d&rsquo;entrée dans les APIs REST :</p>
+<p><img src="dmpc-admin-swagger.png" alt="dmpc-admin swager"></p>
+<p>Le premier permet de récupérer la liste des erreurs survenues et qui sont sauvegardés sur le disque :</p>
+<pre tabindex="0"><code class="language-bruno" data-lang="bruno">get {
+  url: {{base_url}}/dmp/errors
+  body: none
+  auth: none
+}
+</code></pre><p>Retourne une Map de fichiers horodatés indexés par l&rsquo;identifiant de l&rsquo;échange SOAP (exchangeId), comme par exemple:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;4abaf23c-fb0b-4313-9cce-6bbfeb89c21a&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;time&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2024-06-21T11:43:26.763+02:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;path&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;file:///C:/Users/lfo/AppData/Local/Temp/dbx-dmp-logs16131058871974231716/20240621114326dbx-dmp-error4abaf23c-fb0b-4313-9cce-6bbfeb89c21a.log&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Le deuxième point d&rsquo;entrèe permet de le télécharger le fichier d&rsquo;erreur pour analyse par le <a href="mailto:centre-de-service@sesam-vitale.fr">centre-de-service@sesam-vitale.fr</a> .</p>
+<p>Pour connaître l&rsquo;exchangeId qui concerne l&rsquo;erreur à diagnostiquer, deux manières de faire :</p>
 <ul>
-<li>Les Modèles d&rsquo;Objets de Santé : <a href="https://esante.gouv.fr/interoperabilite/mos-nos">https://esante.gouv.fr/interoperabilite/mos-nos</a></li>
-<li>Les priorités du Ségur : <a href="https://solidarites-sante.gouv.fr/systeme-de-sante-et-medico-social/segur-de-la-sante-les-conclusions/">https://solidarites-sante.gouv.fr/systeme-de-sante-et-medico-social/segur-de-la-sante-les-conclusions/</a>
-et comment les outils de la DevBox-Santé peuvent fournir des briques essentielles.</li>
+<li>Soit vous connaissez la date heure de l&rsquo;incident, et vous rechercher l&rsquo;échange SOAP à cette date.</li>
+<li>Soit au moment de la récupération de l&rsquo;erreur DMP par le proxy REST vous récupérez l&rsquo;exchangeId retourner
+<ul>
+<li>
+<p>Exemple :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&#34;message&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;org.apache.cxf.binding.soap.SoapFault: Le champ Resource_id est incorrect : 27707632208291^^^&amp;1.2.250.1.213.1.4.10&amp;ISO^NH&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&#34;errorType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;DmpCxfSoapFaultInException&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&#34;messageEnum&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;DMP_SERVER_ERROR&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&#34;exchangeId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;4abaf23c-fb0b-4313-9cce-6bbfeb89c21a&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&#34;stackTrace&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;fr.devboxsante.dmp.core.cxf.DmpCxfWsEndPointFactory$2.handleMessage(DmpCxfWsEndPointFactory.java:95)&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;org.apache.cxf.interceptor.AbstractFaultChainInitiatorObserver.onMessage(AbstractFaultChainInitiatorObserver.java:112)&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;org.apache.cxf.jaxws.handler.soap.SOAPHandlerInterceptor.handleMessage(SOAPHandlerInterceptor.java:137)&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;org.apache.cxf.jaxws.handler.soap.SOAPHandlerInterceptor.handleMessage(SOAPHandlerInterceptor.java:70)&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a40000">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]}</span>
+</span></span></code></pre></div></li>
 </ul>
-<p>Si vous souhaitez générer un site de documentation similaire au notre, je ne peux que vous conseiller d&rsquo;utiliser un <a href="https://themes.gohugo.io/">thème Hugo</a>.
-Le thème qui m&rsquo;a paru le plus convaincant lors de la génération de ce site documentaire est <a href="https://themes.gohugo.io/docsy/">Docsy</a>.</p>
+</li>
+</ul>
 
 	
 
 	<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
   <li>
-    <a class="btn btn-primary disabled"><span class="mr-1">←</span>Précédent</a>
+    <a href="/blog/2024/06/04/pourquoi-bruno-mais-cest-qui/" aria-label="Précédent - Pourquoi Bruno ? Mais c&#39;est qui ?" class="btn btn-primary"><span class="mr-1">←</span>Précédent</a>
   </li>
   <li>
-    <a href="/blog/2021/05/14/diagnostiquer-des-probl%C3%A8mes-dacc%C3%A8s-aux-lecteurs/" aria-label="Suivant - Diagnostiquer des problèmes d&#39;accès aux lecteurs" class="btn btn-primary">Suivant<span class="ml-1">→</span></a>
+    <a class="btn btn-primary disabled">Suivant<span class="ml-1">→</span></a>
   </li>
 </ul>
 

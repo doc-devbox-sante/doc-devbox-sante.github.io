@@ -406,6 +406,7 @@ if (!doNotTrack) {
     <li><a href="#alimentation">Alimentation</a>
       <ul>
         <li><a href="#remplacement-note-de-vaccination---la-date-et-le-code-cis-de-cette-vaccination-sont-deja-presents-dans-le-cva-complet-errorcodedmpfragmentcvaerror-">Remplacement note de vaccination : « La date et le code CIS de cette vaccination sont deja presents dans le CVA complet&rdquo; errorCode=&ldquo;DMPFragmentCVAError&rdquo; »,</a></li>
+        <li><a href="#quel-est-le-lien-entre-numéro-de-version-xds-et-cda-">Quel est le lien entre numéro de version XDS et CDA ?</a></li>
       </ul>
     </li>
   </ul>
@@ -519,6 +520,13 @@ Il est pour le moment inutile de recommander des CPE qui auront le même problè
 <p><strong>EX_2.1-2030</strong></p>
 <p>Les identifiants des vaccinations (i.e. identifiant des entry/substanceAdministration) dans les notes de vaccination doivent être générés de manière « mondialement unique », via un UUID (voir <a href="https://fr.wikipedia.org/wiki/Universally_unique_identifier">https://fr.wikipedia.org/wiki/Universally_unique_identifier</a>) dans l’attribut id/@root seulement.</p>
 <p>Cet identifiant sert ensuite à retrouver la vaccination dans l’historique de vaccinations lors de sa mise à jour par le SI DMP. Il ne doit donc jamais rentrer en conflit avec l’identifiant d’une autre vaccination.</p>
+</blockquote>
+<h3 id="quel-est-le-lien-entre-numéro-de-version-xds-et-cda-">Quel est le lien entre numéro de version XDS et CDA ?</h3>
+<p>Réponse du SI-DMP (via le <a href="mailto:centre-de-service@sesam-vitale.fr">centre-de-service@sesam-vitale.fr</a>)</p>
+<blockquote>
+<p>La version des métadonnées XDS (fiche) n’est pas liée à la version d’un document (CDA). Un document peut avoir plusieurs version de métadonnée (fiche).</p>
+<p>Le SI DMP positionne la première version de métadonnées à 1, puis les incrémente lors de changement de confidentialité (TD3.3)</p>
+<p>Le remplacement d’un document par un autre (versionning) ne changera pas la version des métadonnées XDS de la nouvelle version du document (la nouvelle version des métadonnées du document remplaçant prendra donc la versionInfo/versionName=1 puisque soumis comme un nouveau document en remplacement d’un autre ; la version dans le CDA devrait par contre évoluer s’il s’agit bien du versionning d’un même document)</p>
 </blockquote>
 
         <div class="section-index">

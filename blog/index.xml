@@ -349,6 +349,83 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
     </item>
     
     <item>
+      <title>Blog: Vers un déploiement continue de la DevBox-Santé au sein d&#39;Airmes</title>
+      <link>https://doc.devbox-sante.fr/blog/2024/06/25/vers-un-d%C3%A9ploiement-continue-de-la-devbox-sant%C3%A9-au-sein-dairmes/</link>
+      <pubDate>Tue, 25 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/blog/2024/06/25/vers-un-d%C3%A9ploiement-continue-de-la-devbox-sant%C3%A9-au-sein-dairmes/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Avec les équipes d&amp;rsquo;&lt;a href=&#34;https://airmes.eu&#34;&gt;Airmes&lt;/a&gt;, logiciel médico-social, client de la première heure de la DevBox-Santé, nous travaillons afin de raccourcir le délais entre la correction et la mise en production de la solution Airmes et notamment leur intégration des services socles du SEGUR. Nous avons chacun de notre côté automatisé un maximum les tâches de build/intégration/déploiement de nos produits.&lt;/p&gt;
+&lt;p&gt;Voici une description des différentes étapes, de la mise en place d&amp;rsquo;une correction/évolution vers un déploiement au sein de la solution Airmes.&lt;/p&gt;
+&lt;h3 id=&#34;du-côté-de-la-devbox-santé&#34;&gt;Du côté de la DevBox-Santé&lt;/h3&gt;
+&lt;h4 id=&#34;développement&#34;&gt;Développement&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Une description d&amp;rsquo;un besoin client matérialisé par une demande dans le gestionnaire de demande de la DevBox-santé, ici pour le DMP :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;DMP-435.png&#34; alt=&#34;Issue DMP-435&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Quelques développements/tests dans les différents modules de la DevBox-santé :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;DMP-435_dev.png&#34; alt=&#34;Développements DMP-435&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;packaging&#34;&gt;Packaging&lt;/h4&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Un commit dans le gestionnaire de source avec un nouveau numéro de version du composant DMP déclenche le build ici en version 5.1.17:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;bitbucket-pipeline.png&#34; alt=&#34;bitbucket-pipeline&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Cette version est rendue visible dans la documentation : &lt;a href=&#34;https://doc.devbox-sante.fr/dmp/versions/#version---5117-21062024&#34;&gt;https://doc.devbox-sante.fr/dmp/versions/#version---5117-21062024&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Une mise à jour du fichier de &lt;code&gt;release-bom&lt;/code&gt; permet de faire le lien entre le composant DMP 5.1.17 et la version de la DevBox-Santé ici 5.6.0 : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/commits/tag/5.6.0&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/commits/tag/5.6.0&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cette version de la DevBox-Santé  est rendue visible dans la documentation : &lt;a href=&#34;https://doc.devbox-sante.fr/installer/versions/5.6/&#34;&gt;https://doc.devbox-sante.fr/installer/versions/5.6/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;livraison&#34;&gt;Livraison&lt;/h4&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Reste à livrer la version à Airmes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Update du fichier de configuration d&amp;rsquo;airmes avec la bonne version :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;--- a/pom.xml
++++ b/pom.xml
+@@ -10,10 +10,10 @@
+    &amp;lt;groupId&amp;gt;fr.devboxsante.clients.airmes&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;airmes-devbox&amp;lt;/artifactId&amp;gt;
+    &amp;lt;name&amp;gt;DevBoxSante :: clients : airmes - docker&amp;lt;/name&amp;gt;
+-    &amp;lt;version&amp;gt;5.4.1-20240618-38&amp;lt;/version&amp;gt;
++    &amp;lt;version&amp;gt;5.6.0-20240621-39&amp;lt;/version&amp;gt;
+    &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt;
+    &amp;lt;properties&amp;gt;
+-        &amp;lt;devboxsante-releases.version&amp;gt;5.4.1&amp;lt;/devboxsante-releases.version&amp;gt;
++        &amp;lt;devboxsante-releases.version&amp;gt;5.6.0&amp;lt;/devboxsante-releases.version&amp;gt;
+        &amp;lt;dbx-client.name&amp;gt;airmes&amp;lt;/dbx-client.name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git commit&lt;/code&gt; puis &lt;code&gt;git push&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;==&amp;gt; déclenchement d&amp;rsquo;un nouveau pipeline pour la construction de l&amp;rsquo;image et déploiement vers hub.docker.com :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;HubDocker-dbx.png&#34; alt=&#34;hubDocker-dbx&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;côté-airmes&#34;&gt;Côté Airmes&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Mise à jour du docker file d&amp;rsquo;Airmes avec la version livrée
+&lt;img src=&#34;Airmes_dockerFile_edit.png&#34; alt=&#34;airmes docker file&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git tag&lt;/code&gt; de la version puis &lt;code&gt;git push&lt;/code&gt;
+&lt;img src=&#34;Airmes_tagrebuild_image.png&#34; alt=&#34;Airmes tag rebuild&#34;&gt;&lt;/li&gt;
+&lt;li&gt;==&amp;gt; déclenchement du pipeline de reconstruction de l&amp;rsquo;image personnalisé et déploiement vers l&amp;rsquo;environnement souhaité :
+&lt;img src=&#34;Airmes_pipeline_deploiement.png&#34; alt=&#34;Airmes déploiement&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Rétention des messages SOAP en cas d&#39;incident de production DMP</title>
       <link>https://doc.devbox-sante.fr/blog/2024/06/21/r%C3%A9tention-des-messages-soap-en-cas-dincident-de-production-dmp/</link>
       <pubDate>Fri, 21 Jun 2024 00:00:00 +0000</pubDate>

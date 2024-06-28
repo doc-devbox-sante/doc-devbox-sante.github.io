@@ -324,6 +324,17 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 &lt;h2 id=&#34;procédure-technique&#34;&gt;Procédure Technique&lt;/h2&gt;
 &lt;p&gt;Il est possible de commander ces certificats sur le site web mis à disposition par l&amp;rsquo;ANS. Il s&amp;rsquo;agit d&amp;rsquo;un service permettant la commande de certificats et cartes :&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://pfc.eservices.esante.gouv.fr&#34;&gt;https://pfc.eservices.esante.gouv.fr&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+
+
+    La procédure est dorénavant mieux décrite sur le site de l&amp;rsquo;ANS : &lt;a href=&#34;https://esante.gouv.fr/guides/guides-IGC-sante/je-souhaite-demander-un-certificat&#34;&gt;https://esante.gouv.fr/guides/guides-IGC-sante/je-souhaite-demander-un-certificat&lt;/a&gt;
+Nous laissons l&amp;rsquo;ancienne procédure pour complément d&amp;rsquo;informations.
+
+&lt;/div&gt;
+
+&lt;h3 id=&#34;ancienne-procédure&#34;&gt;Ancienne procédure&lt;/h3&gt;
 &lt;p&gt;Pour pouvoir y accéder il faut se connecter avec un lecteur de cartes configuré muni d&amp;rsquo;une carte &lt;strong&gt;CPA autorisée&lt;/strong&gt; au préalable :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;pfcngAccueil.png&#34; alt=&#34;pfcngAccueil.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;certificats-et-clés-dauthentification&#34;&gt;Certificats et clés d&amp;rsquo;authentification&lt;/h3&gt;

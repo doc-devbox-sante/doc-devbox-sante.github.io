@@ -14,6 +14,32 @@
     
     
     <item>
+      <title>Communication: [25/06/2024]DMP : Evolution des suites cryptographiques sur environnement dev1</title>
+      <link>https://doc.devbox-sante.fr/communication/20240701_suitecryptodmp_dev1/</link>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/communication/20240701_suitecryptodmp_dev1/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Suite à la mise en place des nouvelles suites cryptographiques par le GIE SesamVitale sur &lt;strong&gt;l&amp;rsquo;environnement DEV1&lt;/strong&gt; pour permettre aux éditeurs de tester, la DevBox-santé DMP ne peut pas se connecter sur cet environnement.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+
+
+    Mise en production planifiée le &lt;strong&gt;19 novembre 2024&lt;/strong&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Nous y travaillons afin de retrouver un comportement normal. Les autres environnements ne sont pas impactés par ces nouveautés : &lt;a href=&#34;dmp/howtos/environnements/&#34;&gt;dmp/howtos/environnements/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;communication-originale&#34;&gt;Communication originale&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;image.png&#34; alt=&#34;comm_originale&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Communication: DMP : Perturbations/Indisponibilités du service le 07/06/2024 vers 08H00</title>
       <link>https://doc.devbox-sante.fr/communication/20240607_perturbationsdmp/</link>
       <pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>

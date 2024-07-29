@@ -363,7 +363,7 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;ul&gt;
 &lt;li&gt;une syntaxe correcte&lt;/li&gt;
 &lt;li&gt;une sémantique correcte&lt;/li&gt;
-&lt;li&gt;un vocabulaire correcte.&lt;/li&gt;
+&lt;li&gt;un vocabulaire correct.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;C&amp;rsquo;est simple, si vous remplissez ces trois critères vos documents sont bons.&lt;/p&gt;
 &lt;h4 id=&#34;une-syntaxe-correcte&#34;&gt;Une syntaxe correcte&lt;/h4&gt;
@@ -375,26 +375,26 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;li&gt;Pour l&amp;rsquo;homologation DMP (ou pour tout envoi via un EAI dans le DMP), les schematrons qui font foi sont ceux disponibles sur : &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA-3-0&#34;&gt;https://github.com/ansforge/TestContenuCDA-3-0&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Pour une homologation SEGUR (du moins c&amp;rsquo;était comme cela pour la vague 1), les schematrons qui font foi sont ceux disponbles sur l&amp;rsquo;espace de tests de l&amp;rsquo;ANS: &lt;a href=&#34;https://interop.esante.gouv.fr/evs/home.seam&#34;&gt;https://interop.esante.gouv.fr/evs/home.seam&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Si ces outils s&amp;rsquo;appuient sur les même schematrons et sur les mêmes versions, il n&amp;rsquo;y aurait pas de soucis. Mais c&amp;rsquo;est loin d&amp;rsquo;être le cas :&lt;/p&gt;
+&lt;p&gt;Si ces outils s&amp;rsquo;appuyaient sur les même schematrons et sur les mêmes versions, il n&amp;rsquo;y aurait pas de soucis. Mais c&amp;rsquo;est loin d&amp;rsquo;être le cas :&lt;/p&gt;
 &lt;p&gt;Pour le premier outil, il suffit de voir le nombre de modifications du projet (&lt;a href=&#34;https://github.com/ansforge/TestContenuCDA-3-0/commits&#34;&gt;https://github.com/ansforge/TestContenuCDA-3-0/commits&lt;/a&gt;) pour s&amp;rsquo;apercevoir que le numéro de version 3.0 n&amp;rsquo;est que très théorique.&lt;/p&gt;
 &lt;p&gt;Pour le deuxième outil, même topo à la lecture de le release note (&lt;a href=&#34;https://interop.esante.gouv.fr/releasenote/&#34;&gt;https://interop.esante.gouv.fr/releasenote/&lt;/a&gt; ) on s&amp;rsquo;aperçoit que c&amp;rsquo;est la dernière modification dans l&amp;rsquo;outil qui fait foi.&lt;/p&gt;
-&lt;p&gt;Par conséquent, il est facile de comprendre qu&amp;rsquo;il est difficile d&amp;rsquo;être en mesure de générer des documents CDA conforme à ces deux outils et à tous moments.&lt;/p&gt;
+&lt;p&gt;Par conséquent, il est facile de comprendre qu&amp;rsquo;il est difficile d&amp;rsquo;être en mesure de générer des documents CDA conformes à ces deux outils et à tous moments.&lt;/p&gt;
 &lt;h4 id=&#34;un-vocabulaire-correcte&#34;&gt;Un vocabulaire correcte&lt;/h4&gt;
-&lt;p&gt;Par vocabulaire correcte, j&amp;rsquo;entends les codes et libellés des jeux de valeurs (JDV) utilisés dans le CDA. Mais, ici l&amp;rsquo;affaire se corse encore un peu car ses mêmes jeux de valeurs sont égalements utilisés dans les transaction XDS (&lt;a href=&#34;https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html&#34;&gt;standard de l&amp;rsquo;IHE&lt;/a&gt;) du DMP.&lt;/p&gt;
-&lt;p&gt;Il faut donc que les documents CDA générés contiennent des codes/libellés conforme à des Jeux de Valeurs et que les transaction XDS (valides pour le DMP) aussi utilisent ces mêmes jeux de valeurs.&lt;/p&gt;
+&lt;p&gt;Par vocabulaire correcte, j&amp;rsquo;entends les codes et libellés des jeux de valeurs (JDV) utilisés dans le CDA. Mais, ici l&amp;rsquo;affaire se corse encore un peu car ces mêmes jeux de valeurs sont également utilisés dans les transactions XDS (&lt;a href=&#34;https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html&#34;&gt;standard de l&amp;rsquo;IHE&lt;/a&gt;) du DMP.&lt;/p&gt;
+&lt;p&gt;Il faut donc que les documents CDA générés contiennent des codes/libellés conformes à des Jeux de Valeurs et que les transactions XDS (valides pour le DMP) aussi utilisent ces mêmes jeux de valeurs.&lt;/p&gt;
 &lt;p&gt;Ces Jeux de Valeurs ont deux sources différentes :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Les jeux de valeurs officiels pour le GIE sesam-vitale disponible dans l&amp;rsquo;espace industriel, au jour d&amp;rsquo;écriture de cet article : &lt;a href=&#34;https://industriels.sesam-vitale.fr/documents/823064/2268106/20240223-JDV_DMP_API_V2_XML.zip&#34;&gt;https://industriels.sesam-vitale.fr/documents/823064/2268106/20240223-JDV_DMP_API_V2_XML.zip&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Les jeux de valeurs à jour et maintenu par l&amp;rsquo;ANS disponible sur le site du NOS : &lt;a href=&#34;https://mos.esante.gouv.fr/NOS/&#34;&gt;https://mos.esante.gouv.fr/NOS/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Les jeux de valeurs officiels pour le GIE sesam-vitale disponibles dans l&amp;rsquo;espace industriel, au jour d&amp;rsquo;écriture de cet article, ceux du 23 février : &lt;a href=&#34;https://industriels.sesam-vitale.fr/documents/823064/2268106/20240223-JDV_DMP_API_V2_XML.zip&#34;&gt;https://industriels.sesam-vitale.fr/documents/823064/2268106/20240223-JDV_DMP_API_V2_XML.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Les jeux de valeurs à jour et maintenus au fil de l&amp;rsquo;eau par l&amp;rsquo;ANS disponibles sur le site du NOS : &lt;a href=&#34;https://mos.esante.gouv.fr/NOS/&#34;&gt;https://mos.esante.gouv.fr/NOS/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Et ont deux cibles déployées différentes :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Les jeux de valeurs utilisés par les outils schematrons : &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA-3-0/tree/main/jeuxDeValeurs&#34;&gt;https://github.com/ansforge/TestContenuCDA-3-0/tree/main/jeuxDeValeurs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Les jeux de valeurs déployées sur les différents environnements du DMP&lt;/li&gt;
+&lt;li&gt;Les jeux de valeurs déployées sur les différents environnements du DMP pour vérification des transactions XDS&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Par conséquent, il est également facile de comprendre que si nous prenons un code / libellé d&amp;rsquo;une source, il est potentiellement pas disponible sur une des cibles disponibles et donc générer une erreur.&lt;/p&gt;
+&lt;p&gt;Par conséquent, il est également facile de comprendre que si nous prenons un code / libellé d&amp;rsquo;une source, il n&amp;rsquo;est potentiellement pas disponible sur une des cibles et donc générer une erreur.&lt;/p&gt;
 &lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
-&lt;p&gt;Nul doute qu&amp;rsquo;il faut faire évoluer les outils de vérifications et d&amp;rsquo;affiner ces derniers pour être le plus à jour possible. Mais, serait-il possible de définir des versions, ou même si ce n&amp;rsquo;est pas possible de figer à une date donnée (tous les x mois par exemple), le temps que tous les acteurs se synchronisent sur ces jeux de valeurs et versions de schematron. Définir une temporalité, des itérations.&lt;/p&gt;
+&lt;p&gt;Nul doute qu&amp;rsquo;il faut faire évoluer les outils de vérifications et d&amp;rsquo;affiner ces derniers pour être le plus à jour possible. Mais, serait-il possible de définir des versions, ou même si ce n&amp;rsquo;est pas possible de figer ces outils/JDV à une date donnée (tous les x mois par exemple), le temps que tous les acteurs se synchronisent sur ces jeux de valeurs et versions de schematron. Définir une temporalité, des itérations.&lt;/p&gt;
 
       </description>
     </item>

@@ -27,13 +27,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://doc.devbox-sante.fr/blog/2024/07/29/jongler-avec-les-jeux-de-valeurs-et-schematrons-de-lans/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2024-07-29T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-07-29T11:01:20+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2024-07-29T11:16:58+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Jongler avec les Jeux De Valeurs et Schematrons de l&#39;ANS">
 <meta itemprop="description" content="Les différents JDV et schematrons de vérification des documents CDA. Un enfer ? Une partie de plaisir ?
 "><meta itemprop="datePublished" content="2024-07-29T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2024-07-29T11:01:20+02:00" />
-<meta itemprop="wordCount" content="569">
+<meta itemprop="dateModified" content="2024-07-29T11:16:58+02:00" />
+<meta itemprop="wordCount" content="583">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Jongler avec les Jeux De Valeurs et Schematrons de l&#39;ANS"/>
 <meta name="twitter:description" content="Les différents JDV et schematrons de vérification des documents CDA. Un enfer ? Une partie de plaisir ?
@@ -319,7 +319,7 @@ if (!doNotTrack) {
 <ul>
 <li>une syntaxe correcte</li>
 <li>une sémantique correcte</li>
-<li>un vocabulaire correcte.</li>
+<li>un vocabulaire correct.</li>
 </ul>
 <p>C&rsquo;est simple, si vous remplissez ces trois critères vos documents sont bons.</p>
 <h4 id="une-syntaxe-correcte">Une syntaxe correcte</h4>
@@ -331,26 +331,26 @@ if (!doNotTrack) {
 <li>Pour l&rsquo;homologation DMP (ou pour tout envoi via un EAI dans le DMP), les schematrons qui font foi sont ceux disponibles sur : <a href="https://github.com/ansforge/TestContenuCDA-3-0">https://github.com/ansforge/TestContenuCDA-3-0</a></li>
 <li>Pour une homologation SEGUR (du moins c&rsquo;était comme cela pour la vague 1), les schematrons qui font foi sont ceux disponbles sur l&rsquo;espace de tests de l&rsquo;ANS: <a href="https://interop.esante.gouv.fr/evs/home.seam">https://interop.esante.gouv.fr/evs/home.seam</a></li>
 </ul>
-<p>Si ces outils s&rsquo;appuient sur les même schematrons et sur les mêmes versions, il n&rsquo;y aurait pas de soucis. Mais c&rsquo;est loin d&rsquo;être le cas :</p>
+<p>Si ces outils s&rsquo;appuyaient sur les même schematrons et sur les mêmes versions, il n&rsquo;y aurait pas de soucis. Mais c&rsquo;est loin d&rsquo;être le cas :</p>
 <p>Pour le premier outil, il suffit de voir le nombre de modifications du projet (<a href="https://github.com/ansforge/TestContenuCDA-3-0/commits">https://github.com/ansforge/TestContenuCDA-3-0/commits</a>) pour s&rsquo;apercevoir que le numéro de version 3.0 n&rsquo;est que très théorique.</p>
 <p>Pour le deuxième outil, même topo à la lecture de le release note (<a href="https://interop.esante.gouv.fr/releasenote/">https://interop.esante.gouv.fr/releasenote/</a> ) on s&rsquo;aperçoit que c&rsquo;est la dernière modification dans l&rsquo;outil qui fait foi.</p>
-<p>Par conséquent, il est facile de comprendre qu&rsquo;il est difficile d&rsquo;être en mesure de générer des documents CDA conforme à ces deux outils et à tous moments.</p>
+<p>Par conséquent, il est facile de comprendre qu&rsquo;il est difficile d&rsquo;être en mesure de générer des documents CDA conformes à ces deux outils et à tous moments.</p>
 <h4 id="un-vocabulaire-correcte">Un vocabulaire correcte</h4>
-<p>Par vocabulaire correcte, j&rsquo;entends les codes et libellés des jeux de valeurs (JDV) utilisés dans le CDA. Mais, ici l&rsquo;affaire se corse encore un peu car ses mêmes jeux de valeurs sont égalements utilisés dans les transaction XDS (<a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html">standard de l&rsquo;IHE</a>) du DMP.</p>
-<p>Il faut donc que les documents CDA générés contiennent des codes/libellés conforme à des Jeux de Valeurs et que les transaction XDS (valides pour le DMP) aussi utilisent ces mêmes jeux de valeurs.</p>
+<p>Par vocabulaire correcte, j&rsquo;entends les codes et libellés des jeux de valeurs (JDV) utilisés dans le CDA. Mais, ici l&rsquo;affaire se corse encore un peu car ces mêmes jeux de valeurs sont également utilisés dans les transactions XDS (<a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html">standard de l&rsquo;IHE</a>) du DMP.</p>
+<p>Il faut donc que les documents CDA générés contiennent des codes/libellés conformes à des Jeux de Valeurs et que les transactions XDS (valides pour le DMP) aussi utilisent ces mêmes jeux de valeurs.</p>
 <p>Ces Jeux de Valeurs ont deux sources différentes :</p>
 <ul>
-<li>Les jeux de valeurs officiels pour le GIE sesam-vitale disponible dans l&rsquo;espace industriel, au jour d&rsquo;écriture de cet article : <a href="https://industriels.sesam-vitale.fr/documents/823064/2268106/20240223-JDV_DMP_API_V2_XML.zip">https://industriels.sesam-vitale.fr/documents/823064/2268106/20240223-JDV_DMP_API_V2_XML.zip</a></li>
-<li>Les jeux de valeurs à jour et maintenu par l&rsquo;ANS disponible sur le site du NOS : <a href="https://mos.esante.gouv.fr/NOS/">https://mos.esante.gouv.fr/NOS/</a></li>
+<li>Les jeux de valeurs officiels pour le GIE sesam-vitale disponibles dans l&rsquo;espace industriel, au jour d&rsquo;écriture de cet article, ceux du 23 février : <a href="https://industriels.sesam-vitale.fr/documents/823064/2268106/20240223-JDV_DMP_API_V2_XML.zip">https://industriels.sesam-vitale.fr/documents/823064/2268106/20240223-JDV_DMP_API_V2_XML.zip</a></li>
+<li>Les jeux de valeurs à jour et maintenus au fil de l&rsquo;eau par l&rsquo;ANS disponibles sur le site du NOS : <a href="https://mos.esante.gouv.fr/NOS/">https://mos.esante.gouv.fr/NOS/</a></li>
 </ul>
 <p>Et ont deux cibles déployées différentes :</p>
 <ul>
 <li>Les jeux de valeurs utilisés par les outils schematrons : <a href="https://github.com/ansforge/TestContenuCDA-3-0/tree/main/jeuxDeValeurs">https://github.com/ansforge/TestContenuCDA-3-0/tree/main/jeuxDeValeurs</a></li>
-<li>Les jeux de valeurs déployées sur les différents environnements du DMP</li>
+<li>Les jeux de valeurs déployées sur les différents environnements du DMP pour vérification des transactions XDS</li>
 </ul>
-<p>Par conséquent, il est également facile de comprendre que si nous prenons un code / libellé d&rsquo;une source, il est potentiellement pas disponible sur une des cibles disponibles et donc générer une erreur.</p>
+<p>Par conséquent, il est également facile de comprendre que si nous prenons un code / libellé d&rsquo;une source, il n&rsquo;est potentiellement pas disponible sur une des cibles et donc générer une erreur.</p>
 <h3 id="conclusion">Conclusion</h3>
-<p>Nul doute qu&rsquo;il faut faire évoluer les outils de vérifications et d&rsquo;affiner ces derniers pour être le plus à jour possible. Mais, serait-il possible de définir des versions, ou même si ce n&rsquo;est pas possible de figer à une date donnée (tous les x mois par exemple), le temps que tous les acteurs se synchronisent sur ces jeux de valeurs et versions de schematron. Définir une temporalité, des itérations.</p>
+<p>Nul doute qu&rsquo;il faut faire évoluer les outils de vérifications et d&rsquo;affiner ces derniers pour être le plus à jour possible. Mais, serait-il possible de définir des versions, ou même si ce n&rsquo;est pas possible de figer ces outils/JDV à une date donnée (tous les x mois par exemple), le temps que tous les acteurs se synchronisent sur ces jeux de valeurs et versions de schematron. Définir une temporalité, des itérations.</p>
 
 	
 

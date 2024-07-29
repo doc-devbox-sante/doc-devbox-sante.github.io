@@ -382,7 +382,7 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
 &lt;p&gt;Par conséquent, il est facile de comprendre qu&amp;rsquo;il est difficile d&amp;rsquo;être en mesure de générer des documents CDA conforme à ces deux outils et à tous moments.&lt;/p&gt;
 &lt;h4 id=&#34;un-vocabulaire-correcte&#34;&gt;Un vocabulaire correcte&lt;/h4&gt;
 &lt;p&gt;Par vocabulaire correcte, j&amp;rsquo;entends les codes et libellés des jeux de valeurs (JDV) utilisés dans le CDA. Mais, ici l&amp;rsquo;affaire se corse encore un peu car ses mêmes jeux de valeurs sont égalements utilisés dans les transaction XDS (&lt;a href=&#34;https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html&#34;&gt;standard de l&amp;rsquo;IHE&lt;/a&gt;) du DMP.&lt;/p&gt;
-&lt;p&gt;Donc, il faut donc que les documents CDA générés contiennent des codes/libellés conforme à des Jeux de Valeurs et que les transaction XDS (valides pour le DMP) aussi utilisent ces mêmes jeux de valeurs.&lt;/p&gt;
+&lt;p&gt;Il faut donc que les documents CDA générés contiennent des codes/libellés conforme à des Jeux de Valeurs et que les transaction XDS (valides pour le DMP) aussi utilisent ces mêmes jeux de valeurs.&lt;/p&gt;
 &lt;p&gt;Ces Jeux de Valeurs ont deux sources différentes :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Les jeux de valeurs officiels pour le GIE sesam-vitale disponible dans l&amp;rsquo;espace industriel, au jour d&amp;rsquo;écriture de cet article : &lt;a href=&#34;https://industriels.sesam-vitale.fr/documents/823064/2268106/20240223-JDV_DMP_API_V2_XML.zip&#34;&gt;https://industriels.sesam-vitale.fr/documents/823064/2268106/20240223-JDV_DMP_API_V2_XML.zip&lt;/a&gt;&lt;/li&gt;

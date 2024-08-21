@@ -202,7 +202,9 @@ Il ne sera pas pour une CPE ou les CPS non médecin qui n&amp;rsquo;ont pas le c
 	at fr.devboxsante.insi.client.INSiRequeteMappers.mapLieuNaissance(INSiRequeteMappers.java:222) ~[insi-impl-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
 	at fr.devboxsante.insi.client.INSiRequeteMappers.lambda$from$0(INSiRequeteMappers.java:80) ~[insi-impl-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
     at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;test301&#34;&gt;Test3.01&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;test-207&#34;&gt;Test 2.07&lt;/h3&gt;
+&lt;p&gt;Une difficulté peut apparaître pour ce test où l&amp;rsquo;on vous demande de faire des appels successifs en passant une liste de prénoms dans la requête. En injectant, le fichier &lt;code&gt;REP_CR01.xml&lt;/code&gt; vous aurez toujours la même réponse déclenchée, c&amp;rsquo;est à dire celle du fichier. Il vous faut donc manuellement lancer le premier appel avec le fichier injecté, faire un clean de l&amp;rsquo;injection et poursuivre les appels.&lt;/p&gt;
+&lt;h3 id=&#34;test301&#34;&gt;Test3.01&lt;/h3&gt;
 &lt;p&gt;Comme pour le test 2.01&lt;/p&gt;
 &lt;p&gt;Le connecteur devbox-santé-insi est conforme au niveau 1 de sécurité pour l&amp;rsquo;assertion PS. En effet, avant tout appel au TéléService INSi, la carte CPS est accédé afin de vérifier sa présence,
 si une session pkcs11 est ouverte, cette dernière est utilisée pour générer l&amp;rsquo;assertion. Si cette session n&amp;rsquo;est pas ouverte, trois possibilité :&lt;/p&gt;

@@ -27,13 +27,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://doc.devbox-sante.fr/insi/howtos/testcnda/declarations/" /><meta property="article:section" content="insi" />
 
-<meta property="article:modified_time" content="2024-06-06T17:34:29+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
+<meta property="article:modified_time" content="2024-08-21T10:16:21+02:00" /><meta property="og:site_name" content="DevBox-Santé" />
 
 <meta itemprop="name" content="Déclarations">
 <meta itemprop="description" content="Déclarations lors de notre audit 
 ">
-<meta itemprop="dateModified" content="2024-06-06T17:34:29+02:00" />
-<meta itemprop="wordCount" content="1662">
+<meta itemprop="dateModified" content="2024-08-21T10:16:21+02:00" />
+<meta itemprop="wordCount" content="1729">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Déclarations"/>
 <meta name="twitter:description" content="Déclarations lors de notre audit 
@@ -231,6 +231,7 @@ if (!doNotTrack) {
         <li><a href="#test-201">Test 2.01</a></li>
         <li><a href="#test-202">Test 2.02</a></li>
         <li><a href="#test-203">Test 2.03</a></li>
+        <li><a href="#test-207">Test 2.07</a></li>
         <li><a href="#test301">Test3.01</a></li>
         <li><a href="#test302">Test3.02:</a></li>
         <li><a href="#test-303">Test 3.03</a></li>
@@ -388,7 +389,9 @@ Il ne sera pas pour une CPE ou les CPS non médecin qui n&rsquo;ont pas le champ
 	at fr.devboxsante.insi.client.INSiRequeteMappers.mapLieuNaissance(INSiRequeteMappers.java:222) ~[insi-impl-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
 	at fr.devboxsante.insi.client.INSiRequeteMappers.lambda$from$0(INSiRequeteMappers.java:80) ~[insi-impl-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
     at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
-</code></pre><h3 id="test301">Test3.01</h3>
+</code></pre><h3 id="test-207">Test 2.07</h3>
+<p>Une difficulté peut apparaître pour ce test où l&rsquo;on vous demande de faire des appels successifs en passant une liste de prénoms dans la requête. En injectant, le fichier <code>REP_CR01.xml</code> vous aurez toujours la même réponse déclenchée, c&rsquo;est à dire celle du fichier. Il vous faut donc manuellement lancer le premier appel avec le fichier injecté, faire un clean de l&rsquo;injection et poursuivre les appels.</p>
+<h3 id="test301">Test3.01</h3>
 <p>Comme pour le test 2.01</p>
 <p>Le connecteur devbox-santé-insi est conforme au niveau 1 de sécurité pour l&rsquo;assertion PS. En effet, avant tout appel au TéléService INSi, la carte CPS est accédé afin de vérifier sa présence,
 si une session pkcs11 est ouverte, cette dernière est utilisée pour générer l&rsquo;assertion. Si cette session n&rsquo;est pas ouverte, trois possibilité :</p>

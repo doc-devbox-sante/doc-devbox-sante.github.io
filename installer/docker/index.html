@@ -479,7 +479,10 @@ Cf. le stackoverflow sur ce sujet : <a href="https://stackoverflow.com/questions
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    rm -rf /var/lib/apt/lists/* /var/cache/debconf/*<span style="color:#a40000">
 </span></span></span><span style="display:flex;"><span><span style="color:#a40000">
 </span></span></span><span style="display:flex;"><span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">EXPOSE</span><span style="color:#4e9a06"> 8080</span><span style="color:#a40000">
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><h4 id="mettre-limage-en-debug-ssl">Mettre l&rsquo;image en debug SSL</h4>
+<p>Pour activer les debug SSL du handshake parfois nécessaire pour diagnostiquer un problème d&rsquo;authentification via certificats :</p>
+<pre tabindex="0"><code>docker run --env=JAVA_OPTS=-Djavax.net.debug=ssl,handshake ...
+</code></pre>
         <div class="section-index">
     
     

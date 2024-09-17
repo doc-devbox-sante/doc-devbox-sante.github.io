@@ -395,6 +395,7 @@ if (!doNotTrack) {
         <li><a href="#code-prérequis-pour-tous">Code prérequis pour Tous</a></li>
         <li><a href="#authentification-directe">Authentification directe</a></li>
         <li><a href="#authentification-indirecte">Authentification indirecte</a></li>
+        <li><a href="#authentification-indirecte-renforcee">Authentification Indirecte Renforcee</a></li>
         <li><a href="#profil-alimentation">Profil Alimentation</a></li>
         <li><a href="#profil-consultation">Profil Consultation</a></li>
       </ul>
@@ -511,7 +512,7 @@ Ce document est disponible sur l&rsquo;espace industriel de Sesam-Vitale : <a hr
 </blockquote>
 <p>Pour toute information sur la mise en place de la connexion secrète avec la DevBox-santé DMP : <a href="/dmp/howtos/transactions/#gestion-de-la-connexion-secr%C3%A8te">/dmp/howtos/transactions/#gestion-de-la-connexion-secrète</a></p>
 <h3 id="authentification-directe">Authentification directe</h3>
-<h4 id="pre_dir_med-pre_dir_aux-pre_dir_pha-pre_dir_spe-pre_dir_cpe">PRE_DIR_MED, PRE_DIR_AUX, PRE_DIR_PHA, PRE_DIR_SPE, PRE_DIR_CPE</h4>
+<h4 id="pre_dir_med-pre_dir_aux-pre_dir_pha-pre_dir_spe-pre_dir_cpf-pre_dir_rempl-pre_dir_cpf">PRE_DIR_MED, PRE_DIR_AUX, PRE_DIR_PHA, PRE_DIR_SPE, PRE_DIR_CPF, PRE_DIR_REMPL, PRE_DIR_CPF</h4>
 <blockquote>
 <p>Des tests ont été faits en Authentification DIRECTE avec une carte :</p>
 <ul>
@@ -519,10 +520,12 @@ Ce document est disponible sur l&rsquo;espace industriel de Sesam-Vitale : <a hr
 <li>PHARMACIEN</li>
 <li>SPECIALISTE</li>
 <li>AUXILIAIRE</li>
-<li>CPE</li>
+<li>CPE anonyme et non anonyme</li>
+<li>CPF</li>
+<li>REMPLAÇANT</li>
 </ul>
 </blockquote>
-<p>Il faut réaliser un test par type de cartes CPx.</p>
+<p>Il faut réaliser un test par type de cartes CPx. La DevBox-Santé DMP gère tous les types de cartes CPx</p>
 <p>Pour obtenir les différents types cartes CPx de test  : <a href="/dmp/howtos/gestioncertificat/#proc%C3%A9dure-administrative">/dmp/howtos/gestioncertificat/#proc%C3%A9dure-administrative</a></p>
 <h4 id="pre_td03">PRE_TD03</h4>
 <blockquote>
@@ -538,7 +541,12 @@ Ce document est disponible sur l&rsquo;espace industriel de Sesam-Vitale : <a hr
 <blockquote>
 <p>L&rsquo;éditeur a testé l&rsquo;affichage de la liste des patients ayant une autorisation pour l&rsquo;acteur authentifié.</p>
 </blockquote>
-<p>Mise en œuvre de la td0.4 : <a href="http://localhost:1313/dmp/howtos/transactions/#td04--lister-les-dmp-autoris%C3%A9s-depuis-version-50">http://localhost:1313/dmp/howtos/transactions/#td04&ndash;lister-les-dmp-autoris%C3%A9s-depuis-version-50</a></p>
+<p>Mise en œuvre de la td0.4 : <a href="/dmp/howtos/transactions/td0.4">/dmp/howtos/transactions/td0.4</a></p>
+<h4 id="pre_td04_cpe">PRE_TD04_CPE</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé l&rsquo;affichage de la liste des patients ayant autorisé un PS donné à consulter leur DMP, et ce depuis une authentification faite avec une CPE.</p>
+</blockquote>
+<p>Idem PRE_TD04 avec une CPE</p>
 <h4 id="pre_td09">PRE_TD09</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé l&rsquo;appel au WebPS.</p>
@@ -553,27 +561,41 @@ Ce document est disponible sur l&rsquo;espace industriel de Sesam-Vitale : <a hr
 </blockquote>
 <p>Il faut valider une connexion en spécifiant les différents certificats utilisés. Plus d&rsquo;information, sur la configuration des certificats : <a href="/dmp/configuration/#authentification-indirecte">/dmp/configuration/#authentification-indirecte</a></p>
 <p>Ces certificats auront été obtenus préalablement auprès de l&rsquo;ANS. Pour plus d&rsquo;informations, sur l&rsquo;obtention des certificats : <a href="/dmp/howtos/gestioncertificat/">/dmp/howtos/gestioncertificat/</a></p>
+<h4 id="pre_ind_psms">PRE_IND_PSMS</h4>
+<blockquote>
+<p>Des tests ont été faits en Authentification INDIRECTE avec un PSMS (professionnel du secteur médico-social = RPPS+).</p>
+</blockquote>
+<h3 id="authentification-indirecte-renforcee">Authentification Indirecte Renforcee</h3>
+<h4 id="pre_air">PRE_AIR</h4>
+<blockquote>
+<p>Des tests ont été faits en Authentification INDIRECTE RENFORCEE.</p>
+</blockquote>
+<h4 id="pre_td010">PRE_TD010</h4>
+<blockquote>
+<p>L&rsquo;éditeur a testé l&rsquo;appel au WebPS en AIR.</p>
+</blockquote>
+<p>Le support de la TD0.10 a été rajoutée en 6.0, pour une description de la transaction : <a href="/dmp/howtos/transactions/td0.10">TD010</a></p>
 <h3 id="profil-alimentation">Profil Alimentation</h3>
 <h4 id="pre_alim_niv1">PRE_ALIM_NIV1</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé le dépôt d&rsquo; un document CDA-R2 de niveau 1 sur le DMP d&rsquo;un patient.</p>
 </blockquote>
-<p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/#td21--alimenter-le-dmp-dun-patient-avec-des-documents-depuis-version-10">/dmp/howtos/transactions/#td21&ndash;alimenter-le-dmp-dun-patient-avec-des-documents-depuis-version-10</a></p>
+<p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/td2.1">/dmp/howtos/transactions/td2.1</a></p>
 <h4 id="pre_alim_rech">PRE_ALIM_RECH</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé la recherche de l&rsquo;identifiant technique d&rsquo;un document à partir de son identifiant local (fonctionnalité TD 3.1b) afin de remplacer ou dépublier un document.</p>
 </blockquote>
-<p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/#td31b--rechercher-lidentifiant-technique-dun-document-depuis-version-30">/dmp/howtos/transactions/#td31b&ndash;rechercher-lidentifiant-technique-dun-document-depuis-version-30</a></p>
+<p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/td3.1b">/dmp/howtos/transactions/td3.1b</a></p>
 <h4 id="pre_alim_rplc">PRE_ALIM_RPLC</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé le remplacement d&rsquo;un document déjà présent sur le DMP d&rsquo;un patient (TD 2.1b).</p>
 </blockquote>
-<p>Il faut mettre en œuvre la transaction d&rsquo;alimentation avec les informations des identifiants des documents remplacés. Plus d&rsquo;informations : <a href="/dmp/howtos/transactions/#remplacement">/dmp/howtos/transactions/#remplacement</a></p>
+<p>Il faut mettre en œuvre la transaction d&rsquo;alimentation avec les informations des identifiants des documents remplacés. Plus d&rsquo;informations : <a href="/dmp/howtos/transactions/td2.1#remplacement">/dmp/howtos/transactions/td2.1#remplacement</a></p>
 <h4 id="pre_alim_suppr">PRE_ALIM_SUPPR</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé la dépublication (suppression) d&rsquo;un Document (Statut Deleted) à partir de la fonctionnalité TD 3.3c.</p>
 </blockquote>
-<p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/#td33c--supprimer-un-document-depuis-version-10">/dmp/howtos/transactions/#td33c&ndash;supprimer-un-document-depuis-version-10</a></p>
+<p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/td3.3">/dmp/howtos/transactions/td3.3</a></p>
 <h4 id="pre_alim_vac">PRE_ALIM_VAC</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé le dépôt, la modification, la validation et la suppression d&rsquo;un document Note de Vaccination (NOTE-VAC).</p>
@@ -596,28 +618,32 @@ La prise en charge de cette évolution est obligatoire pour les LPS destinés au
 <blockquote>
 <p>L&rsquo;éditeur a testé la recherche d&rsquo;un document dans le DMP d&rsquo;un patient avec les critères AvailabilityStatus et/ou TypeCode.</p>
 </blockquote>
-<p>Il faut réaliser cette recherche en utilisant la transaction de recherche : <a href="/dmp/howtos/transactions/#td31--depuis-version-32">/dmp/howtos/transactions/#td31&ndash;depuis-version-32</a></p>
+<p>Il faut réaliser cette recherche en utilisant la transaction de recherche : <a href="/dmp/howtos/transactions/td3.1">/dmp/howtos/transactions/td3.1</a></p>
 <h4 id="pre_cons_sub">PRE_CONS_SUB</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé la recherche d&rsquo;un document dans le DMP d&rsquo;un patient avec comme critère la date de soumission.</p>
 </blockquote>
-<p>Il faut réaliser cette recherche en utilisant la transaction de recherche : <a href="/dmp/howtos/transactions/#td31--depuis-version-32">/dmp/howtos/transactions/#td31&ndash;depuis-version-32</a></p>
+<p>Il faut réaliser cette recherche en utilisant la transaction de recherche : <a href="/dmp/howtos/transactions/td3.1">/dmp/howtos/transactions/td3.1</a></p>
 <h4 id="pre_cons_cons">PRE_CONS_CONS</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé la consultation d&rsquo;un document présent dans le DMP d&rsquo;un patient et l&rsquo;affichage des métadonnées d&rsquo;entête CDA.</p>
 </blockquote>
+<p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/td3.2">/dmp/howtos/transactions/td3.2</a></p>
 <h4 id="pre_cons_msqps">PRE_CONS_MSQPS</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé le masquage/démasquage d&rsquo;un Document aux PS (confidentialityCode) à partir de la fonctionnalité TD 3.3a.</p>
 </blockquote>
+<p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/td3.3">/dmp/howtos/transactions/td3.3</a></p>
 <h4 id="pre_cons_inv">PRE_CONS_INV</h4>
 <blockquote>
 <p>L&rsquo;éditeur a rendu visible un Document au patient/représentant légaux (confidentialityCode) à partir de la fonctionnalité TD 3.3b.</p>
 </blockquote>
+<p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/td3.3">/dmp/howtos/transactions/td3.3</a></p>
 <h4 id="pre_cons_arch">PRE_CONS_ARCH</h4>
 <blockquote>
 <p>L&rsquo;éditeur a testé l&rsquo;archivage/désarchivage d&rsquo;un document à partir de la fonctionnalité TD 3.3d.</p>
 </blockquote>
+<p>Il faut mettre en œuvre la transaction : <a href="/dmp/howtos/transactions/td3.3">/dmp/howtos/transactions/td3.3</a></p>
 
         <div class="section-index">
     

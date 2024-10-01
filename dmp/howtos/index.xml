@@ -963,6 +963,9 @@ P12AuthenticationContextHandler : La structure (1.2.250.1.71.4.2.2.10B0130811) d
 &lt;li&gt;&lt;code&gt;author.specialite&lt;/code&gt; (ex. &amp;ldquo;G15_10/SM26&amp;rdquo;)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;author.secteurActivity&lt;/code&gt; (ex. &amp;ldquo;SA05&amp;rdquo;)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;cpede-test-retourne-une-structure-introuvable&#34;&gt;CPE de test retourne une structure introuvable&lt;/h3&gt;
+&lt;p&gt;Problème connu, il faut demander au centre de service de rajouter la structure dans leur environnement.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;CPE_structureIntrouvable_incident.png&#34; alt=&#34;Cpe inconnu&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;cpe-de-test-retourne-un-message-derreur-ps-non_elligible-carte-commandé-en-2023&#34;&gt;CPE de test retourne un message d&amp;rsquo;erreur PS NON_ELLIGIBLE (carte commandé en 2023)&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Effectivement c&amp;rsquo;est un problème connu du CNDA. Le sujet est en cours côté ANS.

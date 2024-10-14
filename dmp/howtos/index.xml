@@ -495,6 +495,17 @@ DMPCCdaValidator       :
 &lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;Attention&lt;/h4&gt;
 
+    &lt;p&gt;Retour sur le webinaire du 10 octobre à 14h00 - Présentation des évolutions du GI version 2.9.1 :&lt;/p&gt;
+&lt;p&gt;Les différents environnements dédiés aux éditeurs vont être supprimés, en contrepartie en phase d&amp;rsquo;homologation chaque éditeur aura son propre jeu de patients sur l&amp;rsquo;environnement DEV1.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Deprecated&lt;/h4&gt;
+
     &lt;p&gt;Cette page est le fruit de l&amp;rsquo;interpération des fiches d&amp;rsquo;informations : &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PDT-INF-547 - Paramétrage des URL v5 (29/04/2024)&lt;/li&gt;
@@ -510,6 +521,12 @@ DMPCCdaValidator       :
 &lt;li&gt;LPS v2 : &lt;a href=&#34;https://lps2.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://lps2.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Web PS via CPS : &lt;a href=&#34;https://wps-cps.dmp.monespacesante.fr&#34;&gt;https://wps-cps.dmp.monespacesante.fr&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Web PS via PSC : &lt;a href=&#34;https://wps-psc.dmp.monespacesante.fr&#34;&gt;https://wps-psc.dmp.monespacesante.fr&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;environnement-de-développement&#34;&gt;Environnement de Développement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Accessible à tous les utilisateurs l&amp;rsquo;url LPS : &lt;a href=&#34;https://lps.dev1.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://lps.dev1.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Environnement Web PS accès CPS : &lt;a href=&#34;https://wps-cps.dev1.dmp.gouv.fr/ps/acces-web&#34;&gt;https://wps-cps.dev1.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Environnement Web PS accès PSC : &lt;a href=&#34;https://wps-psc.dev1.dmp.gouv.fr/ps/acces-web&#34;&gt;https://wps-psc.dev1.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;environnements-de-formation&#34;&gt;Environnements de Formation&lt;/h2&gt;
 &lt;p&gt;Dans la fiche d&amp;rsquo;information &lt;code&gt;PDT-INF-506v6&lt;/code&gt; en date du 10 janvier 2024, il est fait mention de 4 environnements de formation avec des rétentions de données différentes :&lt;/p&gt;
@@ -541,13 +558,12 @@ DMPCCdaValidator       :
 &lt;li&gt;WebPS via PSC: &lt;a href=&#34;https://wps-psc.formation5.dmp.gouv.fr/ps/acces-web&#34;&gt;https://wps-psc.formation5.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Web Patient : &lt;a href=&#34;https://formation5.patient.dmp.gouv.fr&#34;&gt;https://formation5.patient.dmp.gouv.fr&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;environnement-de-développement&#34;&gt;Environnement de Développement&lt;/h2&gt;
+&lt;h2 id=&#34;environnement-de-développement-1&#34;&gt;Environnement de Développement&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Accessible à tous les utilisateurs l&amp;rsquo;url LPS : &lt;a href=&#34;https://lps.dev1.dmp.gouv.fr/si-dmp-server/v2/services&#34;&gt;https://lps.dev1.dmp.gouv.fr/si-dmp-server/v2/services&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Environnement Web PS accès CPS : &lt;a href=&#34;https://wps-cps.dev1.dmp.gouv.fr/ps/acces-web&#34;&gt;https://wps-cps.dev1.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Environnement Web PS accès PSC : &lt;a href=&#34;https://wps-psc.dev1.dmp.gouv.fr/ps/acces-web&#34;&gt;https://wps-psc.dev1.dmp.gouv.fr/ps/acces-web&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Cet environnement est remis à jour toutes les semaines.&lt;/p&gt;
 &lt;h3 id=&#34;tests-en-alimentation&#34;&gt;Tests en alimentation&lt;/h3&gt;
 &lt;p&gt;Afin de ne pas gêner les tests de recherche des autres éditeurs, il est fortement conseillé de réaliser les tests d&amp;rsquo;alimentation avec les patients dédiés suivants :&lt;/p&gt;
 &lt;table&gt;
@@ -784,7 +800,7 @@ DMPCCdaValidator       :
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;environnement-dhomologation&#34;&gt;Environnement d&amp;rsquo;Homologation&lt;/h2&gt;
+&lt;h2 id=&#34;deprecated--environnement-dhomologation&#34;&gt;DEPRECATED : Environnement d&amp;rsquo;Homologation&lt;/h2&gt;
 &lt;p&gt;C&amp;rsquo;est un environnement spécifique à l&amp;rsquo;éditeur qui passe son homologation. Le CNDA donne les informations pour y accéder lors de la phase d&amp;rsquo;homologation de l&amp;rsquo;éditeur&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Accessible à tous les utilisateurs l&amp;rsquo;url LPS : https://lps.[devx].dmp.gouv.fr/si-dmp-server/v2/services&lt;/li&gt;

@@ -390,6 +390,7 @@ if (!doNotTrack) {
         <nav id="TableOfContents">
   <ul>
     <li><a href="#environnements-de-production">Environnements de Production</a></li>
+    <li><a href="#environnement-de-développement">Environnement de Développement</a></li>
     <li><a href="#environnements-de-formation">Environnements de Formation</a>
       <ul>
         <li><a href="#formation-1---jeu-de-données-jamais-réinitialisé">Formation 1 - Jeu de données jamais réinitialisé</a></li>
@@ -398,12 +399,12 @@ if (!doNotTrack) {
         <li><a href="#formation-5---jeu-de-données-réinitialisé-tous-les-mois">Formation 5 - Jeu de données réinitialisé tous les mois</a></li>
       </ul>
     </li>
-    <li><a href="#environnement-de-développement">Environnement de Développement</a>
+    <li><a href="#environnement-de-développement-1">Environnement de Développement</a>
       <ul>
         <li><a href="#tests-en-alimentation">Tests en alimentation</a></li>
       </ul>
     </li>
-    <li><a href="#environnement-dhomologation">Environnement d&rsquo;Homologation</a>
+    <li><a href="#deprecated--environnement-dhomologation">DEPRECATED : Environnement d&rsquo;Homologation</a>
       <ul>
         <li><a href="#vaccination">Vaccination</a></li>
       </ul>
@@ -475,6 +476,17 @@ if (!doNotTrack) {
 <div class="alert alert-warning" role="alert">
 <h4 class="alert-heading">Attention</h4>
 
+    <p>Retour sur le webinaire du 10 octobre à 14h00 - Présentation des évolutions du GI version 2.9.1 :</p>
+<p>Les différents environnements dédiés aux éditeurs vont être supprimés, en contrepartie en phase d&rsquo;homologation chaque éditeur aura son propre jeu de patients sur l&rsquo;environnement DEV1.</p>
+
+
+</div>
+
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Deprecated</h4>
+
     <p>Cette page est le fruit de l&rsquo;interpération des fiches d&rsquo;informations : </p>
 <ul>
 <li>PDT-INF-547 - Paramétrage des URL v5 (29/04/2024)</li>
@@ -490,6 +502,12 @@ if (!doNotTrack) {
 <li>LPS v2 : <a href="https://lps2.dmp.gouv.fr/si-dmp-server/v2/services">https://lps2.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
 <li>Web PS via CPS : <a href="https://wps-cps.dmp.monespacesante.fr">https://wps-cps.dmp.monespacesante.fr</a></li>
 <li>Web PS via PSC : <a href="https://wps-psc.dmp.monespacesante.fr">https://wps-psc.dmp.monespacesante.fr</a></li>
+</ul>
+<h2 id="environnement-de-développement">Environnement de Développement</h2>
+<ul>
+<li>Accessible à tous les utilisateurs l&rsquo;url LPS : <a href="https://lps.dev1.dmp.gouv.fr/si-dmp-server/v2/services">https://lps.dev1.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
+<li>Environnement Web PS accès CPS : <a href="https://wps-cps.dev1.dmp.gouv.fr/ps/acces-web">https://wps-cps.dev1.dmp.gouv.fr/ps/acces-web</a></li>
+<li>Environnement Web PS accès PSC : <a href="https://wps-psc.dev1.dmp.gouv.fr/ps/acces-web">https://wps-psc.dev1.dmp.gouv.fr/ps/acces-web</a></li>
 </ul>
 <h2 id="environnements-de-formation">Environnements de Formation</h2>
 <p>Dans la fiche d&rsquo;information <code>PDT-INF-506v6</code> en date du 10 janvier 2024, il est fait mention de 4 environnements de formation avec des rétentions de données différentes :</p>
@@ -521,13 +539,12 @@ if (!doNotTrack) {
 <li>WebPS via PSC: <a href="https://wps-psc.formation5.dmp.gouv.fr/ps/acces-web">https://wps-psc.formation5.dmp.gouv.fr/ps/acces-web</a></li>
 <li>Web Patient : <a href="https://formation5.patient.dmp.gouv.fr">https://formation5.patient.dmp.gouv.fr</a></li>
 </ul>
-<h2 id="environnement-de-développement">Environnement de Développement</h2>
+<h2 id="environnement-de-développement-1">Environnement de Développement</h2>
 <ul>
 <li>Accessible à tous les utilisateurs l&rsquo;url LPS : <a href="https://lps.dev1.dmp.gouv.fr/si-dmp-server/v2/services">https://lps.dev1.dmp.gouv.fr/si-dmp-server/v2/services</a></li>
 <li>Environnement Web PS accès CPS : <a href="https://wps-cps.dev1.dmp.gouv.fr/ps/acces-web">https://wps-cps.dev1.dmp.gouv.fr/ps/acces-web</a></li>
 <li>Environnement Web PS accès PSC : <a href="https://wps-psc.dev1.dmp.gouv.fr/ps/acces-web">https://wps-psc.dev1.dmp.gouv.fr/ps/acces-web</a></li>
 </ul>
-<p>Cet environnement est remis à jour toutes les semaines.</p>
 <h3 id="tests-en-alimentation">Tests en alimentation</h3>
 <p>Afin de ne pas gêner les tests de recherche des autres éditeurs, il est fortement conseillé de réaliser les tests d&rsquo;alimentation avec les patients dédiés suivants :</p>
 <table>
@@ -764,7 +781,7 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table>
-<h2 id="environnement-dhomologation">Environnement d&rsquo;Homologation</h2>
+<h2 id="deprecated--environnement-dhomologation">DEPRECATED : Environnement d&rsquo;Homologation</h2>
 <p>C&rsquo;est un environnement spécifique à l&rsquo;éditeur qui passe son homologation. Le CNDA donne les informations pour y accéder lors de la phase d&rsquo;homologation de l&rsquo;éditeur</p>
 <ul>
 <li>Accessible à tous les utilisateurs l&rsquo;url LPS : https://lps.[devx].dmp.gouv.fr/si-dmp-server/v2/services</li>

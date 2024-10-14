@@ -161,6 +161,33 @@ L&amp;rsquo;attribut identifiantFacturation est demandé pour chaque requête de
     </item>
     
     <item>
+      <title>Insi: Interpreter les logs</title>
+      <link>https://doc.devbox-sante.fr/insi/howtos/logs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/insi/howtos/logs/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;obtenir-les-logs&#34;&gt;Obtenir les logs&lt;/h3&gt;
+&lt;p&gt;Les logs sont générés dans un fichier &lt;code&gt;output.log&lt;/code&gt; dans le cas d&amp;rsquo;un installer ou directement dans la console pour une instance docker.
+Il est donc possible de récupérer les traces SOAP depuis ce fichier de traces, si le niveau de log est assez bas. Consultez la documentation pour le DMP  pour plus de renseignements:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howto/logs&#34;&gt;/dmp/howto/logs&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;admin-controller-since-280&#34;&gt;Admin Controller (@since 2.8.0)&lt;/h3&gt;
+&lt;p&gt;Depuis la version 2.8.0, il est possible de récupérer les traces directement depuis un endpoint spécialisé :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tout d&amp;rsquo;abord, en récupérant l&amp;rsquo;exchangeId de la conversation soap dans le retour de la réponse :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;bruno_exchangeId.png&#34; alt=&#34;ExchangeId dans la réponse&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Puis en allant dans le controller admin afin de télécharger le fichier de la conversation :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;download_exchange_insi.png&#34; alt=&#34;Exemple téléchargement swager&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Insi: Datamatrix</title>
       <link>https://doc.devbox-sante.fr/insi/howtos/datamatrix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

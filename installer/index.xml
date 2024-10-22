@@ -14,7 +14,7 @@
     
     
     <item>
-      <title>Installer: Version 5.15</title>
+      <title>Installer: Version 5.15.1</title>
       <link>https://doc.devbox-sante.fr/installer/versions/5.15/</link>
       <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
       
@@ -39,7 +39,7 @@
 &lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
 &lt;ul&gt;
 &lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.20&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :

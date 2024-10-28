@@ -714,5 +714,22 @@ Le client de messageries MSSanté du système doit nécessairement utiliser l’
       </description>
     </item>
     
+    <item>
+      <title>Ms-Sante: Suivi des exigences</title>
+      <link>https://doc.devbox-sante.fr/ms-sante/howtos/referencement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/ms-sante/howtos/referencement/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Le référentiel se trouve ici :
+&lt;a href=&#34;https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2&#34;&gt;https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;La couverture DevBox-santé ici :&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/11rsEoARIcawl-ZkfZILIQK_w2Oi6jT_6nayFffsxYF8/edit?usp=sharing&#34;&gt;https://docs.google.com/spreadsheets/d/11rsEoARIcawl-ZkfZILIQK_w2Oi6jT_6nayFffsxYF8/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

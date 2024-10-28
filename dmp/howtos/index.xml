@@ -1015,6 +1015,17 @@ Il est pour le moment inutile de recommander des CPE qui auront le même problè
 &lt;p&gt;Le SI DMP positionne la première version de métadonnées à 1, puis les incrémente lors de changement de confidentialité (TD3.3)&lt;/p&gt;
 &lt;p&gt;Le remplacement d’un document par un autre (versionning) ne changera pas la version des métadonnées XDS de la nouvelle version du document (la nouvelle version des métadonnées du document remplaçant prendra donc la versionInfo/versionName=1 puisque soumis comme un nouveau document en remplacement d’un autre ; la version dans le CDA devrait par contre évoluer s’il s’agit bien du versionning d’un même document)&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h3 id=&#34;note-vaccination--approachsitecode-ne-fait-pas-partie-du-jeu-de-valeurs&#34;&gt;Note Vaccination : ApproachSiteCode ne fait pas partie du jeu de valeurs&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;./approachSiteCode_error.png&#34; alt=&#34;ApproachSiteCode error&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Réponse MOA DMP :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ce sujet est bien en visibilité du DMP, mais nous n’avons pas encore de date de résolution.&lt;/p&gt;
+&lt;p&gt;Au vu du contexte particulier dans lequel nous sommes actuellement, cela ne pourra en tout cas pas être corrigé avant le second trimestre 2025 au plus tôt.&lt;/p&gt;
+&lt;p&gt;En attendant, nous vous invitons à n’utiliser que les régions connues aujourd’hui du DMP : &lt;strong&gt;Fesse, Deltoïde gauche, Deltoïde droit, Cuisse gauche, Cuisse droite&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Si vous voulez renseigner une autre région présente dans le JDV_ImmunizationApproachSiteCode_CISIS, celle-ci sera refusée par le DMP aujourd’hui. Nous vous invitons alors à ne pas alimenter la région dans ce cas jusqu’à résolution côté DMP.&lt;/p&gt;
+&lt;/blockquote&gt;
 
       </description>
     </item>

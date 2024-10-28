@@ -135,7 +135,27 @@ Cette liste contient par exemple mailiz et médimail (liste non exhaustive) et �
   mssAuthentication.psc: MIIcbAIBA...Bv4sVwVpAICCAA=
   mssAuthentication.userName: xxx-pers@mssante.fr
 }
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;autoconfiguration&#34;&gt;Autoconfiguration&lt;/h3&gt;
+&lt;p&gt;Si l&amp;rsquo;opérateur respecte l&amp;rsquo;exigence suivante :&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;EX_LPS_0300&lt;/h4&gt;
+
+    &lt;p&gt;Sur les interfaces de l’API LPS, le système DOIT exposer un mécanisme d’auto-configuration
+à destination des LPS, conforme aux RFC 2782 &amp;amp; 6186, en déclarant sur chacun des noms de
+domaines déclarés en liste blanche les 4 attributs DNS suivants :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;_submission._tcp SRV 10 100 587 [front smtp psc de l&amp;#39;opérateur]
+_submission._tcp SRV 20 100 587 [front smtp authcli de l&amp;#39;opérateur]
+
+_imap._tcp SRV 10 100 143 [front imap psc de l&amp;#39;opérateur]
+_imap._tcp SRV 20 100 143 [front imap authcli de l&amp;#39;opérateur]
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Il suffit à la DevBox_santé de connaître l&amp;rsquo;url de l&amp;rsquo;opérateur pour s&amp;rsquo;y connecter, pour cela la devbox-sante va s&amp;rsquo;appuyer sur l&amp;rsquo;adresse email de l&amp;rsquo;expéditeur.&lt;/p&gt;
+
       </description>
     </item>
     

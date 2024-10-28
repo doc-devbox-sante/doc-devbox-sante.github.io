@@ -153,10 +153,6 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-ms-santeconfigurationmailiz-check"/>
   <label for="m-ms-santeconfigurationmailiz-check"><a href="/ms-sante/configuration/mailiz/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-ms-santeconfigurationmailiz"><span class="">Mailiz</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ms-santeconfigurationapicrypt-li">
-  <input type="checkbox" id="m-ms-santeconfigurationapicrypt-check"/>
-  <label for="m-ms-santeconfigurationapicrypt-check"><a href="/ms-sante/configuration/apicrypt/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-ms-santeconfigurationapicrypt"><span class="">ApiCryptV2</span></a></label>
-  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ms-santehowtos-li">
@@ -226,7 +222,11 @@ if (!doNotTrack) {
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#liste-des-opérateurs">Liste des opérateurs</a></li>
+    <li><a href="#liste-des-opérateurs">Liste des opérateurs</a>
+      <ul>
+        <li><a href="#autoconfiguration">Autoconfiguration</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -351,7 +351,27 @@ Cette liste contient par exemple mailiz et médimail (liste non exhaustive) et �
   mssAuthentication.psc: MIIcbAIBA...Bv4sVwVpAICCAA=
   mssAuthentication.userName: xxx-pers@mssante.fr
 }
+</code></pre><h3 id="autoconfiguration">Autoconfiguration</h3>
+<p>Si l&rsquo;opérateur respecte l&rsquo;exigence suivante :</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">EX_LPS_0300</h4>
+
+    <p>Sur les interfaces de l’API LPS, le système DOIT exposer un mécanisme d’auto-configuration
+à destination des LPS, conforme aux RFC 2782 &amp; 6186, en déclarant sur chacun des noms de
+domaines déclarés en liste blanche les 4 attributs DNS suivants :</p>
+<pre tabindex="0"><code>_submission._tcp SRV 10 100 587 [front smtp psc de l&#39;opérateur]
+_submission._tcp SRV 20 100 587 [front smtp authcli de l&#39;opérateur]
+
+_imap._tcp SRV 10 100 143 [front imap psc de l&#39;opérateur]
+_imap._tcp SRV 20 100 143 [front imap authcli de l&#39;opérateur]
 </code></pre>
+
+</div>
+
+<p>Il suffit à la DevBox_santé de connaître l&rsquo;url de l&rsquo;opérateur pour s&rsquo;y connecter, pour cela la devbox-sante va s&rsquo;appuyer sur l&rsquo;adresse email de l&rsquo;expéditeur.</p>
+
         <div class="section-index">
     
     

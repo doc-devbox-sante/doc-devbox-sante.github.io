@@ -350,6 +350,43 @@ Ex : le GIE SESAM-Vitale réalise l&amp;rsquo;interopérabilité des services d
     </item>
     
     <item>
+      <title>Blog: InvariableId dans le Volet à Structuration Minimale</title>
+      <link>https://doc.devbox-sante.fr/blog/2024/11/06/invariableid-dans-le-volet-%C3%A0-structuration-minimale/</link>
+      <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/blog/2024/11/06/invariableid-dans-le-volet-%C3%A0-structuration-minimale/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Afin de gérer dans des systèmes de plus en plus interopérables, dont les documents de santé transitent d&amp;rsquo;applications à applications.
+Le versionning de document dans le DMP et pour la MS-Santé est devenu importante. ssss&lt;/p&gt;
+&lt;p&gt;Il faut donc pouvoir retrouver les différentes versions d&amp;rsquo;un même lot de documents.&lt;/p&gt;
+&lt;h3 id=&#34;moshttpsmosesantegouvfr&#34;&gt;&lt;a href=&#34;https://mos.esante.gouv.fr&#34;&gt;MOS&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Pour le modèle d&amp;rsquo;objets de santé on retrouve cette notion dans la &lt;code&gt;Fiche&lt;/code&gt; (&lt;a href=&#34;https://mos.esante.gouv.fr/19.html#_71e617d8-ae19-49b8-9346-924af8194a62&#34;&gt;https://mos.esante.gouv.fr/19.html#_71e617d8-ae19-49b8-9346-924af8194a62&lt;/a&gt;) :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;mos_idFicheInvariable.png&#34; alt=&#34;idFicheInvariable&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Donc si on reprend les termes du MOS :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Identifiant invariable pour toutes les versions de la fiche d’un document, à la différence de l&amp;rsquo;attribut idFiche qui a une valeur différente pour chaque version de la fiche.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mise en correspondance FHIR R4: DocumentReference.id&lt;/li&gt;
+&lt;li&gt;Mise en correspondance XDS: DocumentEntry.logicalID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On peut donc conclure que l&amp;rsquo;identifiant permettant de relier en un seul lot les différentes versions d&amp;rsquo;un même document est : &lt;code&gt;idFicheInvariable&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ci-sishttpsesantegouvfroffres-servicesci-sisespace-publication&#34;&gt;&lt;a href=&#34;https://esante.gouv.fr/offres-services/ci-sis/espace-publication&#34;&gt;CI-SIS&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Cett notion d&amp;rsquo;identifiant Invariable peut être mis en correspondance dans un CDA par : &lt;code&gt;ClinicalDocument.setId&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;En effet, dans le &lt;a href=&#34;https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante&#34;&gt;Volet Structuration Minimale&lt;/a&gt; en version 1.16.1 on peut désormais lire :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cisis_struct_minimale_setid.png&#34; alt=&#34;SetId dans le volet structuration minimale&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cet identifiant est dorénavant OBLIGATOIRE.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Il fait d&amp;rsquo;ailleurs désormais l&amp;rsquo;objet d&amp;rsquo;une vérification dans les outils CDA : &lt;a href=&#34;https://github.com/ansforge/TestContenuCDA-3-0/commit/f2728fd1b3f4219e6cf8cf6e53eaa95a9aef81c1#diff-d33b76b2f3da9c874248aa525f2c9a672f0ac8cfa41d39f687cc9f49744c5d73&#34;&gt;https://github.com/ansforge/TestContenuCDA-3-0/commit/f2728fd1b3f4219e6cf8cf6e53eaa95a9aef81c1#diff-d33b76b2f3da9c874248aa525f2c9a672f0ac8cfa41d39f687cc9f49744c5d73&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;devbox-santéhttpsdocdevbox-santefr&#34;&gt;&lt;a href=&#34;https://doc.devbox-sante.fr&#34;&gt;DevBox-Santé&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Dans la DevBox-Santé, nous nous devons de reprendre cette notion. Nous allons donc utiliser la terminologie définie dans le MOS : &lt;code&gt;invariableId&lt;/code&gt; pour un &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-apis/src/master/dmpc-api/src/main/java/fr/devboxsante/dmp/model/DMPCDocument.java&#34;&gt;&lt;code&gt;DMPCDocument&lt;/code&gt;&lt;/a&gt; qui correspond à une &lt;code&gt;Fiche&lt;/code&gt; dans le MOS.&lt;/p&gt;
+&lt;p&gt;La mise en œuvre se fera au fil de l&amp;rsquo;eau. Stay Tuned.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Jongler avec les Jeux De Valeurs et Schematrons de l&#39;ANS</title>
       <link>https://doc.devbox-sante.fr/blog/2024/07/29/jongler-avec-les-jeux-de-valeurs-et-schematrons-de-lans/</link>
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>

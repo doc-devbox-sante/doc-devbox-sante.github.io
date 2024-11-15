@@ -112,5 +112,21 @@
       </description>
     </item>
     
+    <item>
+      <title>Cps: FAQ</title>
+      <link>https://doc.devbox-sante.fr/cps/howtos/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/cps/howtos/faq/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;comment-déterminer-la-fin-de-validité-dune-carte-cps-&#34;&gt;Comment déterminer la fin de validité d&amp;rsquo;une carte CPS ?&lt;/h3&gt;
+&lt;p&gt;Pour déterminer la fin de validité de la carte CPS appuyez-vous sur la dateFinVal remontée des informations de la carte CPS.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;dateFinValCps.png&#34; alt=&#34;dateFinval Cps&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

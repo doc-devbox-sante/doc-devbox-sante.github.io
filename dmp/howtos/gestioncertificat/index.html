@@ -396,14 +396,12 @@ if (!doNotTrack) {
         <li><a href="#quels-certificats-">Quels certificats ?</a></li>
       </ul>
     </li>
-    <li><a href="#procédure-technique">Procédure Technique</a>
+    <li><a href="#procédure-technique">Procédure Technique</a></li>
+    <li><a href="#configuration-de-la-devbox-santé-dmp">Configuration de la DevBox-Santé DMP</a>
       <ul>
-        <li><a href="#ancienne-procédure">Ancienne procédure</a></li>
-        <li><a href="#certificats-et-clés-dauthentification">Certificats et clés d&rsquo;authentification</a></li>
-        <li><a href="#certificats-et-clés-de-signature">Certificats et clés de signature</a></li>
+        <li><a href="#valider-un-certificat-dans-windows">Valider un certificat dans windows</a></li>
       </ul>
     </li>
-    <li><a href="#configuration-de-la-devbox-santé-dmp">Configuration de la DevBox-Santé DMP</a></li>
   </ul>
 </nav>
       </div>
@@ -474,6 +472,8 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 <p>Il est possible de faire la démarche en ligne : <a href="https://www.demarches-simplifiees.fr/commencer/f414">https://www.demarches-simplifiees.fr/commencer/f414</a></p>
 <h3 id="en-production">En production</h3>
 <p>Pour obtenir, les certificats et clés nécessaires pour la connexion au DMP en authentification indirecte, il faut que votre établissement soit enregistré au FINESS (Fichier National des Établissements Sanitaires es Sociaux) : <a href="https://finess.esante.gouv.fr/">https://finess.esante.gouv.fr/</a></p>
+<p>Procédure pour structure non libérale : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_DMP_structures_non_lib%C3%A9rales_v30092021.pdf">https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS_Procedure_commande_CL_DMP_structures_non_lib%C3%A9rales_v30092021.pdf</a></p>
+<h4 id="commandes-pour-le-ségur-vague-1">Commandes pour le SÉGUR vague 1</h4>
 <p>Depuis le SEGUR santé, les guides de commandes de certificats sont spécifiques à chaque couloir :</p>
 <ul>
 <li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/segur-numerique-medico-social-guide-certificats.pdf">Médico-social</a></li>
@@ -506,57 +506,8 @@ Pour celà après avoir commandé des cartes CPS vous pouvez faire une demande �
 <h2 id="procédure-technique">Procédure Technique</h2>
 <p>Il est possible de demander les certificats sur le site web mis à disposition par l&rsquo;ANS. Il s&rsquo;agit d&rsquo;un service permettant la demande de certificats et cartes :</p>
 <p><a href="https://pfc.eservices.esante.gouv.fr">https://pfc.eservices.esante.gouv.fr</a></p>
-
-
-<div class="alert alert-primary" role="alert">
-
-
-    La procédure est dorénavant mieux décrite sur le site de l&rsquo;ANS : <a href="https://esante.gouv.fr/guides/guides-IGC-sante/je-souhaite-demander-un-certificat">https://esante.gouv.fr/guides/guides-IGC-sante/je-souhaite-demander-un-certificat</a>
-Nous laissons l&rsquo;ancienne procédure pour complément d&rsquo;informations.
-
-</div>
-
-<h3 id="ancienne-procédure">Ancienne procédure</h3>
-<p>Pour pouvoir y accéder il faut se connecter avec un lecteur de cartes configuré muni d&rsquo;une carte <strong>CPA autorisée</strong> au préalable :</p>
-<p><img src="pfcngAccueil.png" alt="pfcngAccueil.png"></p>
-<h3 id="certificats-et-clés-dauthentification">Certificats et clés d&rsquo;authentification</h3>
-<h4 id="demander">Demander</h4>
-<h5 id="étape-1">Étape 1:</h5>
-<p><img src="pfcngDemandeStep1.png" alt="pfcng"></p>
-<h5 id="étape-2">Étape 2:</h5>
-<p>RAS, il s&rsquo;agit d&rsquo;un écran de recherche pour les demandes antérieures. Cliquer sur &ldquo;Demander un nouveau produit&rdquo;</p>
-<h5 id="étape-3">Étape 3:</h5>
-<p>Il faut renseigner :</p>
-<ul>
-<li>l&rsquo;usage : AUTH_CLI</li>
-<li>le nom du service (nom du logiciel) qui va accéder au DMP,</li>
-<li>son adresse email (utiliser plus tard pour envoyer une confirmation)</li>
-</ul>
-<p><img src="pfcngDemandeStep3Auth.png" alt="pfcng"></p>
-<h5 id="étape-4-">Étape 4 :</h5>
-<p>Pour cette étape le plus simple est de générer la CSR sur le site, mais pas obligatoire.</p>
-<ul>
-<li>Saisir un mot de passe assez fort pour convenir au service, et sauvegarder le car il sera demandé lors de la récupération du certificats P12, ainsi que pour configurer la DevBox-Santé DMP.</li>
-<li>Cliquer sur &ldquo;Générer la CSR&rdquo;, puis &ldquo;Finaliser&rdquo;</li>
-</ul>
-<p><img src="pfcngDemandeStep4GenerateCSR.png" alt="pfcng"></p>
-<h5 id="étape-5-">Étape 5 :</h5>
-<p>Vous recevez un email de confirmation de la demande à l&rsquo;email saisie à l&rsquo;étape 3 :</p>
-<h4 id="retirer">Retirer</h4>
-<p>Depuis l&rsquo;étape 5 de la demande vous pouvez accéder au retrait du certificat commandé. Sinon vous pouvez y accéder par le menu Retirer</p>
-<h5 id="étape-1-1">Étape 1:</h5>
-<p>Cette étape consiste à choisir le produit à retirer</p>
-<p><img src="pfcngRetirerStep1.png" alt="pfcng"></p>
-<h5 id="étape-2-1">Étape 2:</h5>
-<p>Dans cette étape, il faut saisir un nouveau mot de passe pour les révocations (identique ou pas de celui de la CSR). Il n&rsquo;est pas utilisé dans l&rsquo;API mais peut servir à l&rsquo;administrateur technique.</p>
-<p><img src="pfcngRetirerStep2.png" alt="pfcng"></p>
-<h4 id="étape-3-finalisation">Étape 3: Finalisation</h4>
-<p>Dans cette étape, il faut saisir le mot de passe de réconciliation celui qui a permis de générer la CSR.</p>
-<p><img src="pfcngRetirerStep3.png" alt="pfcng"></p>
-<p>Le certificat/clé (p12) a un nom qui doit ressembler à asip-p12-EL-TEST-ORG-AUTH_CLI-20170603-173116.p12</p>
-<h3 id="certificats-et-clés-de-signature">Certificats et clés de signature</h3>
-<p>Pour la signature, il faut faire une autre demande avec le même process, à l&rsquo;exception de l&rsquo;étape 3 ou il faudra demander un certificat de signature : Usage SIGN</p>
-<p><img src="pfcngDemandeStep3Sign.png" alt="pfcng"></p>
+<p>La procédure est décrite sur le site de l&rsquo;ANS : <a href="https://esante.gouv.fr/guides/guides-IGC-sante/je-souhaite-demander-un-certificat">https://esante.gouv.fr/guides/guides-IGC-sante/je-souhaite-demander-un-certificat</a>
+Nous laissons l&rsquo;ancienne procédure pour complément d&rsquo;informations.</p>
 <h2 id="configuration-de-la-devbox-santé-dmp">Configuration de la DevBox-Santé DMP</h2>
 <p>Le paramètrage de ces certificats pour la DevBox-Santé DMP se trouve dans le <code>application.yml</code></p>
 <ul>
@@ -590,7 +541,11 @@ Nous laissons l&rsquo;ancienne procédure pour complément d&rsquo;informations.
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">trust</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">truststoreIgcSante-EL-ORG.jks</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><h3 id="valider-un-certificat-dans-windows">Valider un certificat dans windows</h3>
+<p>Avec le certificate manager (<code>certmgr.msc</code>), vous pouvez ouvrir le p12 que vous avez généré (avec son mot de passe) et récupérer les informations concernant l&rsquo;émetteur IGC-SANTÉ :</p>
+<p><img src="certmgr-emetteur.png" alt="Certmgr-emetteur"></p>
+<p>Vous pouvez vérifier également dans la partie objet si le numéro de la structure (FINESS) est bien renseigné.</p>
+
         <div class="section-index">
     
     

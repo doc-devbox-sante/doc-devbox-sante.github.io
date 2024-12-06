@@ -36,6 +36,16 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;p12inheader&#34;&gt;P12InHeader&lt;/h3&gt;
 &lt;p&gt;L&amp;rsquo;ensemble des informations permettant l&amp;rsquo;authentification auprès du TéléService (INSI, DMP, ApCV, &amp;hellip;) se trouve dans l&amp;rsquo;entête HTTP.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;headers&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;dmpAuthentication.p12:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;MIIcmwIBAe...IIAA==&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;dmpAuthentication.password:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;password&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;dmpSignature.p12:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;MIIcmwIBAe...IIAA==&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;dmpSignature.password:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;password&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Exemple de requêtes avec ce mode d&amp;rsquo;authentification :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Appel de la td0.2 du DMP : &lt;a href=&#34;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx/dmp/6.x/authentification/p12InHeader/TD0.2%20-%20p12InHeader.bru&#34;&gt;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx/dmp/6.x/authentification/p12InHeader/TD0.2%20-%20p12InHeader.bru&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>

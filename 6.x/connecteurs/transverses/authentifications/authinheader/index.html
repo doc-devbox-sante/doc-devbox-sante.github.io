@@ -788,6 +788,16 @@ if (!doNotTrack) {
 </ul>
 <h3 id="p12inheader">P12InHeader</h3>
 <p>L&rsquo;ensemble des informations permettant l&rsquo;authentification auprès du TéléService (INSI, DMP, ApCV, &hellip;) se trouve dans l&rsquo;entête HTTP.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">headers</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">dmpAuthentication.p12:</span> <span style="color:#a40000">MIIcmwIBAe...IIAA==</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">dmpAuthentication.password:</span> <span style="color:#a40000">password</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">dmpSignature.p12:</span> <span style="color:#a40000">MIIcmwIBAe...IIAA==</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">dmpSignature.password:</span> <span style="color:#a40000">password</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Exemple de requêtes avec ce mode d&rsquo;authentification :</p>
+<ul>
+<li>Appel de la td0.2 du DMP : <a href="https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx/dmp/6.x/authentification/p12InHeader/TD0.2%20-%20p12InHeader.bru">https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx/dmp/6.x/authentification/p12InHeader/TD0.2%20-%20p12InHeader.bru</a></li>
+</ul>
 
         <div class="section-index">
     

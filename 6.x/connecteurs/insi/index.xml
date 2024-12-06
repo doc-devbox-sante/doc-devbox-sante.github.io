@@ -402,8 +402,12 @@ DevBoxSanteINSi --&amp;gt; INSi  : https (TLS 1.2 / IGC Santé)
         
         
         &lt;h1 id=&#34;versions-3x&#34;&gt;Versions 3.x&lt;/h1&gt;
-&lt;h2 id=&#34;version-30-26092024&#34;&gt;Version 3.0 (26/09/2024)&lt;/h2&gt;
+&lt;h2 id=&#34;version---301-06122024&#34;&gt;Version - 3.0.1 (06/12/2024)&lt;/h2&gt;
 &lt;h3 id=&#34;story&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-88&#34;&gt;INSI-88&lt;/a&gt; [Logging]Rétention des conversations SOAP&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-89&#34;&gt;INSI-89&lt;/a&gt; [Logging] add json logging input and output on debug&lt;/p&gt;
+&lt;h2 id=&#34;version-30-26092024&#34;&gt;Version 3.0 (26/09/2024)&lt;/h2&gt;
+&lt;h3 id=&#34;story-1&#34;&gt;Story&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-67&#34;&gt;INSI-67&lt;/a&gt; [TLSi modification] déprecier / supprimer prenomUtilise&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-84&#34;&gt;INSI-84&lt;/a&gt; [Security] AuthInHeader : permettre de passer le mode d&amp;rsquo;authentification (cps + p12InHeader)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-87&#34;&gt;INSI-87&lt;/a&gt; [JDK21] migration java 21 spring-boot 3&lt;/p&gt;

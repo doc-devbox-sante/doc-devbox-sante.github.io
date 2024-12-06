@@ -1,0 +1,2011 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – DevBox-santé 5.x</title>
+    <link>https://doc.devbox-sante.fr/5.x/</link>
+    <description>Recent content in DevBox-santé 5.x on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/5.x/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>5.x: Version 5.20</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.20/</link>
+      <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.20/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.24&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.8.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.6.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.5.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.20&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.20.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.20.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.19</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.19/</link>
+      <pubDate>Mon, 18 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.19/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.24&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.8.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.6.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.5.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.20&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.19.1/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.19.1/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.18</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.18/</link>
+      <pubDate>Thu, 07 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.18/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.24&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.8.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.8&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.5.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.20&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.18.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.18.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.17</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.17/</link>
+      <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.17/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.24&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.8.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.5.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.20&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.17.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.17.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.16</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.16/</link>
+      <pubDate>Wed, 23 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.16/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.23&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.8.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.5.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.20&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.16.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.16.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.15.1</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.15/</link>
+      <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.15/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.8.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.5.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.20&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.15.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.15.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.14</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.14/</link>
+      <pubDate>Fri, 11 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.14/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.8&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.14.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.14.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.13</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.13/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.13/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.21&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.8&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.13.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.13.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.12</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.12/</link>
+      <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.12/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.21&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.8&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.12.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.12.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.11</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.11/</link>
+      <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.11/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.20&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.8&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.11.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.11.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.10</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.10/</link>
+      <pubDate>Tue, 03 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.10/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.8&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.10.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.10.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.9</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.9/</link>
+      <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.9/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.18&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.8&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.9.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.9.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.8</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.8/</link>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.8/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.18&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.8&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.8.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.8.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.7</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.7/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.7/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.18&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.7.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.7.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.6</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.6/</link>
+      <pubDate>Fri, 21 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.6/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.17&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.6.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.6.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.5</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.5/</link>
+      <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.5/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.16&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.5.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.5.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.4</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.4/</link>
+      <pubDate>Tue, 14 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.4/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.4.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.4.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.3</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.3/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.3/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.14&lt;/strong&gt; -&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.1.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmp-ui&lt;/code&gt; : &lt;strong&gt;2.0-alpha&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.5.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.3.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.3.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.2</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.2/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.2/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.2.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.13&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.0.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.4.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_22&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.2.1/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.2.1/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.1</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.1/</link>
+      <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.1/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.12&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.0.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.4.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.1.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.1.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 5.0</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/5.0/</link>
+      <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/5.0/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.11&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.0.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.4.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.0.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/5.0.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 4.12</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.12/</link>
+      <pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.12/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.11&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.4.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.12.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.12.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 4.11</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.11/</link>
+      <pubDate>Tue, 13 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.11/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.10&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.4.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.11.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.11.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 4.10</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.10/</link>
+      <pubDate>Mon, 12 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.10/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.4.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.10.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.10.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 4.9</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.9/</link>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.9/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.8&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.4.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.9.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.9.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 4.8</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.8/</link>
+      <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.8/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.4.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.8.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.8.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 4.7</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.7/</link>
+      <pubDate>Tue, 30 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.7/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.4.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.7.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.7.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 4.6</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.6/</link>
+      <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.6/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.4.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.3.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.6.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.6.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 4.5</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.5/</link>
+      <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.5/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.4.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.5.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.5.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 4.4</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.4/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.4/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.3.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.3.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.4.6/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.4.6/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 4.3</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.3/</link>
+      <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.3/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.3.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.3.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.3.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 4.2</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.2/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.2/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.3.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.3.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.3.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 4.1</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.1/</link>
+      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.1/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.14&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.3.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.1.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.1.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 4.0</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.0/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/4.x/4.0/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.12&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.1.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.3.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.0.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/4.0.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.25</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.25/</link>
+      <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.25/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.12&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.21&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.3.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.25.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.25.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.24</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.24/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.24/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.12&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.20&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.3.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.24.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.24.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.23</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.23/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.23/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.12&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.19&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.3.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.23.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.23.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.22</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.22/</link>
+      <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.22/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.12&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.18&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.3.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.22.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.22.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.21</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.21/</link>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.21/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.12&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.17&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.3.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CI-TLSI-AMO&lt;/code&gt; : &lt;strong&gt;2.4.7&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.21.1/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.21.1/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.20</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.20/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.20/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.12&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.17&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.20.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.20.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.19</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.19/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.19/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.11&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.17&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.19.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.19.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.18</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.18/</link>
+      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.18/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.11&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.16&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.18.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.18.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.17</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.17/</link>
+      <pubDate>Tue, 04 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.17/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.11&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.15&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.17.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.17.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.16</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.16/</link>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.16/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.11&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.14&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.16.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.16.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.15</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.15/</link>
+      <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.15/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.11&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.13&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.0.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.15.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.15.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.14</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.14/</link>
+      <pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.14/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.11&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.12&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;0.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.14.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.14.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.13</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.13/</link>
+      <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.13/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.11&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.11&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;0.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.13.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.13.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.12</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.12/</link>
+      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.12/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.11&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.10&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;0.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.12.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.12.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.11</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.11/</link>
+      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.11/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.11&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/apcv/versions&#34;&gt;&lt;code&gt;DevBox-Sante ApCV Mobilite&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;0.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cryptolib CPS&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;5.1.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;5.1.19&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API Vitale&lt;/code&gt; :
+&lt;ul&gt;
+&lt;li&gt;Windows : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MacOS : &lt;strong&gt;6.32&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.11.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.11.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Version 3.10</title>
+      <link>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.10/</link>
+      <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/installer/versions/3.x/3.10/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/cps/versions&#34;&gt;&lt;code&gt;DevBox-Sante CPS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;3.1.11&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/vitale/versions&#34;&gt;&lt;code&gt;DevBox-Sante Vitale&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.8.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/versions&#34;&gt;&lt;code&gt;DevBox-Sante DMP&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;5.0.9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/insi/versions&#34;&gt;&lt;code&gt;DevBox-Sante INSi&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;2.7.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;&lt;code&gt;DevBox-Sante MSS&lt;/code&gt;&lt;/a&gt; : &lt;strong&gt;1.2.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Igc-sante-tools&lt;/code&gt; : &lt;strong&gt;1.2.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stellair client&lt;/code&gt; : &lt;strong&gt;1.1.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Licence Manager&lt;/code&gt; : &lt;strong&gt;1.2.4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Eureka&lt;/code&gt; : &lt;strong&gt;1.2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JRE&lt;/code&gt; : &lt;strong&gt;^11_0_9&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus de détails : &lt;a href=&#34;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.10.0/pom.xml&#34;&gt;https://bitbucket.org/devbox-sante/devbox-sante-releases-bom/src/3.10.0/pom.xml&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -14,6 +14,44 @@
     
     
     <item>
+      <title>6.x: Installer sur le poste de travail</title>
+      <link>https://doc.devbox-sante.fr/6.x/installation/poste_client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/6.x/installation/poste_client/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Afin de gérer l&amp;rsquo;installation de nos composants, nous nous appuyons sur un constructeur d&amp;rsquo;&lt;code&gt;installer&lt;/code&gt; : &lt;a href=&#34;https://www.ej-technologies.com/products/install4j/overview.html&#34;&gt;Install4j&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Install4j nous permet ainsi de générer et proposer des programmes d&amp;rsquo;installation spécifiques avec les différents modules.&lt;/p&gt;
+&lt;p&gt;Une page dédiée est accessible sur le serveur de gestion de clients :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;installers.png&#34; alt=&#34;installers&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Une fois le programme d&amp;rsquo;installation téléchargé, il suffit de suivre le wizard d&amp;rsquo;installation.&lt;/p&gt;
+&lt;p&gt;Pour plus d&amp;rsquo;information, sur le contenu de l&amp;rsquo;installation &lt;a href=&#34;./contenu&#34;&gt;suivez le lien&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;mise-à-jour-automatique&#34;&gt;Mise à jour automatique&lt;/h2&gt;
+&lt;p&gt;La DevBox-Santé une fois installé peut proposer automatiquement des mises à jour aux utilisateurs :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;update-confirm.png&#34; alt=&#34;update-confirme DevBox-santé&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Une fois confirmé le téléchargement et la mise à jour automatique se fait :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;upload-update.png&#34; alt=&#34;upload-update DevBox-santé&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;howtos&#34;&gt;Howtos&lt;/h2&gt;
+&lt;h4 id=&#34;informations-de-diagnostique-since-510&#34;&gt;Informations de diagnostique (@Since 5.10)&lt;/h4&gt;
+&lt;p&gt;Pour vous/nous aider à diagnostiquer les problèmes au niveau du client nous avons ajouter dans le menu un outil de diagnostique :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;menu_item_diagnosis.png&#34; alt=&#34;Accès à l&amp;amp;rsquo;outil de diagnostique&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Les informations contenues dans cette fenêtre (en plus du fichier &lt;code&gt;output.log&lt;/code&gt; du répertoire d&amp;rsquo;installation) peut se révéler précieux pour diagnostiquer les problèmes d&amp;rsquo;installation/de déploiement :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;diagnosis_window.png&#34; alt=&#34;Fenêtre de diagnostique&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;configuration-du-proxy-since-510&#34;&gt;Configuration du proxy (@since 5.10)&lt;/h4&gt;
+&lt;p&gt;La DevBox-Santé est configurée par défaut pour utiliser le proxy système. Toutefois, il est possible d&amp;rsquo;ajouter manuellement un proxy HTTP.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;menu_item_proxy.png&#34; alt=&#34;Menu déroulant&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;config_proxy_window.png&#34; alt=&#34;Popup configuration proxy&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;surcharge-dune-propriété-lors-du-démarrage-de-lexécutable&#34;&gt;Surcharge d&amp;rsquo;une propriété lors du démarrage de l&amp;rsquo;exécutable&lt;/h4&gt;
+&lt;p&gt;Il est possible de surcharger une propriété de la configuration &lt;code&gt;application.yml&lt;/code&gt; lors du démarrage de la DevBox-Santé.
+Par exemple, pour démarrer la DevBox-Santé sur le port 10002: &lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;C:\Program Files\DevBoxSante\DevBoxSante.exe&amp;#34;&lt;/span&gt; --server.port&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10002&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
       <title>6.x: Un container docker</title>
       <link>https://doc.devbox-sante.fr/6.x/installation/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -63,6 +101,112 @@ Cf. le stackoverflow sur ce sujet : &lt;a href=&#34;https://stackoverflow.com/qu
 &lt;p&gt;Pour activer les debug SSL du handshake parfois nécessaire pour diagnostiquer un problème d&amp;rsquo;authentification via certificats :&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker run --env=JAVA_OPTS=-Djavax.net.debug=ssl,handshake ...
 &lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>6.x: Matrice des Flux</title>
+      <link>https://doc.devbox-sante.fr/6.x/installation/flux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/6.x/installation/flux/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Les différents composants de la DevBox-Santé ont besoin d’accéder à internet et à certains services pour leur bon fonctionnement.&lt;/p&gt;
+&lt;h3 id=&#34;environnements-de-production&#34;&gt;Environnements de production&lt;/h3&gt;
+&lt;p&gt;Voici la liste des composants qui ont besoin d’accéder à des services externes.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Composant&lt;/th&gt;
+&lt;th&gt;Protocole&lt;/th&gt;
+&lt;th&gt;Port&lt;/th&gt;
+&lt;th&gt;Destination&lt;/th&gt;
+&lt;th&gt;Usage&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Installer&lt;/td&gt;
+&lt;td&gt;https&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;installers.devbox-sante.fr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Téléchargement des resources d’installation et mises à jour&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Licence Manager&lt;/td&gt;
+&lt;td&gt;https&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;clients.devbox-sante.fr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Vérification des licences d’utilisation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;INSi&lt;/td&gt;
+&lt;td&gt;https&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;services-ps.ameli.fr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Accès au téléservice INSi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DMP&lt;/td&gt;
+&lt;td&gt;https&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;lps2.dmp.gouv.fr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Accès au téléservice DMP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DMP&lt;/td&gt;
+&lt;td&gt;https&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;www.dmp.fr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Accès au paramétres du DMP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DMP&lt;/td&gt;
+&lt;td&gt;https&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;mos.esante.gouv.fr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Accès à la mise à jour des nomenclatures&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DMP&lt;/td&gt;
+&lt;td&gt;ntp&lt;/td&gt;
+&lt;td&gt;123&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;fr.pool.ntp.org&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Accès à un serveur de temps ntp &lt;br&gt; &lt;code&gt;fr.pool.ntp.org&lt;/code&gt; configuré par défaut mais configurable&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;IGCSanté (DMP, MSS, INSi)&lt;/td&gt;
+&lt;td&gt;http&lt;/td&gt;
+&lt;td&gt;80&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;igc-sante.esante.gouv.fr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Accès au certificats de l’IGC santé&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MSS&lt;/td&gt;
+&lt;td&gt;ldap&lt;/td&gt;
+&lt;td&gt;389&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;ldap.annuaire.mssante.fr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Accès annuaire ldap des professionnels de santé&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MSS (Mailiz)&lt;/td&gt;
+&lt;td&gt;https&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;mss-msg-igcsante.mssante.fr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Accès aux Web Services de messagerie Mailiz&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Remarque : Votre installation ne comporte pas forcément tous les composants.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;environnements-de-test-et-formation&#34;&gt;Environnements de test et formation&lt;/h3&gt;
+&lt;p&gt;Les urls changent sur ces environnements, cf. les &lt;a href=&#34;https://doc.devbox-sante.fr/6.x/dmp/howtos/environnements&#34;&gt;environnements du DMP&lt;/a&gt; par exemple.&lt;/p&gt;
+&lt;h3 id=&#34;environnements-mssanté&#34;&gt;Environnements MSSanté&lt;/h3&gt;
+&lt;p&gt;annuaire.mssante.fr : Ancienne IP : &lt;code&gt;217.108.164.109&lt;/code&gt; , Nouvelle IP : &lt;code&gt;194.206.122.25&lt;/code&gt; (chgmt le 03/06/2024)&lt;/p&gt;
+
       </description>
     </item>
     

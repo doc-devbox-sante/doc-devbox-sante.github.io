@@ -1,0 +1,515 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – INSi</title>
+    <link>https://doc.devbox-sante.fr/5.x/insi/</link>
+    <description>Recent content in INSi on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/5.x/insi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>5.x: Java API</title>
+      <link>https://doc.devbox-sante.fr/5.x/insi/embedded/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/insi/embedded/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;insi-client&#34;&gt;INSi Client&lt;/h2&gt;
+&lt;p&gt;Le module insi-impl, fournit l&amp;rsquo;implémentation de la facade &lt;code&gt;INSiClient&lt;/code&gt; qui intègre les composant devboxsante-cps-api et devboxsante-vitale-api et accède au téléservice INSi géré par SesamVitale.&lt;/p&gt;
+&lt;p&gt;Exemple de code dans une application Spring Boot :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MonIntegrationINSi&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Autowired&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;INSiClient&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;maMethode&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// ma recherche avec carte vitale
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;INSiContext&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;INSiContext&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setIdentifiantFacturation&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;3333333&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;ins1RechercheAvecVitale&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// ma recherche sans carte vitale
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;INS2Requete&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;requete&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;INS2Requete&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;requete&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setDateNaissance&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;01011981&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;requete&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setIdentifiantFacturation&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;3333333&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;requete&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setNomNaissance&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ADRDEUX&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;requete&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setSexe&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Sexe&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;requete&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setPrenoms&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Collections&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;singletonList&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;LAURENT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;ins2RechercheAvecTraitIdentite&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;requete&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// ma vérification 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;INS3Requete&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;requete&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;INS3Requete&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;requete&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setIns&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;INSWithCle&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;newInstance&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1810163220751&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;40&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;INSAutorite&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;INS_NIR&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;TraitsIdentiteINS&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;traits&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;TraitsIdentiteINS&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;traits&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setNomFamille&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ADRDEUX&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;traits&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setPrenom&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;LAURENT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;traits&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setListePrenoms&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;LAURENT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;traits&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setSexeAdministratif&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Sexe&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;traits&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setDateNaissance&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1981-01-01&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;requete&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setTraitsIdentite&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;traits&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;ins3Verification&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;requete&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: REST Proxy</title>
+      <link>https://doc.devbox-sante.fr/5.x/insi/rest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/insi/rest/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Le module insi-proxy, permet de fournit une facade REST à la facade &lt;code&gt;INSiClient&lt;/code&gt; java.
+Toutes les opérations offertes par la la façade java sont disponibles via des appels http sur le poste local.&lt;/p&gt;
+&lt;h3 id=&#34;intégration-sur-un-environnement-de-démonstration&#34;&gt;Intégration sur un environnement de démonstration&lt;/h3&gt;
+&lt;p&gt;Vous pouvez commencer à intégrer la DevBox-Santé INSi depuis l&amp;rsquo;environnement de démonstration.&lt;/p&gt;
+&lt;p&gt;Pour cela vous pouvez :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;consulter toute la documentation depuis l’environnement de démonstration &lt;a href=&#34;https://demo-p12.devbox-sante.fr&#34;&gt;REST de l&amp;rsquo;API&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;essayer avec une collection postman :&lt;/p&gt;
+&lt;p&gt;&lt;a target=&#34;_blank&#34; href=&#34;https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview&#34;&gt;&lt;img alt=&#34;Run In postman&#34; src=&#34;https://run.pstmn.io/button.svg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Attention : Dans cet environnement de démonstratiion, l&amp;rsquo;authentification supportée est celle par certificat. Il n&amp;rsquo;est pas possible également de faire des recherches avec la carte vitale.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;déploiement-avec-un-java-runtime-environment&#34;&gt;Déploiement avec un Java Runtime Environment&lt;/h2&gt;
+&lt;p&gt;Le livrable s&amp;rsquo;agit d&amp;rsquo;un jar exécutable, qui se lance de la manière suivante&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java -jar insi-proxy-rest-*.jar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Le composant est accessible depuis le poste local en HTTP sur l&amp;rsquo;adresse ip 127.0.0.1&lt;/p&gt;
+&lt;p&gt;Afin de valider le fonctionnement, ouvrir un navigateur à l&amp;rsquo;adresse suivante : http://127.0.0.1:PORT&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;insi-browser.png&#34; alt=&#34;insi-proxy browser&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;intégration&#34;&gt;Intégration&lt;/h3&gt;
+&lt;p&gt;L&amp;rsquo;ensemble des requêtes sont documentées via l&amp;rsquo;interface swagger et sont accessibles sur l&amp;rsquo;url suivante : http://127.0.0.1:PORT/swagger-ui.png&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;insi-swagger.png&#34; alt=&#34;insi-proxy swagger&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;intégration--dune-image-docker&#34;&gt;Intégration  d&amp;rsquo;une image docker&lt;/h3&gt;
+&lt;p&gt;Une page de documentation dédié : &lt;a href=&#34;https://doc.devbox-sante.fr/5.x/installer/docker&#34;&gt;Docker&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;utilisation-de-linstaller-devbox-santé&#34;&gt;Utilisation de l&amp;rsquo;installer DevBox-Santé&lt;/h3&gt;
+&lt;p&gt;Une page de documentation dédié : &lt;a href=&#34;https://doc.devbox-sante.fr/5.x/installer/poste_client&#34;&gt;poste_client&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Authentifications</title>
+      <link>https://doc.devbox-sante.fr/5.x/insi/autentifications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/insi/autentifications/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;via-carte-cps-sur-le-poste-local&#34;&gt;Via carte CPS sur le poste local&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+
+node &amp;#34;Poste Client (Windows/Mac/Linux)&amp;#34; {
+    [FrontEnd intégrateur] as frontend 
+
+    package &amp;#34;DevBox-Santé&amp;#34; DEVBOX_COLOR  {
+        component &amp;#34;DevBoxSanté INSi&amp;#34; as insFacade INS_COLOR {
+            [DevBoxSanté CPS] as cps CPS_COLOR
+            [DevBoxSanté Vitale] as vitale VITALE_COLOR
+        }
+
+    }
+    [Cryptolib CPS (ANS / ASIP)] as cryptolibCPS 
+    [APILectureVitale (SesamVitale)] as apiLectureVitale 
+}
+
+cloud &amp;#34;Téléservice **INSi** (SesamVitale)&amp;#34; as insi
+
+[BackEnd intégrateur] as backend 
+
+
+
+frontend -u-&amp;gt; backend : REST
+frontend -down-&amp;gt; insFacade : HTTP GET /insi/rechercheAvecVitale
+cps &amp;lt;-down-&amp;gt; cryptolibCPS : appel natif
+vitale &amp;lt;-down-&amp;gt; apiLectureVitale : appel natif
+insFacade &amp;lt;-d-&amp;gt; insi : SOAP
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;via-certificat-p12&#34;&gt;Via certificat P12&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+
+node &amp;#34;Environnement integrateur&amp;#34; {
+    
+    [BackEnd intégrateur] as backend 
+
+    component &amp;#34;DevBoxSanté INSi&amp;#34; as insFacade INS_COLOR {
+            [P12Manager] as p12 INS_COLOR
+            [Pas de lecture vitale] as vitale VITALE_COLOR
+        }
+
+}
+
+cloud &amp;#34;Téléservice **INSi** (SesamVitale)&amp;#34; as insi
+
+backend --&amp;gt; insFacade : HTTP GET /insi/rechercheSansVitale
+insFacade --&amp;gt; insi : SOAP
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Configuration DevBox-santé INSi</title>
+      <link>https://doc.devbox-sante.fr/5.x/insi/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/insi/configuration/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;configuration--applicationyml&#34;&gt;Configuration  &lt;code&gt;application.yml&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Pour configurer la DevBox-Santé INSi, il suffit de modifier les paramètres du fichier &lt;code&gt;application.yml&lt;/code&gt; :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;insi&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://qualiflps.services-ps.ameli.fr/lps&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;lpsInfo&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nom&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;À_CHANGER&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;numeroAutorisation&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;À_CHANGER&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;version&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;À_CHANGER&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#Cet élément XML contient l’identifiant d’installation du logiciel. Cet identifiant est généré lors de l’installation du SI-PS. Cet identifiant prend la forme d’un UUID sous sa forme canonique. Il doit être pérenne pour une installation d’un logiciel. Ce numéro est une aide au support, car il permet de regrouper les requêtes d’un même logiciel. Il permet également de compter le nombre de logiciels distincts accédant au TLSi.&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;instance&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;À_CHANGER (UUID)&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;context.strictCheckIdentifiantFacturation&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# true par défaut mais peut être mis à false car &amp;#34;Il est recommandé de rendre cette donnée paramétrable dans le LPS.&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pour charger le fichier de configuration :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java -Dspring.config.location&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;./application.yml -jar insi-proxy.jar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;mode-de-sécurité&#34;&gt;Mode de sécurité&lt;/h3&gt;
+&lt;p&gt;Il existe quatre modes d&amp;rsquo;authentification pour accéder au téléservice INSi dans le composant DevBox-Santé :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPS : génération des signatures des messages SOAP en utilisant la cryptolib CPS au travers du composant DevBox-Santé CPS.&lt;/li&gt;
+&lt;li&gt;CPS Stellair : mode d’authentification spécifique offre Stellair&lt;/li&gt;
+&lt;li&gt;P12 : initialisation des connexion TLS avec le Téléservice INSi avec un certificat d&amp;rsquo;établissement p12&lt;/li&gt;
+&lt;li&gt;P12Multiple : permet la connexion TLS avec plusieurs certificats d&amp;rsquo;établissements p12&lt;/li&gt;
+&lt;li&gt;P12InHeader : permet lo connexion TLS avec le certificat P12 passé dans le header HTTP.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Attention&lt;/h4&gt;
+
+    les urls des téléservices sont différents en fonction du mode d&amp;rsquo;authentification
+
+&lt;/div&gt;
+
+&lt;h4 id=&#34;cps&#34;&gt;CPS&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Mode de sécurité &lt;code&gt;CPS&lt;/code&gt;, dans le fichier de configuration &lt;code&gt;application.yml&lt;/code&gt; :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;insi&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;security.mode&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;cps&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# url: https://qualiflps.services-ps.ameli.fr/lps&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://services-ps.ameli.fr/lps&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Utiliser ce mode de sécurité pour l&amp;rsquo;utilisation du composant avec l&amp;rsquo;authentification par carte CPS.&lt;/p&gt;
+&lt;h4 id=&#34;p12&#34;&gt;P12&lt;/h4&gt;
+&lt;p&gt;Ce mode de sécurité &lt;code&gt;P12&lt;/code&gt;, permet le chargement d&amp;rsquo;un fichier p12 défini le fichier de configuration &lt;code&gt;application.yml&lt;/code&gt; :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;insi&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;security.mode&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;p12&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# url: https://qualiflps-services-ps-tlsm.ameli.fr/lps&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://services-ps-tlsm.ameli.fr/lps&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;tls.p12&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;À_CHANGER_NOM_FICHIER.p12&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;À_CHANGER_MOT_DE_PASSE_FICHIER.p12&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Utiliser ce mode de sécurité pour l&amp;rsquo;utilisation du composant avec l&amp;rsquo;authentification par certificat serveur.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Remarque&lt;/h4&gt;
+
+    Il existe deux types de certificat les &lt;code&gt;INSI-AUTO&lt;/code&gt; et les &lt;code&gt;INSI-MANU&lt;/code&gt;. Il s&amp;rsquo;agit d&amp;rsquo;une règle de nommage défini dans les spécifications. Il est demandé par le CNDA d&amp;rsquo;utiliser des certificats &lt;code&gt;INSI-MANU&lt;/code&gt; pour tout accès au téléservice INSi par des acteurs humains, et &lt;code&gt;INSI-AUTO&lt;/code&gt; pour des accès par des acteurs de traitements automatiques, types batchs.
+
+&lt;/div&gt;
+
+&lt;h4 id=&#34;p12-multiple&#34;&gt;P12 Multiple&lt;/h4&gt;
+&lt;p&gt;Ce mode de sécurité &lt;code&gt;p12s&lt;/code&gt; permet de gérer en une seule installation l&amp;rsquo;ensemble des connexions des différents établissements géographiques/juridiques.&lt;/p&gt;
+&lt;p&gt;Un &lt;code&gt;AmoP12Provider&lt;/code&gt; par défaut va charger un ensemble de fichier P12 à partir de la configuration, comme par exemple :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;insi&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;security.mode&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;p12s&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# url: https://qualiflps-services-ps-tlsm.ameli.fr/lpss&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://services-ps-tlsm.ameli.fr/lps&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;tls&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;           &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;p12&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;             &lt;/span&gt;- &lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;               &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;FINESS_ETAB_1-manu&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;               &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;FINESS_ETAB_1_CERTIFICAT_MANU.p12&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;               &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;À_CHANGER_MOT_DE_PASSE_FICHIER&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;             &lt;/span&gt;- &lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;               &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;FINESS_ETAB_1-auto&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;               &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;FINESS_ETAB_1E_CERTIFICAT_AUTO.p12&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;               &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;À_CHANGER_MOT_DE_PASSE_FICHIER&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;             &lt;/span&gt;- &lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;               &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;FINESS_ETAB_2-manu&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;               &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;FINESS_ETAB_2_CERTIFICAT_AUTO.p12&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;               &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;À_CHANGER_MOT_DE_PASSE_FICHIER&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Il est toutefois possible de définir un autre &lt;code&gt;AmoP12Provider&lt;/code&gt;, il suffit de configurer un nouvau Bean Spring avec une autre implémentation. Comme par exemple, une implémentation qui va charger le certificat en base de données :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#5c35cc;font-weight:bold&#34;&gt;@Component&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;FromDatabaseP12Provider&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;implements&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;AmoP12Provider&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;AmoP12&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;getP12&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// chargement en base de donnée des informations du certificat ayant pour nom name.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pour charger dynamiquement un certificat il suffit de rajouter le nom du certificat (&lt;code&gt;amoP12.name&lt;/code&gt;) dans le header de la requête HTTP :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl -X GET &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;http://localhost:8584/insi/rechercheSansVitale&amp;#34;&lt;/span&gt; -H &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;accept: application/json&amp;#34;&lt;/span&gt; -H &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;amoP12.name: ÀPréciser&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;p12-in-header&#34;&gt;P12 in header&lt;/h4&gt;
+&lt;p&gt;Ce mode de sécurité, &lt;code&gt;p12InHeader&lt;/code&gt; permet d&amp;rsquo;envoyer dans le header le certificat p12 et le password à la devbox-santé INSI. Ainsi l&amp;rsquo;appelant maîtrise la gestion de ces certificats.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Attention : Il est conseillé de mettre en place ce mode de sécurité seulement dans un environnement sécurisé&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Pour le configurer :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;insi&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;security.mode&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;p12InHeader&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Il faut donc rajouter deux header dans chaque requête HTTP :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;amoP12.p12&lt;/code&gt; contenant le p12 encodé en base 64&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;amoP12.password&lt;/code&gt; contenant le mot de passe du certificat p12&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;jeu-de-test-cnda&#34;&gt;Jeu de test CNDA&lt;/h3&gt;
+&lt;p&gt;Afin de pouvoir exécuter les tests d&amp;rsquo;injection demandées par le CNDA, il faut lancer le proxy avec l&amp;rsquo;un des profils spring activés suivant :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CNDA_WEB&lt;/code&gt; : rajoute un nouvel endpoint CNDA permettant l&amp;rsquo;injection des fichiers de test XML du CNDA.
+&lt;img src=&#34;CNDA_injection_swagger.png&#34; alt=&#34;CNDA_injection_swagger.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CNDA&lt;/code&gt; : rajoute un menu dans le &lt;code&gt;TrayIcon&lt;/code&gt; du système d&amp;rsquo;exploitation permettant l&amp;rsquo;injection des fichiers de test XML du CNDA.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Exemple :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java -Dspring.profiles.active&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;CNDA_WEB -jar insi-proxy.jar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Vous pouvez également injecter la resource de votre choix à partir du moment où elle correspond au format de la réponse SOAP souhaitée : 
+&lt;img src=&#34;CNDA_injection_swagger_file.png&#34; alt=&#34;CNDA_injection_swagger_file.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Exemple de fichier soap.xml demandé : &lt;a href=&#34;Reponse_numcasINSI_11_DateNaissance00_Annee.xml&#34;&gt;Reponse_numcasINSI_11_DateNaissance00_Annee.xml&lt;/a&gt; &lt;/p&gt;
+&lt;h3 id=&#34;configuration-de-la-sécurité&#34;&gt;Configuration de la sécurité&lt;/h3&gt;
+&lt;p&gt;Le proxy insi est une application web Spring Boot, toutes les possibilités de spring-security sont donc disponibles.&lt;/p&gt;
+&lt;p&gt;Exemple de configuration par défaut empêchant toutes les IPs externes :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;security.forceLocalAddress&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;surcharge-les-lpsinfo-dans-le-proxy&#34;&gt;Surcharge les LpsInfo dans le proxy&lt;/h3&gt;
+&lt;p&gt;La configuration du proxy contient les informations par défaut de configuration du LPS (Logiciel de Professionnel de Santé) cf. paragraphe précédent.
+Il est toutefois possible de surcharger ces valeurs (comme le numeroAutorisation qui peut être confidentiel) en les passant dans les header HTTP des requêtes.&lt;/p&gt;
+&lt;p&gt;Voici la liste des informations LPS pouvant etre surchargées :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Informations LPS&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Clef dans le header&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;numero d&amp;rsquo;autorisation&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;insi.lpsInfo.numeroAutorisation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;nom du lps&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;insi.lpsInfo.nom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;version du LPS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;insi.lpsInfo.version&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Par exemple :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl -X GET &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;http://localhost:8485/insi/rechercheAvecVitale&amp;#34;&lt;/span&gt; -H &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;accept: application/json&amp;#34;&lt;/span&gt; -H &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;insi.lpsInfo.numeroAutorisation: ÀPréciser&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ainsi le client peut dynamiquement passer les informations du LPS.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Howtos</title>
+      <link>https://doc.devbox-sante.fr/5.x/insi/howtos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/insi/howtos/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Architecture interne des différents composants</title>
+      <link>https://doc.devbox-sante.fr/5.x/insi/architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/insi/architecture/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;diagramme-de-flux&#34;&gt;Diagramme de flux&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+component &amp;#34;DevBox-santé INSi&amp;#34; as DevBoxSanteINSi
+
+cloud &amp;#34;Téléservice INSi&amp;#34; as INSi
+
+DevBoxSanteINSi --&amp;gt; INSi  : https (TLS 1.2 / IGC Santé)
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Versions</title>
+      <link>https://doc.devbox-sante.fr/5.x/insi/versions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/insi/versions/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;versions-2x&#34;&gt;Versions 2.x&lt;/h1&gt;
+&lt;h2 id=&#34;version---280-14102024&#34;&gt;Version - 2.8.0 (14/10/2024)&lt;/h2&gt;
+&lt;h3 id=&#34;story&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-88&#34;&gt;INSI-88&lt;/a&gt; [Logging]Rétention des conversations SOAP&lt;/p&gt;
+&lt;h2 id=&#34;version---278-09072024&#34;&gt;Version - 2.7.8 (09/07/2024)&lt;/h2&gt;
+&lt;h3 id=&#34;tâche&#34;&gt;Tâche&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-86&#34;&gt;INSI-86&lt;/a&gt; [CertificatsTest] mettre à jour certificats DEVCOOP&lt;/p&gt;
+&lt;h3 id=&#34;story-1&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-68&#34;&gt;INSI-68&lt;/a&gt; Vérifier prise en compte du nouveau Package_INSi_04.00.02.zip + CNDA  Package_INSi_04.00.07&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-83&#34;&gt;INSI-83&lt;/a&gt; [Datamatrix] Mettre à jour le datamatrix spec v2.2&lt;/p&gt;
+&lt;h2 id=&#34;version---277-19032024&#34;&gt;Version - 2.7.7 (19/03/2024)&lt;/h2&gt;
+&lt;h3 id=&#34;bug&#34;&gt;Bug&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-82&#34;&gt;INSI-82&lt;/a&gt; Conflit DmpcControllerAdvice avec InsiControllerAdvice&lt;/p&gt;
+&lt;h3 id=&#34;story-2&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-79&#34;&gt;INSI-79&lt;/a&gt; [Technical]  migration vers junit 5 (jupiter)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-80&#34;&gt;INSI-80&lt;/a&gt; [LicenceMananger] intégration de logEvent dans le INSiClient&lt;/p&gt;
+&lt;h2 id=&#34;version-276-23082023&#34;&gt;Version 2.7.6 (23/08/2023)&lt;/h2&gt;
+&lt;h3 id=&#34;story-3&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-78&#34;&gt;INSI-78&lt;/a&gt; [IdentifiantFacturation] Intégrer le check  laxiste&lt;/p&gt;
+&lt;h2 id=&#34;version-275-04072023&#34;&gt;Version 2.7.5 (04/07/2023)&lt;/h2&gt;
+&lt;h3 id=&#34;bug-1&#34;&gt;Bug&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-76&#34;&gt;INSI-76&lt;/a&gt; [Datamatrix] problème lorsque la date de naissance est au 1er janvier sur certaines années&lt;/p&gt;
+&lt;h3 id=&#34;story-4&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-77&#34;&gt;INSI-77&lt;/a&gt; [identifiantFacturation] Finess mais aussi SIRET&lt;/p&gt;
+&lt;h2 id=&#34;version-274-11052023&#34;&gt;Version 2.7.4 (11/05/2023)&lt;/h2&gt;
+&lt;h3 id=&#34;story-5&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-73&#34;&gt;INSI-73&lt;/a&gt; [Proxy] conflit registration du LpsInfoFilter INSi et  DMP&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/APCV-2&#34;&gt;APCV-2&lt;/a&gt; [Spring] Éviter conflit entre les beans ApCV, INSi, DMP&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-74&#34;&gt;INSI-74&lt;/a&gt; Restauration des lieuNaissance Corse dans la recherche&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-75&#34;&gt;INSI-75&lt;/a&gt; [LpsInfo] lever l&amp;rsquo;ambiguité des LpsInfo insi et apcv&lt;/p&gt;
+&lt;h2 id=&#34;version-273-06032023&#34;&gt;Version 2.7.3 (06/03/2023)&lt;/h2&gt;
+&lt;h3 id=&#34;story-6&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-72&#34;&gt;INSI-72&lt;/a&gt; [OpenAPI] migration springfox -&amp;gt; springdoc&lt;/p&gt;
+&lt;h2 id=&#34;version-272-01032023&#34;&gt;Version 2.7.2 (01/03/2023)&lt;/h2&gt;
+&lt;h3 id=&#34;bug-2&#34;&gt;Bug&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-71&#34;&gt;INSI-71&lt;/a&gt; [P12InHeader] problème de chargement du p12Provider&lt;/p&gt;
+&lt;h2 id=&#34;version-271-23022023&#34;&gt;Version 2.7.1 (23/02/2023)&lt;/h2&gt;
+&lt;h3 id=&#34;story-7&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-70&#34;&gt;INSI-70&lt;/a&gt; Authentification sans CPS fournir une vitale facade par défaut&lt;/p&gt;
+&lt;h2 id=&#34;version-270-23022023&#34;&gt;Version 2.7.0 (23/02/2023)&lt;/h2&gt;
+&lt;h3 id=&#34;story-8&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-65&#34;&gt;INSI-65&lt;/a&gt; [CPS] un  module security CPS dédié&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-69&#34;&gt;INSI-69&lt;/a&gt; Intégration IGCSanteTrustStoreManager&lt;/p&gt;
+&lt;h2 id=&#34;version-266-04072023&#34;&gt;Version 2.6.6 (04/07/2023)&lt;/h2&gt;
+&lt;h3 id=&#34;bug-3&#34;&gt;Bug&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-76&#34;&gt;INSI-76&lt;/a&gt; [Datamatrix] problème lorsque la date de naissance est au 1er janvier sur certaines années&lt;/p&gt;
+&lt;h2 id=&#34;version-265-05102022&#34;&gt;Version 2.6.5 (05/10/2022)&lt;/h2&gt;
+&lt;h3 id=&#34;story-9&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-66&#34;&gt;INSI-66&lt;/a&gt; [Repository] reorganisation de repo.dev.coop&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-63&#34;&gt;INSI-63&lt;/a&gt; [Actuator] ajout d’un InsiLpsInfoContributor.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-61&#34;&gt;INSI-61&lt;/a&gt; [IGC-Santé] intégré IGCSanteTrustStoreManager&lt;/p&gt;
+&lt;h2 id=&#34;version-264-27072022&#34;&gt;Version 2.6.4 (27/07/2022)&lt;/h2&gt;
+&lt;h3 id=&#34;story-10&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-60&#34;&gt;INSI-60&lt;/a&gt; [Stellair] externaliser configuration&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-62&#34;&gt;INSI-62&lt;/a&gt; [INSi-CPS] Sélection intempestive de la structure de santé via la CPS à chaque Appel REST&lt;/p&gt;
+&lt;h2 id=&#34;version-263-29062022&#34;&gt;Version 2.6.3 (29/06/2022)&lt;/h2&gt;
+&lt;h4 id=&#34;bug-4&#34;&gt;Bug&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-58&#34;&gt;INSI-58&lt;/a&gt; [Datamatrix] encodage C40&lt;/p&gt;
+&lt;h4 id=&#34;story-11&#34;&gt;Story&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-59&#34;&gt;INSI-59&lt;/a&gt; [CNDA Controller] permettre l&amp;rsquo;injection de n&amp;rsquo;importe quel retour.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-56&#34;&gt;INSI-56&lt;/a&gt; [Datamatrix] retourner le datamatrix en base64&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-55&#34;&gt;INSI-55&lt;/a&gt; [Spring] qualify l’authenticationKeyManager&lt;/p&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 2.6.2 (15/03/2022)&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Story&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-53&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-53&lt;/a&gt; Ajout log dans lpsInfo configuration au démarrage&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 2.6.1 (09/03/2022)&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Story&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-52&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-52&lt;/a&gt; [INSI-REST-CLIENT_proxy] amélioration de la gestion des erreurs&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 2.6 (11/02/2022)&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Story&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-50&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-50&lt;/a&gt; [Security / p12s] ajout de certificat dynamiquement.&lt;/p&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-49&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-49&lt;/a&gt; [Proxy] ajout mode de securité p12InHeader&lt;/p&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-46&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-46&lt;/a&gt; [Mock] ajout résultat environnement mocké.&lt;/p&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-44&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-44&lt;/a&gt; [DataMatrix] composant gestion datamatrix&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 2.5.3 (17/01/2022)&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Bug&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-45&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-45&lt;/a&gt; [Front Démo] prendre en compte idFacturation obligatoire&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 2.5.2 (06/01/2022)&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Bug&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-41&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-41&lt;/a&gt; [P12/Issuer] Correction complémentaire note 09/2021&lt;/p&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-13&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-13&lt;/a&gt; [CI-TLS-AMO] format du Message Id&lt;/p&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Story&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-42&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-42&lt;/a&gt; [IdentifiantFacturation] force la longueur à 9 caractères&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 2.5.1 (16/12/2021)&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Bug&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-39&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-39&lt;/a&gt; [P12]La balise &amp;lt;emetteur&amp;gt; est manquante dans vos contextes BAM et LPS&lt;/p&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Tâche&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-40&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-40&lt;/a&gt; [Security] check version log4j&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 2.5 (08/12/2021)&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Story&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-31&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-31&lt;/a&gt; [Security] support de l&#39;authentification Stellair&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 2.4 (01/12/2021)&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Bug&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-36&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-36&lt;/a&gt; Proxy-V1 NPE conversion fichier injection REP_CR01.xml&lt;/p&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-35&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-35&lt;/a&gt; Session ouverte à chaque lecture de carte vitale .&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 2.3 (15/11/2021)&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Story&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-34&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-34&lt;/a&gt; [Proxy] fournir API Rest compatible 1.X&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 2.2 (21/10/2021)&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Story&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-33&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-33&lt;/a&gt; [LpsInfo] surcharge des lpsInfos au niveau session&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 2.1 (07/10/2021)&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Story&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-27&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-27&lt;/a&gt; Mise à jour du front de Démo avec la nouvelle version du modèle.&lt;/p&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-22&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-22&lt;/a&gt; [P12 Multiple] gestion de p12 multiple&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 2.0 (24/09/2021)&lt;/h1&gt;
+&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Version compatible à `SEL-MP-043_04-00-00_INSi ` validé sur `SEL-GCONFORM_INSi_V01.06`&lt;/h3&gt;
+&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Bug&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-24&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-24&lt;/a&gt; NPE lors d&#39;un contexte non renseigné&lt;/p&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Story&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-26&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-26&lt;/a&gt; intégration DevBox-santé CPS 3.0&lt;/p&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-19&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-19&lt;/a&gt; [WSDL] mettre à jour CONTRAT_IDIR_EXP_1.0.1&lt;/p&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-18&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-18&lt;/a&gt; [WSDL] mettre à jour CONTRAT_ICIR_EXP_1.5.0&lt;/p&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-17&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-17&lt;/a&gt; [SEL-MP-043-4] prise en compte des certificats serveurs&lt;/p&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-16&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-16&lt;/a&gt; [Proxy] version mocké de l&#39;ensemble des téleservices&lt;/p&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-10&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-10&lt;/a&gt; [SEL-MP-043_03-00-02] prise en compte Batch (vérification de masse)&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 1.4&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Story&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-15&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-15&lt;/a&gt; [Activité] en cas d&#39;une multiactivités, pouvoir passer l&#39;activité dans le contexte&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 1.3.1&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Bug&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-14&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-14&lt;/a&gt; [Validation] code insee corse ne passe pas la validation&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 1.3&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Tâche&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-12&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-12&lt;/a&gt; Mise à jour des api vitale et cps&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 1.2&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Story&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-9&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-9&lt;/a&gt; Chargement du contexte LPS depuis le header HTTP.&lt;/p&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-7&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-7&lt;/a&gt; [application.yml] Générer à la volée le numéro d&#39;instance de l&#39;installation à la volée&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 1.0.1&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Story&lt;/h3&gt;&lt;p class=&#34;csg-p&#34; style=&#34;margin: 0; padding: 0px; margin-bottom: 7px; padding-top: 7px; mso-line-height-rule: exactly; line-height: 24px; font-size: 14px;&#34;&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/INSI-3&#34; class=&#34;csg-mark-link&#34; style=&#34;border: none; background: transparent; color: #0052cc; text-decoration: none;&#34;&gt;INSI-3&lt;/a&gt; Retourner une INSiValidationException =&amp;gt; HTTP BadRequest  pour tous les cas où ça se justifie&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;csg-wrapper&#34; style=&#34;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; vertical-align: baseline;&#34;&gt;&lt;h1 class=&#34;csg-h1&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 23px; line-height: 1.1034; margin-top: 40px; letter-spacing: -0.01em;&#34;&gt;Version 1.0&lt;/h1&gt;&lt;h3 class=&#34;csg-h3&#34; style=&#34;font-style: inherit; color: #172B4D; font-weight: 600; margin-bottom: 0; font-size: 16px; line-height: 1.2; margin-top: 32px; font-weight: 500; letter-spacing: -0.008em;&#34;&gt;Version initiale compatible à `SEL-MP-043_02-00_INSi` validé sur `SEL-GCONFORM_INSi_V01.04`&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: </title>
+      <link>https://doc.devbox-sante.fr/5.x/insi/gestion_certificat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/insi/gestion_certificat/</guid>
+      <description>
+        
+        
+        &lt;p&gt;TODO : rFprendre procédure du DMP pour l&amp;rsquo;INSI&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_salariees_vf.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_salariees_vf.pdf&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

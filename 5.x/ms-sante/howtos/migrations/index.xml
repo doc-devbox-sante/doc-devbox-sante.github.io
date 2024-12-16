@@ -1,0 +1,88 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – Migrations</title>
+    <link>https://doc.devbox-sante.fr/5.x/ms-sante/howtos/migrations/</link>
+    <description>Recent content in Migrations on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/5.x/ms-sante/howtos/migrations/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>5.x: Migration 1.2 vers la 2.0</title>
+      <link>https://doc.devbox-sante.fr/5.x/ms-sante/howtos/migrations/1.2_2.0/</link>
+      <pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/ms-sante/howtos/migrations/1.2_2.0/</guid>
+      <description>
+        
+        
+        &lt;p&gt;La version 2.0 de la DevBox-santé MSS apporte le support du nouveau référentiel v2 conforme au ségur vague 2&lt;/p&gt;
+&lt;p&gt;Quelques changements ont été apportés.&lt;/p&gt;
+&lt;h3 id=&#34;exécution&#34;&gt;Exécution&lt;/h3&gt;
+&lt;p&gt;Vous pouvez essayer l&amp;rsquo;API V2 avec une collection postman disponible ici :&lt;/p&gt;
+&lt;p&gt;&lt;a target=&#34;_blank&#34; href=&#34;https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview&#34;&gt;&lt;img alt=&#34;Run In postman&#34; src=&#34;https://run.pstmn.io/button.svg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ou le swagger :&lt;/p&gt;
+&lt;p&gt;&lt;a target=&#34;_blank&#34; href=&#34;https://msssante-demo.devbox-sante.fr/swagger-ui.html&#34;&gt;Swagger&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;authentification&#34;&gt;Authentification&lt;/h2&gt;
+&lt;p&gt;2 modes d&amp;rsquo;authentification sont disponibles:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pro Santé Connect&lt;/li&gt;
+&lt;li&gt;Certificat p12 (cas d&amp;rsquo;une bal applicative)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La connexion par carte cps est supprimée et la connexion par login/mdp/otp est à priori supprimée (à voir selon l&amp;rsquo;opérateur)&lt;/p&gt;
+&lt;h2 id=&#34;modèle&#34;&gt;Modèle&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Modification du type des identifiants (id, folderId, messageId) integer =&amp;gt; string&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;Folder_dans_swagger.png&#34; alt=&#34;Folder_dans_swagger.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;FolderId_dans_swagger.png&#34; alt=&#34;FolderId dans les routes&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Modification des Flags:
+&lt;ul&gt;
+&lt;li&gt;REPLIED =&amp;gt; ANSWERED&lt;/li&gt;
+&lt;li&gt;UNREAD =&amp;gt; SEEN&lt;/li&gt;
+&lt;li&gt;ATTACHMENT, LOW_PRIORITY, NONE, PRIORITY, SENT_BY_ME, URGENT =&amp;gt; Deprecated&lt;/li&gt;
+&lt;li&gt;Nouveaux flags: RECENT, ANSWERED, SEEN&lt;/li&gt;
+&lt;li&gt;Liste complète en V2: ANSWERED, DELETED, DRAFT, FLAGGED, FORWARDED, SEEN, RECENT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Modification d&amp;rsquo;un message (MessageStatus):
+&lt;ul&gt;
+&lt;li&gt;DELETE =&amp;gt; DELETED&lt;/li&gt;
+&lt;li&gt;DELETE, SPAM, TRASH, UNSPAM =&amp;gt; Deprecated&lt;/li&gt;
+&lt;li&gt;DELETED, READ, FLAGGED, UNFLAGGED, UNREAD, UNDELETED&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;MessageQuery
+&lt;ul&gt;
+&lt;li&gt;isSent =&amp;gt; sent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rest-api&#34;&gt;Rest API&lt;/h2&gt;
+&lt;p&gt;Les APIs v2 sont disponible sur l&amp;rsquo;url /mssante/v2/xxxx, elles ont les mêmes signatures que la V1 à quelques exceptions près:&lt;/p&gt;
+&lt;h3 id=&#34;endpoints-supprimés&#34;&gt;Endpoints supprimés&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Authentification : GET /authentication/cps, POST /authentication/otp, GET /authentication/otp/{otp}&lt;/li&gt;
+&lt;li&gt;POST /messages/attachment Ajout de pièce jointe =&amp;gt; Faire un save du message brouillon avec la PJ&lt;/li&gt;
+&lt;li&gt;DELETE /messages/{id}/attachment/{part} Suppression d&amp;rsquo;une pièce jointe =&amp;gt; Faire un save du message brouillon sans la PJ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;nouveaux-endpoints&#34;&gt;Nouveaux endpoints&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Vider la corbeille: DELETE /folders/trash/clean (=&amp;gt; suppression des messages ayant le flag DELETED)&lt;/li&gt;
+&lt;li&gt;POST /folders/{parentId}/create/type/{type}: Lors de la création d&amp;rsquo;un dossier ce dernier est &amp;ldquo;typé&amp;rdquo; comme contenant des messages ou des dossiers. Si le endpoint ne permet pas de préciser le type alors le dossier est par défaut contenant des messages.&lt;/li&gt;
+&lt;li&gt;POST /folders/{id}/rename&lt;/li&gt;
+&lt;li&gt;GET /messages/{folderId}/ByPage: recherche paginée&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

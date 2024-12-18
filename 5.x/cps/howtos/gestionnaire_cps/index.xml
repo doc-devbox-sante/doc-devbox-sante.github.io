@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – Gestionnaire carte CPS</title>
+    <link>https://doc.devbox-sante.fr/5.x/cps/howtos/gestionnaire_cps/</link>
+    <description>Recent content in Gestionnaire carte CPS on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/5.x/cps/howtos/gestionnaire_cps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

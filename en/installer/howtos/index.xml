@@ -1,0 +1,112 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – Howtos</title>
+    <link>https://doc.devbox-sante.fr/en/installer/howtos/</link>
+    <description>Recent content in Howtos on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/en/installer/howtos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Installer: Eureka Demo</title>
+      <link>https://doc.devbox-sante.fr/en/installer/howtos/eureka_demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/en/installer/howtos/eureka_demo/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;with-two-workstations&#34;&gt;With two workstations&lt;/h2&gt;
+&lt;p&gt;A first use case eurekaservice as a directory server for workstations&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
+
+
+node &amp;#34;EurekaServer&amp;#34; {
+   [EurekaService:9998] as eureka
+}
+
+node &amp;#34;WorkstationWithCps&amp;#34; {
+   [DevBox-Sante:1000x] as devbox1  DEVBOX_COLOR
+   [CPS reader] as cps
+}
+devbox1 -l-&amp;gt; eureka : register
+devbox1 -- cps
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;install-eurekaserver&#34;&gt;Install EurekaServer&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;install the eureka service on a machine : &lt;a href=&#34;https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe&#34;&gt;https://clients.devbox-sante.fr/installer/client/id/DEV/DevBoxSante-client-dev-windows-x64-eureka-4.x.exe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;during the installation pick a port number for Eurekas : 9998 for example&lt;/li&gt;
+&lt;li&gt;after the installation stop all devbox-sante running (except the eureka service)&lt;/li&gt;
+&lt;li&gt;check that eureka is running on localhost with the installation port: &lt;a href=&#34;http://localhost:9998/users&#34;&gt;http://localhost:9998/users&lt;/a&gt; and no process is running&lt;/li&gt;
+&lt;li&gt;get its ip and check access from another workstation : &lt;a href=&#34;http://192.168.1.26:9998/users&#34;&gt;http://192.168.1.26:9998/users&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;eureka-users.png&#34; alt=&#34;eureka users&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;install-workstation-with-cps&#34;&gt;Install Workstation with CPS&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;install on the workstation with the CPS card reader, the devbox-sante with one of the installer, preferably the one without eureka. If you use the installer with Eureka disable the service :
+&lt;img src=&#34;disableEureka.png&#34; alt=&#34;disable eureka&#34;&gt;&lt;/li&gt;
+&lt;li&gt;configure the devbox-sante with the following entries (make sure that the devbox-sante point to the eureka service) :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spring&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;profiles.active&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;...&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;EUREKA&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;...&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;eureka&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;service.url&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;http://192.168.1.26:9998&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;run&#34;&gt;Run&lt;/h3&gt;
+&lt;p&gt;Prerequisite, the eureka service is running on the EurekaServer machine.&lt;/p&gt;
+&lt;h4 id=&#34;case1--launch-the-devbox-sante-with-windows-user-login&#34;&gt;Case1 : launch the DevBox-Sante with windows user login&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;If there is any DevBoxSante running before stop it 
+&lt;img src=&#34;StopDevBoxSante.png&#34; alt=&#34;Stop devbox&#34;&gt;&lt;/li&gt;
+&lt;li&gt;execute the &lt;code&gt;DevBoxSante-client-dev.exe&lt;/code&gt; to launch with the right configuration&lt;/li&gt;
+&lt;li&gt;check on the log that the devbox-sante registered to the eureka service :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;2023-11-22 17:30:13.964  INFO 51952 --- [           main] f.d.clients.eureka.DbxEurekaRestClient   : Post http://192.168.1.26:9998/user : lfo, 192.168.1.12, 10025, null
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;As a result on the eureka users list and more specifically with the endpoint &lt;code&gt;/user/lfo&lt;/code&gt; :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;eureka-registered-windows.png&#34; alt=&#34;registered on windows&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Considering the result of this endpoint, you know where to access the right DevBoxSante for the user lfo :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;dbx-lfo-user.png&#34; alt=&#34;dbx user lfo&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;case-2--launch-the-devbox-sante-from-a-web-context-&#34;&gt;Case 2 : launch the DevBox-Sante from a web-context :&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;stop previously DevBox-Sante launched&lt;/li&gt;
+&lt;li&gt;from the browser launch the devbox-sante with providing that url : &lt;code&gt;devboxsante-client-dev://config?server.port=10101&amp;amp;sessionID=webUser1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;eureka-webusers.png&#34; alt=&#34;eureka web users&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Then, in every workstation a DevBox-Sante should be launched with a different user sessionID. Then you can do the following mapping :&lt;/p&gt;
+&lt;p&gt;One user sessionId = One IP:PORT = one CPS card reader&lt;/p&gt;
+&lt;h2 id=&#34;on-citrix-or-rdp-server&#34;&gt;On Citrix or RDP Server&lt;/h2&gt;
+&lt;p&gt;On Citrix or RDP Server everything is launched on the same host, so everything is available on localhost, but with different http ports.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
+
+node &amp;#34;Serveur RDP&amp;#34; {
+    [EurekaService:9998] as eureka
+  [DevBox-Santé1:10001] as devbox1 DEVBOX_COLOR
+  [DevBox-Santé2:10002] as devbox2 DEVBOX_COLOR
+}
+
+node &amp;#34;Workstation user 1&amp;#34; {
+   [USB ports of CPS card reader 1] as usb1
+}
+node &amp;#34;Workstation user 2&amp;#34; {
+   [USB port of CPS card reader 2] as usb2
+}
+devbox1 -- usb1 : map USB pors ts
+devbox2 -- usb2 : map USB ports
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To share usb ports on rdp : &lt;a href=&#34;https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop&#34;&gt;https://superuser.com/questions/49285/access-local-usb-devices-from-a-remote-pc-via-remote-desktop&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

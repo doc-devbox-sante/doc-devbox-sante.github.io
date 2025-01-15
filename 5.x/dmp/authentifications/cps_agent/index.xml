@@ -1,0 +1,183 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – Authentification Directe via le CPS Agent</title>
+    <link>https://doc.devbox-sante.fr/5.x/dmp/authentifications/cps_agent/</link>
+    <description>Recent content in Authentification Directe via le CPS Agent on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/5.x/dmp/authentifications/cps_agent/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>5.x: CPS Agent Livre de cuisine</title>
+      <link>https://doc.devbox-sante.fr/5.x/dmp/authentifications/cps_agent/agent_cookbook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/dmp/authentifications/cps_agent/agent_cookbook/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;1-démarrer-la-devbox-santé-dmp-côté-backend&#34;&gt;1. Démarrer la Devbox-Santé DMP côté backend&lt;/h3&gt;
+&lt;p&gt;Il s&amp;rsquo;agit d&amp;rsquo;une image docker avec la configuration suivante :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;dmp&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;security.mode&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;withCpsAgent&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pour lancer l&amp;rsquo;image docker :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker run --name devbox-sante-cps-agent -p 8080:8080 -d devboxsante/CLIENT:VERSION
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;devboxsante-docker.png&#34; alt=&#34;DevBox-Santé backend&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Nous avons déployé pour l&amp;rsquo;instant cela :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+node &amp;#34;Environnement back&amp;#34; {
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34; DEVBOX_COLOR {
+        component &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade DMP_COLOR {
+            [CpsAgentClient] CPS_COLOR
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;2-démarrer-la-devbox-santé-cps-agent-côté-client&#34;&gt;2. Démarrer la DevBox-Santé CPS agent côté client&lt;/h3&gt;
+&lt;p&gt;Il s&amp;rsquo;agit d&amp;rsquo;insaller une DevBox-Sante client &lt;a href=&#34;https://doc.devbox-sante.fr/5.x/installer/poste_client/premier_pas/&#34;&gt;avec un installer&lt;/a&gt; configuré en tant que CPS-agent  :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;security&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;cpsAgent&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La DevBox-Santé tourne dans notre exemple sur le port 10035 :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;devboxsante-client.png&#34; alt=&#34;DevBox-Santé Client agent&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Nous avons déployé maintenant:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+node &amp;#34;Poste Client (Windows/Mac/Linux)&amp;#34; {
+
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34; as cpsAgent DEVBOX_COLOR {
+            [DevBox-sante CPS] as cps CPS_COLOR
+
+    }
+    [Cryptolib CPS (ANS)] as cryptolibCPS
+}
+
+node &amp;#34;Environnement back&amp;#34; {
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34; DEVBOX_COLOR {
+        component &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade DMP_COLOR {
+            [CpsAgentClient] CPS_COLOR
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;À noter&lt;/h4&gt;
+
+    Le cps-agent est lancé en ssl pour chiffrer les connexions entre le cps agent et sont client. Néanmoins, comme le cps-agent tourne sur un poste qui n&amp;rsquo;a pas de nom de domaine, le certificat utilisé est auto-signé.
+
+&lt;/div&gt;
+
+&lt;h3 id=&#34;3-obtenir-le-mot-de-passe-de-la-devbox-santé-cpsagent-sur-le-poste-client&#34;&gt;3. Obtenir le mot de passe de la DevBox-santé CPS agent sur le poste client.&lt;/h3&gt;
+&lt;p&gt;Pour obtenir le mot de passe d&amp;rsquo;accès, il faut depuis un processus local au poste client faire l&amp;rsquo;appel à la route &lt;code&gt;/cps/password&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;get-password.png&#34; alt=&#34;Get password&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ce mot de passe est dorénavant connu de l&amp;rsquo;application front, et peut être passé au backend.&lt;/p&gt;
+&lt;h3 id=&#34;4-appeler-la-devbox-santé-dmp-avec-les-informations-du-cps-agent&#34;&gt;4. Appeler la DevBox-Santé DMP avec les informations du CPS Agent&lt;/h3&gt;
+&lt;p&gt;Le frontend fait passer au backend les informations du poste client CPS Agent suivantes :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;L&amp;rsquo;IP du poste client, dans notre cas : 192.168.1.12&lt;/li&gt;
+&lt;li&gt;Le numéro de port du poste client, dans notre cas : 10035&lt;/li&gt;
+&lt;li&gt;Le mot de passe préalablement obtenu, dans notre cas : f2e3122c-b7f4-473f-b763-8ad5e050ae74&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Le backend peut dont appeler une transaction du DMP avec les informations fournies :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;post {
+  url: {{base_url}}/dmp/td02Exist
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  devboxsante.cps.agent.client.url: https://192.168.1.12:10035
+  devboxsante.cps.agent.client.user: 
+  devboxsante.cps.agent.client.password: f2e3122c-b7f4-473f-b763-8ad5e050ae74
+}
+
+body:json {
+  {
+      &amp;#34;context&amp;#34;: {
+      },
+      &amp;#34;request&amp;#34;: {
+          &amp;#34;matriculeINS&amp;#34;: {
+              &amp;#34;valeur&amp;#34;: &amp;#34;287080883795737&amp;#34;,
+              &amp;#34;identifiantSysteme&amp;#34;: &amp;#34;1.2.250.1.213.1.4.10&amp;#34;
+          }
+      }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ce qui a pour résultat dans &lt;a href=&#34;https://www.usebruno.com/&#34;&gt;Bruno&lt;/a&gt; :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;bruno-result.png&#34; alt=&#34;Bruno résultat&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Au final nous avons mis en place l&amp;rsquo;architecture suivante :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;
+!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+
+node &amp;#34;Poste Client (Windows/Mac/Linux)&amp;#34; {
+    [FrontEnd intégrateur] as frontend
+
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34; as cpsAgent DEVBOX_COLOR {
+            [DevBox-sante CPS] as cps CPS_COLOR
+
+    }
+    [Cryptolib CPS (ANS)] as cryptolibCPS
+}
+
+node &amp;#34;Environnement intégrateur&amp;#34; {
+   [BackEnd intégrateur] as backend
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34; DEVBOX_COLOR {
+        component &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade DMP_COLOR {
+            [CpsAgentClient] CPS_COLOR
+        }
+    }
+}
+cloud &amp;#34;**DMP**&amp;#34; as DMP
+
+frontend &amp;lt;--&amp;gt; cpsAgent : 1 GET /cps/password
+frontend -d-&amp;gt; backend : 2 POST {ip, port , password}
+backend -d-&amp;gt; dmpFacade  : 3 POST /dmp/td02Exist , headers {cps.agent.client.url, cps.agent.client.passaord}
+CpsAgentClient &amp;lt;-&amp;gt; cpsAgent : 4 /cps/ opérations
+cps &amp;lt;-down-&amp;gt; cryptolibCPS : 5 appels natifs
+dmpFacade -down-&amp;gt; DMP : 6 POST SOAP / XDS 
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

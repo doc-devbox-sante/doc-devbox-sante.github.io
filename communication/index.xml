@@ -1,0 +1,217 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – Communication</title>
+    <link>https://doc.devbox-sante.fr/communication/</link>
+    <description>Recent content in Communication on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/communication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Communication: Arret des services de l&#39;environnement dv1 du DMP du 27 Janvier au 2 Février 2025</title>
+      <link>https://doc.devbox-sante.fr/communication/20250116_arretservice_dmp_dv1/</link>
+      <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/communication/20250116_arretservice_dmp_dv1/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;img src=&#34;arret_service_dv1.png&#34; alt=&#34;Arret service dv1&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Communication: [06/12/2024]La DevBox-Santé 6 est sortie !</title>
+      <link>https://doc.devbox-sante.fr/communication/20241206_sortie_de_la_devboxsante6/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/communication/20241206_sortie_de_la_devboxsante6/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Ça y est, la DevBox-Santé 6 est enfin de sortie.&lt;/p&gt;
+&lt;p&gt;Les grandes nouveautés sont :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Une documentation retouchée : &lt;a href=&#34;https://doc.devbox-sante.fr/6.x/&#34;&gt;https://doc.devbox-sante.fr/6.x/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Une migration technique de Java 11 vers Java 21 , Spring boot 2 vers Spring boot 3&lt;/li&gt;
+&lt;li&gt;Une nouvelle homologation DMP compatible dorénavant en 2.9.1 : &lt;a href=&#34;https://doc.devbox-sante.fr/6.x/connecteurs/dmp/versions/#version---601-05122024&#34;&gt;https://doc.devbox-sante.fr/6.x/connecteurs/dmp/versions/#version---601-05122024&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le support du mode AIR : &lt;a href=&#34;https://doc.devbox-sante.fr/6.x/connecteurs/dmp/authentifications/indirecte_renforce/&#34;&gt;https://doc.devbox-sante.fr/6.x/connecteurs/dmp/authentifications/indirecte_renforce/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Un agent permettant le lancement instantané des composants de lecture de cartes CPS et vitales : &lt;a href=&#34;https://doc.devbox-sante.fr/6.x/installation/agent/&#34;&gt;https://doc.devbox-sante.fr/6.x/installation/agent/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Une image docker commune à l&amp;rsquo;ensemble de nos clients
+&lt;img src=&#34;hub_docker_view.png&#34; alt=&#34;Docker hub&#34;&gt;&lt;/li&gt;
+&lt;li&gt;sûrement d&amp;rsquo;autres encore  &amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Les modalités pour accéder aux nouvelles images Docker ont changé. Une communication spécifique à ce sujet va suivre.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Communication: Incompatibilité Galss et Windows 11 24H2</title>
+      <link>https://doc.devbox-sante.fr/communication/20240918_galssonwindows11_24h2/</link>
+      <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/communication/20240918_galssonwindows11_24h2/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;img src=&#34;galss_alert_windows11_24H2.png&#34; alt=&#34;alert SesamVitale &#34;&gt;&lt;/p&gt;
+&lt;p&gt;La fiche de renseignements : &lt;a href=&#34;https://industriels.sesam-vitale.fr/documents/d/global/pdt-inf-873-alerte-et-menace-windows-11-24h2&#34;&gt;https://industriels.sesam-vitale.fr/documents/d/global/pdt-inf-873-alerte-et-menace-windows-11-24h2&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Communication: [25/06/2024]DMP : Evolution des suites cryptographiques sur environnement dev1</title>
+      <link>https://doc.devbox-sante.fr/communication/20240701_suitecryptodmp_dev1/</link>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/communication/20240701_suitecryptodmp_dev1/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Suite à la mise en place des nouvelles suites cryptographiques par le GIE SesamVitale sur &lt;strong&gt;l&amp;rsquo;environnement DEV1&lt;/strong&gt; pour permettre aux éditeurs de tester, la DevBox-santé DMP ne peut pas se connecter sur cet environnement.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+
+
+    Mise en production planifiée le &lt;strong&gt;19 novembre 2024&lt;/strong&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Nous y travaillons afin de retrouver un comportement normal. Les autres environnements ne sont pas impactés par ces nouveautés : &lt;a href=&#34;dmp/howtos/environnements/&#34;&gt;dmp/howtos/environnements/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;communication-originale&#34;&gt;Communication originale&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;image.png&#34; alt=&#34;comm_originale&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Communication: DMP : Perturbations/Indisponibilités du service le 07/06/2024 vers 08H00</title>
+      <link>https://doc.devbox-sante.fr/communication/20240607_perturbationsdmp/</link>
+      <pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/communication/20240607_perturbationsdmp/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;Nous vous informons que le service DMP de l’Assurance Maladie est à nouveau disponible en production et en test depuis le 07/06/2024 vers 11H.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;perturbationsIndisponibilit%C3%A9DMP.png&#34; alt=&#34;Annonce originale&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Plus d&amp;rsquo;info : &lt;a href=&#34;https://industriels.sesam-vitale.fr/group/maintenances-incidents&#34;&gt;https://industriels.sesam-vitale.fr/group/maintenances-incidents&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Communication: [04/06/2024] DMP `patient#lieuNaissance` obligatoire</title>
+      <link>https://doc.devbox-sante.fr/communication/20240604_dmp_patientlieunaissance/</link>
+      <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/communication/20240604_dmp_patientlieunaissance/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Dans le cadre de la maintenance de la DevBox-Santé DMP, nous mettons à jour les schematrons de validation (&lt;a href=&#34;https://doc.devbox-sante.fr/dmp/howtos/schematron/#validation-automatique)&#34;&gt;https://doc.devbox-sante.fr/dmp/howtos/schematron/#validation-automatique)&lt;/a&gt;. Or, pour la futur version &lt;strong&gt;5.1.16&lt;/strong&gt; de la DevBox-santé DMP , la mise à jour impose une modification d&amp;rsquo;information du patient du document CDA.
+Le lieuDeNaissance (COG) devient obligatoire car c&amp;rsquo;est une information connu du téléservice INS  &lt;/p&gt;
+&lt;p&gt;Vous devez donc renseigner le DMPCPatient#lieuNaissance avec le code géographique (COG):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;lieuNaissance.png&#34; alt=&#34;LieuNaissance&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Exemple json :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;patient&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;matriculeINS&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;valeur&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;279035121518989&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;identifiantSysteme&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1.2.250.1.213.1.4.10&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;internalId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;67890&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;prenom&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;DOMINIQUE&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;nomUsuel&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;pat-trois&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;dateDeNaissance&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19790328&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;lieuNaissance&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;63220&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si vous ne le renseignez pas vous obtiendrez cette erreur:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fr.devboxsante.dmp.cda.tools.DMPCCdaValidator$InvalidException: 
+Document non conforme au Schematron /schematrons/profils/structurationMinimale/ASIP-STRUCT-MIN-StrucMin.xsl : 
+/ClinicalDocument : (SMDS_CDAClinicalDocument): Erreur de conformité CI-SIS : 
+Dans le cadre de l&amp;#39;INS, les traits de l&amp;#39;INS (Nom de naissance, premier prénom de l&amp;#39;acte de naissance, prénoms de l’acte de naissance, date de naissance, lieu de naissance (COG) et sexe) sont obligatoires
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Cette information était non obligatoire jusqu&amp;rsquo;à présent.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Communication: [03/06/2024] annuaire.sesam-vitale.fr </title>
+      <link>https://doc.devbox-sante.fr/communication/20240603_changementurlmsant%C3%A9/</link>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/communication/20240603_changementurlmsant%C3%A9/</guid>
+      <description>
+        
+        
+        &lt;p&gt;L&amp;rsquo;adresse IP du service LDAP annuaire.sesam-vitale.fr va évoluer&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ancienne IP : 217.108.164.109&lt;/li&gt;
+&lt;li&gt;Nouvelle IP : 194.206.122.25&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;==&amp;gt; Impact possible dans la configuration des parfeux sur les flux sortants.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Communication: [29/05/2024] Changement URL webPS DMP</title>
+      <link>https://doc.devbox-sante.fr/communication/20240529_changementurlwebdmp/</link>
+      <pubDate>Wed, 29 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/communication/20240529_changementurlwebdmp/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Attention&lt;/h4&gt;
+
+    Ces urls concernent la transaction TD0.9. Si vous utilisez le end-point &lt;strong&gt;&lt;code&gt;/dmp/td09TableauDeBordUrl&lt;/code&gt;&lt;/strong&gt; des APIs REST ou la méthode &lt;strong&gt;&lt;code&gt;DMPCClient#td09TableauDeBordUrl&lt;/code&gt;&lt;/strong&gt; des APIs Java et que vous êtes &lt;strong&gt;en production&lt;/strong&gt;, cette information vous concerne.
+
+&lt;/div&gt;
+
+&lt;p&gt;Dans la fiche d&amp;rsquo;information PDT-INF-547 nous pouvons lire :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;PDT-INF-547_changementUrl.png&#34; alt=&#34;Nouvelles urls webDMP&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pour configurer, la DevBox-Santé avec les nouvelles urls de Production, il faut modifier le paramètre du fichier &lt;code&gt;application.yml&lt;/code&gt; :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante.dmp.url.web.prefix&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://ledmp.dmp.gouv.fr&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La DevBox-Santé avait initialement prévu qu&amp;rsquo;une seule URL du web DMP, il faut donc faire un choix de l&amp;rsquo;url de redirection vers une authentification avec CPS :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante.dmp.url.web.prefix&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://wps-cps.dmp.monespacesante.fr/&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ou encore vers ProSantéConnect :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante.dmp.url.web.prefix&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://wps-psc.dmp.monespacesante.fr/&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Il existe dans certain environnement, une variable d&amp;rsquo;environnements, &lt;strong&gt;&lt;code&gt;DEVBOX_DMP_WEB_URL&lt;/code&gt;&lt;/strong&gt; vous pouvez donc l&amp;rsquo;utiliser pour changer la valeur de l&amp;rsquo;url.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Communication: [21/04/2024]Problème accès à dmp/param-lps</title>
+      <link>https://doc.devbox-sante.fr/communication/20240421_getparametresdmp/</link>
+      <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/communication/20240421_getparametresdmp/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Des problèmes sont survenus lors du chargement du fichier de paramètres DMP cette fin de semaine dernière. En effet, le chargement de l&amp;rsquo;url &lt;a href=&#34;https://www.dmp.fr/documents/d/dmp/param-lps&#34;&gt;https://www.dmp.fr/documents/d/dmp/param-lps&lt;/a&gt; retournait de manière aléatoire, et parfois très souvent :  &lt;code&gt;HTTP response code: 400&lt;/code&gt; .&lt;/p&gt;
+&lt;p&gt;Ce problème de chargement a un impact, sur la DevBox-santé DMP, notamment sur le chargement des paramètres (/dmp/parametres) ainsi que sur les requêtes de recherche (/dmp/td31&amp;hellip;) et cela sur tous les environnements.&lt;/p&gt;
+&lt;p&gt;Ce matin ce problème de chargement semble être résolu. Nous avons travaillé sur un contournement, nous le mettrons en place le cas échéant.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

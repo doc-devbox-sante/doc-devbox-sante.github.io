@@ -1,0 +1,54 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – Authentifications</title>
+    <link>https://doc.devbox-sante.fr/6.x/connecteurs/transverses/authentifications/</link>
+    <description>Recent content in Authentifications on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/6.x/connecteurs/transverses/authentifications/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>6.x: AuthInHeader</title>
+      <link>https://doc.devbox-sante.fr/6.x/connecteurs/transverses/authentifications/authinheader/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/6.x/connecteurs/transverses/authentifications/authinheader/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Dans la version 6 de la DevBox-santé nous avons généralisé le mode d&amp;rsquo;authentification dans l&amp;rsquo;entête, en ajoutant la possibilité d&amp;rsquo;accéder à la DevBox-Santé agent.&lt;/p&gt;
+&lt;h3 id=&#34;cpsavec-le-dbxagent&#34;&gt;CPS avec le DbxAgent&lt;/h3&gt;
+&lt;p&gt;Si dans l&amp;rsquo;entête HTTP le paramètre &lt;code&gt;dbx-agent-sessionId&lt;/code&gt; est trouvé la DevBox-Santé va tenter de contacter un DevBox-Santé agent sur une websocket ouverte d&amp;rsquo;un poste utilisateur afin de communique avec sa carte CPS et/ou vitale. Comme par exemple :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;headers&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a40000&#34;&gt;dbx-agent-sessionId:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;2cf3e022-09af-dd83-f462-c6d7693fa176&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Exemple de requêtes ave l&amp;rsquo;agent :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lecture de carte CPS : &lt;a href=&#34;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx/cps/3.x/dbx-agent/readCpsCardInfoWithoutSelectActivity.bru&#34;&gt;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx/cps/3.x/dbx-agent/readCpsCardInfoWithoutSelectActivity.bru&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Appel de la td0.2 du DMP : &lt;a href=&#34;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx/dmp/6.x/authentification/dbx-agent/TD0.2%20-%20dbx-agent.bru&#34;&gt;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx/dmp/6.x/authentification/dbx-agent/TD0.2%20-%20dbx-agent.bru&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lecture de la carte vitale : &lt;a href=&#34;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx/vitale/2.x/dbx-agent/readVitaleWithCps%20-%20dbx-agent.bru&#34;&gt;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx/vitale/2.x/dbx-agent/readVitaleWithCps%20-%20dbx-agent.bru&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;p12inheader&#34;&gt;P12InHeader&lt;/h3&gt;
+&lt;p&gt;L&amp;rsquo;ensemble des informations permettant l&amp;rsquo;authentification auprès du TéléService (INSI, DMP, ApCV, &amp;hellip;) se trouve dans l&amp;rsquo;entête HTTP.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;headers&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;dmpAuthentication.p12:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;MIIcmwIBAe...IIAA==&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;dmpAuthentication.password:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;password&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;dmpSignature.p12:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;MIIcmwIBAe...IIAA==&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a40000&#34;&gt;dmpSignature.password:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;password&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Exemple de requêtes avec ce mode d&amp;rsquo;authentification :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Appel de la td0.2 du DMP : &lt;a href=&#34;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx/dmp/6.x/authentification/p12InHeader/TD0.2%20-%20p12InHeader.bru&#34;&gt;https://bitbucket.org/devbox-sante/dbx-examples-bruno/src/master/dbx/dmp/6.x/authentification/p12InHeader/TD0.2%20-%20p12InHeader.bru&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

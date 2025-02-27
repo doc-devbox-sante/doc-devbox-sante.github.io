@@ -1,0 +1,221 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – DevBox-Santé MSS</title>
+    <link>https://doc.devbox-sante.fr/6.x/connecteurs/ms-sante/</link>
+    <description>Recent content in DevBox-Santé MSS on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/6.x/connecteurs/ms-sante/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>6.x: REST Proxy</title>
+      <link>https://doc.devbox-sante.fr/6.x/connecteurs/ms-sante/rest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/6.x/connecteurs/ms-sante/rest/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+[Application Intégrateur] as integrateur
+
+package &amp;#34;DevBox-Santé Proxy REST&amp;#34; as devbox DEVBOX_COLOR {
+        [DevBox-sante MSSanté] as mss MSS_COLOR
+}
+
+cloud &amp;#34;**Opérateur MSSanté Nouveau Reférentiel **&amp;#34; as operateur
+cloud &amp;#34;**Mailiz**&amp;#34; as mailiz
+cloud &amp;#34;Apicrypt v2&amp;#34; as apicrypt
+
+integrateur -d-&amp;gt; mss : HTTP REST
+mss .d.&amp;gt;  operateur : SMTP / IMAP
+mss -d-&amp;gt; mailiz : HTTP / SOAP
+mss -d-&amp;gt; apicrypt : socket
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;test-et-documentation&#34;&gt;Test et documentation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Vous pouvez essayer l&amp;rsquo;API V2 avec une collection postman disponible ici : &lt;a target=&#34;_blank&#34; href=&#34;https://www.postman.com/universal-satellite-657415/workspace/devbox-sante-exemples/overview&#34;&gt;&lt;img alt=&#34;Run In postman&#34; src=&#34;https://run.pstmn.io/button.svg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vous pouvez également utiliser l&amp;rsquo;interface de démo mettant en œuvre les apis v1 et v2 : &lt;a target=&#34;_blank&#34; href=&#34;https://mss-demo.devbox-sante.fr&#34;&gt;&lt;img alt=&#34;Démo&#34; style=&#34;width:40px&#34; src=&#34;https://mss-demo.devbox-sante.fr/assets/images/icon-medium-mssante.svg&#34;&gt;MS Santé Démo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Remarque : Il s&amp;rsquo;agit d&amp;rsquo;un démonstrateur, toutes les fonctionnalités n&amp;rsquo;ont pas été implémentées sur cette interface.&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vous pouvez finalement consulter la documentation swagger (v1 et v2) : &lt;a target=&#34;_blank&#34; href=&#34;https://mss-demo.devbox-sante.fr/swagger-ui.html&#34;&gt;&lt;img alt=&#34;Swagger&#34; style=&#34;width:140px&#34; src=&#34;https://static1.smartbear.co/swagger/media/assets/images/swagger_logo.svg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>6.x: Authentifications</title>
+      <link>https://doc.devbox-sante.fr/6.x/connecteurs/ms-sante/authentifications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/6.x/connecteurs/ms-sante/authentifications/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Dans la DevBox-Santé MSS, le choix a été fait de définir un mode d&amp;rsquo;authentification privilégiée le mode Authentication in Header HTTP.&lt;/p&gt;
+&lt;h2 id=&#34;authentification-in-header&#34;&gt;Authentification In Header&lt;/h2&gt;
+&lt;p&gt;Dans le cas d&amp;rsquo;authentification &lt;code&gt;authInHeader&lt;/code&gt; (Le type d&amp;rsquo;autentification est renseigné dans le fichier de configuration, cf: &lt;a href=&#34;../configuration/referentiel2&#34;&gt;Configuration V1 et v2&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Le connecteur dispose de 4 modes d&amp;rsquo;authentification possibles :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jeton PSC (Pro Santé Connect) (V2)&lt;/li&gt;
+&lt;li&gt;Certificat p12 (BAL applicative) (V2)&lt;/li&gt;
+&lt;li&gt;Token de session après authentification avec Login / Mot de passe et OTP (Mailiz)&lt;/li&gt;
+&lt;li&gt;Carte CPS (Mailiz)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lors d&amp;rsquo;un appel à un service REST, la requête doit contenir les informations dans le header HTTP suivante :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;operator&lt;/code&gt; pour désigner l&amp;rsquo;opérateur MSS choisi (un endpoint permet de donner la &lt;a href=&#34;../operators&#34;&gt;liste des opérateurs possibles&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;userName&lt;/code&gt; pour initialiser la session SMTP/IMAP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Une fois l&amp;rsquo;&lt;code&gt;operator&lt;/code&gt; choisi et le &lt;code&gt;userName&lt;/code&gt; connu, il faut mettre à disposition dans le header HTTP les informations d&amp;rsquo;authentifications :&lt;/p&gt;
+&lt;h3 id=&#34;certificat-psc-pro-santé-connect&#34;&gt;Certificat PSC (pro santé connect)&lt;/h3&gt;
+&lt;p&gt;Cette authentification est disponible pour les &lt;strong&gt;BALs personnelles/individuelles ou organisationnelles&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Le client doit au préalable récupérer un jeton PSC (access token) via son serveur d&amp;rsquo;authentification enregistré auprès de l&amp;rsquo;ANS et le passer aux requêtes dans un header.
+Ce token est généralement valable 4-5 minutes. Le client doit donc redemander régulièrement un nouveau jeton à son serveur d&amp;rsquo;authentification.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;demo-PSC.png&#34; alt=&#34;PSC auth&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Exemple:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;headers {
+  mssAuthentication.operator: mailiz
+  mssAuthentication.psc: MIIcbAIBA...Bv4sVwVpAICCAA=
+  mssAuthentication.userName: xxx-pers@mssante.fr
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;certificat-p12-bal-applicative&#34;&gt;Certificat p12 (bal applicative)&lt;/h3&gt;
+&lt;p&gt;Cette authentification est disponible pour les &lt;strong&gt;BALs applicatives&lt;/strong&gt;.
+L&amp;rsquo;application cliente se connecte à la mssanté via un certificat p12 et le mot de passe associé qui sont passé dans les headers lors de chaque appel au connecteur.&lt;/p&gt;
+&lt;p&gt;Exemple:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;headers {
+  mssAuthentication.operator: medimail
+  mssAuthentication.password: password
+  mssAuthentication.p12: MIIcbAIBA...Bv4sVwVpAICCAA=
+  mssAuthentication.userName: xxx-applicatif-test@medimail.mssante.fr
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Le certificat p12 doit être &lt;a href=&#34;https://doc.devbox-sante.fr/6.x/connecteurs/ms-sante/howtos/base64&#34;&gt;encodé en base64&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;login-mot-de-passe-et-otp-mailiz-avec-les-api-v1&#34;&gt;Login, mot de passe et OTP (mailiz avec les API v1)&lt;/h3&gt;
+&lt;p&gt;Cette authentification est disponible pour mailiz mais avec les API v1.
+Le client s&amp;rsquo;authentifie via des services de connexion REST et doit repasser le cookie correspondant à la session courante lors de chaque appel au connecteur.&lt;/p&gt;
+&lt;p&gt;Exemple:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;headers {
+  mssAuthentication.operator: mailiz-v1
+  Cookie: JSESSIONID=1139181CDF6638784181753183EC32A5
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;carte-cps-mailiz-avec-les-api-v1&#34;&gt;Carte CPS (mailiz avec les API v1)&lt;/h3&gt;
+&lt;p&gt;Cette authentification est disponible pour mailiz mais avec les API v1.
+Le client s&amp;rsquo;authentifie l&amp;rsquo;utilitaire CPS de la DevBox Santé puis doit repasser le cookie correspondant à la session courante lors de chaque appel au connecteur.&lt;/p&gt;
+&lt;p&gt;Exemple:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bruno&#34; data-lang=&#34;bruno&#34;&gt;headers {
+  mssAuthentication.operator: mailiz-v1
+  Cookie: JSESSIONID=1139181CDF6638784181753183EC32A5
+}
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>6.x: Configuration selon les opérateurs</title>
+      <link>https://doc.devbox-sante.fr/6.x/connecteurs/ms-sante/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/6.x/connecteurs/ms-sante/configuration/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;configuration-commune&#34;&gt;configuration commune&lt;/h2&gt;
+&lt;h3 id=&#34;annuaire&#34;&gt;Annuaire&lt;/h3&gt;
+&lt;h4 id=&#34;mailiz-formation&#34;&gt;Mailiz formation&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ms-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;annuaire&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ldapHost&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;partenaires.annuaire.sante.fr&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ldapPort&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;389&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;tous-opérateurs-production&#34;&gt;Tous opérateurs production&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ms-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;annuaire&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ldapHost&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;annuaire.sante.fr&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ldapPort&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;389&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;annuaire-devbox-santé&#34;&gt;Annuaire DevBox-Santé&lt;/h3&gt;
+&lt;p&gt;Vous pouvez également &amp;ldquo;plugger&amp;rdquo; l&amp;rsquo;annuaire de la DevBox-santé en remplacement de l&amp;rsquo;annuaire LDAP.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ms-sante&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;annuaire&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;devbox&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;https://annuaire-demo.devbox-sante.fr&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;username&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;USERNAME&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;PASSWORD&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>6.x: Howtos</title>
+      <link>https://doc.devbox-sante.fr/6.x/connecteurs/ms-sante/howtos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/6.x/connecteurs/ms-sante/howtos/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>6.x: Versions</title>
+      <link>https://doc.devbox-sante.fr/6.x/connecteurs/ms-sante/versions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/6.x/connecteurs/ms-sante/versions/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;versions---3x&#34;&gt;Versions - 3.x&lt;/h1&gt;
+&lt;h1 id=&#34;version---304-06022025&#34;&gt;Version - 3.0.4 (06/02/2025)&lt;/h1&gt;
+&lt;h3 id=&#34;story&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/MSS-81&#34;&gt;MSS-81&lt;/a&gt; Documentation Swagger et front&lt;/p&gt;
+&lt;h1 id=&#34;version---303-07012025&#34;&gt;Version - 3.0.3 (07/01/2025)&lt;/h1&gt;
+&lt;h3 id=&#34;story-1&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/MSS-80&#34;&gt;MSS-80&lt;/a&gt; [Annuaire] Propriété pour choix implémentation annuaire (fix)&lt;/p&gt;
+&lt;h2 id=&#34;version-302-18122024&#34;&gt;Version 3.0.2 (18/12/2024)&lt;/h2&gt;
+&lt;h3 id=&#34;story-2&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/MSS-80&#34;&gt;MSS-80&lt;/a&gt; [Annuaire] Propriété pour choix implémentation annuaire&lt;/p&gt;
+&lt;h2 id=&#34;version---301-06122024&#34;&gt;Version - 3.0.1 (06/12/2024)&lt;/h2&gt;
+&lt;h3 id=&#34;tâche&#34;&gt;Tâche&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/MSS-75&#34;&gt;MSS-75&lt;/a&gt; [Configuration Operator] chargement dynamique basé sur GIt&lt;/p&gt;
+&lt;h3 id=&#34;bug&#34;&gt;Bug&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/MSS-79&#34;&gt;MSS-79&lt;/a&gt; [Mailiz-Formation ] SMTP auth failed sur mss-demo&lt;/p&gt;
+&lt;h3 id=&#34;story-3&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/MSS-77&#34;&gt;MSS-77&lt;/a&gt; Pouvoir envoyer un accusé de lecture&lt;/p&gt;
+&lt;h2 id=&#34;version---30-26092024&#34;&gt;Version - 3.0 (26/09/2024)&lt;/h2&gt;
+&lt;h3 id=&#34;story-4&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/MSS-71&#34;&gt;MSS-71&lt;/a&gt; [JDK21] migration java 21 spring-boot 3&lt;/p&gt;
+&lt;h1 id=&#34;versions-antérieures&#34;&gt;Versions antérieures&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://doc.devbox-sante.fr/5.x/ms-sante/versions&#34;&gt;/5.x/ms-sante/versions&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

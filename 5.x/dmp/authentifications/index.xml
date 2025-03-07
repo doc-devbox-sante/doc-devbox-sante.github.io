@@ -1,0 +1,475 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – Authentifications</title>
+    <link>https://doc.devbox-sante.fr/5.x/dmp/authentifications/</link>
+    <description>Recent content in Authentifications on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/5.x/dmp/authentifications/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>5.x: Authentification Indirecte (via certificat serveur)</title>
+      <link>https://doc.devbox-sante.fr/5.x/dmp/authentifications/indirecte/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/dmp/authentifications/indirecte/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Il s&amp;rsquo;agit de l&amp;rsquo;authentification par certificat serveur provenant de l&amp;rsquo;IGC Santé (Infrastructure de gestion de clés) qui est délivré aux différents établissements de santé.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Une documentation pour obtenir des certificats serveurs se trouve &lt;a href=&#34;https://doc.devbox-sante.fr/5.x/dmp/howtos/gestionCertificat&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ce mode d&amp;rsquo;authentification ne permet que l&amp;rsquo;alimentation de documents dans le DMP et pas la consultation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description scénario&lt;/strong&gt; : L&amp;rsquo;intégrateur héberge le Proxy DevBox-santé dans son environnement, et l&amp;rsquo;intégre comme une passerelle vers le DMP.&lt;/p&gt;
+&lt;h4 id=&#34;version-rest&#34;&gt;Version REST&lt;/h4&gt;
+&lt;h5 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+[FrontEnd intégrateur] as frontend
+
+node &amp;#34;Environnement intégrateur&amp;#34; {
+   [BackEnd intégrateur] as backend
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34;  DEVBOX_COLOR {
+        package &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade DMP_COLOR {
+            [P12Manager] as P12Manager DMP_COLOR
+        }
+    }
+}
+cloud &amp;#34;**DMP**&amp;#34; as DMP
+
+frontend -down-&amp;gt; backend
+backend -right-&amp;gt; dmpFacade: REST
+dmpFacade -down-&amp;gt; DMP : SOAP
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;version-embedded&#34;&gt;Version Embedded&lt;/h4&gt;
+&lt;h5 id=&#34;diagramme-de-composants-1&#34;&gt;Diagramme de composants&lt;/h5&gt;
+&lt;p&gt;L&amp;rsquo;architecture du mode embedded peut être représentée par ce schéma :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+[FrontEnd intégrateur] as frontend
+
+node &amp;#34;Environnement intégrateur&amp;#34; {
+   component &amp;#34;BackEnd intégrateur&amp;#34; as backend {
+        component &amp;#34;DevBox-Santé DMP&amp;#34; as DMPC_API  DMP_COLOR {
+            [P12Manager] as P12Manager DMP_COLOR
+        }
+    }
+}
+cloud &amp;#34;**DMP**&amp;#34; as DMP
+
+frontend -down-&amp;gt; backend
+DMPC_API -d-&amp;gt; DMP : SOAP XDS / CDA
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Authentification Indirecte Renforcee AIR</title>
+      <link>https://doc.devbox-sante.fr/5.x/dmp/authentifications/indirecte_renforce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/dmp/authentifications/indirecte_renforce/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Techniquement, il s&amp;rsquo;agit de la même authentification que l&amp;rsquo;authentification Indirecte. L&amp;rsquo;impact majeur se situe sur le jeton VIHF.&lt;/p&gt;
+&lt;p&gt;Il s&amp;rsquo;agit pour l&amp;rsquo;intégrateur/établissement de mettre en place une authentification forte de leurs utilisateurs. Une fois authentifiée, l&amp;rsquo;autorisation de l&amp;rsquo;utilisateur à solliciter le système DMP doit être vérifiée par la structure de soins. Une fois autorisée l&amp;rsquo;utilisateur se connecte sur le serveur DMP avec le certificat de l&amp;rsquo;établissement et un jeton VIHF spécifique :&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+
+!define DARK_COLOR #0073bb
+hide footbox
+
+actor &amp;#34;Professionnel de Santé&amp;#34; as utilisateur DARK_COLOR
+participant &amp;#34;Navigateur&amp;#34; as navigateur DARK_COLOR
+participant &amp;#34;Modules métiers \n\nintégrateur&amp;#34; as backend
+participant &amp;#34;DevBox-Santé DMP&amp;#34; as dbxdmp DMP_COLOR
+participant &amp;#34;**DMP**&amp;#34; as dmp DARK_COLOR
+
+utilisateur -&amp;gt; navigateur : Connexion
+activate utilisateur
+activate navigateur
+navigateur -&amp;gt; backend : Connexion
+activate backend
+note over navigateur, backend: Authentification primaire forte de l&amp;#39;utilisateur 
+backend --&amp;gt; navigateur : utilisateur authentifié
+deactivate backend
+navigateur --&amp;gt; utilisateur
+deactivate navigateur
+
+utilisateur -&amp;gt; navigateur
+activate navigateur
+navigateur -&amp;gt; backend : accède à une foncion DMP
+activate backend
+backend -&amp;gt; dbxdmp : POST /dmp/xxx {context: {air : true, samlAuthnContext: ...}
+activate dbxdmp
+note over dbxdmp : Forge du jeton vihf , génération trace\n Génération requete XDS pour DMP
+dbxdmp -&amp;gt; dmp : POST SOAP IHE/XDS
+activate dmp
+dmp--&amp;gt; dbxdmp : response &amp;lt;SOAP&amp;gt; 
+deactivate dmp
+dbxdmp -&amp;gt; backend : response {json}
+deactivate dbxdmp
+backend -&amp;gt; navigateur : response &amp;lt;html&amp;gt;
+deactivate backend
+navigateur --&amp;gt; utilisateur
+deactivate navigateur
+deactivate utilisateur
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;L’inscription dans ce mode est soumise à une auto-homologation de la part du directeur de l’établissement qui engage la responsabilité de sa structure sur le respect du référentiel d’exigences du DMP.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Celles-ci sont d’ordre organisationnel, technique et sécuritaire. Elles portent sur toute la chaîne d’authentification de l’utilisateur, depuis le processus d’enrôlement jusqu’au transport du jeton d’identification et d’habilitation (VIHF) pour l’accès au DMP. Cela passe par une authentification primaire forte de l’utilisateur.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Authentification Directe (via carte CPx)</title>
+      <link>https://doc.devbox-sante.fr/5.x/dmp/authentifications/directe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/dmp/authentifications/directe/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Ce mode d&amp;rsquo;authentification nécessite l&amp;rsquo;installation sur le poste client d&amp;rsquo;un lecteur de carte CPS ainsi que le composant DevBox-santé. Le professionnel de santé doit posséder une carte CPS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Scénario possible&lt;/strong&gt; : Le frontend/client lourd s&amp;rsquo;exécutant sur le poste client de l&amp;rsquo;utilisateur accède au DMP grâce à la DevBox-Santé DMP installé sur le poste client._&lt;/p&gt;
+&lt;h4 id=&#34;version-rest&#34;&gt;Version REST&lt;/h4&gt;
+&lt;h5 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+node &amp;#34;Poste Client (Windows/Mac/Linux)&amp;#34; {
+    [FrontEnd intégrateur] as frontend
+
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34;  DEVBOX_COLOR {
+        component &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade #35D9C0 {
+            [DevBox-sante CPS] as cps #D34A3C
+
+        }
+    }
+    [Cryptolib CPS (ANS)] as cryptolibCPS
+}
+[BackEnd intégrateur] as backend
+cloud &amp;#34;**DMP**&amp;#34; as DMP
+
+frontend -right-&amp;gt; dmpFacade : REST
+cps &amp;lt;-up-&amp;gt; cryptolibCPS : appel natif
+dmpFacade -down-&amp;gt; DMP : SOAP
+frontend  -down-&amp;gt; backend
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;version-embedded&#34;&gt;Version Embedded&lt;/h4&gt;
+&lt;h5 id=&#34;diagramme-de-composants-1&#34;&gt;Diagramme de composants&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+node &amp;#34;Poste Client (Windows/Mac/Linux)&amp;#34; {
+    component &amp;#34;Client de l&amp;#39;intégrateur&amp;#34; {
+        component &amp;#34;DevBox-Santé Proxy REST&amp;#34;  DEVBOX_COLOR {
+            component &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade #35D9C0 {
+                [DevBox-sante CPS] as cps #D34A3C
+
+            }
+        }
+    }
+    [Cryptolib CPS (ANS)] as cryptolibCPS
+}
+cloud &amp;#34;**DMP**&amp;#34; as DMP
+
+cps &amp;lt;--&amp;gt; cryptolibCPS : appel natif
+dmpFacade --&amp;gt; DMP : SOAP
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;diagramme-de-séquences&#34;&gt;Diagramme de séquences&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+
+box &amp;#34;Poste Client&amp;#34;
+participant frontend
+participant &amp;#34;DevBox-Santé DMP&amp;#34; as dbxdmp DMP_COLOR
+participant &amp;#34;DevBox-Santé CPS&amp;#34; as dbxCps CPS_COLOR
+end box
+
+participant &amp;#34;**DMP**&amp;#34; as dmp
+
+frontend -&amp;gt; dbxdmp : /dmp/td21SubmitDocuments
+==  initialisation d&amp;#39;une connexion SSL en authentification mutuelle avec le DMP ==
+dbxdmp -&amp;gt; &amp;#34;DMP&amp;#34; as dmp : [SSL] 1. Client Hello
+dmp -&amp;gt; dbxdmp : [SSL] 2. Server Hello (certificat du DMP server inclus)
+dmp -&amp;gt; dbxdmp : [SSL] 3. Client certificate request
+dbxdmp -&amp;gt; dbxCps : readAuthenticationCertificate
+dbxCps -&amp;gt; dbxdmp : {certificate authentification}
+dbxdmp -&amp;gt; dmp : [SSL] 4. Client certificate
+dbxdmp -&amp;gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public&amp;#39;s key)
+dbxdmp -&amp;gt; dbxCps : signForAuthentication(SHA256WithRSA, hanshake data)
+dbxCps -&amp;gt; dbxdmp : {signed handshake data}
+dbxdmp -&amp;gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
+dbxdmp -&amp;gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
+dmp -&amp;gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)
+== fin de l&amp;#39;initialisation de la connexion ssl avec le DMP ==
+dbxdmp -&amp;gt; dmp : POST SOAP message de soumission (XDS/CDA)
+dmp -&amp;gt; dbxdmp : SOAP response OK
+dbxdmp -&amp;gt; frontend : ok
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Authentification Directe via le CPS Agent</title>
+      <link>https://doc.devbox-sante.fr/5.x/dmp/authentifications/cps_agent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/dmp/authentifications/cps_agent/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;authentification-directe-avec-cpsagent&#34;&gt;Authentification Directe avec CPS Agent&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Scenario possible&lt;/strong&gt; : Le frontend de l&amp;rsquo;intégrateur, passe le contexte d&amp;rsquo;authentification de la DevBox-Santé CPS agent se trouvant sur le poste client au backend. Le backend initie une session TLS/SSL avec le serveur DMP grâce au CpsAgentClient.&lt;/p&gt;
+&lt;h4 id=&#34;diagramme-de-composants&#34;&gt;Diagramme de composants&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;
+!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+
+node &amp;#34;Poste Client (Windows/Mac/Linux)&amp;#34; {
+    [FrontEnd intégrateur] as frontend
+
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34; as cpsAgent DEVBOX_COLOR {
+            [DevBox-sante CPS] as cps CPS_COLOR
+
+    }
+    [Cryptolib CPS (ANS)] as cryptolibCPS
+}
+
+node &amp;#34;Environnement intégrateur&amp;#34; {
+   [BackEnd intégrateur] as backend
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34; DEVBOX_COLOR {
+        component &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade DMP_COLOR {
+            [CpsAgentClient] CPS_COLOR
+        }
+    }
+}
+cloud &amp;#34;**DMP**&amp;#34; as DMP
+
+frontend -d-&amp;gt; backend : 1
+backend -d-&amp;gt; dmpFacade  : 2
+CpsAgentClient -&amp;gt; cpsAgent : 3
+cps -down-&amp;gt; cryptolibCPS : 4
+dmpFacade -down-&amp;gt; DMP : 5
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;diagramme-de-séquences&#34;&gt;Diagramme de séquences&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+box &amp;#34;Poste Client&amp;#34;
+participant frontend
+participant cpsAgent CPS_COLOR
+end box
+
+box &amp;#34;Environnement intégrateur&amp;#34; #white
+participant &amp;#34;DevBox-Santé DMP&amp;#34; as dbxdmp DMP_COLOR
+participant backend
+end box
+
+participant &amp;#34;**DMP**&amp;#34; as dmp
+
+frontend -&amp;gt; backend : storeDocumentPatient
+backend -&amp;gt; dbxdmp : /dmp/td21SubmitDocuments
+==  initialisation d&amp;#39;une connexion SSL en authentification mutuelle avec le DMP ==
+dbxdmp -&amp;gt; &amp;#34;DMP&amp;#34; as dmp : [SSL] 1. Client Hello
+dmp -&amp;gt; dbxdmp : [SSL] 2. Server Hello (certificat du DMP server inclus)
+dmp -&amp;gt; dbxdmp : [SSL] 3. Client certificate request
+dbxdmp -&amp;gt; cpsAgent : HTTP GET /cps/authenticationCertificate
+cpsAgent -&amp;gt; dbxdmp : {certificate authentification}
+dbxdmp -&amp;gt; dmp : [SSL] 4. Client certificate
+dbxdmp -&amp;gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public&amp;#39;s key)
+dbxdmp -&amp;gt; cpsAgent : HTTP POST /cps/sign/for/authentication/SHA256WithRSA body : {handshake data}
+cpsAgent -&amp;gt; dbxdmp : {signed handshake data}
+dbxdmp -&amp;gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
+dbxdmp -&amp;gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
+dmp -&amp;gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)
+== fin de l&amp;#39;initialisation de la connexion ssl avec le DMP ==
+dbxdmp -&amp;gt; dmp : POST SOAP message de soumission (XDS/CDA)
+dmp -&amp;gt; dbxdmp : SOAP response OK
+dbxdmp -&amp;gt; backend : HTTP 200 Ok
+backend -&amp;gt; frontend : ok
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Authentification Directe via OLAQIN TAAS (Terminal As A Service)</title>
+      <link>https://doc.devbox-sante.fr/5.x/dmp/authentifications/olaqin_taas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/dmp/authentifications/olaqin_taas/</guid>
+      <description>
+        
+        
+        &lt;p&gt;OLAQIN TAAS (Terminal As A Service) est une technologie développée par la société OLAQIN qui permet aux APIs de la DevBox-Santé DMP d&amp;rsquo;accéder à des terminaux OLAQIN via le réseau Internet.&lt;/p&gt;
+&lt;p&gt;Les terminaux OLAQIN compatibles avec la technologie OLAQIN TAAS fournit des accès aux cartes Vitale et CPS au travers d’API.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;OLAQIN_TAAS_architecture.png&#34; alt=&#34;OLAQIN_TAAS architecture&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pour l’accès aux cartes Vitale, Olaqin s’appuie sur son homologation « Lecture Vitale » (via l’option API). Pour l’accès aux cartes des Professionnels de Santé, Olaqin s’appuie sur les développements réalisés dans le cadre de son homologation « Dispositif Intégré ».&lt;/p&gt;
+&lt;h2 id=&#34;intégration-dans-la-devbox-santé&#34;&gt;Intégration dans la DevBox-santé&lt;/h2&gt;
+&lt;p&gt;Vous pouvez donc installer votre solution DevBox-santé DMP dans votre environnement serveur HDS et utiliser les terminaux Olaqin.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+node &amp;#34;Environnement Utilisateur&amp;#34; {
+    package &amp;#34;Poste client / mobile&amp;#34; {
+        [FrontEnd intégrateur] as frontend
+    }
+    [Lecteur Neo] as lecteur
+}
+
+node &amp;#34;Environnement intégrateur HDS&amp;#34; {
+    [BackEnd intégrateur] as backend
+    package &amp;#34;DevBox-Santé Proxy REST&amp;#34;  DEVBOX_COLOR {
+        component &amp;#34;DevBox-sante DMP&amp;#34; as dmpFacade #35D9C0 {
+            [DevBox-sante CPS security Stellair] as cpsStellair #D34A3C
+        }
+    }
+}
+cloud &amp;#34;**Stellair** API&amp;#34; as stellair
+cloud &amp;#34;**DMP**&amp;#34; as DMP
+
+frontend -up-&amp;gt; backend : REST
+backend -&amp;gt; dmpFacade : REST
+cpsStellair -&amp;gt; stellair: REST
+stellair &amp;lt;-&amp;gt; lecteur : Demande d&amp;#39;autorisation d&amp;#39;accès aux cartes via le SSO Stellair
+dmpFacade -&amp;gt; DMP : SOAP
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;diagramme-de-séquences&#34;&gt;Diagramme de séquences&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-plantuml&#34; data-lang=&#34;plantuml&#34;&gt;!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+box &amp;#34;Environnement utilisateur&amp;#34;
+    participant &amp;#34;Poste client&amp;#34; as frontend
+    participant &amp;#34;Lecteur Neo&amp;#34; as lecteur
+end box
+
+box &amp;#34;Environnement intégrateur&amp;#34; #white
+participant backend
+participant &amp;#34;DevBox-Santé DMP&amp;#34; as dbxdmp DMP_COLOR
+end box
+participant &amp;#34;**DMP**&amp;#34; as dmp
+participant &amp;#34;**Stellair**&amp;#34; as stellair
+
+
+frontend -&amp;gt; backend : storeDocumentPatient
+backend -&amp;gt; dbxdmp : /dmp/td21SubmitDocuments
+==  initialisation d&amp;#39;une connexion SSL en authentification mutuelle avec le DMP ==
+dbxdmp -&amp;gt; &amp;#34;DMP&amp;#34; as dmp : [SSL] 1. Client Hello
+dmp -&amp;gt; dbxdmp : [SSL] 2. Server Hello (certificat du DMP server inclus)
+dmp -&amp;gt; dbxdmp : [SSL] 3. Client certificate request
+dbxdmp -&amp;gt; stellair : HTTP GET /cps/certificate/auth
+...
+stellair &amp;lt;-&amp;gt; lecteur
+...
+stellair -&amp;gt; dbxdmp : {certificate authentification}
+dbxdmp -&amp;gt; dmp : [SSL] 4. Client certificate
+dbxdmp -&amp;gt; dmp : [SSL] 5. Client sends key info \n(encrypted with DMP server public&amp;#39;s key)
+dbxdmp -&amp;gt; stellair : HTTP POST /cps/certificate/auth body : {handshake data}
+...
+stellair &amp;lt;-&amp;gt; lecteur
+...
+stellair -&amp;gt; dbxdmp : {signed handshake data}
+dbxdmp -&amp;gt; dmp : [SSL] 6. Certificate verify \n (with Digital Signature)
+dbxdmp -&amp;gt; dmp : [SSL] 7. Finnished message \n (encrypted with symmetric key)
+dmp -&amp;gt; dbxdmp : [SSL] 8. Finnished message \n (encrypted with symmetric key)
+== fin de l&amp;#39;initialisation de la connexion ssl avec le DMP ==
+dbxdmp -&amp;gt; dmp : POST SOAP message de soumission (XDS/CDA)
+dmp -&amp;gt; dbxdmp : SOAP response OK
+dbxdmp -&amp;gt; backend : HTTP 200 Ok
+backend -&amp;gt; frontend : ok
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

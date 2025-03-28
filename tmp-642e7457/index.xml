@@ -1,0 +1,91 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – Tmp</title>
+    <link>https://doc.devbox-sante.fr/tmp-642e7457/</link>
+    <description>Recent content in Tmp on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/tmp-642e7457/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Tmp-642e7457: Test connect</title>
+      <link>https://doc.devbox-sante.fr/tmp-642e7457/9dbca392-3767-4aa1-b758-5193c465c3a5/</link>
+      <pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/tmp-642e7457/9dbca392-3767-4aa1-b758-5193c465c3a5/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;procédure&#34;&gt;Procédure&lt;/h2&gt;
+&lt;h3 id=&#34;prérequis&#34;&gt;Prérequis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;un Java Runtime 21 ou supérieur installé&lt;/li&gt;
+&lt;li&gt;un lecteur PC/SC contenant une carte CPS de test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;installation&#34;&gt;installation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;télécharger : &lt;a href=&#34;https://installers.devbox-sante.fr/installer/devcoop/246f92a4-0340-4e0e-8874-6accb8a33f94/DEV/dmp-test-connect.jar&#34;&gt;https://installers.devbox-sante.fr/installer/devcoop/246f92a4-0340-4e0e-8874-6accb8a33f94/DEV/dmp-test-connect.jar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Unzip &lt;code&gt;dmp-test-connect.jar&lt;/code&gt; pour obtenir :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;image.png&#34; alt=&#34;unzip&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Depuis un terminal, lancer le fichier batch sur l&amp;rsquo;environnement souhaité :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;launch.bat https://lps.dev1.dmp.gouv.fr/si-dmp-server/v2/services
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;ou encore directement en ligne de commande :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; java --add-exports=jdk.crypto.cryptoki/sun.security.pkcs11.wrapper=ALL-UNNAMED -jar dmp-demo-test-td02-2.0-SNAPSHOT-exec.jar https://lps.dev1.dmp.gouv.fr/si-dmp-server/v2/services
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;analyse-des-logs-générés-côté-client&#34;&gt;Analyse des logs générés côté client&lt;/h2&gt;
+&lt;p&gt;À la fin de l&amp;rsquo;exécution vous avez dans les logs toutes la négociation tls avec le serveur :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Client Hello :
+&lt;img src=&#34;image-1.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Server Hello :
+&lt;img src=&#34;image-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Réception du certificat serveur :
+&lt;img src=&#34;image-3.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Réception de la demande de certificat client par le serveur :
+&lt;img src=&#34;image-4.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Envoi du certificat client
+&lt;img src=&#34;image-5.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Envoi de la signature cliente :
+&lt;img src=&#34;image-6.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;le drame sur dev1&lt;/strong&gt; :
+&lt;img src=&#34;image-7.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;le SUCCES sur formation&lt;/strong&gt; :
+&lt;img src=&#34;image-8.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Voici les logs obtenus pour les deux environnements :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;dev1.log&#34;&gt;dev1.log&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;formation1.log&#34;&gt;formation1.log&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

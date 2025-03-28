@@ -1,0 +1,252 @@
+{
+    "context": {
+        "auteur": {
+            "identifiantInterne": "1234"
+        },
+        "structure": {
+            "identifiantFacturation": "123456789"
+        }
+    },
+    "lotIdentifiants": [
+        {
+            "matriculeINS": {
+                "valeur": "1010663220754",
+                "cle": "60",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "D'ARTAGNAN DE L'HERAULT",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "PIERRE-ALAIN GUNTHER",
+                "sexeAdministratif": "M",
+                "dateNaissance": "2001-06-17",
+                "lieuNaissance": "63220"
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "160012B020777",
+                "cle": "13",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "ADRTROIS",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "TOUSSAINT",
+                "sexeAdministratif": "M",
+                "dateNaissance": "1960-01-01",
+                "lieuNaissance": "20020"
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "297022A020778",
+                "cle": "78",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "ADRTROIS",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "DOMINIQUE",
+                "sexeAdministratif": "F",
+                "dateNaissance": "1997-02-26",
+                "lieuNaissance": "20020"
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "2751263220749",
+                "cle": "74",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "ADRUN",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "ZOE",
+                "sexeAdministratif": "F",
+                "dateNaissance": "1975-12-31",
+                "lieuNaissance": "63220"
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "2770763220829",
+                "cle": "10",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "NESSI",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "RUTH ISABELLE",
+                "sexeAdministratif": "F",
+                "dateNaissance": "1977-07-14",
+                "lieuNaissance": "63220"
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "1100863220830",
+                "cle": "60",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "NESSI",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "MICHELANGELO ANTHONY",
+                "sexeAdministratif": "M",
+                "dateNaissance": "2010-08-07",
+                "lieuNaissance": "63220"
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "1100863220831",
+                "cle": "59",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "DE VINCI",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "DONATELLO THIERRY MICHEL",
+                "sexeAdministratif": "M",
+                "dateNaissance": "2010-08-07",
+                "lieuNaissance": "63220"
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "1100863220832",
+                "cle": "58",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "DE VINCI",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "RAPHAEL",
+                "sexeAdministratif": "M",
+                "dateNaissance": "2010-08-07",
+                "lieuNaissance": "63220"
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "1140263220833",
+                "cle": "56",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "DE VINCI",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "LEONARDO PIERO",
+                "sexeAdministratif": "M",
+                "dateNaissance": "2014-02-01",
+                "lieuNaissance": "63220"
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "1090763220834",
+                "cle": "89",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "ECETINSI",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "PIERRE-ALAIN MURIEL FLORIANT",
+                "sexeAdministratif": "M",
+                "dateNaissance": "2009-07-14",
+                "lieuNaissance": "63220"
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "2360663220836",
+                "cle": "56",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "TCHITCHI",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "CATARINA BELLA",
+                "sexeAdministratif": "F",
+                "dateNaissance": "1936-06-21",
+                "lieuNaissance": "63220"
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "1750163220748",
+                "cle": "46",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "ADRUN",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "BAPTISTE",
+                "sexeAdministratif": "M",
+                "dateNaissance": "1975-01-01",
+                "lieuNaissance": null
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "2770763220829",
+                "cle": "10",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "NESSI",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "NATHALIE",
+                "sexeAdministratif": "F",
+                "dateNaissance": "1977-07-14",
+                "lieuNaissance": "63220"
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "1750163220748",
+                "cle": "46",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "ADRUN",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "BAPTISTE",
+                "sexeAdministratif": "M",
+                "dateNaissance": "1975-01-01",
+                "lieuNaissance": null
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "1090763220888",
+                "cle": "35",
+                "identifiantSysteme": "INS_NIA"
+            },
+            "traitsIdentite": {
+                "nomFamille": "PROVISOIRE",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "MATRICULE",
+                "sexeAdministratif": "M",
+                "dateNaissance": "2009-07-01",
+                "lieuNaissance": "63220"
+            }
+        },
+        {
+            "matriculeINS": {
+                "valeur": "2770763220829",
+                "cle": "10",
+                "identifiantSysteme": "INS_NIR"
+            },
+            "traitsIdentite": {
+                "nomFamille": "NESSI",
+                "prenomUtilise": null,
+                "prenomActeNaissance": "NATHALIE",
+                "sexeAdministratif": "F",
+                "dateNaissance": "1977-07-14",
+                "lieuNaissance": "63220"
+            }
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – CPS Agent Livre de cuisine</title>
+    <link>https://doc.devbox-sante.fr/5.x/dmp/authentifications/cps_agent/agent_cookbook/</link>
+    <description>Recent content in CPS Agent Livre de cuisine on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/5.x/dmp/authentifications/cps_agent/agent_cookbook/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,56 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – ApCV</title>
+    <link>https://doc.devbox-sante.fr/5.x/apcv/</link>
+    <description>Recent content in ApCV on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/5.x/apcv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>5.x: Howtos</title>
+      <link>https://doc.devbox-sante.fr/5.x/apcv/howtos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/apcv/howtos/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>5.x: Versions</title>
+      <link>https://doc.devbox-sante.fr/5.x/apcv/versions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/5.x/apcv/versions/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;version-101-25082023&#34;&gt;Version 1.0.1 (25/08/2023)&lt;/h2&gt;
+&lt;h3 id=&#34;tâche&#34;&gt;Tâche&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/CIAMO-6&#34;&gt;CIAMO-6&lt;/a&gt; : configuration TLSv1.3&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/ANS-8&#34;&gt;ANS-8&lt;/a&gt; : Retourne un wrapper de trustManager qui délégue a un trustmanager initialisé à la vol&lt;/p&gt;
+&lt;h2 id=&#34;version-10-05062023&#34;&gt;Version 1.0 (05/06/2023)&lt;/h2&gt;
+&lt;h3 id=&#34;tâche-1&#34;&gt;Tâche&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/APCV-4&#34;&gt;APCV-4&lt;/a&gt; [ApCV] Homologation CNDA&lt;/p&gt;
+&lt;h2 id=&#34;version-02-11052023&#34;&gt;Version 0.2 (11/05/2023)&lt;/h2&gt;
+&lt;h3 id=&#34;amélioration&#34;&gt;Amélioration&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/APCV-2&#34;&gt;APCV-2&lt;/a&gt; [Spring] Éviter conflit entre les beans ApCV, INSi, DMP&lt;/p&gt;
+&lt;h2 id=&#34;version-01-10052023&#34;&gt;Version 0.1 (10/05/2023)&lt;/h2&gt;
+&lt;h3 id=&#34;nouvelle-fonctionnalité&#34;&gt;Nouvelle fonctionnalité&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/APCV-1&#34;&gt;APCV-1&lt;/a&gt; Implémentation du client Authentification ApCV&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

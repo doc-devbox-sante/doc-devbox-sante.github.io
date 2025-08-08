@@ -1,0 +1,82 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevBox-Santé – PFI</title>
+    <link>https://doc.devbox-sante.fr/6.x/plateformes/pfi/</link>
+    <description>Recent content in PFI on DevBox-Santé</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://doc.devbox-sante.fr/6.x/plateformes/pfi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>6.x: Versions</title>
+      <link>https://doc.devbox-sante.fr/6.x/plateformes/pfi/versions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.devbox-sante.fr/6.x/plateformes/pfi/versions/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;version---10-alpha-05082025&#34;&gt;Version - 1.0-alpha (05/08/2025)&lt;/h2&gt;
+&lt;h3 id=&#34;tâche&#34;&gt;Tâche&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-26&#34;&gt;PFI-26&lt;/a&gt; SC.SSI/GEN.01 Démarche SSI chez l&amp;rsquo;éditeur de la solution logicielle&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-27&#34;&gt;PFI-27&lt;/a&gt; SC.SSI/GEN.02 Démarche SSI chez l&amp;rsquo;éditeur de la solution logicielle&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-28&#34;&gt;PFI-28&lt;/a&gt; SC.SSI/GEN.03 Démarche SSI chez l&amp;rsquo;éditeur de la solution logicielle&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-29&#34;&gt;PFI-29&lt;/a&gt; SC.SSI/GEN.11 Démarche SSI chez l&amp;rsquo;éditeur de la solution logicielle&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-30&#34;&gt;PFI-30&lt;/a&gt; SC.SSI/GEN.20 Démarche SSI chez l&amp;rsquo;éditeur de la solution logicielle&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-31&#34;&gt;PFI-31&lt;/a&gt; SC.SSI/GEN.18 Test d&amp;rsquo;intrusion&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-34&#34;&gt;PFI-34&lt;/a&gt; SC.SSI/GEN.21 Gestion des sauvegardes&lt;/p&gt;
+&lt;h3 id=&#34;amélioration&#34;&gt;Amélioration&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-1&#34;&gt;PFI-1&lt;/a&gt; PFI.CDA/HL7.01 Interopérabilité entre le LPS et la fonction PFI en environnement hospitalier&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-2&#34;&gt;PFI-2&lt;/a&gt; PFI.CDA/HL7.02 Interopérabilité entre le LPS et la fonction PFI en environnement hospitalier&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-3&#34;&gt;PFI-3&lt;/a&gt; PFI.CDA/HL7.03 Interopérabilité entre le LPS et la fonction PFI en environnement hospitalier&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-5&#34;&gt;PFI-5&lt;/a&gt; PFI.DMP/CONF.08 Homologation CNDA&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-6&#34;&gt;PFI-6&lt;/a&gt; SC.DMP/ALI/PROG.06 Alimentation systématique de Mon espace santé&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-7&#34;&gt;PFI-7&lt;/a&gt; SC.DMP/ALI/PROG.07 Alimentation systématique de Mon espace santé&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-8&#34;&gt;PFI-8&lt;/a&gt; SC.DB/PFI.01 Interopérabilité entre le LPS et la fonction PFI en environnement hospitalier&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-9&#34;&gt;PFI-9&lt;/a&gt; SC.MSS/CONF.01&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-10&#34;&gt;PFI-10&lt;/a&gt; SC.MSS/CONF.03&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-11&#34;&gt;PFI-11&lt;/a&gt; SC.MSS/CONF.05&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-12&#34;&gt;PFI-12&lt;/a&gt; SC.MSS/CONF.06&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-13&#34;&gt;PFI-13&lt;/a&gt; SC.MSS/CONF.12&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-14&#34;&gt;PFI-14&lt;/a&gt; SC.MSS/CONF.14&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-15&#34;&gt;PFI-15&lt;/a&gt; SC.MSS/CONF.15&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-16&#34;&gt;PFI-16&lt;/a&gt; SC.MSS/CONF.16 Interopérabilité avec les opérateurs de MSSanté&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-17&#34;&gt;PFI-17&lt;/a&gt; SC.MSS/CONF.17 Production et conservation de traces MSS&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-18&#34;&gt;PFI-18&lt;/a&gt; SC.MSS/CONF.18 Production et conservation de traces MSS&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-21&#34;&gt;PFI-21&lt;/a&gt; SC.MSS/UX.01&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-22&#34;&gt;PFI-22&lt;/a&gt; PFI.MSS/UX.37 Production et conservation de traces MSS&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-23&#34;&gt;PFI-23&lt;/a&gt; SC.MSS/CONF.21 Envoi sécurisé vers la messagerie de Mon espace santé d&amp;rsquo;un patient&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-24&#34;&gt;PFI-24&lt;/a&gt; PFI.MSS/UX.11 Intégration et gestion des documents reçus par MSSanté&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-25&#34;&gt;PFI-25&lt;/a&gt; PFI.MSS/UX.12 Intégration et gestion des documents reçus par MSSanté&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-32&#34;&gt;PFI-32&lt;/a&gt; SC.SSI/IAM.92 Gestion des comptes, des permissions et des sessions des administrateurs et des utilisateurs&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-35&#34;&gt;PFI-35&lt;/a&gt; SC.SSI/IAM.91 Production et conservation de traces&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-36&#34;&gt;PFI-36&lt;/a&gt; SC.STAT/ES.02 Production d&amp;rsquo;indicateurs&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-37&#34;&gt;PFI-37&lt;/a&gt; INS/va1.16 Conformité INS et gestion du téléservice INSi&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-38&#34;&gt;PFI-38&lt;/a&gt; DMP/va1.01 Alimentation systématique de Mon espace santé&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-39&#34;&gt;PFI-39&lt;/a&gt; MSS/va1.04 Envoi de messages et de documents CDA R2 par MSSanté&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-42&#34;&gt;PFI-42&lt;/a&gt; MSS/va1.12&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-43&#34;&gt;PFI-43&lt;/a&gt; MSS/va1.14&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-44&#34;&gt;PFI-44&lt;/a&gt; MSS/va1.16&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-45&#34;&gt;PFI-45&lt;/a&gt; MSS/va1.17&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-46&#34;&gt;PFI-46&lt;/a&gt; MSS/va1.19 Envoi de messages et de documents CDA R2 par MSSanté&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-52&#34;&gt;PFI-52&lt;/a&gt; Fournir une distrib MLLP lié au LicenceManager&lt;/p&gt;
+&lt;h3 id=&#34;nouvelle-fonctionnalité&#34;&gt;Nouvelle fonctionnalité&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-19&#34;&gt;PFI-19&lt;/a&gt; SC.MSS/CONF.22 Interopérabilité avec les opérateurs de MSSanté&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-20&#34;&gt;PFI-20&lt;/a&gt; SC.MSS/CONF.27 Interopérabilité avec les opérateurs de MSSanté&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-33&#34;&gt;PFI-33&lt;/a&gt; SC.SSI/IE.39 Gestion des comptes, des permissions et des sessions des administrateurs et des utilisateurs&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-40&#34;&gt;PFI-40&lt;/a&gt; MSS/va1.08 Envoi de messages et de documents CDA R2 par MSSanté&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-41&#34;&gt;PFI-41&lt;/a&gt; MSS/va1.09&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-48&#34;&gt;PFI-48&lt;/a&gt; [Admin] vue synthétique des deux collections pfiHl7MessageReceiveStatusInfo et pfiXdmReceiveStatusInfo&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://devbox-sante.atlassian.net/browse/PFI-49&#34;&gt;PFI-49&lt;/a&gt; [MSS ECO.2.1.6] Nommage du fichier PDF&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Migration 1.2 vers la 2.0 on DevBox-Santé</title>
+    <link>https://example.docsy.dev/5.x/ms-sante/howtos/migrations/1.2_2.0/</link>
+    <description>Recent content in Migration 1.2 vers la 2.0 on DevBox-Santé</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://example.docsy.dev/5.x/ms-sante/howtos/migrations/1.2_2.0/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

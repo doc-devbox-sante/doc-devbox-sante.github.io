@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conformité CNDA on DevBox-Santé</title>
+    <link>https://example.docsy.dev/5.x/insi/howtos/testcnda/</link>
+    <description>Recent content in Conformité CNDA on DevBox-Santé</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <atom:link href="https://example.docsy.dev/5.x/insi/howtos/testcnda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Déclarations</title>
+      <link>https://example.docsy.dev/5.x/insi/howtos/testcnda/declarations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/5.x/insi/howtos/testcnda/declarations/</guid>
+      <description>&lt;h3 id=&#34;test-102&#34;&gt;Test 1.02&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#test-102&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Le connecteur devbox-santé-insi est conforme au niveau 1 de sécurité. En effet, avant tout appel au TéléService INSi, la carte vitale est lue et une nouvelle assertion est générée.&#xA;Donc quelque soit le délai d&amp;rsquo;attente, la recherche se fera sur l&amp;rsquo;individu séléctionné de la carte vitale insérée.&lt;/p&gt;&#xA;&lt;p&gt;Le cas 2 n&amp;rsquo;est pas reproductible dans notre cas, car la requête est transmise directement après la sélection du bénéficiaire.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

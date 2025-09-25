@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Howtos on DevBox-Santé</title>
+    <link>https://doc.devbox-sante.fr/6.x/connecteurs/insi/howtos/</link>
+    <description>Recent content in Howtos on DevBox-Santé</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <atom:link href="https://doc.devbox-sante.fr/6.x/connecteurs/insi/howtos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CNDA : Fiche d&#39;identité du composant INSi</title>
+      <link>https://doc.devbox-sante.fr/6.x/connecteurs/insi/howtos/identifiantcomposant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://doc.devbox-sante.fr/6.x/connecteurs/insi/howtos/identifiantcomposant/</guid>
+      <description>&lt;p&gt;NIE DEVCOOP : DEV331918&lt;/p&gt;&#xA;&lt;h2 id=&#34;homologation-du-25082021&#34;&gt;Homologation du 25/08/2021&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#homologation-du-25082021&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Nom du logiciel : &lt;strong&gt;DEVBOX_SANTE_INSI&lt;/strong&gt;_&lt;/li&gt;&#xA;&lt;li&gt;Version : &lt;strong&gt;2.0&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;NIL : &lt;strong&gt;DEV428043&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Homologation package GIE SV : &lt;strong&gt;04.00&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;versions-des-composants-intégrés&#34;&gt;Versions des composants intégrés&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#versions-des-composants-int%c3%a9gr%c3%a9s&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Crypto librairie CPS : Version 5.1.7&lt;/li&gt;&#xA;&lt;li&gt;API lecture vitale : Version 6.32&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;description&#34;&gt;Description&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#description&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&#xA;&lt;p&gt;La DevBox-Santé INSI est un connecteur homologué par le CNDA qui s’interface avec le téléservice INSi.&#xA;Elle prend en charge la complexité de l’intégration et facilite ainsi aux éditeurs de logiciel de santé l’intéropérabilité avec l’INSi en vous fournissant une API simple à utiliser.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+{
+    "context": {
+        "auteur": {
+            "identifiantInterne": "1234"
+        },
+        "structure": {
+            "identifiantFacturation": "123456789"
+        }
+    },
+    "ins": {
+        "matriculeINS": {
+            "valeur": "1900463220899",
+            "cle": "81",
+            "identifiantSysteme": "INS_NIR"
+        },
+        "traitsIdentite": {
+            "nomFamille": "D'ARTAGNAN DE L'HERAULT",
+            "prenomUtilise": null,
+            "prenomActeNaissance": "PIERRE-ALAIN BRUCE GORDON",
+            "sexeAdministratif": "M",
+            "dateNaissance": "1990-04-14",
+            "lieuNaissance": "63220"
+        }
+    }
+}

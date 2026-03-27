@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+    <realmCode code="FR" />
+    <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3" />
+    <templateId root="2.16.840.1.113883.2.8.2.1" />
+    <templateId root="1.2.250.1.213.1.1.1.1" />
+    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2" />
+    <templateId extension="2021.01" root="1.2.250.1.213.1.1.1.46" />
+    <id assigningAuthorityName="DEVBOX-SANTE DMP" root="1.2.250.1.287.1.1234567.1.16680908707692" />
+    <code code="87273-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Note de vaccination" />
+    <title>Note de vaccination</title>
+    <effectiveTime value="20221029153429+0200" />
+    <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="Normal" />
+    <languageCode code="fr-FR" />
+    <versionNumber value="0" />
+    <recordTarget>
+        <patientRole>
+            <id extension="155076322000225" root="1.2.250.1.213.1.4.10" />
+            <id extension="2d6e0e95-31a5-44a9-bdbc-b4f0ca13b311" root="1.2.250.1.287.1.1234567.2" />
+            <addr nullFlavor="NASK" />
+            <telecom nullFlavor="NASK" />
+            <patient>
+                <name>
+                    <given>JEAN</given>
+                    <family qualifier="BR">BON</family>
+                    <given qualifier="BR">JEAN</given>
+                </name>
+                <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGender" />
+                <birthTime value="19550714" />
+            </patient>
+        </patientRole>
+    </recordTarget>
+    <author>
+        <time value="20221029153429+0200" />
+        <assignedAuthor>
+            <id extension="3380784801/123456" root="1.2.250.1.71.4.2.1" />
+            <code code="G15_10/SM26" codeSystem="1.2.250.1.213.1.1.4.5" displayName="Médecin - Qualifié en Médecine Générale (SM)" />
+            <addr nullFlavor="NASK" />
+            <telecom nullFlavor="NASK" />
+            <assignedPerson>
+                <name>
+                    <given>VIRGINIE</given>
+                    <family>MEDECIN RPPS0022297</family>
+                </name>
+            </assignedPerson>
+            <representedOrganization>
+                <id extension="1380784801" root="1.2.250.1.71.4.2.2" />
+                <name>centre de dialyse</name>
+                <telecom nullFlavor="NASK" />
+                <addr nullFlavor="NASK" />
+            </representedOrganization>
+        </assignedAuthor>
+    </author>
+    <custodian>
+        <assignedCustodian>
+            <representedCustodianOrganization>
+                <id extension="1380784801" root="1.2.250.1.71.4.2.2" />
+                <name>centre de dialyse</name>
+            </representedCustodianOrganization>
+        </assignedCustodian>
+    </custodian>
+    <legalAuthenticator>
+        <time value="20221029153429+0200" />
+        <signatureCode code="S" />
+        <assignedEntity>
+            <id extension="3380784801/123456" root="1.2.250.1.71.4.2.1" />
+            <code code="G15_10/SM26" codeSystem="1.2.250.1.213.1.1.4.5" displayName="Médecin - Qualifié en Médecine Générale (SM)" />
+            <addr nullFlavor="NASK" />
+            <telecom nullFlavor="NASK" />
+            <assignedPerson>
+                <name>
+                    <given>VIRGINIE</given>
+                    <family>MEDECIN RPPS0022297</family>
+                </name>
+            </assignedPerson>
+            <representedOrganization>
+                <id extension="1380784801" root="1.2.250.1.71.4.2.2" />
+                <name>centre de dialyse</name>
+                <telecom nullFlavor="NASK" />
+                <addr nullFlavor="NASK" />
+            </representedOrganization>
+        </assignedEntity>
+    </legalAuthenticator>
+    <documentationOf>
+        <serviceEvent>
+            <code code="87273-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Note de vaccination" />
+            <effectiveTime>
+                <low value="20221029123429+0200" />
+                <high value="20221029133429+0200" />
+            </effectiveTime>
+            <performer typeCode="PRF">
+                <functionCode nullFlavor="UNK" />
+                <time>
+                    <low value="20221029123429+0200" />
+                    <high value="20221029133429+0200" />
+                </time>
+                <assignedEntity>
+                    <id extension="3380784801/123456" root="1.2.250.1.71.4.2.1" />
+                    <code code="G15_10/SM26" codeSystem="1.2.250.1.213.1.1.4.5" displayName="Médecin - Qualifié en Médecine Générale (SM)" />
+                    <addr nullFlavor="NASK" />
+                    <telecom nullFlavor="NASK" />
+                    <assignedPerson>
+                        <name>
+                            <given>VIRGINIE</given>
+                            <family>MEDECIN RPPS0022297</family>
+                        </name>
+                    </assignedPerson>
+                    <representedOrganization>
+                        <id extension="1380784801" root="1.2.250.1.71.4.2.2" />
+                        <name>centre de dialyse</name>
+                        <telecom nullFlavor="NASK" />
+                        <addr nullFlavor="NASK" />
+                        <standardIndustryClassCode code="AMBULATOIRE" codeSystem="1.2.250.1.213.1.1.4.9" displayName="Ambulatoire" />
+                    </representedOrganization>
+                </assignedEntity>
+            </performer>
+        </serviceEvent>
+    </documentationOf>
+    <componentOf>
+        <encompassingEncounter>
+            <effectiveTime nullFlavor="UNK" />
+            <location>
+                <healthCareFacility>
+                    <code code="SA07" codeSystem="1.2.250.1.71.4.2.4" displayName="Cabinet individuel" />
+                </healthCareFacility>
+            </location>
+        </encompassingEncounter>
+    </componentOf>
+    <component>
+        <structuredBody>
+            <component>
+                <section>
+                    <templateId root="2.16.840.1.113883.10.20.1.6" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.23" />
+                    <templateId root="1.2.250.1.213.1.1.2.147" />
+                    <code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Historique de vaccinations" />
+                    <title>Note de vaccination</title>
+                    <text>
+                        <table border="1">
+                            <thead align="center">
+                                <tr>
+                                    <th align="center">Date de l'acte</th>
+                                    <th align="center">Nom du vaccin</th>
+                                    <th align="center">Type d'administration</th>
+                                    <th align="center">Numéro de lot</th>
+                                    <th align="center">Voie d'administration</th>
+                                    <th align="center">Site d'administration</th>
+                                    <th align="center">Vaccinateur</th>
+                                    <th align="center">Vaccin ajouté ou modifié par</th>
+                                    <th align="center">Commentaire</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ID="uuid-87dd18c7-a980-43f7-93bd-2b6620aa8c80">
+                                    <td align="left">29/10/2022</td>
+                                    <td ID="uuid-0f88f638-469d-400d-86e5-3424e4956b28" align="left">VACCIN TETANIQUE PASTEUR, suspension injectable en seringue préremplie vaccin tétanique adsorbé</td>
+                                    <td align="left">1ère série vaccinante - 2</td>
+                                    <td align="left">870343</td>
+                                    <td align="left">intra musculaire</td>
+                                    <td ID="uuid-d4657f99-d007-4429-a9ae-3787abb26e20" align="left">LD</td>
+                                    <td align="left">Dr MEDECIN RPPS0022297 VIRGINIE - Médecin - Qualifié en Médecine Générale (SM)</td>
+                                    <td align="left">Dr MEDECIN RPPS0022297 VIRGINIE - Médecin - Qualifié en Médecine Générale (SM)</td>
+                                    <td ID="uuid-1f57e117-0315-4f13-9079-028126f29e84" align="left">Commentaire de la vaccination</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry>
+                        <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+                            <templateId root="2.16.840.1.113883.10.20.1.24" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12" />
+                            <templateId root="1.2.250.1.213.1.1.3.45" />
+                            <id root="0e2111cf-44fd-4ed3-a5bd-0a19de0faa2a" />
+                            <code code="INITIMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="HL7:ActCode" displayName="1ère série vaccinante" />
+                            <text>
+                                <reference value="#uuid-87dd18c7-a980-43f7-93bd-2b6620aa8c80" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime value="20221029" />
+                            <routeCode code="IM" codeSystem="2.16.840.1.113883.5.112" codeSystemName="routeOfAdministration" displayName="intra musculaire" />
+                            <approachSiteCode code="LD" codeSystem="2.16.840.1.113883.5.1052" codeSystemName="HumanSubstanceAdministrationSite" displayName="LD">
+                                <originalText>
+                                    <reference value="#uuid-d4657f99-d007-4429-a9ae-3787abb26e20" />
+                                </originalText>
+                            </approachSiteCode>
+                            <doseQuantity value="1" />
+                            <consumable typeCode="CSM">
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" />
+                                    <templateId root="1.2.250.1.213.1.1.3.43" />
+                                    <manufacturedMaterial>
+                                        <code code="67718545" codeSystem="1.2.250.1.213.2.3.1" codeSystemName="CIS" displayName="VACCIN TETANIQUE PASTEUR, suspension injectable en seringue préremplie vaccin tétanique adsorbé">
+                                            <originalText>
+                                                <reference value="#uuid-0f88f638-469d-400d-86e5-3424e4956b28" />
+                                            </originalText>
+                                            <translation code="J07CA06" codeSystem="2.16.840.1.113883.6.73" codeSystemName="ATC" displayName="Diphtérie - Haemophilus influenzae B - coqueluche - poliomyélite - tétanos" />
+                                            <translation code="3400932857241" codeSystem="1.2.250.1.213.2.3.2" codeSystemName="Nomenclature CIP" displayName="1 seringue(s) préremplie(s) en verre de 0,5 ml" />
+                                        </code>
+                                        <name>vaccin tetanique pasteur</name>
+                                        <lotNumberText>870343</lotNumberText>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <performer typeCode="PRF">
+                                <time />
+                                <assignedEntity>
+                                    <id extension="3380784801/123456" root="1.2.250.1.71.4.2.1" />
+                                    <code code="G15_10/SM26" codeSystem="1.2.250.1.213.1.1.4.5" displayName="Médecin - Qualifié en Médecine Générale (SM)" />
+                                    <addr nullFlavor="NASK" />
+                                    <telecom nullFlavor="NASK" />
+                                    <assignedPerson>
+                                        <name>
+                                            <given>VIRGINIE</given>
+                                            <family>MEDECIN RPPS0022297</family>
+                                        </name>
+                                    </assignedPerson>
+                                    <representedOrganization>
+                                        <id extension="1380784801" root="1.2.250.1.71.4.2.2" />
+                                        <name>centre de dialyse</name>
+                                        <telecom nullFlavor="NASK" />
+                                        <addr nullFlavor="NASK" />
+                                        <standardIndustryClassCode code="AMBULATOIRE" codeSystem="1.2.250.1.213.1.1.4.9" displayName="Ambulatoire" />
+                                    </representedOrganization>
+                                </assignedEntity>
+                            </performer>
+                            <author>
+                                <time value="20221029" />
+                                <assignedAuthor>
+                                    <id extension="3380784801/123456" root="1.2.250.1.71.4.2.1" />
+                                    <code code="G15_10/SM26" codeSystem="1.2.250.1.213.1.1.4.5" displayName="Médecin - Qualifié en Médecine Générale (SM)" />
+                                    <addr nullFlavor="NASK" />
+                                    <telecom nullFlavor="NASK" />
+                                    <assignedPerson>
+                                        <name>
+                                            <given>VIRGINIE</given>
+                                            <family>MEDECIN RPPS0022297</family>
+                                        </name>
+                                    </assignedPerson>
+                                    <representedOrganization>
+                                        <id extension="1380784801" root="1.2.250.1.71.4.2.2" />
+                                        <name>centre de dialyse</name>
+                                        <telecom nullFlavor="NASK" />
+                                        <addr nullFlavor="NASK" />
+                                    </representedOrganization>
+                                </assignedAuthor>
+                            </author>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.46" />
+                                    <templateId root="1.2.250.1.213.1.1.3.82" />
+                                    <code code="30973-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Rang de la vaccination" />
+                                    <statusCode code="completed" />
+                                    <value value="2" xsi:type="INT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="SUBJ">
+                                <act classCode="ACT" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.40" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2" />
+                                    <code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Commentaire" />
+                                    <text>
+                                        <reference value="#uuid-1f57e117-0315-4f13-9079-028126f29e84" />
+                                        Commentaire de la vaccination
+                                    </text>
+                                    <statusCode code="completed" />
+                                </act>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                </section>
+            </component>
+        </structuredBody>
+    </component>
+</ClinicalDocument>

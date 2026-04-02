@@ -1,0 +1,81 @@
+name: devboxsante-pfi-connect-example
+
+x-common-env: &common-env
+  DEVBOX_LM_ENV: ${DEVBOX_LM_ENV:-dev}
+  DEVBOX_LM_CLIENT: ${DEVBOX_LM_CLIENT}
+  DEVBOX_LM_TOKEN: ${DEVBOX_LM_TOKEN}
+
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "20m"
+    max-file: "10"
+
+networks:
+  pfi_network:
+
+services:
+  mongodb:
+    image: mongo:8
+    container_name: pfi-mongodb
+    networks:
+      - pfi_network
+    volumes:
+      - ${DEVBOX_VOLUME_ROOT:-}/dbx/pfi/mongodb:/data/db  # contient les fichiers de la base pour sauvegarde
+    restart: unless-stopped
+
+  clamav:
+    image: clamav/clamav:1.5.1
+    container_name: pfi-clamav
+    networks:
+      - pfi_network
+    volumes:
+      -  ${DEVBOX_VOLUME_ROOT:-}/dbx/pfi/clamav:/var/lib/clamav
+    restart: unless-stopped
+
+  pfi:
+    image: devboxsante/devboxsante-pfi-server:${DEVBOX_PFI_VERSION:-dev}
+    container_name: pfi-server
+    depends_on:
+      - mongodb
+    networks:
+      - pfi_network
+    logging: *default-logging
+    volumes:
+      - ${DEVBOX_VOLUME_ROOT:-}/dbx/pfi/server/config:/config  # contient la config springframework (application.yml)
+    
+    environment:
+      <<: *common-env
+      JAVA_OPTS: "-Xms1024M -Xmx1536M"
+      MONGO_DB_URI: "mongodb://mongodb:27017/pfi"
+      
+    restart: on-failure:1
+
+  back-office:
+    image: devboxsante/devboxsante-pfi-backoffice:${DEVBOX_PFI_VERSION:-dev}
+    container_name: pfi-backoffice
+    depends_on:
+      - mongodb
+    ports:
+      - "8282:8282"
+    networks:
+      - pfi_network
+    logging: *default-logging
+    environment:
+      MONGO_DB_URI: "mongodb://mongodb:27017/pfi"
+
+
+  devbox-sante:
+     image: devboxsante/devboxsante-all:${DEVBOX_VERSION:-dev}
+     container_name: pfi-connect-dbx-all
+     ports:
+       - "8080:8080"
+     logging: *default-logging
+     environment:
+       <<: *common-env
+       DEVBOX_PFI_CONNECT_MLLP_HOSTNAME: pfi
+       DEVBOX_PFI_CONNECT_MLLP_PORT: 5453
+       DEVBOX_PFI_CONNECT_MLLP_LOCAL_PORT: 5454
+     networks:
+       - pfi_network
+   

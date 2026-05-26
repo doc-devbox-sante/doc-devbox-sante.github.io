@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HowTos on DevBox-Santé</title>
+    <link>https://doc.devbox-sante.fr/6.x/plateformes/eproxy/howtos/</link>
+    <description>Recent content in HowTos on DevBox-Santé</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <atom:link href="https://doc.devbox-sante.fr/6.x/plateformes/eproxy/howtos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ANS : Fiche d&#39;identité de DevBox-Santé eProxy</title>
+      <link>https://doc.devbox-sante.fr/6.x/plateformes/eproxy/howtos/identification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://doc.devbox-sante.fr/6.x/plateformes/eproxy/howtos/identification/</guid>
+      <description>&lt;h3 id=&#34;référencement-du-18032026&#34;&gt;Référencement du 18/03/2026&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#r%c3%a9f%c3%a9rencement-du-18032026&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Dénomination du logiciel : &lt;strong&gt;DevBox-Santé eProxy&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Version : &lt;strong&gt;1&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Numéro de candidature (NRU) : &lt;strong&gt;NUVGCVDSQK&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Profil : &lt;strong&gt;Editeur de logiciel Proxy e-santé&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

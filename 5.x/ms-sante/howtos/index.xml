@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Howtos on DevBox-Santé</title>
+    <link>https://doc.devbox-sante.fr/5.x/ms-sante/howtos/</link>
+    <description>Recent content in Howtos on DevBox-Santé</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://doc.devbox-sante.fr/5.x/ms-sante/howtos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Encoder en base64</title>
+      <link>https://doc.devbox-sante.fr/5.x/ms-sante/howtos/base64/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://doc.devbox-sante.fr/5.x/ms-sante/howtos/base64/</guid>
+      <description>&lt;p&gt;Dans la DevBox-Santé, beaucoup de contenus doivent être encodé en base64 avant d&amp;rsquo;être envoyé par une requête HTTP.&lt;/p&gt;&#xA;&lt;p&gt;L&amp;rsquo;encodage en base64 d&amp;rsquo;un byte[] json se fait de manière transparente mais dans les header HTTP, voici quelques méthodes pour encoder en base64 vos contenus :&lt;/p&gt;&#xA;&lt;h3 id=&#34;windows-powershell&#34;&gt;Windows Powershell:&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#windows-powershell&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d7827e&#34;&gt;$cert&lt;/span&gt; &lt;span style=&#34;color:#797593&#34;&gt;=&lt;/span&gt; get-content &lt;span style=&#34;color:#ea9d34&#34;&gt;&amp;#39;certificate.p12&amp;#39;&lt;/span&gt; -Encoding Byte&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d7827e&#34;&gt;$base64&lt;/span&gt; &lt;span style=&#34;color:#797593&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#797593&#34;&gt;[&lt;/span&gt;System.Convert&lt;span style=&#34;color:#797593&#34;&gt;]&lt;/span&gt;::ToBase64String&lt;span style=&#34;color:#797593&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d7827e&#34;&gt;$cert&lt;/span&gt;&lt;span style=&#34;color:#797593&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d7827e&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#d7827e&#34;&gt;$base64&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;linux&#34;&gt;Linux:&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#linux&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;base64 -w0 certificate.p12 &amp;gt; outputfile&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;-w0 pour mettre sur une seule ligne&lt;/p&gt;&#xA;&lt;h3 id=&#34;mac-os&#34;&gt;Mac OS:&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#mac-os&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;base64 -i certificate.p12 -o outputfile&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

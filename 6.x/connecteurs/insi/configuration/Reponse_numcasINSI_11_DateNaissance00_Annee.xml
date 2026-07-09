@@ -1,0 +1,30 @@
+
+
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<env:Body xmlns:S="http://www.w3.org/2003/05/soap-envelope" xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+  <ns2:RESULTAT xmlns:ns3="http://www.cnamts.fr/INSiRecVit" xmlns:ns2="http://www.cnamts.fr/INSiResultat" xmlns="http://www.cnamts.fr/INSiRecSans">
+    <ns2:CR>
+      <ns2:CodeCR>00</ns2:CodeCR>
+      <ns2:LibelleCR>OK</ns2:LibelleCR>
+    </ns2:CR>
+    <ns2:INDIVIDU>
+      <ns2:INSACTIF>
+        <ns2:IdIndividu>
+          <ns2:NumIdentifiant>2001027631789</ns2:NumIdentifiant>
+          <ns2:Cle>79</ns2:Cle>
+        </ns2:IdIndividu>
+        <ns2:OID>1.2.250.1.213.1.4.8</ns2:OID>
+      </ns2:INSACTIF>
+      <ns2:TIQ>
+        <ns2:NomNaissance>BENSA</ns2:NomNaissance>
+        <ns2:Prenom>DANIELLE</ns2:Prenom>
+        <ns2:ListePrenom>DANIELLE</ns2:ListePrenom>
+        <ns2:Sexe>F</ns2:Sexe>
+        <ns2:DateNaissance>2000-10-20</ns2:DateNaissance>
+        <ns2:LieuNaissance>27631</ns2:LieuNaissance>
+      </ns2:TIQ>
+    </ns2:INDIVIDU>
+  </ns2:RESULTAT>
+</env:Body>
+</soap:Envelope>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conformité on DevBox-Santé</title>
+    <link>https://doc.devbox-sante.fr/7.x/agrements/ans/edc_psc/conformite/</link>
+    <description>Recent content in Conformité on DevBox-Santé</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <atom:link href="https://doc.devbox-sante.fr/7.x/agrements/ans/edc_psc/conformite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EXI EDC PSC 129</title>
+      <link>https://doc.devbox-sante.fr/7.x/agrements/ans/edc_psc/conformite/plan-dassurance-s%C3%A9curit%C3%A9/exi_edc_psc_129/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://doc.devbox-sante.fr/7.x/agrements/ans/edc_psc/conformite/plan-dassurance-s%C3%A9curit%C3%A9/exi_edc_psc_129/</guid>
+      <description>&lt;div style=&#34;display: flex; flex-direction: row; align-items: center&#34;&gt;&#xA;    &lt;div style=&#34;vertical-align: center;margin-right:40px&#34;&gt;&#xA;        &lt;img src=&#34;https://doc.devbox-sante.fr/7.x/agrements/ans/edc_psc/conformite/ans.png&#34; alt=&#34;ans&#34; style=&#34;width: 180px&#34; style=&#34;width: 180px&#34;&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div style=&#34;font-size:18px;text-align:center;color:blue;font-weight:bold&#34;&gt;&#xA;      Pro Santé Connect&lt;br/&gt;&#xA;      Document de conformité&lt;br/&gt;&#xA;      xxx&lt;br/&gt;&#xA;      Chapitre 8 : Plan d’assurance sécurité&lt;br/&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;hr/&gt;&#xA;&lt;p&gt;En tant que FS, je m’engage à inclure dans le Plan d&amp;rsquo;Assurance Sécurité des justifications du respect des exigences et la planification des mesures de sécurité essentielles à l’utilisation de l’API&#xA;Pro Santé Connectée. De plus, le Plan d’Assurance Sécurité sera mis à jour à chaque évolution majeure du produit grâce aux résultats d&amp;rsquo;analyse de risques ou de retours d&amp;rsquo;expérience d&amp;rsquo;incident.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

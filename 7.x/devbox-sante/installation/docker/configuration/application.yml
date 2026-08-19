@@ -1,0 +1,22 @@
+
+spring: 
+    profiles:
+        active:
+            - SWAGGER
+            - devbox-sante
+            - insi
+            - CNDA_WEB
+            - INS_ADMIN
+            - dmp
+            - ms-sante
+
+devbox-sante: 
+    dmp:
+        security.mode: authInHeader
+            
+    insi:
+        security.mode: authInHeader
+        
+    ms-sante:
+        security.mode: authInHeader
+

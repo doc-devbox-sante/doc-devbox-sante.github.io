@@ -1,0 +1,522 @@
+{
+    "dmpcType": "REMB",
+    "uniqueId": "1.2.250.1.213.4.1.1.1.3.1.20210904.20220623",
+    "auteurs": [
+        {
+            "internalId": "1.2.250.1.215.1.2",
+            "specialite": "ALIM_AM",
+            "structureSante": {
+                "idNational": "318003502400041",
+                "nom": "Assurance Maladie"
+            }
+        }
+    ],
+    "destinataires": [],
+    "patientDestinataire": false,
+    "classCode": "60",
+    "classCodeCode": {
+        "valeur": "60",
+        "identifiantNomenclature": "1.2.250.1.213.1.1.4.1",
+        "libelle": "Données de remboursement"
+    },
+    "comments": "<table xmlns=\"urn:hl7-org:v3\" border=\"1\"><tbody><tr><td ID=\"mention\">Les donnÃ©es affichÃ©es sont le reflet des informations issues des procÃ©dures de remboursement ou de prise en charge dÃ©tenues par l'Assurance Maladie pour la pÃ©riode de soins rÃ©fÃ©rencÃ©e. Elles sont fournies Ã  titre purement informatif et leur exhaustivitÃ© ne peut Ãªtre garantie, notamment en cas de changement administratif durant cette pÃ©riode de soins. Toute interprÃ©tation ou toute dÃ©cision, de quelle que nature que ce soit, se basant sur ces donnÃ©es relÃ¨ve de la seule responsabilitÃ© de la personne qui les consulte</td></tr></tbody></table>",
+    "confidentialities": [
+        "N"
+    ],
+    "confidentialityCodes": [
+        {
+            "valeur": "N",
+            "identifiantNomenclature": "2.16.840.1.113883.5.25",
+            "libelle": "Normal"
+        }
+    ],
+    "creationTime": "20230904085228",
+    "creationDateTime": "2023-09-04T08:52:28Z",
+    "events": [],
+    "executant": {
+        "structureSante": {}
+    },
+    "format": "urn:asip:ci-sis:hr:2019",
+    "formatCode": {
+        "valeur": "urn:asip:ci-sis:hr:2019",
+        "identifiantNomenclature": "1.2.250.1.213.1.1.4.2.282",
+        "libelle": "Données de remboursement"
+    },
+    "legalAuthenticator": {
+        "internalId": "1.2.250.1.215.1.2",
+        "nom": "Assurance Maladie",
+        "prenom": ".",
+        "structureSante": {}
+    },
+    "patientLegalAuthenticator": false,
+    "mimeType": "text/xml",
+    "patient": {
+        "ins": "255069999999934",
+        "insAutorite": "1.2.250.1.213.1.4.11",
+        "matriculeINS": {
+            "valeur": "255069999999934",
+            "identifiantSysteme": "1.2.250.1.213.1.4.11"
+        },
+        "prenom": "NATHALIE",
+        "nomUsuel": "DESMAUX",
+        "dateDeNaissance": "19550615",
+        "sexe": "F"
+    },
+    "practiceSetting": "AMO",
+    "practiceSettingCode": {
+        "valeur": "AMO",
+        "identifiantNomenclature": "1.2.250.1.213.1.1.4.9",
+        "libelle": "Organisme d'assurance maladie obligatoire"
+    },
+    "serviceStartTime": "20210904",
+    "serviceStartDateTime": "2021-09-04T00:00:00Z",
+    "serviceStopTime": "20220623",
+    "serviceStopDateTime": "2022-06-23T00:00:00Z",
+    "title": "Usage et Responsabilités",
+    "type": "REMB",
+    "typeCode": {
+        "valeur": "REMB",
+        "identifiantNomenclature": "2.16.840.1.113883.6.1",
+        "libelle": "'Données de remboursement"
+    },
+    "versionNumber": 1,
+    "replacementOfUniqueId": "1.2.250.1.999.1.1.7898.3.20220523140745.1",
+    "specificationVersion": "2022.01",
+    "traitements": [],
+    "vaccinations": [
+        {
+            "status": "completed",
+            "doseAdministree": {
+                "unite": "1",
+                "valeur": "1"
+            },
+            "consommable": {
+                "traductions": [
+                    {
+                        "valeur": "3400934313219",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.1.1",
+                        "libelle": "HELIKIT 75 MG PDR ORALE 1*1.4"
+                    },
+                    {
+                        "valeur": "V04",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.2.1",
+                        "libelle": "MEDICAMENTS POUR DIAGNOSTIC"
+                    },
+                    {
+                        "valeur": "4515",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.3.1",
+                        "libelle": "UREE MARQUEE AU CARBONE 13"
+                    }
+                ]
+            },
+            "executant": {
+                "startDateTime": "2022-01-07T00:00:00Z",
+                "patient": false,
+                "personnelSante": {
+                    "structureSante": {
+                        "idNational": "1990787996",
+                        "nom": "PHARMACIEN DUCOIN"
+                    }
+                }
+            },
+            "auteur": {
+                "patient": false,
+                "personnelSante": {
+                    "rpps": "899700240668",
+                    "nom": "MEDECIN RPPS0024066",
+                    "prenom": "VIRGINIE",
+                    "specialite": "10-80",
+                    "structureSante": {}
+                }
+            }
+        },
+        {
+            "status": "completed",
+            "doseAdministree": {
+                "unite": "1",
+                "valeur": "1"
+            },
+            "consommable": {
+                "traductions": [
+                    {
+                        "valeur": "3400938479324",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.1.1",
+                        "libelle": "LEELOO 0,1 MG/0,02 MG CPR 3*21"
+                    },
+                    {
+                        "valeur": "G03",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.2.1",
+                        "libelle": "HORMONES SEXUELLES ET MODULATEURS DE LA FONCTION GENITALE"
+                    },
+                    {
+                        "valeur": "1949",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.3.1",
+                        "libelle": "LEVONORGESTREL"
+                    }
+                ]
+            },
+            "executant": {
+                "startDateTime": "2022-02-05T00:00:00Z",
+                "patient": false,
+                "personnelSante": {
+                    "structureSante": {
+                        "idNational": "1990787996",
+                        "nom": "PHARMACIEN DUCOIN"
+                    }
+                }
+            },
+            "auteur": {
+                "patient": false,
+                "personnelSante": {
+                    "rpps": "899700240668",
+                    "nom": "MEDECIN RPPS0024066",
+                    "prenom": "VIRGINIE",
+                    "specialite": "10-80",
+                    "structureSante": {}
+                }
+            }
+        },
+        {
+            "status": "completed",
+            "doseAdministree": {
+                "unite": "1",
+                "valeur": "1"
+            },
+            "consommable": {
+                "traductions": [
+                    {
+                        "valeur": "3400930849316",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.1.1",
+                        "libelle": "POLERY AD SIROP 1*200"
+                    },
+                    {
+                        "valeur": "R05",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.2.1",
+                        "libelle": "MEDICAMENTS DU RHUME ET DE LA TOUX"
+                    },
+                    {
+                        "valeur": "2821",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.3.1",
+                        "libelle": "ERYSIMUM EXTRAIT"
+                    }
+                ]
+            },
+            "executant": {
+                "startDateTime": "2022-05-10T00:00:00Z",
+                "patient": false,
+                "personnelSante": {
+                    "structureSante": {
+                        "idNational": "1990787996",
+                        "nom": "PHARMACIEN DUCOIN"
+                    }
+                }
+            },
+            "auteur": {
+                "patient": false,
+                "personnelSante": {
+                    "rpps": "899700240668",
+                    "nom": "MEDECIN RPPS0024066",
+                    "prenom": "VIRGINIE",
+                    "specialite": "10-80",
+                    "structureSante": {}
+                }
+            }
+        },
+        {
+            "status": "completed",
+            "doseAdministree": {
+                "unite": "1",
+                "valeur": "1"
+            },
+            "consommable": {
+                "traductions": [
+                    {
+                        "valeur": "3400930669334",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.1.1",
+                        "libelle": "METEOXANE GELULE 4*15"
+                    },
+                    {
+                        "valeur": "A03",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.2.1",
+                        "libelle": "MEDICAMENTS POUR LES DESORDRES FONCTIONNELS GASTRO-INTESTINAUX"
+                    },
+                    {
+                        "valeur": "4035",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.3.1",
+                        "libelle": "PHLOROGLUCINOL"
+                    }
+                ]
+            },
+            "executant": {
+                "startDateTime": "2022-06-20T00:00:00Z",
+                "patient": false,
+                "personnelSante": {
+                    "structureSante": {
+                        "idNational": "1990787996",
+                        "nom": "PHARMACIEN DUCOIN"
+                    }
+                }
+            },
+            "auteur": {
+                "patient": false,
+                "personnelSante": {
+                    "rpps": "899700240668",
+                    "nom": "MEDECIN RPPS0024066",
+                    "prenom": "VIRGINIE",
+                    "specialite": "10-80",
+                    "structureSante": {}
+                }
+            }
+        },
+        {
+            "status": "completed",
+            "doseAdministree": {
+                "unite": "1",
+                "valeur": "1"
+            },
+            "consommable": {
+                "traductions": [
+                    {
+                        "valeur": "3400936800243",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.1.1",
+                        "libelle": "SIMVASTATINE MYL 40MG CPR 2*14"
+                    },
+                    {
+                        "valeur": "C10",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.2.1",
+                        "libelle": "AGENTS MODIFIANT LIPIDES"
+                    },
+                    {
+                        "valeur": "2633",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.3.1",
+                        "libelle": "SIMVASTATINE"
+                    }
+                ]
+            },
+            "executant": {
+                "startDateTime": "2022-06-23T00:00:00Z",
+                "patient": false,
+                "personnelSante": {
+                    "structureSante": {
+                        "idNational": "1990789703",
+                        "nom": "PHARMACIEN DUCOIN"
+                    }
+                }
+            },
+            "auteur": {
+                "patient": false,
+                "personnelSante": {
+                    "structureSante": {
+                        "idNational": "1990006918",
+                        "nom": "ETB HOPITALPLUS00691"
+                    }
+                }
+            }
+        },
+        {
+            "code": {
+                "valeur": "IMMUNIZ",
+                "identifiantNomenclature": "2.16.840.1.113883.1.11.19709",
+                "libelle": "Vaccination sans autres précisions"
+            },
+            "status": "completed",
+            "consommable": {
+                "traductions": [
+                    {
+                        "valeur": "3400930044384",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.1.1",
+                        "libelle": "PNEUMOVAX SOL INJ SER 1*.5"
+                    },
+                    {
+                        "valeur": "J07AL01",
+                        "identifiantNomenclature": "1.2.250.1.215.200.1.2.2",
+                        "libelle": "PNEUMOCOCCUS, ANTIGENE POLYSACCHARIDIQUE PURIFIE"s
+                    }
+                ]
+            },
+            "executant": {
+                "startDateTime": "2022-04-15T00:00:00Z",
+                "patient": false,
+                "personnelSante": {
+                    "structureSante": {
+                        "idNational": "1990789703",
+                        "nom": "PHARMACIEN DUCOIN"
+                    }
+                }
+            },
+            "auteur": {
+                "patient": false,
+                "personnelSante": {
+                    "rpps": "899700240668",
+                    "nom": "MEDECIN RPPS0024066",
+                    "prenom": "VIRGINIE",
+                    "specialite": "10-80",
+                    "structureSante": {}
+                }
+            }
+        }
+    ],
+    "dispositifsMedicaux": [
+        {
+            "code": {
+                "valeur": "1355685",
+                "identifiantNomenclature": "1.2.250.1.215.200.2.1",
+                "libelle": "COMPRESSES NON TISSEES STERILES, > OU=56CM2 & < 100CM2, BOITE DE 10 SACHETS X 2"
+            },
+            "quantite": {
+                "unite": "1",
+                "valeur": "1"
+            },
+            "executant": {
+                "startDateTime": "2021-10-17T00:00:00Z",
+                "patient": false,
+                "personnelSante": {
+                    "structureSante": {}
+                }
+            },
+            "auteur": {
+                "patient": false,
+                "personnelSante": {
+                    "rpps": "899700240668",
+                    "nom": "MEDECIN RPPS0024066",
+                    "prenom": "VIRGINIE",
+                    "specialite": "10-80",
+                    "structureSante": {}
+                }
+            }
+        }
+    ],
+    "prisesEnCharge": [
+        {
+            "sejour": {
+                "valeur": "2113",
+                "identifiantNomenclature": "1.2.250.1.215.200.3.3",
+                "libelle": "Hospitalisation à domicile"
+            },
+            "dateDebut": "2021-01-06T00:00:00Z",
+            "dateFin": "2022-01-07T00:00:00Z",
+            "executants": [
+                {
+                    "patient": false,
+                    "personnelSante": {
+                        "structureSante": {
+                            "idNational": "1990787996",
+                            "nom": "PHARMACIEN DUCOIN"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "soinsMedicauxOuDentaires": [
+        {
+            "code": {
+                "valeur": "AMI",
+                "identifiantNomenclature": "1.2.250.1.215.200.3.3",
+                "libelle": "ACTES EN AMI"
+            },
+            "description": "\n                    ",
+            "status": "completed",
+            "dateTime": "2022-03-04T00:00:00Z",
+            "executant": {
+                "patient": false,
+                "personnelSante": {
+                    "rpps": "899900087802",
+                    "nom": "LIBRE",
+                    "prenom": "MAX",
+                    "specialite": "10-SM26",
+                    "structureSante": {}
+                }
+            }
+        }
+    ],
+    "radiologies": [
+        {
+            "code": {
+                "valeur": "02276797",
+                "identifiantNomenclature": "1.2.250.1.213.2.63",
+                "libelle": "Aucun"e
+            },
+            "description": "",
+            "status": "completed"
+        }
+    ],
+    "biologies": [
+        {
+            "code": {
+                "valeur": "5202",
+                "identifiantNomenclature": "1.2.250.1.215.200.4.1",
+                "libelle": "EX MICROBIO SECRETIONS, ULCERATIONS, EXSUDATS (ANO) GENITAUX FEMME (PV)"
+            },
+            "description": "\n                    ",
+            "status": "completed",
+            "dateTime": "2021-09-12T00:00:00Z",
+            "executant": {
+                "patient": false,
+                "personnelSante": {
+                    "structureSante": {
+                        "idNational": "1990790610",
+                        "nom": "PHARMACIE DEUXCOINS"
+                    }
+                }
+            }
+        },
+        {
+            "code": {
+                "valeur": "1114",
+                "identifiantNomenclature": "1.2.250.1.215.200.4.1",
+                "libelle": "ELECTROPHORESE DE L HEMOGLOBINE (CITRATE AGAR)"
+            },
+            "description": "\n                    ",
+            "status": "completed",
+            "dateTime": "2021-09-21T00:00:00Z",
+            "executant": {
+                "patient": false,
+                "personnelSante": {
+                    "structureSante": {
+                        "idNational": "1990790610",
+                        "nom": "PHARMACIE DEUXCOINS"
+                    }
+                }
+            }
+        },
+        {
+            "code": {
+                "valeur": "9005",
+                "identifiantNomenclature": "1.2.250.1.215.200.4.1",
+                "libelle": "FORFAIT DE PRISE EN CHARGE PRE-ANALYTIQUE DU PATIENT"
+            },
+            "description": "\n                    ",
+            "status": "completed",
+            "dateTime": "2021-10-02T00:00:00Z",
+            "executant": {
+                "patient": false,
+                "personnelSante": {
+                    "structureSante": {
+                        "idNational": "1990790610",
+                        "nom": "PHARMACIE DEUXCOINS"
+                    }
+                }
+            }
+        },
+        {
+            "code": {
+                "valeur": "1114",
+                "identifiantNomenclature": "1.2.250.1.215.200.4.1",
+                "libelle": "ELECTROPHORESE DE L HEMOGLOBINE (CITRATE AGAR)"
+            },
+            "description": "\n                    ",
+            "status": "completed",
+            "dateTime": "2021-11-04T00:00:00Z",
+            "executant": {
+                "patient": false,
+                "personnelSante": {
+                    "structureSante": {
+                        "idNational": "1990790610",
+                        "nom": "PHARMACIE DEUXCOINS"
+                    }
+                }
+            }
+        }
+    ]
+}

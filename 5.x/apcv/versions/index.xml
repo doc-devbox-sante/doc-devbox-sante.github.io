@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Versions on DevBox-Santé</title>
+    <link>https://doc.devbox-sante.fr/5.x/apcv/versions/</link>
+    <description>Recent content in Versions on DevBox-Santé</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <atom:link href="https://doc.devbox-sante.fr/5.x/apcv/versions/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

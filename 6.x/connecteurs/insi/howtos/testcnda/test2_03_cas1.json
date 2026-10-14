@@ -1,0 +1,16 @@
+{
+  "context": {
+    "auteur": {
+      "identifiantInterne": "1234"
+    },
+    "structure": {
+      "identifiantFacturation": "123456789"
+    }
+  },
+  "dateNaissance": "1990-04-14",
+  "nomNaissance": "D'ARTAGNAN DE L'HERAULT",
+  "prenoms": [
+    "Pierre-Alain"
+  ],
+  "sexe": "M"
+}

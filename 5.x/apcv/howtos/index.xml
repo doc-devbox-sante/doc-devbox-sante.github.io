@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Howtos on DevBox-Santé</title>
+    <link>https://doc.devbox-sante.fr/5.x/apcv/howtos/</link>
+    <description>Recent content in Howtos on DevBox-Santé</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <atom:link href="https://doc.devbox-sante.fr/5.x/apcv/howtos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CNDA : Fiche d&#39;identité du composant Mobilite ApCV</title>
+      <link>https://doc.devbox-sante.fr/5.x/apcv/howtos/identifiantcomposant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://doc.devbox-sante.fr/5.x/apcv/howtos/identifiantcomposant/</guid>
+      <description>&lt;h3 id=&#34;nie-devcoop--dev331918&#34;&gt;&lt;strong&gt;NIE DEVCOOP : DEV331918&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#nie-devcoop--dev331918&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;h3 id=&#34;description&#34;&gt;Description&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#description&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;La DevBox-Santé Mobilité est un connecteur au téléservice d&amp;rsquo;authentification ApCV homologuée par le CNDA.&#xA;Elle prend en charge la complexité de l’intégration et facilite ainsi aux éditeurs de logiciel de santé l’accès au lecteur NFC, la lecture du QrCode et l&amp;rsquo;appel au téléservice ApCV en vous fournissant une API simple à utiliser.&lt;/p&gt;&#xA;&lt;h3 id=&#34;homologation-du-01062023&#34;&gt;Homologation du 01/06/2023&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#homologation-du-01062023&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Nom du logiciel : &lt;strong&gt;DEVBOX-SANTE Mobilite&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Version : &lt;strong&gt;1.0&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;NIL : &lt;strong&gt;DEV627612&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Type Fonctionnel : &lt;strong&gt;Intégrable interface semi-apparente&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Homologation package GIE SV : &lt;strong&gt;01.00&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,172 @@
+{
+    "dmpcType": "VAC",
+    "uniqueId": "1.2.250.1.213.4.1.1.1.5.1.1014849115.20220513073758.4",
+    "auteurs": [
+        {
+            "nom": "BON",
+            "prenom": "JEAN",
+            "specialite": "EXP_PATIENT",
+        }
+    ],
+    "destinataires": [],
+    "patientDestinataire": false,
+    "classCode": "52",
+    "classCodeCode": {
+        "valeur": "52",
+        "identifiantNomenclature": "1.2.250.1.213.1.1.4.1",
+        "libelle": "Certificat, déclaration"
+    },
+    "confidentialityCodes": [
+        {
+            "valeur": "N",
+            "identifiantNomenclature": "2.16.840.1.113883.5.25",
+            "libelle": "Normal"
+        }
+    ],
+    "creationTime": "20220513073758",
+    "creationDateTime": "2022-05-13T09:37:58+02:00",
+    "events": [
+        {
+            "valeur": "11369-6",
+            "identifiantNomenclature": "2.16.840.1.113883.6.1",
+            "libelle": "Historique de vaccinations"
+        }
+    ],
+    "format": "urn:asip:ci-sis:vac:2019",
+    "formatCode": {
+        "valeur": "urn:asip:ci-sis:vac:2019",
+        "identifiantNomenclature": "1.2.250.1.213.1.1.4.2.282",
+        "libelle": "Historique de vaccinations"
+    },
+    "legalAuthenticator": {
+        "nom": "BON",
+        "prenom": "JEAN"
+    },
+    "mimeType": "text/xml",
+    "patient": {
+        "matriculeINS": {
+            "valeur": "155076322000225",
+            "identifiantSysteme": "1.2.250.1.213.1.4.10"
+        },
+        "nomPatronymique": "BON",
+        "prenom": "JEAN",
+        "nomUsuel": "BON",
+        "dateDeNaissance": "19550714",
+        "adresse": {
+            "codePostal": "54000",
+            "ville": "NANCY"
+        },
+        "sexe": "M"
+    },
+    "practiceSetting": "EXP_PATIENT",
+    "practiceSettingCode": {
+        "valeur": "EXP_PATIENT",
+        "identifiantNomenclature": "1.2.250.1.213.1.1.4.6",
+        "libelle": "Expression personnelle du patient"
+    },
+    "serviceStartTime": "20220114010140",
+    "serviceStartDateTime": "2022-01-14T02:01:40+01:00",
+    "serviceStopTime": "20220513000000",
+    "serviceStopDateTime": "2022-05-13T02:00:00+02:00",
+    "title": "Historique des vaccinations",
+    "type": "11369-6",
+    "typeCode": {
+        "valeur": "11369-6",
+        "identifiantNomenclature": "2.16.840.1.113883.6.1",
+        "libelle": "Historique de vaccinations"
+    },
+    "versionNumber": 0,
+    "vaccinations": [
+        {
+            "id": "a1726da8-15f8-416c-9bc2-c97c1be10adf",
+            "code": {
+                "identifiantNomenclature": "2.16.840.1.113883.5.4"
+            },
+            "status": "completed",
+            "dateTimeAdministration": "2022-01-14T02:01:40+01:00",
+            "duree": null,
+            "doseAdministree": {
+                "unite": "PQ",
+                "valeur": "1"
+            },
+            "voieAdministration": {
+                "valeur": "UNKNOWN",
+                "identifiantNomenclature": "2.16.840.1.113883.5.112",
+            },
+            "regionAdministration": {
+                "valeur": "UNKNOWN",
+                "identifiantNomenclature": "2.16.840.1.113883.5.1052",
+            },
+            "consommable": {
+                "nom": "VACCIN COVID 19 MODERNA",
+                "code": {
+                    "valeur": "66689795",
+                    "identifiantNomenclature": "1.2.250.1.213.2.3.1",
+                    "libelle": "VACCIN COVID MODERNA 100 MCG/DOSE"
+                },
+                "traductions": [
+                    {
+                        "identifiantNomenclature": "1.2.250.1.213.2.3.2",
+                    },
+                    {
+                        "valeur": "J07BX03",
+                        "identifiantNomenclature": "2.16.840.1.113883.6.73",
+                        "libelle": "VACCINS CONTRE LA COVID-19"
+                    }
+                ],
+                "numeroLot": "123456"
+            },
+            "auteur": {
+                "startDateTime": "2022-05-13T00:00:00Z",
+                "patient": true,
+            },
+            "commentaire": "légère inflammation et érythème."
+        },
+        {
+            "id": "d592694f-91fe-4a1c-815e-663264e6fabd",
+            "code": {
+                "valeur": "BOOSTER",
+                "identifiantNomenclature": "2.16.840.1.113883.5.4",
+                "libelle": "Rappel de vaccination"
+            },
+            "status": "completed",
+            "dateTimeAdministration": "2022-05-13T02:00:00+02:00",
+            "doseAdministree": {
+                "unite": "PQ",
+                "valeur": "1"
+            },
+            "voieAdministration": {
+                "valeur": "UNKNOWN",
+                "identifiantNomenclature": "2.16.840.1.113883.5.112",
+            },
+            "regionAdministration": {
+                "valeur": "UNKNOWN",
+                "identifiantNomenclature": "2.16.840.1.113883.5.1052",
+            },
+            "consommable": {
+                "nom": "PENTAVAC",
+                "code": {
+                    "valeur": "69811279",
+                    "identifiantNomenclature": "1.2.250.1.213.2.3.1",
+                    "libelle": "PENTAVAC PDR ET SUSP INJ A/2AIG"
+                },
+                "traductions": [
+                    {
+                        "identifiantNomenclature": "1.2.250.1.213.2.3.2",
+                    },
+                    {
+                        "valeur": "J07CA06",
+                        "identifiantNomenclature": "2.16.840.1.113883.6.73",
+                        "libelle": "DIPHTERIE-HEMOPHILUS INFLUENZAE B-COQUELUCHE-POLIOMYELITE-TETANOS"
+                    }
+                ],
+                "numeroLot": "456789"
+            },
+            
+            "auteur": {
+                "startDateTime": "2022-05-13T00:00:00Z",
+                "patient": true
+            }
+        }
+    ]
+}

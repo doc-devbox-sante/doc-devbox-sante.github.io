@@ -1,0 +1,40 @@
+```plantuml
+
+@startuml
+!include https://bitbucket.org/devbox-sante/plantuml/raw/current/themes/theme-devbox-sante.puml
+
+rectangle "Application cliente" as AppCli {
+rectangle "Front Application"  as Front #E3F2FD
+rectangle "Backend Application" as Backend #E1F5FE
+}
+rectangle "Authentification" as Authentification {
+rectangle "Keycloak\n(OIDC Server)" as Keycloak #E8F5E9
+
+rectangle "Proxy eSanté DevBox\n(IdP)" as Proxy
+' rectangle "Proxy eSanté DevBox Santé\n(Identity Provider)" as Proxy #FFF3E0
+rectangle "Pro Santé Connect\n(PSC)" as PSC #F3E5F5
+rectangle "Carte CPS / eCPS" as CPS #F3E5F5
+
+
+skinparam nodesep 20
+skinparam ranksep 80
+skinparam linetype ortho
+skinparam noteBackgroundColor transparent
+skinparam noteBorderColor transparent
+skinparam noteFontColor black
+
+' --- Liaisons principales ---
+Front -[#green]-> Keycloak
+note left on link : 1- Authentification Keycloak\n(Redirect)
+Keycloak -[#blue]-> Proxy
+note left on link : 2 - Délégation d'authentification PSC\n(Redirect)
+Proxy -[#blue]-> PSC
+note right on link : 3 - Délégation d'authentification PSC\n(redirect)
+PSC -[#blue]-> CPS : 4 - Authentification CPS/eCPS
+CPS -[#blue,dashed]-> PSC
+PSC -[#blue,dashed]-> Proxy : 5 - Renvoie token PSC
+Proxy -[#blue,dashed]-> Keycloak : 6 - Renvoie token eProxy
+Keycloak -[#green,dashed]-> Front : 6 - Renvoie token Keycloak
+
+@enduml
+```

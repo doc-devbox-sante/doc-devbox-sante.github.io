@@ -1,0 +1,53 @@
+```plantuml
+
+@startuml
+!theme aws-orange
+!define DEVBOX_COLOR #278ef5
+!define DMP_COLOR #35D9C0
+!define MSS_COLOR #DE5D80
+!define INS_COLOR #07A2CF
+!define CPS_COLOR #D34A3C
+!define VITALE_COLOR #5FD67A
+!define PSC_COLOR #ff7765
+!define APCV_COLOR #c6e66d
+!define ANNUAIRE_COLOR #7613e0
+!define DATA_COLOR #ffa800
+
+rectangle "Application cliente" as AppCli {
+rectangle "Front Application"  as Front #E3F2FD
+rectangle "Backend Application" as Backend #E1F5FE
+}
+
+rectangle "Proxy eSanté DevBox (IdP)" as Proxy DEVBOX_COLOR;text:white
+rectangle "Pro Santé Connect\n(PSC)" as PSC PSC_COLOR;text:white
+
+rectangle "Opérateur MSSanté" as MSS MSS_COLOR;text:white
+
+skinparam nodesep 20
+skinparam ranksep 80
+skinparam linetype ortho
+skinparam noteBackgroundColor transparent
+skinparam noteBorderColor transparent
+skinparam noteFontColor black
+
+' --- Liaisons principales ---
+Front -[#green]-> Backend : 1 - Appel Service EDC\n Bearer Token Keycloak
+Backend -[#green]-> Proxy : 2 -  Appel Service EDC\n Bearer Token Keycloak
+Proxy -[#green]-> Proxy
+note right of Proxy
+  3 - Vérification du token
+  Vérifie le token Keycloak
+  avec sa clé publique
+  Récupère la session PSC
+end note
+Proxy -[#green]-> PSC : 4 - Refresh du token PSC si nécessaire
+PSC -[#green,dashed]-> Proxy
+Proxy -[#blue,dashed]-> Backend : 5 - Renvoi token PSC
+Backend -[#blue]-> MSS
+note right on link
+6 - Appel MsSanté avec Token PSC
+end note
+
+
+@enduml
+```

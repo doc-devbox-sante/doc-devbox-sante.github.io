@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/*$app-cps :                                      #D34A3C !default;*/
+/*$app-ecps :                                     #FF7765 !default;*/
+/*$app-sesam :                                    #5FD67A !default;*/
+/*$app-apcv :                                     #C6E66D !default;*/
+/*$app-directory :                                #7613E0 !default;*/
+/*$app-doc :                                      #FFA800 !default;*/
+
+/*$app-dmpc :                                     #35D9C0 !default;*/
+/*$app-mssante:                                   #DE5D80 !default;*/
+/*$app-ins :                                      #07A2CF !default;*/
+
+@font-face {
+  font-family: "devbox-sante";
+  src:url("/fonts/devbox-sante.eot");
+  src:url("/fonts/devbox-sante.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/devbox-sante.woff") format("woff"),
+    url("/fonts/devbox-sante.ttf") format("truetype"),
+    url("/fonts/devbox-sante.svg#devbox-sante") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+i.iconNav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  width: 26px;
+  margin-right: 8px;
+  background-color: white;
+  border-radius: 8px;
+  padding-left: 6px;
+}
+
+i.iconFoot {
+  font-size: 22px;
+}
+
+
+[data-icon]:before {
+  font-family: "devbox-sante" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "devbox-sante" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-apcv:before {
+  content: "\61";
+  color: #C6E66D;
+}
+.icon-cps:before {
+  content: "\62";
+  color: #D34A3C;
+
+}
+.icon-cps-puce:before {
+  content: "\6a";
+  color: #D34A3C;
+}
+.icon-directory:before {
+  content: "\63";
+  color: #7613E0;
+}
+.icon-dmp:before {
+  content: "\64";
+  color: #35D9C0;
+}
+.icon-doc:before {
+  content: "\65";
+  color: #FFA800;
+}
+.icon-ecps:before {
+  content: "\66";
+  color: #35D9C0;
+}
+.icon-ins:before {
+  content: "\67";
+  color: #07A2CF;
+}
+.icon-mobilite:before {
+  content: "\68";
+}
+.icon-mssante:before {
+  content: "\69";
+  color: #DE5D80;
+}
+.icon-puce:before {
+  content: "\6a";
+}
+.icon-sesam:before {
+  content: "\6b";
+  color: #5FD67A;
+}
+.icon-sesam-puce:before {
+  content: "\6a";
+  color: #5FD67A;
+}
+.icon-devbox:before {
+  content: "\6c";
+
+}
+

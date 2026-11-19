@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>INSi on DevBox-Santé</title>
+    <link>https://doc.devbox-sante.fr/5.x/insi/</link>
+    <description>Recent content in INSi on DevBox-Santé</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <atom:link href="https://doc.devbox-sante.fr/5.x/insi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://doc.devbox-sante.fr/5.x/insi/gestion_certificat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://doc.devbox-sante.fr/5.x/insi/gestion_certificat/</guid>
+      <description>&lt;p&gt;TODO : rFprendre procédure du DMP pour l&amp;rsquo;INSI&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_salariees_vf.pdf&#34;&gt;https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_procedure_commande_cl_tls_insi_structures_salariees_vf.pdf&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
